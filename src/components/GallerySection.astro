@@ -1,0 +1,181 @@
+---
+const leftImages = [
+  "/sri-janaki-mahal/IMG-20251017-WA0022.jpg",
+  "/sri-janaki-mahal/IMG-20251017-WA0028.jpg",
+  "/sri-janaki-mahal/IMG-20251017-WA0034.jpg",
+  "/sri-janaki-mahal/IMG-20251017-WA0035.jpg",
+  "/sri-janaki-mahal/IMG-20251017-WA0029.jpg",
+  "/sri-janaki-mahal/IMG-20251017-WA0031.jpg",
+];
+
+const rightImages = [
+  "/sri-janaki-mahal/IMG-20251017-WA0032.jpg",
+  "/sri-janaki-mahal/IMG-20251017-WA0030.jpg",
+  "/sri-janaki-mahal/IMG-20251017-WA0033.jpg",
+  "/sri-janaki-mahal/IMG-20251017-WA0023.jpg",
+  "/sri-janaki-mahal/IMG-20251017-WA0027.jpg",
+  "/sri-janaki-mahal/IMG-20251017-WA0034.jpg",
+];
+
+const AUTO_DURATION_SEC = 15; // user preference
+---
+
+<section id="gallery" class="py-16 sm:py-24 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 text-balance">
+        Gallery
+      </h2>
+      <p class="text-lg text-gray-600">Explore the beauty and serenity of Sri Janaki Mahal</p>
+    </div>
+
+    <!-- Dual-lane gallery: manual scroll + auto-scroll in opposite directions -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <!-- Left lane - auto scrolls left -->
+      <div class="relative h-96 rounded-lg">
+        <div class="lane no-scrollbar gallery-scroll overflow-x-auto overflow-y-hidden h-96" data-direction="left" data-duration={AUTO_DURATION_SEC} aria-label="Auto-scrolling gallery lane left">
+          <div class="lane-track flex gap-4">
+            { [...leftImages, ...leftImages].map((src, i) => (
+              <div class="gallery-item flex-shrink-0 w-80 h-96 rounded-lg overflow-hidden shadow-lg" data-index={i}>
+                <img src={src} alt={"Gallery image " + (i + 1)} loading="lazy" decoding="async" sizes="(max-width: 768px) 80vw, 20rem" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300" />
+              </div>
+            )) }
+          </div>
+        </div>
+      </div>
+
+      <!-- Right lane - auto scrolls right -->
+      <div class="relative h-96 rounded-lg">
+        <div class="lane no-scrollbar gallery-scroll overflow-x-auto overflow-y-hidden h-96" data-direction="right" data-duration={AUTO_DURATION_SEC} aria-label="Auto-scrolling gallery lane right">
+          <div class="lane-track flex gap-4">
+            { [...rightImages, ...rightImages].map((src, i) => (
+              <div class="gallery-item flex-shrink-0 w-80 h-96 rounded-lg overflow-hidden shadow-lg" data-index={i}>
+                <img src={src} alt={"Gallery image " + (i + 1)} loading="lazy" decoding="async" sizes="(max-width: 768px) 80vw, 20rem" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300" />
+              </div>
+            )) }
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script type="module">
+  // Robust, manual + auto horizontal scroller with opposite directions per lane
+  // - Auto speed calculated to complete one content-width in given duration (15s)
+  // - Pauses on hover and while dragging; resumes after idle
+  // - Wheel converts vertical scroll to horizontal for easy navigation
+  // - Hides scrollbars via .no-scrollbar class (CSS)
+  (function initOppositeAutoScrollers() {
+    try {
+      const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const lanes = Array.from(document.querySelectorAll('.lane'));
+      if (!lanes.length) {
+        console.debug('[Gallery] No lanes found; skipping init');
+        return;
+      }
+
+      lanes.forEach((lane, laneIndex) => {
+        try {
+          const direction = (lane.getAttribute('data-direction') || 'left').toLowerCase();
+          const durationSec = Number(lane.getAttribute('data-duration') || 15);
+          const track = lane.querySelector('.lane-track');
+          if (!track) {
+            console.debug('[Gallery] Lane track missing', { laneIndex });
+            return;
+          }
+
+          let isPaused = false;
+          let isDragging = false;
+          let startX = 0;
+          let startScrollLeft = 0;
+          let lastTime = performance.now();
+          let contentWidth = 0;
+          let speedPxPerSec = 60; // fallback
+
+          const recalc = () => {
+            // Half of track width because items are duplicated for seamless loop
+            contentWidth = Math.max(1, Math.floor(track.scrollWidth / 2));
+            speedPxPerSec = contentWidth / Math.max(1, durationSec);
+            if (direction === 'right') {
+              // Start from end for rightward movement (so we can decrement)
+              if (lane.scrollLeft === 0) lane.scrollLeft = contentWidth;
+            }
+            console.debug('[Gallery] Recalc', { laneIndex, contentWidth, speedPxPerSec, direction });
+          };
+
+          const onResize = () => recalc();
+          window.addEventListener('resize', onResize);
+
+          // Pause on hover
+          lane.addEventListener('mouseenter', () => { isPaused = true; });
+          lane.addEventListener('mouseleave', () => { isPaused = false; lastTime = performance.now(); });
+
+          // Drag to scroll
+          lane.addEventListener('pointerdown', (e) => {
+            try {
+              isDragging = true;
+              lane.setPointerCapture(e.pointerId);
+              startX = e.clientX;
+              startScrollLeft = lane.scrollLeft;
+            } catch (_) {}
+          });
+          lane.addEventListener('pointermove', (e) => {
+            if (!isDragging) return;
+            const dx = e.clientX - startX;
+            lane.scrollLeft = startScrollLeft - dx;
+          });
+          lane.addEventListener('pointerup', () => { isDragging = false; });
+          lane.addEventListener('pointercancel', () => { isDragging = false; });
+
+          // Wheel to horizontal
+          lane.addEventListener('wheel', (e) => {
+            try {
+              if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+                e.preventDefault();
+                lane.scrollLeft += e.deltaY;
+              }
+              lastTime = performance.now();
+            } catch (err) {
+              console.debug('[Gallery] Wheel handler error', err);
+            }
+          }, { passive: false });
+
+          const step = (now) => {
+            if (!lane.isConnected) return; // lane removed
+            const dt = Math.max(0, now - lastTime) / 1000;
+            lastTime = now;
+
+            if (!prefersReduced && !isPaused && !isDragging) {
+              const delta = speedPxPerSec * dt;
+              if (direction === 'left') {
+                lane.scrollLeft += delta;
+                if (lane.scrollLeft >= contentWidth) lane.scrollLeft -= contentWidth;
+              } else {
+                lane.scrollLeft -= delta;
+                if (lane.scrollLeft <= 0) lane.scrollLeft += contentWidth;
+              }
+            }
+
+            requestAnimationFrame(step);
+          };
+
+          // Recalc after images load
+          const images = Array.from(track.querySelectorAll('img'));
+          let imagesPending = images.length;
+          const onImgDone = () => { imagesPending = Math.max(0, imagesPending - 1); if (imagesPending === 0) recalc(); };
+          images.forEach((img) => {
+            if ((img).complete) onImgDone(); else img.addEventListener('load', onImgDone, { once: true });
+          });
+
+          recalc();
+          requestAnimationFrame(step);
+        } catch (laneErr) {
+          console.debug('[Gallery] Lane init error', laneErr);
+        }
+      });
+    } catch (err) {
+      console.debug('[Gallery] Init error', err);
+    }
+  })();
+</script>

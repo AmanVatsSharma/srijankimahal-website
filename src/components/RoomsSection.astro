@@ -1,10 +1,11 @@
+<!-- // src/components/RoomsSection.astro -->
 ---
 ---
 
-<section id="rooms" class="py-16 sm:py-24 bg-white">
+<section id="rooms" class="py-16 sm:py-24 bg-gray-50">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-12">
-      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 text-balance">
         Book Your Room in Advance
       </h2>
       <p class="text-lg text-gray-600">
@@ -15,8 +16,8 @@
     <!-- Rooms Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
       <!-- 4 Bed AC -->
-      <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow group cursor-pointer room-card" data-room="4-bed-ac">
-        <div class="relative overflow-hidden h-48">
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow group cursor-pointer room-card" data-room="4-bed-ac" data-price="2500" data-title="4 Bed Room (AC)">
+        <div class="relative overflow-hidden h-48 bg-gradient-to-br from-amber-100 to-amber-50">
           <img src="/ayodhya-4-bed-room-ac-spacious.jpg" alt="4 Bed AC Room" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
           <div class="absolute top-3 right-3 bg-amber-600 text-white px-3 py-1 rounded-full text-sm font-semibold">AC</div>
         </div>
@@ -25,14 +26,14 @@
           <p class="text-gray-600 text-sm mb-3">Spacious room with air conditioning</p>
           <div class="flex justify-between items-center">
             <span class="text-2xl font-bold text-amber-600">₹2,500</span>
-            <button class="px-4 py-2 bg-amber-600 text-white rounded-lg text-sm font-semibold hover:bg-amber-700 transition-colors">View</button>
+            <button class="px-4 py-2 bg-amber-600 text-white rounded-lg text-sm font-semibold hover:bg-amber-700 transition-colors view-details-btn">View</button>
           </div>
         </div>
       </div>
 
       <!-- 4 Bed Non-AC -->
-      <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow group cursor-pointer room-card" data-room="4-bed-non-ac">
-        <div class="relative overflow-hidden h-48">
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow group cursor-pointer room-card" data-room="4-bed-non-ac" data-price="1800" data-title="4 Bed Room (Non-AC)">
+        <div class="relative overflow-hidden h-48 bg-gradient-to-br from-blue-100 to-blue-50">
           <img src="/ayodhya-4-bed-room-non-ac.jpg" alt="4 Bed Non-AC Room" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
           <div class="absolute top-3 right-3 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold">Non-AC</div>
         </div>
@@ -41,14 +42,14 @@
           <p class="text-gray-600 text-sm mb-3">Spacious room with natural ventilation</p>
           <div class="flex justify-between items-center">
             <span class="text-2xl font-bold text-amber-600">₹1,800</span>
-            <button class="px-4 py-2 bg-amber-600 text-white rounded-lg text-sm font-semibold hover:bg-amber-700 transition-colors">View</button>
+            <button class="px-4 py-2 bg-amber-600 text-white rounded-lg text-sm font-semibold hover:bg-amber-700 transition-colors view-details-btn">View</button>
           </div>
         </div>
       </div>
 
       <!-- 3 Bed AC -->
-      <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow group cursor-pointer room-card" data-room="3-bed-ac">
-        <div class="relative overflow-hidden h-48">
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow group cursor-pointer room-card" data-room="3-bed-ac" data-price="2000" data-title="3 Bed Room (AC)">
+        <div class="relative overflow-hidden h-48 bg-gradient-to-br from-amber-100 to-amber-50">
           <img src="/ayodhya-3-bed-room-ac.jpg" alt="3 Bed AC Room" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
           <div class="absolute top-3 right-3 bg-amber-600 text-white px-3 py-1 rounded-full text-sm font-semibold">AC</div>
         </div>
@@ -57,14 +58,14 @@
           <p class="text-gray-600 text-sm mb-3">Comfortable room with AC</p>
           <div class="flex justify-between items-center">
             <span class="text-2xl font-bold text-amber-600">₹2,000</span>
-            <button class="px-4 py-2 bg-amber-600 text-white rounded-lg text-sm font-semibold hover:bg-amber-700 transition-colors">View</button>
+            <button class="px-4 py-2 bg-amber-600 text-white rounded-lg text-sm font-semibold hover:bg-amber-700 transition-colors view-details-btn">View</button>
           </div>
         </div>
       </div>
 
       <!-- 3 Bed Non-AC -->
-      <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow group cursor-pointer room-card" data-room="3-bed-non-ac">
-        <div class="relative overflow-hidden h-48">
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow group cursor-pointer room-card" data-room="3-bed-non-ac" data-price="1500" data-title="3 Bed Room (Non-AC)">
+        <div class="relative overflow-hidden h-48 bg-gradient-to-br from-blue-100 to-blue-50">
           <img src="/ayodhya-3-bed-room-non-ac.jpg" alt="3 Bed Non-AC Room" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
           <div class="absolute top-3 right-3 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold">Non-AC</div>
         </div>
@@ -73,14 +74,14 @@
           <p class="text-gray-600 text-sm mb-3">Comfortable room with natural ventilation</p>
           <div class="flex justify-between items-center">
             <span class="text-2xl font-bold text-amber-600">₹1,500</span>
-            <button class="px-4 py-2 bg-amber-600 text-white rounded-lg text-sm font-semibold hover:bg-amber-700 transition-colors">View</button>
+            <button class="px-4 py-2 bg-amber-600 text-white rounded-lg text-sm font-semibold hover:bg-amber-700 transition-colors view-details-btn">View</button>
           </div>
         </div>
       </div>
 
       <!-- 2 Bed AC -->
-      <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow group cursor-pointer room-card" data-room="2-bed-ac">
-        <div class="relative overflow-hidden h-48">
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow group cursor-pointer room-card" data-room="2-bed-ac" data-price="1500" data-title="2 Bed Room (AC)">
+        <div class="relative overflow-hidden h-48 bg-gradient-to-br from-amber-100 to-amber-50">
           <img src="/ayodhya-2-bed-room-ac.jpg" alt="2 Bed AC Room" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
           <div class="absolute top-3 right-3 bg-amber-600 text-white px-3 py-1 rounded-full text-sm font-semibold">AC</div>
         </div>
@@ -89,14 +90,14 @@
           <p class="text-gray-600 text-sm mb-3">Cozy room with air conditioning</p>
           <div class="flex justify-between items-center">
             <span class="text-2xl font-bold text-amber-600">₹1,500</span>
-            <button class="px-4 py-2 bg-amber-600 text-white rounded-lg text-sm font-semibold hover:bg-amber-700 transition-colors">View</button>
+            <button class="px-4 py-2 bg-amber-600 text-white rounded-lg text-sm font-semibold hover:bg-amber-700 transition-colors view-details-btn">View</button>
           </div>
         </div>
       </div>
 
       <!-- 2 Bed Non-AC -->
-      <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow group cursor-pointer room-card" data-room="2-bed-non-ac">
-        <div class="relative overflow-hidden h-48">
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow group cursor-pointer room-card" data-room="2-bed-non-ac" data-price="1000" data-title="2 Bed Room (Non-AC)">
+        <div class="relative overflow-hidden h-48 bg-gradient-to-br from-blue-100 to-blue-50">
           <img src="/ayodhya-2-bed-room-non-ac.jpg" alt="2 Bed Non-AC Room" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
           <div class="absolute top-3 right-3 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold">Non-AC</div>
         </div>
@@ -105,30 +106,14 @@
           <p class="text-gray-600 text-sm mb-3">Cozy room with natural ventilation</p>
           <div class="flex justify-between items-center">
             <span class="text-2xl font-bold text-amber-600">₹1,000</span>
-            <button class="px-4 py-2 bg-amber-600 text-white rounded-lg text-sm font-semibold hover:bg-amber-700 transition-colors">View</button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Luxury Suite -->
-      <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow group cursor-pointer room-card" data-room="luxury-suite">
-        <div class="relative overflow-hidden h-48">
-          <img src="/ayodhya-luxury-suite-deluxe.jpg" alt="Luxury Suite" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
-          <div class="absolute top-3 right-3 bg-yellow-600 text-white px-3 py-1 rounded-full text-sm font-semibold">Luxury</div>
-        </div>
-        <div class="p-4">
-          <h3 class="text-xl font-bold text-gray-900 mb-2">Luxury Suite</h3>
-          <p class="text-gray-600 text-sm mb-3">Premium suite with all amenities</p>
-          <div class="flex justify-between items-center">
-            <span class="text-2xl font-bold text-amber-600">₹4,000</span>
-            <button class="px-4 py-2 bg-amber-600 text-white rounded-lg text-sm font-semibold hover:bg-amber-700 transition-colors">View</button>
+            <button class="px-4 py-2 bg-amber-600 text-white rounded-lg text-sm font-semibold hover:bg-amber-700 transition-colors view-details-btn">View</button>
           </div>
         </div>
       </div>
 
       <!-- Deluxe Suite -->
-      <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow group cursor-pointer room-card" data-room="deluxe-suite">
-        <div class="relative overflow-hidden h-48">
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow group cursor-pointer room-card" data-room="deluxe-suite" data-price="3500" data-title="Deluxe Suite">
+        <div class="relative overflow-hidden h-48 bg-gradient-to-br from-yellow-100 to-yellow-50">
           <img src="/ayodhya-deluxe-suite-premium.jpg" alt="Deluxe Suite" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
           <div class="absolute top-3 right-3 bg-yellow-600 text-white px-3 py-1 rounded-full text-sm font-semibold">Deluxe</div>
         </div>
@@ -137,7 +122,23 @@
           <p class="text-gray-600 text-sm mb-3">Elegant suite with premium features</p>
           <div class="flex justify-between items-center">
             <span class="text-2xl font-bold text-amber-600">₹3,500</span>
-            <button class="px-4 py-2 bg-amber-600 text-white rounded-lg text-sm font-semibold hover:bg-amber-700 transition-colors">View</button>
+            <button class="px-4 py-2 bg-amber-600 text-white rounded-lg text-sm font-semibold hover:bg-amber-700 transition-colors view-details-btn">View</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Luxury Suite -->
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow group cursor-pointer room-card" data-room="luxury-suite" data-price="4000" data-title="Luxury Suite">
+        <div class="relative overflow-hidden h-48 bg-gradient-to-br from-purple-100 to-purple-50">
+          <img src="/ayodhya-luxury-suite-deluxe.jpg" alt="Luxury Suite" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
+          <div class="absolute top-3 right-3 bg-purple-600 text-white px-3 py-1 rounded-full text-sm font-semibold">Luxury</div>
+        </div>
+        <div class="p-4">
+          <h3 class="text-xl font-bold text-gray-900 mb-2">Luxury Suite</h3>
+          <p class="text-gray-600 text-sm mb-3">Premium suite with all amenities</p>
+          <div class="flex justify-between items-center">
+            <span class="text-2xl font-bold text-amber-600">₹4,000</span>
+            <button class="px-4 py-2 bg-amber-600 text-white rounded-lg text-sm font-semibold hover:bg-amber-700 transition-colors view-details-btn">View</button>
           </div>
         </div>
       </div>
@@ -145,14 +146,143 @@
   </div>
 </section>
 
+<!-- Room Details Modal -->
+<div id="room-modal" class="modal-overlay">
+  <div class="modal-content w-full sm:w-11/12 md:w-3/4 lg:w-2/3 rounded-2xl">
+    <div class="sticky top-0 bg-white border-b border-gray-200 p-6 flex justify-between items-center">
+      <h2 id="modal-title" class="text-2xl font-bold text-gray-900"></h2>
+      <button id="close-modal" class="text-gray-500 hover:text-gray-700 text-2xl">×</button>
+    </div>
+
+    <div class="p-6 space-y-6">
+      <!-- Image Gallery -->
+      <div class="space-y-4">
+        <h3 class="text-lg font-semibold text-gray-900">Room Gallery</h3>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+          <img src="/placeholder.svg?height=250&width=250" alt="Room view 1" class="rounded-lg w-full h-48 object-cover" />
+          <img src="/placeholder.svg?height=250&width=250" alt="Room view 2" class="rounded-lg w-full h-48 object-cover" />
+          <img src="/placeholder.svg?height=250&width=250" alt="Room view 3" class="rounded-lg w-full h-48 object-cover" />
+        </div>
+      </div>
+
+      <!-- Room Details -->
+      <div class="space-y-4">
+        <h3 class="text-lg font-semibold text-gray-900">Room Features</h3>
+        <ul class="space-y-2 text-gray-700">
+          <li class="flex items-center gap-2">
+            <svg class="w-5 h-5 text-amber-600" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+            Clean and well-maintained rooms
+          </li>
+          <li class="flex items-center gap-2">
+            <svg class="w-5 h-5 text-amber-600" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+            Comfortable bedding and pillows
+          </li>
+          <li class="flex items-center gap-2">
+            <svg class="w-5 h-5 text-amber-600" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+            Attached bathroom with hot water
+          </li>
+          <li class="flex items-center gap-2">
+            <svg class="w-5 h-5 text-amber-600" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+            24/7 customer support
+          </li>
+          <li class="flex items-center gap-2">
+            <svg class="w-5 h-5 text-amber-600" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+            Peaceful spiritual environment
+          </li>
+        </ul>
+      </div>
+
+      <!-- Price and CTA -->
+      <div class="bg-gradient-to-r from-amber-50 to-orange-50 rounded-lg p-6 space-y-4">
+        <div class="flex justify-between items-center">
+          <span class="text-gray-700 font-semibold">Price per night:</span>
+          <span id="modal-price" class="text-3xl font-bold text-amber-600">₹0</span>
+        </div>
+        <div class="flex flex-col sm:flex-row gap-3">
+          <a
+            id="modal-whatsapp"
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex-1 px-6 py-3 bg-green-600 text-white rounded-lg font-semibold hover:bg-green-700 transition-colors flex items-center justify-center gap-2"
+          >
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-4.255.949c-1.238.503-2.335 1.236-3.356 2.192-1.048 1.007-1.954 2.14-2.625 3.646-.735 1.7-1.14 3.6-.788 5.629.793 4.811 4.823 8.52 9.617 8.52 1.214 0 2.389-.184 3.514-.547 1.265-.41 2.439-1.04 3.466-1.872 1.048-.87 1.954-1.956 2.625-3.462.735-1.7 1.14-3.6.788-5.629-.793-4.811-4.823-8.52-9.617-8.52z" />
+            </svg>
+            Book on WhatsApp
+          </a>
+          <a
+            id="modal-call"
+            href="#"
+            class="flex-1 px-6 py-3 bg-amber-600 text-white rounded-lg font-semibold hover:bg-amber-700 transition-colors flex items-center justify-center gap-2"
+          >
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+            </svg>
+            Call Now
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <script>
-  // Room card click handlers for quick view modal
+  const modal = document.getElementById('room-modal');
+  const closeBtn = document.getElementById('close-modal');
   const roomCards = document.querySelectorAll('.room-card');
+  const viewDetailsBtns = document.querySelectorAll('.view-details-btn');
+
+  function openModal(roomCard) {
+    const title = roomCard.dataset.title;
+    const price = roomCard.dataset.price;
+    
+    document.getElementById('modal-title').textContent = title;
+    document.getElementById('modal-price').textContent = `₹${price}`;
+    
+    const whatsappLink = `https://wa.me/919933437469?text=Hello%20Sri%20Janaki%20Mahal%2C%20I%20would%20like%20to%20book%20${encodeURIComponent(title)}%20for%20₹${price}%20per%20night`;
+    document.getElementById('modal-whatsapp').href = whatsappLink;
+    document.getElementById('modal-call').href = 'tel:+919933437469';
+    
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModalFunc() {
+    modal.classList.remove('active');
+    document.body.style.overflow = 'auto';
+  }
+
+  viewDetailsBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const roomCard = btn.closest('.room-card');
+      openModal(roomCard);
+    });
+  });
+
   roomCards.forEach(card => {
     card.addEventListener('click', () => {
-      const roomType = card.dataset.room;
-      console.log('[v0] Room selected:', roomType);
-      // Modal functionality can be added here
+      openModal(card);
     });
+  });
+
+  closeBtn.addEventListener('click', closeModalFunc);
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) closeModalFunc();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeModalFunc();
   });
 </script>

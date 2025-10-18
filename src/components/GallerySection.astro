@@ -34,7 +34,7 @@ const AUTO_DURATION_SEC = 15; // user preference
       <!-- Left lane - auto scrolls left -->
       <div class="relative h-96 rounded-lg">
         <div class="lane no-scrollbar gallery-scroll overflow-x-auto overflow-y-hidden h-96" data-direction="left" data-duration={AUTO_DURATION_SEC} aria-label="Auto-scrolling gallery lane left">
-          <div class="lane-track flex gap-4">
+          <div class="lane-track flex gap-4" style="will-change: scroll-position;">
             { [...leftImages, ...leftImages].map((src, i) => (
               <div class="gallery-item flex-shrink-0 w-80 h-96 rounded-lg overflow-hidden shadow-lg" data-index={i}>
                 <img src={src} alt={"Gallery image " + (i + 1)} loading="lazy" decoding="async" sizes="(max-width: 768px) 80vw, 20rem" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300" />
@@ -47,7 +47,7 @@ const AUTO_DURATION_SEC = 15; // user preference
       <!-- Right lane - auto scrolls right -->
       <div class="relative h-96 rounded-lg">
         <div class="lane no-scrollbar gallery-scroll overflow-x-auto overflow-y-hidden h-96" data-direction="right" data-duration={AUTO_DURATION_SEC} aria-label="Auto-scrolling gallery lane right">
-          <div class="lane-track flex gap-4">
+          <div class="lane-track flex gap-4" style="will-change: scroll-position;">
             { [...rightImages, ...rightImages].map((src, i) => (
               <div class="gallery-item flex-shrink-0 w-80 h-96 rounded-lg overflow-hidden shadow-lg" data-index={i}>
                 <img src={src} alt={"Gallery image " + (i + 1)} loading="lazy" decoding="async" sizes="(max-width: 768px) 80vw, 20rem" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300" />
@@ -61,121 +61,95 @@ const AUTO_DURATION_SEC = 15; // user preference
 </section>
 
 <script type="module">
-  // Robust, manual + auto horizontal scroller with opposite directions per lane
-  // - Auto speed calculated to complete one content-width in given duration (15s)
-  // - Pauses on hover and while dragging; resumes after idle
-  // - Wheel converts vertical scroll to horizontal for easy navigation
-  // - Hides scrollbars via .no-scrollbar class (CSS)
-  (function initOppositeAutoScrollers() {
+  // Seamless loop via scrollLeft with wrap-around.
+  // - Drag-to-scroll and wheel-to-horizontal pause auto.
+  // - Scroll-snap active only during user interaction.
+  (function () {
     try {
-      const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       const lanes = Array.from(document.querySelectorAll('.lane'));
-      if (!lanes.length) {
-        console.debug('[Gallery] No lanes found; skipping init');
-        return;
-      }
+      if (!lanes.length) return;
 
-      lanes.forEach((lane, laneIndex) => {
-        try {
-          const direction = (lane.getAttribute('data-direction') || 'left').toLowerCase();
-          const durationSec = Number(lane.getAttribute('data-duration') || 15);
-          const track = lane.querySelector('.lane-track');
-          if (!track) {
-            console.debug('[Gallery] Lane track missing', { laneIndex });
-            return;
+      lanes.forEach((lane) => {
+        const track = lane.querySelector('.lane-track');
+        if (!track) return;
+
+        let dragging = false;
+        let startX = 0;
+        let startScrollLeft = 0;
+        let isPaused = false;
+        let last = performance.now();
+        let halfWidth = 0; // width of one set of items (we duplicated arrays)
+
+        const recalc = () => {
+          // half of total scrollWidth because items are duplicated
+          halfWidth = Math.floor(track.scrollWidth / 2);
+          if (!halfWidth) halfWidth = 1;
+          // Initialize scrollLeft position for rightward lanes to end
+          if ((lane.getAttribute('data-direction') || 'left') === 'right' && lane.scrollLeft === 0) {
+            lane.scrollLeft = halfWidth;
           }
+        };
 
-          let isPaused = false;
-          let isDragging = false;
-          let startX = 0;
-          let startScrollLeft = 0;
-          let lastTime = performance.now();
-          let contentWidth = 0;
-          let speedPxPerSec = 60; // fallback
+        const pause = () => { isPaused = true; lane.classList.add('snap-active'); };
+        const resume = () => { isPaused = false; lane.classList.remove('snap-active'); last = performance.now(); };
 
-          const recalc = () => {
-            // Half of track width because items are duplicated for seamless loop
-            contentWidth = Math.max(1, Math.floor(track.scrollWidth / 2));
-            speedPxPerSec = contentWidth / Math.max(1, durationSec);
-            if (direction === 'right') {
-              // Start from end for rightward movement (so we can decrement)
-              if (lane.scrollLeft === 0) lane.scrollLeft = contentWidth;
+        // Don't pause on mere hover to avoid jitter; only during active interactions
+
+        lane.addEventListener('pointerdown', (e) => {
+          dragging = true;
+          try { lane.setPointerCapture(e.pointerId); } catch {}
+          startX = e.clientX;
+          startScrollLeft = lane.scrollLeft;
+          pause();
+        });
+        lane.addEventListener('pointermove', (e) => {
+          if (!dragging) return;
+          lane.scrollLeft = startScrollLeft - (e.clientX - startX);
+        });
+        lane.addEventListener('pointerup', () => { dragging = false; resume(); });
+        lane.addEventListener('pointercancel', () => { dragging = false; resume(); });
+
+        lane.addEventListener('wheel', (e) => {
+          if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+            e.preventDefault();
+            lane.scrollLeft += e.deltaY;
+          }
+          pause();
+          clearTimeout((lane)._wheelResumeTimer);
+          (lane)._wheelResumeTimer = setTimeout(resume, 150);
+        }, { passive: false });
+
+        const speed = () => {
+          const dur = Number(lane.getAttribute('data-duration') || 15);
+          return halfWidth / Math.max(1, dur); // px/sec
+        };
+
+        const step = (now) => {
+          if (!lane.isConnected) return;
+          const dt = (now - last) / 1000;
+          last = now;
+          if (!isPaused && !dragging) {
+            const dir = (lane.getAttribute('data-direction') || 'left');
+            const delta = speed() * dt;
+            if (dir === 'left') {
+              lane.scrollLeft += delta;
+              if (lane.scrollLeft >= halfWidth) lane.scrollLeft -= halfWidth;
+            } else {
+              lane.scrollLeft -= delta;
+              if (lane.scrollLeft <= 0) lane.scrollLeft += halfWidth;
             }
-            console.debug('[Gallery] Recalc', { laneIndex, contentWidth, speedPxPerSec, direction });
-          };
-
-          const onResize = () => recalc();
-          window.addEventListener('resize', onResize);
-
-          // Pause on hover
-          lane.addEventListener('mouseenter', () => { isPaused = true; });
-          lane.addEventListener('mouseleave', () => { isPaused = false; lastTime = performance.now(); });
-
-          // Drag to scroll
-          lane.addEventListener('pointerdown', (e) => {
-            try {
-              isDragging = true;
-              lane.setPointerCapture(e.pointerId);
-              startX = e.clientX;
-              startScrollLeft = lane.scrollLeft;
-            } catch (_) {}
-          });
-          lane.addEventListener('pointermove', (e) => {
-            if (!isDragging) return;
-            const dx = e.clientX - startX;
-            lane.scrollLeft = startScrollLeft - dx;
-          });
-          lane.addEventListener('pointerup', () => { isDragging = false; });
-          lane.addEventListener('pointercancel', () => { isDragging = false; });
-
-          // Wheel to horizontal
-          lane.addEventListener('wheel', (e) => {
-            try {
-              if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
-                e.preventDefault();
-                lane.scrollLeft += e.deltaY;
-              }
-              lastTime = performance.now();
-            } catch (err) {
-              console.debug('[Gallery] Wheel handler error', err);
-            }
-          }, { passive: false });
-
-          const step = (now) => {
-            if (!lane.isConnected) return; // lane removed
-            const dt = Math.max(0, now - lastTime) / 1000;
-            lastTime = now;
-
-            if (!prefersReduced && !isPaused && !isDragging) {
-              const delta = speedPxPerSec * dt;
-              if (direction === 'left') {
-                lane.scrollLeft += delta;
-                if (lane.scrollLeft >= contentWidth) lane.scrollLeft -= contentWidth;
-              } else {
-                lane.scrollLeft -= delta;
-                if (lane.scrollLeft <= 0) lane.scrollLeft += contentWidth;
-              }
-            }
-
-            requestAnimationFrame(step);
-          };
-
-          // Recalc after images load
-          const images = Array.from(track.querySelectorAll('img'));
-          let imagesPending = images.length;
-          const onImgDone = () => { imagesPending = Math.max(0, imagesPending - 1); if (imagesPending === 0) recalc(); };
-          images.forEach((img) => {
-            if ((img).complete) onImgDone(); else img.addEventListener('load', onImgDone, { once: true });
-          });
-
-          recalc();
+          }
           requestAnimationFrame(step);
-        } catch (laneErr) {
-          console.debug('[Gallery] Lane init error', laneErr);
-        }
+        };
+
+        // Initial measurements after images load
+        const imgs = Array.from(track.querySelectorAll('img'));
+        let pending = imgs.length;
+        const done = () => { pending = Math.max(0, pending - 1); if (pending === 0) { recalc(); } };
+        imgs.forEach((im) => { if (im.complete) done(); else im.addEventListener('load', done, { once: true }); });
+        recalc();
+        requestAnimationFrame(step);
       });
-    } catch (err) {
-      console.debug('[Gallery] Init error', err);
-    }
+    } catch {}
   })();
 </script>

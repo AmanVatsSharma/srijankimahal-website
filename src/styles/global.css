@@ -143,12 +143,13 @@ h6 {
   animation: slideInRight 0.8s ease-out;
 }
 
+/* Auto-scroll fallback using local keyframes (works without Tailwind rebuild) */
 .scroll-left {
-  animation: scroll-left 30s linear infinite;
+  animation: scroll-left var(--marquee-duration, 15s) linear infinite;
 }
 
 .scroll-right {
-  animation: scroll-right 30s linear infinite reverse;
+  animation: scroll-right var(--marquee-duration, 15s) linear infinite;
 }
 
 .animate-float {
@@ -197,7 +198,10 @@ h6 {
 
 /* Smooth scrolling for gallery */
 .gallery-scroll {
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
+  scroll-snap-type: none;
+}
+.gallery-scroll.snap-active {
   scroll-snap-type: x mandatory;
 }
 
@@ -221,4 +225,9 @@ h6 {
 }
 .no-scrollbar::-webkit-scrollbar {
   display: none; /* Chrome, Safari, Opera */
+}
+
+/* Text shadow utilities for readability on colorful backgrounds */
+.text-shadow-sm {
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7);
 }

@@ -18,6 +18,26 @@ const { title } = Astro.props;
       gtag('config', 'AW-17664998963');
     </script>
     
+    <!-- Event snippet for Click to call conversion page -->
+    <script>
+    // @ts-ignore - Google Analytics conversion tracking
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      // @ts-ignore - Google Analytics global function
+      gtag('event', 'conversion', {
+          'send_to': 'AW-17664998963/Zkz9CLjxg7AbELP8qedB',
+          'value': 1.0,
+          'currency': 'INR',
+          'event_callback': callback
+      });
+      return false;
+    }
+    </script>
+    
     <meta charset="UTF-8" />
     <meta name="description" content="Sri Janaki Mahal - Spiritual Dharmshala in Ayodhya. Book your sacred stay with comfortable rooms and warm hospitality." />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />

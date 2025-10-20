@@ -42,11 +42,160 @@ const { title } = Astro.props;
     <meta name="description" content="Sri Janaki Mahal - Spiritual Dharmshala in Ayodhya. Book your sacred stay with comfortable rooms and warm hospitality." />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#d4a574" />
+    <meta name="robots" content="index,follow" />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://srijanakimahaltrust.in/" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://srijanakimahaltrust.in/" />
+    <meta property="og:title" content="Sri Janaki Mahal - Spiritual Dharmshala in Ayodhya" />
+    <meta property="og:description" content="Sri Janaki Mahal - Spiritual Dharmshala in Ayodhya. Book your sacred stay with comfortable rooms and warm hospitality." />
+    <meta property="og:image" content="https://srijanakimahaltrust.in/og.jpg" />
+    <meta property="og:site_name" content="Sri Janaki Mahal Trust" />
+    <meta property="og:locale" content="en_IN" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://srijanakimahaltrust.in/" />
+    <meta property="twitter:title" content="Sri Janaki Mahal - Spiritual Dharmshala in Ayodhya" />
+    <meta property="twitter:description" content="Sri Janaki Mahal - Spiritual Dharmshala in Ayodhya. Book your sacred stay with comfortable rooms and warm hospitality." />
+    <meta property="twitter:image" content="https://srijanakimahaltrust.in/og.jpg" />
+    
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{title}</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://srijanakimahaltrust.in/#website",
+          "url": "https://srijanakimahaltrust.in/",
+          "name": "Sri Janaki Mahal Trust",
+          "description": "Spiritual Dharmshala in Ayodhya offering comfortable accommodation near Ram Mandir",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://srijanakimahaltrust.in/?s={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://srijanakimahaltrust.in/#organization",
+          "name": "Sri Janaki Mahal Trust",
+          "url": "https://srijanakimahaltrust.in/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://srijanakimahaltrust.in/favicon.svg"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+91-7250364323",
+            "contactType": "customer service",
+            "availableLanguage": "English"
+          },
+          "email": "vedpragyabharat@gmail.com",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Vasudev Gath, Karsewakpuram",
+            "addressLocality": "Ayodhya",
+            "addressRegion": "Uttar Pradesh",
+            "postalCode": "224123",
+            "addressCountry": "IN"
+          }
+        },
+        {
+          "@type": "LocalBusiness",
+          "@id": "https://srijanakimahaltrust.in/#localbusiness",
+          "name": "Sri Janaki Mahal Trust",
+          "image": "https://srijanakimahaltrust.in/og.jpg",
+          "telephone": "+91-7250364323",
+          "email": "vedpragyabharat@gmail.com",
+          "url": "https://srijanakimahaltrust.in/",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Vasudev Gath, Karsewakpuram",
+            "addressLocality": "Ayodhya",
+            "addressRegion": "Uttar Pradesh",
+            "postalCode": "224123",
+            "addressCountry": "IN"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 26.8039286,
+            "longitude": 82.2109433
+          },
+          "openingHours": "Mo-Su 00:00-23:59",
+          "priceRange": "₹₹",
+          "description": "Spiritual Dharmshala in Ayodhya offering comfortable accommodation near Ram Mandir with all meals included"
+        },
+        {
+          "@type": "LodgingBusiness",
+          "@id": "https://srijanakimahaltrust.in/#lodgingbusiness",
+          "name": "Sri Janaki Mahal Trust",
+          "image": "https://srijanakimahaltrust.in/og.jpg",
+          "telephone": "+91-7250364323",
+          "email": "vedpragyabharat@gmail.com",
+          "url": "https://srijanakimahaltrust.in/",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Vasudev Gath, Karsewakpuram",
+            "addressLocality": "Ayodhya",
+            "addressRegion": "Uttar Pradesh",
+            "postalCode": "224123",
+            "addressCountry": "IN"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 26.8039286,
+            "longitude": 82.2109433
+          },
+          "checkinTime": "14:00",
+          "checkoutTime": "12:00",
+          "priceRange": "₹1,250 - ₹4,150",
+          "amenityFeature": [
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "All Meals Included",
+              "value": true
+            },
+            {
+              "@type": "LocationFeatureSpecification", 
+              "name": "24/7 Customer Support",
+              "value": true
+            },
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "Hot Water",
+              "value": true
+            },
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "Spiritual Environment",
+              "value": true
+            },
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "Near Ram Mandir",
+              "value": true
+            }
+          ],
+          "starRating": {
+            "@type": "Rating",
+            "ratingValue": "4.5"
+          }
+        }
+      ]
+    }
+    </script>
   </head>
   <body class="bg-[#faf8f3]">
     <slot />

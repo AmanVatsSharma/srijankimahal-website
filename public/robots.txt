@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://srijanakimahaltrust.in/sitemap-index.xml

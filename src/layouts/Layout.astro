@@ -44,6 +44,17 @@ const { title } = Astro.props;
     <meta name="theme-color" content="#d4a574" />
     <meta name="robots" content="index,follow" />
     
+    <!-- Security Meta Tags -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+    <meta name="format-detection" content="telephone=no" />
+    
+    <!-- Google Site Verification (Replace with actual verification code) -->
+    <meta name="google-site-verification" content="your-google-verification-code" />
+    
+    <!-- Google Ads Disclosure -->
+    <meta name="google-ads-disclosure" content="This site uses Google Ads for advertising purposes" />
+    
     <!-- Canonical URL -->
     <link rel="canonical" href="https://srijanakimahaltrust.in/" />
     
@@ -100,7 +111,9 @@ const { title } = Astro.props;
             "@type": "ContactPoint",
             "telephone": "+91-7250364323",
             "contactType": "customer service",
-            "availableLanguage": "English"
+            "availableLanguage": ["English", "Hindi"],
+            "areaServed": "IN",
+            "hoursAvailable": "24/7"
           },
           "email": "vedpragyabharat@gmail.com",
           "address": {
@@ -110,7 +123,13 @@ const { title } = Astro.props;
             "addressRegion": "Uttar Pradesh",
             "postalCode": "224123",
             "addressCountry": "IN"
-          }
+          },
+          "foundingDate": "2020",
+          "legalName": "Sri Janaki Mahal Trust",
+          "description": "Registered charitable trust providing spiritual accommodation in Ayodhya",
+          "sameAs": [
+            "https://wa.me/917250364323"
+          ]
         },
         {
           "@type": "LocalBusiness",

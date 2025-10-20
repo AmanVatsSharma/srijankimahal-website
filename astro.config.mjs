@@ -9,5 +9,10 @@ export default defineConfig({
     ssr: {
       external: ['svgo']
     }
+  },
+  // Security headers configuration for Vercel
+  output: 'static',
+  build: {
+    assets: '_astro'
   }
 });

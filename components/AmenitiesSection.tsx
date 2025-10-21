@@ -1,114 +1,99 @@
 export default function AmenitiesSection() {
-  const amenities = [
-    {
-      icon: "🍽️",
-      title: "All Meals Included",
-      description: "Traditional vegetarian breakfast, lunch, and dinner served daily"
-    },
-    {
-      icon: "🚿",
-      title: "Hot Water",
-      description: "24/7 hot water supply in all rooms and common areas"
-    },
-    {
-      icon: "❄️",
-      title: "AC & Non-AC Rooms",
-      description: "Choose between air-conditioned or naturally ventilated rooms"
-    },
-    {
-      icon: "🧹",
-      title: "Daily Housekeeping",
-      description: "Professional cleaning and maintenance of all rooms"
-    },
-    {
-      icon: "🛏️",
-      title: "Comfortable Bedding",
-      description: "Clean beds, pillows, and linens for a restful sleep"
-    },
-    {
-      icon: "🚗",
-      title: "Parking Available",
-      description: "Secure parking space for guests' vehicles"
-    },
-    {
-      icon: "🕉️",
-      title: "Prayer Room",
-      description: "Dedicated meditation and prayer space for spiritual practice"
-    },
-    {
-      icon: "🔒",
-      title: "24/7 Security",
-      description: "Round-the-clock security and surveillance for your safety"
-    },
-    {
-      icon: "📞",
-      title: "Customer Support",
-      description: "24/7 assistance for all your needs and queries"
-    },
-    {
-      icon: "🗺️",
-      title: "Prime Location",
-      description: "Walking distance to Ram Mandir and major temples"
-    },
-    {
-      icon: "💧",
-      title: "Safe Drinking Water",
-      description: "Purified drinking water available throughout the premises"
-    },
-    {
-      icon: "📱",
-      title: "WiFi Access",
-      description: "Complimentary internet connectivity for guests"
-    }
-  ];
-
   return (
-    <section id="amenities" className="py-16 sm:py-24 bg-gray-50">
+    <section id="amenities" className="py-16 sm:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 text-balance">
             Amenities & Facilities
           </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Everything you need for a comfortable and spiritually enriching stay in Ayodhya
-          </p>
+          <p className="text-lg text-gray-600">Everything you need for a comfortable spiritual stay</p>
         </div>
 
         {/* Amenities Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {amenities.map((amenity, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow p-6 text-center group"
-            >
-              <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">
-                {amenity.icon}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="flex gap-4">
+            <div className="flex-shrink-0">
+              <div className="flex items-center justify-center h-12 w-12 rounded-md bg-amber-600 text-white">
+                <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                </svg>
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                {amenity.title}
-              </h3>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                {amenity.description}
-              </p>
             </div>
-          ))}
-        </div>
-
-        {/* Special Notice */}
-        <div className="mt-12 bg-gradient-to-r from-amber-50 to-orange-50 rounded-lg p-8 text-center">
-          <div className="flex items-center justify-center gap-3 mb-4">
-            <svg className="w-8 h-8 text-amber-600" fill="currentColor" viewBox="0 0 20 20">
-              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-            </svg>
-            <h3 className="text-xl font-bold text-amber-800">All Meals Included</h3>
+            <div>
+              <h3 className="text-lg font-medium text-gray-900">24/7 Hot Water</h3>
+              <p className="mt-2 text-gray-600">Continuous hot water supply throughout the day</p>
+            </div>
           </div>
-          <p className="text-amber-700 text-lg mb-4">
-            <strong>No additional charges for food!</strong> All room prices include breakfast, lunch, and dinner.
-          </p>
-          <p className="text-amber-600">
-            Enjoy traditional vegetarian cuisine prepared with devotion and served with warmth.
-          </p>
+
+          <div className="flex gap-4">
+            <div className="flex-shrink-0">
+              <div className="flex items-center justify-center h-12 w-12 rounded-md bg-amber-600 text-white">
+                <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path>
+                </svg>
+              </div>
+            </div>
+            <div>
+              <h3 className="text-lg font-medium text-gray-900">Air Conditioning</h3>
+              <p className="mt-2 text-gray-600">AC rooms available for maximum comfort</p>
+            </div>
+          </div>
+
+          <div className="flex gap-4">
+            <div className="flex-shrink-0">
+              <div className="flex items-center justify-center h-12 w-12 rounded-md bg-amber-600 text-white">
+                <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+              </div>
+            </div>
+            <div>
+              <h3 className="text-lg font-medium text-gray-900">Affordable Rates</h3>
+              <p className="mt-2 text-gray-600">Budget-friendly pricing for all pilgrims</p>
+            </div>
+          </div>
+
+          <div className="flex gap-4">
+            <div className="flex-shrink-0">
+              <div className="flex items-center justify-center h-12 w-12 rounded-md bg-amber-600 text-white">
+                <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                </svg>
+              </div>
+            </div>
+            <div>
+              <h3 className="text-lg font-medium text-gray-900">Peaceful Environment</h3>
+              <p className="mt-2 text-gray-600">Serene atmosphere for meditation and prayer</p>
+            </div>
+          </div>
+
+          <div className="flex gap-4">
+            <div className="flex-shrink-0">
+              <div className="flex items-center justify-center h-12 w-12 rounded-md bg-amber-600 text-white">
+                <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+              </div>
+            </div>
+            <div>
+              <h3 className="text-lg font-medium text-gray-900">Dedicated Staff</h3>
+              <p className="mt-2 text-gray-600">Warm and helpful service 24/7</p>
+            </div>
+          </div>
+
+          <div className="flex gap-4">
+            <div className="flex-shrink-0">
+              <div className="flex items-center justify-center h-12 w-12 rounded-md bg-amber-600 text-white">
+                <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                </svg>
+              </div>
+            </div>
+            <div>
+              <h3 className="text-lg font-medium text-gray-900">Prime Location</h3>
+              <p className="mt-2 text-gray-600">Close to temples and pilgrimage sites</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>

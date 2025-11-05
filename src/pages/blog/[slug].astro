@@ -1,0 +1,190 @@
+<!-- // src/pages/blog/[slug].astro -->
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { generateBreadcrumbSchema, generateStandardBreadcrumbs } from '../../lib/schemas/breadcrumb';
+
+// Get slug from params
+const { slug } = Astro.params;
+
+// Blog posts metadata - matches index.astro
+const blogPostsMetadata = [
+  {
+    slug: 'complete-guide-sri-janaki-mahal-trust-ayodhya',
+    title: 'Complete Guide to Sri Janaki Mahal Trust Ayodhya',
+    description: 'Everything you need to know about booking, staying, and experiencing Sri Janaki Mahal Trust - the best spiritual dharmshala in Ayodhya near Ram Mandir.',
+    date: '2025-01-15',
+    readTime: '8 min read',
+  },
+  {
+    slug: 'best-time-visit-ayodhya-spiritual-journey',
+    title: 'Best Time to Visit Ayodhya for Spiritual Journey',
+    description: 'Discover the best seasons, festivals, and times to visit Ayodhya for your spiritual journey. Plan your stay at Sri Janaki Mahal Trust for the perfect pilgrimage experience.',
+    date: '2025-01-10',
+    readTime: '6 min read',
+  },
+  {
+    slug: 'how-to-reach-sri-janaki-mahal-trust',
+    title: 'How to Reach Sri Janaki Mahal Trust - Complete Travel Guide',
+    description: 'Complete travel guide to reach Sri Janaki Mahal Trust in Ayodhya. Directions by train, bus, air, and road. Location details and nearby landmarks.',
+    date: '2025-01-08',
+    readTime: '7 min read',
+  },
+  {
+    slug: 'what-to-expect-sri-janaki-mahal-dharmshala',
+    title: 'What to Expect at Sri Janaki Mahal Dharmshala - Guest Experience',
+    description: 'Learn what to expect during your stay at Sri Janaki Mahal Trust. Rooms, amenities, meals, spiritual environment, and everything you need to know.',
+    date: '2025-01-05',
+    readTime: '5 min read',
+  },
+  {
+    slug: 'ayodhya-ram-mandir-complete-visitor-guide',
+    title: 'Ayodhya Ram Mandir - Complete Visitor Guide 2025',
+    description: 'Complete guide to visiting Ram Mandir in Ayodhya. Timings, rituals, nearby attractions, and how to plan your stay at Sri Janaki Mahal Trust for easy access.',
+    date: '2025-01-03',
+    readTime: '10 min read',
+  }
+];
+
+// Find the post metadata
+const postMeta = blogPostsMetadata.find(p => p.slug === slug);
+
+// 404 if post not found
+if (!postMeta) {
+  return Astro.redirect('/404');
+}
+
+// Load markdown content
+let contentModule;
+try {
+  contentModule = await import(`../../content/blog/${slug}.md`);
+} catch (error) {
+  console.error('[Blog Post] Failed to load content:', error);
+  return Astro.redirect('/404');
+}
+
+const post = {
+  ...postMeta,
+  content: contentModule,
+};
+
+// Generate breadcrumbs
+const breadcrumbs = generateStandardBreadcrumbs('Blog', `/blog`);
+breadcrumbs.push({ name: post.title, url: `/blog/${slug}` });
+const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbs);
+
+// Get content component
+const { Content } = post.content;
+
+console.log('[Blog Post] Rendering:', slug);
+---
+
+<Layout 
+  title={`${post.title} | Sri Janaki Mahal Trust Blog`}
+  description={post.description}
+  keywords={[
+    'Sri Janaki Mahal Trust',
+    'Sri Janaki Mahal Ayodhya',
+    'Ayodhya dharmshala',
+    'spiritual accommodation',
+    'Ram Mandir',
+    ...(post.content.frontmatter?.keywords || [])
+  ]}
+  canonical={`/blog/${slug}`}
+  ogType="article"
+  ogImage={post.content.frontmatter?.image || '/og.jpg'}
+>
+  <Header />
+  
+  <main class="min-h-screen bg-[#faf8f3] py-12">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Breadcrumbs -->
+      <nav class="mb-6 text-sm" aria-label="Breadcrumb">
+        <ol class="flex items-center gap-2 text-gray-600">
+          <li><a href="/" class="hover:text-amber-600">Home</a></li>
+          <li>/</li>
+          <li><a href="/blog" class="hover:text-amber-600">Blog</a></li>
+          <li>/</li>
+          <li class="text-gray-900">{post.title}</li>
+        </ol>
+      </nav>
+
+      <!-- Article Header -->
+      <header class="mb-8">
+        <h1 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
+          {post.title}
+        </h1>
+        <div class="flex items-center gap-4 text-sm text-gray-600 mb-6">
+          <time datetime={post.date}>
+            {new Date(post.date).toLocaleDateString('en-IN', { year: 'numeric', month: 'long', day: 'numeric' })}
+          </time>
+          <span>•</span>
+          <span>{post.readTime}</span>
+        </div>
+        <p class="text-xl text-gray-700 leading-relaxed">
+          {post.description}
+        </p>
+      </header>
+
+      <!-- Article Content -->
+      <article class="bg-white rounded-lg shadow-lg p-8 prose prose-lg max-w-none">
+        <Content />
+      </article>
+
+      <!-- Call to Action -->
+      <div class="mt-12 bg-gradient-to-r from-amber-600 to-rose-600 rounded-lg p-8 text-center text-white">
+        <h2 class="text-2xl font-bold mb-4">Book Your Stay at Sri Janaki Mahal Trust</h2>
+        <p class="text-lg mb-6 opacity-90">
+          Experience spiritual accommodation in Ayodhya near Ram Mandir
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a 
+            href="tel:+917250364323"
+            class="px-6 py-3 bg-white text-amber-600 font-bold rounded-lg hover:bg-gray-100 transition-colors"
+          >
+            Call: +91 7250364323
+          </a>
+          <a 
+            href="https://wa.me/917250364323"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="px-6 py-3 bg-green-600 text-white font-bold rounded-lg hover:bg-green-700 transition-colors"
+          >
+            WhatsApp Booking
+          </a>
+        </div>
+      </div>
+
+      <!-- Related Posts -->
+      <div class="mt-12">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">Related Articles</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          {blogPostsMetadata
+            .filter(p => p.slug !== slug)
+            .slice(0, 2)
+            .map((relatedPost) => (
+              <a 
+                href={`/blog/${relatedPost.slug}`}
+                class="block bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"
+              >
+                <h3 class="text-xl font-bold text-gray-900 mb-2 hover:text-amber-600">
+                  {relatedPost.title}
+                </h3>
+                <p class="text-gray-600 text-sm mb-3">{relatedPost.description}</p>
+                <span class="text-amber-600 font-semibold text-sm">Read more →</span>
+              </a>
+            ))}
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Breadcrumb Schema -->
+  {breadcrumbSchema && (
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+  )}
+
+  <Footer />
+</Layout>
+

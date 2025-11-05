@@ -1,11 +1,61 @@
 <!-- // src/layouts/Layout.astro -->
 ---
 import '../styles/global.css';
-const { title } = Astro.props;
+import { generateSEOData, type SEOConfig } from '../lib/seo';
+
+// SEO Props Interface
+interface Props {
+  title?: string;
+  description?: string;
+  keywords?: string[];
+  canonical?: string;
+  ogImage?: string;
+  ogType?: 'website' | 'article';
+  noindex?: boolean;
+  lang?: 'en' | 'hi';
+  alternateLanguages?: { lang: string; url: string }[];
+}
+
+// Get SEO props with defaults
+const {
+  title = 'Sri Janaki Mahal - Spiritual Dharmshala in Ayodhya',
+  description,
+  keywords,
+  canonical,
+  ogImage,
+  ogType,
+  noindex = false,
+  lang = 'en',
+  alternateLanguages,
+}: Props = Astro.props;
+
+// Get current path for canonical URL generation
+const currentPath = Astro.url.pathname;
+
+// Generate complete SEO data
+const seoConfig: SEOConfig = {
+  title,
+  description,
+  keywords,
+  canonical,
+  ogImage,
+  ogType,
+  noindex,
+  lang,
+  alternateLanguages,
+};
+
+const seoData = generateSEOData(seoConfig, currentPath);
+
+console.log('[Layout] SEO data generated:', {
+  title: seoData.title,
+  path: currentPath,
+  lang: seoData.lang,
+});
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={seoData.lang}>
   <head>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17664529026"></script>
@@ -39,10 +89,11 @@ const { title } = Astro.props;
     </script>
     
     <meta charset="UTF-8" />
-    <meta name="description" content="Sri Janaki Mahal - Spiritual Dharmshala in Ayodhya. Book your sacred stay with comfortable rooms and warm hospitality." />
+    <meta name="description" content={seoData.description} />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#d4a574" />
-    <meta name="robots" content="index,follow" />
+    <meta name="robots" content={seoData.robots} />
+    {seoData.keywords && <meta name="keywords" content={seoData.keywords} />}
     
     <!-- Security Meta Tags -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -56,26 +107,31 @@ const { title } = Astro.props;
     <meta name="google-ads-disclosure" content="This site uses Google Ads for advertising purposes" />
     
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://srijanakimahaltrust.in/" />
+    <link rel="canonical" href={seoData.canonical} />
+    
+    <!-- Hreflang Tags for Multilingual Support -->
+    {seoData.hreflangTags.map((tag) => (
+      <link rel={tag.rel} hreflang={tag.hreflang} href={tag.href} />
+    ))}
     
     <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://srijanakimahaltrust.in/" />
-    <meta property="og:title" content="Sri Janaki Mahal - Spiritual Dharmshala in Ayodhya" />
-    <meta property="og:description" content="Sri Janaki Mahal - Spiritual Dharmshala in Ayodhya. Book your sacred stay with comfortable rooms and warm hospitality." />
-    <meta property="og:image" content="https://srijanakimahaltrust.in/og.jpg" />
-    <meta property="og:site_name" content="Sri Janaki Mahal Trust" />
-    <meta property="og:locale" content="en_IN" />
+    <meta property="og:type" content={seoData.ogTags['og:type']} />
+    <meta property="og:url" content={seoData.ogTags['og:url']} />
+    <meta property="og:title" content={seoData.ogTags['og:title']} />
+    <meta property="og:description" content={seoData.ogTags['og:description']} />
+    <meta property="og:image" content={seoData.ogTags['og:image']} />
+    <meta property="og:site_name" content={seoData.ogTags['og:site_name']} />
+    <meta property="og:locale" content={seoData.ogTags['og:locale']} />
     
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://srijanakimahaltrust.in/" />
-    <meta property="twitter:title" content="Sri Janaki Mahal - Spiritual Dharmshala in Ayodhya" />
-    <meta property="twitter:description" content="Sri Janaki Mahal - Spiritual Dharmshala in Ayodhya. Book your sacred stay with comfortable rooms and warm hospitality." />
-    <meta property="twitter:image" content="https://srijanakimahaltrust.in/og.jpg" />
+    <meta property="twitter:card" content={seoData.twitterTags['twitter:card']} />
+    <meta property="twitter:url" content={seoData.twitterTags['twitter:url']} />
+    <meta property="twitter:title" content={seoData.twitterTags['twitter:title']} />
+    <meta property="twitter:description" content={seoData.twitterTags['twitter:description']} />
+    <meta property="twitter:image" content={seoData.twitterTags['twitter:image']} />
     
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <title>{title}</title>
+    <title>{seoData.title}</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">

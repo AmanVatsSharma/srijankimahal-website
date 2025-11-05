@@ -1,0 +1,138 @@
+<!-- // src/pages/blog/index.astro -->
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+// Blog posts data - in production, this would come from a content collection or CMS
+const blogPosts = [
+  {
+    slug: 'complete-guide-sri-janaki-mahal-trust-ayodhya',
+    title: 'Complete Guide to Sri Janaki Mahal Trust Ayodhya',
+    description: 'Everything you need to know about booking, staying, and experiencing Sri Janaki Mahal Trust - the best spiritual dharmshala in Ayodhya near Ram Mandir.',
+    date: '2025-01-15',
+    readTime: '8 min read',
+    keywords: ['Sri Janaki Mahal Trust guide', 'Ayodhya dharmshala guide', 'spiritual accommodation ayodhya']
+  },
+  {
+    slug: 'best-time-visit-ayodhya-spiritual-journey',
+    title: 'Best Time to Visit Ayodhya for Spiritual Journey',
+    description: 'Discover the best seasons, festivals, and times to visit Ayodhya for your spiritual journey. Plan your stay at Sri Janaki Mahal Trust for the perfect pilgrimage experience.',
+    date: '2025-01-10',
+    readTime: '6 min read',
+    keywords: ['best time visit ayodhya', 'ayodhya festivals', 'spiritual journey timing']
+  },
+  {
+    slug: 'how-to-reach-sri-janaki-mahal-trust',
+    title: 'How to Reach Sri Janaki Mahal Trust - Complete Travel Guide',
+    description: 'Complete travel guide to reach Sri Janaki Mahal Trust in Ayodhya. Directions by train, bus, air, and road. Location details and nearby landmarks.',
+    date: '2025-01-08',
+    readTime: '7 min read',
+    keywords: ['how to reach Sri Janaki Mahal', 'directions ayodhya dharmshala', 'travel to ayodhya']
+  },
+  {
+    slug: 'what-to-expect-sri-janaki-mahal-dharmshala',
+    title: 'What to Expect at Sri Janaki Mahal Dharmshala - Guest Experience',
+    description: 'Learn what to expect during your stay at Sri Janaki Mahal Trust. Rooms, amenities, meals, spiritual environment, and everything you need to know.',
+    date: '2025-01-05',
+    readTime: '5 min read',
+    keywords: ['Sri Janaki Mahal experience', 'dharmshala stay', 'what to expect ayodhya']
+  },
+  {
+    slug: 'ayodhya-ram-mandir-complete-visitor-guide',
+    title: 'Ayodhya Ram Mandir - Complete Visitor Guide 2025',
+    description: 'Complete guide to visiting Ram Mandir in Ayodhya. Timings, rituals, nearby attractions, and how to plan your stay at Sri Janaki Mahal Trust for easy access.',
+    date: '2025-01-03',
+    readTime: '10 min read',
+    keywords: ['Ram Mandir guide', 'Ayodhya Ram temple', 'visiting Ram Mandir']
+  }
+];
+
+// Sort by date (newest first)
+const sortedPosts = blogPosts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+
+console.log('[Blog Index] Rendering', sortedPosts.length, 'blog posts');
+---
+
+<Layout 
+  title="Blog - Sri Janaki Mahal Trust | Ayodhya Spiritual Guides & Travel Tips"
+  description="Read our blog for guides on visiting Ayodhya, Ram Mandir, spiritual journeys, and staying at Sri Janaki Mahal Trust. Expert travel tips and pilgrimage guides."
+  keywords={[
+    'Sri Janaki Mahal Trust blog',
+    'Ayodhya travel guide',
+    'Ram Mandir guide',
+    'spiritual journey tips',
+    'ayodhya pilgrimage blog'
+  ]}
+  canonical="/blog"
+  ogType="website"
+>
+  <Header />
+  
+  <main class="min-h-screen bg-[#faf8f3] py-12">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Header Section -->
+      <div class="text-center mb-12">
+        <h1 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
+          Sri Janaki Mahal Trust Blog
+        </h1>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+          Your guide to spiritual journeys in Ayodhya, visiting Ram Mandir, and experiencing the best of Sri Janaki Mahal Trust
+        </p>
+      </div>
+
+      <!-- Blog Posts Grid -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        {sortedPosts.map((post) => (
+          <article class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+            <a href={`/blog/${post.slug}`} class="block">
+              <div class="p-6">
+                <div class="flex items-center gap-2 text-sm text-gray-500 mb-3">
+                  <time datetime={post.date}>{new Date(post.date).toLocaleDateString('en-IN', { year: 'numeric', month: 'long', day: 'numeric' })}</time>
+                  <span>•</span>
+                  <span>{post.readTime}</span>
+                </div>
+                <h2 class="text-xl font-bold text-gray-900 mb-3 hover:text-amber-600 transition-colors">
+                  {post.title}
+                </h2>
+                <p class="text-gray-600 leading-relaxed mb-4">
+                  {post.description}
+                </p>
+                <span class="text-amber-600 font-semibold hover:text-amber-700">
+                  Read more →
+                </span>
+              </div>
+            </a>
+          </article>
+        ))}
+      </div>
+
+      <!-- Call to Action -->
+      <div class="bg-gradient-to-r from-amber-600 to-rose-600 rounded-lg p-8 text-center text-white">
+        <h2 class="text-2xl font-bold mb-4">Ready to Experience Ayodhya?</h2>
+        <p class="text-lg mb-6 opacity-90">
+          Book your spiritual stay at Sri Janaki Mahal Trust today
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a 
+            href="tel:+917250364323"
+            class="px-6 py-3 bg-white text-amber-600 font-bold rounded-lg hover:bg-gray-100 transition-colors"
+          >
+            Call Now: +91 7250364323
+          </a>
+          <a 
+            href="https://wa.me/917250364323"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="px-6 py-3 bg-green-600 text-white font-bold rounded-lg hover:bg-green-700 transition-colors"
+          >
+            WhatsApp Booking
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <Footer />
+</Layout>
+

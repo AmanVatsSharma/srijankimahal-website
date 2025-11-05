@@ -11,9 +11,30 @@ import Footer from '../components/Footer.astro';
 import FloatingWhatsApp from '../components/FloatingWhatsApp.astro';
 import AmenitiesSection from '../components/AmenitiesSection.astro';
 import GallerySection from '../components/GallerySection.astro';
+import FAQSection from '../components/FAQSection.astro';
 ---
 
-<Layout title="Sri Janaki Mahal - Spiritual Dharmshala in Ayodhya">
+<Layout 
+  title="Sri Janaki Mahal Trust - Best Spiritual Dharmshala in Ayodhya | Near Ram Mandir"
+  description="Sri Janaki Mahal Trust - Book comfortable rooms in Ayodhya near Ram Mandir. Best spiritual dharmshala with all meals included. Call +91 7250364323 for booking. Online advance booking available."
+  keywords={[
+    'Sri Janaki Mahal Trust',
+    'Sri Janaki Mahal',
+    'Sri Janaki Mahal Ayodhya',
+    'Sri Janaki Mahal Trust Ayodhya',
+    'Janaki Mahal Trust',
+    'dharmshala ayodhya',
+    'spiritual accommodation ayodhya',
+    'rooms near ram mandir',
+    'ayodhya dharmshala booking',
+    'janaki mahal trust ayodhya',
+    'best dharmshala ayodhya',
+    'spiritual stay ayodhya',
+    'karsewakpuram dharmshala'
+  ]}
+  canonical="/"
+  ogImage="/og.jpg"
+>
   <Header />
   <HeroSection />
   <AboutJanakiMahal />
@@ -21,6 +42,7 @@ import GallerySection from '../components/GallerySection.astro';
   <AmenitiesSection />
   <GallerySection />
   <TestimonialsSection />
+  <FAQSection />
   <ContactSection />
   <Footer />	
   <FloatingWhatsApp />

@@ -24,9 +24,9 @@ const AUTO_DURATION_SEC = 15; // user preference
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-12">
       <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 text-balance">
-        Gallery
+        Sri Janaki Mahal Trust Gallery - Ayodhya Dharmshala Photos
       </h2>
-      <p class="text-lg text-gray-600">Explore the beauty and serenity of Sri Janaki Mahal</p>
+      <p class="text-lg text-gray-600">Explore the beauty and serenity of <strong>Sri Janaki Mahal Trust</strong> in <strong>Ayodhya</strong>. See our rooms, courtyard, and <strong>spiritual accommodation near Ram Mandir</strong>.</p>
     </div>
 
     <!-- Dual-lane gallery: manual scroll + auto-scroll in opposite directions -->
@@ -35,11 +35,22 @@ const AUTO_DURATION_SEC = 15; // user preference
       <div class="relative h-96 rounded-lg">
         <div class="lane no-scrollbar gallery-scroll overflow-x-auto overflow-y-hidden h-96" data-direction="left" data-duration={AUTO_DURATION_SEC} aria-label="Auto-scrolling gallery lane left">
           <div class="lane-track flex gap-4" style="will-change: scroll-position;">
-            { [...leftImages, ...leftImages].map((src, i) => (
-              <div class="gallery-item flex-shrink-0 w-80 h-96 rounded-lg overflow-hidden shadow-lg" data-index={i}>
-                <img src={src} alt={"Gallery image " + (i + 1)} loading="lazy" decoding="async" sizes="(max-width: 768px) 80vw, 20rem" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300" />
-              </div>
-            )) }
+            { [...leftImages, ...leftImages].map((src, i) => {
+              const imageIndex = i % leftImages.length;
+              const altTexts = [
+                "Sri Janaki Mahal Trust Ayodhya - Beautiful spiritual dharmshala exterior with traditional architecture",
+                "Sri Janaki Mahal Trust courtyard - Peaceful meditation space in Ayodhya near Ram Mandir",
+                "Sri Janaki Mahal Trust rooms - Comfortable accommodation in Ayodhya dharmshala",
+                "Sri Janaki Mahal Trust interior - Clean and spiritual environment for devotees",
+                "Sri Janaki Mahal Trust garden - Serene outdoor space in Ayodhya spiritual accommodation",
+                "Sri Janaki Mahal Trust architecture - Traditional design of dharmshala in Karsewakpuram"
+              ];
+              return (
+                <div class="gallery-item flex-shrink-0 w-80 h-96 rounded-lg overflow-hidden shadow-lg" data-index={i}>
+                  <img src={src} alt={altTexts[imageIndex] || `Sri Janaki Mahal Trust - Spiritual dharmshala in Ayodhya gallery image ${i + 1}`} loading="lazy" decoding="async" sizes="(max-width: 768px) 80vw, 20rem" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300" />
+                </div>
+              );
+            }) }
           </div>
         </div>
       </div>
@@ -48,11 +59,22 @@ const AUTO_DURATION_SEC = 15; // user preference
       <div class="relative h-96 rounded-lg">
         <div class="lane no-scrollbar gallery-scroll overflow-x-auto overflow-y-hidden h-96" data-direction="right" data-duration={AUTO_DURATION_SEC} aria-label="Auto-scrolling gallery lane right">
           <div class="lane-track flex gap-4" style="will-change: scroll-position;">
-            { [...rightImages, ...rightImages].map((src, i) => (
-              <div class="gallery-item flex-shrink-0 w-80 h-96 rounded-lg overflow-hidden shadow-lg" data-index={i}>
-                <img src={src} alt={"Gallery image " + (i + 1)} loading="lazy" decoding="async" sizes="(max-width: 768px) 80vw, 20rem" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300" />
-              </div>
-            )) }
+            { [...rightImages, ...rightImages].map((src, i) => {
+              const imageIndex = i % rightImages.length;
+              const altTexts = [
+                "Sri Janaki Mahal Trust Ayodhya - Traditional architecture of spiritual dharmshala",
+                "Sri Janaki Mahal Trust facilities - Clean and comfortable rooms near Ram Mandir",
+                "Sri Janaki Mahal Trust spiritual environment - Peaceful accommodation in Ayodhya",
+                "Sri Janaki Mahal Trust interior design - Beautiful dharmshala rooms in Karsewakpuram",
+                "Sri Janaki Mahal Trust meditation space - Sacred environment for spiritual journey",
+                "Sri Janaki Mahal Trust courtyard view - Serene garden area in Ayodhya dharmshala"
+              ];
+              return (
+                <div class="gallery-item flex-shrink-0 w-80 h-96 rounded-lg overflow-hidden shadow-lg" data-index={i}>
+                  <img src={src} alt={altTexts[imageIndex] || `Sri Janaki Mahal Trust - Ayodhya dharmshala gallery image ${i + 1}`} loading="lazy" decoding="async" sizes="(max-width: 768px) 80vw, 20rem" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300" />
+                </div>
+              );
+            }) }
           </div>
         </div>
       </div>

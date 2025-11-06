@@ -4,47 +4,140 @@ import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 
-// Blog posts data - in production, this would come from a content collection or CMS
+// Blog posts data - all 19 blog posts
 const blogPosts = [
+  {
+    slug: 'sri-janaki-mahal-trust-best-time-visit-ayodhya',
+    title: 'Best Time to Visit Ayodhya and Sri Janaki Mahal Trust - Seasonal Guide',
+    description: 'Complete guide on best time to visit Ayodhya and Sri Janaki Mahal Trust. Seasonal weather, festivals, peak seasons, and travel tips.',
+    date: '2025-02-14',
+    readTime: '8 min read'
+  },
+  {
+    slug: 'sri-janaki-mahal-trust-ac-non-ac-rooms-difference',
+    title: 'Sri Janaki Mahal Trust AC vs Non-AC Rooms - Difference and Which to Choose',
+    description: 'Complete guide to AC vs Non-AC rooms at Sri Janaki Mahal Trust. Differences, pricing, features, and which room type to choose.',
+    date: '2025-02-12',
+    readTime: '7 min read'
+  },
+  {
+    slug: 'sri-janaki-mahal-trust-cancellation-refund-policy',
+    title: 'Sri Janaki Mahal Trust Cancellation and Refund Policy - Complete Guide',
+    description: 'Complete guide to cancellation and refund policy at Sri Janaki Mahal Trust. Cancellation terms, refund process, and policy details.',
+    date: '2025-02-10',
+    readTime: '6 min read'
+  },
+  {
+    slug: 'sri-janaki-mahal-trust-meals-food-guide',
+    title: 'Sri Janaki Mahal Trust Meals and Food Guide - All Meals Included',
+    description: 'Complete guide to meals and food at Sri Janaki Mahal Trust. All meals included, meal timings, vegetarian cuisine, and dining experience.',
+    date: '2025-02-09',
+    readTime: '6 min read'
+  },
+  {
+    slug: 'sri-janaki-mahal-trust-check-in-check-out-timings',
+    title: 'Sri Janaki Mahal Trust Check-in and Check-out Timings - Complete Guide',
+    description: 'Complete guide on check-in and check-out timings at Sri Janaki Mahal Trust. Standard times, early check-in, late check-out, and what to expect.',
+    date: '2025-02-07',
+    readTime: '5 min read'
+  },
+  {
+    slug: 'sri-janaki-mahal-trust-advance-booking-guide',
+    title: 'Sri Janaki Mahal Trust Advance Booking Guide - How to Book in Advance',
+    description: 'Complete guide on advance booking at Sri Janaki Mahal Trust. When to book, how to book in advance, booking tips, and advance booking process.',
+    date: '2025-02-05',
+    readTime: '6 min read'
+  },
+  {
+    slug: 'sri-janaki-mahal-trust-services-amenities-facilities',
+    title: 'Sri Janaki Mahal Trust Services, Amenities, and Facilities - Complete Guide',
+    description: 'Complete guide to services, amenities, and facilities at Sri Janaki Mahal Trust. All meals included, hot water, 24/7 support, and more.',
+    date: '2025-02-03',
+    readTime: '7 min read'
+  },
+  {
+    slug: 'sri-janaki-mahal-trust-verified-official-authentic',
+    title: 'Is Sri Janaki Mahal Trust Verified, Official, and Authentic? - Complete Verification Guide',
+    description: 'Complete guide on verifying Sri Janaki Mahal Trust authenticity. Learn how to verify official status, registration details, and avoid scams.',
+    date: '2025-02-01',
+    readTime: '8 min read'
+  },
+  {
+    slug: 'how-to-reach-sri-janaki-mahal-trust-from-ayodhya-station',
+    title: 'How to Reach Sri Janaki Mahal Trust from Ayodhya Railway Station - Complete Guide',
+    description: 'Step-by-step guide on how to reach Sri Janaki Mahal Trust from Ayodhya Railway Station. Distance, transportation options, directions, and travel tips.',
+    date: '2025-01-30',
+    readTime: '6 min read'
+  },
+  {
+    slug: 'sri-janaki-mahal-trust-room-prices-pricing-guide',
+    title: 'Sri Janaki Mahal Trust Room Prices and Pricing Guide - Complete Breakdown',
+    description: 'Complete pricing guide for Sri Janaki Mahal Trust rooms. All room types, prices, what\'s included, and transparent pricing information.',
+    date: '2025-01-28',
+    readTime: '7 min read'
+  },
+  {
+    slug: 'sri-janaki-mahal-trust-contact-number-address',
+    title: 'Sri Janaki Mahal Trust Contact Number, Address, and Location - Complete Guide',
+    description: 'Complete contact information for Sri Janaki Mahal Trust. Official phone number, WhatsApp, email, address, and location details.',
+    date: '2025-01-27',
+    readTime: '6 min read'
+  },
+  {
+    slug: 'sri-janaki-mahal-trust-room-booking-online',
+    title: 'Sri Janaki Mahal Trust Room Booking Online - Step by Step Guide',
+    description: 'Complete guide to booking room at Sri Janaki Mahal Trust online. Step-by-step process, booking methods, and tips for successful online booking.',
+    date: '2025-01-25',
+    readTime: '7 min read'
+  },
+  {
+    slug: 'sri-janaki-mahal-trust-official-website-verification',
+    title: 'Sri Janaki Mahal Trust Official Website - Everything You Need to Know',
+    description: 'Complete guide to Sri Janaki Mahal Trust official website. Learn how to verify the official site, avoid scams, and book safely.',
+    date: '2025-01-22',
+    readTime: '8 min read'
+  },
+  {
+    slug: 'how-to-book-room-sri-janaki-mahal-trust',
+    title: 'How to Book Room at Sri Janaki Mahal Trust - Complete Guide',
+    description: 'Step-by-step guide on how to book room at Sri Janaki Mahal Trust. Learn about online booking, phone booking, WhatsApp booking, and the complete booking process.',
+    date: '2025-01-20',
+    readTime: '8 min read'
+  },
   {
     slug: 'complete-guide-sri-janaki-mahal-trust-ayodhya',
     title: 'Complete Guide to Sri Janaki Mahal Trust Ayodhya',
-    description: 'Everything you need to know about booking, staying, and experiencing Sri Janaki Mahal Trust - the best spiritual dharmshala in Ayodhya near Ram Mandir.',
+    description: 'Everything you need to know about booking, staying, and experiencing Sri Janaki Mahal Trust - the best dharmshala in Ayodhya near Ram Mandir.',
     date: '2025-01-15',
-    readTime: '8 min read',
-    keywords: ['Sri Janaki Mahal Trust guide', 'Ayodhya dharmshala guide', 'spiritual accommodation ayodhya']
+    readTime: '8 min read'
   },
   {
     slug: 'best-time-visit-ayodhya-spiritual-journey',
-    title: 'Best Time to Visit Ayodhya for Spiritual Journey',
-    description: 'Discover the best seasons, festivals, and times to visit Ayodhya for your spiritual journey. Plan your stay at Sri Janaki Mahal Trust for the perfect pilgrimage experience.',
+    title: 'Best Time to Visit Ayodhya for Your Visit',
+    description: 'Discover the best seasons, festivals, and times to visit Ayodhya. Plan your stay at Sri Janaki Mahal Trust for the perfect visit experience.',
     date: '2025-01-10',
-    readTime: '6 min read',
-    keywords: ['best time visit ayodhya', 'ayodhya festivals', 'spiritual journey timing']
+    readTime: '6 min read'
   },
   {
     slug: 'how-to-reach-sri-janaki-mahal-trust',
     title: 'How to Reach Sri Janaki Mahal Trust - Complete Travel Guide',
     description: 'Complete travel guide to reach Sri Janaki Mahal Trust in Ayodhya. Directions by train, bus, air, and road. Location details and nearby landmarks.',
     date: '2025-01-08',
-    readTime: '7 min read',
-    keywords: ['how to reach Sri Janaki Mahal', 'directions ayodhya dharmshala', 'travel to ayodhya']
+    readTime: '7 min read'
   },
   {
     slug: 'what-to-expect-sri-janaki-mahal-dharmshala',
     title: 'What to Expect at Sri Janaki Mahal Dharmshala - Guest Experience',
-    description: 'Learn what to expect during your stay at Sri Janaki Mahal Trust. Rooms, amenities, meals, spiritual environment, and everything you need to know.',
+    description: 'Learn what to expect during your stay at Sri Janaki Mahal Trust. Rooms, amenities, meals, peaceful environment, and everything you need to know.',
     date: '2025-01-05',
-    readTime: '5 min read',
-    keywords: ['Sri Janaki Mahal experience', 'dharmshala stay', 'what to expect ayodhya']
+    readTime: '5 min read'
   },
   {
     slug: 'ayodhya-ram-mandir-complete-visitor-guide',
     title: 'Ayodhya Ram Mandir - Complete Visitor Guide 2025',
     description: 'Complete guide to visiting Ram Mandir in Ayodhya. Timings, rituals, nearby attractions, and how to plan your stay at Sri Janaki Mahal Trust for easy access.',
     date: '2025-01-03',
-    readTime: '10 min read',
-    keywords: ['Ram Mandir guide', 'Ayodhya Ram temple', 'visiting Ram Mandir']
+    readTime: '10 min read'
   }
 ];
 
@@ -55,14 +148,17 @@ console.log('[Blog Index] Rendering', sortedPosts.length, 'blog posts');
 ---
 
 <Layout 
-  title="Blog - Sri Janaki Mahal Trust | Ayodhya Spiritual Guides & Travel Tips"
-  description="Read our blog for guides on visiting Ayodhya, Ram Mandir, spiritual journeys, and staying at Sri Janaki Mahal Trust. Expert travel tips and pilgrimage guides."
+  title="Blog - Sri Janaki Mahal Trust | Ayodhya Travel Guides & Room Booking Tips"
+  description="Read our blog for guides on visiting Ayodhya, Ram Mandir, room booking, and staying at Sri Janaki Mahal Trust. Expert travel tips and booking guides."
   keywords={[
     'Sri Janaki Mahal Trust blog',
     'Ayodhya travel guide',
     'Ram Mandir guide',
-    'spiritual journey tips',
-    'ayodhya pilgrimage blog'
+    'Sri Janaki Mahal Trust room booking',
+    'online booking Ayodhya',
+    'Sri Janaki Mahal Trust official',
+    'book room online',
+    'Ayodhya dharmshala guide'
   ]}
   canonical="/blog"
   ogType="website"
@@ -77,7 +173,7 @@ console.log('[Blog Index] Rendering', sortedPosts.length, 'blog posts');
           Sri Janaki Mahal Trust Blog
         </h1>
         <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-          Your guide to spiritual journeys in Ayodhya, visiting Ram Mandir, and experiencing the best of Sri Janaki Mahal Trust
+          Your guide to visiting Ayodhya, Ram Mandir, room booking, and experiencing the best of Sri Janaki Mahal Trust
         </p>
       </div>
 
@@ -111,7 +207,7 @@ console.log('[Blog Index] Rendering', sortedPosts.length, 'blog posts');
       <div class="bg-gradient-to-r from-amber-600 to-rose-600 rounded-lg p-8 text-center text-white">
         <h2 class="text-2xl font-bold mb-4">Ready to Experience Ayodhya?</h2>
         <p class="text-lg mb-6 opacity-90">
-          Book your spiritual stay at Sri Janaki Mahal Trust today
+          Book your stay at Sri Janaki Mahal Trust today
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
           <a 

@@ -4,11 +4,12 @@ description: Complete pricing guide for Sri Janaki Mahal Trust rooms. All room t
   -s included, and transparent pricing information. Contact +91 7250364323 for current rates.
 date: 2025-01-28
 keywords:
-  - 'Sri Janaki Mahal Trust verified'
-  - 'Sri Janaki Mahal Trust official'
-  - 'Sri Janaki Mahal Trust authentic'
-  - 'Sri Janaki Mahal Trust legitimate'
-  - 'verify Sri Janaki Mahal Trust'
+  - 'Sri Janaki Mahal Trust room prices'
+  - 'Sri Janaki Mahal Trust pricing'
+  - 'room booking prices Ayodhya'
+  - 'Sri Janaki Mahal Trust room booking'
+  - 'online booking prices'
+  - 'dharmshala room prices'
 ---
 
 # Sri Janaki Mahal Trust Room Prices and Pricing Guide - Complete Breakdown
@@ -275,7 +276,7 @@ Complete transparent pricing guide for all room types at Sri Janaki Mahal Trust.
 - Easy temple access
 - Convenient location
 
-✅ **Spiritual Environment**
+✅ **Peaceful Environment**
 - Peaceful atmosphere
 - Devotional setting
 - Sacred location
@@ -344,7 +345,7 @@ Cancellation policy applies. Contact us for details on cancellation and refund.
 - All meals included
 - Prime location
 - Quality service
-- Spiritual environment
+- Peaceful environment
 
 ## Conclusion
 

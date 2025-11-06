@@ -3,11 +3,12 @@ title: Sri Janaki Mahal Trust Services, Amenities, and Facilities - Complete Gui
 description: Complete guide to services, amenities, and facilities at Sri Janaki Mahal Trust. All meals included, hot water, 24/7 support, and more. Contact +91 7250364323
 date: 2025-02-03
 keywords:
-  - 'Sri Janaki Mahal Trust verified'
-  - 'Sri Janaki Mahal Trust official'
-  - 'Sri Janaki Mahal Trust authentic'
-  - 'Sri Janaki Mahal Trust legitimate'
-  - 'verify Sri Janaki Mahal Trust'
+  - 'Sri Janaki Mahal Trust services'
+  - 'Sri Janaki Mahal Trust amenities'
+  - 'Sri Janaki Mahal Trust facilities'
+  - 'what is included in room booking'
+  - 'dharmshala amenities'
+  - 'Sri Janaki Mahal Trust room booking'
 ---
 
 # Sri Janaki Mahal Trust Services, Amenities, and Facilities - Complete Guide
@@ -25,7 +26,7 @@ Complete guide to all services, amenities, and facilities available at Sri Janak
 - ✅ 24/7 customer support
 - ✅ Daily housekeeping
 - ✅ Room maintenance
-- ✅ Spiritual environment
+- ✅ Peaceful environment
 
 ## Meal Services
 

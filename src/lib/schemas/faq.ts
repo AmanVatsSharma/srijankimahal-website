@@ -69,7 +69,7 @@ export function generateFAQSchema(faqs: FAQItem[]) {
 export const defaultFAQs: FAQItem[] = [
   {
     question: 'What is Sri Janaki Mahal Trust?',
-    answer: 'Sri Janaki Mahal Trust is a registered charitable trust providing spiritual accommodation (dharmshala) in Ayodhya, Uttar Pradesh. We offer comfortable rooms near Ram Mandir with all meals included, creating a peaceful environment for devotees and pilgrims visiting Ayodhya.',
+    answer: 'Sri Janaki Mahal Trust is a registered charitable trust providing comfortable accommodation (dharmshala) in Ayodhya, Uttar Pradesh. We offer comfortable rooms near Ram Mandir with all meals included, creating a peaceful environment for guests and visitors visiting Ayodhya.',
   },
   {
     question: 'How to book rooms at Sri Janaki Mahal?',
@@ -77,15 +77,15 @@ export const defaultFAQs: FAQItem[] = [
   },
   {
     question: 'Where is Sri Janaki Mahal located?',
-    answer: 'Sri Janaki Mahal Trust is located at Vasudev Gath, Karsewakpuram, Ayodhya, Uttar Pradesh 224123. We are conveniently situated near Ram Mandir, making it easy for devotees to visit the temple and other spiritual sites in Ayodhya.',
+    answer: 'Sri Janaki Mahal Trust is located at Vasudev Gath, Karsewakpuram, Ayodhya, Uttar Pradesh 224123. We are conveniently situated near Ram Mandir, making it easy for guests to visit the temple and other important sites in Ayodhya.',
   },
   {
     question: 'What amenities are available at Sri Janaki Mahal Trust?',
-    answer: 'Sri Janaki Mahal Trust offers all meals included, 24/7 customer support, hot water, spiritual environment, and proximity to Ram Mandir. Our rooms are clean, comfortable, and designed for pilgrims seeking a peaceful stay in Ayodhya.',
+    answer: 'Sri Janaki Mahal Trust offers all meals included, 24/7 customer support, hot water, peaceful environment, and proximity to Ram Mandir. Our rooms are clean, comfortable, and designed for guests seeking a peaceful stay in Ayodhya.',
   },
   {
     question: 'Is Sri Janaki Mahal near Ram Mandir?',
-    answer: 'Yes, Sri Janaki Mahal Trust is located near Ram Mandir in Ayodhya. Our location in Karsewakpuram makes it convenient for devotees to visit Ram Mandir and other spiritual landmarks in Ayodhya multiple times during their stay.',
+    answer: 'Yes, Sri Janaki Mahal Trust is located near Ram Mandir in Ayodhya. Our location in Karsewakpuram makes it convenient for guests to visit Ram Mandir and other important landmarks in Ayodhya multiple times during their stay.',
   },
   {
     question: 'What are the room prices at Sri Janaki Mahal Trust?',
@@ -93,7 +93,7 @@ export const defaultFAQs: FAQItem[] = [
   },
   {
     question: 'Does Sri Janaki Mahal Trust include meals?',
-    answer: 'Yes, all meals are included in your stay at Sri Janaki Mahal Trust. We provide vegetarian meals (breakfast, lunch, and dinner) as part of our spiritual accommodation service, ensuring a complete and comfortable experience for our guests.',
+    answer: 'Yes, all meals are included in your stay at Sri Janaki Mahal Trust. We provide vegetarian meals (breakfast, lunch, and dinner) as part of our accommodation service, ensuring a complete and comfortable experience for our guests.',
   },
   {
     question: 'How to reach Sri Janaki Mahal Trust in Ayodhya?',
@@ -105,7 +105,7 @@ export const defaultFAQs: FAQItem[] = [
   },
   {
     question: 'Is Sri Janaki Mahal Trust official?',
-    answer: 'Yes, Sri Janaki Mahal Trust is an official registered charitable trust. We are a legally registered organization providing spiritual accommodation in Ayodhya. Book only through our official channels: phone +91 7250364323, WhatsApp +91 7250364323, or official website srijanakimahaltrust.in.',
+    answer: 'Yes, Sri Janaki Mahal Trust is an official registered charitable trust. We are a legally registered organization providing comfortable accommodation in Ayodhya. Book only through our official channels: phone +91 7250364323, WhatsApp +91 7250364323, or official website srijanakimahaltrust.in.',
   },
   {
     question: 'What is Sri Janaki Mahal Trust phone number?',
@@ -137,7 +137,7 @@ export const defaultFAQs: FAQItem[] = [
   },
   {
     question: 'Is Sri Janaki Mahal Trust legitimate?',
-    answer: 'Yes, Sri Janaki Mahal Trust is a legitimate registered charitable trust operating in Ayodhya since 2020. We are legally registered, verified, and provide authentic spiritual accommodation services. Always book through our official channels to avoid scams.',
+    answer: 'Yes, Sri Janaki Mahal Trust is a legitimate registered charitable trust operating in Ayodhya since 2020. We are legally registered, verified, and provide authentic comfortable accommodation services. Always book through our official channels to avoid scams.',
   },
   {
     question: 'What is Sri Janaki Mahal Trust registration number?',
@@ -157,7 +157,7 @@ export const defaultFAQs: FAQItem[] = [
   },
   {
     question: 'Is Sri Janaki Mahal Trust authentic?',
-    answer: 'Yes, Sri Janaki Mahal Trust is an authentic registered charitable trust providing genuine spiritual accommodation services in Ayodhya. We have been serving pilgrims since 2020 with verified business credentials. Always verify through our official contact: +91 7250364323.',
+    answer: 'Yes, Sri Janaki Mahal Trust is an authentic registered charitable trust providing genuine comfortable accommodation services in Ayodhya. We have been serving guests since 2020 with verified business credentials. Always verify through our official contact: +91 7250364323.',
   },
   {
     question: 'How to verify Sri Janaki Mahal Trust is official?',
@@ -201,7 +201,7 @@ export const defaultFAQs: FAQItem[] = [
   },
   {
     question: 'Is Sri Janaki Mahal Trust real?',
-    answer: 'Yes, Sri Janaki Mahal Trust is a real, registered charitable trust providing spiritual accommodation in Ayodhya. We have a physical location at Vasudev Gath, Karsewakpuram, and have been serving guests since 2020. Visit our official website or call +91 7250364323 to verify.',
+    answer: 'Yes, Sri Janaki Mahal Trust is a real, registered charitable trust providing comfortable accommodation in Ayodhya. We have a physical location at Vasudev Gath, Karsewakpuram, and have been serving guests since 2020. Visit our official website or call +91 7250364323 to verify.',
   },
   {
     question: 'How to book Sri Janaki Mahal Trust room online?',

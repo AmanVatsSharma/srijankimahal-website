@@ -3,21 +3,14 @@ title: Sri Janaki Mahal Trust Contact Number, Address, and Location - Complete G
 description: Complete contact information for Sri Janaki Mahal Trust. Official phone number, WhatsApp, email, address, and location details. Contact +91 7250364323
 date: 2025-01-27
 keywords:
-  - '
-  -Sri Janaki Mahal Trust contact number'
-  -
-  - '
-  -Sri Janaki Mahal Trust phone number'
-  -
-  - '
-  -Sri Janaki Mahal Trust address'
-  -
-  - '
-  -Sri Janaki Mahal Trust contact'
-  -
-  - '
-  -Sri Janaki Mahal Trust location'
-  -
+  - 'Sri Janaki Mahal Trust contact number'
+  - 'Sri Janaki Mahal Trust phone number'
+  - 'Sri Janaki Mahal Trust address'
+  - 'Sri Janaki Mahal Trust contact'
+  - 'Sri Janaki Mahal Trust location'
+  - 'Sri Janaki Mahal Trust room booking'
+  - 'online booking Ayodhya'
+  - 'Sri Janaki Mahal Trust official contact'
 ---
 
 # Sri Janaki Mahal Trust Contact Number, Address, and Location - Complete Guide
@@ -158,7 +151,7 @@ Guests: [Number]
 - One of the most sacred areas in Ayodhya
 - Near Ram Mandir (5 minutes walk)
 - Easy access to all temples
-- Peaceful spiritual environment
+- Peaceful environment
 
 ### Distance from Key Locations
 

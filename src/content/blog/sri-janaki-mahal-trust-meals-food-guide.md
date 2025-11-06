@@ -3,11 +3,12 @@ title: Sri Janaki Mahal Trust Meals and Food Guide - All Meals Included
 description: Complete guide to meals and food at Sri Janaki Mahal Trust. All meals included, meal timings, vegetarian cuisine, and dining experience. Contact +91 7250364323
 date: 2025-02-09
 keywords:
-  - 'Sri Janaki Mahal Trust verified'
-  - 'Sri Janaki Mahal Trust official'
-  - 'Sri Janaki Mahal Trust authentic'
-  - 'Sri Janaki Mahal Trust legitimate'
-  - 'verify Sri Janaki Mahal Trust'
+  - 'Sri Janaki Mahal Trust meals'
+  - 'all meals included'
+  - 'Sri Janaki Mahal Trust food'
+  - 'vegetarian meals Ayodhya'
+  - 'dharmshala meals'
+  - 'Sri Janaki Mahal Trust room booking'
 ---
 
 # Sri Janaki Mahal Trust Meals and Food Guide - All Meals Included
@@ -78,7 +79,7 @@ Complete guide to meals, food, and dining experience at Sri Janaki Mahal Trust. 
 - No non-vegetarian items
 
 **Why Vegetarian:**
-- Spiritual environment
+- Peaceful environment
 - Traditional practice
 - Devotional atmosphere
 - Respectful for all
@@ -162,7 +163,7 @@ Yes, all three meals (breakfast, lunch, dinner) are included in the room price. 
 
 ### What type of food is served?
 
-Pure vegetarian traditional Indian cuisine. Satvik food in a spiritual environment.
+Pure vegetarian traditional Indian cuisine. Simple and clean food in a peaceful environment.
 
 ### What are the meal timings?
 
@@ -175,7 +176,7 @@ Contact us in advance for special dietary requirements. We'
 
 ### Is non-vegetarian food available?
 
-No, only pure vegetarian food is served. This maintains the spiritual environment.
+No, only pure vegetarian food is served. This maintains the peaceful environment.
 
 ### Can I skip meals?
 
@@ -222,7 +223,7 @@ Yes, meals are served on scheduled timings. Contact reception for exact schedule
 3. **Enjoy Traditional Food**
    - Experience local cuisine
    - Try traditional dishes
-   - Enjoy spiritual dining
+   - Enjoy peaceful dining
    - Respectful atmosphere
 
 ## Contact for Meal Information
@@ -238,7 +239,7 @@ Yes, meals are served on scheduled timings. Contact reception for exact schedule
 
 ## Conclusion
 
-Sri Janaki Mahal Trust includes all meals (breakfast, lunch, dinner) in your room price. Pure vegetarian traditional cuisine in a spiritual environment.
+Sri Janaki Mahal Trust includes all meals (breakfast, lunch, dinner) in your room price. Pure vegetarian traditional cuisine in a peaceful environment.
 
 **Meal Information:**
 - All meals included

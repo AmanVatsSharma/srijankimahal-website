@@ -232,7 +232,7 @@ Yes, meals are served on scheduled timings. Contact reception for exact schedule
 **Contact Reception:**
 - 📞 Phone: +91 7250364323
 - 💬 WhatsApp: +91 7250364323
-- 📧 Email: ssrijanakimahaltrust7484@gmail.com
+- 📧 Email: srijanakimahaltrust7484@gmail.com
 
 **Available:** 24/7 for meal-related inquiries
 
@@ -249,7 +249,7 @@ Sri Janaki Mahal Trust includes all meals (breakfast, lunch, dinner) in your roo
 **Contact:**
 - 📞 Phone: +91 7250364323
 - 💬 WhatsApp: +91 7250364323
-- 📧 Email: ssrijanakimahaltrust7484@gmail.com
+- 📧 Email: srijanakimahaltrust7484@gmail.com
 
 **Book Your Stay:**
 - [Booking Page](/booking)

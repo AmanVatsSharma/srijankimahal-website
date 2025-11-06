@@ -117,7 +117,7 @@ export const defaultFAQs: FAQItem[] = [
   },
   {
     question: 'How to contact Sri Janaki Mahal Trust?',
-    answer: 'You can contact Sri Janaki Mahal Trust through: Phone: +91 7250364323 (24/7), WhatsApp: +91 7250364323, Email: ssrijanakimahaltrust7484@gmail.com, or visit our official website srijanakimahaltrust.in. Our team is available round the clock to assist you.',
+    answer: 'You can contact Sri Janaki Mahal Trust through: Phone: +91 7250364323 (24/7), WhatsApp: +91 7250364323, Email: srijanakimahaltrust7484@gmail.com, or visit our official website srijanakimahaltrust.in. Our team is available round the clock to assist you.',
   },
   {
     question: 'Is Sri Janaki Mahal Trust verified?',

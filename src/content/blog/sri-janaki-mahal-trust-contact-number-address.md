@@ -60,7 +60,7 @@ Complete contact information and location details for Sri Janaki Mahal Trust in 
 
 ### Email Address
 
-**Official Email:** ssrijanakimahaltrust7484@gmail.com
+**Official Email:** srijanakimahaltrust7484@gmail.com
 
 **Details:**
 - Response within 24 hours
@@ -134,7 +134,7 @@ Guests: [Number]
 
 ### By Email
 
-**Step 1:** Compose email to ssrijanakimahaltrust7484@gmail.com
+**Step 1:** Compose email to srijanakimahaltrust7484@gmail.com
 
 **Step 2:** Subject line: "Room Booking Inquiry" or "General Inquiry"
 
@@ -212,7 +212,7 @@ Guests: [Number]
 - Booking confirmation
 - Written records
 
-### Email (ssrijanakimahaltrust7484@gmail.com)
+### Email (srijanakimahaltrust7484@gmail.com)
 
 **Pros:**
 - ✅ Formal communication
@@ -366,7 +366,7 @@ Changes: [Details]
 **Official Contact Details:**
 - ✅ Phone: +91 7250364323
 - ✅ WhatsApp: +91 7250364323
-- ✅ Email: ssrijanakimahaltrust7484@gmail.com
+- ✅ Email: srijanakimahaltrust7484@gmail.com
 - ✅ Website: srijanakimahaltrust.in
 
 **Always verify before contacting!**
@@ -383,7 +383,7 @@ Yes, WhatsApp number is +91 7250364323. Same as phone number.
 
 ### What is the email address?
 
-Official email is ssrijanakimahaltrust7484@gmail.com. Response within 24 hours.
+Official email is srijanakimahaltrust7484@gmail.com. Response within 24 hours.
 
 ### What is the complete address?
 
@@ -404,7 +404,7 @@ Contacting Sri Janaki Mahal Trust is easy and convenient. Choose your preferred 
 **Quick Contact:**
 - 📞 Phone: +91 7250364323
 - 💬 WhatsApp: +91 7250364323
-- 📧 Email: ssrijanakimahaltrust7484@gmail.com
+- 📧 Email: srijanakimahaltrust7484@gmail.com
 - 📍 Address: Vasudev Gath, Karsewakpuram, Ayodhya, UP 224123
 
 ---

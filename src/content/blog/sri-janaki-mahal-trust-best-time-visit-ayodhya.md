@@ -275,7 +275,7 @@ Not necessary in winter. AC recommended for summer months.
 **Contact Us:**
 - 📞 Phone: +91 7250364323
 - 💬 WhatsApp: +91 7250364323
-- 📧 Email: ssrijanakimahaltrust7484@gmail.com
+- 📧 Email: srijanakimahaltrust7484@gmail.com
 
 **We'
   -ll Help:**
@@ -295,7 +295,7 @@ Not necessary in winter. AC recommended for summer months.
 **Contact for Booking:**
 - 📞 Phone: +91 7250364323
 - 💬 WhatsApp: +91 7250364323
-- 📧 Email: ssrijanakimahaltrust7484@gmail.com
+- 📧 Email: srijanakimahaltrust7484@gmail.com
 
 **Book Your Stay:**
 - [Booking Page](/booking)

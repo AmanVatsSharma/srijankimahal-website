@@ -33,7 +33,7 @@ Complete guide to cancellation and refund policy at Sri Janaki Mahal Trust. Lear
 **Step 1: Contact Us**
 - Phone: +91 7250364323
 - WhatsApp: +91 7250364323
-- Email: ssrijanakimahaltrust7484@gmail.com
+- Email: srijanakimahaltrust7484@gmail.com
 
 **Step 2: Provide Details**
 - Booking reference (if available)
@@ -130,7 +130,7 @@ Refund depends on cancellation timing and policy terms. Contact us for specific 
 
 ### How do I cancel?
 
-Contact us via phone (+91 7250364323), WhatsApp (+91 7250364323), or email (ssrijanakimahaltrust7484@gmail.com).
+Contact us via phone (+91 7250364323), WhatsApp (+91 7250364323), or email (srijanakimahaltrust7484@gmail.com).
 
 ### When will I get my refund?
 
@@ -151,7 +151,7 @@ Yes, modifications may be possible subject to availability. Contact us for optio
 **Contact Us:**
 - 📞 Phone: +91 7250364323
 - 💬 WhatsApp: +91 7250364323
-- 📧 Email: ssrijanakimahaltrust7484@gmail.com
+- 📧 Email: srijanakimahaltrust7484@gmail.com
 
 **Available:** 24/7 for cancellation requests
 
@@ -181,7 +181,7 @@ Sri Janaki Mahal Trust has a cancellation and refund policy. Contact us for canc
 **For Cancellation:**
 - 📞 Phone: +91 7250364323
 - 💬 WhatsApp: +91 7250364323
-- 📧 Email: ssrijanakimahaltrust7484@gmail.com
+- 📧 Email: srijanakimahaltrust7484@gmail.com
 
 **For Policy Details:**
 - Visit: [Cancellation & Refund Policy](/cancellation-refund)

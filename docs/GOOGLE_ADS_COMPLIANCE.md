@@ -30,7 +30,7 @@ This document outlines the comprehensive Google Ads compliance measures implemen
 - [x] **Business Hours** - Check-in/out times displayed
 - [x] **Google Maps Integration** - Embedded map with directions
 - [x] **Trust Badges** - SSL, Registered Trust, Ratings
-- [x] **Email Contact** - ssrijanakimahaltrust7484@gmail.com
+- [x] **Email Contact** - srijanakimahaltrust7484@gmail.com
 
 ### 4. Pricing Transparency
 - [x] **Clear Pricing Display** - All room rates visible
@@ -214,7 +214,7 @@ This document outlines the comprehensive Google Ads compliance measures implemen
 ## Contact Information
 
 **For Technical Issues:**
-- Email: ssrijanakimahaltrust7484@gmail.com
+- Email: srijanakimahaltrust7484@gmail.com
 - Phone: +91 7250364323
 
 **For Legal Inquiries:**

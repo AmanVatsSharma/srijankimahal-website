@@ -321,7 +321,7 @@ Cancellation policy applies. Contact us for details on cancellation and refund.
 **For Current Rates:**
 - 📞 Call: +91 7250364323
 - 💬 WhatsApp: +91 7250364323
-- 📧 Email: ssrijanakimahaltrust7484@gmail.com
+- 📧 Email: srijanakimahaltrust7484@gmail.com
 
 **We'
   -ll Provide:**
@@ -353,7 +353,7 @@ Sri Janaki Mahal Trust offers transparent, fair pricing with all meals included.
 **Contact for Current Rates:**
 - 📞 Phone: +91 7250364323
 - 💬 WhatsApp: +91 7250364323
-- 📧 Email: ssrijanakimahaltrust7484@gmail.com
+- 📧 Email: srijanakimahaltrust7484@gmail.com
 
 **Book Now:** [Booking Page](/booking)
 

@@ -1,5 +1,11 @@
 <!-- // src/components/RoomsSection.astro -->
 ---
+import { generateBookActionSchema } from '../lib/schemas/booking';
+
+// Generate booking schema for rooms section
+const bookingSchema = generateBookActionSchema('https://srijanakimahaltrust.in/booking');
+
+console.log('[Rooms Section] Booking schema generated');
 ---
 
 <section id="rooms" class="py-16 sm:py-24 bg-gray-50">
@@ -9,7 +15,7 @@
         Book Your Room at <span class="text-amber-600">Sri Janaki Mahal Trust</span> - Best Dharmshala in Ayodhya Near Ram Mandir
       </h2>
       <p class="text-lg text-gray-600">
-        Comfortable accommodation in Ayodhya with all meals included. <a href="/about" class="text-amber-600 hover:text-amber-700 font-semibold">Learn more</a> or <a href="/blog" class="text-amber-600 hover:text-amber-700 font-semibold">read our guides</a>.
+        Comfortable accommodation in Ayodhya with all meals included. <a href="/about" class="text-amber-600 hover:text-amber-700 font-semibold">Learn more</a>, <a href="/booking" class="text-amber-600 hover:text-amber-700 font-semibold">book your room</a>, or <a href="/blog" class="text-amber-600 hover:text-amber-700 font-semibold">read our guides</a>.
       </p>
       
       <!-- Pricing Transparency Notice -->
@@ -426,3 +432,8 @@
     if (e.key === 'Escape') closeModalFunc();
   });
 </script>
+
+<!-- Booking Schema for SEO -->
+{bookingSchema && (
+  <script type="application/ld+json" set:html={JSON.stringify(bookingSchema)} />
+)}

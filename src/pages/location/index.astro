@@ -1,0 +1,170 @@
+<!-- // src/pages/location/index.astro -->
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { generateBreadcrumbSchema, generateStandardBreadcrumbs } from '../../lib/schemas/breadcrumb';
+
+// Generate breadcrumbs
+const breadcrumbs = generateStandardBreadcrumbs('Location', '/location');
+const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbs);
+
+console.log('[Location Index] Rendering location index page');
+---
+
+<Layout 
+  title="Sri Janaki Mahal Trust Location - Karsewakpuram Ayodhya | Near Ram Mandir"
+  description="Sri Janaki Mahal Trust location guide - Located in Karsewakpuram, Ayodhya, just 5 minutes walk from Ram Mandir. Complete address, directions, and nearby attractions. Book: +91 7250364323"
+  keywords={[
+    'Sri Janaki Mahal Trust location',
+    'Sri Janaki Mahal Trust address',
+    'Sri Janaki Mahal Trust Ayodhya location',
+    'Karsewakpuram location',
+    'dharmshala location Ayodhya',
+    'near Ram Mandir location'
+  ]}
+  canonical="/location"
+  ogType="website"
+>
+  <Header />
+  
+  <main class="min-h-screen bg-[#faf8f3]">
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-amber-600 to-rose-600 text-white py-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
+          <span class="text-amber-200">Sri Janaki Mahal Trust</span> Location
+        </h1>
+        <p class="text-xl mb-8 max-w-3xl mx-auto">
+          Prime location in Ayodhya - Karsewakpuram, just 5 minutes walk from Ram Mandir
+        </p>
+      </div>
+    </section>
+
+    <!-- Location Overview -->
+    <section class="py-16 bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+            Complete Address & Location
+          </h2>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-12 mb-12">
+          <div class="bg-gray-50 rounded-lg p-8">
+            <h3 class="text-2xl font-bold text-gray-900 mb-6">Official Address</h3>
+            <div class="space-y-3 text-lg text-gray-700">
+              <p><strong>Sri Janaki Mahal Trust</strong></p>
+              <p>Vasudev Gath, Karsewakpuram</p>
+              <p>Ayodhya, Uttar Pradesh 224123</p>
+              <p>India</p>
+              <div class="mt-6 pt-6 border-t border-gray-300">
+                <p class="text-sm text-gray-600 mb-2"><strong>GPS Coordinates:</strong></p>
+                <p class="text-sm font-mono text-gray-900">26.8039286°N, 82.2109433°E</p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-6">Location Highlights</h3>
+            <div class="space-y-4">
+              <div class="flex items-start gap-3">
+                <span class="text-green-600 text-2xl">📍</span>
+                <div>
+                  <p class="font-semibold text-gray-900">Area: Karsewakpuram</p>
+                  <p class="text-gray-600">One of the most sacred areas in Ayodhya</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <span class="text-green-600 text-2xl">🏛️</span>
+                <div>
+                  <p class="font-semibold text-gray-900">Near Ram Mandir</p>
+                  <p class="text-gray-600">Just 5 minutes walking distance</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <span class="text-green-600 text-2xl">🚗</span>
+                <div>
+                  <p class="font-semibold text-gray-900">Easy Access</p>
+                  <p class="text-gray-600">Well-connected by road and rail</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <span class="text-green-600 text-2xl">🕉️</span>
+                <div>
+                  <p class="font-semibold text-gray-900">Spiritual Environment</p>
+                  <p class="text-gray-600">Peaceful area perfect for meditation</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Location Pages Links -->
+        <div class="mb-12">
+          <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">Detailed Location Guides</h2>
+          <div class="grid md:grid-cols-3 gap-6">
+            <a href="/location/near-ram-mandir" class="bg-white border-2 border-amber-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+              <div class="text-4xl mb-4 text-center">🏛️</div>
+              <h3 class="text-xl font-bold text-gray-900 mb-3 text-center">Near Ram Mandir</h3>
+              <p class="text-gray-600 text-center mb-4">
+                Walking distance to Ram Mandir. Perfect for multiple temple visits.
+              </p>
+              <p class="text-amber-600 font-semibold text-center">Learn More →</p>
+            </a>
+
+            <a href="/location/karsewakpuram" class="bg-white border-2 border-amber-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+              <div class="text-4xl mb-4 text-center">📍</div>
+              <h3 class="text-xl font-bold text-gray-900 mb-3 text-center">Karsewakpuram</h3>
+              <p class="text-gray-600 text-center mb-4">
+                About Karsewakpuram area, its significance, and attractions.
+              </p>
+              <p class="text-amber-600 font-semibold text-center">Learn More →</p>
+            </a>
+
+            <a href="/location/ayodhya" class="bg-white border-2 border-amber-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+              <div class="text-4xl mb-4 text-center">🏙️</div>
+              <h3 class="text-xl font-bold text-gray-900 mb-3 text-center">Ayodhya</h3>
+              <p class="text-gray-600 text-center mb-4">
+                Complete guide to Ayodhya, attractions, and travel information.
+              </p>
+              <p class="text-amber-600 font-semibold text-center">Learn More →</p>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Contact -->
+        <div class="bg-gradient-to-r from-amber-600 to-rose-600 rounded-lg p-8 text-white text-center">
+          <h2 class="text-3xl font-bold mb-4">Need Directions?</h2>
+          <p class="text-xl mb-6 opacity-90">
+            Contact us for detailed directions to Sri Janaki Mahal Trust
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a 
+              href="tel:+917250364323"
+              class="px-8 py-4 bg-white text-amber-600 font-bold rounded-lg hover:bg-gray-100 transition-colors"
+            >
+              Call: +91 7250364323
+            </a>
+            <a 
+              href="https://wa.me/917250364323"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="px-8 py-4 bg-green-600 text-white font-bold rounded-lg hover:bg-green-700 transition-colors"
+            >
+              WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Breadcrumb Schema -->
+  {breadcrumbSchema && (
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+  )}
+
+  <Footer />
+</Layout>
+

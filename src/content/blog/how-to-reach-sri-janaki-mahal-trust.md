@@ -2,7 +2,12 @@
 title: How to Reach Sri Janaki Mahal Trust - Complete Travel Guide
 description: Complete travel guide to reach Sri Janaki Mahal Trust in Ayodhya. Directions by train, bus, air, and road. Location details and nearby landmarks.
 date: 2025-01-08
-keywords: ['how to reach Sri Janaki Mahal', 'directions ayodhya dharmshala', 'travel to ayodhya', 'ayodhya railway station']
+keywords:
+  - 'Sri Janaki Mahal Trust verified'
+  - 'Sri Janaki Mahal Trust official'
+  - 'Sri Janaki Mahal Trust authentic'
+  - 'Sri Janaki Mahal Trust legitimate'
+  - 'verify Sri Janaki Mahal Trust'
 ---
 
 # How to Reach Sri Janaki Mahal Trust - Complete Travel Guide

@@ -2,7 +2,12 @@
 title: Complete Guide to Sri Janaki Mahal Trust Ayodhya
 description: Everything you need to know about booking, staying, and experiencing Sri Janaki Mahal Trust - the best spiritual dharmshala in Ayodhya near Ram Mandir.
 date: 2025-01-15
-keywords: ['Sri Janaki Mahal Trust guide', 'Ayodhya dharmshala guide', 'spiritual accommodation ayodhya', 'book ayodhya dharmshala']
+keywords:
+  - 'Sri Janaki Mahal Trust verified'
+  - 'Sri Janaki Mahal Trust official'
+  - 'Sri Janaki Mahal Trust authentic'
+  - 'Sri Janaki Mahal Trust legitimate'
+  - 'verify Sri Janaki Mahal Trust'
 ---
 
 # Complete Guide to Sri Janaki Mahal Trust Ayodhya
@@ -49,7 +54,8 @@ Room rates range from ₹1,250 to ₹4,150 per night, depending on:
 
 **Important:** All prices include breakfast, lunch, and dinner.
 
-## What's Included in Your Stay
+## What'
+  -s Included in Your Stay
 
 ### Accommodation Features
 
@@ -148,7 +154,8 @@ While walk-ins may be available, advance booking is recommended, especially duri
 
 ## Conclusion
 
-Sri Janaki Mahal Trust offers the perfect combination of comfort, spirituality, and convenience for your Ayodhya pilgrimage. With its prime location, inclusive meals, and warm hospitality, it's an ideal choice for devotees seeking a peaceful stay near Ram Mandir.
+Sri Janaki Mahal Trust offers the perfect combination of comfort, spirituality, and convenience for your Ayodhya pilgrimage. With its prime location, inclusive meals, and warm hospitality, it'
+  -s an ideal choice for devotees seeking a peaceful stay near Ram Mandir.
 
 Book your stay today and experience the divine hospitality of Sri Janaki Mahal Trust!
 

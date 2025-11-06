@@ -2,22 +2,30 @@
 title: What to Expect at Sri Janaki Mahal Dharmshala - Guest Experience
 description: Learn what to expect during your stay at Sri Janaki Mahal Trust. Rooms, amenities, meals, spiritual environment, and everything you need to know.
 date: 2025-01-05
-keywords: ['Sri Janaki Mahal experience', 'dharmshala stay', 'what to expect ayodhya', 'ayodhya accommodation']
+keywords:
+  - 'Sri Janaki Mahal Trust verified'
+  - 'Sri Janaki Mahal Trust official'
+  - 'Sri Janaki Mahal Trust authentic'
+  - 'Sri Janaki Mahal Trust legitimate'
+  - 'verify Sri Janaki Mahal Trust'
 ---
 
 # What to Expect at Sri Janaki Mahal Dharmshala - Guest Experience
 
-Planning to stay at Sri Janaki Mahal Trust? Here's everything you need to know about your stay, from rooms and amenities to meals and the overall experience.
+Planning to stay at Sri Janaki Mahal Trust? Here'
+  -s everything you need to know about your stay, from rooms and amenities to meals and the overall experience.
 
 ## First Impressions
 
 ### Warm Welcome
 
-Upon arrival at Sri Janaki Mahal Trust, you'll be greeted with traditional Indian hospitality. The staff is friendly, helpful, and available 24/7 to assist with any needs.
+Upon arrival at Sri Janaki Mahal Trust, you'
+  -ll be greeted with traditional Indian hospitality. The staff is friendly, helpful, and available 24/7 to assist with any needs.
 
 ### Spiritual Atmosphere
 
-The dharmshala maintains a peaceful, spiritual environment. You'll notice:
+The dharmshala maintains a peaceful, spiritual environment. You'
+  -ll notice:
 - Serene courtyard
 - Clean premises
 - Quiet and respectful atmosphere
@@ -72,7 +80,8 @@ All rooms include:
 
 ## Meals Experience
 
-### What's Included
+### What'
+  -s Included
 
 **All meals are included in your room booking:**
 - Breakfast (Morning meal)
@@ -189,7 +198,8 @@ All rooms include:
 - **Camera:** Capture memories (check temple photography rules)
 - **Books:** Spiritual texts or reading material
 
-### What's Provided
+### What'
+  -s Provided
 
 - Bedding and linens
 - Towels
@@ -300,7 +310,8 @@ Basic laundry facilities may be available. Check with front desk.
 ## Tips for Best Experience
 
 1. **Book in Advance:** Especially during festivals
-2. **Follow Meal Timings:** Don't miss included meals
+2. **Follow Meal Timings:** Don'
+  -t miss included meals
 3. **Respect the Environment:** Maintain spiritual atmosphere
 4. **Plan Temple Visits:** Take advantage of proximity to Ram Mandir
 5. **Communicate Needs:** Staff is helpful - ask if you need anything

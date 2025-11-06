@@ -1,0 +1,314 @@
+<!-- // src/pages/location/ayodhya.astro -->
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { generateBreadcrumbSchema } from '../../lib/schemas/breadcrumb';
+
+// Generate breadcrumbs
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Location', url: '/location' },
+  { name: 'Ayodhya', url: '/location/ayodhya' }
+];
+const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbs);
+
+console.log('[Location Page] Rendering Ayodhya page');
+---
+
+<Layout 
+  title="Sri Janaki Mahal Trust in Ayodhya - Complete Location Guide | Uttar Pradesh"
+  description="Complete guide to Sri Janaki Mahal Trust location in Ayodhya, Uttar Pradesh. Best spiritual dharmshala in Ayodhya near Ram Mandir. Directions, nearby attractions, and travel guide. Book: +91 7250364323"
+  keywords={[
+    'Sri Janaki Mahal Trust Ayodhya',
+    'dharmshala in Ayodhya',
+    'Ayodhya accommodation',
+    'Ayodhya dharmshala booking',
+    'Sri Janaki Mahal Trust location Ayodhya',
+    'stay in Ayodhya',
+    'Ayodhya spiritual accommodation',
+    'Ayodhya near Ram Mandir'
+  ]}
+  canonical="/location/ayodhya"
+  ogType="website"
+>
+  <Header />
+  
+  <main class="min-h-screen bg-[#faf8f3]">
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-amber-600 to-rose-600 text-white py-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
+          <span class="text-amber-200">Sri Janaki Mahal Trust</span> in <span class="text-amber-200">Ayodhya</span>, Uttar Pradesh
+        </h1>
+        <p class="text-xl mb-8 max-w-3xl mx-auto">
+          The sacred city of Ayodhya - birthplace of Lord Rama. Experience divine hospitality at Sri Janaki Mahal Trust.
+        </p>
+      </div>
+    </section>
+
+    <!-- Breadcrumbs -->
+    <section class="bg-white py-4">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <nav class="text-sm" aria-label="Breadcrumb">
+          <ol class="flex items-center gap-2 text-gray-600">
+            <li><a href="/" class="hover:text-amber-600">Home</a></li>
+            <li>/</li>
+            <li><a href="/location" class="hover:text-amber-600">Location</a></li>
+            <li>/</li>
+            <li class="text-gray-900">Ayodhya</li>
+          </ol>
+        </nav>
+      </div>
+    </section>
+
+    <!-- About Ayodhya -->
+    <section class="py-16 bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mb-12">
+          <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+            About <span class="text-amber-600">Ayodhya</span> - The Sacred City
+          </h2>
+          <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+            <strong>Ayodhya</strong> is one of the seven most sacred cities (Sapta Puri) in Hinduism and is considered the birthplace of Lord Rama, the seventh avatar of Lord Vishnu. Located in <strong>Uttar Pradesh, India</strong>, Ayodhya is a major pilgrimage destination attracting millions of devotees every year.
+          </p>
+          <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+            <strong>Sri Janaki Mahal Trust</strong> is located in the heart of Ayodhya, in <strong>Karsewakpuram</strong> area, just minutes away from the revered <strong>Ram Mandir</strong>. Our dharmshala provides comfortable spiritual accommodation for pilgrims visiting this sacred city.
+          </p>
+        </div>
+
+        <!-- Location Details -->
+        <div class="grid md:grid-cols-2 gap-12 mb-12">
+          <div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-6">Complete Address</h3>
+            <div class="bg-gray-50 rounded-lg p-6 space-y-3 text-lg text-gray-700">
+              <p><strong>Sri Janaki Mahal Trust</strong></p>
+              <p>Vasudev Gath, Karsewakpuram</p>
+              <p>Ayodhya, Uttar Pradesh 224123</p>
+              <p>India</p>
+              <div class="mt-4 pt-4 border-t border-gray-300">
+                <p class="text-sm text-gray-600 mb-2"><strong>GPS Coordinates:</strong></p>
+                <p class="text-sm text-gray-600">26.8039286°N, 82.2109433°E</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-6">Location Benefits</h3>
+            <div class="space-y-4">
+              <div class="flex items-start gap-3">
+                <span class="text-green-600 text-2xl">🏛️</span>
+                <div>
+                  <p class="font-semibold text-gray-900">Near Ram Mandir</p>
+                  <p class="text-gray-600">Just 5 minutes walk from the most sacred temple</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <span class="text-green-600 text-2xl">📍</span>
+                <div>
+                  <p class="font-semibold text-gray-900">Central Location</p>
+                  <p class="text-gray-600">Easy access to all major temples and attractions</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <span class="text-green-600 text-2xl">🚶‍♂️</span>
+                <div>
+                  <p class="font-semibold text-gray-900">Walking Distance</p>
+                  <p class="text-gray-600">Multiple temples within walking distance</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <span class="text-green-600 text-2xl">🚗</span>
+                <div>
+                  <p class="font-semibold text-gray-900">Easy Access</p>
+                  <p class="text-gray-600">Well-connected by road and rail</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Major Attractions -->
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+            Major Attractions in <span class="text-amber-600">Ayodhya</span>
+          </h2>
+          <p class="text-lg text-gray-600">
+            Explore the sacred sites of Ayodhya during your stay at Sri Janaki Mahal Trust
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="bg-white rounded-lg shadow-lg p-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Ram Mandir</h3>
+            <p class="text-gray-700 mb-4">The most sacred temple, birthplace of Lord Rama. 5 minutes walk from Sri Janaki Mahal Trust.</p>
+            <p class="text-sm text-amber-600 font-semibold">Distance: 5 min walk</p>
+          </div>
+
+          <div class="bg-white rounded-lg shadow-lg p-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Hanuman Garhi</h3>
+            <p class="text-gray-700 mb-4">Famous temple of Lord Hanuman, located on a hill. Accessible from our location.</p>
+            <p class="text-sm text-amber-600 font-semibold">Distance: 2 km</p>
+          </div>
+
+          <div class="bg-white rounded-lg shadow-lg p-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Kanak Bhavan</h3>
+            <p class="text-gray-700 mb-4">Beautiful palace of Goddess Sita, known for its architecture and spiritual significance.</p>
+            <p class="text-sm text-amber-600 font-semibold">Distance: 1.5 km</p>
+          </div>
+
+          <div class="bg-white rounded-lg shadow-lg p-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Sita Ki Rasoi</h3>
+            <p class="text-gray-700 mb-4">Sacred kitchen of Goddess Sita, important pilgrimage site.</p>
+            <p class="text-sm text-amber-600 font-semibold">Distance: 1 km</p>
+          </div>
+
+          <div class="bg-white rounded-lg shadow-lg p-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Nageshwarnath Temple</h3>
+            <p class="text-gray-700 mb-4">Ancient Shiva temple, one of the oldest temples in Ayodhya.</p>
+            <p class="text-sm text-amber-600 font-semibold">Distance: 3 km</p>
+          </div>
+
+          <div class="bg-white rounded-lg shadow-lg p-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Saryu River</h3>
+            <p class="text-gray-700 mb-4">Holy river for rituals, spiritual practices, and sacred baths.</p>
+            <p class="text-sm text-amber-600 font-semibold">Distance: 2 km</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How to Reach Ayodhya -->
+    <section class="py-16 bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+            How to Reach <span class="text-amber-600">Ayodhya</span>
+          </h2>
+          <p class="text-lg text-gray-600">
+            Complete travel guide to reach Ayodhya and Sri Janaki Mahal Trust
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- By Train -->
+          <div class="bg-gray-50 rounded-lg p-6">
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">By Train</h3>
+            <div class="space-y-3 text-gray-700">
+              <p><strong>Nearest Station:</strong> Ayodhya Railway Station (AY)</p>
+              <p><strong>Distance:</strong> 5 km from Sri Janaki Mahal Trust</p>
+              <p><strong>Travel Time:</strong> 15-20 minutes by auto</p>
+              <p><strong>Cost:</strong> ₹100-150 by auto-rickshaw</p>
+              <p class="text-sm text-gray-600 mt-4">
+                Major trains connect Ayodhya to Delhi, Mumbai, Kolkata, Lucknow, Varanasi, and other cities.
+              </p>
+            </div>
+          </div>
+
+          <!-- By Road -->
+          <div class="bg-gray-50 rounded-lg p-6">
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">By Road</h3>
+            <div class="space-y-3 text-gray-700">
+              <p><strong>From Delhi:</strong> 638 km (10-12 hours)</p>
+              <p><strong>From Lucknow:</strong> 134 km (2.5-3 hours)</p>
+              <p><strong>From Varanasi:</strong> 230 km (4-5 hours)</p>
+              <p><strong>GPS:</strong> 26.8039286°N, 82.2109433°E</p>
+              <p class="text-sm text-gray-600 mt-4">
+                Well-maintained highways connect Ayodhya to all major cities.
+              </p>
+            </div>
+          </div>
+
+          <!-- By Air -->
+          <div class="bg-gray-50 rounded-lg p-6">
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">By Air</h3>
+            <div class="space-y-3 text-gray-700">
+              <p><strong>Nearest Airport:</strong> Lucknow (134 km)</p>
+              <p><strong>Travel Time:</strong> 2.5-3 hours by road</p>
+              <p><strong>Options:</strong> Taxi or bus to Ayodhya</p>
+              <p><strong>Alternative:</strong> Varanasi Airport (230 km)</p>
+              <p class="text-sm text-gray-600 mt-4">
+                Multiple flights connect to major Indian cities.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Best Time to Visit -->
+    <section class="py-16 bg-amber-50">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+            Best Time to Visit <span class="text-amber-600">Ayodhya</span>
+          </h2>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="bg-white rounded-lg p-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Ideal Season</h3>
+            <p class="text-gray-700 mb-4"><strong>October to March</strong> - Pleasant weather, perfect for temple visits and spiritual activities.</p>
+            <ul class="space-y-2 text-gray-700">
+              <li>✓ Comfortable temperatures</li>
+              <li>✓ Ideal for long temple visits</li>
+              <li>✓ Perfect for walking tours</li>
+              <li>✓ Best for elderly pilgrims</li>
+            </ul>
+          </div>
+
+          <div class="bg-white rounded-lg p-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Major Festivals</h3>
+            <ul class="space-y-3 text-gray-700">
+              <li><strong>Ram Navami</strong> - Most important festival (March/April)</li>
+              <li><strong>Diwali</strong> - Grand celebrations (October/November)</li>
+              <li><strong>Makar Sankranti</strong> - Special rituals (January)</li>
+              <li><strong>Sharad Purnima</strong> - Beautiful full moon (October)</li>
+            </ul>
+            <p class="text-sm text-amber-600 font-semibold mt-4">Book in advance during festivals!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Booking CTA -->
+    <section class="py-16 bg-gradient-to-r from-amber-600 to-rose-600 text-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl sm:text-4xl font-bold mb-6">
+          Book Your Stay in <span class="text-amber-200">Ayodhya</span>
+        </h2>
+        <p class="text-xl mb-8 opacity-90">
+          Experience the spiritual heart of India at Sri Janaki Mahal Trust
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a 
+            href="/booking"
+            class="px-8 py-4 bg-white text-amber-600 font-bold rounded-lg hover:bg-gray-100 transition-colors text-lg"
+          >
+            Book Now
+          </a>
+          <a 
+            href="tel:+917250364323"
+            class="px-8 py-4 bg-green-600 text-white font-bold rounded-lg hover:bg-green-700 transition-colors text-lg"
+          >
+            Call: +91 7250364323
+          </a>
+        </div>
+        <p class="mt-6 text-sm opacity-75">
+          Sri Janaki Mahal Trust - Best spiritual dharmshala in Ayodhya near Ram Mandir
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Breadcrumb Schema -->
+  {breadcrumbSchema && (
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+  )}
+
+  <Footer />
+</Layout>
+

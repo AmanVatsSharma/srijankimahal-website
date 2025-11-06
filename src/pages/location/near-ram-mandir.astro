@@ -1,0 +1,207 @@
+<!-- // src/pages/location/near-ram-mandir.astro -->
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { generateBreadcrumbSchema } from '../../lib/schemas/breadcrumb';
+
+// Generate breadcrumbs
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Location', url: '/location' },
+  { name: 'Near Ram Mandir', url: '/location/near-ram-mandir' }
+];
+const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbs);
+
+console.log('[Location Page] Rendering Near Ram Mandir page');
+---
+
+<Layout 
+  title="Sri Janaki Mahal Trust Near Ram Mandir - Walking Distance to Ayodhya Ram Temple"
+  description="Sri Janaki Mahal Trust is located just 5 minutes walk from Ram Mandir in Ayodhya. Best dharmshala near Ram Mandir with comfortable rooms and all meals included. Book now: +91 7250364323"
+  keywords={[
+    'Sri Janaki Mahal Trust near Ram Mandir',
+    'dharmshala near Ram Mandir',
+    'hotels near Ram Mandir Ayodhya',
+    'accommodation near Ram Mandir',
+    'Sri Janaki Mahal Trust distance from Ram Mandir',
+    'walking distance to Ram Mandir',
+    'stay near Ram Mandir Ayodhya'
+  ]}
+  canonical="/location/near-ram-mandir"
+  ogType="website"
+>
+  <Header />
+  
+  <main class="min-h-screen bg-[#faf8f3]">
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-amber-600 to-rose-600 text-white py-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
+          <span class="text-amber-200">Sri Janaki Mahal Trust</span> - Just 5 Minutes Walk from Ram Mandir
+        </h1>
+        <p class="text-xl mb-8 max-w-3xl mx-auto">
+          The closest spiritual dharmshala to Ram Mandir in Ayodhya. Visit the temple multiple times during your stay.
+        </p>
+      </div>
+    </section>
+
+    <!-- Breadcrumbs -->
+    <section class="bg-white py-4">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <nav class="text-sm" aria-label="Breadcrumb">
+          <ol class="flex items-center gap-2 text-gray-600">
+            <li><a href="/" class="hover:text-amber-600">Home</a></li>
+            <li>/</li>
+            <li><a href="/location" class="hover:text-amber-600">Location</a></li>
+            <li>/</li>
+            <li class="text-gray-900">Near Ram Mandir</li>
+          </ol>
+        </nav>
+      </div>
+    </section>
+
+    <!-- Location Details -->
+    <section class="py-16 bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-2 gap-12 items-center mb-12">
+          <div>
+            <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+              Walking Distance to <span class="text-amber-600">Ram Mandir</span>
+            </h2>
+            <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+              <strong>Sri Janaki Mahal Trust</strong> is strategically located just <strong>5 minutes walking distance</strong> from the revered <strong>Ram Mandir</strong> in Ayodhya. This prime location makes it the perfect choice for devotees who want to visit the temple multiple times during their spiritual journey.
+            </p>
+            <div class="space-y-4">
+              <div class="flex items-center gap-3">
+                <span class="text-green-600 text-2xl">🚶‍♂️</span>
+                <div>
+                  <p class="font-semibold text-gray-900">Walking Distance</p>
+                  <p class="text-gray-600">5 minutes walk from Ram Mandir</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="text-green-600 text-2xl">📍</span>
+                <div>
+                  <p class="font-semibold text-gray-900">Location</p>
+                  <p class="text-gray-600">Karsewakpuram, Vasudev Gath, Ayodhya</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="text-green-600 text-2xl">⏰</span>
+                <div>
+                  <p class="font-semibold text-gray-900">Multiple Visits</p>
+                  <p class="text-gray-600">Easy to visit temple throughout the day</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-gray-50 rounded-lg p-8">
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Distance & Directions</h3>
+            <div class="space-y-4">
+              <div class="border-l-4 border-amber-600 pl-4">
+                <p class="font-semibold text-gray-900">From Ram Mandir</p>
+                <p class="text-gray-700">5 minutes walk (approximately 400 meters)</p>
+              </div>
+              <div class="border-l-4 border-amber-600 pl-4">
+                <p class="font-semibold text-gray-900">Walking Route</p>
+                <p class="text-gray-700">Exit Ram Mandir → Walk towards Karsewakpuram → Sri Janaki Mahal Trust</p>
+              </div>
+              <div class="border-l-4 border-amber-600 pl-4">
+                <p class="font-semibold text-gray-900">Best For</p>
+                <p class="text-gray-700">Early morning aarti, evening darshan, multiple temple visits</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Benefits Section -->
+        <div class="bg-amber-50 rounded-lg p-8 mb-12">
+          <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">
+            Why Stay Near Ram Mandir?
+          </h2>
+          <div class="grid md:grid-cols-3 gap-6">
+            <div class="bg-white rounded-lg p-6">
+              <div class="text-4xl mb-4 text-center">🌅</div>
+              <h3 class="font-bold text-gray-900 mb-2 text-center">Early Morning Aarti</h3>
+              <p class="text-gray-600 text-sm text-center">
+                Walk to Ram Mandir for early morning aarti without transportation hassles
+              </p>
+            </div>
+            <div class="bg-white rounded-lg p-6">
+              <div class="text-4xl mb-4 text-center">🔄</div>
+              <h3 class="font-bold text-gray-900 mb-2 text-center">Multiple Visits</h3>
+              <p class="text-gray-600 text-sm text-center">
+                Visit Ram Mandir multiple times during your stay - morning, afternoon, and evening
+              </p>
+            </div>
+            <div class="bg-white rounded-lg p-6">
+              <div class="text-4xl mb-4 text-center">⏱️</div>
+              <h3 class="font-bold text-gray-900 mb-2 text-center">Time Saving</h3>
+              <p class="text-gray-600 text-sm text-center">
+                Save time and energy - no need for transportation, just walk to the temple
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Nearby Attractions -->
+        <div class="mb-12">
+          <h2 class="text-3xl font-bold text-gray-900 mb-6">Nearby Temples & Attractions</h2>
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-4">Ram Mandir</h3>
+              <p class="text-gray-700 mb-4">The most sacred temple in Ayodhya, birthplace of Lord Rama. 5 minutes walk from Sri Janaki Mahal Trust.</p>
+              <p class="text-sm text-gray-600"><strong>Distance:</strong> 5 minutes walk</p>
+            </div>
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-4">Hanuman Garhi</h3>
+              <p class="text-gray-700 mb-4">Famous temple of Lord Hanuman. Accessible from Sri Janaki Mahal Trust.</p>
+              <p class="text-sm text-gray-600"><strong>Distance:</strong> 2 km</p>
+            </div>
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-4">Kanak Bhavan</h3>
+              <p class="text-gray-700 mb-4">Beautiful palace of Goddess Sita. Close to Ram Mandir.</p>
+              <p class="text-sm text-gray-600"><strong>Distance:</strong> 1.5 km</p>
+            </div>
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-4">Sita Ki Rasoi</h3>
+              <p class="text-gray-700 mb-4">Sacred kitchen of Goddess Sita. Important spiritual site.</p>
+              <p class="text-sm text-gray-600"><strong>Distance:</strong> 1 km</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Booking CTA -->
+        <div class="bg-gradient-to-r from-amber-600 to-rose-600 rounded-lg p-8 text-white text-center">
+          <h2 class="text-3xl font-bold mb-4">Book Your Stay Near Ram Mandir</h2>
+          <p class="text-xl mb-6 opacity-90">
+            Experience the convenience of staying just 5 minutes from Ram Mandir
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a 
+              href="/booking"
+              class="px-8 py-4 bg-white text-amber-600 font-bold rounded-lg hover:bg-gray-100 transition-colors"
+            >
+              Book Now
+            </a>
+            <a 
+              href="tel:+917250364323"
+              class="px-8 py-4 bg-green-600 text-white font-bold rounded-lg hover:bg-green-700 transition-colors"
+            >
+              Call: +91 7250364323
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Breadcrumb Schema -->
+  {breadcrumbSchema && (
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+  )}
+
+  <Footer />
+</Layout>
+

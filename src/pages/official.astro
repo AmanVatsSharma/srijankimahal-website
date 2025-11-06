@@ -1,0 +1,353 @@
+<!-- // src/pages/official.astro -->
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { generateBreadcrumbSchema, generateStandardBreadcrumbs } from '../lib/schemas/breadcrumb';
+
+// Generate breadcrumbs
+const breadcrumbs = generateStandardBreadcrumbs('Official', '/official');
+const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbs);
+
+console.log('[Official Page] Rendering official page');
+---
+
+<Layout 
+  title="Sri Janaki Mahal Trust Ayodhya - Official Website | Verified Dharmshala"
+  description="Official website of Sri Janaki Mahal Trust - Registered charitable trust providing spiritual accommodation in Ayodhya near Ram Mandir. Verified business. Official booking: +91 7250364323"
+  keywords={[
+    'Sri Janaki Mahal Trust Ayodhya official',
+    'Sri Janaki Mahal Trust official website',
+    'official Sri Janaki Mahal Trust',
+    'Sri Janaki Mahal Trust verified',
+    'Sri Janaki Mahal Trust registration',
+    'Sri Janaki Mahal Trust official contact',
+    'Sri Janaki Mahal Trust authentic',
+    'Sri Janaki Mahal Trust legitimate'
+  ]}
+  canonical="/official"
+  ogType="website"
+  ogImage="/og.jpg"
+>
+  <Header />
+  
+  <main class="min-h-screen bg-[#faf8f3]">
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-amber-600 to-rose-600 text-white py-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="inline-block bg-white/20 rounded-full px-6 py-2 mb-6">
+          <span class="text-sm font-bold uppercase tracking-wider">Official Website</span>
+        </div>
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
+          <span class="text-amber-200">Sri Janaki Mahal Trust</span> Ayodhya - Official Website
+        </h1>
+        <p class="text-xl mb-8 max-w-3xl mx-auto">
+          Registered Charitable Trust • Verified Business • Official Booking Channels Only
+        </p>
+        <div class="flex items-center justify-center gap-4 text-sm">
+          <span class="bg-white/20 px-4 py-2 rounded-lg">✓ Verified</span>
+          <span class="bg-white/20 px-4 py-2 rounded-lg">✓ Official</span>
+          <span class="bg-white/20 px-4 py-2 rounded-lg">✓ Trusted</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Official Verification -->
+    <section class="py-16 bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+            Official Verification & Trust Status
+          </h2>
+          <p class="text-lg text-gray-600">
+            Sri Janaki Mahal Trust is a legally registered and verified charitable trust
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 mb-12">
+          <!-- Registration Details -->
+          <div class="bg-gray-50 rounded-lg p-8">
+            <h3 class="text-2xl font-bold text-gray-900 mb-6">Registration Details</h3>
+            <div class="space-y-4">
+              <div>
+                <p class="text-sm text-gray-600 mb-1">Legal Name</p>
+                <p class="text-lg font-semibold text-gray-900">Sri Janaki Mahal Trust</p>
+              </div>
+              <div>
+                <p class="text-sm text-gray-600 mb-1">Registration Status</p>
+                <p class="text-lg font-semibold text-green-600">✓ Registered Charitable Trust</p>
+              </div>
+              <div>
+                <p class="text-sm text-gray-600 mb-1">Established</p>
+                <p class="text-lg font-semibold text-gray-900">2020</p>
+              </div>
+              <div>
+                <p class="text-sm text-gray-600 mb-1">Legal Entity Type</p>
+                <p class="text-lg font-semibold text-gray-900">Charitable Trust</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Official Contact -->
+          <div class="bg-gray-50 rounded-lg p-8">
+            <h3 class="text-2xl font-bold text-gray-900 mb-6">Official Contact Information</h3>
+            <div class="space-y-4">
+              <div>
+                <p class="text-sm text-gray-600 mb-1">Official Phone</p>
+                <p class="text-lg font-semibold text-gray-900">
+                  <a href="tel:+917250364323" class="text-amber-600 hover:text-amber-700">+91 7250364323</a>
+                </p>
+              </div>
+              <div>
+                <p class="text-sm text-gray-600 mb-1">Official WhatsApp</p>
+                <p class="text-lg font-semibold text-gray-900">
+                  <a href="https://wa.me/917250364323" target="_blank" rel="noopener noreferrer" class="text-amber-600 hover:text-amber-700">+91 7250364323</a>
+                </p>
+              </div>
+              <div>
+                <p class="text-sm text-gray-600 mb-1">Official Email</p>
+                <p class="text-lg font-semibold text-gray-900">
+                  <a href="mailto:vedpragyabharat@gmail.com" class="text-amber-600 hover:text-amber-700">vedpragyabharat@gmail.com</a>
+                </p>
+              </div>
+              <div>
+                <p class="text-sm text-gray-600 mb-1">Official Website</p>
+                <p class="text-lg font-semibold text-gray-900">
+                  <a href="https://srijanakimahaltrust.in" class="text-amber-600 hover:text-amber-700">srijanakimahaltrust.in</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Official Address -->
+        <div class="bg-amber-50 border-2 border-amber-200 rounded-lg p-8 mb-12">
+          <h3 class="text-2xl font-bold text-gray-900 mb-6">Official Registered Address</h3>
+          <div class="text-lg text-gray-700 space-y-2">
+            <p><strong>Sri Janaki Mahal Trust</strong></p>
+            <p>Vasudev Gath, Karsewakpuram</p>
+            <p>Ayodhya, Uttar Pradesh 224123</p>
+            <p>India</p>
+            <div class="mt-4 pt-4 border-t border-amber-300">
+              <p class="text-sm text-gray-600">
+                <strong>GPS Coordinates:</strong> 26.8039286°N, 82.2109433°E
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Official Booking Channels -->
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+            Official Booking Channels
+          </h2>
+          <p class="text-lg text-gray-600">
+            Book directly through these official channels only. Avoid third-party intermediaries.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Direct Phone -->
+          <div class="bg-white rounded-lg shadow-lg p-8 text-center">
+            <div class="text-5xl mb-4">📞</div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Direct Phone</h3>
+            <p class="text-gray-600 mb-6">
+              Call our official number directly
+            </p>
+            <a 
+              href="tel:+917250364323"
+              class="block px-6 py-3 bg-amber-600 text-white font-bold rounded-lg hover:bg-amber-700 transition-colors mb-2"
+            >
+              +91 7250364323
+            </a>
+            <p class="text-sm text-gray-500">24/7 Available</p>
+          </div>
+
+          <!-- Official WhatsApp -->
+          <div class="bg-white rounded-lg shadow-lg p-8 text-center">
+            <div class="text-5xl mb-4">💬</div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Official WhatsApp</h3>
+            <p class="text-gray-600 mb-6">
+              Message us on official WhatsApp
+            </p>
+            <a 
+              href="https://wa.me/917250364323"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="block px-6 py-3 bg-green-600 text-white font-bold rounded-lg hover:bg-green-700 transition-colors mb-2"
+            >
+              WhatsApp: +91 7250364323
+            </a>
+            <p class="text-sm text-gray-500">Instant Response</p>
+          </div>
+
+          <!-- Official Website -->
+          <div class="bg-white rounded-lg shadow-lg p-8 text-center">
+            <div class="text-5xl mb-4">🌐</div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Official Website</h3>
+            <p class="text-gray-600 mb-6">
+              Book through our official website
+            </p>
+            <a 
+              href="/booking"
+              class="block px-6 py-3 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 transition-colors mb-2"
+            >
+              Visit Booking Page
+            </a>
+            <p class="text-sm text-gray-500">Secure & Official</p>
+          </div>
+        </div>
+
+        <!-- Warning -->
+        <div class="mt-8 bg-red-50 border-2 border-red-200 rounded-lg p-6">
+          <div class="flex items-start gap-3">
+            <div class="text-2xl">⚠️</div>
+            <div>
+              <h4 class="font-bold text-red-900 mb-2">Beware of Scams</h4>
+              <p class="text-red-800 mb-2">
+                <strong>Only book through official channels:</strong>
+              </p>
+              <ul class="list-disc list-inside text-red-800 space-y-1 text-sm">
+                <li>Official phone: +91 7250364323</li>
+                <li>Official WhatsApp: +91 7250364323</li>
+                <li>Official website: srijanakimahaltrust.in</li>
+                <li>Official email: vedpragyabharat@gmail.com</li>
+              </ul>
+              <p class="text-red-800 mt-3 text-sm">
+                <strong>Do not:</strong> Book through unauthorized agents, third-party websites claiming to represent us, or phone numbers other than the official number.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trust Indicators -->
+    <section class="py-16 bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+            Official Trust Indicators
+          </h2>
+        </div>
+
+        <div class="grid md:grid-cols-4 gap-6">
+          <div class="bg-gray-50 rounded-lg p-6 text-center">
+            <div class="text-4xl mb-4">🏛️</div>
+            <h3 class="font-bold text-gray-900 mb-2">Registered Trust</h3>
+            <p class="text-sm text-gray-600">Legally registered charitable trust</p>
+          </div>
+
+          <div class="bg-gray-50 rounded-lg p-6 text-center">
+            <div class="text-4xl mb-4">✅</div>
+            <h3 class="font-bold text-gray-900 mb-2">Verified Business</h3>
+            <p class="text-sm text-gray-600">Verified and authentic business</p>
+          </div>
+
+          <div class="bg-gray-50 rounded-lg p-6 text-center">
+            <div class="text-4xl mb-4">🔒</div>
+            <h3 class="font-bold text-gray-900 mb-2">Secure & Safe</h3>
+            <p class="text-sm text-gray-600">Secure booking and payment</p>
+          </div>
+
+          <div class="bg-gray-50 rounded-lg p-6 text-center">
+            <div class="text-4xl mb-4">⭐</div>
+            <h3 class="font-bold text-gray-900 mb-2">Highly Rated</h3>
+            <p class="text-sm text-gray-600">4.5-star guest rating</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Legal Information -->
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+            Legal & Compliance Information
+          </h2>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-lg p-8 space-y-6">
+          <div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Business Registration</h3>
+            <p class="text-gray-700">
+              Sri Janaki Mahal Trust is a registered charitable trust operating under the laws of India. 
+              We are committed to providing transparent, ethical, and legal services to all our guests.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Compliance</h3>
+            <ul class="list-disc list-inside text-gray-700 space-y-2">
+              <li>All applicable taxes included in pricing</li>
+              <li>Compliance with local accommodation regulations</li>
+              <li>Food safety and hygiene standards maintained</li>
+              <li>Fire safety regulations followed</li>
+              <li>Guest privacy and data protection</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Official Policies</h3>
+            <div class="grid md:grid-cols-2 gap-4">
+              <a href="/terms-of-service" class="text-amber-600 hover:text-amber-700 font-semibold">
+                → Terms of Service
+              </a>
+              <a href="/privacy-policy" class="text-amber-600 hover:text-amber-700 font-semibold">
+                → Privacy Policy
+              </a>
+              <a href="/cancellation-refund" class="text-amber-600 hover:text-amber-700 font-semibold">
+                → Cancellation & Refund Policy
+              </a>
+              <a href="/about" class="text-amber-600 hover:text-amber-700 font-semibold">
+                → About Us
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-gradient-to-r from-amber-600 to-rose-600 text-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl sm:text-4xl font-bold mb-6">
+          Book Through Official Channels Only
+        </h2>
+        <p class="text-xl mb-8 opacity-90">
+          Ensure you're booking with the official Sri Janaki Mahal Trust
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a 
+            href="/booking"
+            class="px-8 py-4 bg-white text-amber-600 font-bold rounded-lg hover:bg-gray-100 transition-colors text-lg"
+          >
+            Official Booking Page
+          </a>
+          <a 
+            href="tel:+917250364323"
+            class="px-8 py-4 bg-green-600 text-white font-bold rounded-lg hover:bg-green-700 transition-colors text-lg"
+          >
+            Call: +91 7250364323
+          </a>
+        </div>
+        <p class="mt-6 text-sm opacity-75">
+          Official website: srijanakimahaltrust.in | Official contact: +91 7250364323
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Breadcrumb Schema -->
+  {breadcrumbSchema && (
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+  )}
+
+  <Footer />
+</Layout>
+

@@ -2,7 +2,12 @@
 title: Best Time to Visit Ayodhya for Spiritual Journey
 description: Discover the best seasons, festivals, and times to visit Ayodhya for your spiritual journey. Plan your stay at Sri Janaki Mahal Trust for the perfect pilgrimage experience.
 date: 2025-01-10
-keywords: ['best time visit ayodhya', 'ayodhya festivals', 'spiritual journey timing', 'ayodhya pilgrimage season']
+keywords:
+  - 'Sri Janaki Mahal Trust verified'
+  - 'Sri Janaki Mahal Trust official'
+  - 'Sri Janaki Mahal Trust authentic'
+  - 'Sri Janaki Mahal Trust legitimate'
+  - 'verify Sri Janaki Mahal Trust'
 ---
 
 # Best Time to Visit Ayodhya for Spiritual Journey
@@ -99,7 +104,8 @@ Planning your spiritual journey to Ayodhya? This guide will help you choose the 
 
 ### Makar Sankranti (January)
 
-**Significance:** Sun's transition to Capricorn
+**Significance:** Sun'
+  -s transition to Capricorn
 
 **Why Visit:**
 - Holy dip in Saryu River

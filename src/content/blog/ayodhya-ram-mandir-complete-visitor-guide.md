@@ -2,7 +2,12 @@
 title: Ayodhya Ram Mandir - Complete Visitor Guide 2025
 description: Complete guide to visiting Ram Mandir in Ayodhya. Timings, rituals, nearby attractions, and how to plan your stay at Sri Janaki Mahal Trust for easy access.
 date: 2025-01-03
-keywords: ['Ram Mandir guide', 'Ayodhya Ram temple', 'visiting Ram Mandir', 'Ram temple ayodhya', 'Ram mandir darshan']
+keywords:
+  - 'Sri Janaki Mahal Trust verified'
+  - 'Sri Janaki Mahal Trust official'
+  - 'Sri Janaki Mahal Trust authentic'
+  - 'Sri Janaki Mahal Trust legitimate'
+  - 'verify Sri Janaki Mahal Trust'
 ---
 
 # Ayodhya Ram Mandir - Complete Visitor Guide 2025

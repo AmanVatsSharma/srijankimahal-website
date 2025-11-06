@@ -1,0 +1,249 @@
+<!-- // src/pages/location/karsewakpuram.astro -->
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { generateBreadcrumbSchema } from '../../lib/schemas/breadcrumb';
+
+// Generate breadcrumbs
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Location', url: '/location' },
+  { name: 'Karsewakpuram', url: '/location/karsewakpuram' }
+];
+const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbs);
+
+console.log('[Location Page] Rendering Karsewakpuram page');
+---
+
+<Layout 
+  title="Sri Janaki Mahal Trust Karsewakpuram - Location in Ayodhya | Near Ram Mandir"
+  description="Sri Janaki Mahal Trust is located in Karsewakpuram, Ayodhya - the heart of spiritual activity. Best dharmshala in Karsewakpuram with easy access to Ram Mandir. Book: +91 7250364323"
+  keywords={[
+    'Sri Janaki Mahal Trust Karsewakpuram',
+    'Karsewakpuram dharmshala',
+    'dharmshala in Karsewakpuram',
+    'Karsewakpuram Ayodhya accommodation',
+    'Sri Janaki Mahal Trust location',
+    'Karsewakpuram near Ram Mandir',
+    'Ayodhya Karsewakpuram stay'
+  ]}
+  canonical="/location/karsewakpuram"
+  ogType="website"
+>
+  <Header />
+  
+  <main class="min-h-screen bg-[#faf8f3]">
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-amber-600 to-rose-600 text-white py-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
+          <span class="text-amber-200">Sri Janaki Mahal Trust</span> in <span class="text-amber-200">Karsewakpuram</span>, Ayodhya
+        </h1>
+        <p class="text-xl mb-8 max-w-3xl mx-auto">
+          Located in the heart of Karsewakpuram - the most sacred area of Ayodhya, just minutes from Ram Mandir
+        </p>
+      </div>
+    </section>
+
+    <!-- Breadcrumbs -->
+    <section class="bg-white py-4">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <nav class="text-sm" aria-label="Breadcrumb">
+          <ol class="flex items-center gap-2 text-gray-600">
+            <li><a href="/" class="hover:text-amber-600">Home</a></li>
+            <li>/</li>
+            <li><a href="/location" class="hover:text-amber-600">Location</a></li>
+            <li>/</li>
+            <li class="text-gray-900">Karsewakpuram</li>
+          </ol>
+        </nav>
+      </div>
+    </section>
+
+    <!-- Location Details -->
+    <section class="py-16 bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-2 gap-12 items-center mb-12">
+          <div>
+            <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+              About <span class="text-amber-600">Karsewakpuram</span>
+            </h2>
+            <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+              <strong>Karsewakpuram</strong> is one of the most sacred and significant areas in <strong>Ayodhya</strong>. This area holds immense spiritual importance as it's located near the <strong>Ram Mandir</strong> and is home to several important temples and spiritual sites.
+            </p>
+            <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+              <strong>Sri Janaki Mahal Trust</strong> is located in <strong>Vasudev Gath, Karsewakpuram</strong>, making it the perfect accommodation choice for devotees visiting Ayodhya. The area is known for its peaceful atmosphere and proximity to major spiritual landmarks.
+            </p>
+            <div class="space-y-4">
+              <div class="flex items-center gap-3">
+                <span class="text-green-600 text-2xl">🕉️</span>
+                <div>
+                  <p class="font-semibold text-gray-900">Spiritual Significance</p>
+                  <p class="text-gray-600">One of the most sacred areas in Ayodhya</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="text-green-600 text-2xl">📍</span>
+                <div>
+                  <p class="font-semibold text-gray-900">Prime Location</p>
+                  <p class="text-gray-600">Walking distance to Ram Mandir and major temples</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="text-green-600 text-2xl">🏛️</span>
+                <div>
+                  <p class="font-semibold text-gray-900">Multiple Temples</p>
+                  <p class="text-gray-600">Easy access to all major spiritual sites</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-gray-50 rounded-lg p-8">
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Complete Address</h3>
+            <div class="space-y-4 text-lg text-gray-700">
+              <p><strong>Sri Janaki Mahal Trust</strong></p>
+              <p>Vasudev Gath, Karsewakpuram</p>
+              <p>Ayodhya, Uttar Pradesh 224123</p>
+              <p>India</p>
+              <div class="mt-4 pt-4 border-t border-gray-300">
+                <p class="text-sm text-gray-600 mb-2"><strong>GPS Coordinates:</strong></p>
+                <p class="text-sm text-gray-600">26.8039286°N, 82.2109433°E</p>
+              </div>
+              <div class="mt-4 pt-4 border-t border-gray-300">
+                <p class="text-sm text-gray-600 mb-2"><strong>Area:</strong> Karsewakpuram</p>
+                <p class="text-sm text-gray-600"><strong>City:</strong> Ayodhya</p>
+                <p class="text-sm text-gray-600"><strong>State:</strong> Uttar Pradesh</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Why Karsewakpuram -->
+        <div class="bg-amber-50 rounded-lg p-8 mb-12">
+          <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">
+            Why Choose Karsewakpuram Location?
+          </h2>
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="bg-white rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-3">Proximity to Ram Mandir</h3>
+              <p class="text-gray-700">
+                Just 5 minutes walk from Ram Mandir, making it easy to visit the temple multiple times during your stay.
+              </p>
+            </div>
+            <div class="bg-white rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-3">Spiritual Atmosphere</h3>
+              <p class="text-gray-700">
+                Karsewakpuram maintains a peaceful, spiritual environment perfect for meditation and devotion.
+              </p>
+            </div>
+            <div class="bg-white rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-3">Easy Accessibility</h3>
+              <p class="text-gray-700">
+                Well-connected area with easy access to all major temples and spiritual sites in Ayodhya.
+              </p>
+            </div>
+            <div class="bg-white rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-3">Safe & Secure</h3>
+              <p class="text-gray-700">
+                Safe neighborhood with good security and well-lit streets, perfect for early morning and evening temple visits.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Nearby Attractions in Karsewakpuram -->
+        <div class="mb-12">
+          <h2 class="text-3xl font-bold text-gray-900 mb-6">Attractions in & Near Karsewakpuram</h2>
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-3">Ram Mandir</h3>
+              <p class="text-gray-700 mb-2">The most sacred temple in Ayodhya, birthplace of Lord Rama.</p>
+              <p class="text-sm text-amber-600 font-semibold">5 minutes walk from Sri Janaki Mahal Trust</p>
+            </div>
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-3">Hanuman Garhi</h3>
+              <p class="text-gray-700 mb-2">Famous temple of Lord Hanuman, accessible from Karsewakpuram.</p>
+              <p class="text-sm text-amber-600 font-semibold">2 km from Sri Janaki Mahal Trust</p>
+            </div>
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-3">Kanak Bhavan</h3>
+              <p class="text-gray-700 mb-2">Beautiful palace of Goddess Sita, located near Ram Mandir.</p>
+              <p class="text-sm text-amber-600 font-semibold">1.5 km from Sri Janaki Mahal Trust</p>
+            </div>
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-3">Sita Ki Rasoi</h3>
+              <p class="text-gray-700 mb-2">Sacred kitchen of Goddess Sita, important spiritual site.</p>
+              <p class="text-sm text-amber-600 font-semibold">1 km from Sri Janaki Mahal Trust</p>
+            </div>
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-3">Nageshwarnath Temple</h3>
+              <p class="text-gray-700 mb-2">Ancient Shiva temple, one of the oldest in Ayodhya.</p>
+              <p class="text-sm text-amber-600 font-semibold">3 km from Sri Janaki Mahal Trust</p>
+            </div>
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-3">Saryu River</h3>
+              <p class="text-gray-700 mb-2">Holy river for rituals and spiritual practices.</p>
+              <p class="text-sm text-amber-600 font-semibold">2 km from Sri Janaki Mahal Trust</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- How to Reach -->
+        <div class="bg-gray-50 rounded-lg p-8 mb-12">
+          <h2 class="text-3xl font-bold text-gray-900 mb-6">How to Reach Karsewakpuram</h2>
+          <div class="grid md:grid-cols-3 gap-6">
+            <div>
+              <h3 class="text-xl font-bold text-gray-900 mb-4">By Train</h3>
+              <p class="text-gray-700 mb-2">Get down at Ayodhya Railway Station</p>
+              <p class="text-gray-700 mb-2">Auto-rickshaw to Karsewakpuram: ₹100-150</p>
+              <p class="text-gray-700">Travel time: 15-20 minutes</p>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-gray-900 mb-4">By Road</h3>
+              <p class="text-gray-700 mb-2">Well-connected by road</p>
+              <p class="text-gray-700 mb-2">GPS: 26.8039286°N, 82.2109433°E</p>
+              <p class="text-gray-700">Ask for "Karsewakpuram, Vasudev Gath"</p>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-gray-900 mb-4">Local Transport</h3>
+              <p class="text-gray-700 mb-2">Auto-rickshaws available</p>
+              <p class="text-gray-700 mb-2">Local buses available</p>
+              <p class="text-gray-700">Walking distance to Ram Mandir</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Booking CTA -->
+        <div class="bg-gradient-to-r from-amber-600 to-rose-600 rounded-lg p-8 text-white text-center">
+          <h2 class="text-3xl font-bold mb-4">Book Your Stay in Karsewakpuram</h2>
+          <p class="text-xl mb-6 opacity-90">
+            Experience the spiritual heart of Ayodhya at Sri Janaki Mahal Trust
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a 
+              href="/booking"
+              class="px-8 py-4 bg-white text-amber-600 font-bold rounded-lg hover:bg-gray-100 transition-colors"
+            >
+              Book Now
+            </a>
+            <a 
+              href="tel:+917250364323"
+              class="px-8 py-4 bg-green-600 text-white font-bold rounded-lg hover:bg-green-700 transition-colors"
+            >
+              Call: +91 7250364323
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Breadcrumb Schema -->
+  {breadcrumbSchema && (
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+  )}
+
+  <Footer />
+</Layout>
+

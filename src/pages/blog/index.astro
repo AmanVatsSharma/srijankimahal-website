@@ -4,8 +4,220 @@ import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 
-// Blog posts data - all 19 blog posts
+// Blog posts data - all 49 blog posts
 const blogPosts = [
+  // New posts (March 2025)
+  {
+    slug: 'sri-janaki-mahal-trust-features',
+    title: 'Sri Janaki Mahal Trust Features - Key Features and Facilities',
+    description: 'Key features and facilities at Sri Janaki Mahal Trust. Prime location, all meals included, affordable prices, excellent service, and verified trust.',
+    date: '2025-03-21',
+    readTime: '5 min read'
+  },
+  {
+    slug: 'sri-janaki-mahal-trust-benefits',
+    title: 'Sri Janaki Mahal Trust Benefits - Advantages of Staying Here',
+    description: 'Benefits of staying at Sri Janaki Mahal Trust. Top advantages, benefits, and why guests choose us. Prime location, all meals, affordable prices.',
+    date: '2025-03-20',
+    readTime: '6 min read'
+  },
+  {
+    slug: 'sri-janaki-mahal-trust-comparison',
+    title: 'Sri Janaki Mahal Trust Comparison - Compare with Other Options',
+    description: 'Compare Sri Janaki Mahal Trust with other accommodation options in Ayodhya. Why choose Sri Janaki Mahal Trust - location, prices, services comparison.',
+    date: '2025-03-19',
+    readTime: '6 min read'
+  },
+  {
+    slug: 'sri-janaki-mahal-trust-karsewakpuram-address',
+    title: 'Sri Janaki Mahal Trust Karsewakpuram Address - Complete Location Guide',
+    description: 'Sri Janaki Mahal Trust address in Karsewakpuram, Ayodhya. Complete address, location details, GPS coordinates, and how to reach.',
+    date: '2025-03-18',
+    readTime: '5 min read'
+  },
+  {
+    slug: 'sri-janaki-mahal-trust-accessibility-features',
+    title: 'Sri Janaki Mahal Trust Accessibility Features - Accessible Accommodation',
+    description: 'Accessibility features at Sri Janaki Mahal Trust. Accessible accommodation, facilities for elderly, and accessibility information.',
+    date: '2025-03-17',
+    readTime: '4 min read'
+  },
+  {
+    slug: 'sri-janaki-mahal-trust-safety-security',
+    title: 'Sri Janaki Mahal Trust Safety and Security - Secure Accommodation',
+    description: 'Safety and security at Sri Janaki Mahal Trust. Secure premises, safe accommodation, security measures, and safety information for guests.',
+    date: '2025-03-16',
+    readTime: '4 min read'
+  },
+  {
+    slug: 'sri-janaki-mahal-trust-weekend-rates',
+    title: 'Sri Janaki Mahal Trust Weekend Rates - Weekend Booking Guide',
+    description: 'Weekend rates and booking at Sri Janaki Mahal Trust. Weekend pricing, weekend availability, and weekend booking tips.',
+    date: '2025-03-15',
+    readTime: '4 min read'
+  },
+  {
+    slug: 'sri-janaki-mahal-trust-seasonal-rates',
+    title: 'Sri Janaki Mahal Trust Seasonal Rates - Peak Season and Off-Season Prices',
+    description: 'Seasonal rates at Sri Janaki Mahal Trust. Peak season rates, off-season rates, seasonal pricing, and best time to book.',
+    date: '2025-03-14',
+    readTime: '5 min read'
+  },
+  {
+    slug: 'sri-janaki-mahal-trust-wifi-internet',
+    title: 'Sri Janaki Mahal Trust WiFi Internet - Internet Facilities',
+    description: 'WiFi and internet facilities at Sri Janaki Mahal Trust. Internet availability, WiFi access, and connectivity information for guests.',
+    date: '2025-03-13',
+    readTime: '4 min read'
+  },
+  {
+    slug: 'sri-janaki-mahal-trust-parking-facilities',
+    title: 'Sri Janaki Mahal Trust Parking Facilities - Vehicle Parking Information',
+    description: 'Parking facilities at Sri Janaki Mahal Trust. Vehicle parking availability, parking charges, and parking information for guests.',
+    date: '2025-03-12',
+    readTime: '4 min read'
+  },
+  {
+    slug: 'sri-janaki-mahal-trust-dharmshala-ayodhya',
+    title: 'Sri Janaki Mahal Trust Dharmshala Ayodhya - Complete Guide',
+    description: 'Sri Janaki Mahal Trust dharmshala in Ayodhya. Best dharmshala near Ram Mandir with all meals included. Affordable rates, clean accommodation.',
+    date: '2025-03-11',
+    readTime: '5 min read'
+  },
+  {
+    slug: 'sri-janaki-mahal-trust-guest-house',
+    title: 'Sri Janaki Mahal Trust Guest House - Comfortable Accommodation Ayodhya',
+    description: 'Sri Janaki Mahal Trust guest house accommodation in Ayodhya. Comfortable guest house near Ram Mandir with all meals included. Affordable rates, clean rooms.',
+    date: '2025-03-10',
+    readTime: '4 min read'
+  },
+  {
+    slug: 'sri-janaki-mahal-trust-room-types-explained',
+    title: 'Sri Janaki Mahal Trust Room Types Explained - Complete Guide',
+    description: 'Complete guide to room types at Sri Janaki Mahal Trust. 2-bed, 3-bed, 4-bed rooms, AC/Non-AC options, suites explained. Choose the right room for your stay.',
+    date: '2025-03-09',
+    readTime: '6 min read'
+  },
+  {
+    slug: 'sri-janaki-mahal-trust-festival-booking',
+    title: 'Sri Janaki Mahal Trust Festival Booking - Ram Navami, Diwali, Special Dates',
+    description: 'Book rooms at Sri Janaki Mahal Trust during festivals. Festival booking guide for Ram Navami, Diwali, Makar Sankranti, and special dates. Advance booking recommended.',
+    date: '2025-03-08',
+    readTime: '5 min read'
+  },
+  {
+    slug: 'sri-janaki-mahal-trust-from-airport',
+    title: 'How to Reach Sri Janaki Mahal Trust from Airport - Complete Guide',
+    description: 'Complete guide to reach Sri Janaki Mahal Trust from Lucknow Airport. Distance, travel time, transportation options, and directions.',
+    date: '2025-03-07',
+    readTime: '6 min read'
+  },
+  {
+    slug: 'sri-janaki-mahal-trust-why-choose',
+    title: 'Why Choose Sri Janaki Mahal Trust - Top Reasons 2025',
+    description: 'Top reasons to choose Sri Janaki Mahal Trust. Prime location, all meals included, affordable prices, excellent service, and verified trust. Why guests choose us.',
+    date: '2025-03-06',
+    readTime: '6 min read'
+  },
+  {
+    slug: 'sri-janaki-mahal-trust-best-dharmshala-ayodhya',
+    title: 'Sri Janaki Mahal Trust - Best Dharmshala in Ayodhya 2025',
+    description: 'Why Sri Janaki Mahal Trust is the best dharmshala in Ayodhya. Prime location near Ram Mandir, all meals included, affordable prices, and excellent service.',
+    date: '2025-03-05',
+    readTime: '6 min read'
+  },
+  {
+    slug: 'sri-janaki-mahal-trust-is-genuine',
+    title: 'Is Sri Janaki Mahal Trust Genuine? - Complete Verification Guide',
+    description: 'Verify if Sri Janaki Mahal Trust is genuine. Complete guide to check authenticity, official verification, registration details, and how to avoid scams.',
+    date: '2025-03-03',
+    readTime: '7 min read'
+  },
+  {
+    slug: 'sri-janaki-mahal-trust-near-ram-mandir-distance',
+    title: 'Sri Janaki Mahal Trust Near Ram Mandir - Distance and Directions',
+    description: 'Sri Janaki Mahal Trust distance from Ram Mandir. Just 5 minutes walk, 400 meters from Ram Mandir. Complete guide to distance, walking directions, and convenience.',
+    date: '2025-03-04',
+    readTime: '6 min read'
+  },
+  {
+    slug: 'sri-janaki-mahal-trust-booking-confirmation',
+    title: 'Sri Janaki Mahal Trust Booking Confirmation - How to Get Confirmation',
+    description: 'Complete guide to booking confirmation at Sri Janaki Mahal Trust. How to get booking confirmation, confirmation details, and what to do after confirmation.',
+    date: '2025-03-02',
+    readTime: '5 min read'
+  },
+  {
+    slug: 'sri-janaki-mahal-trust-payment-methods',
+    title: 'Sri Janaki Mahal Trust Payment Methods - How to Pay for Booking',
+    description: 'Complete guide to payment methods at Sri Janaki Mahal Trust. Accepted payment methods, payment process, advance payment, and payment options for room booking.',
+    date: '2025-03-01',
+    readTime: '5 min read'
+  },
+  {
+    slug: 'sri-janaki-mahal-trust-family-rooms',
+    title: 'Sri Janaki Mahal Trust Family Rooms - Best Family Accommodation Ayodhya',
+    description: 'Book family rooms at Sri Janaki Mahal Trust. Family-friendly rooms, 3-bed and 4-bed rooms, family accommodation near Ram Mandir. All meals included.',
+    date: '2025-02-28',
+    readTime: '5 min read'
+  },
+  {
+    slug: 'sri-janaki-mahal-trust-group-booking',
+    title: 'Sri Janaki Mahal Trust Group Booking - Special Rates and Facilities',
+    description: 'Book group rooms at Sri Janaki Mahal Trust. Group booking rates, facilities, group accommodation, and special offers for large groups visiting Ayodhya.',
+    date: '2025-02-27',
+    readTime: '6 min read'
+  },
+  {
+    slug: 'sri-janaki-mahal-trust-vs-other-dharmshala-ayodhya',
+    title: 'Sri Janaki Mahal Trust vs Other Dharmshala Ayodhya - Complete Comparison',
+    description: 'Compare Sri Janaki Mahal Trust with other dharmshalas in Ayodhya. Why choose Sri Janaki Mahal Trust - location, prices, amenities, and services comparison.',
+    date: '2025-02-26',
+    readTime: '7 min read'
+  },
+  {
+    slug: 'sri-janaki-mahal-trust-ac-room-booking',
+    title: 'Sri Janaki Mahal Trust AC Room Booking - Prices and Availability',
+    description: 'Book AC rooms at Sri Janaki Mahal Trust. AC room prices, features, availability, and booking process. All AC rooms with meals included.',
+    date: '2025-02-25',
+    readTime: '6 min read'
+  },
+  {
+    slug: 'sri-janaki-mahal-trust-location-map-address',
+    title: 'Sri Janaki Mahal Trust Location Map and Address - Complete Guide',
+    description: 'Sri Janaki Mahal Trust location map, GPS coordinates, address, and directions. Find exact location near Ram Mandir in Karsewakpuram, Ayodhya.',
+    date: '2025-02-24',
+    readTime: '6 min read'
+  },
+  {
+    slug: 'sri-janaki-mahal-trust-reviews-and-ratings',
+    title: 'Sri Janaki Mahal Trust Reviews and Ratings - Guest Feedback 2025',
+    description: 'Read real reviews and ratings of Sri Janaki Mahal Trust Ayodhya. Guest feedback, ratings, testimonials, and experiences. 4.5 star rating with verified reviews.',
+    date: '2025-02-23',
+    readTime: '7 min read'
+  },
+  {
+    slug: 'sri-janaki-mahal-trust-room-booking-online-number',
+    title: 'Sri Janaki Mahal Trust Room Booking Online - Phone Number and Process',
+    description: 'Book room at Sri Janaki Mahal Trust online. Official booking number +91 7250364323. Complete guide to online room booking, WhatsApp booking, and instant confirmation process.',
+    date: '2025-02-22',
+    readTime: '6 min read'
+  },
+  {
+    slug: 'sri-janaki-mahal-trust-official-booking-number',
+    title: 'Sri Janaki Mahal Trust Official Booking Number - Complete Contact Guide',
+    description: 'Sri Janaki Mahal Trust official booking number +91 7250364323. Learn how to book rooms, WhatsApp booking, email booking, and all official contact methods for Sri Janaki Mahal Trust.',
+    date: '2025-02-21',
+    readTime: '7 min read'
+  },
+  {
+    slug: 'sri-janaki-mahal-trust-ayodhya-complete-booking-guide',
+    title: 'Sri Janaki Mahal Trust Ayodhya - Complete Booking Guide 2025',
+    description: 'Complete guide to booking at Sri Janaki Mahal Trust Ayodhya. Learn how to book rooms online, phone booking, WhatsApp booking, and everything about Sri Janaki Mahal Trust booking process.',
+    date: '2025-02-20',
+    readTime: '8 min read'
+  },
+  // Original posts
   {
     slug: 'sri-janaki-mahal-trust-best-time-visit-ayodhya',
     title: 'Best Time to Visit Ayodhya and Sri Janaki Mahal Trust - Seasonal Guide',

@@ -69,7 +69,7 @@ Room Type: [Preferred type]
 
 ### Method 3: Email Booking
 
-**Step 1:** Send email to: **vedpragyabharat@gmail.com**
+**Step 1:** Send email to: **ssrijanakimahaltrust7484@gmail.com**
 
 **Step 2:** Include:
 - Subject: "Room Booking Inquiry"
@@ -244,7 +244,7 @@ Yes, booking confirmation is required and provided. Keep it for check-in.
 ✅ **Official Phone:** +91 7250364323  
 ✅ **Official WhatsApp:** +91 7250364323  
 ✅ **Official Website:** srijanakimahaltrust.in  
-✅ **Official Email:** vedpragyabharat@gmail.com  
+✅ **Official Email:** ssrijanakimahaltrust7484@gmail.com  
 
 **Do NOT book through:**
 - Third-party agents
@@ -296,7 +296,7 @@ Yes, booking confirmation is required and provided. Keep it for check-in.
 **Booking Assistance:**
 - 📞 Phone: +91 7250364323 (24/7)
 - 💬 WhatsApp: +91 7250364323
-- 📧 Email: vedpragyabharat@gmail.com
+- 📧 Email: ssrijanakimahaltrust7484@gmail.com
 - 🌐 Website: srijanakimahaltrust.in
 
 ## Conclusion

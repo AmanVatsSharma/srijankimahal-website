@@ -38,7 +38,7 @@ Complete guide on verifying the authenticity of Sri Janaki Mahal Trust. Learn ho
 
 **What to Look For:**
 - Official contact: +91 7250364323
-- Official email: vedpragyabharat@gmail.com
+- Official email: ssrijanakimahaltrust7484@gmail.com
 - Official address: Vasudev Gath, Karsewakpuram, Ayodhya
 - Registration information
 
@@ -47,7 +47,7 @@ Complete guide on verifying the authenticity of Sri Janaki Mahal Trust. Learn ho
 **Official Contact:**
 - Phone: +91 7250364323
 - WhatsApp: +91 7250364323
-- Email: vedpragyabharat@gmail.com
+- Email: ssrijanakimahaltrust7484@gmail.com
 - Website: srijanakimahaltrust.in
 
 **Verification:**
@@ -175,7 +175,7 @@ Complete guide on verifying the authenticity of Sri Janaki Mahal Trust. Learn ho
 
 - [ ] Website is srijanakimahaltrust.in
 - [ ] Phone number is +91 7250364323
-- [ ] Email is vedpragyabharat@gmail.com
+- [ ] Email is ssrijanakimahaltrust7484@gmail.com
 - [ ] Address matches official address
 - [ ] Registration details available
 - [ ] Reviews and ratings present
@@ -203,7 +203,7 @@ Complete guide on verifying the authenticity of Sri Janaki Mahal Trust. Learn ho
 - Available: 24/7
 
 ✅ **Official Email**
-- Email: vedpragyabharat@gmail.com
+- Email: ssrijanakimahaltrust7484@gmail.com
 - Response: Within 24 hours
 
 ✅ **Physical Location**
@@ -227,7 +227,7 @@ Complete guide on verifying the authenticity of Sri Janaki Mahal Trust. Learn ho
 
 **Step 2: Verify Contact**
 - Check phone: +91 7250364323
-- Check email: vedpragyabharat@gmail.com
+- Check email: ssrijanakimahaltrust7484@gmail.com
 - Verify WhatsApp: +91 7250364323
 
 **Step 3: Check Information**

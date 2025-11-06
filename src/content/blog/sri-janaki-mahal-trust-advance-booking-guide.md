@@ -81,7 +81,7 @@ Complete guide on advance booking at Sri Janaki Mahal Trust. Learn when and how 
 **Methods:**
 - Phone: +91 7250364323
 - WhatsApp: +91 7250364323
-- Email: vedpragyabharat@gmail.com
+- Email: ssrijanakimahaltrust7484@gmail.com
 
 **Best Method:** Phone or WhatsApp for instant confirmation
 
@@ -259,7 +259,7 @@ Yes, advance bookings are confirmed with booking reference and details.
 **Advance Booking:**
 - 📞 Phone: +91 7250364323
 - 💬 WhatsApp: +91 7250364323
-- 📧 Email: vedpragyabharat@gmail.com
+- 📧 Email: ssrijanakimahaltrust7484@gmail.com
 
 **Available 24/7 for Advance Bookings!**
 
@@ -270,7 +270,7 @@ Advance booking at Sri Janaki Mahal Trust ensures guaranteed availability and pe
 **Book in Advance Now:**
 - 📞 Call: +91 7250364323
 - 💬 WhatsApp: +91 7250364323
-- 📧 Email: vedpragyabharat@gmail.com
+- 📧 Email: ssrijanakimahaltrust7484@gmail.com
 
 ---
 

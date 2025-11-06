@@ -242,7 +242,7 @@ Complete guide to all services, amenities, and facilities available at Sri Janak
 **Service Inquiries:**
 - 📞 Phone: +91 7250364323
 - 💬 WhatsApp: +91 7250364323
-- 📧 Email: vedpragyabharat@gmail.com
+- 📧 Email: ssrijanakimahaltrust7484@gmail.com
 
 **Available 24/7 for Service Support!**
 

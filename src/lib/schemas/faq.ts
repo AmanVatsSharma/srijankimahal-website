@@ -215,5 +215,93 @@ export const defaultFAQs: FAQItem[] = [
     question: 'Is Sri Janaki Mahal Trust booking safe?',
     answer: 'Yes, booking with Sri Janaki Mahal Trust is safe and secure. We are a registered trust with verified credentials. All bookings are confirmed directly by us. Always book through official channels (phone +91 7250364323, WhatsApp, or official website) to ensure safety.',
   },
+  {
+    question: 'Is Janaki Mahal Trust the same as Sri Janki Mahal Trust?',
+    answer: 'Yes, Janaki Mahal Trust, Sri Janki Mahal Trust, and Shri Janki Mahal Trust all refer to the same registered charitable trust in Ayodhya. Regardless of spelling, the official helpline remains +91 7250364323 for bookings and verification.',
+  },
+  {
+    question: 'What is the official contact number of Janaki Mahal Trust Ayodhya?',
+    answer: 'The official contact number for Janaki Mahal Trust Ayodhya is +91 7250364323. This number is the same for Janaki, Janki, and Shri Janki Mahal Trust spellings and is available 24/7.',
+  },
+  {
+    question: 'Does Shri Janki Mahal Trust issue a confirmation slip?',
+    answer: 'Yes, every booking with Shri Janki Mahal Trust includes an official confirmation slip featuring the trust seal, booking ID, and stay details. This slip verifies your reservation at check-in.',
+  },
+  {
+    question: 'How can I avoid fake Janaki Mahal Trust bookings?',
+    answer: 'Avoid fake bookings by using only the official channels: phone/WhatsApp +91 7250364323, email srijanakimahaltrust7484@gmail.com, and the website srijanakimahaltrust.in. Decline offers from alternate numbers or third-party agents.',
+  },
+  {
+    question: 'Which spellings does Sri Janaki Mahal Trust recognise?',
+    answer: 'We recognise the following spellings: Sri Janaki Mahal Trust, Sri Janki Mahal Trust, Shri Janki Mahal Trust, Janaki Mahal Trust, and Janaki Mahal Ayodhya. All these variations represent the same trust with identical contact details.',
+  },
+  {
+    question: 'Can I WhatsApp the official Janaki Mahal Trust contact number?',
+    answer: 'Yes, the official Janaki Mahal Trust contact number +91 7250364323 is also active on WhatsApp. You can message us at any time for bookings, confirmation slips, or travel assistance.',
+  },
+  {
+    question: 'Does Sri Janki Mahal Trust provide 24/7 emergency support?',
+    answer: 'Sri Janki Mahal Trust offers 24/7 emergency support via the verified helpline +91 7250364323. Our team assists with medical needs, late check-ins, and pilgrimage-related guidance.',
+  },
+  {
+    question: 'How do I verify a message claiming to be from Sri Janaki Mahal Trust?',
+    answer: 'Verify any communication by cross-checking the sender’s number with our official helpline +91 7250364323. If the message originates from a different number or email, contact us directly to confirm authenticity.',
+  },
+  {
+    question: 'Is Janaki Mahal official booking available through third-party apps?',
+    answer: 'No, Janaki Mahal official booking is only available through direct contact—phone, WhatsApp, or the booking page on srijanakimahaltrust.in. We do not authorise third-party apps or travel portals.',
+  },
+  {
+    question: 'What should I do if someone shares an alternate Janaki Mahal number?',
+    answer: 'Politely decline and call our verified number +91 7250364323. Share details of the alternate number with our team so we can alert other devotees about potential scams.',
+  },
+  {
+    question: 'Can international devotees contact Shri Janki Mahal Trust easily?',
+    answer: 'International devotees can reach Shri Janki Mahal Trust through WhatsApp at +91 7250364323 or email srijanakimahaltrust7484@gmail.com. We provide confirmation slips and itineraries for overseas pilgrims.',
+  },
+  {
+    question: 'Does Sri Janaki Mahal Trust send a payment link?',
+    answer: 'Sri Janaki Mahal Trust shares payment details only after availability is confirmed and always from the official helpline or email. If you receive a payment link from another source, verify it with us before paying.',
+  },
+  {
+    question: 'Are there different rates for Sri Janki Mahal Trust and Janaki Mahal Trust?',
+    answer: 'No, all spellings refer to the same trust with the same transparent tariff. Prices range from ₹1,250 to ₹4,150 and include meals, regardless of the spelling you use while booking.',
+  },
+  {
+    question: 'How can I confirm my booking is with the official Sri Janki Mahal Trust?',
+    answer: 'Your booking is official when it is confirmed via +91 7250364323, you receive a trust-stamped confirmation slip, and the reference email is srijanakimahaltrust7484@gmail.com. These safeguards ensure authenticity.',
+  },
+  {
+    question: 'Which keywords should I search to find the official Sri Janaki Mahal Trust website?',
+    answer: 'Search keywords like “Janaki Mahal Trust official booking”, “Sri Janki Mahal Trust Ayodhya official website”, or “Shri Janki Mahal Trust verified contact” to find the correct site srijanakimahaltrust.in.',
+  },
+  {
+    question: 'Can I request a GST invoice from Janaki Mahal Trust?',
+    answer: 'Yes, you can request a GST invoice during or after booking. Provide the necessary GST details to our team via +91 7250364323, and we will issue the invoice from the official trust account.',
+  },
+  {
+    question: 'Does the official trust number change during festivals?',
+    answer: 'No, the official trust number remains +91 7250364323 throughout the year, including festivals like Ram Navami and Diwali. Additional support staff assist via the same number during peak seasons.',
+  },
+  {
+    question: 'Is there a separate contact for “Shri Janki Mahal Trust Ayodhya official helpline”?',
+    answer: 'There is only one helpline for all variations: +91 7250364323. Save this number as “Sri / Shri Janki Mahal Trust” to avoid confusion with fraudulent contacts.',
+  },
+  {
+    question: 'What is the best way to share Janaki Mahal Trust details with family?',
+    answer: 'Share the official website link srijanakimahaltrust.in and the helpline +91 7250364323. Mention that Sri Janaki Mahal Trust, Sri Janki Mahal Trust, and Shri Janki Mahal Trust are the same verified accommodation provider.',
+  },
+  {
+    question: 'Can I get assistance in Hindi or English when contacting Sri Janaki Mahal Trust?',
+    answer: 'Yes, our support team assists guests in Hindi and English. For other languages, let us know in advance via WhatsApp so we can arrange translation support where possible.',
+  },
+  {
+    question: 'Does Sri Janaki Mahal Trust provide reminders before check-in?',
+    answer: 'Yes, we send a reminder message with your booking details and official contact number a day before check-in. This ensures you have the latest information and the verified helpline handy.',
+  },
+  {
+    question: 'What if I need to change my Janaki Mahal Trust booking dates?',
+    answer: 'Contact us immediately at +91 7250364323. Date modifications are subject to availability, and our team will provide alternate options or waiting list assistance as needed.',
+  },
 ];
 

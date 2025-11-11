@@ -1,5 +1,96 @@
 <!-- // src/components/DualGallery.astro -->
 ---
+const leftLaneImages = [
+  {
+    src: '/ayodhya-temple-spiritual.jpg',
+    alt: 'Ram Mandir Ayodhya near Sri Janaki Mahal Trust - Spiritual temple architecture at golden hour',
+    caption: 'Ram Mandir view near Sri Janaki Mahal Trust in Ayodhya',
+    title: 'Ram Mandir Ayodhya View',
+    width: '1200',
+    height: '800',
+  },
+  {
+    src: '/ayodhya-room-interior.jpg',
+    alt: 'Sri Janaki Mahal Trust room interior with devotional decor and comfortable bedding',
+    caption: 'Guest room interior inside Sri Janki Mahal Trust Ayodhya',
+    title: 'Trust Room Interior',
+    width: '1200',
+    height: '800',
+  },
+  {
+    src: '/ayodhya-courtyard-peaceful.jpg',
+    alt: 'Sri Janaki Mahal Trust courtyard with trees and seating for meditation',
+    caption: 'Peaceful courtyard for meditation at Janaki Mahal Trust',
+    title: 'Peaceful Courtyard',
+    width: '1200',
+    height: '800',
+  },
+  {
+    src: '/placeholder.svg?height=400&width=400',
+    alt: 'Sri Janaki Mahal Trust - Comfortable hotel in Ayodhya providing devotional stay',
+    caption: 'Sri Janaki Mahal Trust accommodation near Ram Mandir',
+    title: 'Sri Janaki Mahal Trust Accommodation',
+    width: '800',
+    height: '800',
+  },
+];
+
+const rightLaneImages = [
+  {
+    src: '/ayodhya-prayer-room-meditation.jpg',
+    alt: 'Prayer room at Sri Janaki Mahal Trust with diyas and devotional ambience',
+    caption: 'Prayer room inside Sri Janaki Mahal Trust Ayodhya',
+    title: 'Prayer Room',
+    width: '1200',
+    height: '800',
+  },
+  {
+    src: '/ayodhya-spiritual-architecture.jpg',
+    alt: 'Traditional architecture of Sri Janaki Mahal Trust hotel in Karsewakpuram Ayodhya',
+    caption: 'Spiritual architecture of Janaki Mahal Trust',
+    title: 'Spiritual Architecture',
+    width: '1200',
+    height: '800',
+  },
+  {
+    src: '/placeholder.svg?height=400&width=400',
+    alt: 'Sri Janaki Mahal Trust - Best accommodation in Ayodhya hotel near Ram Mandir',
+    caption: 'Best accommodation at Sri Janki Mahal Trust near Ram Mandir',
+    title: 'Best Accommodation',
+    width: '800',
+    height: '800',
+  },
+  {
+    src: '/placeholder.svg?height=400&width=400',
+    alt: 'Sri Janaki Mahal Trust facilities - Comfortable hotel rooms in Ayodhya',
+    caption: 'Facilities at Sri Janaki Mahal Trust rooms',
+    title: 'Trust Facilities',
+    width: '800',
+    height: '800',
+  },
+];
+
+// Console log to aid debugging when reviewing gallery assets
+console.log('[DualGallery] Rendering dual gallery lanes with', leftLaneImages.length + rightLaneImages.length, 'images');
+
+const imageSchemas = [...leftLaneImages, ...rightLaneImages].map((image) => ({
+  '@context': 'https://schema.org',
+  '@type': 'ImageObject',
+  contentUrl: `https://srijanakimahaltrust.in${image.src}`,
+  caption: image.caption,
+  description: image.alt,
+  name: image.title,
+  creator: {
+    '@type': 'Organization',
+    name: 'Sri Janaki Mahal Trust',
+  },
+  copyrightHolder: {
+    '@type': 'Organization',
+    name: 'Sri Janaki Mahal Trust',
+  },
+  license: 'https://srijanakimahaltrust.in',
+  inLanguage: 'en',
+}));
 ---
 
 <section id="gallery" class="py-16 sm:py-24 bg-gray-50">
@@ -9,68 +100,61 @@
       <p class="text-lg text-gray-600">Explore the beauty and serenity of <strong>Sri Janaki Mahal Trust</strong> in <strong>Ayodhya</strong>. See our rooms, courtyard, and <strong>hotel accommodation near Ram Mandir</strong>.</p>
     </div>
 
-    <!-- Dual-column scrolling gallery (left and right) -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 overflow-hidden">
-      <!-- Left Column - Scrolling Right -->
       <div class="relative overflow-hidden h-96 rounded-lg">
         <div
           id="gallery-left"
           class="flex gap-4 animate-slide-in-left"
           style="animation: scroll-left 30s linear infinite;"
         >
-          <div class="flex-shrink-0 w-80 h-96 rounded-lg overflow-hidden shadow-lg">
-            <img src="/ayodhya-temple-spiritual.jpg" alt="Ram Mandir Ayodhya near Sri Janaki Mahal Trust - Spiritual temple architecture" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300" />
-          </div>
-          <div class="flex-shrink-0 w-80 h-96 rounded-lg overflow-hidden shadow-lg">
-            <img src="/ayodhya-room-interior.jpg" alt="Sri Janaki Mahal Trust room interior - Comfortable accommodation in Ayodhya hotel" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300" />
-          </div>
-          <div class="flex-shrink-0 w-80 h-96 rounded-lg overflow-hidden shadow-lg">
-            <img src="/ayodhya-courtyard-peaceful.jpg" alt="Sri Janaki Mahal Trust courtyard - Peaceful meditation space in Ayodhya near Ram Mandir" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300" />
-          </div>
-          <div class="flex-shrink-0 w-80 h-96 rounded-lg overflow-hidden shadow-lg">
-            <img src="/placeholder.svg?height=400&width=400" alt="Sri Janaki Mahal Trust - Comfortable hotel in Ayodhya" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300" />
-          </div>
-          <!-- Duplicate for seamless loop -->
-          <div class="flex-shrink-0 w-80 h-96 rounded-lg overflow-hidden shadow-lg">
-            <img src="/ayodhya-temple-spiritual.jpg" alt="Ram Mandir Ayodhya near Sri Janaki Mahal Trust - Spiritual temple architecture" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300" />
-          </div>
-          <div class="flex-shrink-0 w-80 h-96 rounded-lg overflow-hidden shadow-lg">
-            <img src="/ayodhya-room-interior.jpg" alt="Sri Janaki Mahal Trust room interior - Comfortable accommodation in Ayodhya hotel" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300" />
-          </div>
+          {[...leftLaneImages, ...leftLaneImages].map((image, index) => (
+            <figure class="flex-shrink-0 w-80 h-96 rounded-lg overflow-hidden shadow-lg bg-white" data-index={`left-${index}`}>
+              <img
+                src={image.src}
+                alt={image.alt}
+                title={image.title}
+                width={image.width}
+                height={image.height}
+                loading="lazy"
+                decoding="async"
+                class="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+              />
+              <figcaption class="sr-only">{image.caption}</figcaption>
+            </figure>
+          ))}
         </div>
       </div>
 
-      <!-- Right Column - Scrolling Left -->
       <div class="relative overflow-hidden h-96 rounded-lg">
         <div
           id="gallery-right"
           class="flex gap-4 animate-slide-in-right"
           style="animation: scroll-right 30s linear infinite reverse;"
         >
-          <div class="flex-shrink-0 w-80 h-96 rounded-lg overflow-hidden shadow-lg">
-            <img src="/ayodhya-prayer-room-meditation.jpg" alt="Sri Janaki Mahal Trust prayer room - Meditation space in Ayodhya hotel near Ram Mandir" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300" />
-          </div>
-          <div class="flex-shrink-0 w-80 h-96 rounded-lg overflow-hidden shadow-lg">
-            <img src="/ayodhya-spiritual-architecture.jpg" alt="Sri Janaki Mahal Trust architecture - Traditional hotel design in Karsewakpuram Ayodhya" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300" />
-          </div>
-          <div class="flex-shrink-0 w-80 h-96 rounded-lg overflow-hidden shadow-lg">
-            <img src="/placeholder.svg?height=400&width=400" alt="Sri Janaki Mahal Trust - Best accommodation in Ayodhya hotel" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300" />
-          </div>
-          <div class="flex-shrink-0 w-80 h-96 rounded-lg overflow-hidden shadow-lg">
-            <img src="/placeholder.svg?height=400&width=400" alt="Sri Janaki Mahal Trust facilities - Comfortable hotel rooms in Ayodhya" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300" />
-          </div>
-          <!-- Duplicate for seamless loop -->
-          <div class="flex-shrink-0 w-80 h-96 rounded-lg overflow-hidden shadow-lg">
-            <img src="/ayodhya-prayer-room-meditation.jpg" alt="Sri Janaki Mahal Trust prayer room - Meditation space in Ayodhya hotel near Ram Mandir" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300" />
-          </div>
-          <div class="flex-shrink-0 w-80 h-96 rounded-lg overflow-hidden shadow-lg">
-            <img src="/ayodhya-spiritual-architecture.jpg" alt="Sri Janaki Mahal Trust architecture - Traditional hotel design in Karsewakpuram Ayodhya" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300" />
-          </div>
+          {[...rightLaneImages, ...rightLaneImages].map((image, index) => (
+            <figure class="flex-shrink-0 w-80 h-96 rounded-lg overflow-hidden shadow-lg bg-white" data-index={`right-${index}`}>
+              <img
+                src={image.src}
+                alt={image.alt}
+                title={image.title}
+                width={image.width}
+                height={image.height}
+                loading="lazy"
+                decoding="async"
+                class="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+              />
+              <figcaption class="sr-only">{image.caption}</figcaption>
+            </figure>
+          ))}
         </div>
       </div>
     </div>
   </div>
 </section>
+
+<script type="application/ld+json">
+  {JSON.stringify(imageSchemas, null, 2)}
+</script>
 
 <style>
   @keyframes scroll-left {

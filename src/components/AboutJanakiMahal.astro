@@ -2,6 +2,64 @@
 ---
 ---
 
+---
+const aboutGalleryImages = [
+  {
+    src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG-20251017-WA0022-PXibh1TA63gWyELctfvTwP5RiXXoiF.jpg',
+    alt: 'Sri Janaki Mahal Garden Courtyard - Beautiful peaceful garden area for meditation',
+    caption: 'Garden courtyard at Sri Janaki Mahal Trust for peaceful meditation',
+    title: 'Garden Courtyard',
+    width: '400',
+    height: '256',
+  },
+  {
+    src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG-20251017-WA0035-u3r4TYE42X2tAXLDxddjlUzcl69pbM.jpg',
+    alt: 'Sri Janaki Mahal Courtyard View - Serene courtyard with traditional architecture',
+    caption: 'Courtyard view highlighting traditional architecture at the trust',
+    title: 'Courtyard View',
+    width: '400',
+    height: '256',
+  },
+  {
+    src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG-20251017-WA0028-SNCPTXLv6DBG87wvT1V6X1K2pPshoT.jpg',
+    alt: 'Sri Janaki Mahal Exterior - Traditional spiritual architecture in Ayodhya',
+    caption: 'Exterior facade of Sri Janaki Mahal Trust in Ayodhya',
+    title: 'Trust Exterior',
+    width: '400',
+    height: '256',
+  },
+  {
+    src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG-20251017-WA0034-Punqg4XPEqYevId5WKv6rmvmFxtw3d.jpg',
+    alt: 'Sri Janaki Mahal Interior - Comfortable and clean interior spaces',
+    caption: 'Interior seating area inside Sri Janaki Mahal Trust',
+    title: 'Interior Spaces',
+    width: '400',
+    height: '256',
+  },
+];
+
+console.log('[AboutJanakiMahal] Rendering gallery with', aboutGalleryImages.length, 'images');
+
+const aboutImageSchemas = aboutGalleryImages.map((image) => ({
+  '@context': 'https://schema.org',
+  '@type': 'ImageObject',
+  contentUrl: image.src,
+  caption: image.caption,
+  description: image.alt,
+  name: image.title,
+  creator: {
+    '@type': 'Organization',
+    name: 'Sri Janaki Mahal Trust',
+  },
+  copyrightHolder: {
+    '@type': 'Organization',
+    name: 'Sri Janaki Mahal Trust',
+  },
+  license: 'https://srijanakimahaltrust.in',
+  inLanguage: 'en',
+}));
+---
+
 <section id="about" class="py-16 sm:py-24 bg-white">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -46,31 +104,26 @@
 
       <!-- Right Images Grid -->
       <div class="grid grid-cols-2 gap-4">
-        <img 
-          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG-20251017-WA0022-PXibh1TA63gWyELctfvTwP5RiXXoiF.jpg" 
-          alt="Sri Janaki Mahal Garden Courtyard - Beautiful peaceful garden area for meditation" 
-          class="rounded-lg shadow-lg w-full h-64 object-cover hover:shadow-xl transition-shadow"
-          width="400" height="256" loading="lazy" decoding="async"
-        />
-        <img 
-          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG-20251017-WA0035-u3r4TYE42X2tAXLDxddjlUzcl69pbM.jpg" 
-          alt="Sri Janaki Mahal Courtyard View - Serene courtyard with traditional architecture" 
-          class="rounded-lg shadow-lg w-full h-64 object-cover hover:shadow-xl transition-shadow"
-          width="400" height="256" loading="lazy" decoding="async"
-        />
-        <img 
-          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG-20251017-WA0028-SNCPTXLv6DBG87wvT1V6X1K2pPshoT.jpg" 
-          alt="Sri Janaki Mahal Exterior - Traditional spiritual architecture in Ayodhya" 
-          class="rounded-lg shadow-lg w-full h-64 object-cover hover:shadow-xl transition-shadow"
-          width="400" height="256" loading="lazy" decoding="async"
-        />
-        <img 
-          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG-20251017-WA0034-Punqg4XPEqYevId5WKv6rmvmFxtw3d.jpg" 
-          alt="Sri Janaki Mahal Interior - Comfortable and clean interior spaces" 
-          class="rounded-lg shadow-lg w-full h-64 object-cover hover:shadow-xl transition-shadow"
-          width="400" height="256" loading="lazy" decoding="async"
-        />
+        {aboutGalleryImages.map((image, index) => (
+          <figure class="rounded-lg shadow-lg overflow-hidden bg-white hover:shadow-xl transition-shadow" data-index={index}>
+            <img 
+              src={image.src}
+              alt={image.alt}
+              title={image.title}
+              class="w-full h-64 object-cover"
+              width={image.width}
+              height={image.height}
+              loading="lazy"
+              decoding="async"
+            />
+            <figcaption class="sr-only">{image.caption}</figcaption>
+          </figure>
+        ))}
       </div>
     </div>
   </div>
 </section>
+
+<script type="application/ld+json">
+  {JSON.stringify(aboutImageSchemas, null, 2)}
+</script>

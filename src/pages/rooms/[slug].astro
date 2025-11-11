@@ -1,0 +1,609 @@
+<!-- // src/pages/rooms/[slug].astro -->
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import FloatingWhatsApp from '../../components/FloatingWhatsApp.astro';
+import { generateBreadcrumbSchema } from '../../lib/schemas/breadcrumb';
+
+const roomsConfig = {
+  '2-bed-ac': {
+    title: '2 Bed AC Room - Janaki Mahal Trust Ayodhya | Official Booking',
+    heading: '2 Bed AC Room - Official Janaki Mahal Trust Booking',
+    metaDescription:
+      'Book the 2 bed AC room at Sri Janaki Mahal Trust (also known as Sri Janki Mahal Trust Ayodhya). Perfect for couples or small families. Official helpline: +91 7250364323.',
+    priceRange: '₹1,750 - ₹2,100 per night (all meals included)',
+    schemaPrice: '1750',
+    roomSize: '220 sq. ft.',
+    occupancy: 'Up to 2 adults + 1 child',
+    bedType: 'Two single beds with premium mattresses',
+    keywords: [
+      '2 bed ac room janaki mahal trust',
+      'sri janki mahal 2 bed ac room',
+      'janaki mahal trust ac room booking',
+      'shri janki mahal trust ac rooms',
+      'official 2 bed ac room janaki mahal'
+    ],
+    images: [
+      {
+        src: '/rooms/2-Bed-01.jpg',
+        alt: '2 bed AC room at Sri Janaki Mahal Trust Ayodhya',
+        caption: 'Cool and comfortable 2 bed AC room with attached bathroom',
+        title: '2 Bed AC Room - Sri Janaki Mahal Trust',
+        width: '1200',
+        height: '800'
+      },
+      {
+        src: '/ayodhya-2-bed-room-ac.jpg',
+        alt: 'Janaki Mahal Trust 2 bed AC room with seating area',
+        caption: 'Spacious seating zone for devotees staying near Ram Mandir',
+        title: '2 Bed AC Room Seating - Janaki Mahal Trust',
+        width: '1200',
+        height: '800'
+      }
+    ],
+    highlights: [
+      'Air-conditioned comfort with silent climate control',
+      'All meals (Breakfast, Lunch, Dinner) included in tariff',
+      'Dedicated wardrobe and work desk for pilgrims',
+      '24/7 hot water and devotional ambience',
+      'Daily housekeeping with sanitized linens'
+    ],
+    icon: '❄️',
+    schemaAlternateNames: [
+      'Janaki Mahal Trust 2 Bed AC Room',
+      'Sri Janki Mahal 2 Bed AC Accommodation',
+      'Shri Janki Mahal Trust Double Room'
+    ]
+  },
+  '2-bed-non-ac': {
+    title: '2 Bed Non-AC Room - Janaki Mahal Trust Official Booking',
+    heading: '2 Bed Non-AC Room - Verified Janaki Mahal Trust Stay',
+    metaDescription:
+      'Affordable 2 bed non-AC room at Sri Janaki Mahal Trust Ayodhya. Official booking helpline +91 7250364323. Peaceful stay near Ram Mandir.',
+    priceRange: '₹1,250 - ₹1,550 per night (all meals included)',
+    schemaPrice: '1250',
+    roomSize: '210 sq. ft.',
+    occupancy: 'Up to 2 adults',
+    bedType: 'Two single beds with cotton bedding',
+    keywords: [
+      '2 bed non ac room janaki mahal trust',
+      'sri janki mahal non ac room booking',
+      'janaki mahal trust budget rooms',
+      'shri janki mahal trust non ac stay',
+      'official 2 bed non ac janaki mahal'
+    ],
+    images: [
+      {
+        src: '/rooms/2-Bed-02.jpg',
+        alt: '2 bed non AC room at Sri Janaki Mahal Trust',
+        caption: 'Bright 2 bed non-AC room with natural ventilation',
+        title: '2 Bed Non-AC Room - Janaki Mahal Trust',
+        width: '1200',
+        height: '800'
+      },
+      {
+        src: '/ayodhya-2-bed-room-non-ac.jpg',
+        alt: 'Janaki Mahal Trust budget friendly non AC room',
+        caption: 'Economical room option with devotional design',
+        title: 'Budget Non-AC Room - Sri Janki Mahal Trust',
+        width: '1200',
+        height: '800'
+      }
+    ],
+    highlights: [
+      'Naturally cool rooms with cross ventilation',
+      'Complimentary vegetarian meals (three times a day)',
+      'Ideal for budget-conscious pilgrims',
+      'Attached bathroom with round-the-clock water',
+      'Peaceful surroundings for sadhana and rest'
+    ],
+    icon: '🌿',
+    schemaAlternateNames: [
+      'Janaki Mahal Trust 2 Bed Non-AC Room',
+      'Sri Janki Mahal Trust Budget Double Room',
+      'Shri Janki Mahal Non AC Accommodation'
+    ]
+  },
+  '3-bed-ac': {
+    title: '3 Bed AC Room - Sri Janki Mahal Trust Official Booking',
+    heading: '3 Bed AC Room - Family Friendly Janaki Mahal Trust Stay',
+    metaDescription:
+      'Spacious 3 bed AC room at Sri Janaki Mahal Trust Ayodhya. Perfect for families. Book officially via +91 7250364323 and stay near Ram Mandir.',
+    priceRange: '₹2,550 - ₹3,000 per night (all meals included)',
+    schemaPrice: '2550',
+    roomSize: '280 sq. ft.',
+    occupancy: 'Up to 3 adults + 1 child',
+    bedType: 'Three single beds with premium mattress and linens',
+    keywords: [
+      '3 bed ac room janaki mahal trust',
+      'sri janki mahal family ac room',
+      'janaki mahal trust triple sharing ac',
+      'shri janki mahal trust family booking',
+      'official 3 bed ac room sri janki mahal'
+    ],
+    images: [
+      {
+        src: '/rooms/3-Bed-01.jpg',
+        alt: 'Family 3 bed AC room at Sri Janaki Mahal Trust',
+        caption: 'Triple sharing AC room with devotional décor',
+        title: '3 Bed AC Family Room - Sri Janki Mahal Trust',
+        width: '1200',
+        height: '800'
+      },
+      {
+        src: '/ayodhya-3-bed-room-ac.jpg',
+        alt: 'Ayodhya 3 bed AC room near Ram Mandir',
+        caption: 'Ideal for families visiting Ayodhya Ram Mandir',
+        title: 'Ayodhya 3 Bed AC Room - Janaki Mahal Trust',
+        width: '1200',
+        height: '800'
+      }
+    ],
+    highlights: [
+      'Family-sized room with ample storage',
+      'Air conditioning with personalised temperature control',
+      'Complimentary meals and tea service',
+      'Large windows with serene courtyard view',
+      'Dedicated prayer corner within the room'
+    ],
+    icon: '👨‍👩‍👧',
+    schemaAlternateNames: [
+      'Janaki Mahal Trust 3 Bed AC Room',
+      'Sri Janki Mahal Trust Triple AC Accommodation',
+      'Shri Janki Mahal Family AC Room'
+    ]
+  },
+  '3-bed-non-ac': {
+    title: '3 Bed Non-AC Room - Janaki Mahal Trust Family Stay',
+    heading: '3 Bed Non-AC Room - Verified Sri Janki Mahal Trust Booking',
+    metaDescription:
+      'Affordable 3 bed non-AC room for families at Sri Janaki Mahal Trust Ayodhya. Official booking helpline +91 7250364323. All meals included.',
+    priceRange: '₹1,950 - ₹2,350 per night (all meals included)',
+    schemaPrice: '1950',
+    roomSize: '270 sq. ft.',
+    occupancy: 'Up to 3 adults',
+    bedType: 'Three single beds with cotton bedding',
+    keywords: [
+      '3 bed non ac room janaki mahal trust',
+      'sri janki mahal non ac family room',
+      'janaki mahal trust triple non ac',
+      'shri janki mahal trust budget family room',
+      'official 3 bed non ac janaki mahal'
+    ],
+    images: [
+      {
+        src: '/rooms/3-Bed-02.jpg',
+        alt: '3 bed non AC room at Janaki Mahal Trust',
+        caption: 'Large non-AC room with devotional ambience',
+        title: '3 Bed Non-AC Room - Janaki Mahal Trust',
+        width: '1200',
+        height: '800'
+      },
+      {
+        src: '/ayodhya-3-bed-room-non-ac.jpg',
+        alt: 'Budget-friendly 3 bed non AC room near Ram Mandir',
+        caption: 'Comfortable stay with natural ventilation',
+        title: 'Budget 3 Bed Non-AC Room - Sri Janki Mahal Trust',
+        width: '1200',
+        height: '800'
+      }
+    ],
+    highlights: [
+      'Ideal for families seeking economical stays',
+      'Complimentary vegetarian meals (thrice a day)',
+      'Large cupboards and luggage racks',
+      'Attached bathroom with 24/7 water supply',
+      'Serene environment for devotional routines'
+    ],
+    icon: '🌸',
+    schemaAlternateNames: [
+      'Janaki Mahal Trust 3 Bed Non-AC Room',
+      'Sri Janki Mahal Non AC Triple Sharing',
+      'Shri Janki Mahal Trust Family Non AC Room'
+    ]
+  },
+  '4-bed-ac': {
+    title: '4 Bed AC Room - Sri Janaki Mahal Trust Group Booking',
+    heading: '4 Bed AC Room - Official Janaki Mahal Trust Group Stay',
+    metaDescription:
+      'Secure the 4 bed AC room at Sri Janaki Mahal Trust for group stays near Ram Mandir. Verified booking number +91 7250364323.',
+    priceRange: '₹3,100 - ₹3,500 per night (all meals included)',
+    schemaPrice: '3100',
+    roomSize: '340 sq. ft.',
+    occupancy: 'Up to 4 adults + 2 children',
+    bedType: 'Four single beds with orthopaedic mattresses',
+    keywords: [
+      '4 bed ac room janaki mahal trust',
+      'sri janki mahal group ac room',
+      'janaki mahal trust 4 bed ac booking',
+      'shri janki mahal trust ac dorm style',
+      'official 4 bed ac janaki mahal'
+    ],
+    images: [
+      {
+        src: '/rooms/4-Bed-01.jpg',
+        alt: '4 bed AC room at Sri Janaki Mahal Trust',
+        caption: 'Spacious 4 bed AC room ideal for groups',
+        title: '4 Bed AC Group Room - Sri Janaki Mahal Trust',
+        width: '1200',
+        height: '800'
+      },
+      {
+        src: '/ayodhya-4-bed-room-ac-spacious.jpg',
+        alt: 'Group friendly AC room with ample space',
+        caption: 'Comfortable stay for large families and yatri groups',
+        title: 'Group AC Room - Janaki Mahal Trust Ayodhya',
+        width: '1200',
+        height: '800'
+      }
+    ],
+    highlights: [
+      'Perfect for group yatras and joint families',
+      'Separate seating area and devotional corner',
+      'Air conditioning with energy-efficient cooling',
+      'Complimentary meals prepared in trust kitchen',
+      'Dedicated support for group check-ins'
+    ],
+    icon: '👥',
+    schemaAlternateNames: [
+      'Janaki Mahal Trust 4 Bed AC Room',
+      'Sri Janki Mahal Group AC Accommodation',
+      'Shri Janki Mahal Trust Quad Sharing AC Room'
+    ]
+  },
+  '4-bed-non-ac': {
+    title: '4 Bed Non-AC Room - Janaki Mahal Trust Group Stay',
+    heading: '4 Bed Non-AC Room - Verified Group Stay at Sri Janki Mahal Trust',
+    metaDescription:
+      'Group friendly 4 bed non-AC room at Sri Janaki Mahal Trust Ayodhya. Book via official helpline +91 7250364323 with meals included.',
+    priceRange: '₹2,650 - ₹3,050 per night (all meals included)',
+    schemaPrice: '2650',
+    roomSize: '330 sq. ft.',
+    occupancy: 'Up to 4 adults + 1 child',
+    bedType: 'Four single beds with cotton bedding and bolsters',
+    keywords: [
+      '4 bed non ac room janaki mahal trust',
+      'sri janki mahal trust non ac group room',
+      'janaki mahal trust quad non ac',
+      'shri janki mahal trust budget group stay',
+      'official 4 bed non ac janaki mahal'
+    ],
+    images: [
+      {
+        src: '/rooms/4-Bed-02.jpg',
+        alt: '4 bed non AC room at Janaki Mahal Trust',
+        caption: 'Economical quad sharing room for pilgrims',
+        title: '4 Bed Non-AC Room - Sri Janki Mahal Trust',
+        width: '1200',
+        height: '800'
+      },
+      {
+        src: '/ayodhya-4-bed-room-non-ac.jpg',
+        alt: 'Budget quad non AC room near Ram Mandir',
+        caption: 'Spacious non AC option for large families',
+        title: 'Budget 4 Bed Non-AC Room - Janaki Mahal Trust',
+        width: '1200',
+        height: '800'
+      }
+    ],
+    highlights: [
+      'Comfortable group stay with natural ventilation',
+      'Economical tariff with complimentary meals',
+      'Multiple charging points and storage cabinets',
+      'Round-the-clock security and support staff',
+      'Ideal for yatri mandals and bhajan groups'
+    ],
+    icon: '🕉️',
+    schemaAlternateNames: [
+      'Janaki Mahal Trust 4 Bed Non-AC Room',
+      'Sri Janki Mahal Non AC Quad Room',
+      'Shri Janki Mahal Trust Group Non AC Room'
+    ]
+  },
+  'family-suite': {
+    title: 'Family Suite - Sri Janaki Mahal Trust Premium Stay',
+    heading: 'Family Suite - Premium Janaki Mahal Trust Accommodation',
+    metaDescription:
+      'Luxurious family suite at Sri Janaki Mahal Trust Ayodhya with connected rooms, living area, and all meals. Official booking number +91 7250364323.',
+    priceRange: '₹3,650 - ₹4,150 per night (all meals included)',
+    schemaPrice: '3650',
+    roomSize: '420 sq. ft.',
+    occupancy: 'Up to 5 guests',
+    bedType: 'One queen bed + two single beds + optional extra mattress',
+    keywords: [
+      'family suite janaki mahal trust',
+      'sri janki mahal family suite booking',
+      'shri janki mahal trust family suite ayodhya',
+      'janaki mahal trust premium family room',
+      'official family suite janaki mahal'
+    ],
+    images: [
+      {
+        src: '/rooms/Deluxe.jpg',
+        alt: 'Family suite at Sri Janaki Mahal Trust Ayodhya',
+        caption: 'Spacious family suite with separate living area',
+        title: 'Family Suite - Sri Janaki Mahal Trust',
+        width: '1200',
+        height: '800'
+      },
+      {
+        src: '/rooms/Suit-Luxury.jpg',
+        alt: 'Luxury suite seating area at Janaki Mahal Trust',
+        caption: 'Premium interiors designed for comfort and devotion',
+        title: 'Luxury Suite Interiors - Janaki Mahal Trust',
+        width: '1200',
+        height: '800'
+      }
+    ],
+    highlights: [
+      'Two interconnected rooms with private seating lounge',
+      'Air conditioning, premium furnishings, and smart storage',
+      'Personalised meal service with sattvik menu',
+      'Dedicated concierge support for yatras and temple visits',
+      'Ideal for extended family stays and special occasions'
+    ],
+    icon: '🏡',
+    schemaAlternateNames: [
+      'Janaki Mahal Trust Family Suite',
+      'Sri Janki Mahal Trust Family Accommodation',
+      'Shri Janki Mahal Premium Family Suite'
+    ]
+  },
+  'deluxe-room': {
+    title: 'Deluxe Room - Verified Sri Janki Mahal Trust Stay',
+    heading: 'Deluxe Room - Official Janaki Mahal Trust Premium Room',
+    metaDescription:
+      'Deluxe room at Sri Janaki Mahal Trust Ayodhya with premium amenities near Ram Mandir. Book via official helpline +91 7250364323.',
+    priceRange: '₹3,200 - ₹3,800 per night (all meals included)',
+    schemaPrice: '3200',
+    roomSize: '360 sq. ft.',
+    occupancy: 'Up to 3 guests',
+    bedType: 'One queen bed + lounge seating',
+    keywords: [
+      'deluxe room janaki mahal trust',
+      'sri janki mahal deluxe booking',
+      'shri janki mahal trust deluxe room',
+      'official deluxe room janaki mahal',
+      'premium room janaki mahal trust'
+    ],
+    images: [
+      {
+        src: '/ayodhya-deluxe-suite-premium.jpg',
+        alt: 'Deluxe room at Sri Janaki Mahal Trust',
+        caption: 'Premium deluxe room with elegant décor',
+        title: 'Deluxe Room - Sri Janaki Mahal Trust',
+        width: '1200',
+        height: '800'
+      },
+      {
+        src: '/ayodhya-luxury-suite-deluxe.jpg',
+        alt: 'Luxury deluxe suite near Ram Mandir',
+        caption: 'Luxurious stay experience close to sacred Ram Mandir',
+        title: 'Luxury Deluxe Suite - Janaki Mahal Trust',
+        width: '1200',
+        height: '800'
+      }
+    ],
+    highlights: [
+      'Premium furnishing with devotional artwork',
+      'Air conditioning, smart lighting, and plush seating',
+      'All meals prepared in-house with hygienic kitchen',
+      'High-speed Wi-Fi and work-friendly desk',
+      'Prioritised check-in and concierge support'
+    ],
+    icon: '🌟',
+    schemaAlternateNames: [
+      'Janaki Mahal Trust Deluxe Room',
+      'Sri Janki Mahal Premium Room',
+      'Shri Janki Mahal Trust Deluxe Accommodation'
+    ]
+  }
+};
+
+export async function getStaticPaths() {
+  return Object.keys(roomsConfig).map((slug) => ({
+    params: { slug }
+  }));
+}
+
+const { slug } = Astro.params;
+const room = roomsConfig[slug];
+
+if (!room) {
+  throw new Error(`Room slug "${slug}" not found in configuration`);
+}
+
+// Console log ensures debugging visibility for specific room renders
+console.log('[RoomsPage] Rendering room page with slug:', slug);
+
+const breadcrumbs = generateBreadcrumbSchema([
+  { name: 'Home', url: '/' },
+  { name: 'Rooms', url: '/rooms' },
+  { name: room.heading, url: `/rooms/${slug}` }
+]);
+
+const productSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Product',
+  name: room.heading,
+  alternateName: room.schemaAlternateNames,
+  image: room.images.map((image) => `https://srijanakimahaltrust.in${image.src}`),
+  description: room.metaDescription,
+  brand: {
+    '@type': 'Brand',
+    name: 'Sri Janaki Mahal Trust'
+  },
+  sku: `SJM-${slug.toUpperCase().replace(/-/g, '_')}`,
+  category: 'Lodging',
+  areaServed: 'Ayodhya, Uttar Pradesh',
+  url: `https://srijanakimahaltrust.in/rooms/${slug}`,
+  depth: '1',
+  offers: {
+    '@type': 'Offer',
+    priceCurrency: 'INR',
+    price: room.schemaPrice,
+    availability: 'https://schema.org/InStock',
+    url: `https://srijanakimahaltrust.in/rooms/${slug}`,
+    seller: {
+      '@type': 'Organization',
+      name: 'Sri Janaki Mahal Trust',
+      telephone: '+91-7250364323'
+    }
+  }
+};
+
+const imageObjects = room.images.map((image) => ({
+  '@context': 'https://schema.org',
+  '@type': 'ImageObject',
+  contentUrl: `https://srijanakimahaltrust.in${image.src}`,
+  caption: image.caption,
+  description: image.alt,
+  width: image.width,
+  height: image.height,
+  creator: {
+    '@type': 'Organization',
+    name: 'Sri Janaki Mahal Trust'
+  },
+  copyrightHolder: {
+    '@type': 'Organization',
+    name: 'Sri Janaki Mahal Trust'
+  },
+  acquireLicensePage: 'https://srijanakimahaltrust.in'
+}));
+---
+
+<Layout
+  title={room.title}
+  description={room.metaDescription}
+  keywords={[
+    ...room.keywords,
+    'janaki mahal trust ayodhya rooms',
+    'sri janki mahal official booking',
+    'shri janki mahal trust rooms',
+    'janaki mahal trust official contact number'
+  ]}
+  canonical={`/rooms/${slug}`}
+  ogImage={room.images[0]?.src ?? '/og.jpg'}
+>
+  <Header />
+  <main class="bg-[#faf8f3] py-12 px-4 md:px-12 lg:px-24">
+    <div class="mx-auto flex max-w-6xl flex-col gap-12">
+      <!-- Hero section communicates room type and conversion CTAs -->
+      <section class="rounded-3xl bg-white p-8 shadow-lg">
+        <div class="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
+          <div class="space-y-4">
+            <p class="text-sm font-semibold uppercase tracking-[0.3em] text-[#6b4c2d]">Official Sri Janki Mahal Trust Room</p>
+            <h1 class="text-4xl font-bold text-[#2d2215] md:text-5xl">
+              {room.heading}
+            </h1>
+            <p class="text-lg leading-relaxed text-[#3d2f1c]">
+              {room.metaDescription}
+            </p>
+            <p class="text-base font-semibold text-[#b45309]">{room.priceRange}</p>
+            <div class="grid gap-2 text-sm text-[#6b4c2d] md:grid-cols-2">
+              <span>Room Size: {room.roomSize}</span>
+              <span>Occupancy: {room.occupancy}</span>
+              <span>Bed Type: {room.bedType}</span>
+              <span>Meals: Breakfast, Lunch, Dinner included</span>
+            </div>
+          </div>
+          <div class="rounded-3xl bg-[#fef4e4] p-6 text-center shadow-md">
+            <p class="text-sm uppercase tracking-[0.2em] text-[#b45309]">Book With Confidence</p>
+            <p class="mt-3 text-4xl font-extrabold text-[#2d2215]">{room.icon}</p>
+            <div class="mt-4 flex flex-col gap-3">
+              <a
+                class="rounded-xl bg-[#2d2215] px-6 py-3 text-base font-semibold uppercase tracking-wide text-white transition hover:bg-[#b45309]"
+                href="tel:+917250364323"
+              >
+                Call {displayPhone}
+              </a>
+              <a
+                class="rounded-xl border border-[#2d2215] px-6 py-3 text-base font-semibold uppercase tracking-wide text-[#2d2215] transition hover:bg-[#f4ecdf]"
+                href={`https://wa.me/${officialPhone}`}
+              >
+                WhatsApp Official Desk
+              </a>
+            </div>
+            <p class="mt-3 text-xs text-[#6b4c2d]">
+              Flow Chart: Pick room → Contact official helpline → Receive trust-stamped confirmation → Experience peaceful stay.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Image gallery with semantic figure/figcaption -->
+      <section class="rounded-3xl bg-white p-8 shadow-md">
+        <h2 class="text-3xl font-semibold text-[#2d2215]">Room Gallery</h2>
+        <div class="mt-6 grid gap-6 md:grid-cols-2">
+          {room.images.map((image) => (
+            <figure class="overflow-hidden rounded-2xl border border-[#f2dfc7] shadow-sm">
+              <img
+                src={image.src}
+                alt={image.alt}
+                width={image.width}
+                height={image.height}
+                title={image.title}
+                class="h-full w-full object-cover transition duration-500 hover:scale-105"
+              />
+              <figcaption class="bg-[#fef6ea] p-4 text-sm text-[#3d2f1c]">
+                {image.caption}
+              </figcaption>
+            </figure>
+          ))}
+        </div>
+      </section>
+
+      <!-- Highlights section summarises amenities -->
+      <section class="rounded-3xl bg-[#fef4e4] p-8 shadow-inner">
+        <h2 class="text-3xl font-semibold text-[#2d2215]">Why Guests Love This Room</h2>
+        <ul class="mt-6 grid gap-4 text-base text-[#3d2f1c] md:grid-cols-2">
+          {room.highlights.map((highlight) => (
+            <li class="rounded-2xl bg-white p-4 shadow-sm">✓ {highlight}</li>
+          ))}
+        </ul>
+      </section>
+
+      <!-- Booking assurance -->
+      <section class="rounded-3xl bg-white p-8 shadow-md">
+        <h2 class="text-3xl font-semibold text-[#2d2215]">Official Booking Assurance</h2>
+        <div class="mt-6 grid gap-6 md:grid-cols-3">
+          <div class="rounded-2xl border border-[#f2dfc7] bg-[#faf0df] p-4 text-[#3d2f1c]">
+            <h3 class="text-xl font-semibold text-[#2d2215]">Verified Contact</h3>
+            <p class="mt-2 text-sm">
+              Always dial <strong>{displayPhone}</strong>. We do not operate through any alternate numbers or unofficial agents.
+            </p>
+          </div>
+          <div class="rounded-2xl border border-[#f2dfc7] bg-[#faf0df] p-4 text-[#3d2f1c]">
+            <h3 class="text-xl font-semibold text-[#2d2215]">Trust-Stamped Confirmation</h3>
+            <p class="mt-2 text-sm">
+              Receive confirmation with booking ID, guest details, and meal plan. Keep it handy for check-in at Sri Janaki Mahal Trust.
+            </p>
+          </div>
+          <div class="rounded-2xl border border-[#f2dfc7] bg-[#faf0df] p-4 text-[#3d2f1c]">
+            <h3 class="text-xl font-semibold text-[#2d2215]">Secure Payments</h3>
+            <p class="mt-2 text-sm">
+              Payments happen only after confirmation and through links shared on the official number or trust email.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  {breadcrumbs && (
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbs)} />
+  )}
+
+  <script type="application/ld+json">
+    {JSON.stringify(productSchema)}
+  </script>
+
+  {imageObjects.map((imageSchema) => (
+    <script type="application/ld+json" set:html={JSON.stringify(imageSchema)} />
+  ))}
+
+  <Footer />
+  <FloatingWhatsApp />
+</Layout>
+

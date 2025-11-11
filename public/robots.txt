@@ -10,8 +10,9 @@ Allow: /terms-of-service
 Allow: /cancellation-refund
 Allow: /about
 
-# Sitemap
+# Sitemaps
 Sitemap: https://srijanakimahaltrust.in/sitemap-index.xml
+Sitemap: https://srijanakimahaltrust.in/image-sitemap.xml
 
 # Crawl delay (optional)
 Crawl-delay: 1

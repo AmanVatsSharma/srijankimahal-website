@@ -1,0 +1,271 @@
+<!-- // src/pages/contact-number.astro -->
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import FloatingWhatsApp from '../components/FloatingWhatsApp.astro';
+
+// Logs page rendering to assist future debugging and SEO flow validation
+console.log('[ContactNumberPage] Rendering official contact number landing page with schema enhancements');
+
+const officialPhone = '+917250364323';
+const displayPhone = '+91 7250364323';
+
+/**
+ * Contact schema supplies structured data for Google about verified phone number
+ */
+const contactStructuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'ContactPage',
+  '@id': 'https://srijanakimahaltrust.in/contact-number',
+  name: 'Janaki Mahal Trust Official Contact Number',
+  description:
+    'Official contact number for Sri Janaki Mahal Trust (also known as Janaki Mahal Trust, Sri Janki Mahal Trust Ayodhya, Shri Janki Mahal Trust). Call or WhatsApp for authentic bookings.',
+  url: 'https://srijanakimahaltrust.in/contact-number',
+  mainEntity: {
+    '@type': 'Organization',
+    name: 'Sri Janaki Mahal Trust',
+    alternateName: [
+      'Janaki Mahal Trust',
+      'Sri Janki Mahal Trust',
+      'Shri Janki Mahal Trust',
+      'Janki Mahal Trust Ayodhya',
+      'Shri Janaki Mahal Trust',
+      'Janaki Mahal',
+      'Sri Janki Mahal'
+    ],
+    contactPoint: [
+      {
+        '@type': 'ContactPoint',
+        telephone: displayPhone,
+        contactType: 'booking',
+        areaServed: 'IN',
+        availableLanguage: ['English', 'Hindi'],
+        url: 'https://srijanakimahaltrust.in/contact-number',
+        productSupported: 'Room Booking',
+        hoursAvailable: 'Mo-Su 00:00-23:59'
+      }
+    ]
+  }
+};
+
+/**
+ * FAQ schema answers common queries on contact authenticity for rich results
+ */
+const faqStructuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What is the official contact number of Janaki Mahal Trust?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text:
+          'The official contact number for Sri Janaki Mahal Trust is +91 7250364323. Use this number for verified bookings and assistance.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'Is the Sri Janki Mahal Trust WhatsApp number the same as the phone number?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text:
+          'Yes, the WhatsApp number for Sri Janki Mahal Trust is the same as the official phone number: +91 7250364323. You can call or message anytime.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'How do I verify I am speaking with the authentic Janaki Mahal Trust team?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text:
+          'Always confirm that the conversation happens via +91 7250364323 and request the official booking confirmation with the trust seal. We never request payments to personal accounts.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'Can I book Sri Janki Mahal Trust rooms through any other number?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text:
+          'No. To avoid scams, only trust +91 7250364323 for Janaki Mahal Trust official booking. We do not operate any alternate contact numbers.'
+      }
+    }
+  ]
+};
+---
+
+<Layout 
+  title="Janaki Mahal Trust Official Contact Number | Sri Janki Mahal Trust Ayodhya"
+  description="Verified official contact number for Sri Janaki Mahal Trust (also called Janaki Mahal Trust or Shri Janki Mahal Trust Ayodhya). Call or WhatsApp +91 7250364323 for authentic bookings near Ram Mandir."
+  keywords={[
+    'janaki mahal official contact number',
+    'janaki mahal trust contact number',
+    'sri janki mahal trust ayodhya number',
+    'shri janki mahal trust contact',
+    'janaki mahal trust official booking',
+    'sri janki mahal official booking',
+    'official janaki mahal trust helpline',
+    'janaki mahal trust phone',
+    'janaki mahal ayodhya contact',
+    'janaki mahal trust whatsapp number'
+  ]}
+  canonical="/contact-number"
+  ogImage="/og.jpg"
+>
+  <Header />
+  <main class="bg-[#faf8f3] py-12 px-4 md:px-12 lg:px-24">
+    <div class="mx-auto flex max-w-6xl flex-col gap-12">
+      <!-- Hero contact block emphasises authenticity and includes primary CTA -->
+      <section class="rounded-3xl bg-gradient-to-r from-[#f4ecdf] to-[#f9e4c8] p-8 shadow-lg">
+        <div class="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+          <div class="space-y-4">
+            <p class="text-sm font-semibold uppercase tracking-[0.3em] text-[#6b4c2d]">Verified Trust Helpline</p>
+            <h1 class="text-4xl font-bold text-[#2d2215] md:text-5xl">
+              Janaki Mahal Trust Official Contact Number
+            </h1>
+            <p class="text-lg leading-relaxed text-[#3d2f1c]">
+              Connect directly with the authentic Sri Janaki Mahal Trust (also known as Sri Janki Mahal Trust Ayodhya
+              and Shri Janki Mahal Trust). Book your stay near Ram Mandir with the verified team and get instant confirmation.
+            </p>
+          </div>
+          <div class="rounded-2xl bg-white p-6 text-center shadow-md">
+            <p class="text-sm uppercase tracking-[0.2em] text-[#b45309]">Call Or WhatsApp Now</p>
+            <a
+              class="mt-3 block text-3xl font-extrabold text-[#2d2215] hover:text-[#b45309]"
+              href={`tel:${officialPhone}`}
+            >
+              {displayPhone}
+            </a>
+            <div class="mt-4 flex flex-col gap-3">
+              <a
+                class="rounded-xl bg-[#b45309] px-6 py-3 text-base font-semibold text-white transition hover:bg-[#9a3f00]"
+                href={`tel:${officialPhone}`}
+              >
+                Call Official Helpline
+              </a>
+              <a
+                class="rounded-xl border border-[#b45309] px-6 py-3 text-base font-semibold text-[#b45309] transition hover:bg-[#fce9d5]"
+                href={`https://wa.me/${officialPhone}`}
+              >
+                WhatsApp Verified Team
+              </a>
+            </div>
+          </div>
+        </div>
+        <p class="mt-6 text-sm text-[#6b4c2d]">
+          Flow Chart: Search for Janaki Mahal contact → Dial the verified number → Share travel dates → Receive trust-sealed confirmation.
+        </p>
+      </section>
+
+      <!-- Alternate names and variations reassure visitors and improve keyword coverage -->
+      <section class="rounded-3xl bg-white p-8 shadow-md">
+        <h2 class="text-3xl font-semibold text-[#2d2215]">All Official Name Variations</h2>
+        <p class="mt-4 text-base leading-relaxed text-[#3d2f1c]">
+          Devotees know our property by multiple spellings. Whether you search <strong>Janaki Mahal Trust</strong>,
+          <strong>Sri Janki Mahal Trust Ayodhya</strong>, <strong>Shri Janki Mahal Trust</strong>,
+          or simply <strong>Janaki Mahal</strong>, you are reaching the same registered trust dedicated to providing
+          peaceful accommodation near the sacred Ram Mandir.
+        </p>
+        <div class="mt-6 grid gap-4 md:grid-cols-2">
+          <div class="rounded-2xl bg-[#faf0df] p-6">
+            <h3 class="text-2xl font-semibold text-[#2d2215]">Primary Searches We Support</h3>
+            <ul class="mt-3 space-y-2 text-base text-[#3d2f1c]">
+              <li>janaki mahal official contact number</li>
+              <li>sri janki mahal trust ayodhya contact</li>
+              <li>shri janki mahal trust helpline</li>
+              <li>janaki mahal trust booking phone</li>
+              <li>official janaki mahal trust number</li>
+            </ul>
+          </div>
+          <div class="rounded-2xl bg-[#faf0df] p-6">
+            <h3 class="text-2xl font-semibold text-[#2d2215]">Quick Response Promise</h3>
+            <p class="mt-3 text-base text-[#3d2f1c]">
+              Our team responds within minutes between 5 AM and 11 PM IST and monitors urgent calls 24/7.
+              Every conversation includes booking verification, payment guidance, and travel assistance.
+            </p>
+            <p class="mt-3 text-sm italic text-[#6b4c2d]">
+              Flow Chart: Incoming call → Booking enquiry captured → Room availability shared → Confirmation message sent.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ answers remove doubts and align with structured FAQ schema -->
+      <section class="rounded-3xl bg-[#fdf7ed] p-8 shadow-inner">
+        <h2 class="text-3xl font-semibold text-[#2d2215]">Official Contact FAQs</h2>
+        <div class="mt-6 space-y-4">
+          <details class="rounded-xl border border-[#e7d9c8] bg-white p-4">
+            <summary class="cursor-pointer text-lg font-semibold text-[#2d2215]">
+              What is the official Janaki Mahal Trust contact number?
+            </summary>
+            <p class="mt-3 text-base text-[#3d2f1c]">
+              Always call <strong>{displayPhone}</strong> for authentic bookings. This is the only helpline managed by the trust administration.
+            </p>
+          </details>
+          <details class="rounded-xl border border-[#e7d9c8] bg-white p-4">
+            <summary class="cursor-pointer text-lg font-semibold text-[#2d2215]">
+              Can I WhatsApp the Sri Janki Mahal Trust team?
+            </summary>
+            <p class="mt-3 text-base text-[#3d2f1c]">
+              Yes, the same number <strong>{displayPhone}</strong> is active on WhatsApp. Share your dates and guest details to receive a trust-sealed confirmation.
+            </p>
+          </details>
+          <details class="rounded-xl border border-[#e7d9c8] bg-white p4">
+            <summary class="cursor-pointer text-lg font-semibold text-[#2d2215]">
+              How do I avoid fake booking agents?
+            </summary>
+            <p class="mt-3 text-base text-[#3d2f1c]">
+              Only trust payment instructions sent from official email or WhatsApp linked to <strong>{displayPhone}</strong>. 
+              We never request payments to personal accounts or through unknown phone numbers.
+            </p>
+          </details>
+          <details class="rounded-xl border border-[#e7d9c8] bg-white p-4">
+            <summary class="cursor-pointer text-lg font-semibold text-[#2d2215]">
+              Is there a direct booking link in addition to the phone number?
+            </summary>
+            <p class="mt-3 text-base text-[#3d2f1c]">
+              Yes, call or message the helpline to receive the official booking link with pre-filled guest details for faster confirmation.
+            </p>
+          </details>
+        </div>
+      </section>
+
+      <!-- Secondary CTAs ensure multiple conversion points -->
+      <section class="grid gap-6 md:grid-cols-2">
+        <div class="rounded-3xl border border-[#f1dac0] bg-white p-6 shadow-sm">
+          <h3 class="text-2xl font-semibold text-[#2d2215]">Direct Call Support</h3>
+          <p class="mt-3 text-base text-[#3d2f1c]">
+            Speak with the trust manager for room availability, special requests, and group bookings.
+          </p>
+          <a
+            class="mt-4 inline-flex items-center justify-center rounded-xl bg-[#2d2215] px-5 py-3 text-sm font-semibold uppercase tracking-wide text-white transition hover:bg-[#b45309]"
+            href={`tel:${officialPhone}`}
+          >
+            Call {displayPhone}
+          </a>
+        </div>
+        <div class="rounded-3xl border border-[#f1dac0] bg-white p-6 shadow-sm">
+          <h3 class="text-2xl font-semibold text-[#2d2215]">WhatsApp Booking Desk</h3>
+          <p class="mt-3 text-base text-[#3d2f1c]">
+            Share your travel dates, number of guests, and room preference on WhatsApp for instant confirmation updates.
+          </p>
+          <a
+            class="mt-4 inline-flex items-center justify-center rounded-xl border border-[#2d2215] px-5 py-3 text-sm font-semibold uppercase tracking-wide text-[#2d2215] transition hover:bg-[#f4ecdf]"
+            href={`https://wa.me/${officialPhone}`}
+          >
+            Message on WhatsApp
+          </a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script type="application/ld+json">
+    {JSON.stringify([contactStructuredData, faqStructuredData], null, 2)}
+  </script>
+  <Footer />
+  <FloatingWhatsApp />
+</Layout>
+

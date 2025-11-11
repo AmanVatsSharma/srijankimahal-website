@@ -12,16 +12,26 @@ import FloatingWhatsApp from '../components/FloatingWhatsApp.astro';
 import AmenitiesSection from '../components/AmenitiesSection.astro';
 import GallerySection from '../components/GallerySection.astro';
 import FAQSection from '../components/FAQSection.astro';
+
+// Console log helps trace homepage rendering and ensures SEO tracking visibility
+console.log('[HomePage] Rendering homepage with expanded keyword coverage and alternate spellings awareness');
 ---
 
 <Layout 
-  title="Sri Janaki Mahal Trust - Best Hotel in Ayodhya | Online Room Booking | Near Ram Mandir"
-  description="Sri Janaki Mahal Trust - Book comfortable hotel rooms in Ayodhya near Ram Mandir. Best hotel stay with all meals included. Call +91 7250364323 for booking. Official online room booking available."
+  title="Sri Janaki Mahal Trust - Janaki Mahal Trust Ayodhya | Official Booking & Contact"
+  description="Sri Janaki Mahal Trust (also known as Janaki Mahal Trust, Sri Janki Mahal, Shri Janki Mahal Trust Ayodhya) - Book verified rooms near Ram Mandir. Call +91 7250364323 for official contact and authentic bookings."
   keywords={[
     'Sri Janaki Mahal Trust',
     'Sri Janaki Mahal Trust room booking',
     'Sri Janaki Mahal Trust online booking',
     'Sri Janaki Mahal Trust official',
+    'Janaki Mahal Trust',
+    'janaki mahal trust ayodhya',
+    'sri janki mahal trust ayodhya',
+    'shri janki mahal trust ayodhya',
+    'janaki mahal official contact number',
+    'sri janki mahal official booking',
+    'janaki mahal contact number',
     'book room online Ayodhya',
     'online room booking',
     'Sri Janaki Mahal Trust Ayodhya',
@@ -40,6 +50,47 @@ import FAQSection from '../components/FAQSection.astro';
 >
   <Header />
   <HeroSection />
+  <!-- Known-by-many-names section explains keyword variations for users and search engines -->
+  <section class="bg-[#f4ecdf] py-12 px-4 md:px-12 lg:px-24">
+    <div class="mx-auto max-w-6xl space-y-6 text-[#362a1a]">
+      <h2 class="text-3xl font-semibold tracking-tight">Known by Many Names, One Official Trust</h2>
+      <p class="text-lg leading-relaxed">
+        Guests and pilgrims frequently refer to our verified accommodation as 
+        <strong>Sri Janaki Mahal Trust</strong>, <strong>Janaki Mahal Trust</strong>, 
+        <strong>Sri Janki Mahal Trust Ayodhya</strong>, <strong>Shri Janki Mahal Trust</strong>, 
+        and simply <strong>Janaki Mahal</strong>. All these names point to the same officially registered trust near Ram Mandir.
+      </p>
+      <p class="text-lg leading-relaxed">
+        For authentic reservations, always use the official contact number 
+        <a class="font-semibold text-[#b45309] hover:underline" href="tel:+917250364323">+91 7250364323</a> 
+        or click the verified booking buttons across this website. We ensure legitimate confirmations and protect devotees from fraudulent listings.
+      </p>
+      <div class="grid gap-4 rounded-xl bg-white p-6 shadow-md md:grid-cols-2">
+        <div>
+          <h3 class="text-2xl font-semibold">Search-Friendly Keyword Variations</h3>
+          <ul class="list-disc space-y-2 pl-6 text-base">
+            <li>janaki mahal trust ayodhya</li>
+            <li>sri janki mahal trust ayodhya</li>
+            <li>shri janki mahal trust ayodhya</li>
+            <li>janaki mahal official contact number</li>
+            <li>sri janki mahal official booking</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-2xl font-semibold">Official Booking & Support Flow</h3>
+          <ol class="list-decimal space-y-2 pl-6 text-base">
+            <li>Call or WhatsApp <span class="font-semibold text-[#b45309]">+91 7250364323</span></li>
+            <li>Receive booking confirmation and trust seal</li>
+            <li>Share arrival details for seamless check-in</li>
+            <li>Enjoy peaceful stay with all meals included</li>
+          </ol>
+        </div>
+      </div>
+      <p class="text-base italic text-[#6b4c2d]">
+        Flow Chart: Search spelling variation → Reach official contact → Verified booking confirmation → Peaceful stay near Ram Mandir.
+      </p>
+    </div>
+  </section>
   <AboutJanakiMahal />
   <RoomsSection />
   <AmenitiesSection />

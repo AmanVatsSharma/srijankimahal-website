@@ -1,23 +1,146 @@
 ---
-const leftImages = [
-  "/sri-janaki-mahal/IMG-20251017-WA0022.jpg",
-  "/sri-janaki-mahal/IMG-20251017-WA0028.jpg",
-  "/sri-janaki-mahal/IMG-20251017-WA0034.jpg",
-  "/sri-janaki-mahal/IMG-20251017-WA0035.jpg",
-  "/sri-janaki-mahal/IMG-20251017-WA0029.jpg",
-  "/sri-janaki-mahal/IMG-20251017-WA0031.jpg",
+const galleryGroups = [
+  {
+    direction: 'left',
+    images: [
+      {
+        src: '/sri-janaki-mahal/IMG-20251017-WA0022.jpg',
+        alt: 'Sri Janaki Mahal Trust Ayodhya - Traditional exterior view with golden lighting',
+        caption: 'Sri Janaki Mahal Trust exterior illuminated for evening darshan seekers',
+        title: 'Sri Janaki Mahal Trust Exterior',
+        width: '1200',
+        height: '800',
+      },
+      {
+        src: '/sri-janaki-mahal/IMG-20251017-WA0028.jpg',
+        alt: 'Serene courtyard of Janaki Mahal Trust near Ram Mandir',
+        caption: 'Courtyard seating at Sri Janki Mahal Trust for peaceful meditation',
+        title: 'Janaki Mahal Trust Courtyard',
+        width: '1200',
+        height: '800',
+      },
+      {
+        src: '/sri-janaki-mahal/IMG-20251017-WA0034.jpg',
+        alt: 'Ayodhya hotel corridor with devotional ambience at Sri Janki Mahal Trust',
+        caption: 'Devotional corridor with bhajan ambience inside Sri Janaki Mahal Trust',
+        title: 'Sri Janki Mahal Trust Corridor',
+        width: '1200',
+        height: '800',
+      },
+      {
+        src: '/sri-janaki-mahal/IMG-20251017-WA0035.jpg',
+        alt: 'Guest lounge area inside Sri Janaki Mahal Trust Ayodhya',
+        caption: 'Comfortable lounge for devotees to relax after Ram Mandir darshan',
+        title: 'Trust Lounge Area',
+        width: '1200',
+        height: '800',
+      },
+      {
+        src: '/sri-janaki-mahal/IMG-20251017-WA0029.jpg',
+        alt: 'Prayer-ready guest room at Janaki Mahal Trust',
+        caption: 'Spacious room with prayer corner at Sri Janki Mahal Trust Ayodhya',
+        title: 'Prayer Ready Guest Room',
+        width: '1200',
+        height: '800',
+      },
+      {
+        src: '/sri-janaki-mahal/IMG-20251017-WA0031.jpg',
+        alt: 'Dining hall at Sri Janaki Mahal Trust serving sattvik meals',
+        caption: 'Sattvik dining hall serving complimentary meals for devotees',
+        title: 'Sattvik Dining Hall',
+        width: '1200',
+        height: '800',
+      },
+    ],
+  },
+  {
+    direction: 'right',
+    images: [
+      {
+        src: '/sri-janaki-mahal/IMG-20251017-WA0032.jpg',
+        alt: 'Peaceful meditation space at Shri Janki Mahal Trust Ayodhya',
+        caption: 'Meditation space inside Sri Janaki Mahal Trust near Vasudev Ghat',
+        title: 'Meditation Space',
+        width: '1200',
+        height: '800',
+      },
+      {
+        src: '/sri-janaki-mahal/IMG-20251017-WA0030.jpg',
+        alt: 'Ayodhya lodging near Ram Mandir with spacious interiors',
+        caption: 'Spacious interiors welcoming pilgrims at Sri Janki Mahal Trust',
+        title: 'Spacious Interiors',
+        width: '1200',
+        height: '800',
+      },
+      {
+        src: '/sri-janaki-mahal/IMG-20251017-WA0033.jpg',
+        alt: 'Sri Janaki Mahal Trust reception desk ready for check-in',
+        caption: 'Reception at Janaki Mahal Trust assisting devotees day and night',
+        title: 'Reception Desk',
+        width: '1200',
+        height: '800',
+      },
+      {
+        src: '/sri-janaki-mahal/IMG-20251017-WA0023.jpg',
+        alt: 'Sri Janki Mahal Trust courtyard pathway with greenery',
+        caption: 'Green courtyard pathway leading to rooms at Sri Janaki Mahal Trust',
+        title: 'Courtyard Pathway',
+        width: '1200',
+        height: '800',
+      },
+      {
+        src: '/sri-janaki-mahal/IMG-20251017-WA0027.jpg',
+        alt: 'Devotee friendly lobby at Sri Janaki Mahal Trust Ayodhya',
+        caption: 'Lobby area designed for yatri groups waiting for check-in',
+        title: 'Devotee Lobby',
+        width: '1200',
+        height: '800',
+      },
+      {
+        src: '/sri-janaki-mahal/IMG-20251017-WA0034.jpg',
+        alt: 'Temple style decor inside Sri Janaki Mahal Trust hotel',
+        caption: 'Temple-inspired decor reminding devotees of Ram Mandir inside trust premises',
+        title: 'Temple Style Decor',
+        width: '1200',
+        height: '800',
+      },
+    ],
+  },
 ];
 
-const rightImages = [
-  "/sri-janaki-mahal/IMG-20251017-WA0032.jpg",
-  "/sri-janaki-mahal/IMG-20251017-WA0030.jpg",
-  "/sri-janaki-mahal/IMG-20251017-WA0033.jpg",
-  "/sri-janaki-mahal/IMG-20251017-WA0023.jpg",
-  "/sri-janaki-mahal/IMG-20251017-WA0027.jpg",
-  "/sri-janaki-mahal/IMG-20251017-WA0034.jpg",
-];
+const AUTO_DURATION_SEC = 15;
 
-const AUTO_DURATION_SEC = 15; // user preference
+// Console log supports debugging image coverage and schema generation
+console.log('[GallerySection] Rendering gallery with', galleryGroups.reduce((count, group) => count + group.images.length, 0), 'unique images');
+
+const uniqueImageMap = new Map(
+  galleryGroups
+    .flatMap((group) => group.images)
+    .map((image) => [
+      image.src,
+      {
+        '@context': 'https://schema.org',
+        '@type': 'ImageObject',
+        contentUrl: `https://srijanakimahaltrust.in${image.src}`,
+        caption: image.caption,
+        description: image.alt,
+        name: image.title,
+        creator: {
+          '@type': 'Organization',
+          name: 'Sri Janaki Mahal Trust',
+        },
+        copyrightHolder: {
+          '@type': 'Organization',
+          name: 'Sri Janaki Mahal Trust',
+        },
+        inLanguage: 'en',
+        license: 'https://srijanakimahaltrust.in',
+        acquireLicensePage: 'https://srijanakimahaltrust.in',
+      },
+    ])
+);
+
+const imageSchemas = Array.from(uniqueImageMap.values());
 ---
 
 <section id="gallery" class="py-16 sm:py-24 bg-gray-50">
@@ -31,56 +154,45 @@ const AUTO_DURATION_SEC = 15; // user preference
 
     <!-- Dual-lane gallery: manual scroll + auto-scroll in opposite directions -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-      <!-- Left lane - auto scrolls left -->
-      <div class="relative h-96 rounded-lg">
-        <div class="lane no-scrollbar gallery-scroll overflow-x-auto overflow-y-hidden h-96" data-direction="left" data-duration={AUTO_DURATION_SEC} aria-label="Auto-scrolling gallery lane left">
-          <div class="lane-track flex gap-4" style="will-change: scroll-position;">
-            { [...leftImages, ...leftImages].map((src, i) => {
-              const imageIndex = i % leftImages.length;
-              const altTexts = [
-                "Sri Janaki Mahal Trust Ayodhya - Beautiful hotel exterior with traditional architecture",
-                "Sri Janaki Mahal Trust courtyard - Peaceful meditation space in Ayodhya near Ram Mandir",
-                "Sri Janaki Mahal Trust rooms - Comfortable accommodation in Ayodhya hotel",
-                "Sri Janaki Mahal Trust interior - Clean and calming environment for guests",
-                "Sri Janaki Mahal Trust garden - Serene outdoor space in Ayodhya hotel accommodation",
-                "Sri Janaki Mahal Trust architecture - Traditional design of hotel in Karsewakpuram"
-              ];
-              return (
-                <div class="gallery-item flex-shrink-0 w-80 h-96 rounded-lg overflow-hidden shadow-lg" data-index={i}>
-                  <img src={src} alt={altTexts[imageIndex] || `Sri Janaki Mahal Trust - Hotel in Ayodhya gallery image ${i + 1}`} loading="lazy" decoding="async" sizes="(max-width: 768px) 80vw, 20rem" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300" />
-                </div>
-              );
-            }) }
+      {galleryGroups.map((group, groupIndex) => (
+        <div class="relative h-96 rounded-lg">
+          <div
+            class="lane no-scrollbar gallery-scroll overflow-x-auto overflow-y-hidden h-96"
+            data-direction={group.direction}
+            data-duration={AUTO_DURATION_SEC}
+            aria-label={`Auto-scrolling gallery lane ${group.direction}`}
+          >
+            <div class="lane-track flex gap-4" style="will-change: scroll-position;">
+              { [...group.images, ...group.images].map((image, imageIndex) => (
+                <figure
+                  class="gallery-item flex-shrink-0 w-80 h-96 rounded-lg overflow-hidden shadow-lg bg-white"
+                  data-index={`${groupIndex}-${imageIndex}`}
+                >
+                  <img
+                    src={image.src}
+                    alt={image.alt}
+                    title={image.title}
+                    loading="lazy"
+                    decoding="async"
+                    width={image.width}
+                    height={image.height}
+                    sizes="(max-width: 768px) 80vw, 20rem"
+                    class="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+                  />
+                  <figcaption class="sr-only">{image.caption}</figcaption>
+                </figure>
+              )) }
+            </div>
           </div>
         </div>
-      </div>
-
-      <!-- Right lane - auto scrolls right -->
-      <div class="relative h-96 rounded-lg">
-        <div class="lane no-scrollbar gallery-scroll overflow-x-auto overflow-y-hidden h-96" data-direction="right" data-duration={AUTO_DURATION_SEC} aria-label="Auto-scrolling gallery lane right">
-          <div class="lane-track flex gap-4" style="will-change: scroll-position;">
-            { [...rightImages, ...rightImages].map((src, i) => {
-              const imageIndex = i % rightImages.length;
-              const altTexts = [
-                "Sri Janaki Mahal Trust Ayodhya - Traditional architecture of sacred hotel",
-                "Sri Janaki Mahal Trust facilities - Clean and comfortable rooms near Ram Mandir",
-                "Sri Janaki Mahal Trust peaceful environment - Calm accommodation in Ayodhya",
-                "Sri Janaki Mahal Trust interior design - Beautiful hotel rooms in Karsewakpuram",
-                "Sri Janaki Mahal Trust meditation space - Sacred environment for spiritual journey",
-                "Sri Janaki Mahal Trust courtyard view - Serene garden area in Ayodhya hotel"
-              ];
-              return (
-                <div class="gallery-item flex-shrink-0 w-80 h-96 rounded-lg overflow-hidden shadow-lg" data-index={i}>
-                  <img src={src} alt={altTexts[imageIndex] || `Sri Janaki Mahal Trust - Ayodhya hotel gallery image ${i + 1}`} loading="lazy" decoding="async" sizes="(max-width: 768px) 80vw, 20rem" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300" />
-                </div>
-              );
-            }) }
-          </div>
-        </div>
-      </div>
+      )) }
     </div>
   </div>
 </section>
+
+<script type="application/ld+json">
+  {JSON.stringify(imageSchemas, null, 2)}
+</script>
 
 <script type="module">
   // Seamless loop via scrollLeft with wrap-around.

@@ -5,228 +5,144 @@ import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import { generateBreadcrumbSchema, generateStandardBreadcrumbs } from '../../lib/schemas/breadcrumb';
 
-// Blog posts metadata - must be defined before getStaticPaths
-const blogPostsMetadata = [
-  {
-    slug: 'complete-guide-sri-janaki-mahal-trust-ayodhya',
-    title: 'Complete Guide to Sri Janaki Mahal Trust Ayodhya',
-    description: 'Everything you need to know about booking, staying, and experiencing Sri Janaki Mahal Trust - the best spiritual dharmshala in Ayodhya near Ram Mandir.',
-    date: '2025-01-15',
-    readTime: '8 min read',
-  },
-  {
-    slug: 'best-time-visit-ayodhya-spiritual-journey',
-    title: 'Best Time to Visit Ayodhya for Spiritual Journey',
-    description: 'Discover the best seasons, festivals, and times to visit Ayodhya for your spiritual journey. Plan your stay at Sri Janaki Mahal Trust for the perfect pilgrimage experience.',
-    date: '2025-01-10',
-    readTime: '6 min read',
-  },
-  {
-    slug: 'how-to-reach-sri-janaki-mahal-trust',
-    title: 'How to Reach Sri Janaki Mahal Trust - Complete Travel Guide',
-    description: 'Complete travel guide to reach Sri Janaki Mahal Trust in Ayodhya. Directions by train, bus, air, and road. Location details and nearby landmarks.',
-    date: '2025-01-08',
-    readTime: '7 min read',
-  },
-  {
-    slug: 'what-to-expect-sri-janaki-mahal-dharmshala',
-    title: 'What to Expect at Sri Janaki Mahal Dharmshala - Guest Experience',
-    description: 'Learn what to expect during your stay at Sri Janaki Mahal Trust. Rooms, amenities, meals, spiritual environment, and everything you need to know.',
-    date: '2025-01-05',
-    readTime: '5 min read',
-  },
-  {
-    slug: 'ayodhya-ram-mandir-complete-visitor-guide',
-    title: 'Ayodhya Ram Mandir - Complete Visitor Guide 2025',
-    description: 'Complete guide to visiting Ram Mandir in Ayodhya. Timings, rituals, nearby attractions, and how to plan your stay at Sri Janaki Mahal Trust for easy access.',
-    date: '2025-01-03',
-    readTime: '10 min read',
-  },
-  {
-    slug: 'how-to-book-room-sri-janaki-mahal-trust',
-    title: 'How to Book Room at Sri Janaki Mahal Trust - Complete Guide',
-    description: 'Step-by-step guide on how to book room at Sri Janaki Mahal Trust. Learn about online booking, phone booking, WhatsApp booking, and the complete booking process.',
-    date: '2025-01-20',
-    readTime: '8 min read',
-  },
-  {
-    slug: 'sri-janaki-mahal-trust-official-website-verification',
-    title: 'Sri Janaki Mahal Trust Official Website - Everything You Need to Know',
-    description: 'Complete guide to Sri Janaki Mahal Trust official website. Learn how to verify the official site, avoid scams, and book safely.',
-    date: '2025-01-22',
-    readTime: '7 min read',
-  },
-  {
-    slug: 'sri-janaki-mahal-trust-room-booking-online',
-    title: 'Sri Janaki Mahal Trust Room Booking Online - Step by Step Guide',
-    description: 'Complete guide to booking room at Sri Janaki Mahal Trust online. Step-by-step process, booking methods, and tips for successful online booking.',
-    date: '2025-01-25',
-    readTime: '6 min read',
-  },
-  {
-    slug: 'sri-janaki-mahal-trust-contact-number-address',
-    title: 'Sri Janaki Mahal Trust Contact Number, Address, and Location - Complete Guide',
-    description: 'Complete contact information for Sri Janaki Mahal Trust. Official phone number, WhatsApp, email, address, and location details.',
-    date: '2025-01-27',
-    readTime: '7 min read',
-  },
-  {
-    slug: 'sri-janaki-mahal-trust-room-prices-pricing-guide',
-    title: 'Sri Janaki Mahal Trust Room Prices and Pricing Guide - Complete Breakdown',
-    description: 'Complete pricing guide for Sri Janaki Mahal Trust rooms. All room types, prices, what is included, and transparent pricing information.',
-    date: '2025-01-28',
-    readTime: '8 min read',
-  },
-  {
-    slug: 'how-to-reach-sri-janaki-mahal-trust-from-ayodhya-station',
-    title: 'How to Reach Sri Janaki Mahal Trust from Ayodhya Railway Station - Complete Guide',
-    description: 'Step-by-step guide on how to reach Sri Janaki Mahal Trust from Ayodhya Railway Station. Distance, transportation options, directions, and travel tips.',
-    date: '2025-01-30',
-    readTime: '6 min read',
-  },
-  {
-    slug: 'sri-janaki-mahal-trust-verified-official-authentic',
-    title: 'Is Sri Janaki Mahal Trust Verified, Official, and Authentic? - Complete Verification Guide',
-    description: 'Complete guide on verifying Sri Janaki Mahal Trust authenticity. Learn how to verify official status, registration details, and avoid scams.',
-    date: '2025-02-01',
-    readTime: '7 min read',
-  },
-  {
-    slug: 'sri-janaki-mahal-trust-services-amenities-facilities',
-    title: 'Sri Janaki Mahal Trust Services, Amenities, and Facilities - Complete Guide',
-    description: 'Complete guide to services, amenities, and facilities at Sri Janaki Mahal Trust. All meals included, hot water, 24/7 support, and more.',
-    date: '2025-02-03',
-    readTime: '6 min read',
-  },
-  {
-    slug: 'sri-janaki-mahal-trust-advance-booking-guide',
-    title: 'Sri Janaki Mahal Trust Advance Booking Guide - How to Book in Advance',
-    description: 'Complete guide on advance booking at Sri Janaki Mahal Trust. When to book, how to book in advance, booking tips, and advance booking process.',
-    date: '2025-02-05',
-    readTime: '7 min read',
-  },
-  {
-    slug: 'sri-janaki-mahal-trust-check-in-check-out-timings',
-    title: 'Sri Janaki Mahal Trust Check-in and Check-out Timings - Complete Guide',
-    description: 'Complete guide on check-in and check-out timings at Sri Janaki Mahal Trust. Standard times, early check-in, late check-out, and what to expect.',
-    date: '2025-02-07',
-    readTime: '6 min read',
-  },
-  {
-    slug: 'sri-janaki-mahal-trust-meals-food-guide',
-    title: 'Sri Janaki Mahal Trust Meals and Food Guide - All Meals Included',
-    description: 'Complete guide to meals and food at Sri Janaki Mahal Trust. All meals included, meal timings, vegetarian cuisine, and dining experience.',
-    date: '2025-02-09',
-    readTime: '6 min read',
-  },
-  {
-    slug: 'sri-janaki-mahal-trust-cancellation-refund-policy',
-    title: 'Sri Janaki Mahal Trust Cancellation and Refund Policy - Complete Guide',
-    description: 'Complete guide to cancellation and refund policy at Sri Janaki Mahal Trust. Cancellation terms, refund process, and policy details.',
-    date: '2025-02-10',
-    readTime: '5 min read',
-  },
-  {
-    slug: 'sri-janaki-mahal-trust-ac-non-ac-rooms-difference',
-    title: 'Sri Janaki Mahal Trust AC vs Non-AC Rooms - Difference and Which to Choose',
-    description: 'Complete guide to AC vs Non-AC rooms at Sri Janaki Mahal Trust. Differences, pricing, features, and which room type to choose.',
-    date: '2025-02-12',
-    readTime: '7 min read',
-  },
-  {
-    slug: 'sri-janaki-mahal-trust-best-time-visit-ayodhya',
-    title: 'Best Time to Visit Ayodhya and Sri Janaki Mahal Trust - Seasonal Guide',
-    description: 'Complete guide on best time to visit Ayodhya and Sri Janaki Mahal Trust. Seasonal weather, festivals, peak seasons, and travel tips.',
-    date: '2025-02-14',
-    readTime: '8 min read',
-  },
-];
+function calculateReadTime(content: string | undefined) {
+  const safeContent = content?.trim();
+  if (!safeContent) {
+    return '5 min read';
+  }
 
-// Export getStaticPaths for Astro - must be defined after blogPostsMetadata
+  const words = safeContent.split(/\s+/).filter(Boolean).length;
+  const minutes = Math.max(1, Math.round(words / 200));
+  return `${minutes} min read`;
+}
+
+type MarkdownModule = {
+  frontmatter: {
+    title: string;
+    description: string;
+    date: string;
+    keywords?: string[];
+    readTime?: string;
+  };
+  Content: any;
+  compiledContent?: () => Promise<string>;
+  rawContent?: string | (() => Promise<string>);
+};
+
+type BlogEntry = {
+  slug: string;
+  frontmatter: MarkdownModule['frontmatter'];
+  Content: MarkdownModule['Content'];
+};
+
+// NOTE: generate static paths for every markdown file so no blog link returns 404
 export async function getStaticPaths() {
-  const blogPostsMetadata = [
-    'complete-guide-sri-janaki-mahal-trust-ayodhya',
-    'best-time-visit-ayodhya-spiritual-journey',
-    'how-to-reach-sri-janaki-mahal-trust',
-    'what-to-expect-sri-janaki-mahal-dharmshala',
-    'ayodhya-ram-mandir-complete-visitor-guide',
-    'how-to-book-room-sri-janaki-mahal-trust',
-    'sri-janaki-mahal-trust-official-website-verification',
-    'sri-janaki-mahal-trust-room-booking-online',
-    'sri-janaki-mahal-trust-contact-number-address',
-    'sri-janaki-mahal-trust-room-prices-pricing-guide',
-    'how-to-reach-sri-janaki-mahal-trust-from-ayodhya-station',
-    'sri-janaki-mahal-trust-verified-official-authentic',
-    'sri-janaki-mahal-trust-services-amenities-facilities',
-    'sri-janaki-mahal-trust-advance-booking-guide',
-    'sri-janaki-mahal-trust-check-in-check-out-timings',
-    'sri-janaki-mahal-trust-meals-food-guide',
-    'sri-janaki-mahal-trust-cancellation-refund-policy',
-    'sri-janaki-mahal-trust-ac-non-ac-rooms-difference',
-    'sri-janaki-mahal-trust-best-time-visit-ayodhya',
-  ];
-  console.log('[Blog Slug] Generating static paths for', blogPostsMetadata.length, 'posts');
-  return blogPostsMetadata.map((slug) => ({
+  const calculateReadTime = (content: string | undefined) => {
+    const safeContent = content?.trim();
+    if (!safeContent) {
+      return '5 min read';
+    }
+
+    const words = safeContent.split(/\s+/).filter(Boolean).length;
+    const minutes = Math.max(1, Math.round(words / 200));
+    return `${minutes} min read`;
+  };
+
+  const blogImports = import.meta.glob('../../content/blog/*.md');
+  const entries: BlogEntry[] = await Promise.all(
+    Object.entries(blogImports).map(async ([path, resolver]) => {
+      const mod = (await resolver()) as MarkdownModule;
+      const slug = path.split('/').pop()?.replace('.md', '') ?? '';
+
+      let rawContent = '';
+      if (typeof mod.rawContent === 'string') {
+        rawContent = mod.rawContent;
+      } else if (typeof mod.rawContent === 'function') {
+        rawContent = await mod.rawContent();
+      } else if (typeof mod.compiledContent === 'function') {
+        rawContent = await mod.compiledContent();
+      }
+
+      const readTime = mod.frontmatter.readTime ?? calculateReadTime(rawContent);
+
+      return {
+        slug,
+        frontmatter: {
+          ...mod.frontmatter,
+          readTime,
+        },
+        Content: mod.Content,
+      };
+    })
+  );
+
+  // NOTE: keep posts ordered by date so we can reuse this order for related articles
+  entries.sort((a, b) => {
+    const dateA = new Date(a.frontmatter.date).getTime();
+    const dateB = new Date(b.frontmatter.date).getTime();
+    return dateB - dateA;
+  });
+
+  const allPosts = entries.map(({ slug, frontmatter }) => ({ slug, frontmatter }));
+
+  return entries.map(({ slug, frontmatter, Content }) => ({
     params: { slug },
+    props: {
+      slug,
+      frontmatter,
+      Content,
+      allPosts,
+    },
   }));
 }
 
-// Get slug from params
-const { slug } = Astro.params;
-
-// Find the post metadata
-const postMeta = blogPostsMetadata.find(p => p.slug === slug);
-
-// 404 if post not found
-if (!postMeta) {
-  return Astro.redirect('/404');
-}
-
-// Load markdown content
-let contentModule;
-try {
-  contentModule = await import(`../../content/blog/${slug}.md`);
-} catch (error) {
-  console.error('[Blog Post] Failed to load content:', error);
-  return Astro.redirect('/404');
-}
-
-const post = {
-  ...postMeta,
-  content: contentModule,
+const { slug, frontmatter, Content, allPosts } = Astro.props as {
+  slug: string;
+  frontmatter: MarkdownModule['frontmatter'];
+  Content: MarkdownModule['Content'];
+  allPosts: Array<{ slug: string; frontmatter: MarkdownModule['frontmatter'] }>;
 };
 
-// Generate breadcrumbs
-const breadcrumbs = generateStandardBreadcrumbs('Blog', `/blog`);
+const post = {
+  slug,
+  ...frontmatter,
+};
+
+// NOTE: build keyword list without duplicates and keep them relevant to booking intent
+const baseKeywords = [
+  'Sri Janaki Mahal Trust',
+  'Sri Janaki Mahal Trust room booking',
+  'Sri Janaki Mahal Trust official',
+  'Sri Janaki Mahal Trust online booking',
+  'book room online',
+  'Ayodhya dharmshala',
+  'Ayodhya guest house near Ram Mandir',
+];
+const keywordSet = new Set([...baseKeywords, ...(post.keywords ?? [])]);
+const keywords = Array.from(keywordSet);
+
+// NOTE: derive related posts by excluding the current slug and picking the top 3 most recent
+const relatedPosts = allPosts.filter((entry) => entry.slug !== slug).slice(0, 3);
+
+// NOTE: breadcrumbs stay consistent with the rest of the site
+const breadcrumbs = generateStandardBreadcrumbs('Blog', '/blog');
 breadcrumbs.push({ name: post.title, url: `/blog/${slug}` });
 const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbs);
-
-// Get content component
-const { Content } = post.content;
-
-console.log('[Blog Post] Rendering:', slug);
 ---
 
 <Layout 
   title={`${post.title} | Sri Janaki Mahal Trust Blog`}
   description={post.description}
-  keywords={[
-    'Sri Janaki Mahal Trust',
-    'Sri Janaki Mahal Ayodhya',
-    'Ayodhya dharmshala',
-    'spiritual accommodation',
-    'Ram Mandir',
-    ...(post.content.frontmatter?.keywords || [])
-  ]}
+  keywords={keywords}
   canonical={`/blog/${slug}`}
   ogType="article"
-  ogImage={post.content.frontmatter?.image || '/og.jpg'}
+  ogImage={'/og.jpg'}
 >
   <Header />
   
   <main class="min-h-screen bg-[#faf8f3] py-12">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <!-- Breadcrumbs -->
+      {/* Breadcrumbs */}
       <nav class="mb-6 text-sm" aria-label="Breadcrumb">
         <ol class="flex items-center gap-2 text-gray-600">
           <li><a href="/" class="hover:text-amber-600">Home</a></li>
@@ -237,7 +153,7 @@ console.log('[Blog Post] Rendering:', slug);
         </ol>
       </nav>
 
-      <!-- Article Header -->
+      {/* Article Header */}
       <header class="mb-8">
         <h1 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
           {post.title}
@@ -247,23 +163,23 @@ console.log('[Blog Post] Rendering:', slug);
             {new Date(post.date).toLocaleDateString('en-IN', { year: 'numeric', month: 'long', day: 'numeric' })}
           </time>
           <span>•</span>
-          <span>{post.readTime}</span>
+          <span>{post.readTime ?? '5 min read'}</span>
         </div>
         <p class="text-xl text-gray-700 leading-relaxed">
           {post.description}
         </p>
       </header>
 
-      <!-- Article Content -->
+      {/* Article Content */}
       <article class="bg-white rounded-lg shadow-lg p-8 prose prose-lg max-w-none">
         <Content />
       </article>
 
-      <!-- Call to Action -->
+      {/* Call to Action */}
       <div class="mt-12 bg-gradient-to-r from-amber-600 to-rose-600 rounded-lg p-8 text-center text-white">
         <h2 class="text-2xl font-bold mb-4">Book Your Stay at Sri Janaki Mahal Trust</h2>
         <p class="text-lg mb-6 opacity-90">
-          Experience spiritual accommodation in Ayodhya near Ram Mandir
+          Comfortable rooms near Ram Mandir with meals included. Call or WhatsApp for instant booking.
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
           <a 
@@ -283,31 +199,28 @@ console.log('[Blog Post] Rendering:', slug);
         </div>
       </div>
 
-      <!-- Related Posts -->
+      {/* Related Posts */}
       <div class="mt-12">
         <h2 class="text-2xl font-bold text-gray-900 mb-6">Related Articles</h2>
         <div class="grid md:grid-cols-2 gap-6">
-          {blogPostsMetadata
-            .filter(p => p.slug !== slug)
-            .slice(0, 2)
-            .map((relatedPost) => (
-              <a 
-                href={`/blog/${relatedPost.slug}`}
-                class="block bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"
-              >
-                <h3 class="text-xl font-bold text-gray-900 mb-2 hover:text-amber-600">
-                  {relatedPost.title}
-                </h3>
-                <p class="text-gray-600 text-sm mb-3">{relatedPost.description}</p>
-                <span class="text-amber-600 font-semibold text-sm">Read more →</span>
-              </a>
-            ))}
+          {relatedPosts.map((relatedPost) => (
+            <a 
+              href={`/blog/${relatedPost.slug}`}
+              class="block bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"
+            >
+              <h3 class="text-xl font-bold text-gray-900 mb-2 hover:text-amber-600">
+                {relatedPost.frontmatter.title}
+              </h3>
+              <p class="text-gray-600 text-sm mb-3">{relatedPost.frontmatter.description}</p>
+              <span class="text-amber-600 font-semibold text-sm">Read more →</span>
+            </a>
+          ))}
         </div>
       </div>
     </div>
   </main>
 
-  <!-- Breadcrumb Schema -->
+  {/* Breadcrumb Schema */}
   {breadcrumbSchema && (
     <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
   )}

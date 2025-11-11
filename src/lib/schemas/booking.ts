@@ -157,7 +157,7 @@ export function generateBookActionSchema(
     object: {
       '@type': 'LodgingReservation',
       name: `Room Booking at ${businessName}`,
-      description: `Book your stay at ${businessName} - Best spiritual dharmshala in Ayodhya near Ram Mandir`
+      description: `Book your stay at ${businessName} - Best hotel in Ayodhya near Ram Mandir`
     },
     provider: {
       '@type': 'LodgingBusiness',

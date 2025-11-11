@@ -16,17 +16,17 @@
 // Base site configuration
 const SITE_URL = 'https://srijanakimahaltrust.in';
 const SITE_NAME = 'Sri Janaki Mahal Trust';
-const DEFAULT_TITLE = 'Sri Janaki Mahal - Spiritual Dharmshala in Ayodhya';
-const DEFAULT_DESCRIPTION = 'Sri Janaki Mahal Trust - Best spiritual dharmshala in Ayodhya. Book comfortable rooms near Ram Mandir. All meals included. Call +91 7250364323.';
+const DEFAULT_TITLE = 'Sri Janaki Mahal - Comfortable Hotel in Ayodhya';
+const DEFAULT_DESCRIPTION = 'Sri Janaki Mahal Trust - Best hotel stay in Ayodhya. Book comfortable rooms near Ram Mandir. All meals included. Call +91 7250364323.';
 const DEFAULT_KEYWORDS = [
   'Sri Janaki Mahal Trust',
   'Sri Janaki Mahal',
   'Sri Janaki Mahal Ayodhya',
   'Janaki Mahal Trust',
-  'dharmshala ayodhya',
-  'spiritual accommodation ayodhya',
+  'Ayodhya hotel',
+  'Ayodhya accommodation',
   'rooms near ram mandir',
-  'ayodhya dharmshala booking',
+  'Ayodhya hotel booking',
   'janaki mahal trust ayodhya'
 ];
 const DEFAULT_OG_IMAGE = `${SITE_URL}/og.jpg`;

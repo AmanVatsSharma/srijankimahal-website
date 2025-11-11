@@ -1,0 +1,552 @@
+# Comprehensive SEO Plan: Top Google Rankings for All Keyword Variations
+
+## Overview
+This plan will rank your website #1 on Google for all target keyword variations while preserving existing rankings. We'll add keyword variations, create rich image results, verify Google My Business, and expand content strategically.
+
+## Target Keywords Analysis
+
+**Current Strong Keywords:**
+- Sri Janaki Mahal Trust ✓
+- Sri Janaki Mahal Trust Ayodhya ✓
+- Sri Janaki Mahal room booking ✓
+
+**New Target Keywords to Dominate:**
+1. janaki mahal trust (without "Sri")
+2. sri janki mahal trust ayodhya (alternate spelling with 'i')
+3. janaki mahal trust ayodhya
+4. shri janki mahal trust ayodhya
+5. janaki mahal official contact number
+6. sri janki mahal official booking
+
+---
+
+## Phase 1: Foundation Enhancement (Week 1-2)
+
+### 1.1 Schema Markup Enhancement
+**Goal:** Add alternate names to structured data so Google recognizes all spelling variations
+
+**Actions:**
+- Update Organization schema in `Layout.astro` to include `alternateName` array:
+  - "Janaki Mahal Trust"
+  - "Sri Janki Mahal Trust" 
+  - "Shri Janki Mahal Trust"
+  - "Janki Mahal Trust Ayodhya"
+- Add same alternate names to LocalBusiness schema
+- Add same alternate names to LodgingBusiness schema
+
+**Why:** Google will associate all these variations with your business entity
+
+### 1.2 Image Rich Snippets Implementation
+**Goal:** Make images appear in Google Search results below your listing
+
+**Actions:**
+- Add ImageObject schema to homepage with key images (rooms, exterior, temple)
+- Create Gallery schema on dedicated gallery page with structured markup
+- Add Product/Offer schemas with images for each room type
+- Implement image sitemap (separate XML file listing all important images with captions, titles, and geo-location)
+- Add proper `width`, `height`, and `alt` attributes to all important images
+- Create caption-rich image markup using `<figure>` and `<figcaption>` HTML5 tags
+
+**Why:** Google displays image carousels when proper schema and markup exists
+
+### 1.3 SEO Utility Updates
+**Goal:** Support all keyword variations in meta tags system
+
+**Actions:**
+- Update `src/lib/seo.ts` DEFAULT_KEYWORDS to include all variations
+- Add keyword variation generator function that creates combinations
+- Ensure every page includes primary keyword + all variations
+
+**Why:** Broader keyword coverage without keyword stuffing
+
+---
+
+## Phase 2: Dedicated Landing Pages (Week 2-3)
+
+### 2.1 Contact Number Landing Page
+**Path:** `/contact-number/` or `/official-contact-number/`
+
+**Content Strategy:**
+- H1: "Janaki Mahal Trust Official Contact Number - Direct Booking"
+- Prominently display: +91 7250364323
+- Include all variations: "janaki mahal official contact number", "sri janki mahal contact", etc.
+- Add ClickablePhoneNumber schema
+- Add FAQ schema for contact-related questions
+- Call-to-action buttons for calling and WhatsApp
+
+**Why:** Targets "official contact number" search intent directly
+
+### 2.2 Official Booking Landing Page
+**Path:** `/official-booking/`
+
+**Content Strategy:**
+- H1: "Sri Janki Mahal Official Booking - Janaki Mahal Trust Ayodhya"
+- Focus on "official" and "verified" trust signals
+- Include booking form or prominent booking CTAs
+- Add ReservationAction schema
+- Trust badges, verification marks
+- All spelling variations in content naturally
+
+**Why:** Captures "official booking" search queries
+
+### 2.3 Individual Room Type Pages (8 Pages)
+**Paths:** `/rooms/2-bed-ac/`, `/rooms/2-bed-non-ac/`, etc.
+
+**Content Strategy:**
+- Each room gets its own optimized page
+- Include pricing, images, amenities, booking CTA
+- Add Product schema with offers and images
+- Use keyword variations in titles: "2 Bed AC Room at Janaki Mahal Trust Ayodhya"
+- Gallery section with ImageObject schema for each room
+
+**Why:** Targets long-tail keywords and creates image-rich results
+
+### 2.4 Spelling Variation Pages
+**Paths:** `/janki-mahal/`, `/shri-janki-mahal-trust/`
+
+**Content Strategy:**
+- Create canonical redirect or 301 to main pages, OR
+- Create full content pages that acknowledge alternate spellings
+- Example H1: "Janki Mahal Trust Ayodhya (Also Known as Janaki Mahal)"
+- Natural explanation of why multiple spellings exist
+- Link back to main pages
+
+**Why:** Captures users searching with alternate spellings
+
+---
+
+## Phase 3: Blog Content Expansion (Week 3-6)
+
+### 3.1 Contact Number Focused Posts (5 Posts)
+1. "How to Contact Janaki Mahal Trust - Official Number & WhatsApp"
+2. "Sri Janki Mahal Trust Contact Details - Phone, Email, Address"
+3. "Janaki Mahal Trust Ayodhya Official Helpline Number"
+4. "Verified Contact Number of Shri Janki Mahal Trust"
+5. "Emergency Contact at Janaki Mahal Trust - 24/7 Support"
+
+**Keywords targeted:** All contact number variations
+
+### 3.2 Official Booking Focused Posts (5 Posts)
+1. "How to Book Room at Janaki Mahal Trust - Official Process"
+2. "Sri Janki Mahal Official Booking Guide 2025"
+3. "Janaki Mahal Trust Ayodhya Online Booking Steps"
+4. "Shri Janki Mahal Booking Confirmation Process"
+5. "Avoid Fake Bookings - Official Janaki Mahal Trust Booking Only"
+
+**Keywords targeted:** Official booking + spelling variations
+
+### 3.3 Spelling Variation Educational Posts (3 Posts)
+1. "Janaki vs Janki Mahal - Same Trust, Different Spellings"
+2. "Is it Sri Janaki or Shri Janki Mahal Trust?"
+3. "Complete Name Guide - Janaki Mahal Trust Ayodhya"
+
+**Keywords targeted:** Spelling confusion queries
+
+### 3.4 Location + Keyword Combo Posts (7 Posts)
+1. "Janki Mahal Near Ram Mandir - Distance & Directions"
+2. "How to Reach Janaki Mahal Trust from Ayodhya Junction"
+3. "Janaki Mahal Karsewakpuram Location Guide"
+4. "Sri Janki Mahal Trust Vasudev Gath Address"
+5. "Landmarks Near Janaki Mahal Trust Ayodhya"
+6. "Walking Distance from Ram Mandir to Janki Mahal"
+7. "Auto/Taxi Fare to Janaki Mahal Trust from Station"
+
+**Keywords targeted:** Location + keyword variations
+
+### 3.5 Service + Keyword Combo Posts (5 Posts)
+1. "Janaki Mahal Trust Room Prices 2025 - All Room Types"
+2. "Sri Janki Mahal Meals Included - Food Menu Guide"
+3. "Janaki Mahal Trust Check-in Process Explained"
+4. "Shri Janki Mahal Amenities & Facilities List"
+5. "Janaki Mahal Trust vs Other Ayodhya Hotels"
+
+**Keywords targeted:** Service queries + keyword variations
+
+### 3.6 Remaining High-Value Posts (5 Posts)
+1. "Janaki Mahal Trust Reviews & Guest Testimonials"
+2. "Why Choose Sri Janki Mahal Trust for Ayodhya Stay"
+3. "Janaki Mahal Trust Festival Season Booking Tips"
+4. "Family Rooms at Janki Mahal Trust Ayodhya"
+5. "Janaki Mahal Trust Payment Options & Advance Booking"
+
+**Total:** 30 new blog posts
+
+---
+
+## Phase 4: Image SEO Implementation (Week 4-5)
+
+### 4.1 Image Sitemap Creation
+**Actions:**
+- Create `/public/image-sitemap.xml`
+- List all important images:
+  - Room images (all 8 room types, 3-4 images each)
+  - Exterior shots (trust building, entrance)
+  - Interior common areas
+  - Location/landmark images
+- For each image include:
+  - `<image:loc>` (full URL)
+  - `<image:caption>` (descriptive with keywords)
+  - `<image:title>` (keyword-rich title)
+  - `<image:geo_location>` (Ayodhya, Uttar Pradesh)
+  - `<image:license>` (your website URL)
+
+**Why:** Helps Google index images properly for image search and rich results
+
+### 4.2 Image Schema Markup
+**Actions:**
+- Add ImageObject schema to all room pages
+- Add ImageGallery schema to gallery page
+- Include in schema:
+  - contentUrl
+  - caption
+  - description
+  - creator (Sri Janaki Mahal Trust)
+  - copyrightHolder
+  - width/height dimensions
+
+**Why:** Rich image results in main search
+
+### 4.3 Structured Image HTML
+**Actions:**
+- Wrap key images in semantic HTML:
+```html
+<figure>
+  <img src="..." alt="2 Bed AC Room at Janaki Mahal Trust Ayodhya" width="800" height="600">
+  <figcaption>Comfortable 2 Bed AC Room at Sri Janki Mahal Trust</figcaption>
+</figure>
+```
+- Add title attributes to images
+- Ensure all alt text includes keyword variations naturally
+
+**Why:** Semantic HTML helps Google understand image context
+
+### 4.4 Open Graph Image Optimization
+**Actions:**
+- Add multiple `og:image` tags (up to 6 images per page)
+- Specify different images for room pages, location pages
+- Add `og:image:width` and `og:image:height`
+- Create dedicated OG images with text overlays for key pages
+
+**Why:** Better social sharing + signals to Google
+
+---
+
+## Phase 5: On-Page Optimization (Week 5-6)
+
+### 5.1 Homepage Enhancement
+**Actions:**
+- Update title tag to include variation: "Sri Janaki Mahal Trust | Janki Mahal Ayodhya | Official Booking"
+- Add keyword variations naturally in:
+  - H1 (already good)
+  - H2 subheadings
+  - First paragraph (add "also known as Janki Mahal")
+  - Footer text
+- Update meta description to include primary variations
+
+**Why:** Homepage ranks for brand terms, need all variations
+
+### 5.2 About Page Enhancement
+**Actions:**
+- Add section: "Known By Many Names" explaining spelling variations
+- Include all variations naturally in content
+- Add structured data for alternate names
+
+**Why:** Establishes entity association for all spellings
+
+### 5.3 Contact Section Enhancement
+**Actions:**
+- Create prominent contact number section on every page
+- Update footer to highlight "Official Contact: +91 7250364323"
+- Add ContactPoint schema with all pages
+- Include text: "For official booking, call..."
+
+**Why:** Signals relevance for "official contact number" queries
+
+### 5.4 Internal Linking Update
+**Actions:**
+- Update all internal links to use keyword-rich anchor text variations
+- Example: "Book at Janki Mahal", "Sri Janaki Mahal rooms", "Janaki Mahal Trust official"
+- Add contextual links from blog posts to landing pages
+- Create "Related Pages" sections with keyword-rich links
+
+**Why:** Distributes ranking power to all keyword variations
+
+---
+
+## Phase 6: Google My Business Optimization (Week 6)
+
+### 6.1 GMB Verification
+**Actions:**
+- Complete verification process (postcard, phone, or email)
+- Upload verification documents if needed
+- Confirm business information
+
+**Why:** Essential for local search visibility
+
+### 6.2 GMB Profile Completion
+**Actions:**
+- Primary name: "Sri Janaki Mahal Trust"
+- Add "Also known as": Janki Mahal, Shri Janki Mahal Trust
+- Categories: 
+  - Lodging (primary)
+  - Hotel
+  - Guest House
+  - Religious Destination
+- Upload minimum 50 high-quality photos:
+  - Exterior (10)
+  - Rooms (30 - all room types)
+  - Common areas (10)
+- Add all room types as "Services"
+- Set accurate hours, location, phone
+- Enable messaging
+- Add booking link to website
+
+**Why:** Appears in local pack, maps, and knowledge panel
+
+### 6.3 GMB Posts Strategy
+**Actions:**
+- Create weekly posts with:
+  - Room availability updates
+  - Special offers
+  - Festival season announcements
+  - Guest testimonials
+- Use keyword variations in post text
+- Include CTA buttons ("Book", "Call")
+
+**Why:** Keeps listing fresh and engaging
+
+### 6.4 GMB Q&A Seeding
+**Actions:**
+- Add 15-20 FAQs in GMB Q&A section
+- Questions targeting your keywords:
+  - "What is the official contact number of Janaki Mahal Trust?"
+  - "How to book room at Sri Janki Mahal Trust?"
+  - "Is this the official Janaki Mahal Trust page?"
+- Provide detailed answers
+
+**Why:** Appears in search, builds trust
+
+---
+
+## Phase 7: Technical SEO Enhancements (Week 7)
+
+### 7.1 Hreflang Implementation
+**Actions:**
+- Create Hindi version pages for key pages (or at least lang tags)
+- Add hreflang tags: `<link rel="alternate" hreflang="hi" href="...">`
+- Helps with "shri janki mahal" searches (Hindi speakers)
+
+**Why:** Hindi speakers may use "Shri Janki" spelling more
+
+### 7.2 FAQ Schema Expansion
+**Actions:**
+- Add 20 more FAQs to FAQ schema specifically about:
+  - Spelling variations
+  - Contact numbers
+  - Official booking process
+- Ensure FAQ schema on all major pages
+
+**Why:** Targets voice search and featured snippets
+
+### 7.3 Breadcrumb Enhancement
+**Actions:**
+- Ensure breadcrumbs use keyword variations
+- Example: Home > Janaki Mahal Rooms > 2 Bed AC
+
+**Why:** Breadcrumb snippets in search results
+
+### 7.4 Robots.txt & Sitemap Updates
+**Actions:**
+- Update sitemap to include all new pages
+- Ensure image sitemap is referenced in robots.txt
+- Add priority tags: homepage (1.0), landing pages (0.9), blog (0.7)
+
+**Why:** Proper indexing priority
+
+---
+
+## Phase 8: Content Optimization (Ongoing)
+
+### 8.1 Existing Blog Posts Update
+**Actions:**
+- Update all 49 existing blog posts to include:
+  - At least one mention of keyword variation ("Janki Mahal")
+  - Updated meta titles with variations
+  - Internal links to new landing pages
+- Don't overwrite existing keywords, just ADD variations
+
+**Why:** Leverage existing content authority
+
+### 8.2 Keyword Density Check
+**Actions:**
+- Ensure 2-3% keyword density for primary terms
+- Natural placement of variations (1-2% each)
+- No keyword stuffing - readability first
+
+**Why:** Balanced optimization
+
+---
+
+## Phase 9: External SEO (Week 8-10)
+
+### 9.1 Google Search Console Monitoring
+**Actions:**
+- Track impressions for all keyword variations
+- Identify which variations are gaining traction
+- Request indexing for all new pages
+- Fix any crawl errors
+
+**Why:** Monitor progress and issues
+
+### 9.2 Business Listings & Citations
+**Actions:**
+- List business on 20+ directories:
+  - JustDial, Sulekha, IndiaMART
+  - TripAdvisor, MakeMyTrip, Booking.com
+  - Local Ayodhya tourism directories
+  - Religious travel sites
+- Use all name variations in listings (primary + alternate names)
+- Ensure NAP consistency
+
+**Why:** Build authority and backlinks
+
+### 9.3 Review Generation
+**Actions:**
+- Request reviews from past guests
+- Focus on Google Reviews (GMB)
+- Encourage mentions of "Janaki Mahal Trust" or "Janki Mahal"
+- Respond to all reviews
+
+**Why:** Reviews influence local rankings
+
+---
+
+## Phase 10: Measurement & Iteration (Ongoing)
+
+### 10.1 Ranking Tracking
+**Track weekly positions for:**
+- janaki mahal trust
+- sri janki mahal trust ayodhya
+- janaki mahal trust ayodhya
+- shri janki mahal trust ayodhya
+- janaki mahal official contact number
+- sri janki mahal official booking
+
+**Tools:** Google Search Console, manual checks
+
+### 10.2 Traffic Analysis
+**Monitor:**
+- Organic traffic growth
+- Keyword variation traffic
+- Image search traffic
+- GMB insights (views, clicks, calls)
+
+### 10.3 Conversion Tracking
+**Track:**
+- Phone calls from search
+- WhatsApp messages
+- Booking form submissions
+- Which keywords drive bookings
+
+---
+
+## Expected Timeline & Results
+
+**Week 1-2:** Foundation updates, schema changes deployed
+**Week 3-4:** Landing pages live, image sitemap submitted
+**Week 5-6:** First 10 blog posts published, GMB verified
+**Week 7-8:** All 30 blog posts live, technical SEO complete
+**Week 9-10:** Citations built, reviews coming in
+**Week 12:** Start seeing ranking improvements
+**Week 16-20:** Top 3 positions for most keywords
+**Week 20-24:** #1 positions for multiple keyword variations
+
+---
+
+## Risk Mitigation
+
+**Preserving Existing Rankings:**
+- Never remove existing keywords
+- Always ADD, never REPLACE
+- Keep existing content structure
+- Monitor rankings weekly
+- If any drop, immediately rollback changes
+
+**Avoiding Penalties:**
+- Natural keyword placement
+- No duplicate content (use canonical tags for variation pages)
+- Quality content only
+- White-hat link building only
+
+---
+
+## Success Metrics
+
+**Month 1:**
+- All 30 blog posts published
+- 8 new landing pages live
+- GMB verified and optimized
+- Image sitemap indexed
+
+**Month 2:**
+- 10+ keyword variations ranking in top 20
+- 5+ keyword variations in top 10
+- 50+ images appearing in image search
+
+**Month 3:**
+- 5+ keyword variations in top 5
+- 2-3 keyword variations at #1
+- 30% increase in organic traffic
+- Images showing in main search results
+
+**Month 6:**
+- All target keywords in top 3
+- Multiple #1 positions
+- Image rich snippets for 80% of searches
+- 100%+ increase in organic traffic
+
+---
+
+## Priority Order (If Time Constrained)
+
+**Must Do First (Highest Impact):**
+1. Schema alternate names (Phase 1.1)
+2. Image sitemap + schema (Phase 4.1, 4.2)
+3. Contact number landing page (Phase 2.1)
+4. Official booking landing page (Phase 2.2)
+5. GMB verification (Phase 6.1)
+6. 10 contact/booking focused blog posts (Phase 3.1, 3.2)
+
+**Do Second:**
+7. Room type pages (Phase 2.3)
+8. Remaining blog posts (Phase 3.3-3.6)
+9. GMB optimization (Phase 6.2-6.4)
+10. Image markup (Phase 4.3-4.4)
+
+**Do Last (Lower Priority):**
+11. Spelling variation pages (Phase 2.4)
+12. External citations (Phase 9.2)
+13. Hreflang (Phase 7.1)
+
+---
+
+## Resource Requirements
+
+**Development Time:**
+- Schema updates: 4-6 hours
+- Landing pages (10 new): 15-20 hours
+- Blog posts (30): 40-50 hours (1.5hr each)
+- Image sitemap + markup: 8-10 hours
+- Technical SEO updates: 6-8 hours
+- GMB setup: 3-4 hours
+**Total:** ~80-100 hours over 8-10 weeks
+
+**Content Creation:**
+- 30 blog posts (800-1500 words each)
+- 10 landing pages (600-1000 words each)
+- FAQ additions (40+ questions)
+- Image captions (100+ images)
+
+---
+
+This plan is comprehensive, actionable, and designed to achieve top rankings for ALL your keyword variations while protecting existing rankings. Each phase builds on the previous one, creating compounding SEO benefits over time.

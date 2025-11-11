@@ -69,7 +69,7 @@ export function generateFAQSchema(faqs: FAQItem[]) {
 export const defaultFAQs: FAQItem[] = [
   {
     question: 'What is Sri Janaki Mahal Trust?',
-    answer: 'Sri Janaki Mahal Trust is a registered charitable trust providing comfortable accommodation (dharmshala) in Ayodhya, Uttar Pradesh. We offer comfortable rooms near Ram Mandir with all meals included, creating a peaceful environment for guests and visitors visiting Ayodhya.',
+    answer: 'Sri Janaki Mahal Trust is a registered charitable trust providing comfortable hotel accommodation in Ayodhya, Uttar Pradesh. We offer comfortable rooms near Ram Mandir with all meals included, creating a peaceful environment for guests and visitors visiting Ayodhya.',
   },
   {
     question: 'How to book rooms at Sri Janaki Mahal?',

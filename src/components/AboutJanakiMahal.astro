@@ -1,8 +1,5 @@
 <!-- // src/components/AboutJanakiMahal.astro -->
 ---
----
-
----
 const aboutGalleryImages = [
   {
     src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG-20251017-WA0022-PXibh1TA63gWyELctfvTwP5RiXXoiF.jpg',
@@ -106,7 +103,7 @@ const aboutImageSchemas = aboutGalleryImages.map((image) => ({
       <div class="grid grid-cols-2 gap-4">
         {aboutGalleryImages.map((image, index) => (
           <figure class="rounded-lg shadow-lg overflow-hidden bg-white hover:shadow-xl transition-shadow" data-index={index}>
-            <img 
+        <img 
               src={image.src}
               alt={image.alt}
               title={image.title}
@@ -115,7 +112,7 @@ const aboutImageSchemas = aboutGalleryImages.map((image) => ({
               height={image.height}
               loading="lazy"
               decoding="async"
-            />
+        />
             <figcaption class="sr-only">{image.caption}</figcaption>
           </figure>
         ))}

@@ -37,8 +37,8 @@ Devotees often wonder which spelling is correct—**Sri Janaki Mahal Trust** or 
 
 ## 4. Booking & Contact Implications
 
-- **Single Verified Helpline:** [+91 7250364323](tel:+917250364323)
-- **WhatsApp:** [https://wa.me/917250364323](https://wa.me/917250364323)
+- **Single Verified Helpline:** [+91 7470437524](tel:+917470437524)
+- **WhatsApp:** [https://wa.me/917470437524](https://wa.me/917470437524)
 - Regardless of spelling, contacting this number connects you with the authentic trust team.
 
 > Comment: If anyone claims “Shri Janki Mahal Trust uses a different number,” consider it a red flag.
@@ -70,7 +70,7 @@ Use both in the first paragraph (e.g., “Sri Janaki Mahal Trust (also called Sh
 
 - ✅ “Sri” and “Shri” are interchangeable honorifics.
 - ✅ “Janaki” and “Janki” point to the same Goddess Sita.
-- ✅ Official booking number for all variations: **+91 7250364323**
+- ✅ Official booking number for all variations: **+91 7470437524**
 - ✅ One trust, multiple spellings, zero confusion when you call the verified helpline.
 
 Spread the word so every devotee can confidently book with the authentic **Sri Janaki / Shri Janki Mahal Trust** in Ayodhya. 🙏

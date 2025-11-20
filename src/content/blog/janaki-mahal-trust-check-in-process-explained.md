@@ -49,8 +49,8 @@ Arriving at **Janaki Mahal Trust** (also referred to as **Sri Janki Mahal Trust*
 
 ## Contact Before Arrival
 
-- **Helpline:** [+91 7250364323](tel:+917250364323)
-- **WhatsApp:** [https://wa.me/917250364323](https://wa.me/917250364323)
+- **Helpline:** [+91 7470437524](tel:+917470437524)
+- **WhatsApp:** [https://wa.me/917470437524](https://wa.me/917470437524)
 - Share your expected arrival time so the team can prepare your room and meals.
 
 ## Frequently Asked Questions

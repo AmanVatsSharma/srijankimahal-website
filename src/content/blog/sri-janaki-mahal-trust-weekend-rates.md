@@ -1,6 +1,6 @@
 ---
 title: Sri Janaki Mahal Trust Weekend Rates - Weekend Booking Guide
-description: Weekend rates and booking at Sri Janaki Mahal Trust. Weekend pricing, weekend availability, and weekend booking tips. Contact +91 7250364323
+description: Weekend rates and booking at Sri Janaki Mahal Trust. Weekend pricing, weekend availability, and weekend booking tips. Contact +91 7470437524
 date: 2025-03-15
 keywords:
   - 'Sri Janaki Mahal Trust weekend rates'
@@ -35,8 +35,8 @@ Complete guide to weekend rates and booking at Sri Janaki Mahal Trust. Learn abo
 ## Contact for Weekend Booking
 
 **For Weekend Rates:**
-- 📞 Phone: +91 7250364323
-- 💬 WhatsApp: +91 7250364323
+- 📞 Phone: +91 7470437524
+- 💬 WhatsApp: +91 7470437524
 
 **We'll provide:**
 - Weekend rates
@@ -52,9 +52,9 @@ Contact us for current weekend rates.
 Yes, weekend booking available. Book in advance.
 
 ### How to book for weekend?
-Call +91 7250364323 or WhatsApp +91 7250364323.
+Call +91 7470437524 or WhatsApp +91 7470437524.
 
 ---
 
-*For weekend booking, call +91 7250364323.*
+*For weekend booking, call +91 7470437524.*
 

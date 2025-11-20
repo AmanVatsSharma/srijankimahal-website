@@ -75,7 +75,7 @@ Yes, small prayer meetings or family gatherings can be arranged. Inform receptio
 
 - ✅ Identify your preferred room category
 - ✅ Review amenities listed above
-- ✅ Call **+91 7250364323** or WhatsApp [https://wa.me/917250364323](https://wa.me/917250364323)
+- ✅ Call **+91 7470437524** or WhatsApp [https://wa.me/917470437524](https://wa.me/917470437524)
 - ✅ Share any special requests in advance
 - ✅ Keep the trust confirmation slip ready on arrival
 

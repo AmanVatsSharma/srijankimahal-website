@@ -1,6 +1,6 @@
 ---
 title: Sri Janaki Mahal Trust Features - Key Features and Facilities
-description: Key features and facilities at Sri Janaki Mahal Trust. Prime location, all meals included, affordable prices, excellent service, and verified trust. Contact +91 7250364323
+description: Key features and facilities at Sri Janaki Mahal Trust. Prime location, all meals included, affordable prices, excellent service, and verified trust. Contact +91 7470437524
 date: 2025-03-21
 keywords:
   - 'Sri Janaki Mahal Trust features'
@@ -65,10 +65,10 @@ Complete guide to key features and facilities at Sri Janaki Mahal Trust. Learn a
 ## Experience Features
 
 **Book and experience:**
-- 📞 Phone: +91 7250364323
-- 💬 WhatsApp: +91 7250364323
+- 📞 Phone: +91 7470437524
+- 💬 WhatsApp: +91 7470437524
 
 ---
 
-*Experience all features. Call +91 7250364323.*
+*Experience all features. Call +91 7470437524.*
 

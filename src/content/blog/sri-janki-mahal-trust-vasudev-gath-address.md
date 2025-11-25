@@ -51,7 +51,7 @@ India
 
 ## Official Contact for Guidance
 
-- **Helpline & WhatsApp:** [+91 7470437524](tel:+917470437524) / [https://wa.me/917470437524](https://wa.me/917470437524)
+- **Helpline & WhatsApp:** [+91 9729054961](tel:+919729054961) / [https://wa.me/919729054961](https://wa.me/919729054961)
 - **Email:** [srijanakimahaltrust7484@gmail.com](mailto:srijanakimahaltrust7484@gmail.com)
 
 Share your live location, and the support staff will guide you from Vasudev Ghat entrance to the reception.
@@ -72,7 +72,7 @@ Limited parking slots are available. Inform the trust in advance for smooth arra
 ## Quick Checklist
 
 - ✅ Save the address and Google Maps link
-- ✅ Keep the helpline **+91 7470437524** accessible
+- ✅ Keep the helpline **+91 9729054961** accessible
 - ✅ Carry booking confirmation slip for quick verification
 - ✅ Explore Vasudev Ghat for serene sunrise/sunset views
 

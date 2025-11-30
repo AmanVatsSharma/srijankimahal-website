@@ -46,7 +46,7 @@ keywords:
 
 ## Official Contact for Navigation
 
-- **Phone & WhatsApp:** [+91 9729054961](tel:+919729054961) / [https://wa.me/919729054961](https://wa.me/919729054961)
+- **Phone & WhatsApp:** [+91 9217210488](tel:+919217210488) / [https://wa.me/919217210488](https://wa.me/919217210488)
 - Share your live location on arrival; the support staff guides you through the final turns.
 
 ## Frequently Asked Questions
@@ -63,7 +63,7 @@ Vasudev Ghat is a short 3-minute walk, ideal for peaceful meditation and morning
 ## Quick Checklist
 
 - ✅ Save the Google Maps pin for Sri Janaki Mahal Trust
-- ✅ Stay connected with the trust helpline **+91 9729054961**
+- ✅ Stay connected with the trust helpline **+91 9217210488**
 - ✅ Carry your confirmation slip for quick check-in
 - ✅ Explore nearby ghats and Ram Mandir with ease
 

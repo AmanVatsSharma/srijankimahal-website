@@ -1,6 +1,6 @@
 ---
 title: Sri Janaki Mahal Trust Parking Facilities - Vehicle Parking Information
-description: Parking facilities at Sri Janaki Mahal Trust. Vehicle parking availability, parking charges, and parking information for guests. Contact +91 9729054961
+description: Parking facilities at Sri Janaki Mahal Trust. Vehicle parking availability, parking charges, and parking information for guests. Contact +91 9217210488
 date: 2025-03-12
 keywords:
   - 'Sri Janaki Mahal Trust parking'
@@ -35,8 +35,8 @@ Complete guide to parking facilities at Sri Janaki Mahal Trust. Learn about vehi
 ## Contact for Parking
 
 **For Parking Information:**
-- 📞 Phone: +91 9729054961
-- 💬 WhatsApp: +91 9729054961
+- 📞 Phone: +91 9217210488
+- 💬 WhatsApp: +91 9217210488
 
 **We'll provide:**
 - Parking availability
@@ -57,5 +57,5 @@ Near dharmshala premises. Contact for exact location.
 
 ---
 
-*For parking information, call +91 9729054961.*
+*For parking information, call +91 9217210488.*
 

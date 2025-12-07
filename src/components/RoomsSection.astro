@@ -407,12 +407,12 @@ console.log('[Rooms Section] Booking schema generated');
     if (img2) img2.src = imageSet[1];
     if (img3) img3.src = imageSet[2];
     
-    const whatsappLink = `https://wa.me/919217210488?text=Hello%20Sri%20Janaki%20Mahal%2C%20I%20would%20like%20to%20book%20${encodeURIComponent(title || '')}%20for%20₹${price || '0'}%20per%20night`;
+    const whatsappLink = `https://wa.me/919034896569?text=Hello%20Sri%20Janaki%20Mahal%2C%20I%20would%20like%20to%20book%20${encodeURIComponent(title || '')}%20for%20₹${price || '0'}%20per%20night`;
     const modalWhatsapp = document.getElementById('modal-whatsapp') as HTMLAnchorElement;
     const modalCall = document.getElementById('modal-call') as HTMLAnchorElement;
     
     if (modalWhatsapp) modalWhatsapp.href = whatsappLink;
-    if (modalCall) modalCall.href = 'tel:+919217210488';
+    if (modalCall) modalCall.href = 'tel:+919034896569';
     
     if (modal) {
       modal.classList.add('active');

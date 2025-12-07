@@ -50,8 +50,8 @@ Staying close to the sacred **Ram Mandir** is every devotee’s priority. **Jank
 
 ## Contact for Navigation Assistance
 
-- **Official Helpline:** [+91 9217210488](tel:+919217210488)
-- **WhatsApp:** [https://wa.me/919217210488](https://wa.me/919217210488)
+- **Official Helpline:** [+91 9034896569](tel:+919034896569)
+- **WhatsApp:** [https://wa.me/919034896569](https://wa.me/919034896569)
 
 Share your current location over WhatsApp, and the trust team guides you turn-by-turn until you reach safely.
 
@@ -69,7 +69,7 @@ Call the helpline; the trust can coordinate auto rickshaws or taxis for pick-up.
 ## Quick Checklist
 
 - ✅ Save the Google Maps pin for Sri Janaki Mahal Trust
-- ✅ Keep the official number **+91 9217210488** handy
+- ✅ Keep the official number **+91 9034896569** handy
 - ✅ Inform the trust of your arrival time
 - ✅ Carry your booking confirmation slip for a smooth check-in
 

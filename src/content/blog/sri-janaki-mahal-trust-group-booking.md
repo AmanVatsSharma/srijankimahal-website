@@ -1,6 +1,6 @@
 ---
 title: Sri Janaki Mahal Trust Group Booking - Special Rates and Facilities
-description: Book group rooms at Sri Janaki Mahal Trust. Group booking rates, facilities, group accommodation, and special offers for large groups visiting Ayodhya. Contact +91 9217210488
+description: Book group rooms at Sri Janaki Mahal Trust. Group booking rates, facilities, group accommodation, and special offers for large groups visiting Ayodhya. Contact +91 9034896569
 date: 2025-02-27
 keywords:
   - 'Sri Janaki Mahal Trust group booking'
@@ -47,8 +47,8 @@ Complete guide to group booking at Sri Janaki Mahal Trust. Learn about group rat
 ## Group Booking Process
 
 ### Step 1: Contact Us
-- Call: +91 9217210488
-- WhatsApp: +91 9217210488
+- Call: +91 9034896569
+- WhatsApp: +91 9034896569
 - Email: srijanakimahaltrust7484@gmail.com
 
 ### Step 2: Provide Group Details
@@ -157,8 +157,8 @@ Yes, special meal arrangements available for groups.
 ## Contact for Group Booking
 
 **For Group Booking:**
-- 📞 Phone: +91 9217210488
-- 💬 WhatsApp: +91 9217210488
+- 📞 Phone: +91 9034896569
+- 💬 WhatsApp: +91 9034896569
 - 📧 Email: srijanakimahaltrust7484@gmail.com
 
 **Available:** 24 hours, 7 days a week
@@ -180,5 +180,5 @@ Yes, special meal arrangements available for groups.
 
 ---
 
-*For group booking, call +91 9217210488 or WhatsApp +91 9217210488. Special rates available for groups!*
+*For group booking, call +91 9034896569 or WhatsApp +91 9034896569. Special rates available for groups!*
 

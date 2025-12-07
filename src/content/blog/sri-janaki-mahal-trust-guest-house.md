@@ -1,6 +1,6 @@
 ---
 title: Sri Janaki Mahal Trust Guest House - Comfortable Accommodation Ayodhya
-description: Sri Janaki Mahal Trust guest house accommodation in Ayodhya. Comfortable guest house near Ram Mandir with all meals included. Affordable rates, clean rooms. Contact +91 9217210488
+description: Sri Janaki Mahal Trust guest house accommodation in Ayodhya. Comfortable guest house near Ram Mandir with all meals included. Affordable rates, clean rooms. Contact +91 9034896569
 date: 2025-03-10
 keywords:
   - 'Sri Janaki Mahal Trust guest house'
@@ -61,10 +61,10 @@ Sri Janaki Mahal Trust offers comfortable guest house accommodation in Ayodhya n
 ## Book Guest House
 
 **Comfortable guest house accommodation:**
-- 📞 Phone: +91 9217210488
-- 💬 WhatsApp: +91 9217210488
+- 📞 Phone: +91 9034896569
+- 💬 WhatsApp: +91 9034896569
 
 ---
 
-*Book comfortable guest house accommodation. Call +91 9217210488.*
+*Book comfortable guest house accommodation. Call +91 9034896569.*
 

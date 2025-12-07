@@ -269,7 +269,7 @@ Yes, parking space is available for guests.
 
 ### Can I extend my stay?
 
-Yes, subject to availability. Contact front desk or call +91 9217210488.
+Yes, subject to availability. Contact front desk or call +91 9034896569.
 
 ### Are pets allowed?
 
@@ -329,8 +329,8 @@ Staying at Sri Janaki Mahal Trust offers:
 - ✅ Excellent value for money
 
 **Book your stay today:**
-- 📞 Call: +91 9217210488
-- 💬 WhatsApp: +91 9217210488
+- 📞 Call: +91 9034896569
+- 💬 WhatsApp: +91 9034896569
 - 📧 Email: srijanakimahaltrust7484@gmail.com
 
 Experience the perfect blend of comfort and convenience at Sri Janaki Mahal Trust!

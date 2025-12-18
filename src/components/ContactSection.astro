@@ -1,5 +1,6 @@
 <!-- // src/components/ContactSection.astro -->
 ---
+import { DISPLAY_PHONE, TEL_LINK, WHATSAPP_LINK } from '../lib/constants';
 ---
 
 <section id="contact" class="py-16 sm:py-24 bg-white">
@@ -22,8 +23,8 @@
         </div>
         <h3 class="text-2xl font-bold text-gray-900 mb-2">WhatsApp Us</h3>
         <p class="text-gray-700 mb-4">Quick response on WhatsApp</p>
-        <p class="text-lg font-semibold text-green-600 mb-4">+91 9034896569</p>
-        <a href="https://wa.me/919034896569" target="_blank" rel="noopener noreferrer" class="inline-block px-6 py-2 bg-green-600 text-white rounded-lg font-semibold hover:bg-green-700 transition-colors" onclick="return gtag_report_conversion('https://wa.me/919034896569');">
+        <p class="text-lg font-semibold text-green-600 mb-4">{DISPLAY_PHONE}</p>
+        <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" class="inline-block px-6 py-2 bg-green-600 text-white rounded-lg font-semibold hover:bg-green-700 transition-colors" onclick={`return gtag_report_conversion('${WHATSAPP_LINK}');`}>
           Chat Now
         </a>
       </div>
@@ -37,8 +38,8 @@
         </div>
         <h3 class="text-2xl font-bold text-gray-900 mb-2">Call Us</h3>
         <p class="text-gray-700 mb-4">Available 24/7 for your queries</p>
-        <p class="text-lg font-semibold text-amber-600 mb-4">+91 9034896569</p>
-        <a href="tel:+919034896569" class="inline-block px-6 py-2 bg-amber-600 text-white rounded-lg font-semibold hover:bg-amber-700 transition-colors" onclick="return gtag_report_conversion('tel:+919034896569');">
+        <p class="text-lg font-semibold text-amber-600 mb-4">{DISPLAY_PHONE}</p>
+        <a href={TEL_LINK} class="inline-block px-6 py-2 bg-amber-600 text-white rounded-lg font-semibold hover:bg-amber-700 transition-colors" onclick={`return gtag_report_conversion('${TEL_LINK}');`}>
           Call Now
         </a>
       </div>

@@ -1,6 +1,7 @@
 <!-- // src/components/RoomsSection.astro -->
 ---
 import { generateBookActionSchema } from '../lib/schemas/booking';
+import { TEL_LINK, WHATSAPP_LINK } from '../lib/constants';
 
 // Generate booking schema for rooms section
 const bookingSchema = generateBookActionSchema('https://srijanakimahaltrust.in/booking');
@@ -407,12 +408,14 @@ console.log('[Rooms Section] Booking schema generated');
     if (img2) img2.src = imageSet[1];
     if (img3) img3.src = imageSet[2];
     
-    const whatsappLink = `https://wa.me/919034896569?text=Hello%20Sri%20Janaki%20Mahal%2C%20I%20would%20like%20to%20book%20${encodeURIComponent(title || '')}%20for%20₹${price || '0'}%20per%20night`;
+    // Construct WhatsApp link with room details using constants
+    const whatsappMessage = `Hello%20Sri%20Janaki%20Mahal%2C%20I%20would%20like%20to%20book%20${encodeURIComponent(title || '')}%20for%20₹${price || '0'}%20per%20night`;
+    const whatsappLink = `${WHATSAPP_LINK}?text=${whatsappMessage}`;
     const modalWhatsapp = document.getElementById('modal-whatsapp') as HTMLAnchorElement;
     const modalCall = document.getElementById('modal-call') as HTMLAnchorElement;
     
     if (modalWhatsapp) modalWhatsapp.href = whatsappLink;
-    if (modalCall) modalCall.href = 'tel:+919034896569';
+    if (modalCall) modalCall.href = TEL_LINK;
     
     if (modal) {
       modal.classList.add('active');

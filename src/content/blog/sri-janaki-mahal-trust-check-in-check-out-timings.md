@@ -1,6 +1,6 @@
 ---
 title: Sri Janaki Mahal Trust Check-in and Check-out Timings - Complete Guide
-description: Complete guide on check-in and check-out timings at Sri Janaki Mahal Trust. Standard times, early check-in, late check-out, and what to expect. Contact +91 9034896569
+description: Complete guide on check-in and check-out timings at Sri Janaki Mahal Trust. Standard times, early check-in, late check-out, and what to expect. Contact +91 8854944822
 date: 2025-02-07
 keywords:
   - 'Sri Janaki Mahal Trust verified'
@@ -91,7 +91,7 @@ Complete guide on check-in and check-out timings, procedures, and what to expect
 ### Early Check-in Options
 
 **Before 2:00 PM:**
-- Contact reception: +91 9034896569
+- Contact reception: +91 8854944822
 - Check room availability
 - Request early check-in
 - Confirm if available
@@ -187,8 +187,8 @@ Complete guide on check-in and check-out timings, procedures, and what to expect
 ### Need Information?
 
 **Contact Reception:**
-- 📞 Phone: +91 9034896569
-- 💬 WhatsApp: +91 9034896569
+- 📞 Phone: +91 8854944822
+- 💬 WhatsApp: +91 8854944822
 - 📧 Email: srijanakimahaltrust7484@gmail.com
 
 **Available:** 24/7 for assistance
@@ -268,13 +268,13 @@ Early check-out is possible. Inform reception in advance and complete check-out 
 Sri Janaki Mahal Trust has standard check-in (2:00 PM) and check-out (12:00 PM) times. Early check-in and late check-out are available subject to room availability.
 
 **Contact for Timings:**
-- 📞 Phone: +91 9034896569
-- 💬 WhatsApp: +91 9034896569
+- 📞 Phone: +91 8854944822
+- 💬 WhatsApp: +91 8854944822
 - 📧 Email: srijanakimahaltrust7484@gmail.com
 
 **Book Your Stay:**
 - [Booking Page](/booking)
-- Contact +91 9034896569
+- Contact +91 8854944822
 
 ---
 

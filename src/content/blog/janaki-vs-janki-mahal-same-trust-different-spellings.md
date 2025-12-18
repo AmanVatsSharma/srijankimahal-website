@@ -29,7 +29,7 @@ Regardless of spelling, the trust operates under one legal entity in Ayodhya.
 
 - **Legal Name:** Sri Janaki Mahal Trust
 - **Also Recognised As:** Sri Janki Mahal Trust, Shri Janki Mahal Trust, Janaki Mahal Trust Ayodhya
-- **Verified Contact:** [+91 9034896569](tel:+919034896569)
+- **Verified Contact:** [+91 8854944822](tel:+918854944822)
 
 > Comment: Any website claiming to be different based solely on spelling is misleading. Always confirm using the official helpline.
 
@@ -48,7 +48,7 @@ Regardless of spelling, the trust operates under one legal entity in Ayodhya.
 ## Frequently Asked Questions
 
 ### Is the phone number different for each spelling?
-No. The single verified number is **+91 9034896569** for all variations.
+No. The single verified number is **+91 8854944822** for all variations.
 
 ### Does the spelling affect booking confirmation?
 Not at all. Confirmation slips may mention “Sri Janaki Mahal Trust” while guests might mention “Janki Mahal” in conversation.
@@ -62,7 +62,7 @@ Yes. The location pin appears for “Janaki Mahal Trust Ayodhya” and “Janki 
 ## Key Takeaways
 
 - ✅ Janaki Mahal Trust = Janki Mahal Trust = Shri Janki Mahal Trust
-- ✅ One official helpline: **+91 9034896569**
+- ✅ One official helpline: **+91 8854944822**
 - ✅ Same property near Ram Mandir with verified rooms and meals
 - ✅ Spelling differences are purely linguistic, not organisational
 

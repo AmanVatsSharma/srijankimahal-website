@@ -1,4 +1,5 @@
 ---
+import { WHATSAPP_BOOKING_LINK_HI } from '../lib/constants';
 ---
 
 <div class="fixed bottom-6 right-6 z-40 flex flex-col items-end gap-2">
@@ -28,13 +29,13 @@
       aria-hidden="true"
     ></span>
     <a
-      href="https://wa.me/919034896569?text=नमस्ते%20श्री%20जानकी%20महल%2C%20मुझे%20कमरा%20बुक%20करना%20है।"
+      href={WHATSAPP_BOOKING_LINK_HI}
       target="_blank"
       rel="noopener noreferrer"
       class="relative z-10 flex items-center justify-center w-16 h-16 rounded-full bg-green-500 text-white shadow-2xl hover:bg-green-600 transition-all duration-200 focus:outline-none focus:ring-4 focus:ring-green-300 group"
       title="WhatsApp पर चैट करें"
       aria-label="WhatsApp पर चैट करें"
-      onclick="return gtag_report_conversion('https://wa.me/919034896569?text=नमस्ते%20श्री%20जानकी%20महल%2C%20मुझे%20कमरा%20बुक%20करना%20है।');"
+      onclick={`return gtag_report_conversion('${WHATSAPP_BOOKING_LINK_HI}');`}
     >
       <!-- Proper WhatsApp SVG Icon from official source (https://worldvectorlogo.com/logo/whatsapp-icon-1) -->
       <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 48 48" class="block" aria-hidden="true">

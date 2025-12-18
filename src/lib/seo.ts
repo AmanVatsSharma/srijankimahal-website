@@ -13,11 +13,13 @@
  * 6. Generate Twitter Card tags
  */
 
+import { DISPLAY_PHONE } from './constants';
+
 // Base site configuration
 const SITE_URL = 'https://srijanakimahaltrust.in';
 const SITE_NAME = 'Sri Janaki Mahal Trust';
 const DEFAULT_TITLE = 'Sri Janaki Mahal - Comfortable Hotel in Ayodhya';
-const DEFAULT_DESCRIPTION = 'Sri Janaki Mahal Trust - Best hotel stay in Ayodhya. Book comfortable rooms near Ram Mandir. All meals included. Call +91 8854944822.';
+const DEFAULT_DESCRIPTION = `Sri Janaki Mahal Trust - Best hotel stay in Ayodhya. Book comfortable rooms near Ram Mandir. All meals included. Call ${DISPLAY_PHONE}.`;
 const DEFAULT_KEYWORDS = [
   'Sri Janaki Mahal Trust',
   'Sri Janaki Mahal',

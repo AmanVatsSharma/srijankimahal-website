@@ -4,9 +4,10 @@ import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import FloatingWhatsApp from '../../components/FloatingWhatsApp.astro';
 import { generateBreadcrumbSchema } from '../../lib/schemas/breadcrumb';
+import { MOBILE_NUMBER, DISPLAY_PHONE, SCHEMA_TELEPHONE, TEL_LINK } from '../../lib/constants';
 
-const officialPhone = '+918854944822';
-const displayPhone = '+91 8854944822';
+const officialPhone = `+91${MOBILE_NUMBER}`;
+const displayPhone = DISPLAY_PHONE;
 
 type RoomImage = {
   src: string;
@@ -477,7 +478,7 @@ const productSchema = {
     seller: {
       '@type': 'Organization',
       name: 'Sri Janaki Mahal Trust',
-      telephone: '+91-8854944822'
+      telephone: SCHEMA_TELEPHONE
     }
   }
 };
@@ -562,7 +563,7 @@ const imageObjects: ImageObjectSchema[] = room.images.map((image: RoomImage) => 
             <div class="mt-4 flex flex-col gap-3">
               <a
                 class="rounded-xl bg-[#2d2215] px-6 py-3 text-base font-semibold uppercase tracking-wide text-white transition hover:bg-[#b45309]"
-                href="tel:+918854944822"
+                href={TEL_LINK}
               >
                 Call {displayPhone}
               </a>

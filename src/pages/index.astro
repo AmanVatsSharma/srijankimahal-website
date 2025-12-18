@@ -12,6 +12,7 @@ import FloatingWhatsApp from '../components/FloatingWhatsApp.astro';
 import AmenitiesSection from '../components/AmenitiesSection.astro';
 import GallerySection from '../components/GallerySection.astro';
 import FAQSection from '../components/FAQSection.astro';
+import { DISPLAY_PHONE, TEL_LINK } from '../lib/constants';
 
 // Console log helps trace homepage rendering and ensures SEO tracking visibility
 console.log('[HomePage] Rendering homepage with expanded keyword coverage and alternate spellings awareness');
@@ -19,7 +20,7 @@ console.log('[HomePage] Rendering homepage with expanded keyword coverage and al
 
 <Layout 
   title="Sri Janaki Mahal Trust - Janaki Mahal Trust Ayodhya | Official Booking & Contact"
-  description="Sri Janaki Mahal Trust (also known as Janaki Mahal Trust, Sri Janki Mahal, Shri Janki Mahal Trust Ayodhya) - Book verified rooms near Ram Mandir. Call +91 8854944822 for official contact and authentic bookings."
+  description={`Sri Janaki Mahal Trust (also known as Janaki Mahal Trust, Sri Janki Mahal, Shri Janki Mahal Trust Ayodhya) - Book verified rooms near Ram Mandir. Call ${DISPLAY_PHONE} for official contact and authentic bookings.`}
   keywords={[
     'Sri Janaki Mahal Trust',
     'Sri Janaki Mahal Trust room booking',
@@ -62,7 +63,7 @@ console.log('[HomePage] Rendering homepage with expanded keyword coverage and al
       </p>
       <p class="text-lg leading-relaxed">
         For authentic reservations, always use the official contact number 
-        <a class="font-semibold text-[#b45309] hover:underline" href="tel:+918854944822">+91 8854944822</a> 
+        <a class="font-semibold text-[#b45309] hover:underline" href={TEL_LINK}>{DISPLAY_PHONE}</a> 
         or click the verified booking buttons across this website. We ensure legitimate confirmations and protect devotees from fraudulent listings.
       </p>
       <div class="grid gap-4 rounded-xl bg-white p-6 shadow-md md:grid-cols-2">
@@ -79,7 +80,7 @@ console.log('[HomePage] Rendering homepage with expanded keyword coverage and al
         <div>
           <h3 class="text-2xl font-semibold">Official Booking & Support Flow</h3>
           <ol class="list-decimal space-y-2 pl-6 text-base">
-            <li>Call or WhatsApp <span class="font-semibold text-[#b45309]">+91 8854944822</span></li>
+            <li>Call or WhatsApp <span class="font-semibold text-[#b45309]">{DISPLAY_PHONE}</span></li>
             <li>Receive booking confirmation and trust seal</li>
             <li>Share arrival details for seamless check-in</li>
             <li>Enjoy peaceful stay with all meals included</li>

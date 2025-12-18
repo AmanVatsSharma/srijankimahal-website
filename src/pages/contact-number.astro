@@ -8,8 +8,10 @@ import FloatingWhatsApp from '../components/FloatingWhatsApp.astro';
 // Logs page rendering to assist future debugging and SEO flow validation
 console.log('[ContactNumberPage] Rendering official contact number landing page with schema enhancements');
 
-const officialPhone = '+918854944822';
-const displayPhone = '+91 8854944822';
+import { MOBILE_NUMBER, DISPLAY_PHONE, TEL_LINK, WHATSAPP_LINK } from '../lib/constants';
+
+const officialPhone = `+91${MOBILE_NUMBER}`;
+const displayPhone = DISPLAY_PHONE;
 
 /**
  * Contact schema supplies structured data for Google about verified phone number

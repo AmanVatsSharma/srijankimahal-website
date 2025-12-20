@@ -1,6 +1,6 @@
 ---
 title: Sri Janaki Mahal Trust Family Rooms - Best Family Accommodation Ayodhya
-description: Book family rooms at Sri Janaki Mahal Trust. Family-friendly rooms, 3-bed and 4-bed rooms, family accommodation near Ram Mandir. All meals included. Contact +91 8854944822
+description: Book family rooms at Sri Janaki Mahal Trust. Family-friendly rooms, 3-bed and 4-bed rooms, family accommodation near Ram Mandir. All meals included. Contact +91 7206021805
 date: 2025-02-28
 keywords:
   - 'Sri Janaki Mahal Trust family rooms'
@@ -85,8 +85,8 @@ Complete guide to family rooms at Sri Janaki Mahal Trust. Perfect family accommo
 4. **Confirm Booking** - Get confirmation
 
 ### Contact for Booking
-- 📞 Phone: +91 8854944822
-- 💬 WhatsApp: +91 8854944822
+- 📞 Phone: +91 7206021805
+- 💬 WhatsApp: +91 7206021805
 - 📧 Email: srijanakimahaltrust7484@gmail.com
 
 ## Family Room Advantages
@@ -110,7 +110,7 @@ Yes, all meals included for all family members in room price.
 Yes, safe and secure family-friendly environment.
 
 ### How to book family room?
-Call +91 8854944822 or WhatsApp +91 8854944822.
+Call +91 7206021805 or WhatsApp +91 7206021805.
 
 ### What is the price for family room?
 3-bed rooms: ₹1,800-₹3,000, 4-bed rooms: ₹2,550-₹3,500 per night.
@@ -118,11 +118,11 @@ Call +91 8854944822 or WhatsApp +91 8854944822.
 ## Book Family Room Now
 
 **Perfect family accommodation near Ram Mandir:**
-- 📞 Phone: +91 8854944822
-- 💬 WhatsApp: +91 8854944822
+- 📞 Phone: +91 7206021805
+- 💬 WhatsApp: +91 7206021805
 - 📧 Email: srijanakimahaltrust7484@gmail.com
 
 ---
 
-*Book family rooms at Sri Janaki Mahal Trust. All meals included, near Ram Mandir. Call +91 8854944822.*
+*Book family rooms at Sri Janaki Mahal Trust. All meals included, near Ram Mandir. Call +91 7206021805.*
 

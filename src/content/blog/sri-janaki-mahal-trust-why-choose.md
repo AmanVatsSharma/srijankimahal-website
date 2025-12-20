@@ -119,8 +119,8 @@ Top reasons why guests choose Sri Janaki Mahal Trust. Learn what makes us the be
 ## Choose Sri Janaki Mahal Trust
 
 **Top reasons to choose us:**
-- 📞 Phone: +91 8854944822
-- 💬 WhatsApp: +91 8854944822
+- 📞 Phone: +91 7206021805
+- 💬 WhatsApp: +91 7206021805
 - 📧 Email: srijanakimahaltrust7484@gmail.com
 
 **Why Choose Us:**
@@ -133,5 +133,5 @@ Top reasons why guests choose Sri Janaki Mahal Trust. Learn what makes us the be
 
 ---
 
-*Choose the best dharmshala in Ayodhya. Call +91 8854944822 for booking.*
+*Choose the best dharmshala in Ayodhya. Call +91 7206021805 for booking.*
 

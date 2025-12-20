@@ -49,7 +49,7 @@ All these names point to the SAME trust, rooms, and booking office.
 
 ## Booking & Contact Consistency
 
-- **Phone & WhatsApp:** [+91 8854944822](tel:+918854944822) / [https://wa.me/918854944822](https://wa.me/918854944822)
+- **Phone & WhatsApp:** [+91 7206021805](tel:+917206021805) / [https://wa.me/917206021805](https://wa.me/917206021805)
 - **Email:** [srijanakimahaltrust7484@gmail.com](mailto:srijanakimahaltrust7484@gmail.com)
 - Regardless of the name you use, these channels connect you with the same trust administration.
 
@@ -88,7 +88,7 @@ Use “Sri Janaki Mahal Trust (Shri Janki Mahal Trust)” in visa letters or emp
 ## Key Takeaways
 
 - ✅ Multiple spellings, one trust.
-- ✅ Verified contact number: **+91 8854944822**
+- ✅ Verified contact number: **+91 7206021805**
 - ✅ Use combined references when writing for diverse audiences.
 - ✅ Encourage fellow devotees to verify the trust identity before booking.
 

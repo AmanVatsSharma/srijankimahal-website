@@ -20,8 +20,8 @@ Prefer booking from your phone or laptop? The **Janaki Mahal Trust** (also calle
 ## Step 1: Visit Official Website or WhatsApp Link
 
 - Website: [https://srijanakimahaltrust.in](https://srijanakimahaltrust.in)
-- WhatsApp Booking: [https://wa.me/917206021805](https://wa.me/917206021805)
-- Helpline (for backup): [+91 7206021805](tel:+917206021805)
+- WhatsApp Booking: [https://wa.me/919266471658](https://wa.me/919266471658)
+- Helpline (for backup): [+91 9266471658](tel:+919266471658)
 
 Ensure you are on the legitimate domain and not a fake clone site.
 
@@ -71,7 +71,7 @@ The trust sends a PDF/image containing:
 - Room type, occupancy, and meal plan
 - Trust seal and contact details
 
-Verify that the slip originates from **+91 7206021805** or the official trust email.
+Verify that the slip originates from **+91 9266471658** or the official trust email.
 
 ## Step 6: Complete Secure Online Payment
 
@@ -106,7 +106,7 @@ During regular days, partial advance suffices. During festivals, full payment ma
 Yes. The digital slip bears the trust seal and booking ID, which is accepted during check-in.
 
 ### What if I lose internet connectivity?
-Call the helpline **+91 7206021805**. The team can complete the process by phone and send SMS updates.
+Call the helpline **+91 9266471658**. The team can complete the process by phone and send SMS updates.
 
 ### Can I modify my dates post confirmation?
 Yes, subject to room availability. Inform the trust as early as possible.

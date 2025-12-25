@@ -2,6 +2,7 @@
 ---
 import '../styles/global.css';
 import { generateSEOData, type SEOConfig } from '../lib/seo';
+import { SCHEMA_TELEPHONE, WHATSAPP_LINK } from '../lib/constants';
 
 // SEO Props Interface
 interface Props {
@@ -236,7 +237,7 @@ console.log('[Layout] SEO data generated:', {
             "Sri Janki Mahal"
           ],
           "image": "https://srijanakimahaltrust.in/og.jpg",
-          "telephone": "+91-7206021805",
+          "telephone": SCHEMA_TELEPHONE,
           "email": "srijanakimahaltrust7484@gmail.com",
           "url": "https://srijanakimahaltrust.in/",
           "address": {
@@ -270,7 +271,7 @@ console.log('[Layout] SEO data generated:', {
             "Sri Janki Mahal"
           ],
           "image": "https://srijanakimahaltrust.in/og.jpg",
-          "telephone": "+91-7206021805",
+          "telephone": SCHEMA_TELEPHONE,
           "email": "srijanakimahaltrust7484@gmail.com",
           "url": "https://srijanakimahaltrust.in/",
           "address": {

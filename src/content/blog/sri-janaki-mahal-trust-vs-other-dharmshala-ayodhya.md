@@ -148,8 +148,8 @@ Always available to help
 Experience why guests choose us over others:
 
 **Contact:**
-- 📞 Phone: +91 9266471658
-- 💬 WhatsApp: +91 9266471658
+- 📞 Phone: +91 7762032130
+- 💬 WhatsApp: +91 7762032130
 - 📧 Email: srijanakimahaltrust7484@gmail.com
 
 **Why Choose Us:**
@@ -162,5 +162,5 @@ Experience why guests choose us over others:
 
 ---
 
-*Compare and book the best dharmshala in Ayodhya. Call +91 9266471658 for booking.*
+*Compare and book the best dharmshala in Ayodhya. Call +91 7762032130 for booking.*
 

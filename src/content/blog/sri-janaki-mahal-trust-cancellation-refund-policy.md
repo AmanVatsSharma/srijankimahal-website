@@ -1,6 +1,6 @@
 ---
 title: Sri Janaki Mahal Trust Cancellation and Refund Policy - Complete Guide
-description: Complete guide to cancellation and refund policy at Sri Janaki Mahal Trust. Cancellation terms, refund process, and policy details. Contact +91 9266471658
+description: Complete guide to cancellation and refund policy at Sri Janaki Mahal Trust. Cancellation terms, refund process, and policy details. Contact +91 7762032130
 date: 2025-02-10
 keywords:
   - 'Sri Janaki Mahal Trust verified'
@@ -31,8 +31,8 @@ Complete guide to cancellation and refund policy at Sri Janaki Mahal Trust. Lear
 ### How to Cancel
 
 **Step 1: Contact Us**
-- Phone: +91 9266471658
-- WhatsApp: +91 9266471658
+- Phone: +91 7762032130
+- WhatsApp: +91 7762032130
 - Email: srijanakimahaltrust7484@gmail.com
 
 **Step 2: Provide Details**
@@ -122,7 +122,7 @@ Complete guide to cancellation and refund policy at Sri Janaki Mahal Trust. Lear
 
 ### Can I cancel my booking?
 
-Yes, cancellations are allowed. Contact us at +91 9266471658 for cancellation.
+Yes, cancellations are allowed. Contact us at +91 7762032130 for cancellation.
 
 ### Will I get a refund?
 
@@ -130,7 +130,7 @@ Refund depends on cancellation timing and policy terms. Contact us for specific 
 
 ### How do I cancel?
 
-Contact us via phone (+91 9266471658), WhatsApp (+91 9266471658), or email (srijanakimahaltrust7484@gmail.com).
+Contact us via phone (+91 7762032130), WhatsApp (+91 7762032130), or email (srijanakimahaltrust7484@gmail.com).
 
 ### When will I get my refund?
 
@@ -149,8 +149,8 @@ Yes, modifications may be possible subject to availability. Contact us for optio
 ### Need to Cancel?
 
 **Contact Us:**
-- 📞 Phone: +91 9266471658
-- 💬 WhatsApp: +91 9266471658
+- 📞 Phone: +91 7762032130
+- 💬 WhatsApp: +91 7762032130
 - 📧 Email: srijanakimahaltrust7484@gmail.com
 
 **Available:** 24/7 for cancellation requests
@@ -179,13 +179,13 @@ Yes, modifications may be possible subject to availability. Contact us for optio
 Sri Janaki Mahal Trust has a cancellation and refund policy. Contact us for cancellation and refund details based on your booking.
 
 **For Cancellation:**
-- 📞 Phone: +91 9266471658
-- 💬 WhatsApp: +91 9266471658
+- 📞 Phone: +91 7762032130
+- 💬 WhatsApp: +91 7762032130
 - 📧 Email: srijanakimahaltrust7484@gmail.com
 
 **For Policy Details:**
 - Visit: [Cancellation & Refund Policy](/cancellation-refund)
-- Contact +91 9266471658
+- Contact +91 7762032130
 
 ---
 

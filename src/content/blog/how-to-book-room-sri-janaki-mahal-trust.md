@@ -18,7 +18,7 @@ Planning to visit Ayodhya and stay at Sri Janaki Mahal Trust? This comprehensive
 
 ### Method 1: Phone Booking (Recommended)
 
-**Step 1:** Call our official number: **+91 9266471658**
+**Step 1:** Call our official number: **+91 7762032130**
 
 **Step 2:** Provide the following information:
 - Your name
@@ -43,7 +43,7 @@ Planning to visit Ayodhya and stay at Sri Janaki Mahal Trust? This comprehensive
 
 ### Method 2: WhatsApp Booking
 
-**Step 1:** Message us on WhatsApp: **+91 9266471658**
+**Step 1:** Message us on WhatsApp: **+91 7762032130**
 
 **Step 2:** Send a message with:
 ```
@@ -219,7 +219,7 @@ Our team checks:
 
 ### Can I book same day?
 
-Yes, same-day bookings may be available subject to availability. Call +91 9266471658 to check.
+Yes, same-day bookings may be available subject to availability. Call +91 7762032130 to check.
 
 ### Is advance payment required?
 
@@ -241,8 +241,8 @@ Yes, booking confirmation is required and provided. Keep it for check-in.
 
 **Only book through:**
 
-✅ **Official Phone:** +91 9266471658  
-✅ **Official WhatsApp:** +91 9266471658  
+✅ **Official Phone:** +91 7762032130  
+✅ **Official WhatsApp:** +91 7762032130  
 ✅ **Official Website:** srijanakimahaltrust.in  
 ✅ **Official Email:** srijanakimahaltrust7484@gmail.com  
 
@@ -294,8 +294,8 @@ Yes, booking confirmation is required and provided. Keep it for check-in.
 ## Need Help?
 
 **Booking Assistance:**
-- 📞 Phone: +91 9266471658 (24/7)
-- 💬 WhatsApp: +91 9266471658
+- 📞 Phone: +91 7762032130 (24/7)
+- 💬 WhatsApp: +91 7762032130
 - 📧 Email: srijanakimahaltrust7484@gmail.com
 - 🌐 Website: srijanakimahaltrust.in
 
@@ -304,8 +304,8 @@ Yes, booking confirmation is required and provided. Keep it for check-in.
 Booking a room at Sri Janaki Mahal Trust is simple and straightforward. Choose your preferred method (phone, WhatsApp, or email), provide your details, and receive instant confirmation.
 
 **Book now:**
-- Call: +91 9266471658
-- WhatsApp: +91 9266471658
+- Call: +91 7762032130
+- WhatsApp: +91 7762032130
 - Visit: /booking
 
 ---

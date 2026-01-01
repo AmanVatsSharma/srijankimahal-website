@@ -20,7 +20,7 @@ Learn how to book your room at Sri Janaki Mahal Trust online through our officia
 
 **Step 1:** Open WhatsApp on your phone
 
-**Step 2:** Send message to: **+91 9266471658**
+**Step 2:** Send message to: **+91 7762032130**
 
 **Step 3:** Send booking inquiry:
 ```
@@ -48,7 +48,7 @@ Room: [AC/Non-AC, Bed count]
 
 ### 2. Phone Booking (Direct)
 
-**Step 1:** Call: **+91 9266471658**
+**Step 1:** Call: **+91 7762032130**
 
 **Step 2:** Speak with our booking team
 
@@ -118,8 +118,8 @@ Room: [AC/Non-AC, Bed count]
 ### Step 3: Contact for Booking
 
 **Choose Method:**
-- WhatsApp: +91 9266471658
-- Phone: +91 9266471658
+- WhatsApp: +91 7762032130
+- Phone: +91 7762032130
 - Email: srijanakimahaltrust7484@gmail.com
 
 **Provide Information:**
@@ -281,7 +281,7 @@ Contact us immediately. See our cancellation policy for details.
 
 **Easy Steps:**
 1. Open WhatsApp or call
-2. Contact +91 9266471658
+2. Contact +91 7762032130
 3. Provide booking details
 4. Receive confirmation
 
@@ -348,8 +348,8 @@ Contact us immediately. See our cancellation policy for details.
 Booking a room at Sri Janaki Mahal Trust online is simple and secure. Choose your preferred method (WhatsApp, phone, or email), provide your details, and receive instant confirmation.
 
 **Book Online Now:**
-- 💬 WhatsApp: +91 9266471658
-- 📞 Phone: +91 9266471658
+- 💬 WhatsApp: +91 7762032130
+- 📞 Phone: +91 7762032130
 - 📧 Email: srijanakimahaltrust7484@gmail.com
 - 🌐 Website: /booking
 

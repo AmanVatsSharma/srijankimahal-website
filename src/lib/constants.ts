@@ -9,7 +9,7 @@
 
 // Mobile Number Constants
 // Update this number to change it everywhere in the application
-export const MOBILE_NUMBER = '7762032130';
+export const MOBILE_NUMBER = '7219868083';
 
 // Formatted display versions
 export const DISPLAY_PHONE = `+91 ${MOBILE_NUMBER}`;

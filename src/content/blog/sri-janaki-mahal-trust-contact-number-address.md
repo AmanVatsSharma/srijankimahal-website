@@ -1,6 +1,6 @@
 ---
 title: Sri Janaki Mahal Trust Contact Number, Address, and Location - Complete Guide
-description: Complete contact information for Sri Janaki Mahal Trust. Official phone number, WhatsApp, email, address, and location details. Contact +91 7762032130
+description: Complete contact information for Sri Janaki Mahal Trust. Official phone number, WhatsApp, email, address, and location details. Contact +91 7219868083
 date: 2025-01-27
 keywords:
   - 'Sri Janaki Mahal Trust contact number'
@@ -21,7 +21,7 @@ Complete contact information and location details for Sri Janaki Mahal Trust in 
 
 ### Phone Number
 
-**Official Phone:** +91 7762032130
+**Official Phone:** +91 7219868083
 
 **Details:**
 - Available 24/7
@@ -37,7 +37,7 @@ Complete contact information and location details for Sri Janaki Mahal Trust in 
 
 ### WhatsApp Number
 
-**Official WhatsApp:** +91 7762032130
+**Official WhatsApp:** +91 7219868083
 
 **Details:**
 - Available 24/7
@@ -96,7 +96,7 @@ Search for "Sri Janaki Mahal Trust, Karsewakpuram, Ayodhya"
 
 ### By Phone
 
-**Step 1:** Dial +91 7762032130
+**Step 1:** Dial +91 7219868083
 
 **Step 2:** You'
   -ll be connected to our booking team
@@ -111,7 +111,7 @@ Search for "Sri Janaki Mahal Trust, Karsewakpuram, Ayodhya"
 
 **Step 1:** Open WhatsApp
 
-**Step 2:** Send message to +91 7762032130
+**Step 2:** Send message to +91 7219868083
 
 **Step 3:** Type your inquiry
 
@@ -177,7 +177,7 @@ Guests: [Number]
 
 ## Contact Methods Comparison
 
-### Phone (+91 7762032130)
+### Phone (+91 7219868083)
 
 **Pros:**
 - ✅ Instant voice communication
@@ -191,7 +191,7 @@ Guests: [Number]
 - Voice preference
 - Immediate confirmation
 
-### WhatsApp (+91 7762032130)
+### WhatsApp (+91 7219868083)
 
 **Pros:**
 - ✅ Quick messaging
@@ -332,8 +332,8 @@ Changes: [Details]
 ### Urgent Matters
 
 **For Urgent Bookings or Issues:**
-- Phone: +91 7762032130 (24/7)
-- WhatsApp: +91 7762032130 (24/7)
+- Phone: +91 7219868083 (24/7)
+- WhatsApp: +91 7219868083 (24/7)
 
 **Response Time:** Immediate
 
@@ -357,8 +357,8 @@ Changes: [Details]
 ### How to Verify
 
 **Official Contact Details:**
-- ✅ Phone: +91 7762032130
-- ✅ WhatsApp: +91 7762032130
+- ✅ Phone: +91 7219868083
+- ✅ WhatsApp: +91 7219868083
 - ✅ Email: srijanakimahaltrust7484@gmail.com
 - ✅ Website: srijanakimahaltrust.in
 
@@ -368,11 +368,11 @@ Changes: [Details]
 
 ### What is the official phone number?
 
-+91 7762032130 is the official phone number available 24/7.
++91 7219868083 is the official phone number available 24/7.
 
 ### Can I contact via WhatsApp?
 
-Yes, WhatsApp number is +91 7762032130. Same as phone number.
+Yes, WhatsApp number is +91 7219868083. Same as phone number.
 
 ### What is the email address?
 
@@ -395,8 +395,8 @@ Yes, phone and WhatsApp are available 24/7.
 Contacting Sri Janaki Mahal Trust is easy and convenient. Choose your preferred method and reach out anytime.
 
 **Quick Contact:**
-- 📞 Phone: +91 7762032130
-- 💬 WhatsApp: +91 7762032130
+- 📞 Phone: +91 7219868083
+- 💬 WhatsApp: +91 7219868083
 - 📧 Email: srijanakimahaltrust7484@gmail.com
 - 📍 Address: Vasudev Gath, Karsewakpuram, Ayodhya, UP 224123
 

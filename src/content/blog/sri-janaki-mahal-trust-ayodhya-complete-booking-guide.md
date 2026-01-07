@@ -22,13 +22,13 @@ Sri Janaki Mahal Trust is one of the best dharmshalas in Ayodhya, located near R
 
 **Location:** Karsewakpuram, Ayodhya, Uttar Pradesh  
 **Near Ram Mandir:** Just 5 minutes walk  
-**Contact:** +91 7762032130
+**Contact:** +91 7219868083
 
 ## How to Book Sri Janaki Mahal Trust
 
 ### Method 1: Phone Booking
 
-**Call:** +91 7762032130 (24/7 available)
+**Call:** +91 7219868083 (24/7 available)
 
 **What to Say:**
 - Your name
@@ -45,7 +45,7 @@ Sri Janaki Mahal Trust is one of the best dharmshalas in Ayodhya, located near R
 
 ### Method 2: WhatsApp Booking
 
-**Message:** +91 7762032130
+**Message:** +91 7219868083
 
 **Send This Message:**
 ```
@@ -115,8 +115,8 @@ Room: [AC/Non-AC, Bed count]
 - Consider suite options
 
 ### Step 3: Contact Us
-- Call: +91 7762032130
-- WhatsApp: +91 7762032130
+- Call: +91 7219868083
+- WhatsApp: +91 7219868083
 - Email: srijanakimahaltrust7484@gmail.com
 
 ### Step 4: Provide Details
@@ -170,7 +170,7 @@ Room: [AC/Non-AC, Bed count]
 ## Booking FAQs
 
 ### How to book Sri Janaki Mahal Trust?
-Call +91 7762032130 or WhatsApp +91 7762032130 for instant booking.
+Call +91 7219868083 or WhatsApp +91 7219868083 for instant booking.
 
 ### Is advance booking available?
 Yes, advance booking is available. Book 2-4 weeks ahead for regular days.
@@ -195,8 +195,8 @@ Yes, you will receive booking confirmation with all details.
 
 ## Contact for Booking
 
-**Phone:** +91 7762032130  
-**WhatsApp:** +91 7762032130  
+**Phone:** +91 7219868083  
+**WhatsApp:** +91 7219868083  
 **Email:** srijanakimahaltrust7484@gmail.com  
 **Website:** srijanakimahaltrust.in
 
@@ -207,8 +207,8 @@ Yes, you will receive booking confirmation with all details.
 Booking at Sri Janaki Mahal Trust Ayodhya is simple and convenient. Choose your preferred method, provide your details, and receive instant confirmation.
 
 **Book now:**
-- 📞 Call: +91 7762032130
-- 💬 WhatsApp: +91 7762032130
+- 📞 Call: +91 7219868083
+- 💬 WhatsApp: +91 7219868083
 - 📧 Email: srijanakimahaltrust7484@gmail.com
 
 ---

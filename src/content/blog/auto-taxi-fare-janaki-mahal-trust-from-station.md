@@ -31,8 +31,8 @@ Budgeting your travel makes the pilgrimage smoother. This cost guide lists the l
 
 1. **Confirm Before Boarding:** Politely agree on the fare upfront to avoid confusion.
 2. **Mention Exact Destination:** Say “Sri Janaki Mahal Trust near Vasudev Ghat, Karsewakpuram.”
-3. **Opt for Trust-Recommended Drivers:** Call **+91 7762032130** for reliable transport contacts.
-4. **Share Live Location:** Use WhatsApp [https://wa.me/917762032130](https://wa.me/917762032130) to share your route with the trust team.
+3. **Opt for Trust-Recommended Drivers:** Call **+91 7219868083** for reliable transport contacts.
+4. **Share Live Location:** Use WhatsApp [https://wa.me/917219868083](https://wa.me/917219868083) to share your route with the trust team.
 
 ## When to Choose Aut rickshaw vs Taxi
 
@@ -64,7 +64,7 @@ Politely remind them of the negotiated amount. If needed, call the trust for ass
 
 - ✅ Keep small change ready for autos.
 - ✅ Share live location with the trust for safety.
-- ✅ Keep the helpline **+91 7762032130** accessible.
+- ✅ Keep the helpline **+91 7219868083** accessible.
 - ✅ Use trust-recommended drivers during late-night arrivals.
 
 Travel smart and arrive peacefully at **Janaki Mahal Trust**—your spiritual home in Ayodhya. 🙏

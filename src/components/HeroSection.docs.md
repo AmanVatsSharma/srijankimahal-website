@@ -11,7 +11,7 @@ Purpose: Render the homepage hero with a high-contrast background image, top boo
 - CTAs:
 - Book Now (white outlined, centered, bold text): WhatsApp deep-link with preset message for quick booking.
   - Call Now (orange/amber) and WhatsApp (green) buttons side-by-side below the Book Now button.
-- Phone/WhatsApp number used: `+91 7762032130` (`tel:+917762032130`, `https://wa.me/917762032130`).
+- Phone/WhatsApp number used: `+91 7219868083` (`tel:+917219868083`, `https://wa.me/917219868083`).
 - Accessibility: semantic `section` with clear `aria-label` for CTAs.
 
 ## Interaction Flow

@@ -201,7 +201,7 @@ Yes, contact us to modify your booking. Changes subject to availability.
 - 📧 Email: srijanakimahaltrust7484@gmail.com
 
 **Official Website:**
-- 🌐 Website: srijanakimahaltrust.in/booking
+- 🌐 Website: www.srijanakimahaltrustofficial.com/booking
 
 ## Conclusion
 

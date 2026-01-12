@@ -344,7 +344,7 @@ Changes: [Details]
 
 ### Official Channels
 
-**Website:** srijanakimahaltrust.in
+**Website:** www.srijanakimahaltrustofficial.com
 
 **Official Pages:**
 - Booking: /booking
@@ -360,7 +360,7 @@ Changes: [Details]
 - ✅ Phone: +91 7219868083
 - ✅ WhatsApp: +91 7219868083
 - ✅ Email: srijanakimahaltrust7484@gmail.com
-- ✅ Website: srijanakimahaltrust.in
+- ✅ Website: www.srijanakimahaltrustofficial.com
 
 **Always verify before contacting!**
 

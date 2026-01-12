@@ -243,7 +243,7 @@ Yes, booking confirmation is required and provided. Keep it for check-in.
 
 ✅ **Official Phone:** +91 7219868083  
 ✅ **Official WhatsApp:** +91 7219868083  
-✅ **Official Website:** srijanakimahaltrust.in  
+✅ **Official Website:** www.srijanakimahaltrustofficial.com  
 ✅ **Official Email:** srijanakimahaltrust7484@gmail.com  
 
 **Do NOT book through:**
@@ -297,7 +297,7 @@ Yes, booking confirmation is required and provided. Keep it for check-in.
 - 📞 Phone: +91 7219868083 (24/7)
 - 💬 WhatsApp: +91 7219868083
 - 📧 Email: srijanakimahaltrust7484@gmail.com
-- 🌐 Website: srijanakimahaltrust.in
+- 🌐 Website: www.srijanakimahaltrustofficial.com
 
 ## Conclusion
 

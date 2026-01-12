@@ -39,8 +39,8 @@ export interface BookingItem {
  * Example:
  * ```ts
  * const schema = generateReservationActionSchema(
- *   'https://srijanakimahaltrust.in/booking',
- *   'https://srijanakimahaltrust.in/booking',
+ *   'https://www.srijanakimahaltrustofficial.com/booking',
+ *   'https://www.srijanakimahaltrustofficial.com/booking',
  *   'Sri Janaki Mahal Trust'
  * );
  * ```
@@ -74,7 +74,7 @@ export function generateReservationActionSchema(
     provider: {
       '@type': 'Organization',
       name: businessName,
-      url: 'https://srijanakimahaltrust.in'
+      url: 'https://www.srijanakimahaltrustofficial.com'
     }
   };
 
@@ -113,7 +113,7 @@ export function generateReservationPackageSchema(
       price: price,
       priceCurrency: currency,
       availability: 'https://schema.org/InStock',
-      url: 'https://srijanakimahaltrust.in/booking'
+      url: 'https://www.srijanakimahaltrustofficial.com/booking'
     },
     ...(includes.length > 0 && {
       includes: includes.map(item => ({
@@ -162,7 +162,7 @@ export function generateBookActionSchema(
     provider: {
       '@type': 'LodgingBusiness',
       name: businessName,
-      url: 'https://srijanakimahaltrust.in'
+      url: 'https://www.srijanakimahaltrustofficial.com'
     }
   };
 

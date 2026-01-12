@@ -21,7 +21,7 @@ This guide will help you identify the official Sri Janaki Mahal Trust website an
 
 ### Official Website URL
 
-**URL:** `https://srijanakimahaltrust.in`
+**URL:** `https://www.srijanakimahaltrustofficial.com`
 
 **Important:** This is the ONLY official website. Always check the URL carefully.
 
@@ -42,9 +42,9 @@ This guide will help you identify the official Sri Janaki Mahal Trust website an
 ### 1. Check the URL
 
 **Correct URL:**
-- ✅ srijanakimahaltrust.in
-- ✅ https://srijanakimahaltrust.in
-- ✅ www.srijanakimahaltrust.in
+- ✅ www.srijanakimahaltrustofficial.com
+- ✅ https://www.srijanakimahaltrustofficial.com
+- ✅ www.www.srijanakimahaltrustofficial.com
 
 **Wrong/Scam URLs:**
 - ❌ srijanakimahaltrust.com (different domain)
@@ -124,7 +124,7 @@ This guide will help you identify the official Sri Janaki Mahal Trust website an
 **These are OFFICIAL and SAFE:**
 
 1. **Official Website**
-   - URL: srijanakimahaltrust.in
+   - URL: www.srijanakimahaltrustofficial.com
    - Booking page: /booking
    - Official page: /official
 
@@ -203,7 +203,7 @@ This guide will help you identify the official Sri Janaki Mahal Trust website an
 
 1. **Check URL**
    - Ensure it'
-  -s srijanakimahaltrust.in
+  -s www.srijanakimahaltrustofficial.com
    - Look for HTTPS
    - Verify domain spelling
 
@@ -287,13 +287,13 @@ The official website is mobile-friendly:
 
 ## Frequently Asked Questions
 
-### Is srijanakimahaltrust.in the official website?
+### Is www.srijanakimahaltrustofficial.com the official website?
 
-Yes, srijanakimahaltrust.in is the ONLY official website of Sri Janaki Mahal Trust.
+Yes, www.srijanakimahaltrustofficial.com is the ONLY official website of Sri Janaki Mahal Trust.
 
 ### How do I know if a website is official?
 
-Check: URL (srijanakimahaltrust.in), contact number (+91 7219868083), and official registration details.
+Check: URL (www.srijanakimahaltrustofficial.com), contact number (+91 7219868083), and official registration details.
 
 ### Can I trust third-party booking sites?
 
@@ -310,10 +310,10 @@ Yes, the official website uses SSL encryption and follows security best practice
 
 ## Conclusion
 
-The official website of Sri Janaki Mahal Trust is **srijanakimahaltrust.in**. Always verify the URL and contact information before booking.
+The official website of Sri Janaki Mahal Trust is **www.srijanakimahaltrustofficial.com**. Always verify the URL and contact information before booking.
 
 **Always book through:**
-- Official website: srijanakimahaltrust.in
+- Official website: www.srijanakimahaltrustofficial.com
 - Official phone: +91 7219868083
 - Official WhatsApp: +91 7219868083
 

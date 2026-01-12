@@ -458,7 +458,7 @@ const productSchema = {
   '@type': 'Product',
   name: room.heading,
   alternateName: room.schemaAlternateNames,
-  image: room.images.map((image: RoomImage) => `https://srijanakimahaltrust.in${image.src}`),
+  image: room.images.map((image: RoomImage) => `https://www.srijanakimahaltrustofficial.com${image.src}`),
   description: room.metaDescription,
   brand: {
     '@type': 'Brand',
@@ -467,14 +467,14 @@ const productSchema = {
   sku: `SJM-${slug.toUpperCase().replace(/-/g, '_')}`,
   category: 'Lodging',
   areaServed: 'Ayodhya, Uttar Pradesh',
-  url: `https://srijanakimahaltrust.in/rooms/${slug}`,
+  url: `https://www.srijanakimahaltrustofficial.com/rooms/${slug}`,
   depth: '1',
   offers: {
     '@type': 'Offer',
     priceCurrency: 'INR',
     price: room.schemaPrice,
     availability: 'https://schema.org/InStock',
-    url: `https://srijanakimahaltrust.in/rooms/${slug}`,
+    url: `https://www.srijanakimahaltrustofficial.com/rooms/${slug}`,
     seller: {
       '@type': 'Organization',
       name: 'Sri Janaki Mahal Trust',
@@ -505,7 +505,7 @@ type ImageObjectSchema = {
 const imageObjects: ImageObjectSchema[] = room.images.map((image: RoomImage) => ({
   '@context': 'https://schema.org',
   '@type': 'ImageObject',
-  contentUrl: `https://srijanakimahaltrust.in${image.src}`,
+  contentUrl: `https://www.srijanakimahaltrustofficial.com${image.src}`,
   caption: image.caption,
   description: image.alt,
   width: image.width,
@@ -518,7 +518,7 @@ const imageObjects: ImageObjectSchema[] = room.images.map((image: RoomImage) => 
     '@type': 'Organization',
     name: 'Sri Janaki Mahal Trust'
   },
-  acquireLicensePage: 'https://srijanakimahaltrust.in'
+  acquireLicensePage: 'https://www.srijanakimahaltrustofficial.com'
 }));
 ---
 

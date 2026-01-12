@@ -16,7 +16,7 @@
 import { DISPLAY_PHONE } from './constants';
 
 // Base site configuration
-const SITE_URL = 'https://srijanakimahaltrust.in';
+const SITE_URL = 'https://www.srijanakimahaltrustofficial.com';
 const SITE_NAME = 'Sri Janaki Mahal Trust';
 const DEFAULT_TITLE = 'Sri Janaki Mahal - Comfortable Hotel in Ayodhya';
 const DEFAULT_DESCRIPTION = `Sri Janaki Mahal Trust - Best hotel stay in Ayodhya. Book comfortable rooms near Ram Mandir. All meals included. Call ${DISPLAY_PHONE}.`;
@@ -98,7 +98,7 @@ export function generateDescription(description?: string): string {
  * 
  * Example:
  * - Input: "/about"
- * - Output: "https://srijanakimahaltrust.in/about"
+ * - Output: "https://www.srijanakimahaltrustofficial.com/about"
  */
 export function generateCanonical(path?: string): string {
   console.log('[SEO] Generating canonical URL for path:', path || '/');

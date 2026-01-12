@@ -26,7 +26,7 @@ export interface BreadcrumbItem {
  * Creates structured data for breadcrumb navigation following Schema.org BreadcrumbList format.
  * 
  * @param items - Array of breadcrumb items (should include home page first)
- * @param baseUrl - Base URL for the site (defaults to https://srijanakimahaltrust.in)
+ * @param baseUrl - Base URL for the site (defaults to https://www.srijanakimahaltrustofficial.com)
  * @returns JSON-LD schema object
  * 
  * Example:
@@ -40,7 +40,7 @@ export interface BreadcrumbItem {
  */
 export function generateBreadcrumbSchema(
   items: BreadcrumbItem[],
-  baseUrl: string = 'https://srijanakimahaltrust.in'
+  baseUrl: string = 'https://www.srijanakimahaltrustofficial.com'
 ) {
   console.log('[Breadcrumb Schema] Generating schema for', items.length, 'items');
   

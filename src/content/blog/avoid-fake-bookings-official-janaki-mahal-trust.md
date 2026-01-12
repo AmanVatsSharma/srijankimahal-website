@@ -21,7 +21,7 @@ Devotees travelling to Ayodhya deserve a safe and stress-free experience. Unfort
 
 - **Helpline & WhatsApp:** [+91 7219868083](tel:+917219868083) / [https://wa.me/917219868083](https://wa.me/917219868083)
 - **Email:** [srijanakimahaltrust7484@gmail.com](mailto:srijanakimahaltrust7484@gmail.com)
-- **Website:** [https://srijanakimahaltrust.in](https://srijanakimahaltrust.in)
+- **Website:** [https://www.srijanakimahaltrustofficial.com](https://www.srijanakimahaltrustofficial.com)
 
 Anything outside these channels is NOT authorised.
 

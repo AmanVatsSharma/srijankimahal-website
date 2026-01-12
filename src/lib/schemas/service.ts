@@ -51,7 +51,7 @@ export interface ServiceItem {
 export function generateServiceSchema(
   services: ServiceItem[],
   businessName: string = 'Sri Janaki Mahal Trust',
-  businessUrl: string = 'https://srijanakimahaltrust.in'
+  businessUrl: string = 'https://www.srijanakimahaltrustofficial.com'
 ) {
   console.log('[Service Schema] Generating schema for', services.length, 'services');
   

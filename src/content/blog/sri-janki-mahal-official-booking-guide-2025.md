@@ -88,7 +88,7 @@ Save the contact with the note “Sri Janki Mahal Official Booking 2025” for e
 Yes, subject to availability. Contact the helpline with your booking ID, and the team will assist.
 
 ### How do I avoid fake booking portals?
-Only trust the channels listed here and the official website **srijanakimahaltrust.in**. Do not pay via random links or third-party portals.
+Only trust the channels listed here and the official website **www.srijanakimahaltrustofficial.com**. Do not pay via random links or third-party portals.
 
 ### Are children charged separately?
 Children under 6 sharing existing bedding stay complimentary. Extra beds can be arranged on request.

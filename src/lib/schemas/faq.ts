@@ -107,7 +107,7 @@ export const defaultFAQs: FAQItem[] = [
   },
   {
     question: 'Is Sri Janaki Mahal Trust official?',
-    answer: `Yes, Sri Janaki Mahal Trust is an official registered charitable trust. We are a legally registered organization providing comfortable accommodation in Ayodhya. Book only through our official channels: phone ${DISPLAY_PHONE}, WhatsApp ${DISPLAY_PHONE}, or official website srijanakimahaltrust.in.`,
+      answer: `Yes, Sri Janaki Mahal Trust is an official registered charitable trust. We are a legally registered organization providing comfortable accommodation in Ayodhya. Book only through our official channels: phone ${DISPLAY_PHONE}, WhatsApp ${DISPLAY_PHONE}, or official website www.srijanakimahaltrustofficial.com.`,
   },
   {
     question: 'What is Sri Janaki Mahal Trust phone number?',
@@ -115,11 +115,11 @@ export const defaultFAQs: FAQItem[] = [
   },
   {
     question: 'What is Sri Janaki Mahal Trust official website?',
-    answer: 'The official website of Sri Janaki Mahal Trust is srijanakimahaltrust.in. This is the only official website for booking rooms and getting information. Beware of third-party websites claiming to represent us.',
+    answer: 'The official website of Sri Janaki Mahal Trust is www.srijanakimahaltrustofficial.com. This is the only official website for booking rooms and getting information. Beware of third-party websites claiming to represent us.',
   },
   {
     question: 'How to contact Sri Janaki Mahal Trust?',
-    answer: `You can contact Sri Janaki Mahal Trust through: Phone: ${DISPLAY_PHONE} (24/7), WhatsApp: ${DISPLAY_PHONE}, Email: srijanakimahaltrust7484@gmail.com, or visit our official website srijanakimahaltrust.in. Our team is available round the clock to assist you.`,
+    answer: `You can contact Sri Janaki Mahal Trust through: Phone: ${DISPLAY_PHONE} (24/7), WhatsApp: ${DISPLAY_PHONE}, Email: srijanakimahaltrust7484@gmail.com, or visit our official website www.srijanakimahaltrustofficial.com. Our team is available round the clock to assist you.`,
   },
   {
     question: 'Is Sri Janaki Mahal Trust verified?',
@@ -163,7 +163,7 @@ export const defaultFAQs: FAQItem[] = [
   },
   {
     question: 'How to verify Sri Janaki Mahal Trust is official?',
-    answer: `To verify Sri Janaki Mahal Trust is official: 1) Check our official website srijanakimahaltrust.in, 2) Contact our official phone ${DISPLAY_PHONE}, 3) Visit our official page for registration details, 4) Beware of third-party websites or agents claiming to represent us.`,
+    answer: `To verify Sri Janaki Mahal Trust is official: 1) Check our official website www.srijanakimahaltrustofficial.com, 2) Contact our official phone ${DISPLAY_PHONE}, 3) Visit our official page for registration details, 4) Beware of third-party websites or agents claiming to represent us.`,
   },
   {
     question: 'Can I book Sri Janaki Mahal Trust room in advance?',
@@ -191,7 +191,7 @@ export const defaultFAQs: FAQItem[] = [
   },
   {
     question: 'Is Sri Janaki Mahal Trust official website safe?',
-    answer: 'Yes, the official website srijanakimahaltrust.in is safe and secure. We use SSL encryption and follow security best practices. Always ensure you are on the official website (srijanakimahaltrust.in) and not a third-party or scam website.',
+    answer: 'Yes, the official website www.srijanakimahaltrustofficial.com is safe and secure. We use SSL encryption and follow security best practices. Always ensure you are on the official website (www.srijanakimahaltrustofficial.com) and not a third-party or scam website.',
   },
   {
     question: 'What is the official booking number for Sri Janaki Mahal Trust?',
@@ -207,7 +207,7 @@ export const defaultFAQs: FAQItem[] = [
   },
   {
     question: 'How to book Sri Janaki Mahal Trust room online?',
-    answer: `To book Sri Janaki Mahal Trust room online: 1) Visit our official website srijanakimahaltrust.in, 2) Go to booking page, 3) Contact us via WhatsApp (${DISPLAY_PHONE}) or phone (${DISPLAY_PHONE}), 4) Provide booking details, 5) Receive instant confirmation.`,
+    answer: `To book Sri Janaki Mahal Trust room online: 1) Visit our official website www.srijanakimahaltrustofficial.com, 2) Go to booking page, 3) Contact us via WhatsApp (${DISPLAY_PHONE}) or phone (${DISPLAY_PHONE}), 4) Provide booking details, 5) Receive instant confirmation.`,
   },
   {
     question: 'What is Sri Janaki Mahal Trust contact number?',
@@ -231,7 +231,7 @@ export const defaultFAQs: FAQItem[] = [
   },
   {
     question: 'How can I avoid fake Janaki Mahal Trust bookings?',
-    answer: `Avoid fake bookings by using only the official channels: phone/WhatsApp ${DISPLAY_PHONE}, email srijanakimahaltrust7484@gmail.com, and the website srijanakimahaltrust.in. Decline offers from alternate numbers or third-party agents.`,
+    answer: `Avoid fake bookings by using only the official channels: phone/WhatsApp ${DISPLAY_PHONE}, email srijanakimahaltrust7484@gmail.com, and the website www.srijanakimahaltrustofficial.com. Decline offers from alternate numbers or third-party agents.`,
   },
   {
     question: 'Which spellings does Sri Janaki Mahal Trust recognise?',
@@ -251,7 +251,7 @@ export const defaultFAQs: FAQItem[] = [
   },
   {
     question: 'Is Janaki Mahal official booking available through third-party apps?',
-    answer: 'No, Janaki Mahal official booking is only available through direct contact—phone, WhatsApp, or the booking page on srijanakimahaltrust.in. We do not authorise third-party apps or travel portals.',
+    answer: 'No, Janaki Mahal official booking is only available through direct contact—phone, WhatsApp, or the booking page on www.srijanakimahaltrustofficial.com. We do not authorise third-party apps or travel portals.',
   },
   {
     question: 'What should I do if someone shares an alternate Janaki Mahal number?',
@@ -275,7 +275,7 @@ export const defaultFAQs: FAQItem[] = [
   },
   {
     question: 'Which keywords should I search to find the official Sri Janaki Mahal Trust website?',
-    answer: 'Search keywords like “Janaki Mahal Trust official booking”, “Sri Janki Mahal Trust Ayodhya official website”, or “Shri Janki Mahal Trust verified contact” to find the correct site srijanakimahaltrust.in.',
+    answer: 'Search keywords like "Janaki Mahal Trust official booking", "Sri Janki Mahal Trust Ayodhya official website", or "Shri Janki Mahal Trust verified contact" to find the correct site www.srijanakimahaltrustofficial.com.',
   },
   {
     question: 'Can I request a GST invoice from Janaki Mahal Trust?',
@@ -291,7 +291,7 @@ export const defaultFAQs: FAQItem[] = [
   },
   {
     question: 'What is the best way to share Janaki Mahal Trust details with family?',
-    answer: `Share the official website link srijanakimahaltrust.in and the helpline ${DISPLAY_PHONE}. Mention that Sri Janaki Mahal Trust, Sri Janki Mahal Trust, and Shri Janki Mahal Trust are the same verified accommodation provider.`,
+    answer: `Share the official website link www.srijanakimahaltrustofficial.com and the helpline ${DISPLAY_PHONE}. Mention that Sri Janaki Mahal Trust, Sri Janki Mahal Trust, and Shri Janki Mahal Trust are the same verified accommodation provider.`,
   },
   {
     question: 'Can I get assistance in Hindi or English when contacting Sri Janaki Mahal Trust?',

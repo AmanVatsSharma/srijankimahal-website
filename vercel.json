@@ -38,7 +38,7 @@
       "headers": [
         {
           "key": "Access-Control-Allow-Origin",
-          "value": "https://srijanakimahaltrust.in"
+          "value": "https://www.srijanakimahaltrustofficial.com"
         },
         {
           "key": "Access-Control-Allow-Methods",
@@ -61,7 +61,7 @@
           "value": "http"
         }
       ],
-      "destination": "https://srijanakimahaltrust.in/$1",
+      "destination": "https://www.srijanakimahaltrustofficial.com/$1",
       "permanent": true
     }
   ],

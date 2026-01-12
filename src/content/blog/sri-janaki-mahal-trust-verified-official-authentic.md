@@ -28,10 +28,10 @@ Complete guide on verifying the authenticity of Sri Janaki Mahal Trust. Learn ho
 
 ### Method 1: Check Official Website
 
-**Official Website:** srijanakimahaltrust.in
+**Official Website:** www.srijanakimahaltrustofficial.com
 
 **Verify:**
-1. Visit srijanakimahaltrust.in
+1. Visit www.srijanakimahaltrustofficial.com
 2. Check official page: /official
 3. Verify contact information
 4. Check registration details
@@ -48,7 +48,7 @@ Complete guide on verifying the authenticity of Sri Janaki Mahal Trust. Learn ho
 - Phone: +91 7219868083
 - WhatsApp: +91 7219868083
 - Email: srijanakimahaltrust7484@gmail.com
-- Website: srijanakimahaltrust.in
+- Website: www.srijanakimahaltrustofficial.com
 
 **Verification:**
 1. Call official number
@@ -102,7 +102,7 @@ Complete guide on verifying the authenticity of Sri Janaki Mahal Trust. Learn ho
   -re Official:**
 
 1. **Official Website**
-   - Domain: srijanakimahaltrust.in
+   - Domain: www.srijanakimahaltrustofficial.com
    - Official pages
    - Complete information
 
@@ -173,7 +173,7 @@ Complete guide on verifying the authenticity of Sri Janaki Mahal Trust. Learn ho
 
 **Use This Checklist:**
 
-- [ ] Website is srijanakimahaltrust.in
+- [ ] Website is www.srijanakimahaltrustofficial.com
 - [ ] Phone number is +91 7219868083
 - [ ] Email is srijanakimahaltrust7484@gmail.com
 - [ ] Address matches official address
@@ -190,7 +190,7 @@ Complete guide on verifying the authenticity of Sri Janaki Mahal Trust. Learn ho
 **These Are OFFICIAL:**
 
 ✅ **Official Website**
-- URL: srijanakimahaltrust.in
+- URL: www.srijanakimahaltrustofficial.com
 - Booking: /booking
 - Official: /official
 
@@ -221,7 +221,7 @@ Complete guide on verifying the authenticity of Sri Janaki Mahal Trust. Learn ho
 ### Step-by-Step Verification
 
 **Step 1: Check Website**
-- Visit srijanakimahaltrust.in
+- Visit www.srijanakimahaltrustofficial.com
 - Verify domain
 - Check official pages
 
@@ -254,7 +254,7 @@ Yes, Sri Janaki Mahal Trust is an official registered charitable trust.
 ### How can I verify it'
   -s authentic?
 
-Check official website (srijanakimahaltrust.in), verify contact number (+91 7219868083), and visit official page (/official).
+Check official website (www.srijanakimahaltrustofficial.com), verify contact number (+91 7219868083), and visit official page (/official).
 
 ### Is it registered?
 
@@ -271,7 +271,7 @@ Verify through official website, official contact, and official page. Always boo
 
 ### Is the website official?
 
-Yes, srijanakimahaltrust.in is the ONLY official website.
+Yes, www.srijanakimahaltrustofficial.com is the ONLY official website.
 
 ### Can I visit the location?
 
@@ -344,7 +344,7 @@ Yes, visit us at Vasudev Gath, Karsewakpuram, Ayodhya, UP 224123. GPS: 26.803928
 Sri Janaki Mahal Trust is verified, official, and authentic. Verify through our official website, contact information, and official page.
 
 **Verify Now:**
-- 🌐 Official Website: srijanakimahaltrust.in
+- 🌐 Official Website: www.srijanakimahaltrustofficial.com
 - 📞 Official Phone: +91 7219868083
 - 📍 Official Page: /official
 

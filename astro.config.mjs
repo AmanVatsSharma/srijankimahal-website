@@ -3,7 +3,7 @@ import tailwind from '@astrojs/tailwind';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  site: 'https://srijanakimahaltrust.in',
+  site: 'https://www.srijanakimahaltrustofficial.com',
   integrations: [tailwind(), sitemap()],
   vite: {
     ssr: {

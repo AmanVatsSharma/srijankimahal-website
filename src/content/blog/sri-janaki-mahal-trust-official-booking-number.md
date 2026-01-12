@@ -73,7 +73,7 @@ Room: [AC/Non-AC]
 
 ## Official Website
 
-**Website:** srijanakimahaltrust.in
+**Website:** www.srijanakimahaltrustofficial.com
 
 **Pages:**
 - Homepage: /
@@ -154,7 +154,7 @@ Room: [AC/Non-AC]
 ✅ **Official Phone:** +91 7219868083  
 ✅ **Official WhatsApp:** +91 7219868083  
 ✅ **Official Email:** srijanakimahaltrust7484@gmail.com  
-✅ **Official Website:** srijanakimahaltrust.in
+✅ **Official Website:** www.srijanakimahaltrustofficial.com
 
 ### Avoid Scams
 
@@ -231,7 +231,7 @@ Phone/WhatsApp: Instant. Email: Within 24 hours.
 - 📧 Email: srijanakimahaltrust7484@gmail.com
 
 **Official Website:**
-- 🌐 Website: srijanakimahaltrust.in
+- 🌐 Website: www.srijanakimahaltrustofficial.com
 
 **Remember:** Always use official contact numbers only!
 

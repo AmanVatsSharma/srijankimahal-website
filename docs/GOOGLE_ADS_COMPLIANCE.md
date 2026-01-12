@@ -95,7 +95,7 @@ This document outlines the comprehensive Google Ads compliance measures implemen
 
 ### 1. Site Verification
 1. Go to [Google Search Console](https://search.google.com/search-console)
-2. Add property: `https://srijanakimahaltrust.in`
+2. Add property: `https://www.srijanakimahaltrustofficial.com`
 3. Choose "HTML tag" verification method
 4. Copy the verification code
 5. Replace `your-google-verification-code` in Layout.astro with actual code
@@ -103,7 +103,7 @@ This document outlines the comprehensive Google Ads compliance measures implemen
 
 ### 2. Submit Sitemap
 1. In Search Console, go to "Sitemaps"
-2. Add sitemap: `https://srijanakimahaltrust.in/sitemap-index.xml`
+2. Add sitemap: `https://www.srijanakimahaltrustofficial.com/sitemap-index.xml`
 3. Submit and monitor indexing status
 
 ### 3. Monitor Security Issues
@@ -142,7 +142,7 @@ This document outlines the comprehensive Google Ads compliance measures implemen
    - Use relevant keywords
 
 2. **Landing Page**
-   - Direct to homepage (https://srijanakimahaltrust.in)
+   - Direct to homepage (https://www.srijanakimahaltrustofficial.com)
    - Ensure fast loading
    - Clear call-to-action buttons
 

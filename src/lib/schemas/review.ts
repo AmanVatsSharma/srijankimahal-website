@@ -50,7 +50,7 @@ export interface ReviewItem {
 export function generateReviewSchema(
   reviews: ReviewItem[],
   businessName: string = 'Sri Janaki Mahal Trust',
-  businessUrl: string = 'https://srijanakimahaltrust.in'
+  businessUrl: string = 'https://www.srijanakimahaltrustofficial.com'
 ) {
   console.log('[Review Schema] Generating schema for', reviews.length, 'reviews');
   

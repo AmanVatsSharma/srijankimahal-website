@@ -198,7 +198,7 @@ Yes, you will receive booking confirmation with all details.
 **Phone:** +91 7219868083  
 **WhatsApp:** +91 7219868083  
 **Email:** srijanakimahaltrust7484@gmail.com  
-**Website:** srijanakimahaltrust.in
+**Website:** www.srijanakimahaltrustofficial.com
 
 **Available:** 24 hours, 7 days a week
 

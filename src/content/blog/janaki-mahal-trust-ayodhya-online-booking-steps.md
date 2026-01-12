@@ -19,7 +19,7 @@ Prefer booking from your phone or laptop? The **Janaki Mahal Trust** (also calle
 
 ## Step 1: Visit Official Website or WhatsApp Link
 
-- Website: [https://srijanakimahaltrust.in](https://srijanakimahaltrust.in)
+- Website: [https://www.srijanakimahaltrustofficial.com](https://www.srijanakimahaltrustofficial.com)
 - WhatsApp Booking: [https://wa.me/917219868083](https://wa.me/917219868083)
 - Helpline (for backup): [+91 7219868083](tel:+917219868083)
 

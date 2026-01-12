@@ -64,7 +64,7 @@ Room: [AC/Non-AC, Bed count]
 
 ### 3. Website Booking Page
 
-**Step 1:** Visit: srijanakimahaltrust.in/booking
+**Step 1:** Visit: www.srijanakimahaltrustofficial.com/booking
 
 **Step 2:** Review room types and pricing
 

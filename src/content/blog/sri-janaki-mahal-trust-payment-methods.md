@@ -38,8 +38,8 @@ Complete guide to payment methods accepted at Sri Janaki Mahal Trust. Learn abou
 
 ### Payment Details
 Contact us for payment details:
-- 📞 Phone: +91 7219868083
-- 💬 WhatsApp: +91 7219868083
+- 📞 Phone: +91 9752731062
+- 💬 WhatsApp: +91 9752731062
 - 📧 Email: srijanakimahaltrust7484@gmail.com
 
 ## Payment Process
@@ -100,13 +100,13 @@ Yes, payment on arrival available at check-in.
 Yes, all payment methods are secure and official.
 
 ### How to get payment details?
-Contact us at +91 7219868083 for payment details.
+Contact us at +91 9752731062 for payment details.
 
 ## Contact for Payment
 
 **For Payment Information:**
-- 📞 Phone: +91 7219868083
-- 💬 WhatsApp: +91 7219868083
+- 📞 Phone: +91 9752731062
+- 💬 WhatsApp: +91 9752731062
 - 📧 Email: srijanakimahaltrust7484@gmail.com
 
 **We'll provide:**
@@ -131,5 +131,5 @@ Contact us at +91 7219868083 for payment details.
 
 ---
 
-*For payment information, call +91 7219868083. Secure payment methods available.*
+*For payment information, call +91 9752731062. Secure payment methods available.*
 

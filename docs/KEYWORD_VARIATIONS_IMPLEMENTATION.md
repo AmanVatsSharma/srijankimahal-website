@@ -58,7 +58,7 @@ Document all updates implemented to help Sri Janaki Mahal Trust rank for additio
 ## 7. Verification & Anti-Scam Messaging
 
 - Warnings and guidance across booking/official pages specify:
-  - Single verified contact number: `+91 7219868083`
+  - Single verified contact number: `+91 9752731062`
   - Official booking channels (phone, WhatsApp, website, email)
   - Steps to avoid fake agents and confirm authenticity.
 

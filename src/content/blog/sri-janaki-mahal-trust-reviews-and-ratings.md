@@ -187,8 +187,8 @@ All reviews are verified from:
 If you stayed at Sri Janaki Mahal Trust, share your experience:
 
 **Contact:**
-- 📞 Phone: +91 7219868083
-- 💬 WhatsApp: +91 7219868083
+- 📞 Phone: +91 9752731062
+- 💬 WhatsApp: +91 9752731062
 - 📧 Email: srijanakimahaltrust7484@gmail.com
 
 ## Why Guests Choose Sri Janaki Mahal Trust
@@ -207,8 +207,8 @@ Based on reviews, guests choose us because:
 Experience what our guests love. Book your stay at Sri Janaki Mahal Trust:
 
 **Contact:**
-- 📞 Phone: +91 7219868083
-- 💬 WhatsApp: +91 7219868083
+- 📞 Phone: +91 9752731062
+- 💬 WhatsApp: +91 9752731062
 - 📧 Email: srijanakimahaltrust7484@gmail.com
 
 **Rating:** 4.5/5 ⭐⭐⭐⭐⭐  
@@ -217,5 +217,5 @@ Experience what our guests love. Book your stay at Sri Janaki Mahal Trust:
 
 ---
 
-*Read more reviews and book your stay at Sri Janaki Mahal Trust. Call +91 7219868083 for booking.*
+*Read more reviews and book your stay at Sri Janaki Mahal Trust. Call +91 9752731062 for booking.*
 

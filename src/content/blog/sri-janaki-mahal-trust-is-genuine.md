@@ -1,6 +1,6 @@
 ---
 title: Is Sri Janaki Mahal Trust Genuine? - Complete Verification Guide
-description: Verify if Sri Janaki Mahal Trust is genuine. Complete guide to check authenticity, official verification, registration details, and how to avoid scams. Official +91 7219868083
+description: Verify if Sri Janaki Mahal Trust is genuine. Complete guide to check authenticity, official verification, registration details, and how to avoid scams. Official +91 9752731062
 date: 2025-03-03
 keywords:
   - 'is Sri Janaki Mahal Trust genuine'
@@ -29,8 +29,8 @@ Complete guide to verify if Sri Janaki Mahal Trust is genuine. Learn how to chec
 
 ### 1. Check Official Contact
 **Official Contact:**
-- ✅ Phone: +91 7219868083
-- ✅ WhatsApp: +91 7219868083
+- ✅ Phone: +91 9752731062
+- ✅ WhatsApp: +91 9752731062
 - ✅ Email: srijanakimahaltrust7484@gmail.com
 - ✅ Website: www.srijanakimahaltrustofficial.com
 
@@ -100,7 +100,7 @@ Complete guide to verify if Sri Janaki Mahal Trust is genuine. Learn how to chec
 ## Verification Checklist
 
 ### Before Booking
-- [ ] Phone number is +91 7219868083
+- [ ] Phone number is +91 9752731062
 - [ ] Website is www.srijanakimahaltrustofficial.com
 - [ ] Email is srijanakimahaltrust7484@gmail.com
 - [ ] Address matches official address
@@ -112,8 +112,8 @@ Complete guide to verify if Sri Janaki Mahal Trust is genuine. Learn how to chec
 ## Contact to Verify
 
 **For Verification:**
-- 📞 Phone: +91 7219868083
-- 💬 WhatsApp: +91 7219868083
+- 📞 Phone: +91 9752731062
+- 💬 WhatsApp: +91 9752731062
 - 📧 Email: srijanakimahaltrust7484@gmail.com
 - 🌐 Website: www.srijanakimahaltrustofficial.com
 
@@ -129,13 +129,13 @@ Complete guide to verify if Sri Janaki Mahal Trust is genuine. Learn how to chec
 Yes, Sri Janaki Mahal Trust is a genuine registered charitable trust.
 
 ### How to verify it's genuine?
-Check official contact (+91 7219868083), website (www.srijanakimahaltrustofficial.com), and address.
+Check official contact (+91 9752731062), website (www.srijanakimahaltrustofficial.com), and address.
 
 ### Is it registered?
 Yes, Sri Janaki Mahal Trust is a registered charitable trust established in 2020.
 
 ### Can I trust the contact number?
-Yes, +91 7219868083 is the verified official contact number.
+Yes, +91 9752731062 is the verified official contact number.
 
 ### How to avoid scams?
 Always use official contact, verify details, and check official website.
@@ -152,11 +152,11 @@ Always use official contact, verify details, and check official website.
 ## Book with Confidence
 
 **Official and Genuine:**
-- 📞 Phone: +91 7219868083
-- 💬 WhatsApp: +91 7219868083
+- 📞 Phone: +91 9752731062
+- 💬 WhatsApp: +91 9752731062
 - 📧 Email: srijanakimahaltrust7484@gmail.com
 
 ---
 
-*Sri Janaki Mahal Trust is genuine and verified. For verification, call +91 7219868083 or visit our [official page](/official).*
+*Sri Janaki Mahal Trust is genuine and verified. For verification, call +91 9752731062 or visit our [official page](/official).*
 

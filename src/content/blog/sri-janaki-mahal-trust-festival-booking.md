@@ -1,6 +1,6 @@
 ---
 title: Sri Janaki Mahal Trust Festival Booking - Ram Navami, Diwali, Special Dates
-description: Book rooms at Sri Janaki Mahal Trust during festivals. Festival booking guide for Ram Navami, Diwali, Makar Sankranti, and special dates. Advance booking recommended. Contact +91 7219868083
+description: Book rooms at Sri Janaki Mahal Trust during festivals. Festival booking guide for Ram Navami, Diwali, Makar Sankranti, and special dates. Advance booking recommended. Contact +91 9752731062
 date: 2025-03-08
 keywords:
   - 'Sri Janaki Mahal Trust festival booking'
@@ -84,8 +84,8 @@ Complete guide to festival booking at Sri Janaki Mahal Trust. Book rooms during 
 - **Advance Booking:** Recommended
 
 ### Contact for Rates
-- 📞 Phone: +91 7219868083
-- 💬 WhatsApp: +91 7219868083
+- 📞 Phone: +91 9752731062
+- 💬 WhatsApp: +91 9752731062
 - 📧 Email: srijanakimahaltrust7484@gmail.com
 
 ## Festival Booking FAQs
@@ -105,10 +105,10 @@ Yes, advance booking available for all festivals.
 ## Book for Festivals
 
 **Advance booking recommended:**
-- 📞 Phone: +91 7219868083
-- 💬 WhatsApp: +91 7219868083
+- 📞 Phone: +91 9752731062
+- 💬 WhatsApp: +91 9752731062
 
 ---
 
-*Book early for festivals. Call +91 7219868083 for festival booking.*
+*Book early for festivals. Call +91 9752731062 for festival booking.*
 

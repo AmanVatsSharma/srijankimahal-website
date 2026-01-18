@@ -1,6 +1,6 @@
 ---
 title: Is Sri Janaki Mahal Trust Verified, Official, and Authentic? - Complete Verification Guide
-description: Complete guide on verifying Sri Janaki Mahal Trust authenticity. Learn how to verify official status, registration details, and avoid scams. Official +91 7219868083
+description: Complete guide on verifying Sri Janaki Mahal Trust authenticity. Learn how to verify official status, registration details, and avoid scams. Official +91 9752731062
 date: 2025-02-01
 keywords:
   - 'Sri Janaki Mahal Trust verified'
@@ -37,7 +37,7 @@ Complete guide on verifying the authenticity of Sri Janaki Mahal Trust. Learn ho
 4. Check registration details
 
 **What to Look For:**
-- Official contact: +91 7219868083
+- Official contact: +91 9752731062
 - Official email: srijanakimahaltrust7484@gmail.com
 - Official address: Vasudev Gath, Karsewakpuram, Ayodhya
 - Registration information
@@ -45,8 +45,8 @@ Complete guide on verifying the authenticity of Sri Janaki Mahal Trust. Learn ho
 ### Method 2: Verify Contact Information
 
 **Official Contact:**
-- Phone: +91 7219868083
-- WhatsApp: +91 7219868083
+- Phone: +91 9752731062
+- WhatsApp: +91 9752731062
 - Email: srijanakimahaltrust7484@gmail.com
 - Website: www.srijanakimahaltrustofficial.com
 
@@ -134,7 +134,7 @@ Complete guide on verifying the authenticity of Sri Janaki Mahal Trust. Learn ho
   -s a Scam:**
 
 1. **Different Phone Number**
-   - Any number other than +91 7219868083
+   - Any number other than +91 9752731062
    - Multiple different numbers
    - No contact number
 
@@ -174,7 +174,7 @@ Complete guide on verifying the authenticity of Sri Janaki Mahal Trust. Learn ho
 **Use This Checklist:**
 
 - [ ] Website is www.srijanakimahaltrustofficial.com
-- [ ] Phone number is +91 7219868083
+- [ ] Phone number is +91 9752731062
 - [ ] Email is srijanakimahaltrust7484@gmail.com
 - [ ] Address matches official address
 - [ ] Registration details available
@@ -195,11 +195,11 @@ Complete guide on verifying the authenticity of Sri Janaki Mahal Trust. Learn ho
 - Official: /official
 
 ✅ **Official Phone**
-- Number: +91 7219868083
+- Number: +91 9752731062
 - Available: 24/7
 
 ✅ **Official WhatsApp**
-- Number: +91 7219868083
+- Number: +91 9752731062
 - Available: 24/7
 
 ✅ **Official Email**
@@ -226,9 +226,9 @@ Complete guide on verifying the authenticity of Sri Janaki Mahal Trust. Learn ho
 - Check official pages
 
 **Step 2: Verify Contact**
-- Check phone: +91 7219868083
+- Check phone: +91 9752731062
 - Check email: srijanakimahaltrust7484@gmail.com
-- Verify WhatsApp: +91 7219868083
+- Verify WhatsApp: +91 9752731062
 
 **Step 3: Check Information**
 - Verify address
@@ -254,7 +254,7 @@ Yes, Sri Janaki Mahal Trust is an official registered charitable trust.
 ### How can I verify it'
   -s authentic?
 
-Check official website (www.srijanakimahaltrustofficial.com), verify contact number (+91 7219868083), and visit official page (/official).
+Check official website (www.srijanakimahaltrustofficial.com), verify contact number (+91 9752731062), and visit official page (/official).
 
 ### Is it registered?
 
@@ -262,7 +262,7 @@ Yes, Sri Janaki Mahal Trust is a registered charitable trust established in 2020
 
 ### Can I trust the contact number?
 
-Yes, +91 7219868083 is the verified official contact number.
+Yes, +91 9752731062 is the verified official contact number.
 
 ### How do I know it'
   -s not a scam?
@@ -295,7 +295,7 @@ Yes, visit us at Vasudev Gath, Karsewakpuram, Ayodhya, UP 224123. GPS: 26.803928
 ### If You Find a Fake
 
 **Report Immediately:**
-1. Contact us: +91 7219868083
+1. Contact us: +91 9752731062
 2. Share fake website/contact
 3. Report scam details
 4. We'
@@ -345,12 +345,12 @@ Sri Janaki Mahal Trust is verified, official, and authentic. Verify through our 
 
 **Verify Now:**
 - 🌐 Official Website: www.srijanakimahaltrustofficial.com
-- 📞 Official Phone: +91 7219868083
+- 📞 Official Phone: +91 9752731062
 - 📍 Official Page: /official
 
 **Always Book Through Official Channels Only!**
 
 ---
 
-*For verification details, visit our [official page](/official) or contact us at +91 7219868083.*
+*For verification details, visit our [official page](/official) or contact us at +91 9752731062.*
 

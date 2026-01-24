@@ -21,15 +21,15 @@ Planning a peaceful stay near Ayodhya’s Ram Mandir? Use this verified director
 
 | Channel         | Details                                             | Availability        |
 |-----------------|-----------------------------------------------------|---------------------|
-| Helpline        | **+91 9752731062**                                  | 24/7                |
-| WhatsApp        | [https://wa.me/919752731062](https://wa.me/919752731062) | 6 AM – 11 PM IST   |
+| Helpline        | **+91 8295588176**                                  | 24/7                |
+| WhatsApp        | [https://wa.me/918295588176](https://wa.me/918295588176) | 6 AM – 11 PM IST   |
 | Email           | [srijanakimahaltrust7484@gmail.com](mailto:srijanakimahaltrust7484@gmail.com) | Replies in 12-18h |
 | Address         | Vasudev Ghat, Karsewakpuram, Ayodhya, Uttar Pradesh | Check-in 2 PM – 11 PM |
 | Maps Direction  | [Open in Google Maps](https://maps.app.goo.gl/vkZ6dAyodhyaJanakiMahal) | 24/7 navigation |
 
 ## 1. Official Phone Number
 
-- **Primary Helpline:** [+91 9752731062](tel:+919752731062)
+- **Primary Helpline:** [+91 8295588176](tel:+918295588176)
 - **Also answers to:** Sri Janaki Mahal Trust, Janaki Mahal Trust, Shri Janki Mahal Trust Ayodhya
 - **Best for:** Instant bookings, urgent support, check-in updates, scam verification
 
@@ -37,7 +37,7 @@ Planning a peaceful stay near Ayodhya’s Ram Mandir? Use this verified director
 
 ## 2. WhatsApp Booking Support
 
-- Click [https://wa.me/919752731062](https://wa.me/919752731062) to open WhatsApp chat with the official desk.
+- Click [https://wa.me/918295588176](https://wa.me/918295588176) to open WhatsApp chat with the official desk.
 - Send your travel details using this template:
   ```
   Jai Shri Ram! My name is ______.
@@ -88,7 +88,7 @@ Expect a comprehensive reply within 12-18 hours on business days.
 ## 6. Frequently Asked Questions
 
 ### Is the contact number the same for Sri and Shri spellings?
-Yes. Whether you search for **Sri Janki Mahal Trust**, **Janaki Mahal Trust**, or **Shri Janki Mahal Trust Ayodhya**, the only official number is **+91 9752731062**.
+Yes. Whether you search for **Sri Janki Mahal Trust**, **Janaki Mahal Trust**, or **Shri Janki Mahal Trust Ayodhya**, the only official number is **+91 8295588176**.
 
 ### Can I get the location pin on WhatsApp?
 Absolutely. The helpline shares a Google Maps pin, parking instructions, and tips for late-night arrivals.
@@ -108,8 +108,8 @@ Yes. Support is available in Hindi and English. For other languages, drop an ema
 
 ## Summary Checklist
 
-- ✅ Save **+91 9752731062** (Phone & WhatsApp)
-- ✅ Bookmark [official WhatsApp link](https://wa.me/919752731062)
+- ✅ Save **+91 8295588176** (Phone & WhatsApp)
+- ✅ Bookmark [official WhatsApp link](https://wa.me/918295588176)
 - ✅ Note down [trust email](mailto:srijanakimahaltrust7484@gmail.com)
 - ✅ Remember the address: Vasudev Ghat, Karsewakpuram, Ayodhya
 - ✅ Confirm any unexpected call via the official helpline

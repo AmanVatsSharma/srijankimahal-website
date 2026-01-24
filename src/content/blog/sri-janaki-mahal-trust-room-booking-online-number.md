@@ -1,6 +1,6 @@
 ---
 title: Sri Janaki Mahal Trust Room Booking Online - Phone Number and Process
-description: Book room at Sri Janaki Mahal Trust online. Official booking number +91 9752731062. Complete guide to online room booking, WhatsApp booking, and instant confirmation process.
+description: Book room at Sri Janaki Mahal Trust online. Official booking number +91 8295588176. Complete guide to online room booking, WhatsApp booking, and instant confirmation process.
 date: 2025-02-22
 keywords:
   - 'Sri Janaki Mahal Trust room booking online'
@@ -20,7 +20,7 @@ Complete guide to booking room at Sri Janaki Mahal Trust online. Learn about off
 
 ### Official Booking Number
 
-**Phone/WhatsApp:** +91 9752731062
+**Phone/WhatsApp:** +91 8295588176
 
 **Available:** 24 hours, 7 days a week  
 **Instant Booking:** Available  
@@ -31,7 +31,7 @@ Complete guide to booking room at Sri Janaki Mahal Trust online. Learn about off
 ### Method 1: WhatsApp Booking (Recommended)
 
 **Step 1:** Open WhatsApp  
-**Step 2:** Send message to +91 9752731062  
+**Step 2:** Send message to +91 8295588176  
 **Step 3:** Include booking details  
 **Step 4:** Receive instant confirmation
 
@@ -55,7 +55,7 @@ Room: [AC/Non-AC, Bed count]
 
 ### Method 2: Phone Booking
 
-**Step 1:** Call +91 9752731062  
+**Step 1:** Call +91 8295588176  
 **Step 2:** Speak with booking team  
 **Step 3:** Provide details  
 **Step 4:** Get instant confirmation
@@ -92,8 +92,8 @@ Room: [AC/Non-AC, Bed count]
 - Luxury Suite: ₹3,500 - ₹4,150
 
 ### Step 3: Contact for Booking
-- WhatsApp: +91 9752731062
-- Phone: +91 9752731062
+- WhatsApp: +91 8295588176
+- Phone: +91 8295588176
 - Email: srijanakimahaltrust7484@gmail.com
 
 ### Step 4: Receive Confirmation
@@ -168,13 +168,13 @@ Room: [AC/Non-AC, Bed count]
 ## Online Booking FAQs
 
 ### Can I book room online at Sri Janaki Mahal Trust?
-Yes, book online via WhatsApp +91 9752731062 or phone +91 9752731062.
+Yes, book online via WhatsApp +91 8295588176 or phone +91 8295588176.
 
 ### Is instant booking available?
 Yes, instant booking and confirmation available via phone or WhatsApp.
 
 ### What is the booking number?
-Official booking number is +91 9752731062 (phone and WhatsApp).
+Official booking number is +91 8295588176 (phone and WhatsApp).
 
 ### How quickly will I get confirmation?
 Instant confirmation via phone or WhatsApp. Email within 24 hours.
@@ -194,8 +194,8 @@ Yes, contact us to modify your booking. Changes subject to availability.
 ## Contact for Online Booking
 
 **For Instant Booking:**
-- 💬 WhatsApp: +91 9752731062
-- 📞 Phone: +91 9752731062
+- 💬 WhatsApp: +91 8295588176
+- 📞 Phone: +91 8295588176
 
 **For Email Booking:**
 - 📧 Email: srijanakimahaltrust7484@gmail.com
@@ -208,11 +208,11 @@ Yes, contact us to modify your booking. Changes subject to availability.
 Booking room at Sri Janaki Mahal Trust online is simple and quick. Use WhatsApp or phone for instant booking, or email for detailed inquiries.
 
 **Book online now:**
-- 📞 Call: +91 9752731062
-- 💬 WhatsApp: +91 9752731062
+- 📞 Call: +91 8295588176
+- 💬 WhatsApp: +91 8295588176
 - 📧 Email: srijanakimahaltrust7484@gmail.com
 
 ---
 
-*For more information, visit our [booking page](/booking) or call +91 9752731062.*
+*For more information, visit our [booking page](/booking) or call +91 8295588176.*
 

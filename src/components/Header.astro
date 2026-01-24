@@ -96,23 +96,47 @@ import { WHATSAPP_BOOKING_LINK, TEL_LINK } from '../lib/constants';
 </header>
 
 <script>
-  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-  const mobileNav = document.getElementById('mobile-nav');
-  const menuIcon = document.getElementById('menu-icon');
-  const closeIcon = document.getElementById('close-icon');
+  // Debug + defensive setup for mobile navigation
+  try {
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileNav = document.getElementById('mobile-nav');
+    const menuIcon = document.getElementById('menu-icon');
+    const closeIcon = document.getElementById('close-icon');
 
-  mobileMenuBtn?.addEventListener('click', () => {
-    mobileNav?.classList.toggle('hidden');
-    menuIcon?.classList.toggle('hidden');
-    closeIcon?.classList.toggle('hidden');
-  });
+    const setOpen = (open) => {
+      if (!mobileNav || !menuIcon || !closeIcon) return;
+      mobileNav.classList.toggle('hidden', !open);
+      menuIcon.classList.toggle('hidden', open);
+      closeIcon.classList.toggle('hidden', !open);
+      console.log('[Header] Mobile nav state:', open ? 'open' : 'closed');
+    };
 
-  const navLinks = mobileNav?.querySelectorAll('a');
-  navLinks?.forEach(link => {
-    link.addEventListener('click', () => {
-      mobileNav?.classList.add('hidden');
-      menuIcon?.classList.remove('hidden');
-      closeIcon?.classList.add('hidden');
+    console.log('[Header] Initializing mobile menu handlers', {
+      hasButton: Boolean(mobileMenuBtn),
+      hasNav: Boolean(mobileNav),
     });
-  });
+
+    mobileMenuBtn?.addEventListener('click', () => {
+      const isHidden = mobileNav?.classList.contains('hidden') ?? true;
+      setOpen(isHidden);
+    });
+
+    // Close menu when a link is selected
+    const navLinks = mobileNav?.querySelectorAll('a');
+    navLinks?.forEach((link) => {
+      link.addEventListener('click', () => setOpen(false));
+    });
+
+    // Close menu when clicking outside (mobile only)
+    document.addEventListener('click', (e) => {
+      if (!mobileNav || !mobileMenuBtn) return;
+      const target = e.target;
+      const clickedInsideNav = mobileNav.contains(target);
+      const clickedButton = mobileMenuBtn.contains(target);
+      const isOpen = !mobileNav.classList.contains('hidden');
+      if (isOpen && !clickedInsideNav && !clickedButton) setOpen(false);
+    });
+  } catch (err) {
+    console.error('[Header] Failed to initialize mobile menu', err);
+  }
 </script>

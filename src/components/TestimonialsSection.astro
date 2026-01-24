@@ -48,10 +48,15 @@ console.log('[Testimonials] Review schema generated for', reviews.length, 'revie
     </div>
 
     <!-- Testimonials Carousel -->
-    <div class="relative overflow-hidden">
-      <div id="testimonials-carousel" class="flex gap-6 scroll-left">
+    <!--
+      Mobile layout note:
+      - On phones, allow swipe scroll with snap so cards are centered and not clipped.
+      - Keep auto-scroll animation only on md+ to avoid "misaligned" feeling on small screens.
+    -->
+    <div class="relative overflow-x-auto md:overflow-hidden no-scrollbar">
+      <div id="testimonials-carousel" class="flex gap-6 scroll-left px-4 py-1 snap-x snap-mandatory md:snap-none">
         <!-- Testimonial 1 -->
-        <div class="flex-shrink-0 w-96 bg-white rounded-lg shadow-lg p-6">
+        <div class="flex-shrink-0 w-[85vw] max-w-sm sm:w-96 sm:max-w-none bg-white rounded-lg shadow-lg p-6 snap-start">
           <div class="flex items-center gap-1 mb-4">
             <span class="text-yellow-400">★</span>
             <span class="text-yellow-400">★</span>
@@ -74,7 +79,7 @@ console.log('[Testimonials] Review schema generated for', reviews.length, 'revie
         </div>
 
         <!-- Testimonial 2 -->
-        <div class="flex-shrink-0 w-96 bg-white rounded-lg shadow-lg p-6">
+        <div class="flex-shrink-0 w-[85vw] max-w-sm sm:w-96 sm:max-w-none bg-white rounded-lg shadow-lg p-6 snap-start">
           <div class="flex items-center gap-1 mb-4">
             <span class="text-yellow-400">★</span>
             <span class="text-yellow-400">★</span>
@@ -97,7 +102,7 @@ console.log('[Testimonials] Review schema generated for', reviews.length, 'revie
         </div>
 
         <!-- Testimonial 3 -->
-        <div class="flex-shrink-0 w-96 bg-white rounded-lg shadow-lg p-6">
+        <div class="flex-shrink-0 w-[85vw] max-w-sm sm:w-96 sm:max-w-none bg-white rounded-lg shadow-lg p-6 snap-start">
           <div class="flex items-center gap-1 mb-4">
             <span class="text-yellow-400">★</span>
             <span class="text-yellow-400">★</span>
@@ -120,7 +125,7 @@ console.log('[Testimonials] Review schema generated for', reviews.length, 'revie
         </div>
 
         <!-- Testimonial 4 -->
-        <div class="flex-shrink-0 w-96 bg-white rounded-lg shadow-lg p-6">
+        <div class="flex-shrink-0 w-[85vw] max-w-sm sm:w-96 sm:max-w-none bg-white rounded-lg shadow-lg p-6 snap-start">
           <div class="flex items-center gap-1 mb-4">
             <span class="text-yellow-400">★</span>
             <span class="text-yellow-400">★</span>
@@ -143,7 +148,7 @@ console.log('[Testimonials] Review schema generated for', reviews.length, 'revie
         </div>
 
         <!-- Duplicate for seamless loop -->
-        <div class="flex-shrink-0 w-96 bg-white rounded-lg shadow-lg p-6">
+        <div class="flex-shrink-0 w-[85vw] max-w-sm sm:w-96 sm:max-w-none bg-white rounded-lg shadow-lg p-6 snap-start">
           <div class="flex items-center gap-1 mb-4">
             <span class="text-yellow-400">★</span>
             <span class="text-yellow-400">★</span>
@@ -175,7 +180,10 @@ console.log('[Testimonials] Review schema generated for', reviews.length, 'revie
 )}
 
 <style>
-  #testimonials-carousel {
-    animation: scroll-left 40s linear infinite;
+  /* Avoid mobile "clipped/misaligned" auto-scroll; keep it on md+ only */
+  @media (min-width: 768px) {
+    #testimonials-carousel {
+      animation: scroll-left 40s linear infinite;
+    }
   }
 </style>

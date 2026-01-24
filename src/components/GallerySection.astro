@@ -155,17 +155,17 @@ const imageSchemas = Array.from(uniqueImageMap.values());
     <!-- Dual-lane gallery: manual scroll + auto-scroll in opposite directions -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
       {galleryGroups.map((group, groupIndex) => (
-        <div class="relative h-96 rounded-lg">
+        <div class="relative h-72 sm:h-96 rounded-lg">
           <div
-            class="lane no-scrollbar gallery-scroll overflow-x-auto overflow-y-hidden h-96"
+            class="lane no-scrollbar gallery-scroll overflow-x-auto overflow-y-hidden h-72 sm:h-96 px-4"
             data-direction={group.direction}
             data-duration={AUTO_DURATION_SEC}
             aria-label={`Auto-scrolling gallery lane ${group.direction}`}
           >
-            <div class="lane-track flex gap-4" style="will-change: scroll-position;">
+            <div class="lane-track flex gap-4 pr-4" style="will-change: scroll-position;">
               { [...group.images, ...group.images].map((image, imageIndex) => (
                 <figure
-                  class="gallery-item flex-shrink-0 w-80 h-96 rounded-lg overflow-hidden shadow-lg bg-white"
+                  class="gallery-item flex-shrink-0 w-[85vw] max-w-sm sm:w-80 sm:max-w-none h-72 sm:h-96 rounded-lg overflow-hidden shadow-lg bg-white"
                   data-index={`${groupIndex}-${imageIndex}`}
                 >
                   <img
@@ -176,7 +176,7 @@ const imageSchemas = Array.from(uniqueImageMap.values());
                     decoding="async"
                     width={image.width}
                     height={image.height}
-                    sizes="(max-width: 768px) 80vw, 20rem"
+                    sizes="(max-width: 768px) 85vw, 20rem"
                     class="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
                   />
                   <figcaption class="sr-only">{image.caption}</figcaption>

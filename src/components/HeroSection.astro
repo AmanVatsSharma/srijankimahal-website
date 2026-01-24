@@ -11,7 +11,12 @@ import { DISPLAY_PHONE, TEL_LINK, WHATSAPP_LINK } from '../lib/constants';
   - Service keywords: AC rooms, Non-AC rooms, booking
   - CTA buttons with proper aria-labels for accessibility
 -->
-<section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden" aria-label="Sri Janaki Mahal Trust Hero Section - Book AC and Non-AC Rooms in Ayodhya">
+<!--
+  Mobile layout note:
+  - Use `svh` to avoid mobile browser UI jumpiness.
+  - Subtract the sticky header height (4rem) so hero content doesn't feel misaligned/cropped on phones.
+-->
+<section id="home" class="relative min-h-[calc(100svh-4rem)] md:min-h-screen flex items-center justify-center overflow-hidden" aria-label="Sri Janaki Mahal Trust Hero Section - Book AC and Non-AC Rooms in Ayodhya">
   <!-- Background Image with SEO-optimized alt text -->
   <figure class="absolute inset-0 z-0 m-0">
     <img 
@@ -48,12 +53,12 @@ import { DISPLAY_PHONE, TEL_LINK, WHATSAPP_LINK } from '../lib/constants';
     </p>
 
     <!-- Two orange buttons: Call and WhatsApp - Primary CTAs for booking -->
-    <nav class="flex flex-col sm:flex-row items-center justify-center gap-4" aria-label="Booking contact options">
+    <nav class="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4" aria-label="Booking contact options">
       <!-- Call Button (Orange) - Primary booking CTA -->
       <a
         id="hero-call"
         href={TEL_LINK}
-        class="px-8 py-4 rounded-xl bg-orange-600 text-white font-bold hover:bg-orange-700 transition-all duration-300 inline-flex items-center gap-2 text-lg shadow-lg"
+        class="w-full max-w-sm sm:w-auto sm:max-w-none px-6 sm:px-8 py-4 rounded-xl bg-orange-600 text-white font-bold hover:bg-orange-700 transition-all duration-300 inline-flex items-center justify-center gap-2 text-lg shadow-lg"
         onclick={`return gtag_report_conversion('${TEL_LINK}');`}
         aria-label={`Call ${DISPLAY_PHONE} for Sri Janaki Mahal Trust room booking in Ayodhya`}
         title="Call to book AC or Non-AC rooms at Sri Janaki Mahal Trust"
@@ -70,7 +75,7 @@ import { DISPLAY_PHONE, TEL_LINK, WHATSAPP_LINK } from '../lib/constants';
         href={WHATSAPP_LINK}
         target="_blank"
         rel="noopener noreferrer"
-        class="px-8 py-4 rounded-xl bg-orange-600 text-white font-bold hover:bg-orange-700 transition-all duration-300 inline-flex items-center gap-2 text-lg shadow-lg"
+        class="w-full max-w-sm sm:w-auto sm:max-w-none px-6 sm:px-8 py-4 rounded-xl bg-orange-600 text-white font-bold hover:bg-orange-700 transition-all duration-300 inline-flex items-center justify-center gap-2 text-lg shadow-lg"
         onclick={`return gtag_report_conversion('${WHATSAPP_LINK}');`}
         aria-label={`WhatsApp ${DISPLAY_PHONE} for Sri Janaki Mahal Trust room booking in Ayodhya`}
         title="WhatsApp to book AC or Non-AC rooms at Sri Janaki Mahal Trust"

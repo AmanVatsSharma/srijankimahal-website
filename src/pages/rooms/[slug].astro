@@ -536,8 +536,9 @@ const imageObjects: ImageObjectSchema[] = room.images.map((image: RoomImage) => 
   ogImage={room.images[0]?.src ?? '/og.jpg'}
 >
   <Header />
-  <main class="bg-[#faf8f3] py-12 px-4 md:px-12 lg:px-24">
-    <div class="mx-auto flex max-w-6xl flex-col gap-12">
+  <!-- Standard page container: consistent padding across all breakpoints -->
+  <main class="bg-[#faf8f3] py-12">
+    <div class="mx-auto flex max-w-6xl flex-col gap-12 px-4 sm:px-6 lg:px-8">
       <!-- Hero section communicates room type and conversion CTAs -->
       <section class="rounded-3xl bg-white p-8 shadow-lg">
         <div class="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">

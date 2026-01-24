@@ -101,14 +101,14 @@ const imageSchemas = [...leftLaneImages, ...rightLaneImages].map((image) => ({
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 overflow-hidden">
-      <div class="relative overflow-hidden h-96 rounded-lg">
+      <div class="relative overflow-hidden h-72 sm:h-96 rounded-lg">
         <div
           id="gallery-left"
           class="flex gap-4 animate-slide-in-left"
           style="animation: scroll-left 30s linear infinite;"
         >
           {[...leftLaneImages, ...leftLaneImages].map((image, index) => (
-            <figure class="flex-shrink-0 w-80 h-96 rounded-lg overflow-hidden shadow-lg bg-white" data-index={`left-${index}`}>
+            <figure class="flex-shrink-0 w-[85vw] max-w-sm sm:w-80 sm:max-w-none h-72 sm:h-96 rounded-lg overflow-hidden shadow-lg bg-white" data-index={`left-${index}`}>
               <img
                 src={image.src}
                 alt={image.alt}
@@ -125,14 +125,14 @@ const imageSchemas = [...leftLaneImages, ...rightLaneImages].map((image) => ({
         </div>
       </div>
 
-      <div class="relative overflow-hidden h-96 rounded-lg">
+      <div class="relative overflow-hidden h-72 sm:h-96 rounded-lg">
         <div
           id="gallery-right"
           class="flex gap-4 animate-slide-in-right"
           style="animation: scroll-right 30s linear infinite reverse;"
         >
           {[...rightLaneImages, ...rightLaneImages].map((image, index) => (
-            <figure class="flex-shrink-0 w-80 h-96 rounded-lg overflow-hidden shadow-lg bg-white" data-index={`right-${index}`}>
+            <figure class="flex-shrink-0 w-[85vw] max-w-sm sm:w-80 sm:max-w-none h-72 sm:h-96 rounded-lg overflow-hidden shadow-lg bg-white" data-index={`right-${index}`}>
               <img
                 src={image.src}
                 alt={image.alt}

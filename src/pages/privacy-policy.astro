@@ -1,5 +1,10 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import FloatingWhatsApp from '../components/FloatingWhatsApp.astro';
+
+console.log('[PrivacyPolicyPage] Rendering privacy policy');
 ---
 
 <Layout 
@@ -13,7 +18,8 @@ import Layout from '../layouts/Layout.astro';
   canonical="/privacy-policy"
   noindex={false}
 >
-  <div class="min-h-screen bg-[#faf8f3] py-12">
+  <Header />
+  <main class="min-h-screen bg-[#faf8f3] py-12">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <!-- Header -->
       <div class="text-center mb-12">
@@ -193,5 +199,7 @@ import Layout from '../layouts/Layout.astro';
 
       </div>
     </div>
-  </div>
+  </main>
+  <Footer />
+  <FloatingWhatsApp />
 </Layout>

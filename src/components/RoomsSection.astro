@@ -250,13 +250,13 @@ console.log('[Rooms Section] Booking schema generated');
 
 <!-- Room Details Modal -->
 <div id="room-modal" class="modal-overlay">
-  <div class="modal-content w-full sm:w-11/12 md:w-3/4 lg:w-2/3 rounded-2xl">
-    <div class="sticky top-0 bg-white border-b border-gray-200 p-6 flex justify-between items-center">
+  <div class="modal-content w-full sm:w-11/12 md:w-3/4 lg:w-2/3 rounded-2xl mx-4 sm:mx-0">
+    <div class="sticky top-0 bg-white border-b border-gray-200 p-4 sm:p-6 flex justify-between items-center">
       <h2 id="modal-title" class="text-2xl font-bold text-gray-900"></h2>
       <button id="close-modal" class="text-gray-500 hover:text-gray-700 text-2xl">×</button>
     </div>
 
-    <div class="p-6 space-y-6">
+    <div class="p-4 sm:p-6 space-y-6">
       <!-- Image Gallery -->
       <div class="space-y-4">
         <h3 class="text-lg font-semibold text-gray-900">Room Gallery</h3>
@@ -349,6 +349,9 @@ console.log('[Rooms Section] Booking schema generated');
 </div>
 
 <script>
+  // Debug + defensive setup for the room details modal
+  console.log('[RoomsSection] Initializing room modal listeners');
+
   const modal = document.getElementById('room-modal');
   const closeBtn = document.getElementById('close-modal');
   const roomCards = document.querySelectorAll('.room-card');
@@ -420,6 +423,7 @@ console.log('[Rooms Section] Booking schema generated');
     if (modal) {
       modal.classList.add('active');
       document.body.style.overflow = 'hidden';
+      console.log('[RoomsSection] Modal opened:', { roomType, title, price });
     }
   }
 
@@ -427,6 +431,7 @@ console.log('[Rooms Section] Booking schema generated');
     if (modal) {
       modal.classList.remove('active');
       document.body.style.overflow = 'auto';
+      console.log('[RoomsSection] Modal closed');
     }
   }
 
@@ -451,6 +456,12 @@ console.log('[Rooms Section] Booking schema generated');
 
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') closeModalFunc();
+  });
+
+  console.log('[RoomsSection] Modal listeners ready:', {
+    roomCards: roomCards?.length ?? 0,
+    viewButtons: viewDetailsBtns?.length ?? 0,
+    hasModal: Boolean(modal),
   });
 </script>
 

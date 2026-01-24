@@ -51,7 +51,7 @@ Choosing **Janaki Mahal Trust** (also known as **Sri Janki Mahal Trust** and **S
 
 ## How to Share Your Review
 
-1. WhatsApp your feedback to **+91 9752731062**.
+1. WhatsApp your feedback to **+91 8295588176**.
 2. Email testimonials to [srijanakimahaltrust7484@gmail.com](mailto:srijanakimahaltrust7484@gmail.com).
 3. Mention both “Janaki Mahal Trust” and “Sri Janki Mahal Trust” so future devotees find the authentic contact easily.
 
@@ -69,7 +69,7 @@ Yes. Record your experience and send it via WhatsApp. With your permission, the 
 ## Quick Booking Checklist
 
 - ✅ Review devotional testimonials above
-- ✅ Call the official helpline **+91 9752731062**
+- ✅ Call the official helpline **+91 8295588176**
 - ✅ Request the trust-stamped confirmation slip
 - ✅ Save your feedback to share post checkout
 

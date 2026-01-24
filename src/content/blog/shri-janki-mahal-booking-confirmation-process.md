@@ -19,8 +19,8 @@ Every legitimate booking at **Shri Janki Mahal Trust** (also called **Sri Janaki
 
 ## Step 1: Submit Booking Request via Official Channels
 
-- **Phone / Helpline:** [+91 9752731062](tel:+919752731062)
-- **WhatsApp:** [https://wa.me/919752731062](https://wa.me/919752731062)
+- **Phone / Helpline:** [+91 8295588176](tel:+918295588176)
+- **WhatsApp:** [https://wa.me/918295588176](https://wa.me/918295588176)
 - **Email:** [srijanakimahaltrust7484@gmail.com](mailto:srijanakimahaltrust7484@gmail.com)
 
 Provide your travel dates, guest count, preferred room type, and special requirements.
@@ -44,7 +44,7 @@ Once you agree to the tariff, the trust sends a digital confirmation slip contai
 4. **Payment Summary** – Advance amount requested, balance payable at check-in (if applicable).
 5. **Trust Seal** – Graphic stamp ensuring authenticity.
 
-> Comment: The confirmation slip is always sent from **+91 9752731062** or the official email. Anything else is invalid.
+> Comment: The confirmation slip is always sent from **+91 8295588176** or the official email. Anything else is invalid.
 
 ## Step 4: Verify Every Detail on the Slip
 
@@ -90,7 +90,7 @@ Yes. Inform the trust at least 48 hours before check-in for a refund during non-
 
 ## Authentication Checklist
 
-- ✅ Confirmation slip originates from **+91 9752731062** or official email.
+- ✅ Confirmation slip originates from **+91 8295588176** or official email.
 - ✅ Booking ID structure matches `SJM-YYYY-MMDD-ROOM`.
 - ✅ Trust seal and footer appear clearly on the document.
 - ✅ Payment details mention **Sri Janaki Mahal Trust** or **Janaki Mahal Trust Ayodhya**.

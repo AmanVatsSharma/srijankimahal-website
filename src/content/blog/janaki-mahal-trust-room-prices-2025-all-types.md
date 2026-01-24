@@ -38,7 +38,7 @@ Planning your stay near Ram Mandir? Review the official 2025 tariff card for **J
 - 24/7 hot water, security, elevator access
 - Daily housekeeping and fresh bedding
 - Wi-Fi (select categories), prayer corner, and devotional ambience
-- Emergency support via **+91 9752731062**
+- Emergency support via **+91 8295588176**
 
 ## Booking & Payment Notes
 
@@ -65,7 +65,7 @@ Non-festival bookings can be cancelled up to 48 hours prior for a refund. Festiv
 ## Quick Booking Checklist
 
 - ✅ Finalise preferred room type and travel dates
-- ✅ Call **+91 9752731062** or WhatsApp [https://wa.me/919752731062](https://wa.me/919752731062)
+- ✅ Call **+91 8295588176** or WhatsApp [https://wa.me/918295588176](https://wa.me/918295588176)
 - ✅ Request the 2025 tariff confirmation in writing
 - ✅ Pay only via official bank/UPI details
 - ✅ Keep confirmation slip ready for check-in

@@ -18,7 +18,7 @@ Planning to visit Ayodhya and stay at Sri Janaki Mahal Trust? This comprehensive
 
 ### Method 1: Phone Booking (Recommended)
 
-**Step 1:** Call our official number: **+91 8295588176**
+**Step 1:** Call our official number: **+91 8460839199**
 
 **Step 2:** Provide the following information:
 - Your name
@@ -43,7 +43,7 @@ Planning to visit Ayodhya and stay at Sri Janaki Mahal Trust? This comprehensive
 
 ### Method 2: WhatsApp Booking
 
-**Step 1:** Message us on WhatsApp: **+91 8295588176**
+**Step 1:** Message us on WhatsApp: **+91 8460839199**
 
 **Step 2:** Send a message with:
 ```
@@ -219,7 +219,7 @@ Our team checks:
 
 ### Can I book same day?
 
-Yes, same-day bookings may be available subject to availability. Call +91 8295588176 to check.
+Yes, same-day bookings may be available subject to availability. Call +91 8460839199 to check.
 
 ### Is advance payment required?
 
@@ -241,8 +241,8 @@ Yes, booking confirmation is required and provided. Keep it for check-in.
 
 **Only book through:**
 
-✅ **Official Phone:** +91 8295588176  
-✅ **Official WhatsApp:** +91 8295588176  
+✅ **Official Phone:** +91 8460839199  
+✅ **Official WhatsApp:** +91 8460839199  
 ✅ **Official Website:** www.srijanakimahaltrustofficial.com  
 ✅ **Official Email:** srijanakimahaltrust7484@gmail.com  
 
@@ -294,8 +294,8 @@ Yes, booking confirmation is required and provided. Keep it for check-in.
 ## Need Help?
 
 **Booking Assistance:**
-- 📞 Phone: +91 8295588176 (24/7)
-- 💬 WhatsApp: +91 8295588176
+- 📞 Phone: +91 8460839199 (24/7)
+- 💬 WhatsApp: +91 8460839199
 - 📧 Email: srijanakimahaltrust7484@gmail.com
 - 🌐 Website: www.srijanakimahaltrustofficial.com
 
@@ -304,8 +304,8 @@ Yes, booking confirmation is required and provided. Keep it for check-in.
 Booking a room at Sri Janaki Mahal Trust is simple and straightforward. Choose your preferred method (phone, WhatsApp, or email), provide your details, and receive instant confirmation.
 
 **Book now:**
-- Call: +91 8295588176
-- WhatsApp: +91 8295588176
+- Call: +91 8460839199
+- WhatsApp: +91 8460839199
 - Visit: /booking
 
 ---

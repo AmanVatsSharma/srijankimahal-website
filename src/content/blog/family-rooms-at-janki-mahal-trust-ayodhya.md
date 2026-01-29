@@ -37,7 +37,7 @@ Travelling with parents, children, or large yatri groups? **Janki Mahal Trust** 
 
 ## Booking Tips for Families
 
-1. Share family composition (adults + children) when you call **+91 8295588176**.
+1. Share family composition (adults + children) when you call **+91 8460839199**.
 2. Request extra mattresses or baby cribs in advance.
 3. Inform the trust about special dietary needs or medical requirements.
 4. Plan check-in around 2 PM to settle before evening aarti.

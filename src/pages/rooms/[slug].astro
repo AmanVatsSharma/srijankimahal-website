@@ -444,9 +444,6 @@ if (!room) {
   throw new Error(`Room slug "${slug}" not found in configuration`);
 }
 
-// Console log ensures debugging visibility for specific room renders
-console.log('[RoomsPage] Rendering room page with slug:', slug);
-
 const breadcrumbs = generateBreadcrumbSchema([
   { name: 'Home', url: '/' },
   { name: 'Rooms', url: '/rooms' },
@@ -594,6 +591,8 @@ const imageObjects: ImageObjectSchema[] = room.images.map((image: RoomImage) => 
                 width={image.width}
                 height={image.height}
                 title={image.title}
+                loading="lazy"
+                decoding="async"
                 class="h-full w-full object-cover transition duration-500 hover:scale-105"
               />
               <figcaption class="bg-[#fef6ea] p-4 text-sm text-[#3d2f1c]">

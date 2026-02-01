@@ -1,5 +1,5 @@
 ---
-title: Ayodhya Food and Dining Guide: Where to Eat and What to Try
+title: "Ayodhya Food and Dining Guide: Where to Eat and What to Try"
 description: "Complete dining guide for Ayodhya: local cuisine, recommended eateries, food safety tips, vegetarian options, and culinary experiences for pilgrims."
 date: 2026-02-01
 keywords:

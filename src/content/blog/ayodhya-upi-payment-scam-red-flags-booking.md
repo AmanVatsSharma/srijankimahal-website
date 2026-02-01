@@ -1,6 +1,6 @@
 ---
 title: Ayodhya Booking Payment Scam Red Flags (UPI Links) — What to Avoid
-description: A simple list of UPI/payment red flags while booking in Ayodhya: how scams work, what to verify, and official links for Sri Janaki Mahal Trust verification.
+description: "A simple list of UPI/payment red flags while booking in Ayodhya: how scams work, what to verify, and official links for Sri Janaki Mahal Trust verification."
 date: 2026-02-01
 keywords:
   - 'Ayodhya booking scam'

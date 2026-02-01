@@ -1,6 +1,6 @@
 ---
 title: How to Choose a Room by Group Size in Ayodhya (2/3/4 Bed, Family) — Simple Guide
-description: Choose the right room type by group size: quick guidance for couples, families, and yatri groups, with direct links to room pages and official booking.
+description: "Choose the right room type by group size: quick guidance for couples, families, and yatri groups, with direct links to room pages and official booking."
 date: 2026-02-01
 keywords:
   - 'choose room type Ayodhya'

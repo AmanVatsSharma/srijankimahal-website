@@ -1,6 +1,6 @@
 ---
 title: How to Verify a Booking Confirmation Message (Sri Janaki Mahal Trust) — Checklist
-description: A simple checklist to verify if a booking confirmation is genuine: what details must be present, where it should come from, and the official pages to cross-check.
+description: "A simple checklist to verify if a booking confirmation is genuine: what details must be present, where it should come from, and the official pages to cross-check."
 date: 2026-02-01
 keywords:
   - 'verify booking confirmation'

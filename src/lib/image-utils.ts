@@ -1,14 +1,12 @@
 /**
- * Image Optimization Utilities
- * 
- * Provides utilities for responsive images, WebP conversion detection,
- * and image optimization helpers for SEO and performance.
- * 
- * Flow:
- * 1. Check browser support for WebP
- * 2. Generate responsive image srcsets
- * 3. Provide optimized image paths
- * 4. Helper functions for image optimization
+ * File: Astro/src/lib/image-utils.ts
+ * Module: astro-performance
+ * Purpose: Image helper utilities (srcset/sizes/WebP helpers).
+ * Author: Aman Sharma / NovologicAI
+ * Last-updated: 2026-02-01
+ * Notes:
+ * - This module does not transform images automatically; it only generates attributes.
+ * - Avoid production console logging for CWV and cleanliness.
  */
 
 /**
@@ -174,6 +172,4 @@ export function generateResponsiveImage(
     fallbackSrc: fallback,
   };
 }
-
-console.log('[Image Utils] Image optimization utilities loaded');
 

@@ -1,15 +1,20 @@
 /**
- * Centralized Constants for Sri Janaki Mahal Trust
- * 
- * This file contains all frequently updated constants like contact numbers.
- * Update these values in one place to change them across the entire application.
- * 
- * Last Updated: 2025-01-XX
+ * File: Astro/src/lib/constants.ts
+ * Module: astro-core
+ * Purpose: Centralized site constants (contact + links).
+ * Author: Aman Sharma / NovologicAI
+ * Last-updated: 2026-02-01
+ * Notes:
+ * - Keep these values consistent with on-site NAP and schema.org JSON-LD.
+ * - Avoid adding production console logging here (policy + CWV).
  */
 
 // Mobile Number Constants
 // Update this number to change it everywhere in the application
 export const MOBILE_NUMBER = '8460839199';
+
+// Official contact email (chosen as primary in SEO plan)
+export const OFFICIAL_EMAIL = 'srijanakimahaltrust7484@gmail.com';
 
 // Formatted display versions
 export const DISPLAY_PHONE = `+91 ${MOBILE_NUMBER}`;
@@ -29,8 +34,3 @@ export const WHATSAPP_BOOKING_LINK_HI = `${WHATSAPP_LINK}?text=${WHATSAPP_BOOKIN
 
 // For structured data (schema.org)
 export const SCHEMA_TELEPHONE = `+91-${MOBILE_NUMBER}`;
-
-// Console log helper for debugging
-export const logPhoneUpdate = () => {
-  console.log('[Constants] Mobile number loaded:', DISPLAY_PHONE);
-};

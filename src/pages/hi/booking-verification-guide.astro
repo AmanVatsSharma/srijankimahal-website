@@ -1,0 +1,130 @@
+<!-- // src/pages/hi/booking-verification-guide.astro -->
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import FloatingWhatsApp from '../../components/FloatingWhatsApp.astro';
+import { generateBreadcrumbSchema } from '../../lib/schemas/breadcrumb';
+import { generateFAQSchema, type FAQItem } from '../../lib/schemas/faq';
+import { DISPLAY_PHONE, OFFICIAL_EMAIL, WHATSAPP_LINK } from '../../lib/constants';
+
+const breadcrumbSchema = generateBreadcrumbSchema([
+  { name: 'Home', url: '/hi' },
+  { name: 'Booking Verification', url: '/hi/booking-verification-guide' },
+]);
+
+const faqs: FAQItem[] = [
+  {
+    question: 'श्री जानकी महल ट्रस्ट का आधिकारिक बुकिंग नंबर क्या है?',
+    answer: `आधिकारिक बुकिंग नंबर ${DISPLAY_PHONE} है। WhatsApp नंबर भी यही है।`,
+  },
+  {
+    question: 'WhatsApp से बुकिंग संभव है?',
+    answer: `हाँ। आप ${DISPLAY_PHONE} पर WhatsApp कर सकते हैं। आधिकारिक लिंक: ${WHATSAPP_LINK}`,
+  },
+  {
+    question: 'बुकिंग करते समय क्या जानकारी दें?',
+    answer:
+      'चेक-इन/चेक-आउट तारीख, मेहमानों की संख्या, रूम टाइप (AC/Non-AC, 2/3/4 bed) और अनुमानित आगमन समय साझा करें।',
+  },
+  {
+    question: 'आधिकारिक चैनल कहाँ चेक करें?',
+    answer: 'आधिकारिक पेज: /hi/official-booking और /hi/contact-number पर सत्यापित जानकारी मिलती है।',
+  },
+];
+
+const faqSchema = generateFAQSchema(faqs);
+---
+
+<Layout
+  title="बुकिंग सत्यापन गाइड | श्री जानकी महल ट्रस्ट - आधिकारिक पुष्टि"
+  description={`Sri Janaki Mahal Trust की बुकिंग सत्यापन के लिए स्टेप-बाय-स्टेप गाइड। आधिकारिक हेल्पलाइन: ${DISPLAY_PHONE}.`}
+  keywords={[
+    'बुकिंग सत्यापन',
+    'जनकी महल ट्रस्ट कन्फर्मेशन',
+    'official booking verification',
+    'how to verify janaki mahal trust booking',
+  ]}
+  canonical="/hi/booking-verification-guide"
+  ogImage="/og.jpg"
+  lang="hi"
+>
+  <Header />
+
+  <main class="min-h-screen bg-[#faf8f3] py-12">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-white rounded-3xl shadow-lg p-8 sm:p-10">
+        <h1 class="text-4xl font-bold text-gray-900 mb-4">बुकिंग सत्यापन गाइड</h1>
+        <p class="text-lg text-gray-700 leading-relaxed">
+          यह पेज बताता है कि आप Sri Janaki Mahal Trust के साथ <strong>आधिकारिक</strong> बुकिंग कर रहे हैं या नहीं।
+        </p>
+
+        <div class="mt-8 rounded-2xl border border-green-200 bg-green-50 p-6">
+          <h2 class="text-2xl font-semibold text-gray-900 mb-3">आधिकारिक चैनल</h2>
+          <ul class="list-disc pl-6 text-gray-800 space-y-2">
+            <li>
+              Phone/WhatsApp: <a class="text-green-700 font-semibold hover:underline" href="tel:+918460839199">{DISPLAY_PHONE}</a>
+            </li>
+            <li>
+              Email: <a class="text-green-700 font-semibold hover:underline" href={`mailto:${OFFICIAL_EMAIL}`}>{OFFICIAL_EMAIL}</a>
+            </li>
+            <li>
+              Official pages: <a class="text-green-700 font-semibold hover:underline" href="/hi/official-booking">Official booking</a>,{' '}
+              <a class="text-green-700 font-semibold hover:underline" href="/hi/contact-number">Contact number</a>
+            </li>
+          </ul>
+        </div>
+
+        <h2 class="mt-10 text-2xl font-semibold text-gray-900">सत्यापन चेकलिस्ट</h2>
+        <div class="mt-4 grid gap-4">
+          <div class="rounded-2xl border border-gray-200 p-5">
+            <h3 class="text-lg font-semibold text-gray-900">1) नंबर सत्यापित करें</h3>
+            <p class="mt-2 text-gray-700">
+              बात केवल <strong>{DISPLAY_PHONE}</strong> पर हो रही हो। कोई दूसरा नंबर हो तो संदेह करें।
+            </p>
+          </div>
+          <div class="rounded-2xl border border-gray-200 p-5">
+            <h3 class="text-lg font-semibold text-gray-900">2) रूम डिटेल्स कन्फर्म करें</h3>
+            <p class="mt-2 text-gray-700">
+              रूम टाइप, तारीखें, मेहमान संख्या, कुल राशि, भोजन शामिल, और चेक-इन/चेक-आउट समय लिखित में कन्फर्म करें।
+            </p>
+          </div>
+          <div class="rounded-2xl border border-gray-200 p-5">
+            <h3 class="text-lg font-semibold text-gray-900">3) कन्फर्मेशन प्राप्त करें</h3>
+            <p class="mt-2 text-gray-700">
+              स्पष्ट कन्फर्मेशन संदेश/स्लिप लें और स्क्रीनशॉट रखें।
+            </p>
+          </div>
+          <div class="rounded-2xl border border-gray-200 p-5">
+            <h3 class="text-lg font-semibold text-gray-900">4) कन्फर्मेशन के बाद ही भुगतान</h3>
+            <p class="mt-2 text-gray-700">
+              कन्फर्मेशन से पहले भुगतान न करें। पेमेंट निर्देश अस्पष्ट हों तो पहले सत्यापन करें।
+            </p>
+          </div>
+        </div>
+
+        <div class="mt-10 grid gap-4 sm:grid-cols-2">
+          <a
+            href="/hi/how-to-avoid-scams"
+            class="rounded-xl border border-[#2d2215] px-6 py-4 text-[#2d2215] font-semibold hover:bg-[#f4ecdf] transition-colors text-center"
+          >
+            स्कैम प्रिवेंशन
+          </a>
+          <a
+            href="/hi/booking"
+            class="rounded-xl bg-[#2d2215] px-6 py-4 text-white font-semibold hover:bg-[#b45309] transition-colors text-center"
+          >
+            बुकिंग पेज
+          </a>
+        </div>
+      </div>
+
+      {faqSchema && <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />}
+      {breadcrumbSchema && <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />}
+    </div>
+  </main>
+
+  <Footer />
+  <FloatingWhatsApp />
+</Layout>
+

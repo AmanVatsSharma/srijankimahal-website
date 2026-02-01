@@ -1,0 +1,80 @@
+<!-- // src/pages/hi/about.astro -->
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import FloatingWhatsApp from '../../components/FloatingWhatsApp.astro';
+import { generateBreadcrumbSchema } from '../../lib/schemas/breadcrumb';
+
+const breadcrumbSchema = generateBreadcrumbSchema([
+  { name: 'Home', url: '/hi' },
+  { name: 'About', url: '/hi/about' },
+]);
+---
+
+<Layout
+  title="हमारे बारे में | श्री जानकी महल ट्रस्ट - अयोध्या"
+  description="श्री जानकी महल ट्रस्ट (Janaki Mahal Trust / Sri Janki Mahal Trust) के बारे में जानें—अयोध्या में राम मंदिर के पास शांत और सुविधाजनक ठहराव।"
+  keywords={[
+    'श्री जानकी महल ट्रस्ट',
+    'जनकी महल ट्रस्ट अयोध्या',
+    'Sri Janki Mahal Trust',
+    'Shri Janki Mahal Trust',
+    'अयोध्या होटल',
+  ]}
+  canonical="/hi/about"
+  ogImage="/og.jpg"
+  lang="hi"
+>
+  <Header />
+
+  <main class="min-h-screen bg-[#faf8f3] py-12">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h1 class="text-4xl font-bold text-gray-900 mb-4">श्री जानकी महल ट्रस्ट के बारे में</h1>
+        <p class="text-lg text-gray-600">अयोध्या में श्रद्धालुओं के लिए शांत ठहराव</p>
+        <p class="mt-4 text-base text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          कई लोग हमें <strong>Janaki Mahal Trust</strong>, <strong>Sri Janki Mahal Trust</strong>, या <strong>Shri Janki Mahal Trust</strong> के नाम से खोजते हैं।
+          यह सभी एक ही आधिकारिक ट्रस्ट को दर्शाते हैं।
+        </p>
+      </div>
+
+      <div class="space-y-10">
+        <section class="bg-white rounded-lg shadow-lg p-8">
+          <h2 class="text-3xl font-bold text-gray-900 mb-6">हमारा उद्देश्य</h2>
+          <p class="text-lg text-gray-700 leading-relaxed">
+            हमारा उद्देश्य श्रद्धालुओं को अयोध्या में सुविधाजनक, स्वच्छ और शांत आवास उपलब्ध कराना है—ताकि आपकी यात्रा आरामदायक और स्मरणीय बने।
+          </p>
+        </section>
+
+        <section class="bg-white rounded-lg shadow-lg p-8">
+          <h2 class="text-3xl font-bold text-gray-900 mb-6">लोकेशन</h2>
+          <p class="text-gray-700 leading-relaxed mb-4">
+            हम <strong>Vasudev Gath, Karsewakpuram, Ayodhya</strong> में स्थित हैं। राम मंदिर और अन्य प्रमुख स्थलों तक पहुँच सुविधाजनक है।
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="/hi/location" class="px-6 py-3 rounded-lg bg-amber-600 text-white font-semibold hover:bg-amber-700 transition-colors text-center">
+              लोकेशन गाइड देखें
+            </a>
+            <a href="/hi/booking" class="px-6 py-3 rounded-lg border border-amber-600 text-amber-700 font-semibold hover:bg-amber-50 transition-colors text-center">
+              बुकिंग पेज
+            </a>
+          </div>
+        </section>
+
+        <section class="bg-white rounded-lg shadow-lg p-8">
+          <h2 class="text-3xl font-bold text-gray-900 mb-6">आधिकारिक संपर्क</h2>
+          <p class="text-gray-700 leading-relaxed mb-4">
+            सत्यापित बुकिंग और सहायता के लिए केवल आधिकारिक चैनल का उपयोग करें।
+          </p>
+          <a href="/hi/contact-number" class="text-amber-700 font-semibold hover:underline">आधिकारिक संपर्क नंबर पेज →</a>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  {breadcrumbSchema && <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />}
+  <Footer />
+  <FloatingWhatsApp />
+</Layout>
+

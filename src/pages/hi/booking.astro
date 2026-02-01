@@ -1,0 +1,174 @@
+<!-- // src/pages/hi/booking.astro -->
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import FloatingWhatsApp from '../../components/FloatingWhatsApp.astro';
+import { generateBreadcrumbSchema, generateStandardBreadcrumbs } from '../../lib/schemas/breadcrumb';
+import { generateCompleteBookingSchema } from '../../lib/schemas/booking';
+import { generateFAQSchema, type FAQItem } from '../../lib/schemas/faq';
+import { DISPLAY_PHONE } from '../../lib/constants';
+
+const breadcrumbs = generateStandardBreadcrumbs('Room Booking', '/hi/booking');
+const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbs);
+const bookingSchemas = generateCompleteBookingSchema('https://www.srijanakimahaltrustofficial.com/hi/booking');
+
+const bookingFAQs: FAQItem[] = [
+  {
+    question: 'श्री जानकी महल ट्रस्ट में कमरा कैसे बुक करें?',
+    answer:
+      'आप +91 8460839199 पर कॉल करके या उसी नंबर पर WhatsApp करके बुकिंग कर सकते हैं। टीम उपलब्धता बताकर सत्यापित कन्फर्मेशन भेजती है।',
+  },
+  {
+    question: 'क्या श्री जानकी महल ट्रस्ट की ऑनलाइन/WhatsApp बुकिंग उपलब्ध है?',
+    answer:
+      'हाँ। WhatsApp (+91 8460839199) पर संदेश भेजकर आप एडवांस बुकिंग करा सकते हैं।',
+  },
+  {
+    question: 'बुकिंग के लिए कौन-कौन सी जानकारी चाहिए?',
+    answer:
+      'नाम, मोबाइल नंबर, चेक-इन/चेक-आउट तारीख, मेहमानों की संख्या, रूम टाइप (AC/Non-AC) और कितने कमरे चाहिए—यह जानकारी देनी होती है।',
+  },
+  {
+    question: 'क्या मैं पहले से बुकिंग कर सकता/सकती हूँ?',
+    answer:
+      'हाँ, एडवांस बुकिंग उपलब्ध है। त्योहार/पीक सीजन में 2–4 सप्ताह पहले संपर्क करना बेहतर रहता है।',
+  },
+  {
+    question: 'बुकिंग कन्फर्मेशन कैसे मिलता है?',
+    answer:
+      'कन्फर्मेशन में बुकिंग डिटेल्स, तारीखें, रूम टाइप और निर्देश होते हैं। यह कन्फर्मेशन आधिकारिक WhatsApp/ईमेल से भेजा जाता है।',
+  },
+];
+
+const bookingFAQSchema = generateFAQSchema(bookingFAQs);
+---
+
+<Layout
+  title="रूम बुकिंग - श्री जानकी महल ट्रस्ट (अयोध्या) | आधिकारिक बुकिंग"
+  description={`श्री जानकी महल ट्रस्ट अयोध्या में रूम बुकिंग। आधिकारिक सहायता: ${DISPLAY_PHONE}. सत्यापित बुकिंग के लिए कॉल/WhatsApp करें।`}
+  keywords={[
+    'श्री जानकी महल ट्रस्ट बुकिंग',
+    'जनकी महल ट्रस्ट रूम बुकिंग',
+    'अयोध्या होटल बुकिंग',
+    'आधिकारिक बुकिंग नंबर',
+    'राम मंदिर के पास रूम',
+  ]}
+  canonical="/hi/booking"
+  ogType="website"
+  ogImage="/og.jpg"
+  lang="hi"
+>
+  <Header />
+
+  <main class="min-h-screen bg-[#faf8f3]">
+    <section class="bg-gradient-to-r from-amber-600 to-rose-600 text-white py-16">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-4xl sm:text-5xl font-bold mb-6">
+          श्री जानकी महल ट्रस्ट में <span class="text-amber-200">रूम बुकिंग</span>
+        </h1>
+        <p class="text-xl mb-6 max-w-3xl mx-auto">
+          सत्यापित और आधिकारिक बुकिंग के लिए एक ही हेल्पलाइन का उपयोग करें।
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="tel:+918460839199"
+            class="px-8 py-4 bg-white text-amber-700 font-bold rounded-lg hover:bg-gray-100 transition-colors text-lg"
+          >
+            कॉल करें: +91 8460839199
+          </a>
+          <a
+            href="https://wa.me/918460839199"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="px-8 py-4 bg-green-600 text-white font-bold rounded-lg hover:bg-green-700 transition-colors text-lg"
+          >
+            WhatsApp बुकिंग
+          </a>
+        </div>
+        <p class="mt-6 text-sm text-amber-100">
+          कई लोग हमें <strong>Janaki Mahal Trust</strong>, <strong>Sri Janki Mahal Trust</strong>, या <strong>Shri Janki Mahal Trust</strong> नाम से खोजते हैं — बुकिंग के लिए आधिकारिक नंबर हमेशा यही है।
+        </p>
+      </div>
+    </section>
+
+    <section class="py-16 bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">बुकिंग प्रक्रिया (5 स्टेप)</h2>
+        <div class="grid md:grid-cols-5 gap-6">
+          {[
+            { n: 1, t: 'संपर्क करें', d: 'कॉल/WhatsApp +91 8460839199' },
+            { n: 2, t: 'विवरण दें', d: 'तारीखें, मेहमान, रूम टाइप' },
+            { n: 3, t: 'उपलब्धता', d: 'टीम तुरंत जांच करती है' },
+            { n: 4, t: 'कन्फर्मेशन', d: 'सत्यापित कन्फर्मेशन प्राप्त करें' },
+            { n: 5, t: 'चेक-इन', d: '2:00 PM से' },
+          ].map((s) => (
+            <div class="text-center">
+              <div class="w-16 h-16 bg-amber-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+                {s.n}
+              </div>
+              <h3 class="font-semibold text-gray-900 mb-2">{s.t}</h3>
+              <p class="text-sm text-gray-600">{s.d}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">रूम टाइप और अनुमानित कीमत</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {[
+            { t: '2 बेड', p: '₹1,250 - ₹2,100', d: 'AC/Non-AC' },
+            { t: '3 बेड', p: '₹1,800 - ₹3,000', d: 'AC/Non-AC' },
+            { t: '4 बेड', p: '₹2,550 - ₹3,500', d: 'AC/Non-AC' },
+            { t: 'डीलक्स/सूट', p: '₹3,200 - ₹4,150', d: 'प्रीमियम' },
+          ].map((r) => (
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+              <h3 class="text-xl font-bold text-gray-900 mb-2">{r.t}</h3>
+              <p class="text-gray-600 mb-4">{r.d}</p>
+              <p class="text-2xl font-bold text-amber-700 mb-4">{r.p}</p>
+              <a
+                href="/hi/rooms"
+                class="block w-full text-center px-4 py-2 bg-amber-600 text-white font-semibold rounded-lg hover:bg-amber-700 transition-colors"
+              >
+                डिटेल्स देखें
+              </a>
+            </div>
+          ))}
+        </div>
+        <p class="mt-6 text-center text-sm text-gray-600">
+          नोट: कीमतें तारीख/उपलब्धता के अनुसार बदल सकती हैं। अंतिम पुष्टि आधिकारिक टीम द्वारा दी जाती है।
+        </p>
+      </div>
+    </section>
+
+    <section class="py-16 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">बुकिंग FAQs</h2>
+        <div class="space-y-6">
+          {bookingFAQs.map((faq, index) => (
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-xl font-semibold text-gray-900 mb-3 flex items-start">
+                <span class="text-amber-600 mr-3 flex-shrink-0">Q{index + 1}.</span>
+                <span>{faq.question}</span>
+              </h3>
+              <div class="ml-8">
+                <p class="text-gray-700 leading-relaxed">{faq.answer}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  </main>
+
+  {breadcrumbSchema && <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />}
+  {bookingSchemas.map((schema) => <script type="application/ld+json" set:html={JSON.stringify(schema)} />)}
+  {bookingFAQSchema && <script type="application/ld+json" set:html={JSON.stringify(bookingFAQSchema)} />}
+
+  <Footer />
+  <FloatingWhatsApp />
+</Layout>
+

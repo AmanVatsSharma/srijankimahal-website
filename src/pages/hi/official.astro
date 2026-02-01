@@ -1,0 +1,133 @@
+<!-- // src/pages/hi/official.astro -->
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { generateBreadcrumbSchema, generateStandardBreadcrumbs } from '../../lib/schemas/breadcrumb';
+
+const breadcrumbs = generateStandardBreadcrumbs('Official', '/hi/official');
+const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbs);
+---
+
+<Layout
+  title="श्री जानकी महल ट्रस्ट - आधिकारिक वेबसाइट | अयोध्या"
+  description="Sri Janaki Mahal Trust की आधिकारिक वेबसाइट। सत्यापित बुकिंग चैनल और आधिकारिक संपर्क: +91 8460839199।"
+  keywords={[
+    'श्री जानकी महल ट्रस्ट आधिकारिक',
+    'जनकी महल ट्रस्ट वेबसाइट',
+    'Sri Janki Mahal Trust official',
+    'Shri Janki Mahal Trust verification',
+    'अयोध्या रूम बुकिंग आधिकारिक',
+  ]}
+  canonical="/hi/official"
+  ogType="website"
+  ogImage="/og.jpg"
+  lang="hi"
+>
+  <Header />
+
+  <main class="min-h-screen bg-[#faf8f3]">
+    <section class="bg-gradient-to-r from-amber-600 to-rose-600 text-white py-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="inline-block bg-white/20 rounded-full px-6 py-2 mb-6">
+          <span class="text-sm font-bold uppercase tracking-wider">Official Website</span>
+        </div>
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
+          <span class="text-amber-200">Sri Janaki Mahal Trust</span> — आधिकारिक वेबसाइट
+        </h1>
+        <p class="text-xl mb-8 max-w-3xl mx-auto">
+          सत्यापित ट्रस्ट • आधिकारिक बुकिंग चैनल • फर्जी एजेंट्स से बचें
+        </p>
+        <p class="text-sm max-w-3xl mx-auto text-amber-100 leading-relaxed">
+          यदि आप <strong>Janaki Mahal Trust</strong>, <strong>Sri Janki Mahal Trust</strong>, या <strong>Shri Janki Mahal Trust</strong> नाम से खोज रहे हैं—आप सही जगह पर हैं।
+          आधिकारिक हेल्पलाइन: <a href="tel:+918460839199" class="underline text-white hover:text-amber-200 font-semibold">+91 8460839199</a>
+        </p>
+      </div>
+    </section>
+
+    <section class="py-16 bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">आधिकारिक सत्यापन</h2>
+          <p class="text-lg text-gray-600">यह पेज ट्रस्ट का आधिकारिक संदर्भ और सही संपर्क जानकारी प्रदान करता है।</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 mb-12">
+          <div class="bg-gray-50 rounded-lg p-8">
+            <h3 class="text-2xl font-bold text-gray-900 mb-6">ट्रस्ट विवरण</h3>
+            <div class="space-y-4">
+              <div>
+                <p class="text-sm text-gray-600 mb-1">Legal Name</p>
+                <p class="text-lg font-semibold text-gray-900">Sri Janaki Mahal Trust</p>
+              </div>
+              <div>
+                <p class="text-sm text-gray-600 mb-1">Status</p>
+                <p class="text-lg font-semibold text-green-600">✓ Registered Charitable Trust</p>
+              </div>
+              <div>
+                <p class="text-sm text-gray-600 mb-1">Established</p>
+                <p class="text-lg font-semibold text-gray-900">2020</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-gray-50 rounded-lg p-8">
+            <h3 class="text-2xl font-bold text-gray-900 mb-6">आधिकारिक संपर्क</h3>
+            <div class="space-y-4">
+              <div>
+                <p class="text-sm text-gray-600 mb-1">Phone / WhatsApp</p>
+                <p class="text-lg font-semibold text-gray-900">
+                  <a href="tel:+918460839199" class="text-amber-600 hover:text-amber-700">+91 8460839199</a>
+                </p>
+              </div>
+              <div>
+                <p class="text-sm text-gray-600 mb-1">Email</p>
+                <p class="text-lg font-semibold text-gray-900">
+                  <a href="mailto:srijanakimahaltrust7484@gmail.com" class="text-amber-600 hover:text-amber-700">srijanakimahaltrust7484@gmail.com</a>
+                </p>
+              </div>
+              <div>
+                <p class="text-sm text-gray-600 mb-1">Official Booking</p>
+                <p class="text-lg font-semibold text-gray-900">
+                  <a href="/hi/official-booking" class="text-amber-600 hover:text-amber-700">/hi/official-booking</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-amber-50 border-2 border-amber-200 rounded-lg p-8">
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">आधिकारिक पता</h3>
+          <div class="text-lg text-gray-700 space-y-2">
+            <p><strong>Sri Janaki Mahal Trust</strong></p>
+            <p>Vasudev Gath, Karsewakpuram</p>
+            <p>Ayodhya, Uttar Pradesh 224123</p>
+            <p>India</p>
+          </div>
+        </div>
+
+        <div class="mt-12 bg-gradient-to-r from-amber-600 to-rose-600 rounded-lg p-8 text-white text-center">
+          <h2 class="text-3xl font-bold mb-4">सत्यापित चैनल से ही बुक करें</h2>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="/hi/booking"
+              class="px-8 py-4 bg-white text-amber-700 font-bold rounded-lg hover:bg-gray-100 transition-colors text-lg"
+            >
+              बुकिंग पेज
+            </a>
+            <a
+              href="tel:+918460839199"
+              class="px-8 py-4 bg-green-600 text-white font-bold rounded-lg hover:bg-green-700 transition-colors text-lg"
+            >
+              कॉल करें
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  {breadcrumbSchema && <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />}
+  <Footer />
+</Layout>
+

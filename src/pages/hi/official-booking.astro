@@ -1,0 +1,149 @@
+<!-- // src/pages/hi/official-booking.astro -->
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import FloatingWhatsApp from '../../components/FloatingWhatsApp.astro';
+import { generateBreadcrumbSchema } from '../../lib/schemas/breadcrumb';
+import { generateReservationActionSchema, generateBookActionSchema } from '../../lib/schemas/booking';
+import { generateFAQSchema, type FAQItem } from '../../lib/schemas/faq';
+
+const officialPhone = '+918460839199';
+const displayPhone = '+91 8460839199';
+const officialBookingUrl = 'https://www.srijanakimahaltrustofficial.com/hi/official-booking';
+
+const breadcrumbSchema = generateBreadcrumbSchema([
+  { name: 'Home', url: '/hi' },
+  { name: 'Official Booking', url: '/hi/official-booking' },
+]);
+
+const reservationActionSchema = generateReservationActionSchema(officialBookingUrl, `tel:${officialPhone}`, 'Sri Janaki Mahal Trust');
+const bookActionSchema = generateBookActionSchema(officialBookingUrl);
+
+const officialBookingFAQs: FAQItem[] = [
+  {
+    question: 'जनकी महल ट्रस्ट की आधिकारिक बुकिंग कैसे करें?',
+    answer:
+      'आधिकारिक हेल्पलाइन +91 8460839199 पर कॉल करें या उसी नंबर पर WhatsApp करें। टीम उपलब्धता के बाद ट्रस्ट-स्टैम्प्ड कन्फर्मेशन भेजती है।',
+  },
+  {
+    question: 'क्या यह श्री जानकी महल ट्रस्ट की सत्यापित बुकिंग पेज है?',
+    answer:
+      'हाँ। यह Sri Janaki Mahal Trust (Janaki Mahal Trust / Sri Janki Mahal Trust / Shri Janki Mahal Trust) का आधिकारिक बुकिंग पेज है।',
+  },
+  {
+    question: 'मैं अपनी बुकिंग को असली कैसे सत्यापित करूँ?',
+    answer:
+      'असली बुकिंग में ट्रस्ट सील/बुकिंग आईडी, मेहमान विवरण और चेक-इन समय होता है। कन्फर्मेशन हमेशा +91 8460839199 या आधिकारिक ईमेल से आता है।',
+  },
+  {
+    question: 'एडवांस पेमेंट कैसे करें?',
+    answer:
+      'उपलब्धता कन्फर्म होने के बाद ही आधिकारिक WhatsApp/ईमेल से पेमेंट निर्देश साझा किए जाते हैं। अज्ञात नंबरों से आए लिंक पर भुगतान न करें।',
+  },
+];
+
+const faqSchema = generateFAQSchema(officialBookingFAQs);
+---
+
+<Layout
+  title="आधिकारिक बुकिंग | श्री जानकी महल ट्रस्ट (जनकी महल ट्रस्ट) - सत्यापित"
+  description="Sri Janaki Mahal Trust (Janaki Mahal Trust / Shri Janki Mahal Trust Ayodhya) की आधिकारिक बुकिंग। सत्यापित हेल्पलाइन +91 8460839199 से सीधे बुक करें।"
+  keywords={[
+    'जनकी महल ट्रस्ट आधिकारिक बुकिंग',
+    'श्री जंकी महल ट्रस्ट बुकिंग',
+    'सत्यापित बुकिंग अयोध्या',
+    'राम मंदिर के पास रूम बुकिंग',
+    'official janaki mahal trust booking',
+  ]}
+  canonical="/hi/official-booking"
+  ogImage="/og.jpg"
+  lang="hi"
+>
+  <Header />
+
+  <main class="bg-[#faf8f3] py-12">
+    <div class="mx-auto flex max-w-6xl flex-col gap-12 px-4 sm:px-6 lg:px-8">
+      <section class="rounded-3xl bg-gradient-to-br from-[#fde6c8] via-[#f9d9b3] to-[#f1c89a] p-10 shadow-xl">
+        <p class="text-xs font-semibold uppercase tracking-[0.4em] text-[#744016]">Official Booking</p>
+        <h1 class="mt-4 text-4xl font-bold text-[#2d2215] md:text-5xl">
+          श्री जानकी महल ट्रस्ट — 100% सत्यापित बुकिंग
+        </h1>
+        <p class="mt-6 text-lg leading-relaxed text-[#3d2f1c]">
+          फर्जी एजेंट्स से बचें। यह Sri Janaki Mahal Trust (Janaki Mahal Trust / Sri Janki Mahal Trust / Shri Janki Mahal Trust) का आधिकारिक बुकिंग पेज है।
+          वास्तविक उपलब्धता और कन्फर्मेशन के लिए ट्रस्ट टीम से सीधे संपर्क करें।
+        </p>
+        <div class="mt-8 grid gap-4 sm:grid-cols-2">
+          <a class="flex items-center justify-center rounded-xl bg-[#2d2215] px-6 py-4 text-base font-semibold uppercase tracking-wide text-white transition hover:bg-[#aa4600]" href={`tel:${officialPhone}`}>
+            📞 कॉल {displayPhone}
+          </a>
+          <a class="flex items-center justify-center rounded-xl border border-[#2d2215] px-6 py-4 text-base font-semibold uppercase tracking-wide text-[#2d2215] transition hover:bg-[#f6dfc4]" href={`https://wa.me/${officialPhone}`}>
+            💬 WhatsApp (Official)
+          </a>
+        </div>
+      </section>
+
+      <section class="rounded-3xl bg-white p-8 shadow-md">
+        <h2 class="text-3xl font-semibold text-[#2d2215]">आधिकारिक बुकिंग क्यों ज़रूरी है?</h2>
+        <div class="mt-6 grid gap-6 md:grid-cols-2">
+          <div class="rounded-2xl bg-[#fef4e4] p-6">
+            <h3 class="text-2xl font-semibold text-[#2d2215]">चेकलिस्ट</h3>
+            <ul class="mt-4 space-y-3 text-base text-[#3d2f1c]">
+              <li>✓ कन्फर्मेशन {displayPhone} / आधिकारिक ईमेल से</li>
+              <li>✓ ट्रस्ट सील और बुकिंग आईडी</li>
+              <li>✓ पेमेंट निर्देश केवल सत्यापित चैनल पर</li>
+              <li>✓ रूम टाइप और तारीखें स्पष्ट</li>
+            </ul>
+          </div>
+          <div class="rounded-2xl bg-[#fef4e4] p-6">
+            <h3 class="text-2xl font-semibold text-[#2d2215]">फर्जी एजेंट्स से बचें</h3>
+            <p class="mt-4 text-base leading-relaxed text-[#3d2f1c]">
+              यदि कोई अलग नंबर/अनजान UPI/पेमेंट लिंक भेजे, तो भुगतान न करें। पहले आधिकारिक नंबर पर कॉल करके सत्यापन करें।
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="rounded-3xl bg-[#f1e5d0] p-8 shadow-inner">
+        <h2 class="text-3xl font-semibold text-[#2d2215]">बुकिंग फ्लो</h2>
+        <div class="mt-6 grid gap-6 md:grid-cols-5">
+          {[
+            'आधिकारिक नंबर पर कॉल/WhatsApp',
+            'तारीखें/रूम पसंद साझा करें',
+            'टीम उपलब्धता/कीमत बताए',
+            'ट्रस्ट-स्टैम्प्ड कन्फर्मेशन मिले',
+            'चेक-इन पर कन्फर्मेशन दिखाएं',
+          ].map((step, index) => (
+            <div class="rounded-2xl bg-white p-4 text-center shadow-sm">
+              <span class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-[#2d2215] text-lg font-semibold text-white">
+                {index + 1}
+              </span>
+              <p class="mt-3 text-sm font-medium text-[#3d2f1c]">{step}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section class="rounded-3xl bg-white p-8 shadow-md">
+        <h2 class="text-3xl font-semibold text-[#2d2215]">FAQs</h2>
+        <div class="mt-6 space-y-4">
+          {officialBookingFAQs.map((faq) => (
+            <details class="rounded-xl border border-[#ead7bf] bg-[#fef6ea] p-4">
+              <summary class="cursor-pointer text-lg font-semibold text-[#2d2215]">{faq.question}</summary>
+              <p class="mt-3 text-base text-[#3d2f1c]">{faq.answer}</p>
+            </details>
+          ))}
+        </div>
+      </section>
+    </div>
+  </main>
+
+  {breadcrumbSchema && <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />}
+  {reservationActionSchema && <script type="application/ld+json" set:html={JSON.stringify(reservationActionSchema)} />}
+  {bookActionSchema && <script type="application/ld+json" set:html={JSON.stringify(bookActionSchema)} />}
+  {faqSchema && <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />}
+
+  <Footer />
+  <FloatingWhatsApp />
+</Layout>
+

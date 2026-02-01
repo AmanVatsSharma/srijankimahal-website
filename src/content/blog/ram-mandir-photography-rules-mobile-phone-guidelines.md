@@ -1,6 +1,6 @@
 ---
 title: Ram Mandir Photography Rules + Mobile Phone Guidelines (Ayodhya)
-description: Quick dos and don'ts for photos and mobile phones around Ram Mandir: respectful behavior, security readiness, and planning tips for devotees.
+description: "Quick dos and don'ts for photos and mobile phones around Ram Mandir: respectful behavior, security readiness, and planning tips for devotees."
 date: 2026-02-01
 keywords:
   - 'Ram Mandir photography rules'

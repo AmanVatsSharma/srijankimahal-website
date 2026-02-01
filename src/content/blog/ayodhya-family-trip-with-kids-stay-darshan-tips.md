@@ -1,6 +1,6 @@
 ---
 title: Ayodhya Family Trip with Kids (Darshan + Stay + Safety) — Practical Tips
-description: Family-friendly Ayodhya tips: planning Ram Mandir darshan with kids, rest breaks, what to carry, and verified booking links to avoid scams.
+description: "Family-friendly Ayodhya tips: planning Ram Mandir darshan with kids, rest breaks, what to carry, and verified booking links to avoid scams."
 date: 2026-02-01
 keywords:
   - 'Ayodhya family trip with kids'

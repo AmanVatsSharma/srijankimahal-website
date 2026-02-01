@@ -1,0 +1,103 @@
+<!-- // src/pages/hi/festival-booking-guide.astro -->
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import FloatingWhatsApp from '../../components/FloatingWhatsApp.astro';
+import { generateBreadcrumbSchema } from '../../lib/schemas/breadcrumb';
+import { generateFAQSchema, type FAQItem } from '../../lib/schemas/faq';
+import { DISPLAY_PHONE } from '../../lib/constants';
+
+const breadcrumbSchema = generateBreadcrumbSchema([
+  { name: 'Home', url: '/hi' },
+  { name: 'Festival Booking Guide', url: '/hi/festival-booking-guide' },
+]);
+
+const faqs: FAQItem[] = [
+  {
+    question: 'राम नवमी या दिवाली के लिए कितने पहले बुक करें?',
+    answer:
+      'पीक त्योहारों में जितना जल्दी हो सके उतना बेहतर। यदि तारीखें फिक्स हैं तो 2–3 महीने पहले संपर्क करना उचित है।',
+  },
+  {
+    question: 'क्या त्योहारों में कीमत/उपलब्धता बदलती है?',
+    answer:
+      'मांग बढ़ने पर उपलब्धता और टैरिफ प्रभावित हो सकते हैं। कन्फर्मेशन के समय अंतिम टैरिफ/इन्क्लूजन लिखित में कन्फर्म करें।',
+  },
+  {
+    question: 'पहले संदेश में क्या भेजें?',
+    answer:
+      'तारीखें, मेहमानों की संख्या, रूम टाइप, और अनुमानित आगमन समय भेजें—इससे पीक सीजन में कन्फर्मेशन तेज होता है।',
+  },
+  {
+    question: 'आधिकारिक बुकिंग नंबर क्या है?',
+    answer: `आधिकारिक हेल्पलाइन ${DISPLAY_PHONE} है। WhatsApp नंबर भी यही है।`,
+  },
+];
+
+const faqSchema = generateFAQSchema(faqs);
+---
+
+<Layout
+  title="त्योहार बुकिंग गाइड | श्री जानकी महल ट्रस्ट - राम नवमी/दिवाली"
+  description={`अयोध्या में त्योहारों के समय बुकिंग गाइड। राम नवमी/दिवाली में जल्दी बुक करें। आधिकारिक हेल्पलाइन: ${DISPLAY_PHONE}.`}
+  keywords={[
+    'त्योहार बुकिंग अयोध्या',
+    'राम नवमी बुकिंग',
+    'दिवाली बुकिंग',
+    'जनकी महल ट्रस्ट त्योहार बुकिंग',
+  ]}
+  canonical="/hi/festival-booking-guide"
+  ogImage="/og.jpg"
+  lang="hi"
+>
+  <Header />
+
+  <main class="min-h-screen bg-[#faf8f3] py-12">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-white rounded-3xl shadow-lg p-8 sm:p-10">
+        <h1 class="text-4xl font-bold text-gray-900 mb-4">त्योहार बुकिंग गाइड</h1>
+        <p class="text-lg text-gray-700 leading-relaxed">
+          अयोध्या में प्रमुख त्योहारों पर भक्तों की संख्या बहुत बढ़ जाती है। यह गाइड आपकी यात्रा और ठहरने की योजना बनाने में मदद करेगा।
+        </p>
+
+        <div class="mt-8 rounded-2xl border border-amber-200 bg-amber-50 p-6">
+          <h2 class="text-2xl font-semibold text-gray-900 mb-3">क्विक टिप</h2>
+          <p class="text-gray-800">
+            तेजी से कन्फर्मेशन के लिए <strong>{DISPLAY_PHONE}</strong> पर कॉल/WhatsApp करते समय तारीखें + मेहमान + रूम टाइप लिखें।
+          </p>
+        </div>
+
+        <h2 class="mt-10 text-2xl font-semibold text-gray-900">बेस्ट प्रैक्टिस चेकलिस्ट</h2>
+        <ul class="mt-4 list-disc pl-6 text-gray-800 space-y-2">
+          <li>राम नवमी, दिवाली और लॉन्ग वीकेंड के लिए जल्दी बुक करें।</li>
+          <li>चेक-इन/चेक-आउट समय और भोजन शामिल लिखित में कन्फर्म करें।</li>
+          <li>ग्रुप बुकिंग में एक कोऑर्डिनेटर नंबर और गेस्ट लिस्ट साझा करें।</li>
+          <li>चेक-इन के लिए कन्फर्मेशन संदेश तैयार रखें।</li>
+        </ul>
+
+        <div class="mt-10 grid gap-4 sm:grid-cols-2">
+          <a
+            href="/hi/booking"
+            class="rounded-xl bg-[#2d2215] px-6 py-4 text-white font-semibold hover:bg-[#b45309] transition-colors text-center"
+          >
+            रूम बुक करें
+          </a>
+          <a
+            href="/hi/how-to-avoid-scams"
+            class="rounded-xl border border-[#2d2215] px-6 py-4 text-[#2d2215] font-semibold hover:bg-[#f4ecdf] transition-colors text-center"
+          >
+            स्कैम से बचें
+          </a>
+        </div>
+      </div>
+
+      {faqSchema && <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />}
+      {breadcrumbSchema && <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />}
+    </div>
+  </main>
+
+  <Footer />
+  <FloatingWhatsApp />
+</Layout>
+

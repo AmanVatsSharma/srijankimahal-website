@@ -10,6 +10,7 @@
  */
 
 import { DISPLAY_PHONE } from './constants';
+import { detectLangFromPath, getHreflangTargets } from './i18n';
 
 // Base site configuration
 const SITE_URL = 'https://www.srijanakimahaltrustofficial.com';
@@ -210,19 +211,24 @@ export function generateHreflangTags(
   debugLog('[SEO] Generating hreflang tags', { currentPath });
   
   const tags: Array<{ rel: string; hreflang: string; href: string }> = [];
-  
-  // Add current language
-  const currentUrl = generateCanonical(currentPath);
-  tags.push({ rel: 'alternate', hreflang: 'x-default', href: currentUrl });
-  
-  // Add alternate languages if provided
-  if (alternateLanguages) {
+
+  // Always emit EN/HI hreflang pair for our URL strategy.
+  const { enPath, hiPath } = getHreflangTargets(currentPath);
+  const enUrl = generateCanonical(enPath);
+  const hiUrl = generateCanonical(hiPath);
+
+  tags.push({ rel: 'alternate', hreflang: 'x-default', href: enUrl });
+  tags.push({ rel: 'alternate', hreflang: 'en', href: enUrl });
+  tags.push({ rel: 'alternate', hreflang: 'hi', href: hiUrl });
+
+  // Optionally add additional alternates if provided (future proof)
+  if (alternateLanguages?.length) {
     alternateLanguages.forEach(({ lang, url }) => {
       const fullUrl = url.startsWith('http') ? url : generateCanonical(url);
       tags.push({ rel: 'alternate', hreflang: lang, href: fullUrl });
     });
   }
-  
+
   return tags;
 }
 
@@ -238,16 +244,17 @@ export function generateHreflangTags(
 export function generateSEOData(config: SEOConfig, currentPath?: string) {
   debugLog('[SEO] Generating complete SEO data', { currentPath: currentPath || '/' });
   
-  const canonical = generateCanonical(config.canonical || currentPath);
+  const effectivePath = config.canonical || currentPath;
+  const canonical = generateCanonical(effectivePath);
   const title = generateTitle(config.title);
   const description = generateDescription(config.description);
   const keywords = generateKeywords(config.keywords);
   const robots = generateRobotsContent(config.noindex);
-  const ogTags = generateOGTags({ ...config, canonical });
-  const twitterTags = generateTwitterTags({ ...config, canonical });
-  const hreflangTags = config.alternateLanguages 
-    ? generateHreflangTags(currentPath || '/', config.alternateLanguages)
-    : [];
+  const inferredLang = detectLangFromPath(currentPath || '/');
+  const lang = config.lang || inferredLang;
+  const ogTags = generateOGTags({ ...config, canonical, lang });
+  const twitterTags = generateTwitterTags({ ...config, canonical, lang });
+  const hreflangTags = generateHreflangTags(currentPath || '/', config.alternateLanguages);
 
   return {
     title,
@@ -258,7 +265,7 @@ export function generateSEOData(config: SEOConfig, currentPath?: string) {
     ogTags,
     twitterTags,
     hreflangTags,
-    lang: config.lang || 'en',
+    lang,
   };
 }
 

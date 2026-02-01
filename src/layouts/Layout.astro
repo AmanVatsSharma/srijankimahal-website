@@ -59,19 +59,20 @@ console.log('[Layout] SEO data generated:', {
 <html lang={seoData.lang}>
   <head>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17664529026"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17922029438"></script>
     <script>
       // @ts-ignore - Google Analytics global variables
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'AW-17664529026');
+      gtag('config', 'AW-17922029438');
     </script>
     
     <!-- Event snippet for Click to call conversion page -->
     <script>
     // @ts-ignore - Google Analytics conversion tracking
+    // [SonuRamTODO] Replace CONVERSION_LABEL with your conversion action label from Google Ads (AW-17922029438)
     function gtag_report_conversion(url) {
       var callback = function () {
         if (typeof(url) != 'undefined') {
@@ -80,7 +81,7 @@ console.log('[Layout] SEO data generated:', {
       };
       // @ts-ignore - Google Analytics global function
       gtag('event', 'conversion', {
-          'send_to': 'AW-17664529026/Zkz9CLjxg7AbELP8qedB',
+          'send_to': 'AW-17922029438/CONVERSION_LABEL',
           'value': 1.0,
           'currency': 'INR',
           'event_callback': callback

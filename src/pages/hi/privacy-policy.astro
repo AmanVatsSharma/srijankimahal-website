@@ -1,0 +1,70 @@
+<!-- // src/pages/hi/privacy-policy.astro -->
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import FloatingWhatsApp from '../../components/FloatingWhatsApp.astro';
+import { OFFICIAL_EMAIL } from '../../lib/constants';
+---
+
+<Layout
+  title="प्राइवेसी पॉलिसी | श्री जानकी महल ट्रस्ट"
+  description="श्री जानकी महल ट्रस्ट की प्राइवेसी पॉलिसी: हम आपकी जानकारी कैसे एकत्र, उपयोग और सुरक्षित करते हैं।"
+  keywords={['privacy policy', 'प्राइवेसी पॉलिसी', 'data protection', 'janaki mahal trust privacy']}
+  canonical="/hi/privacy-policy"
+  noindex={false}
+  lang="hi"
+>
+  <Header />
+
+  <main class="min-h-screen bg-[#faf8f3] py-12">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h1 class="text-4xl font-bold text-gray-900 mb-4">प्राइवेसी पॉलिसी</h1>
+        <p class="text-lg text-gray-600">Last updated: 2026-02-01</p>
+      </div>
+
+      <div class="bg-white rounded-lg shadow-lg p-8 space-y-8">
+        <section>
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">1. परिचय</h2>
+          <p class="text-gray-700 leading-relaxed">
+            यह पॉलिसी बताती है कि हम वेबसाइट उपयोग और बुकिंग/इन्क्वायरी के दौरान आपकी जानकारी को कैसे संभालते हैं।
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">2. हम कौन सी जानकारी लेते हैं</h2>
+          <ul class="list-disc list-inside text-gray-700 space-y-2">
+            <li>आपका नाम, फोन नंबर, ईमेल (जब आप बुकिंग/इन्क्वायरी करते हैं)</li>
+            <li>यात्रा की तारीखें, गेस्ट संख्या, रूम पसंद (बुकिंग सहायता के लिए)</li>
+            <li>तकनीकी जानकारी (जैसे ब्राउज़र/डिवाइस), वेबसाइट प्रदर्शन सुधार के लिए</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">3. उपयोग</h2>
+          <ul class="list-disc list-inside text-gray-700 space-y-2">
+            <li>बुकिंग सहायता और संचार</li>
+            <li>सेवा सुधार और सुरक्षा</li>
+            <li>फ्रॉड/दुरुपयोग रोकथाम</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">4. संपर्क</h2>
+          <p class="text-gray-700 leading-relaxed">
+            यदि आपको प्राइवेसी से संबंधित कोई प्रश्न है, कृपया ईमेल करें:
+            <a class="text-amber-700 font-semibold hover:underline" href={`mailto:${OFFICIAL_EMAIL}`}> {OFFICIAL_EMAIL}</a>
+          </p>
+          <p class="mt-3 text-sm text-gray-600">
+            नोट: अंग्रेज़ी संस्करण: <a class="text-amber-700 font-semibold hover:underline" href="/privacy-policy">/privacy-policy</a>
+          </p>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <Footer />
+  <FloatingWhatsApp />
+</Layout>
+

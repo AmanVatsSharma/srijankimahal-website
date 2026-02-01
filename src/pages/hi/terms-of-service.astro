@@ -1,0 +1,62 @@
+<!-- // src/pages/hi/terms-of-service.astro -->
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import FloatingWhatsApp from '../../components/FloatingWhatsApp.astro';
+---
+
+<Layout
+  title="सेवा की शर्तें | श्री जानकी महल ट्रस्ट"
+  description="श्री जानकी महल ट्रस्ट की सेवा की शर्तें: बुकिंग, चेक-इन/चेक-आउट, नियम और जिम्मेदारियाँ।"
+  keywords={['terms of service', 'बुकिंग शर्तें', 'janaki mahal trust terms']}
+  canonical="/hi/terms-of-service"
+  noindex={false}
+  lang="hi"
+>
+  <Header />
+
+  <main class="min-h-screen bg-[#faf8f3] py-12">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h1 class="text-4xl font-bold text-gray-900 mb-4">सेवा की शर्तें</h1>
+        <p class="text-lg text-gray-600">Last updated: 2026-02-01</p>
+      </div>
+
+      <div class="bg-white rounded-lg shadow-lg p-8 space-y-8">
+        <section>
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">1. बुकिंग</h2>
+          <p class="text-gray-700 leading-relaxed">
+            सभी बुकिंग उपलब्धता और आधिकारिक पुष्टि के अधीन हैं। बुकिंग सहायता के लिए केवल आधिकारिक नंबर/ईमेल का उपयोग करें।
+          </p>
+        </section>
+        <section>
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">2. चेक-इन / चेक-आउट</h2>
+          <ul class="list-disc list-inside text-gray-700 space-y-2">
+            <li>चेक-इन: 2:00 PM</li>
+            <li>चेक-आउट: 12:00 PM</li>
+            <li>सरकारी पहचान पत्र आवश्यक</li>
+          </ul>
+        </section>
+        <section>
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">3. गेस्ट जिम्मेदारियाँ</h2>
+          <ul class="list-disc list-inside text-gray-700 space-y-2">
+            <li>सही जानकारी प्रदान करें</li>
+            <li>शांत वातावरण का सम्मान करें</li>
+            <li>प्रॉपर्टी/सुविधाओं का ध्यान रखें</li>
+          </ul>
+        </section>
+        <section>
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">4. अन्य</h2>
+          <p class="text-gray-700 leading-relaxed">
+            अंग्रेज़ी संस्करण: <a class="text-amber-700 font-semibold hover:underline" href="/terms-of-service">/terms-of-service</a>
+          </p>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <Footer />
+  <FloatingWhatsApp />
+</Layout>
+

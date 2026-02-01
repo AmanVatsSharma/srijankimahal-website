@@ -1,0 +1,62 @@
+<!-- // src/pages/hi/index.astro -->
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import HeroSection from '../../components/HeroSection.astro';
+import AboutJanakiMahal from '../../components/AboutJanakiMahal.astro';
+import RoomsSection from '../../components/RoomsSection.astro';
+import TestimonialsSection from '../../components/TestimonialsSection.astro';
+import ContactSection from '../../components/ContactSection.astro';
+import Footer from '../../components/Footer.astro';
+import FloatingWhatsApp from '../../components/FloatingWhatsApp.astro';
+import AmenitiesSection from '../../components/AmenitiesSection.astro';
+import GallerySection from '../../components/GallerySection.astro';
+import FAQSection from '../../components/FAQSection.astro';
+import { DISPLAY_PHONE, TEL_LINK } from '../../lib/constants';
+---
+
+<Layout
+  title="श्री जानकी महल ट्रस्ट - अयोध्या | आधिकारिक बुकिंग और संपर्क"
+  description={`श्री जानकी महल ट्रस्ट (Janaki Mahal Trust / Sri Janki Mahal Trust) अयोध्या में राम मंदिर के पास। सत्यापित बुकिंग के लिए ${DISPLAY_PHONE} पर कॉल करें।`}
+  keywords={[
+    'श्री जानकी महल ट्रस्ट',
+    'जनकी महल ट्रस्ट अयोध्या',
+    'श्री जंकी महल ट्रस्ट',
+    'राम मंदिर के पास होटल',
+    'अयोध्या रूम बुकिंग',
+    'आधिकारिक बुकिंग नंबर',
+  ]}
+  canonical="/hi"
+  ogImage="/og.jpg"
+  lang="hi"
+>
+  <Header />
+  <HeroSection />
+
+  <section class="bg-[#f4ecdf] py-16 sm:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-6xl space-y-6 text-[#362a1a]">
+        <h2 class="text-3xl font-semibold tracking-tight">कई नाम, एक ही आधिकारिक ट्रस्ट</h2>
+        <p class="text-lg leading-relaxed">
+          कई लोग हमें <strong>Janaki Mahal Trust</strong>, <strong>Sri Janki Mahal Trust</strong> या <strong>Shri Janki Mahal Trust</strong> के नाम से खोजते हैं।
+          यह सभी एक ही आधिकारिक ट्रस्ट को दर्शाते हैं।
+        </p>
+        <p class="text-lg leading-relaxed">
+          सत्यापित बुकिंग के लिए हमेशा आधिकारिक नंबर
+          <a class="font-semibold text-[#b45309] hover:underline" href={TEL_LINK}> {DISPLAY_PHONE}</a> पर संपर्क करें।
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <AboutJanakiMahal />
+  <RoomsSection />
+  <AmenitiesSection />
+  <GallerySection />
+  <TestimonialsSection />
+  <FAQSection />
+  <ContactSection />
+  <Footer />
+  <FloatingWhatsApp />
+</Layout>
+

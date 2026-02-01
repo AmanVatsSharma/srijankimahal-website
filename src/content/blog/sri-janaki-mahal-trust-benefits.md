@@ -49,8 +49,8 @@ Complete guide to benefits of staying at Sri Janaki Mahal Trust. Learn about top
 ✅ Reliable
 
 ### 6. Great Reviews
-✅ 4.5/5 rating  
-✅ 100+ reviews  
+✅ Strong guest feedback  
+✅ Many guests  
 ✅ Happy guests  
 ✅ Trusted
 

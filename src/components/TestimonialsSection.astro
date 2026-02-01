@@ -1,43 +1,5 @@
 <!-- // src/components/TestimonialsSection.astro -->
 ---
-import { generateReviewSchema, type ReviewItem } from '../lib/schemas/review';
-
-// Define testimonials with review data for schema
-const reviews: ReviewItem[] = [
-  {
-    author: 'Rajesh Kumar',
-    rating: 5,
-    datePublished: '2024-01-15',
-    reviewBody: 'Sri Janaki Mahal provided us with a peaceful sanctuary during our pilgrimage. The spiritual atmosphere and warm hospitality made our stay truly memorable.',
-    reviewTitle: 'Peaceful Sanctuary for Pilgrimage',
-  },
-  {
-    author: 'Priya Sharma',
-    rating: 5,
-    datePublished: '2024-02-20',
-    reviewBody: 'The rooms are clean, comfortable, and the staff is incredibly helpful. Perfect location for visiting the temples. Highly recommended!',
-    reviewTitle: 'Perfect Location and Clean Rooms',
-  },
-  {
-    author: 'Amit Mishra',
-    rating: 5,
-    datePublished: '2024-03-10',
-    reviewBody: 'Excellent value for money. The hotel maintains high standards of cleanliness and provides authentic spiritual experience. Will visit again!',
-    reviewTitle: 'Excellent Value and Cleanliness',
-  },
-  {
-    author: 'Vandana Devi',
-    rating: 5,
-    datePublished: '2024-04-05',
-    reviewBody: 'The peaceful environment and spiritual vibes of Sri Janaki Mahal helped me reconnect with my inner self. Truly a blessed place!',
-    reviewTitle: 'Peaceful Spiritual Environment',
-  },
-];
-
-// Generate review schema
-const reviewSchema = generateReviewSchema(reviews);
-
-console.log('[Testimonials] Review schema generated for', reviews.length, 'reviews');
 ---
 
 <section id="testimonials" class="py-16 sm:py-24 bg-gray-50">
@@ -173,11 +135,6 @@ console.log('[Testimonials] Review schema generated for', reviews.length, 'revie
     </div>
   </div>
 </section>
-
-<!-- Review Schema for SEO -->
-{reviewSchema && (
-  <script type="application/ld+json" set:html={JSON.stringify(reviewSchema)} />
-)}
 
 <style>
   /* Avoid mobile "clipped/misaligned" auto-scroll; keep it on md+ only */

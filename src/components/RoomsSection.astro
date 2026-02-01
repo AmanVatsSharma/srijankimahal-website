@@ -5,8 +5,6 @@ import { TEL_LINK, WHATSAPP_LINK } from '../lib/constants';
 
 // Generate booking schema for rooms section
 const bookingSchema = generateBookActionSchema('https://www.srijanakimahaltrustofficial.com/booking');
-
-console.log('[Rooms Section] Booking schema generated');
 ---
 
 <section id="rooms" class="py-16 sm:py-24 bg-gray-50">
@@ -362,33 +360,15 @@ console.log('[Rooms Section] Booking schema generated');
    */
   import { TEL_LINK, WHATSAPP_LINK } from '../lib/constants';
 
-  console.log('[RoomsSection] Preparing room modal init (DOM ready check)');
-
   function initRoomModal(): void {
     try {
-      console.log('[RoomsSection] Initializing room modal listeners');
-
       const modal = document.getElementById('room-modal');
       const closeBtn = document.getElementById('close-modal');
       const roomCards = document.querySelectorAll<HTMLElement>('.room-card');
       const viewDetailsBtns = document.querySelectorAll<HTMLButtonElement>('.view-details-btn');
 
-      if (!modal) {
-        console.warn('[RoomsSection] Modal root not found (#room-modal). View buttons will not open a dialog.');
-      }
-
-      if (!TEL_LINK || !WHATSAPP_LINK) {
-        console.warn('[RoomsSection] Contact constants missing in client bundle:', {
-          hasTel: Boolean(TEL_LINK),
-          hasWhatsapp: Boolean(WHATSAPP_LINK),
-        });
-      }
-
       function openModal(roomCard: HTMLElement) {
-        if (!modal) {
-          console.warn('[RoomsSection] openModal called but modal root is missing');
-          return;
-        }
+        if (!modal) return;
 
         // Read room meta from dataset (single source of truth)
         const title = roomCard.dataset.title || '';
@@ -458,14 +438,12 @@ console.log('[Rooms Section] Booking schema generated');
 
         modal.classList.add('active');
         document.body.style.overflow = 'hidden';
-        console.log('[RoomsSection] Modal opened:', { roomType, title, price });
       }
 
       function closeModalFunc() {
         if (!modal) return;
         modal.classList.remove('active');
         document.body.style.overflow = 'auto';
-        console.log('[RoomsSection] Modal closed');
       }
 
       // "View" button click (preferred: explicit CTA)
@@ -473,10 +451,7 @@ console.log('[Rooms Section] Booking schema generated');
         btn.addEventListener('click', (e) => {
           e.stopPropagation();
           const roomCard = btn.closest('.room-card') as HTMLElement | null;
-          if (!roomCard) {
-            console.warn('[RoomsSection] View button clicked but no parent .room-card found');
-            return;
-          }
+          if (!roomCard) return;
           openModal(roomCard);
         });
       });
@@ -497,14 +472,8 @@ console.log('[Rooms Section] Booking schema generated');
       document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') closeModalFunc();
       });
-
-      console.log('[RoomsSection] Modal listeners ready:', {
-        roomCards: roomCards?.length ?? 0,
-        viewButtons: viewDetailsBtns?.length ?? 0,
-        hasModal: Boolean(modal),
-      });
-    } catch (err) {
-      console.error('[RoomsSection] Failed to initialize room modal listeners', err);
+    } catch {
+      // no-op: do not block rendering
     }
   }
 

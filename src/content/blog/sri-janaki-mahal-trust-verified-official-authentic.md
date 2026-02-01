@@ -123,7 +123,7 @@ Complete guide on verifying the authenticity of Sri Janaki Mahal Trust. Learn ho
 
 5. **Reviews and Ratings**
    - Guest reviews
-   - 4.5-star rating
+   - Positive guest feedback
    - Real testimonials
 
 ## How to Avoid Scams
@@ -331,7 +331,7 @@ Yes, visit us at Vasudev Gath, Karsewakpuram, Ayodhya, UP 224123. GPS: 26.803928
 
 4. **Guest Reviews**
    - Real testimonials
-   - 4.5-star rating
+   - Positive guest feedback
    - Satisfied guests
 
 5. **Transparency**

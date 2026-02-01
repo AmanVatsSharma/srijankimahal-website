@@ -22,7 +22,7 @@ Complete guide to verify if Sri Janaki Mahal Trust is genuine. Learn how to chec
 ✅ **Official Business** - Authentic and verified  
 ✅ **Real Location** - Physical address  
 ✅ **Verified Contact** - Official numbers  
-✅ **Good Reviews** - 4.5/5 rating  
+✅ **Good Reviews** - Positive guest feedback  
 ✅ **Serving Since 2020** - Established business
 
 ## How to Verify Genuineness
@@ -55,8 +55,8 @@ Complete guide to verify if Sri Janaki Mahal Trust is genuine. Learn how to chec
 
 ### 4. Verify Reviews
 **Check Reviews:**
-- ✅ 4.5/5 star rating
-- ✅ 100+ verified reviews
+- ✅ Positive guest feedback
+- ✅ Real guest experiences
 - ✅ Real guest feedback
 - ✅ Positive experiences
 
@@ -145,7 +145,7 @@ Always use official contact, verify details, and check official website.
 ✅ **Registered Entity** - Legal registration  
 ✅ **Physical Location** - Real address  
 ✅ **Official Contact** - Verified numbers  
-✅ **Good Reviews** - 4.5/5 rating  
+✅ **Good Reviews** - Positive guest feedback  
 ✅ **Transparent** - Clear operations  
 ✅ **Established** - Since 2020
 

@@ -1,0 +1,128 @@
+<!-- // src/pages/blog/page/[page].astro -->
+---
+import Layout from '../../../layouts/Layout.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+import { getAllBlogPosts } from '../../../lib/blog';
+
+const PAGE_SIZE = 12;
+
+export async function getStaticPaths() {
+  const allPosts = await getAllBlogPosts();
+  const totalPages = Math.max(1, Math.ceil(allPosts.length / 12));
+
+  // Page 1 lives at /blog, so generate /blog/page/2..n only
+  const pages = Array.from({ length: Math.max(0, totalPages - 1) }).map((_, i) => i + 2);
+
+  return pages.map((page) => ({
+    params: { page: String(page) },
+  }));
+}
+
+const allPosts = await getAllBlogPosts();
+const totalPages = Math.max(1, Math.ceil(allPosts.length / PAGE_SIZE));
+
+const pageParam = Number(Astro.params.page);
+if (!Number.isFinite(pageParam) || pageParam < 2 || pageParam > totalPages) {
+  throw new Error(`Invalid blog page "${Astro.params.page}"`);
+}
+
+const startIndex = (pageParam - 1) * PAGE_SIZE;
+const pagePosts = allPosts.slice(startIndex, startIndex + PAGE_SIZE);
+
+const siteUrl = (Astro.site?.toString() ?? 'https://www.srijanakimahaltrustofficial.com').replace(/\/$/, '');
+const prevHref = pageParam === 2 ? `${siteUrl}/blog` : `${siteUrl}/blog/page/${pageParam - 1}`;
+const nextHref = pageParam < totalPages ? `${siteUrl}/blog/page/${pageParam + 1}` : null;
+---
+
+<Layout
+  title={`Blog Page ${pageParam} - Sri Janaki Mahal Trust | Ayodhya Guides`}
+  description="Read our blog for guides on visiting Ayodhya, Ram Mandir, room booking, and staying at Sri Janaki Mahal Trust. Expert travel tips and booking guides."
+  keywords={[
+    'Sri Janaki Mahal Trust blog',
+    'Ayodhya travel guide',
+    'Ram Mandir guide',
+    'Sri Janaki Mahal Trust room booking',
+    'online booking Ayodhya',
+    'Ayodhya dharmshala guide'
+  ]}
+  canonical={`/blog/page/${pageParam}`}
+  ogType="website"
+>
+  <Fragment slot="head">
+    {prevHref && <link rel="prev" href={prevHref} />}
+    {nextHref && <link rel="next" href={nextHref} />}
+  </Fragment>
+
+  <Header />
+
+  <main class="min-h-screen bg-[#faf8f3] py-12">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h1 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
+          Sri Janaki Mahal Trust Blog
+        </h1>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+          Page {pageParam} of {totalPages}
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        {pagePosts.map((post) => (
+          <article class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+            <a href={`/blog/${post.slug}`} class="block">
+              <div class="p-6">
+                <div class="flex items-center gap-2 text-sm text-gray-500 mb-3">
+                  <time datetime={post.date}>
+                    {new Date(post.date).toLocaleDateString('en-IN', { year: 'numeric', month: 'long', day: 'numeric' })}
+                  </time>
+                  <span>•</span>
+                  <span>{post.readTime}</span>
+                </div>
+                <h2 class="text-xl font-bold text-gray-900 mb-3 hover:text-amber-600 transition-colors">
+                  {post.title}
+                </h2>
+                <p class="text-gray-600 leading-relaxed mb-4">
+                  {post.description}
+                </p>
+                <span class="text-amber-600 font-semibold hover:text-amber-700">
+                  Read more →
+                </span>
+              </div>
+            </a>
+          </article>
+        ))}
+      </div>
+
+      <nav class="flex items-center justify-center gap-3" aria-label="Blog pagination">
+        <a
+          href={pageParam === 2 ? '/blog' : `/blog/page/${pageParam - 1}`}
+          class="px-4 py-2 rounded-lg bg-white text-gray-900 border border-gray-200 hover:border-amber-600 hover:text-amber-700 transition-colors"
+        >
+          ← Previous
+        </a>
+        <span class="px-3 py-2 text-sm text-gray-600">
+          Page {pageParam} / {totalPages}
+        </span>
+        {nextHref ? (
+          <a
+            href={`/blog/page/${pageParam + 1}`}
+            class="px-4 py-2 rounded-lg bg-white text-gray-900 border border-gray-200 hover:border-amber-600 hover:text-amber-700 transition-colors"
+          >
+            Next →
+          </a>
+        ) : (
+          <a
+            href="/blog"
+            class="px-4 py-2 rounded-lg bg-amber-600 text-white font-semibold hover:bg-amber-700 transition-colors"
+          >
+            Back to Blog
+          </a>
+        )}
+      </nav>
+    </div>
+  </main>
+
+  <Footer />
+</Layout>
+

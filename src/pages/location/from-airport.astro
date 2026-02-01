@@ -1,0 +1,71 @@
+<!-- // src/pages/location/from-airport.astro -->
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { generateBreadcrumbSchema } from '../../lib/schemas/breadcrumb';
+import { DISPLAY_PHONE, TEL_LINK, WHATSAPP_LINK } from '../../lib/constants';
+
+const breadcrumbSchema = generateBreadcrumbSchema([
+  { name: 'Home', url: '/' },
+  { name: 'Location', url: '/location' },
+  { name: 'From Airport', url: '/location/from-airport' },
+]);
+---
+
+<Layout
+  title="How to Reach Sri Janaki Mahal Trust from Airport | Lucknow to Ayodhya"
+  description={`How to reach Sri Janaki Mahal Trust Ayodhya from airport (commonly Lucknow). Official help: ${DISPLAY_PHONE}.`}
+  keywords={[
+    'how to reach sri janaki mahal trust from airport',
+    'lucknow airport to ayodhya janaki mahal trust',
+    'airport to janaki mahal trust directions',
+    'ayodhya hotel near ram mandir from airport',
+  ]}
+  canonical="/location/from-airport"
+  ogImage="/og.jpg"
+>
+  <Header />
+
+  <main class="min-h-screen bg-[#faf8f3] py-12">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-white rounded-3xl shadow-lg p-8 sm:p-10">
+        <h1 class="text-4xl font-bold text-gray-900 mb-4">From Airport (Lucknow → Ayodhya)</h1>
+        <p class="text-lg text-gray-700 leading-relaxed">
+          Many guests arrive via Lucknow airport and travel onward to Ayodhya. This page gives a clean, verified path to reach Sri Janaki Mahal Trust.
+        </p>
+
+        <div class="mt-8 rounded-2xl border border-amber-200 bg-amber-50 p-6">
+          <h2 class="text-2xl font-semibold text-gray-900 mb-3">Need assistance while traveling?</h2>
+          <div class="flex flex-col sm:flex-row gap-3">
+            <a class="rounded-xl bg-[#2d2215] px-6 py-3 text-white font-semibold text-center hover:bg-[#b45309]" href={TEL_LINK}>
+              Call {DISPLAY_PHONE}
+            </a>
+            <a class="rounded-xl bg-green-600 px-6 py-3 text-white font-semibold text-center hover:bg-green-700" href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
+              WhatsApp Travel Details
+            </a>
+          </div>
+        </div>
+
+        <h2 class="mt-10 text-2xl font-semibold text-gray-900">Recommended route</h2>
+        <ol class="mt-4 list-decimal pl-6 text-gray-800 space-y-2">
+          <li>From airport, travel to Ayodhya by taxi/cab or pre-booked transport.</li>
+          <li>Ask the driver to drop at “Sri Janaki Mahal Trust, Vasudev Gath, Karsewakpuram”.</li>
+          <li>On arrival, verify check-in time and show your booking confirmation.</li>
+        </ol>
+
+        <h2 class="mt-10 text-2xl font-semibold text-gray-900">Helpful links</h2>
+        <ul class="mt-3 list-disc pl-6 text-gray-800 space-y-2">
+          <li><a class="text-amber-700 font-semibold hover:underline" href="/booking">Booking page</a></li>
+          <li><a class="text-amber-700 font-semibold hover:underline" href="/official-booking">Official booking</a></li>
+          <li><a class="text-amber-700 font-semibold hover:underline" href="/location/ayodhya">Ayodhya location guide</a></li>
+        </ul>
+      </div>
+
+      {breadcrumbSchema && <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />}
+    </div>
+  </main>
+
+  <Footer />
+</Layout>
+

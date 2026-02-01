@@ -1,0 +1,104 @@
+<!-- // src/pages/festival-booking-guide.astro -->
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import FloatingWhatsApp from '../components/FloatingWhatsApp.astro';
+import { generateBreadcrumbSchema } from '../lib/schemas/breadcrumb';
+import { generateFAQSchema, type FAQItem } from '../lib/schemas/faq';
+import { DISPLAY_PHONE } from '../lib/constants';
+
+const breadcrumbSchema = generateBreadcrumbSchema([
+  { name: 'Home', url: '/' },
+  { name: 'Festival Booking Guide', url: '/festival-booking-guide' },
+]);
+
+const faqs: FAQItem[] = [
+  {
+    question: 'How early should I book for Ram Navami or Diwali?',
+    answer:
+      'For peak festivals, book as early as possible. If you have fixed dates, contacting the trust 2–3 months early is strongly recommended.',
+  },
+  {
+    question: 'Do prices change during festivals?',
+    answer:
+      'Seasonal demand can affect availability and tariffs. Always confirm the current tariff and what is included during confirmation.',
+  },
+  {
+    question: 'What should I send in the first booking message?',
+    answer:
+      'Share dates, number of guests, room type preference, and your arrival time. This speeds up confirmation during peak rush.',
+  },
+  {
+    question: 'What is the official booking number?',
+    answer: `The official helpline is ${DISPLAY_PHONE}. Use the same number for WhatsApp.`,
+  },
+];
+
+const faqSchema = generateFAQSchema(faqs);
+---
+
+<Layout
+  title="Festival Booking Guide - Sri Janaki Mahal Trust | Ram Navami & Diwali"
+  description={`Festival season booking guide for Sri Janaki Mahal Trust Ayodhya near Ram Mandir. Book early for Ram Navami, Diwali and peak days. Official helpline: ${DISPLAY_PHONE}.`}
+  keywords={[
+    'festival booking ayodhya',
+    'ram navami booking ayodhya',
+    'diwali booking ayodhya',
+    'janaki mahal trust festival booking',
+    'sri janki mahal trust festival season rooms',
+  ]}
+  canonical="/festival-booking-guide"
+  ogImage="/og.jpg"
+>
+  <Header />
+
+  <main class="min-h-screen bg-[#faf8f3] py-12">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-white rounded-3xl shadow-lg p-8 sm:p-10">
+        <h1 class="text-4xl font-bold text-gray-900 mb-4">Festival Booking Guide</h1>
+        <p class="text-lg text-gray-700 leading-relaxed">
+          Ayodhya receives very high devotee footfall during major festivals. Use this guide to plan your stay near Ram Mandir
+          and avoid last-minute stress.
+        </p>
+
+        <div class="mt-8 rounded-2xl border border-amber-200 bg-amber-50 p-6">
+          <h2 class="text-2xl font-semibold text-gray-900 mb-3">Quick booking tip</h2>
+          <p class="text-gray-800">
+            For fastest confirmation, call/WhatsApp <strong>{DISPLAY_PHONE}</strong> with dates + guests + room type.
+          </p>
+        </div>
+
+        <h2 class="mt-10 text-2xl font-semibold text-gray-900">Best practice checklist</h2>
+        <ul class="mt-4 list-disc pl-6 text-gray-800 space-y-2">
+          <li>Book early for Ram Navami, Diwali, and long weekends.</li>
+          <li>Confirm check-in/check-out time and meal inclusion in writing.</li>
+          <li>For groups, share a single coordinator phone number and guest list.</li>
+          <li>Keep your confirmation message ready for check-in.</li>
+        </ul>
+
+        <div class="mt-10 grid gap-4 sm:grid-cols-2">
+          <a
+            href="/booking"
+            class="rounded-xl bg-[#2d2215] px-6 py-4 text-white font-semibold hover:bg-[#b45309] transition-colors text-center"
+          >
+            Book a room
+          </a>
+          <a
+            href="/how-to-avoid-scams"
+            class="rounded-xl border border-[#2d2215] px-6 py-4 text-[#2d2215] font-semibold hover:bg-[#f4ecdf] transition-colors text-center"
+          >
+            Avoid scams
+          </a>
+        </div>
+      </div>
+
+      {faqSchema && <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />}
+      {breadcrumbSchema && <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />}
+    </div>
+  </main>
+
+  <Footer />
+  <FloatingWhatsApp />
+</Layout>
+

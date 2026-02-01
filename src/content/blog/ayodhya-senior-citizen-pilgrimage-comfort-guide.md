@@ -1,6 +1,6 @@
 ---
 title: Ayodhya Senior Citizen Pilgrimage Guide (Comfort + Darshan + Stay Tips)
-description: Senior-friendly Ayodhya travel tips: darshan timing strategy, rest planning, transport basics, and how to book safely using official channels.
+description: "Senior-friendly Ayodhya travel tips: darshan timing strategy, rest planning, transport basics, and how to book safely using official channels."
 date: 2026-02-01
 keywords:
   - 'Ayodhya senior citizen guide'

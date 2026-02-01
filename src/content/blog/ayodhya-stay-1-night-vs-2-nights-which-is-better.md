@@ -1,6 +1,6 @@
 ---
-title: Ayodhya Stay: 1 Night vs 2 Nights — Which Is Better for Darshan?
-description: Decide between 1-night and 2-night stays in Ayodhya with a simple darshan-focused checklist and itinerary links.
+title: "Ayodhya Stay: 1 Night vs 2 Nights — Which Is Better for Darshan?"
+description: "Decide between 1-night and 2-night stays in Ayodhya with a simple darshan-focused checklist and itinerary links."
 date: 2026-02-01
 keywords:
   - 'Ayodhya 1 night or 2 nights'

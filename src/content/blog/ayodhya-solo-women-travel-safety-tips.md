@@ -1,6 +1,6 @@
 ---
 title: Ayodhya Solo Women Travel Safety Tips (Simple Checklist)
-description: A simple safety checklist for solo women travelers in Ayodhya: timing choices, staying alert, and using verified booking/contact channels.
+description: "A simple safety checklist for solo women travelers in Ayodhya: timing choices, staying alert, and using verified booking/contact channels."
 date: 2026-02-01
 keywords:
   - 'Ayodhya solo women travel'

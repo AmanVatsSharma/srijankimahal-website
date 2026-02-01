@@ -1,5 +1,5 @@
 ---
-title: Ayodhya Communication Tips: Language and Local Phrases Guide
+title: "Ayodhya Communication Tips: Language and Local Phrases Guide"
 description: "Practical communication guide for Ayodhya: common Hindi phrases, local dialect tips, how to communicate with locals, and language tools for a smoother pilgrimage experience."
 date: 2026-02-01
 keywords:

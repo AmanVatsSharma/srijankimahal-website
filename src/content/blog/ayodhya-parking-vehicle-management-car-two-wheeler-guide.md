@@ -1,5 +1,5 @@
 ---
-title: Ayodhya Parking and Vehicle Management: Car and Two-Wheeler Guide
+title: "Ayodhya Parking and Vehicle Management: Car and Two-Wheeler Guide"
 description: "Complete guide to parking facilities, vehicle management, and transportation options in Ayodhya for pilgrims traveling by car or two-wheeler."
 date: 2026-02-01
 keywords:

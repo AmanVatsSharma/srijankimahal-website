@@ -1,6 +1,6 @@
 ---
 title: Ayodhya Check-in Requirements (ID Proof + Basic Rules) — Quick Guide
-description: A quick checklist for hotel/dharamshala check-in in Ayodhya: what ID to carry, what details to keep ready, and links for verified booking support.
+description: "A quick checklist for hotel/dharamshala check-in in Ayodhya: what ID to carry, what details to keep ready, and links for verified booking support."
 date: 2026-02-01
 keywords:
   - 'Ayodhya check-in requirements'

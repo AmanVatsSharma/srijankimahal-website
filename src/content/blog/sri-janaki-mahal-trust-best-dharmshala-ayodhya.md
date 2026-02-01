@@ -37,8 +37,8 @@ Why Sri Janaki Mahal Trust is the best dharmshala in Ayodhya. Prime location, gr
 ✅ **Quick Response** - Instant booking
 
 ### 4. Best Reviews
-✅ **4.5/5 Rating** - Excellent rating  
-✅ **100+ Reviews** - Verified reviews  
+✅ **Strong Guest Feedback** - Excellent  
+✅ **Many Guests** - Positive experiences  
 ✅ **High Satisfaction** - Happy guests  
 ✅ **Trusted** - Reliable service
 
@@ -80,7 +80,7 @@ Best value for money in Ayodhya
 Official, authentic, reliable
 
 ### Great Reviews
-4.5/5 rating, happy guests
+Strong guest feedback from pilgrims
 
 ## Best for Everyone
 
@@ -115,7 +115,7 @@ Official, authentic, reliable
 2. **Best Value** - All meals included
 3. **Best Prices** - Affordable rates
 4. **Best Service** - 24/7 support
-5. **Best Reviews** - 4.5/5 rating
+5. **Best Reviews** - Guest satisfaction focus
 
 ## Book Best Dharmshala
 
@@ -128,7 +128,7 @@ Official, authentic, reliable
 ✅ Nearest to Ram Mandir  
 ✅ All meals included  
 ✅ Affordable prices  
-✅ 4.5/5 rating  
+✅ Strong guest feedback  
 ✅ 24/7 support  
 ✅ Verified trust
 

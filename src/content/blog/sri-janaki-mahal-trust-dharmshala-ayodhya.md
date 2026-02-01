@@ -57,7 +57,7 @@ Sri Janaki Mahal Trust is one of the best dharmshalas in Ayodhya, located near R
 ✅ **Affordable** - Budget-friendly  
 ✅ **Clean** - Well-maintained  
 ✅ **Verified** - Official trust  
-✅ **4.5/5 Rating** - Excellent reviews
+✅ **Strong Guest Feedback** - Excellent reviews
 
 ## Book Dharmshala
 

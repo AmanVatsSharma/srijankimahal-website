@@ -42,7 +42,7 @@ Complete comparison of Sri Janaki Mahal Trust with other accommodation options i
 | Meals | All included | Extra charge |
 | Prices | ₹1,250-₹4,150 | Often higher |
 | Support | 24/7 | Limited |
-| Rating | 4.5/5 | Varies |
+| Reviews | Strong guest feedback | Varies |
 
 ## Why Choose Us
 
@@ -50,7 +50,7 @@ Complete comparison of Sri Janaki Mahal Trust with other accommodation options i
 ✅ **Best Value** - All meals included  
 ✅ **Best Prices** - Affordable rates  
 ✅ **Best Service** - 24/7 support  
-✅ **Best Reviews** - 4.5/5 rating
+✅ **Best Reviews** - Guest satisfaction focus
 
 ## Book Best Option
 

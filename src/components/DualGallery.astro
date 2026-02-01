@@ -70,9 +70,6 @@ const rightLaneImages = [
   },
 ];
 
-// Console log to aid debugging when reviewing gallery assets
-console.log('[DualGallery] Rendering dual gallery lanes with', leftLaneImages.length + rightLaneImages.length, 'images');
-
 const imageSchemas = [...leftLaneImages, ...rightLaneImages].map((image) => ({
   '@context': 'https://schema.org',
   '@type': 'ImageObject',

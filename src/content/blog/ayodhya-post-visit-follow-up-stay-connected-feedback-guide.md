@@ -1,5 +1,5 @@
 ---
-title: Ayodhya Post-Visit Follow-Up: Staying Connected and Feedback Guide
+title: "Ayodhya Post-Visit Follow-Up: Staying Connected and Feedback Guide"
 description: "How to stay connected after your Ayodhya visit, provide feedback, share experiences, and maintain your spiritual connection with the pilgrimage destination."
 date: 2026-02-01
 keywords:

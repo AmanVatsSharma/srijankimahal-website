@@ -1,5 +1,5 @@
 ---
-title: Ayodhya Health and Medical Facilities: Pharmacy and Hospital Guide
+title: "Ayodhya Health and Medical Facilities: Pharmacy and Hospital Guide"
 description: "Essential information about medical facilities, pharmacies, hospitals, and healthcare services in Ayodhya for pilgrims requiring medical assistance during their stay."
 date: 2026-02-01
 keywords:

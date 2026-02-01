@@ -1,5 +1,5 @@
 ---
-title: Ayodhya Budget Planning: Complete Cost Breakdown and Money-Saving Tips
+title: "Ayodhya Budget Planning: Complete Cost Breakdown and Money-Saving Tips"
 description: "Plan your Ayodhya pilgrimage budget effectively: accommodation costs, travel expenses, food, darshan fees, and practical money-saving strategies for a comfortable stay."
 date: 2026-02-01
 keywords:

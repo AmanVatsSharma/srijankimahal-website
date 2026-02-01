@@ -1,5 +1,5 @@
 ---
-title: Ayodhya Shopping Guide: What to Buy, Where to Shop, and Price Ranges
+title: "Ayodhya Shopping Guide: What to Buy, Where to Shop, and Price Ranges"
 description: "Complete shopping guide for Ayodhya: religious items, souvenirs, local handicrafts, where to find authentic products, and typical price ranges for budget planning."
 date: 2026-02-01
 keywords:

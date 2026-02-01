@@ -1,0 +1,143 @@
+<!-- // src/pages/hi/location/index.astro -->
+---
+import Layout from '../../../layouts/Layout.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+import { generateBreadcrumbSchema, generateStandardBreadcrumbs } from '../../../lib/schemas/breadcrumb';
+
+const breadcrumbs = generateStandardBreadcrumbs('Location', '/hi/location');
+const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbs);
+---
+
+<Layout
+  title="लोकेशन - श्री जानकी महल ट्रस्ट | कारसेवकपुरम, अयोध्या"
+  description="श्री जानकी महल ट्रस्ट कारसेवकपुरम, अयोध्या में स्थित है—राम मंदिर के पास। पता, दिशा-निर्देश और गाइड्स।"
+  keywords={[
+    'श्री जानकी महल ट्रस्ट लोकेशन',
+    'जनकी महल ट्रस्ट पता',
+    'कारसेवकपुरम अयोध्या',
+    'राम मंदिर के पास ठहरना',
+  ]}
+  canonical="/hi/location"
+  ogType="website"
+  ogImage="/og.jpg"
+  lang="hi"
+>
+  <Header />
+
+  <main class="min-h-screen bg-[#faf8f3]">
+    <section class="bg-gradient-to-r from-amber-600 to-rose-600 text-white py-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-4xl sm:text-5xl font-bold mb-6">
+          <span class="text-amber-200">Sri Janaki Mahal Trust</span> लोकेशन
+        </h1>
+        <p class="text-xl mb-8 max-w-3xl mx-auto">
+          कारसेवकपुरम, अयोध्या — राम मंदिर के पास
+        </p>
+      </div>
+    </section>
+
+    <section class="py-16 bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-2 gap-12 mb-12">
+          <div class="bg-gray-50 rounded-lg p-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">आधिकारिक पता</h2>
+            <div class="space-y-3 text-lg text-gray-700">
+              <p><strong>Sri Janaki Mahal Trust</strong></p>
+              <p>Vasudev Gath, Karsewakpuram</p>
+              <p>Ayodhya, Uttar Pradesh 224123</p>
+              <p>India</p>
+              <div class="mt-6 pt-6 border-t border-gray-300">
+                <p class="text-sm text-gray-600 mb-2"><strong>GPS:</strong></p>
+                <p class="text-sm font-mono text-gray-900">26.8039286°N, 82.2109433°E</p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">हाइलाइट्स</h2>
+            <div class="space-y-4">
+              <div class="flex items-start gap-3">
+                <span class="text-green-600 text-2xl">🏛️</span>
+                <div>
+                  <p class="font-semibold text-gray-900">राम मंदिर के पास</p>
+                  <p class="text-gray-600">दर्शन/यात्रा के लिए सुविधाजनक</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <span class="text-green-600 text-2xl">📍</span>
+                <div>
+                  <p class="font-semibold text-gray-900">कारसेवकपुरम</p>
+                  <p class="text-gray-600">अयोध्या का पवित्र क्षेत्र</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <span class="text-green-600 text-2xl">🚆</span>
+                <div>
+                  <p class="font-semibold text-gray-900">आसान पहुँच</p>
+                  <p class="text-gray-600">रेलवे/रोड से कनेक्टेड</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-12">
+          <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">डिटेल्ड लोकेशन गाइड्स</h2>
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <a href="/hi/location/near-ram-mandir" class="bg-white border-2 border-amber-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+              <div class="text-4xl mb-4 text-center">🏛️</div>
+              <h3 class="text-xl font-bold text-gray-900 mb-3 text-center">राम मंदिर के पास</h3>
+              <p class="text-gray-600 text-center mb-4">मंदिर के पास रहने की जानकारी</p>
+              <p class="text-amber-600 font-semibold text-center">देखें →</p>
+            </a>
+
+            <a href="/hi/location/karsewakpuram" class="bg-white border-2 border-amber-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+              <div class="text-4xl mb-4 text-center">📍</div>
+              <h3 class="text-xl font-bold text-gray-900 mb-3 text-center">कारसेवकपुरम</h3>
+              <p class="text-gray-600 text-center mb-4">क्षेत्र और महत्व</p>
+              <p class="text-amber-600 font-semibold text-center">देखें →</p>
+            </a>
+
+            <a href="/hi/location/ayodhya" class="bg-white border-2 border-amber-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+              <div class="text-4xl mb-4 text-center">🏙️</div>
+              <h3 class="text-xl font-bold text-gray-900 mb-3 text-center">अयोध्या</h3>
+              <p class="text-gray-600 text-center mb-4">अयोध्या यात्रा गाइड</p>
+              <p class="text-amber-600 font-semibold text-center">देखें →</p>
+            </a>
+
+            <a href="/hi/location/from-ayodhya-junction" class="bg-white border-2 border-amber-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+              <div class="text-4xl mb-4 text-center">🚆</div>
+              <h3 class="text-xl font-bold text-gray-900 mb-3 text-center">स्टेशन से कैसे आएँ</h3>
+              <p class="text-gray-600 text-center mb-4">Ayodhya Junction से दिशा</p>
+              <p class="text-amber-600 font-semibold text-center">देखें →</p>
+            </a>
+
+            <a href="/hi/location/from-airport" class="bg-white border-2 border-amber-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+              <div class="text-4xl mb-4 text-center">✈️</div>
+              <h3 class="text-xl font-bold text-gray-900 mb-3 text-center">एयरपोर्ट से कैसे आएँ</h3>
+              <p class="text-gray-600 text-center mb-4">लखनऊ/नज़दीकी एयरपोर्ट से</p>
+              <p class="text-amber-600 font-semibold text-center">देखें →</p>
+            </a>
+          </div>
+        </div>
+
+        <div class="bg-gradient-to-r from-amber-600 to-rose-600 rounded-lg p-8 text-white text-center">
+          <h2 class="text-3xl font-bold mb-4">दिशा-निर्देश चाहिए?</h2>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/hi/contact-number" class="px-8 py-4 bg-white text-amber-700 font-bold rounded-lg hover:bg-gray-100 transition-colors">
+              आधिकारिक संपर्क
+            </a>
+            <a href="/hi/booking" class="px-8 py-4 bg-green-600 text-white font-bold rounded-lg hover:bg-green-700 transition-colors">
+              बुकिंग पेज
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  {breadcrumbSchema && <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />}
+  <Footer />
+</Layout>
+

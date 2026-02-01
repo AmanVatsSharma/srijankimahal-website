@@ -1,0 +1,100 @@
+<!-- // src/pages/hi/location/near-ram-mandir.astro -->
+---
+import Layout from '../../../layouts/Layout.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+import { generateBreadcrumbSchema } from '../../../lib/schemas/breadcrumb';
+
+const breadcrumbSchema = generateBreadcrumbSchema([
+  { name: 'Home', url: '/hi' },
+  { name: 'Location', url: '/hi/location' },
+  { name: 'Near Ram Mandir', url: '/hi/location/near-ram-mandir' },
+]);
+---
+
+<Layout
+  title="राम मंदिर के पास | श्री जानकी महल ट्रस्ट - अयोध्या"
+  description="श्री जानकी महल ट्रस्ट कारसेवकपुरम, अयोध्या में राम मंदिर के पास स्थित है। दर्शन के लिए सुविधाजनक लोकेशन।"
+  keywords={[
+    'राम मंदिर के पास होटल',
+    'जनकी महल ट्रस्ट राम मंदिर',
+    'अयोध्या राम मंदिर के पास ठहरना',
+    'walking distance ram mandir',
+  ]}
+  canonical="/hi/location/near-ram-mandir"
+  ogType="website"
+  ogImage="/og.jpg"
+  lang="hi"
+>
+  <Header />
+
+  <main class="min-h-screen bg-[#faf8f3]">
+    <section class="bg-gradient-to-r from-amber-600 to-rose-600 text-white py-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-4xl sm:text-5xl font-bold mb-6">
+          <span class="text-amber-200">Sri Janaki Mahal Trust</span> — राम मंदिर के पास
+        </h1>
+        <p class="text-xl mb-8 max-w-3xl mx-auto">
+          दर्शन के लिए सुविधाजनक लोकेशन और शांत वातावरण
+        </p>
+      </div>
+    </section>
+
+    <section class="py-16 bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-2 gap-12 items-start">
+          <div>
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">
+              राम मंदिर के पास ठहरने के फायदे
+            </h2>
+            <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+              राम मंदिर के पास ठहरने से आप सुबह/शाम दर्शन आसानी से कर सकते हैं और ट्रैफिक/ट्रांसपोर्ट की परेशानी कम होती है।
+            </p>
+            <ul class="space-y-3 text-gray-800">
+              <li class="rounded-xl border border-gray-200 p-4">✓ सुबह की आरती के लिए जल्दी पहुँच</li>
+              <li class="rounded-xl border border-gray-200 p-4">✓ दिन में कई बार दर्शन (जितना चाहें)</li>
+              <li class="rounded-xl border border-gray-200 p-4">✓ बुजुर्गों/परिवार के लिए सुविधाजनक</li>
+            </ul>
+          </div>
+          <div class="bg-gray-50 rounded-lg p-8">
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">दिशा-निर्देश</h3>
+            <div class="space-y-4">
+              <div class="border-l-4 border-amber-600 pl-4">
+                <p class="font-semibold text-gray-900">लोकेशन</p>
+                <p class="text-gray-700">कारसेवकपुरम, Vasudev Gath, अयोध्या</p>
+              </div>
+              <div class="border-l-4 border-amber-600 pl-4">
+                <p class="font-semibold text-gray-900">सहायता</p>
+                <p class="text-gray-700">
+                  <a class="text-amber-700 font-semibold hover:underline" href="/hi/contact-number">आधिकारिक संपर्क</a> पर कॉल/WhatsApp करें।
+                </p>
+              </div>
+              <div class="border-l-4 border-amber-600 pl-4">
+                <p class="font-semibold text-gray-900">बुकिंग</p>
+                <p class="text-gray-700">
+                  <a class="text-amber-700 font-semibold hover:underline" href="/hi/booking">बुकिंग पेज</a> देखें।
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-12 bg-gradient-to-r from-amber-600 to-rose-600 rounded-lg p-8 text-white text-center">
+          <h2 class="text-3xl font-bold mb-4">राम मंदिर के पास ठहरने के लिए बुक करें</h2>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/hi/booking" class="px-8 py-4 bg-white text-amber-700 font-bold rounded-lg hover:bg-gray-100 transition-colors">
+              बुकिंग पेज
+            </a>
+            <a href="tel:+918460839199" class="px-8 py-4 bg-green-600 text-white font-bold rounded-lg hover:bg-green-700 transition-colors">
+              कॉल: +91 8460839199
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  {breadcrumbSchema && <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />}
+  <Footer />
+</Layout>
+

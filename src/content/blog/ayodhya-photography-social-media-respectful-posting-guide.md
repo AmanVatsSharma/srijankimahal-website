@@ -1,5 +1,5 @@
 ---
-title: Ayodhya Photography and Social Media: Respectful Posting Guide
+title: "Ayodhya Photography and Social Media: Respectful Posting Guide"
 description: "Guidelines for photography and social media posting in Ayodhya: temple rules, respectful practices, what to share, and cultural sensitivity for pilgrims."
 date: 2026-02-01
 keywords:

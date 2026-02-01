@@ -52,7 +52,7 @@ Complete comparison of Sri Janaki Mahal Trust with other dharmshalas in Ayodhya.
 | **AC Rooms** | Available | May not have |
 | **24/7 Support** | Available | Limited hours |
 | **Verified** | Official trust | Not always verified |
-| **Reviews** | 4.5/5 rating | Varies |
+| **Reviews** | Strong guest feedback | Varies |
 | **Cleanliness** | Excellent | Varies |
 
 ## Key Advantages
@@ -79,7 +79,7 @@ Complete comparison of Sri Janaki Mahal Trust with other dharmshalas in Ayodhya.
 - **Official trust** - Verified and registered
 - **Authentic** - Real business
 - **Safe booking** - Official channels
-- **Good reviews** - 4.5/5 rating
+- **Good reviews** - Guest satisfaction focus
 
 ## Why Guests Choose Sri Janaki Mahal Trust
 
@@ -126,7 +126,7 @@ Best value for money in Ayodhya
 Official, authentic, safe booking
 
 ### 5. Excellent Reviews
-4.5/5 rating, 100+ verified reviews
+Strong guest feedback across seasons
 
 ### 6. 24/7 Support
 Always available to help
@@ -134,8 +134,8 @@ Always available to help
 ## Guest Feedback Comparison
 
 ### Sri Janaki Mahal Trust
-- **Rating:** 4.5/5 ⭐⭐⭐⭐⭐
-- **Reviews:** 100+ verified
+- **Guest feedback:** Very positive
+- **Reviews:** Check latest feedback via official channels
 - **Satisfaction:** Excellent
 
 ### Other Dharmshalas
@@ -157,7 +157,7 @@ Experience why guests choose us over others:
 ✅ All meals included  
 ✅ Affordable prices  
 ✅ Verified trust  
-✅ 4.5/5 rating  
+✅ Strong guest feedback  
 ✅ 24/7 support
 
 ---

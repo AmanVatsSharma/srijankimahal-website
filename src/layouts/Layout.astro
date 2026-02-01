@@ -2,7 +2,7 @@
 ---
 import '../styles/global.css';
 import { generateSEOData, type SEOConfig } from '../lib/seo';
-import { SCHEMA_TELEPHONE, WHATSAPP_LINK } from '../lib/constants';
+import { SCHEMA_TELEPHONE, WHATSAPP_LINK, OFFICIAL_EMAIL } from '../lib/constants';
 
 // SEO Props Interface
 interface Props {
@@ -47,47 +47,64 @@ const seoConfig: SEOConfig = {
 };
 
 const seoData = generateSEOData(seoConfig, currentPath);
-
-console.log('[Layout] SEO data generated:', {
-  title: seoData.title,
-  path: currentPath,
-  lang: seoData.lang,
-});
+const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
+const googleAdsConversionLabel = import.meta.env.PUBLIC_GOOGLE_ADS_CONVERSION_LABEL;
 ---
 
 <!doctype html>
 <html lang={seoData.lang}>
   <head>
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+    <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
+    <link rel="preconnect" href="https://www.google-analytics.com" crossorigin />
+
+    <!-- Preload above-the-fold hero image (LCP) -->
+    <link rel="preload" as="image" href="/sri-janaki-mahal/IMG-20251017-WA0022.jpg" fetchpriority="high" />
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17922029438"></script>
     <script>
       // @ts-ignore - Google Analytics global variables
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
+      // @ts-ignore
+      window.gtag = gtag;
       gtag('js', new Date());
 
       gtag('config', 'AW-17922029438');
     </script>
     
     <!-- Event snippet for Click to call conversion page -->
-    <script>
-    // @ts-ignore - Google Analytics conversion tracking
-    // [SonuRamTODO] Replace CONVERSION_LABEL with your conversion action label from Google Ads (AW-17922029438)
-    function gtag_report_conversion(url) {
-      var callback = function () {
-        if (typeof(url) != 'undefined') {
-          window.location = url;
+    <script define:vars={{ googleAdsConversionLabel }}>
+      // Click conversion helper
+      // - If conversion label isn't configured, do not block navigation.
+      // - Keeps `onclick="return gtag_report_conversion(url)"` safe.
+      // @ts-ignore
+      function gtag_report_conversion(url) {
+        try {
+          if (!googleAdsConversionLabel || typeof window.gtag !== 'function') {
+            return true;
+          }
+
+          var callback = function () {
+            if (typeof url !== 'undefined') {
+              window.location = url;
+            }
+          };
+
+          // @ts-ignore - Google Analytics global function
+          window.gtag('event', 'conversion', {
+            'send_to': 'AW-17922029438/' + googleAdsConversionLabel,
+            'value': 1.0,
+            'currency': 'INR',
+            'event_callback': callback
+          });
+          return false;
+        } catch {
+          return true;
         }
-      };
-      // @ts-ignore - Google Analytics global function
-      gtag('event', 'conversion', {
-          'send_to': 'AW-17922029438/CONVERSION_LABEL',
-          'value': 1.0,
-          'currency': 'INR',
-          'event_callback': callback
-      });
-      return false;
-    }
+      }
     </script>
     
     <meta charset="UTF-8" />
@@ -102,8 +119,10 @@ console.log('[Layout] SEO data generated:', {
     <meta name="referrer" content="no-referrer-when-downgrade" />
     <meta name="format-detection" content="telephone=no" />
     
-    <!-- Google Site Verification (Replace with actual verification code) -->
-    <meta name="google-site-verification" content="your-google-verification-code" />
+    <!-- Google Site Verification (configured via PUBLIC_GOOGLE_SITE_VERIFICATION) -->
+    {googleSiteVerification && (
+      <meta name="google-site-verification" content={googleSiteVerification} />
+    )}
     
     <!-- Google Ads Disclosure -->
     <meta name="google-ads-disclosure" content="This site uses Google Ads for advertising purposes" />
@@ -115,6 +134,8 @@ console.log('[Layout] SEO data generated:', {
     {seoData.hreflangTags.map((tag) => (
       <link rel={tag.rel} hreflang={tag.hreflang} href={tag.href} />
     ))}
+
+    <slot name="head" />
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content={seoData.ogTags['og:type']} />
@@ -134,10 +155,9 @@ console.log('[Layout] SEO data generated:', {
     
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{seoData.title}</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
     
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
@@ -205,10 +225,10 @@ console.log('[Layout] SEO data generated:', {
             "telephone": SCHEMA_TELEPHONE,
             "contactType": "customer service",
             "availableLanguage": ["English", "Hindi"],
-            "areaServed": "IN",
+            "areaServed": "Ayodhya, Uttar Pradesh, India",
             "hoursAvailable": "24/7"
           },
-          "email": "srijanakimahaltrust7484@gmail.com",
+          "email": OFFICIAL_EMAIL,
           "address": {
             "@type": "PostalAddress",
             "streetAddress": "Vasudev Gath, Karsewakpuram",
@@ -239,7 +259,7 @@ console.log('[Layout] SEO data generated:', {
           ],
           "image": "https://www.srijanakimahaltrustofficial.com/og.jpg",
           "telephone": SCHEMA_TELEPHONE,
-          "email": "srijanakimahaltrust7484@gmail.com",
+          "email": OFFICIAL_EMAIL,
           "url": "https://www.srijanakimahaltrustofficial.com/",
           "address": {
             "@type": "PostalAddress",
@@ -254,8 +274,9 @@ console.log('[Layout] SEO data generated:', {
             "latitude": 26.8039286,
             "longitude": 82.2109433
           },
+          "areaServed": "Ayodhya, Uttar Pradesh, India",
           "openingHours": "Mo-Su 00:00-23:59",
-          "priceRange": "₹₹",
+          "priceRange": "₹1,250 - ₹4,150",
           "description": "Best hotel in Ayodhya offering comfortable accommodation near Ram Mandir with all meals included and online booking"
         },
         {
@@ -273,7 +294,7 @@ console.log('[Layout] SEO data generated:', {
           ],
           "image": "https://www.srijanakimahaltrustofficial.com/og.jpg",
           "telephone": SCHEMA_TELEPHONE,
-          "email": "srijanakimahaltrust7484@gmail.com",
+          "email": OFFICIAL_EMAIL,
           "url": "https://www.srijanakimahaltrustofficial.com/",
           "address": {
             "@type": "PostalAddress",
@@ -317,11 +338,7 @@ console.log('[Layout] SEO data generated:', {
               "name": "Near Ram Mandir",
               "value": true
             }
-          ],
-          "starRating": {
-            "@type": "Rating",
-            "ratingValue": "4.5"
-          }
+          ]
         }
       ]
     }
@@ -329,14 +346,5 @@ console.log('[Layout] SEO data generated:', {
   </head>
   <body class="bg-[#faf8f3]">
     <slot />
-    <script>
-      // Global image load error logger
-      window.addEventListener('error', (event) => {
-        const target = event.target;
-        if (target && target.tagName === 'IMG') {
-          console.error('[Image Load Error]', target.src);
-        }
-      }, true);
-    </script>
   </body>
 </html>

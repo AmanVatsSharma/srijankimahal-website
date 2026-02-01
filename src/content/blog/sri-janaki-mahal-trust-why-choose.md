@@ -59,8 +59,8 @@ Top reasons why guests choose Sri Janaki Mahal Trust. Learn what makes us the be
 **Why It Matters:** Safe booking, authentic business, no scams, reliable service.
 
 ### 6. Great Reviews
-✅ **4.5/5 Rating** - Excellent  
-✅ **100+ Reviews** - Verified  
+✅ **Strong Guest Feedback** - Excellent  
+✅ **Many Guests** - Positive experiences  
 ✅ **Happy Guests** - High satisfaction  
 ✅ **Trusted** - Reliable
 
@@ -127,7 +127,7 @@ Top reasons why guests choose Sri Janaki Mahal Trust. Learn what makes us the be
 ✅ Nearest to Ram Mandir  
 ✅ All meals included  
 ✅ Affordable prices  
-✅ 4.5/5 rating  
+✅ Strong guest feedback  
 ✅ 24/7 support  
 ✅ Verified trust
 

@@ -53,30 +53,22 @@ import { WHATSAPP_BOOKING_LINK_HI } from '../lib/constants';
   </div>
 </div>
 <script is:inline>
-  // Debug + defensive init for WhatsApp bubble UI
   try {
-    console.log('[FloatingWhatsApp] Initializing bubble timer');
     setTimeout(() => {
       const wrap = document.getElementById('whatsapp-bubble-text-container');
       const close = document.getElementById('wa-close-bubble');
 
       if (wrap) {
         wrap.classList.remove('hidden');
-        console.log('[FloatingWhatsApp] Bubble shown');
-      } else {
-        console.warn('[FloatingWhatsApp] Bubble container not found');
       }
 
       if (close && wrap) {
         close.onclick = () => {
           wrap.classList.add('hidden');
-          console.log('[FloatingWhatsApp] Bubble closed');
         };
-      } else if (!close) {
-        console.warn('[FloatingWhatsApp] Close button not found');
       }
     }, 1800);
-  } catch (err) {
-    console.error('[FloatingWhatsApp] Failed to initialize bubble', err);
+  } catch {
+    // no-op: do not block page rendering
   }
 </script>

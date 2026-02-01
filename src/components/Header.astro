@@ -1,6 +1,13 @@
 <!-- // src/components/Header.astro -->
 ---
 import { WHATSAPP_BOOKING_LINK, TEL_LINK } from '../lib/constants';
+import LanguageSwitcher from './LanguageSwitcher.astro';
+import { detectLangFromPath, withLangPrefix } from '../lib/i18n';
+
+const pathname = Astro.url.pathname;
+const currentLang = detectLangFromPath(pathname);
+
+const href = (path: string) => withLangPrefix(path, currentLang);
 ---
 
 <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200 shadow-sm">
@@ -22,17 +29,18 @@ import { WHATSAPP_BOOKING_LINK, TEL_LINK } from '../lib/constants';
 
       <!-- Desktop Navigation -->
       <nav class="hidden md:flex items-center gap-6">
-        <a href="/" class="text-sm font-medium text-gray-900 hover:text-amber-600 transition-colors">Home</a>
-        <a href="/about" class="text-sm font-medium text-gray-900 hover:text-amber-600 transition-colors">About Sri / Shri Janki Mahal Trust</a>
-        <a href="/booking" class="text-sm font-medium text-gray-900 hover:text-amber-600 transition-colors font-semibold">Official Janaki Mahal Booking</a>
-        <a href="/#rooms" class="text-sm font-medium text-gray-900 hover:text-amber-600 transition-colors">Rooms</a>
-        <a href="/blog" class="text-sm font-medium text-gray-900 hover:text-amber-600 transition-colors">Blog</a>
-        <a href="/official" class="text-sm font-medium text-gray-900 hover:text-amber-600 transition-colors">Verify Sri Janki Mahal Trust</a>
-        <a href="/#contact" class="text-sm font-medium text-gray-900 hover:text-amber-600 transition-colors">Official Contact Number</a>
+        <a href={href('/')} class="text-sm font-medium text-gray-900 hover:text-amber-600 transition-colors">Home</a>
+        <a href={href('/about')} class="text-sm font-medium text-gray-900 hover:text-amber-600 transition-colors">About Sri / Shri Janki Mahal Trust</a>
+        <a href={href('/booking')} class="text-sm font-semibold text-gray-900 hover:text-amber-600 transition-colors">Official Janaki Mahal Booking</a>
+        <a href={href('/#rooms')} class="text-sm font-medium text-gray-900 hover:text-amber-600 transition-colors">Rooms</a>
+        <a href={href('/blog')} class="text-sm font-medium text-gray-900 hover:text-amber-600 transition-colors">Blog</a>
+        <a href={href('/official')} class="text-sm font-medium text-gray-900 hover:text-amber-600 transition-colors">Verify Sri Janki Mahal Trust</a>
+        <a href={href('/#contact')} class="text-sm font-medium text-gray-900 hover:text-amber-600 transition-colors">Official Contact Number</a>
       </nav>
 
       <!-- CTA Buttons -->
       <div class="hidden md:flex items-center gap-3">
+        <LanguageSwitcher />
         <a
           href={WHATSAPP_BOOKING_LINK}
           target="_blank"
@@ -68,13 +76,16 @@ import { WHATSAPP_BOOKING_LINK, TEL_LINK } from '../lib/constants';
 
     <!-- Mobile Navigation -->
     <nav id="mobile-nav" class="md:hidden pb-4 space-y-2 hidden">
-      <a href="/" class="block px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 rounded-lg">Home</a>
-      <a href="/about" class="block px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 rounded-lg">About Sri / Shri Janki Mahal Trust</a>
-      <a href="/booking" class="block px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 rounded-lg font-semibold">Official Janaki Mahal Booking</a>
-      <a href="/#rooms" class="block px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 rounded-lg">Rooms</a>
-      <a href="/blog" class="block px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 rounded-lg">Blog</a>
-      <a href="/official" class="block px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 rounded-lg">Verify Sri Janki Mahal Trust</a>
-      <a href="/#contact" class="block px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 rounded-lg">Official Contact Number</a>
+      <div class="px-4 pt-2">
+        <LanguageSwitcher />
+      </div>
+      <a href={href('/')} class="block px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 rounded-lg">Home</a>
+      <a href={href('/about')} class="block px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 rounded-lg">About Sri / Shri Janki Mahal Trust</a>
+      <a href={href('/booking')} class="block px-4 py-2 text-sm font-semibold text-gray-900 hover:bg-gray-100 rounded-lg">Official Janaki Mahal Booking</a>
+      <a href={href('/#rooms')} class="block px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 rounded-lg">Rooms</a>
+      <a href={href('/blog')} class="block px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 rounded-lg">Blog</a>
+      <a href={href('/official')} class="block px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 rounded-lg">Verify Sri Janki Mahal Trust</a>
+      <a href={href('/#contact')} class="block px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 rounded-lg">Official Contact Number</a>
       <div class="flex gap-2 pt-2">
         <a
           href={WHATSAPP_BOOKING_LINK}
@@ -102,32 +113,40 @@ import { WHATSAPP_BOOKING_LINK, TEL_LINK } from '../lib/constants';
     const menuIcon = document.getElementById('menu-icon');
     const closeIcon = document.getElementById('close-icon');
 
-    const setOpen = (open) => {
+    const openMenu = () => {
       if (!mobileNav || !menuIcon || !closeIcon) return;
-      mobileNav.classList.toggle('hidden', !open);
-      menuIcon.classList.toggle('hidden', open);
-      closeIcon.classList.toggle('hidden', !open);
+      mobileNav.classList.remove('hidden');
+      menuIcon.classList.add('hidden');
+      closeIcon.classList.remove('hidden');
+    };
+
+    const closeMenu = () => {
+      if (!mobileNav || !menuIcon || !closeIcon) return;
+      mobileNav.classList.add('hidden');
+      menuIcon.classList.remove('hidden');
+      closeIcon.classList.add('hidden');
     };
 
     mobileMenuBtn?.addEventListener('click', () => {
       const isHidden = mobileNav?.classList.contains('hidden') ?? true;
-      setOpen(isHidden);
+      if (isHidden) openMenu();
+      else closeMenu();
     });
 
     // Close menu when a link is selected
     const navLinks = mobileNav?.querySelectorAll('a');
     navLinks?.forEach((link) => {
-      link.addEventListener('click', () => setOpen(false));
+      link.addEventListener('click', () => closeMenu());
     });
 
     // Close menu when clicking outside (mobile only)
     document.addEventListener('click', (e) => {
       if (!mobileNav || !mobileMenuBtn) return;
-      const target = e.target;
-      const clickedInsideNav = mobileNav.contains(target);
-      const clickedButton = mobileMenuBtn.contains(target);
+      const path = typeof e.composedPath === 'function' ? e.composedPath() : [];
+      const clickedInsideNav = path.includes(mobileNav);
+      const clickedButton = path.includes(mobileMenuBtn);
       const isOpen = !mobileNav.classList.contains('hidden');
-      if (isOpen && !clickedInsideNav && !clickedButton) setOpen(false);
+      if (isOpen && !clickedInsideNav && !clickedButton) closeMenu();
     });
   } catch {
     // no-op: do not block rendering

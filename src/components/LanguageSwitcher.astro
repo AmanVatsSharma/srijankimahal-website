@@ -1,0 +1,25 @@
+<!-- // src/components/LanguageSwitcher.astro -->
+---
+import { detectLangFromPath, getAlternateLang, withLangPrefix, stripLangPrefix } from '../lib/i18n';
+
+const pathname = Astro.url.pathname;
+const currentLang = detectLangFromPath(pathname);
+const basePath = stripLangPrefix(pathname);
+const nextLang = getAlternateLang(currentLang);
+const switchToPath = withLangPrefix(basePath, nextLang);
+
+const label = nextLang === 'hi' ? 'हिंदी' : 'English';
+---
+
+<a
+  href={switchToPath}
+  hreflang={nextLang}
+  class="inline-flex items-center gap-2 rounded-lg border border-gray-200 bg-white px-3 py-2 text-sm font-semibold text-gray-900 hover:border-amber-600 hover:text-amber-700 transition-colors"
+  aria-label={nextLang === 'hi' ? 'हिंदी संस्करण खोलें' : 'Open English version'}
+  title={nextLang === 'hi' ? 'हिंदी' : 'English'}
+>
+  <span class="text-xs font-bold uppercase tracking-wide text-gray-500">{currentLang.toUpperCase()}</span>
+  <span class="text-gray-400">→</span>
+  <span>{label}</span>
+</a>
+

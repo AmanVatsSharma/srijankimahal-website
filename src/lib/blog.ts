@@ -80,3 +80,27 @@ export async function getAllBlogPosts(): Promise<BlogListItem[]> {
   return entries;
 }
 
+export async function getAllBlogPostsByLang(lang: 'en' | 'hi'): Promise<BlogListItem[]> {
+  const imports = lang === 'hi' ? import.meta.glob('../content/blog/hi/*.md') : import.meta.glob('../content/blog/*.md');
+
+  const entries = await Promise.all(
+    Object.entries(imports).map(async ([path, resolver]) => {
+      const mod = (await resolver()) as MarkdownModule;
+      const slug = path.split('/').pop()?.replace('.md', '') ?? '';
+      const raw = await resolveRawContent(mod);
+      const readTime = mod.frontmatter.readTime ?? calculateReadTime(stripFrontmatter(raw));
+
+      return {
+        slug,
+        title: mod.frontmatter.title,
+        description: mod.frontmatter.description,
+        date: mod.frontmatter.date,
+        readTime,
+      } satisfies BlogListItem;
+    })
+  );
+
+  entries.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  return entries;
+}
+

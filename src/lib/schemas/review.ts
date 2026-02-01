@@ -1,15 +1,20 @@
 /**
- * Review Schema Utility
- * 
- * Generates Review and AggregateRating structured data for SEO.
- * Helps Google display star ratings and reviews in search results.
- * 
- * Flow:
- * 1. Define review items (author, rating, date, text)
- * 2. Generate AggregateRating from all reviews
- * 3. Generate individual Review schemas
- * 4. Return combined JSON-LD schema
+ * File: Astro/src/lib/schemas/review.ts
+ * Module: astro-seo
+ * Purpose: Generate review-related JSON-LD (only when reviews are verifiable).
+ * Author: Aman Sharma / NovologicAI
+ * Last-updated: 2026-02-01
+ * Notes:
+ * - Google can penalize unverified or fabricated review markup.
+ * - Do NOT emit Review/AggregateRating schema unless reviews are real + attributable to a public source (e.g., GBP).
  */
+
+function debugLog(message: string, data?: unknown) {
+  if (import.meta.env?.DEV) {
+    // eslint-disable-next-line no-console
+    console.debug(message, data ?? '');
+  }
+}
 
 /**
  * Review Item Interface
@@ -52,10 +57,9 @@ export function generateReviewSchema(
   businessName: string = 'Sri Janaki Mahal Trust',
   businessUrl: string = 'https://www.srijanakimahaltrustofficial.com'
 ) {
-  console.log('[Review Schema] Generating schema for', reviews.length, 'reviews');
+  debugLog('[Review Schema] Generating schema', { reviews: reviews?.length ?? 0 });
   
   if (!reviews || reviews.length === 0) {
-    console.warn('[Review Schema] No reviews provided');
     return null;
   }
 
@@ -101,7 +105,6 @@ export function generateReviewSchema(
     review: reviewSchemas,
   };
 
-  console.log('[Review Schema] Schema generated successfully with average rating:', averageRating.toFixed(1));
   return schema;
 }
 
@@ -119,8 +122,6 @@ export function generateAggregateRatingOnly(
   averageRating: number,
   reviewCount: number
 ) {
-  console.log('[Review Schema] Generating aggregate rating:', averageRating, 'from', reviewCount, 'reviews');
-  
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'AggregateRating',

@@ -1,14 +1,20 @@
 /**
- * Service Schema Utility
- * 
- * Generates Service structured data for SEO.
- * Helps Google understand the services offered by the business.
- * 
- * Flow:
- * 1. Define service items (name, description, provider)
- * 2. Generate Service schema
- * 3. Return JSON-LD script content
+ * File: Astro/src/lib/schemas/service.ts
+ * Module: astro-seo
+ * Purpose: Generate Service schema JSON-LD for offered services.
+ * Author: Aman Sharma / NovologicAI
+ * Last-updated: 2026-02-01
+ * Notes:
+ * - Avoid production console logging.
+ * - Keep `areaServed` aligned with actual operational context.
  */
+
+function debugLog(message: string, data?: unknown) {
+  if (import.meta.env?.DEV) {
+    // eslint-disable-next-line no-console
+    console.debug(message, data ?? '');
+  }
+}
 
 /**
  * Service Item Interface
@@ -53,10 +59,9 @@ export function generateServiceSchema(
   businessName: string = 'Sri Janaki Mahal Trust',
   businessUrl: string = 'https://www.srijanakimahaltrustofficial.com'
 ) {
-  console.log('[Service Schema] Generating schema for', services.length, 'services');
+  debugLog('[Service Schema] Generating schema', { services: services?.length ?? 0 });
   
   if (!services || services.length === 0) {
-    console.warn('[Service Schema] No services provided');
     return null;
   }
 
@@ -87,7 +92,6 @@ export function generateServiceSchema(
         item: service,
       })),
     };
-    console.log('[Service Schema] Multiple services - wrapped in ItemList');
     return schema;
   }
 
@@ -97,7 +101,6 @@ export function generateServiceSchema(
     ...serviceSchemas[0],
   };
 
-  console.log('[Service Schema] Schema generated successfully');
   return schema;
 }
 

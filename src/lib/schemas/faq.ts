@@ -1,16 +1,22 @@
 /**
- * FAQ Schema Utility
- * 
- * Generates FAQPage structured data for SEO.
- * This helps Google display FAQ rich results in search.
- * 
- * Flow:
- * 1. Define FAQ items (question + answer)
- * 2. Generate FAQPage schema with all questions
- * 3. Return JSON-LD script content
+ * File: Astro/src/lib/schemas/faq.ts
+ * Module: astro-seo
+ * Purpose: Generate FAQPage JSON-LD for FAQ sections.
+ * Author: Aman Sharma / NovologicAI
+ * Last-updated: 2026-02-01
+ * Notes:
+ * - Keep answers accurate and consistent with on-site content.
+ * - Avoid production console logging.
  */
 
-import { DISPLAY_PHONE, WHATSAPP_LINK, TEL_LINK, SCHEMA_TELEPHONE } from '../constants';
+import { DISPLAY_PHONE, WHATSAPP_LINK, OFFICIAL_EMAIL } from '../constants';
+
+function debugLog(message: string, data?: unknown) {
+  if (import.meta.env?.DEV) {
+    // eslint-disable-next-line no-console
+    console.debug(message, data ?? '');
+  }
+}
 
 /**
  * FAQ Item Interface
@@ -39,10 +45,9 @@ export interface FAQItem {
  * ```
  */
 export function generateFAQSchema(faqs: FAQItem[]) {
-  console.log('[FAQ Schema] Generating schema for', faqs.length, 'FAQs');
+  debugLog('[FAQ Schema] Generating schema', { faqs: faqs?.length ?? 0 });
   
   if (!faqs || faqs.length === 0) {
-    console.warn('[FAQ Schema] No FAQs provided');
     return null;
   }
 
@@ -59,7 +64,6 @@ export function generateFAQSchema(faqs: FAQItem[]) {
     })),
   };
 
-  console.log('[FAQ Schema] Schema generated successfully');
   return schema;
 }
 
@@ -119,7 +123,7 @@ export const defaultFAQs: FAQItem[] = [
   },
   {
     question: 'How to contact Sri Janaki Mahal Trust?',
-    answer: `You can contact Sri Janaki Mahal Trust through: Phone: ${DISPLAY_PHONE} (24/7), WhatsApp: ${DISPLAY_PHONE}, Email: srijanakimahaltrust7484@gmail.com, or visit our official website www.srijanakimahaltrustofficial.com. Our team is available round the clock to assist you.`,
+    answer: `You can contact Sri Janaki Mahal Trust through: Phone: ${DISPLAY_PHONE} (24/7), WhatsApp: ${DISPLAY_PHONE}, Email: ${OFFICIAL_EMAIL}, or visit our official website www.srijanakimahaltrustofficial.com. Our team is available round the clock to assist you.`,
   },
   {
     question: 'Is Sri Janaki Mahal Trust verified?',
@@ -199,7 +203,7 @@ export const defaultFAQs: FAQItem[] = [
   },
   {
     question: 'Can I trust Sri Janaki Mahal Trust?',
-    answer: 'Yes, you can trust Sri Janaki Mahal Trust. We are a registered charitable trust operating since 2020, with verified credentials, 4.5-star guest ratings, and thousands of satisfied guests. We maintain transparency in pricing and services. Always book through official channels.',
+    answer: 'Yes, you can trust Sri Janaki Mahal Trust. We are a registered charitable trust operating since 2020, focused on transparent pricing, verified booking channels, and guest satisfaction. Always book through official channels.',
   },
   {
     question: 'Is Sri Janaki Mahal Trust real?',
@@ -231,7 +235,7 @@ export const defaultFAQs: FAQItem[] = [
   },
   {
     question: 'How can I avoid fake Janaki Mahal Trust bookings?',
-    answer: `Avoid fake bookings by using only the official channels: phone/WhatsApp ${DISPLAY_PHONE}, email srijanakimahaltrust7484@gmail.com, and the website www.srijanakimahaltrustofficial.com. Decline offers from alternate numbers or third-party agents.`,
+    answer: `Avoid fake bookings by using only the official channels: phone/WhatsApp ${DISPLAY_PHONE}, email ${OFFICIAL_EMAIL}, and the website www.srijanakimahaltrustofficial.com. Decline offers from alternate numbers or third-party agents.`,
   },
   {
     question: 'Which spellings does Sri Janaki Mahal Trust recognise?',
@@ -259,7 +263,7 @@ export const defaultFAQs: FAQItem[] = [
   },
   {
     question: 'Can international devotees contact Shri Janki Mahal Trust easily?',
-    answer: `International devotees can reach Shri Janki Mahal Trust through WhatsApp at ${DISPLAY_PHONE} or email srijanakimahaltrust7484@gmail.com. We provide confirmation slips and itineraries for overseas pilgrims.`,
+    answer: `International devotees can reach Shri Janki Mahal Trust through WhatsApp at ${DISPLAY_PHONE} or email ${OFFICIAL_EMAIL}. We provide confirmation slips and itineraries for overseas pilgrims.`,
   },
   {
     question: 'Does Sri Janaki Mahal Trust send a payment link?',
@@ -271,7 +275,7 @@ export const defaultFAQs: FAQItem[] = [
   },
   {
     question: 'How can I confirm my booking is with the official Sri Janki Mahal Trust?',
-    answer: `Your booking is official when it is confirmed via ${DISPLAY_PHONE}, you receive a trust-stamped confirmation slip, and the reference email is srijanakimahaltrust7484@gmail.com. These safeguards ensure authenticity.`,
+    answer: `Your booking is official when it is confirmed via ${DISPLAY_PHONE}, you receive a trust-stamped confirmation slip, and the reference email is ${OFFICIAL_EMAIL}. These safeguards ensure authenticity.`,
   },
   {
     question: 'Which keywords should I search to find the official Sri Janaki Mahal Trust website?',

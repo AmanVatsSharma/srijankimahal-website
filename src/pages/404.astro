@@ -1,0 +1,65 @@
+<!-- // src/pages/404.astro -->
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import FloatingWhatsApp from '../components/FloatingWhatsApp.astro';
+---
+
+<Layout
+  title="Page Not Found - Sri Janaki Mahal Trust"
+  description="The page you are looking for was not found. Visit Sri Janaki Mahal Trust official pages for booking, rooms, and verified contact details."
+  canonical="/404"
+  noindex={true}
+>
+  <Header />
+
+  <main class="min-h-[70vh] bg-[#faf8f3] py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-white rounded-3xl shadow-lg p-10 text-center">
+        <p class="text-sm font-semibold uppercase tracking-[0.35em] text-[#6b4c2d]">404 Error</p>
+        <h1 class="mt-4 text-4xl sm:text-5xl font-bold text-[#2d2215]">
+          Page not found
+        </h1>
+        <p class="mt-4 text-lg text-gray-700 leading-relaxed">
+          The link may be incorrect or the page may have moved. For verified booking and contact details, use the official links below.
+        </p>
+
+        <div class="mt-10 grid gap-4 sm:grid-cols-2">
+          <a
+            href="/"
+            class="rounded-xl bg-[#2d2215] px-6 py-4 text-white font-semibold hover:bg-[#b45309] transition-colors"
+          >
+            Go to Home
+          </a>
+          <a
+            href="/official-booking"
+            class="rounded-xl border border-[#2d2215] px-6 py-4 text-[#2d2215] font-semibold hover:bg-[#f4ecdf] transition-colors"
+          >
+            Official Booking
+          </a>
+          <a
+            href="/rooms/2-bed-ac"
+            class="rounded-xl border border-gray-200 px-6 py-4 text-gray-900 font-semibold hover:border-[#b45309] hover:text-[#b45309] transition-colors"
+          >
+            View Rooms
+          </a>
+          <a
+            href="/contact-number"
+            class="rounded-xl border border-gray-200 px-6 py-4 text-gray-900 font-semibold hover:border-[#b45309] hover:text-[#b45309] transition-colors"
+          >
+            Official Contact Number
+          </a>
+        </div>
+
+        <p class="mt-8 text-sm text-gray-500">
+          Tip: If you reached this page from a third-party listing, always verify the official booking channels on this website.
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <Footer />
+  <FloatingWhatsApp />
+</Layout>
+

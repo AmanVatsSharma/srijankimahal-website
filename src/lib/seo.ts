@@ -1,16 +1,12 @@
 /**
- * SEO Utility Functions
- * 
- * This module provides utilities for generating dynamic SEO meta tags,
- * canonical URLs, Open Graph tags, and Twitter Card tags.
- * 
- * Flow:
- * 1. Generate title with site name suffix
- * 2. Generate description with defaults
- * 3. Generate canonical URL from path
- * 4. Generate keywords array
- * 5. Generate Open Graph tags
- * 6. Generate Twitter Card tags
+ * File: Astro/src/lib/seo.ts
+ * Module: astro-seo
+ * Purpose: Generate canonical/meta/OG/Twitter/hreflang values.
+ * Author: Aman Sharma / NovologicAI
+ * Last-updated: 2026-02-01
+ * Notes:
+ * - Keep output deterministic; avoid production console logging.
+ * - `SITE_URL` is the canonical origin for all absolute URLs.
  */
 
 import { DISPLAY_PHONE } from './constants';
@@ -46,6 +42,13 @@ const DEFAULT_KEYWORDS = [
 ];
 const DEFAULT_OG_IMAGE = `${SITE_URL}/og.jpg`;
 
+function debugLog(message: string, data?: unknown) {
+  if (import.meta.env?.DEV) {
+    // eslint-disable-next-line no-console
+    console.debug(message, data ?? '');
+  }
+}
+
 /**
  * SEO Configuration Interface
  * 
@@ -74,7 +77,7 @@ export interface SEOConfig {
  * - Output: "About Us | Sri Janaki Mahal Trust"
  */
 export function generateTitle(title?: string): string {
-  console.log('[SEO] Generating title:', title);
+  debugLog('[SEO] Generating title', { title });
   const pageTitle = title || DEFAULT_TITLE;
   return `${pageTitle} | ${SITE_NAME}`;
 }
@@ -86,7 +89,7 @@ export function generateTitle(title?: string): string {
  * @returns Meta description string
  */
 export function generateDescription(description?: string): string {
-  console.log('[SEO] Generating description:', description ? 'custom' : 'default');
+  debugLog('[SEO] Generating description', { hasCustom: Boolean(description) });
   return description || DEFAULT_DESCRIPTION;
 }
 
@@ -101,7 +104,7 @@ export function generateDescription(description?: string): string {
  * - Output: "https://www.srijanakimahaltrustofficial.com/about"
  */
 export function generateCanonical(path?: string): string {
-  console.log('[SEO] Generating canonical URL for path:', path || '/');
+  debugLog('[SEO] Generating canonical URL', { path: path || '/' });
   const cleanPath = path?.replace(/\/$/, '') || '';
   return `${SITE_URL}${cleanPath || ''}`;
 }
@@ -113,7 +116,7 @@ export function generateCanonical(path?: string): string {
  * @returns Combined keywords array
  */
 export function generateKeywords(keywords?: string[]): string[] {
-  console.log('[SEO] Generating keywords:', keywords?.length || 0, 'additional keywords');
+  debugLog('[SEO] Generating keywords', { additional: keywords?.length ?? 0 });
   return keywords ? [...DEFAULT_KEYWORDS, ...keywords] : DEFAULT_KEYWORDS;
 }
 
@@ -124,7 +127,7 @@ export function generateKeywords(keywords?: string[]): string[] {
  * @returns Full URL to OG image
  */
 export function generateOGImage(image?: string): string {
-  console.log('[SEO] Generating OG image URL:', image || 'default');
+  debugLog('[SEO] Generating OG image', { image: image || 'default' });
   if (!image) return DEFAULT_OG_IMAGE;
   // If image is already a full URL, return as is
   if (image.startsWith('http://') || image.startsWith('https://')) {
@@ -147,8 +150,7 @@ export function generateOGTags(config: SEOConfig) {
   const image = generateOGImage(config.ogImage);
   const type = config.ogType || 'website';
   const locale = config.lang === 'hi' ? 'hi_IN' : 'en_IN';
-
-  console.log('[SEO] Generating Open Graph tags:', { title, type, locale });
+  debugLog('[SEO] Generating Open Graph tags', { type, locale });
 
   return {
     'og:title': title,
@@ -172,8 +174,7 @@ export function generateTwitterTags(config: SEOConfig) {
   const description = generateDescription(config.description);
   const image = generateOGImage(config.ogImage);
   const url = generateCanonical(config.canonical);
-
-  console.log('[SEO] Generating Twitter Card tags');
+  debugLog('[SEO] Generating Twitter Card tags');
 
   return {
     'twitter:card': 'summary_large_image',
@@ -191,7 +192,7 @@ export function generateTwitterTags(config: SEOConfig) {
  * @returns Robots meta content string
  */
 export function generateRobotsContent(noindex?: boolean): string {
-  console.log('[SEO] Generating robots content:', noindex ? 'noindex, nofollow' : 'index, follow');
+  debugLog('[SEO] Generating robots content', { noindex: Boolean(noindex) });
   return noindex ? 'noindex,nofollow' : 'index,follow';
 }
 
@@ -206,7 +207,7 @@ export function generateHreflangTags(
   currentPath: string,
   alternateLanguages?: { lang: string; url: string }[]
 ): Array<{ rel: string; hreflang: string; href: string }> {
-  console.log('[SEO] Generating hreflang tags for path:', currentPath);
+  debugLog('[SEO] Generating hreflang tags', { currentPath });
   
   const tags: Array<{ rel: string; hreflang: string; href: string }> = [];
   
@@ -235,7 +236,7 @@ export function generateHreflangTags(
  * @returns Complete SEO data object
  */
 export function generateSEOData(config: SEOConfig, currentPath?: string) {
-  console.log('[SEO] Generating complete SEO data for:', currentPath || '/');
+  debugLog('[SEO] Generating complete SEO data', { currentPath: currentPath || '/' });
   
   const canonical = generateCanonical(config.canonical || currentPath);
   const title = generateTitle(config.title);

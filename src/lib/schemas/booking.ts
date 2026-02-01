@@ -1,15 +1,20 @@
 /**
- * Booking Schema Utility
- * 
- * Generates ReservationAction and ReservationPackage structured data for SEO.
- * Helps Google understand booking functionality and display rich results.
- * 
- * Flow:
- * 1. Define booking/reservation details
- * 2. Generate ReservationAction schema
- * 3. Generate ReservationPackage schema (if applicable)
- * 4. Return JSON-LD script content
+ * File: Astro/src/lib/schemas/booking.ts
+ * Module: astro-seo
+ * Purpose: Generate booking-related structured data (ReservationAction/BookAction).
+ * Author: Aman Sharma / NovologicAI
+ * Last-updated: 2026-02-01
+ * Notes:
+ * - Avoid production console logging.
+ * - Ensure booking URLs match actual booking flows.
  */
+
+function debugLog(message: string, data?: unknown) {
+  if (import.meta.env?.DEV) {
+    // eslint-disable-next-line no-console
+    console.debug(message, data ?? '');
+  }
+}
 
 /**
  * Booking Item Interface
@@ -50,7 +55,7 @@ export function generateReservationActionSchema(
   bookingUrl: string,
   businessName: string = 'Sri Janaki Mahal Trust'
 ) {
-  console.log('[Booking Schema] Generating ReservationAction schema for:', targetUrl);
+  debugLog('[Booking Schema] Generating ReservationAction schema', { targetUrl });
   
   const schema = {
     '@context': 'https://schema.org',
@@ -78,7 +83,6 @@ export function generateReservationActionSchema(
     }
   };
 
-  console.log('[Booking Schema] ReservationAction schema generated successfully');
   return schema;
 }
 
@@ -101,7 +105,7 @@ export function generateReservationPackageSchema(
   currency: string = 'INR',
   includes: string[] = []
 ) {
-  console.log('[Booking Schema] Generating ReservationPackage schema for:', packageName);
+  debugLog('[Booking Schema] Generating ReservationPackage schema', { packageName });
   
   const schema = {
     '@context': 'https://schema.org',
@@ -123,7 +127,6 @@ export function generateReservationPackageSchema(
     })
   };
 
-  console.log('[Booking Schema] ReservationPackage schema generated successfully');
   return schema;
 }
 
@@ -140,7 +143,7 @@ export function generateBookActionSchema(
   bookingUrl: string,
   businessName: string = 'Sri Janaki Mahal Trust'
 ) {
-  console.log('[Booking Schema] Generating BookAction schema');
+  debugLog('[Booking Schema] Generating BookAction schema', { bookingUrl });
   
   const schema = {
     '@context': 'https://schema.org',
@@ -184,7 +187,7 @@ export function generateCompleteBookingSchema(
   businessName: string = 'Sri Janaki Mahal Trust',
   includePackage: boolean = true
 ) {
-  console.log('[Booking Schema] Generating complete booking schema');
+  debugLog('[Booking Schema] Generating complete booking schema', { bookingUrl, includePackage });
   
   const schemas = [
     generateReservationActionSchema(bookingUrl, bookingUrl, businessName)

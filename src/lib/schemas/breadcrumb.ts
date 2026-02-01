@@ -1,14 +1,20 @@
 /**
- * Breadcrumb Schema Utility
- * 
- * Generates BreadcrumbList structured data for SEO.
- * Helps Google understand page hierarchy and display breadcrumbs in search results.
- * 
- * Flow:
- * 1. Define breadcrumb items (name + URL)
- * 2. Generate BreadcrumbList schema
- * 3. Return JSON-LD script content
+ * File: Astro/src/lib/schemas/breadcrumb.ts
+ * Module: astro-seo
+ * Purpose: Generate BreadcrumbList JSON-LD for pages.
+ * Author: Aman Sharma / NovologicAI
+ * Last-updated: 2026-02-01
+ * Notes:
+ * - Keep URLs absolute in output to avoid Rich Results parsing issues.
+ * - Avoid production console logging.
  */
+
+function debugLog(message: string, data?: unknown) {
+  if (import.meta.env?.DEV) {
+    // eslint-disable-next-line no-console
+    console.debug(message, data ?? '');
+  }
+}
 
 /**
  * Breadcrumb Item Interface
@@ -42,10 +48,9 @@ export function generateBreadcrumbSchema(
   items: BreadcrumbItem[],
   baseUrl: string = 'https://www.srijanakimahaltrustofficial.com'
 ) {
-  console.log('[Breadcrumb Schema] Generating schema for', items.length, 'items');
+  debugLog('[Breadcrumb Schema] Generating schema', { items: items.length });
   
   if (!items || items.length === 0) {
-    console.warn('[Breadcrumb Schema] No breadcrumb items provided');
     return null;
   }
 
@@ -72,7 +77,6 @@ export function generateBreadcrumbSchema(
     itemListElement: breadcrumbItems,
   };
 
-  console.log('[Breadcrumb Schema] Schema generated successfully');
   return schema;
 }
 
@@ -89,8 +93,6 @@ export function generateStandardBreadcrumbs(
   pageName: string,
   pageUrl: string
 ): BreadcrumbItem[] {
-  console.log('[Breadcrumb Schema] Generating standard breadcrumbs for:', pageName);
-  
   return [
     { name: 'Home', url: '/' },
     { name: pageName, url: pageUrl },

@@ -1,6 +1,6 @@
 ---
 title: Saryu Aarti in Ayodhya — Simple Guide (Timing + Etiquette + Planning)
-description: A practical guide to Saryu aarti in Ayodhya: what to expect, basic etiquette, and how to plan it alongside Ram Mandir darshan.
+description: "A practical guide to Saryu aarti in Ayodhya: what to expect, basic etiquette, and how to plan it alongside Ram Mandir darshan."
 date: 2026-02-01
 keywords:
   - 'Saryu aarti Ayodhya'

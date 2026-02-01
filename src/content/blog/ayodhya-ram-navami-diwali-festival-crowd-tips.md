@@ -1,6 +1,6 @@
 ---
 title: Ayodhya Festival Crowd Tips (Ram Navami, Diwali) + Booking Strategy
-description: Festival-season tips for Ayodhya: crowd planning, buffers, and how to book early through verified official channels.
+description: "Festival-season tips for Ayodhya: crowd planning, buffers, and how to book early through verified official channels."
 date: 2026-02-01
 keywords:
   - 'Ayodhya festival season'

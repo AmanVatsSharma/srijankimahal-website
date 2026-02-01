@@ -1,0 +1,83 @@
+<!-- // src/pages/hi/location/from-ayodhya-junction.astro -->
+---
+import Layout from '../../../layouts/Layout.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+import { generateBreadcrumbSchema } from '../../../lib/schemas/breadcrumb';
+import { DISPLAY_PHONE, TEL_LINK, WHATSAPP_LINK } from '../../../lib/constants';
+
+const breadcrumbSchema = generateBreadcrumbSchema([
+  { name: 'Home', url: '/hi' },
+  { name: 'Location', url: '/hi/location' },
+  { name: 'From Ayodhya Junction', url: '/hi/location/from-ayodhya-junction' },
+]);
+---
+
+<Layout
+  title="अयोध्या जंक्शन से श्री जानकी महल ट्रस्ट कैसे आएँ | दिशा-निर्देश"
+  description={`अयोध्या जंक्शन/रेलवे स्टेशन से श्री जानकी महल ट्रस्ट (कारसेवकपुरम) तक कैसे पहुँचे। आधिकारिक सहायता: ${DISPLAY_PHONE}.`}
+  keywords={[
+    'अयोध्या जंक्शन से जनकी महल ट्रस्ट',
+    'रेलवे स्टेशन से श्री जानकी महल',
+    'Ayodhya Junction to Janaki Mahal Trust',
+    'directions to sri janaki mahal trust',
+  ]}
+  canonical="/hi/location/from-ayodhya-junction"
+  ogImage="/og.jpg"
+  lang="hi"
+>
+  <Header />
+
+  <main class="min-h-screen bg-[#faf8f3] py-12">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-white rounded-3xl shadow-lg p-8 sm:p-10">
+        <h1 class="text-4xl font-bold text-gray-900 mb-4">अयोध्या जंक्शन (रेलवे स्टेशन) से</h1>
+        <p class="text-lg text-gray-700 leading-relaxed">
+          ट्रेन से आने के बाद श्री जानकी महल ट्रस्ट (कारसेवकपुरम, अयोध्या) तक पहुँचने के सामान्य विकल्प नीचे दिए हैं।
+        </p>
+
+        <div class="mt-8 rounded-2xl border border-amber-200 bg-amber-50 p-6">
+          <h2 class="text-2xl font-semibold text-gray-900 mb-3">तुरंत मदद चाहिए?</h2>
+          <div class="flex flex-col sm:flex-row gap-3">
+            <a class="rounded-xl bg-[#2d2215] px-6 py-3 text-white font-semibold text-center hover:bg-[#b45309]" href={TEL_LINK}>
+              कॉल {DISPLAY_PHONE}
+            </a>
+            <a class="rounded-xl bg-green-600 px-6 py-3 text-white font-semibold text-center hover:bg-green-700" href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
+              WhatsApp पर दिशा पूछें
+            </a>
+          </div>
+        </div>
+
+        <h2 class="mt-10 text-2xl font-semibold text-gray-900">सामान्य विकल्प</h2>
+        <div class="mt-4 grid gap-4 sm:grid-cols-2">
+          <div class="rounded-2xl border border-gray-200 p-5">
+            <h3 class="text-lg font-semibold text-gray-900">ऑटो-रिक्शा</h3>
+            <p class="mt-2 text-gray-700">
+              स्टेशन के बाहर आसानी से उपलब्ध। डेस्टिनेशन: “Sri Janaki Mahal Trust, Karsewakpuram, near Ram Mandir” बताएं।
+            </p>
+          </div>
+          <div class="rounded-2xl border border-gray-200 p-5">
+            <h3 class="text-lg font-semibold text-gray-900">टैक्सी/कैब</h3>
+            <p class="mt-2 text-gray-700">
+              परिवार/ग्रुप के लिए बेहतर। रूट में भ्रम हो तो आधिकारिक नंबर पर कॉल करके गाइडेंस लें।
+            </p>
+          </div>
+        </div>
+
+        <div class="mt-10">
+          <h2 class="text-2xl font-semibold text-gray-900">और भी उपयोगी</h2>
+          <ul class="mt-3 list-disc pl-6 text-gray-800 space-y-2">
+            <li><a class="text-amber-700 font-semibold hover:underline" href="/hi/location/near-ram-mandir">राम मंदिर के पास लोकेशन</a></li>
+            <li><a class="text-amber-700 font-semibold hover:underline" href="/hi/booking">बुकिंग पेज</a></li>
+            <li><a class="text-amber-700 font-semibold hover:underline" href="/hi/how-to-avoid-scams">फर्जी बुकिंग से बचें</a></li>
+          </ul>
+        </div>
+      </div>
+
+      {breadcrumbSchema && <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />}
+    </div>
+  </main>
+
+  <Footer />
+</Layout>
+

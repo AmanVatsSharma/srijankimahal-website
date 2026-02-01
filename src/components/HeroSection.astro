@@ -27,6 +27,7 @@ import { DISPLAY_PHONE, TEL_LINK, WHATSAPP_LINK } from '../lib/constants';
       height="1080" 
       loading="eager" 
       decoding="async"
+      fetchpriority="high"
     />
     <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/20"></div>
     <figcaption class="sr-only">Sri Janaki Mahal Trust exterior welcoming devotees near Ram Mandir in Ayodhya - Official accommodation for AC and Non-AC room bookings</figcaption>
@@ -100,25 +101,4 @@ import { DISPLAY_PHONE, TEL_LINK, WHATSAPP_LINK } from '../lib/constants';
     </div>
   </div>
   
-  <!-- Debug logging for CTA interactions -->
-  <script is:inline>
-    try {
-      // Console log for debugging: Track hero section CTA button clicks
-      console.log('[Hero] Initializing CTA button listeners');
-      const ids = ['hero-call', 'hero-whatsapp'];
-      ids.forEach((id) => {
-        const el = document.getElementById(id);
-        if (el) {
-          el.addEventListener('click', () => {
-            console.log('[Hero] CTA clicked:', id, 'at', new Date().toISOString());
-          });
-        } else {
-          console.warn('[Hero] CTA not found:', id);
-        }
-      });
-      console.log('[Hero] CTA listeners initialized successfully');
-    } catch (err) {
-      console.error('[Hero] Failed to bind CTA listeners', err);
-    }
-  </script>
 </section>

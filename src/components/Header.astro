@@ -96,7 +96,6 @@ import { WHATSAPP_BOOKING_LINK, TEL_LINK } from '../lib/constants';
 </header>
 
 <script>
-  // Debug + defensive setup for mobile navigation
   try {
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const mobileNav = document.getElementById('mobile-nav');
@@ -108,13 +107,7 @@ import { WHATSAPP_BOOKING_LINK, TEL_LINK } from '../lib/constants';
       mobileNav.classList.toggle('hidden', !open);
       menuIcon.classList.toggle('hidden', open);
       closeIcon.classList.toggle('hidden', !open);
-      console.log('[Header] Mobile nav state:', open ? 'open' : 'closed');
     };
-
-    console.log('[Header] Initializing mobile menu handlers', {
-      hasButton: Boolean(mobileMenuBtn),
-      hasNav: Boolean(mobileNav),
-    });
 
     mobileMenuBtn?.addEventListener('click', () => {
       const isHidden = mobileNav?.classList.contains('hidden') ?? true;
@@ -136,7 +129,7 @@ import { WHATSAPP_BOOKING_LINK, TEL_LINK } from '../lib/constants';
       const isOpen = !mobileNav.classList.contains('hidden');
       if (isOpen && !clickedInsideNav && !clickedButton) setOpen(false);
     });
-  } catch (err) {
-    console.error('[Header] Failed to initialize mobile menu', err);
+  } catch {
+    // no-op: do not block rendering
   }
 </script>

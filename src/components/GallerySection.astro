@@ -110,9 +110,6 @@ const galleryGroups = [
 
 const AUTO_DURATION_SEC = 15;
 
-// Console log supports debugging image coverage and schema generation
-console.log('[GallerySection] Rendering gallery with', galleryGroups.reduce((count, group) => count + group.images.length, 0), 'unique images');
-
 const uniqueImageMap = new Map(
   galleryGroups
     .flatMap((group) => group.images)

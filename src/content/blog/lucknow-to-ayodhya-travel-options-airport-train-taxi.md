@@ -1,6 +1,6 @@
 ---
 title: Lucknow to Ayodhya Travel Options (Airport, Train, Taxi) — Simple Guide
-description: How to travel from Lucknow to Ayodhya: common routes, planning tips, and official contact links if you need verified directions to Sri Janaki Mahal Trust.
+description: "How to travel from Lucknow to Ayodhya: common routes, planning tips, and official contact links if you need verified directions to Sri Janaki Mahal Trust."
 date: 2026-02-01
 keywords:
   - 'Lucknow to Ayodhya'

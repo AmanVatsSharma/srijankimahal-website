@@ -1,6 +1,6 @@
 ---
 title: Ram Mandir Darshan Queue Etiquette + Security Checklist (Ayodhya)
-description: Simple darshan etiquette and security checklist for Ram Mandir: what to avoid carrying, how to plan queue time, and links for nearby stay planning.
+description: "Simple darshan etiquette and security checklist for Ram Mandir: what to avoid carrying, how to plan queue time, and links for nearby stay planning."
 date: 2026-02-01
 keywords:
   - 'Ram Mandir darshan rules'

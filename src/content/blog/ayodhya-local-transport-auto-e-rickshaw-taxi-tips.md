@@ -1,6 +1,6 @@
 ---
 title: Ayodhya Local Transport Tips (Auto, E-Rickshaw, Taxi) — Safe + Practical
-description: Local transport in Ayodhya explained: what to expect from autos, e-rickshaws, and taxis, plus how to get verified directions and avoid scams.
+description: "Local transport in Ayodhya explained: what to expect from autos, e-rickshaws, and taxis, plus how to get verified directions and avoid scams."
 date: 2026-02-01
 keywords:
   - 'Ayodhya local transport'

@@ -139,7 +139,7 @@ Always available to help
 - **Satisfaction:** Excellent
 
 ### Other Dharmshalas
-- **Rating:** Varies (2-4 stars)
+- **Guest Feedback:** Varies
 - **Reviews:** Fewer verified
 - **Satisfaction:** Mixed
 

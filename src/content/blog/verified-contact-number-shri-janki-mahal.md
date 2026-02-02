@@ -13,7 +13,7 @@ keywords:
 
 # Verified Contact Number of Shri Janki Mahal Trust - Avoid Fake Agents
 
-Hundreds of pilgrims rely on **Shri Janki Mahal Trust** (popularly known as **Sri Janaki Mahal Trust** or **Janaki Mahal Trust Ayodhya**) for safe, comfortable accommodation near Ram Mandir. Unfortunately, impostor agents try to misuse the trust name. This guide keeps you safe by showing exactly how to verify the official contact number and ignore every fake offer.
+Many pilgrims rely on **Shri Janki Mahal Trust** (popularly known as **Sri Janaki Mahal Trust** or **Janaki Mahal Trust Ayodhya**) for safe, comfortable accommodation near Ram Mandir. Unfortunately, impostor agents try to misuse the trust name. This guide keeps you safe by showing exactly how to verify the official contact number and ignore every fake offer.
 
 > Flow Chart: Identify caller → Verify number matches **+91 8460839199** → Request trust-stamped confirmation → Proceed with booking → Travel confidently.
 

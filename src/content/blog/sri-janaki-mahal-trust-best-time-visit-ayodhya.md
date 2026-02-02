@@ -31,7 +31,7 @@ Complete guide on the best time to visit Ayodhya and stay at Sri Janaki Mahal Tr
 
 ## Seasonal Breakdown
 
-### Winter (October - March) ⭐ BEST
+### Winter (October - March) — Recommended
 
 **Weather:**
 - Cool and pleasant
@@ -53,7 +53,7 @@ Complete guide on the best time to visit Ayodhya and stay at Sri Janaki Mahal Tr
 - Spiritual activities
 - Photography
 
-**Recommendation:** ⭐⭐⭐⭐⭐ Best time to visit
+**Recommendation:** Recommended for most pilgrims
 
 ### Summer (April - June)
 
@@ -74,7 +74,7 @@ Complete guide on the best time to visit Ayodhya and stay at Sri Janaki Mahal Tr
 - ⚠️ Need AC rooms
 - ⚠️ Less comfortable
 
-**Recommendation:** ⭐⭐⭐ Moderate (AC rooms essential)
+**Recommendation:** Travel with heat precautions (AC rooms can help)
 
 ### Monsoon (July - September)
 
@@ -95,8 +95,7 @@ Complete guide on the best time to visit Ayodhya and stay at Sri Janaki Mahal Tr
 - ⚠️ Muddy paths
 - ⚠️ Travel delays possible
 
-**Recommendation:** ⭐⭐⭐⭐ Good (if rain doesn'
-  -t bother)
+**Recommendation:** Good if rain doesn’t bother you
 
 ## Festival Seasons
 
@@ -136,7 +135,7 @@ Complete guide on the best time to visit Ayodhya and stay at Sri Janaki Mahal Tr
 
 ## Monthly Guide
 
-### January - March ⭐ BEST
+### January - March — Recommended
 
 **Weather:** Cool and pleasant (10-25°C)
 **Crowds:** Moderate to high
@@ -159,7 +158,7 @@ Complete guide on the best time to visit Ayodhya and stay at Sri Janaki Mahal Tr
 **Booking:** 1-2 weeks in advance
 **Note:** Rain gear needed
 
-### October - December ⭐ BEST
+### October - December — Recommended
 
 **Weather:** Cool and pleasant (15-28°C)
 **Crowds:** High (festivals)

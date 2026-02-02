@@ -13,7 +13,7 @@ keywords:
 
 # Why Choose Sri Janki Mahal Trust for Your Ayodhya Stay?
 
-Planning a pilgrimage to Ayodhya? Here’s why thousands of devotees choose **Sri Janki Mahal Trust** (also known as **Janaki Mahal Trust** and **Shri Janki Mahal Trust**) for a comfortable, devotional stay.
+Planning a pilgrimage to Ayodhya? Here’s why many devotees choose **Sri Janki Mahal Trust** (also known as **Janaki Mahal Trust** and **Shri Janki Mahal Trust**) for a comfortable, devotional stay.
 
 > Flow Chart: Evaluate stay needs → Review trust advantages → Call official helpline → Reserve rooms confidently.
 

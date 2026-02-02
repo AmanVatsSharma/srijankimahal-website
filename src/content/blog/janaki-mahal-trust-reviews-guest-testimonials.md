@@ -13,7 +13,7 @@ keywords:
 
 # Janaki Mahal Trust Reviews & Guest Testimonials - Real Pilgrim Stories
 
-Choosing **Janaki Mahal Trust** (also known as **Sri Janki Mahal Trust** and **Shri Janki Mahal Trust**) means joining a community of satisfied devotees. Here are real stories shared by pilgrims from across India and abroad.
+Choosing **Janaki Mahal Trust** (also known as **Sri Janki Mahal Trust** and **Shri Janki Mahal Trust**) means learning from guest experiences shared by pilgrims. Here are stories shared by devotees from across India and abroad.
 
 > Flow Chart: Discover guest experience → Review spiritual and service highlights → Contact official helpline → Book with confidence.
 
@@ -39,13 +39,13 @@ Choosing **Janaki Mahal Trust** (also known as **Sri Janki Mahal Trust** and **S
 - **Staff Support:** “Team arranged transportation and darshan passes seamlessly.”
 - **Safety:** “24/7 security and CCTV made our senior parents feel safe.”
 
-## Ratings Snapshot
+## Guest Feedback Summary
 
-| Platform / Feedback Source | Average Rating (out of 5) | Highlights                                              |
-|----------------------------|----------------------------|---------------------------------------------------------|
-| In-house feedback forms    | 4.8                        | Hospitality, meals, spiritual ambience                   |
-| WhatsApp reviews           | 4.7                        | Quick responses, darshan guidance, cleanliness           |
-| Word-of-mouth referrals    | 4.9                        | Ideal for yatri groups and family stays                  |
+| Feedback Source            | Overall Sentiment | Highlights                                              |
+|---------------------------|-------------------|---------------------------------------------------------|
+| In-house feedback forms   | Very positive     | Hospitality, meals, spiritual ambience                   |
+| WhatsApp messages         | Very positive     | Quick responses, darshan guidance, cleanliness           |
+| Word-of-mouth referrals   | Very positive     | Ideal for yatri groups and family stays                  |
 
 > Comment: The trust continuously upgrades rooms and services based on guest suggestions. Share your feedback at checkout to help other devotees.
 
@@ -73,5 +73,5 @@ Yes. Record your experience and send it via WhatsApp. With your permission, the 
 - ✅ Request the trust-stamped confirmation slip
 - ✅ Save your feedback to share post checkout
 
-Join thousands of satisfied devotees who trust **Janaki Mahal Trust** for their Ayodhya pilgrimage. Jai Shri Ram! 🙏
+Join many devotees who trust **Janaki Mahal Trust** for their Ayodhya pilgrimage. Jai Shri Ram! 🙏
 

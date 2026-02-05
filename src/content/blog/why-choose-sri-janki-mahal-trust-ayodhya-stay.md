@@ -31,7 +31,7 @@ Planning a pilgrimage to Ayodhya? Here’s why many devotees choose **Sri Janki 
 
 ## 3. Trust-Managed Hospitality
 
-- Direct bookings through **+91 8460839199** ensure transparent pricing.
+- Direct bookings through **+91 8679304702** ensure transparent pricing.
 - Official confirmation slips with trust seal prevent fake agent scams.
 - Reception team guides guests about darshan slots, parikrama, and local etiquette.
 
@@ -64,7 +64,7 @@ Planning a pilgrimage to Ayodhya? Here’s why many devotees choose **Sri Janki 
 ## Frequently Asked Questions
 
 ### How do I book a room?
-Call or WhatsApp the official helpline **+91 8460839199** and request the room type you need.
+Call or WhatsApp the official helpline **+91 8679304702** and request the room type you need.
 
 ### Is the trust suitable for family vacations?
 Yes. Family suites and 4 bed rooms cater to multi-generational trips with devotional activities for all ages.

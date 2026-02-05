@@ -1,6 +1,6 @@
 ---
 title: Sri Janaki Mahal Trust Services, Amenities, and Facilities - Complete Guide
-description: Complete guide to services, amenities, and facilities at Sri Janaki Mahal Trust. All meals included, hot water, 24/7 support, and more. Contact +91 8460839199
+description: Complete guide to services, amenities, and facilities at Sri Janaki Mahal Trust. All meals included, hot water, 24/7 support, and more. Contact +91 8679304702
 date: 2025-02-03
 keywords:
   - 'Sri Janaki Mahal Trust services'
@@ -118,8 +118,8 @@ Complete guide to all services, amenities, and facilities available at Sri Janak
 - Problem resolution
 
 **Contact:**
-- Phone: +91 8460839199
-- WhatsApp: +91 8460839199
+- Phone: +91 8679304702
+- WhatsApp: +91 8679304702
 - Available: 24/7
 
 ## Housekeeping Services
@@ -241,8 +241,8 @@ Complete guide to all services, amenities, and facilities available at Sri Janak
 ### Need Help?
 
 **Service Inquiries:**
-- 📞 Phone: +91 8460839199
-- 💬 WhatsApp: +91 8460839199
+- 📞 Phone: +91 8679304702
+- 💬 WhatsApp: +91 8679304702
 - 📧 Email: srijanakimahaltrust7484@gmail.com
 
 **Available 24/7 for Service Support!**
@@ -253,7 +253,7 @@ Sri Janaki Mahal Trust offers comprehensive services and amenities including all
 
 **Experience Our Services:**
 - Book your stay: [Booking Page](/booking)
-- Contact +91 8460839199
+- Contact +91 8679304702
 - Learn more: [About Us](/about)
 
 ---

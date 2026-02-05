@@ -1,6 +1,6 @@
 ---
 title: How to Reach Sri Janaki Mahal Trust from Airport - Complete Guide
-description: Complete guide to reach Sri Janaki Mahal Trust from Lucknow Airport. Distance, travel time, transportation options, and directions. Contact +91 8460839199
+description: Complete guide to reach Sri Janaki Mahal Trust from Lucknow Airport. Distance, travel time, transportation options, and directions. Contact +91 8679304702
 date: 2025-03-07
 keywords:
   - 'Sri Janaki Mahal Trust from airport'
@@ -134,8 +134,8 @@ Complete guide to reach Sri Janaki Mahal Trust from Lucknow Airport. Learn about
 ## Contact for Assistance
 
 **Need Help with Transportation?**
-- 📞 Phone: +91 8460839199
-- 💬 WhatsApp: +91 8460839199
+- 📞 Phone: +91 8679304702
+- 💬 WhatsApp: +91 8679304702
 - 📧 Email: srijanakimahaltrust7484@gmail.com
 
 **We can help with:**
@@ -157,7 +157,7 @@ Complete guide to reach Sri Janaki Mahal Trust from Lucknow Airport. Learn about
 - Ayodhya, UP 224123
 
 ### 3. Keep Contact Number
-- Save +91 8460839199
+- Save +91 8679304702
 - Call if lost
 - Get directions
 
@@ -178,12 +178,12 @@ Yes, contact us for assistance and recommendations.
 ## Book Your Stay
 
 **Reach Sri Janaki Mahal Trust easily:**
-- 📞 Phone: +91 8460839199
-- 💬 WhatsApp: +91 8460839199
+- 📞 Phone: +91 8679304702
+- 💬 WhatsApp: +91 8679304702
 
 **Address:** Vasudev Gath, Karsewakpuram, Ayodhya, UP 224123
 
 ---
 
-*For transportation assistance or booking, call +91 8460839199.*
+*For transportation assistance or booking, call +91 8679304702.*
 

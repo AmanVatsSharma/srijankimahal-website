@@ -7,9 +7,8 @@ import FloatingWhatsApp from '../../components/FloatingWhatsApp.astro';
 import { generateBreadcrumbSchema } from '../../lib/schemas/breadcrumb';
 import { generateReservationActionSchema, generateBookActionSchema } from '../../lib/schemas/booking';
 import { generateFAQSchema, type FAQItem } from '../../lib/schemas/faq';
+import { DISPLAY_PHONE, TEL_LINK, WHATSAPP_LINK } from '../../lib/constants';
 
-const officialPhone = '+918460839199';
-const displayPhone = '+91 8460839199';
 const officialBookingUrl = 'https://www.srijanakimahaltrustofficial.com/hi/official-booking';
 
 const breadcrumbSchema = generateBreadcrumbSchema([
@@ -17,14 +16,14 @@ const breadcrumbSchema = generateBreadcrumbSchema([
   { name: 'Official Booking', url: '/hi/official-booking' },
 ]);
 
-const reservationActionSchema = generateReservationActionSchema(officialBookingUrl, `tel:${officialPhone}`, 'Sri Janaki Mahal Trust');
+const reservationActionSchema = generateReservationActionSchema(officialBookingUrl, TEL_LINK, 'Sri Janaki Mahal Trust');
 const bookActionSchema = generateBookActionSchema(officialBookingUrl);
 
 const officialBookingFAQs: FAQItem[] = [
   {
     question: 'जनकी महल ट्रस्ट की आधिकारिक बुकिंग कैसे करें?',
     answer:
-      'आधिकारिक हेल्पलाइन +91 8460839199 पर कॉल करें या उसी नंबर पर WhatsApp करें। टीम उपलब्धता के बाद ट्रस्ट-स्टैम्प्ड कन्फर्मेशन भेजती है।',
+      `आधिकारिक हेल्पलाइन ${DISPLAY_PHONE} पर कॉल करें या उसी नंबर पर WhatsApp करें। टीम उपलब्धता के बाद ट्रस्ट-स्टैम्प्ड कन्फर्मेशन भेजती है।`,
   },
   {
     question: 'क्या यह श्री जानकी महल ट्रस्ट की सत्यापित बुकिंग पेज है?',
@@ -34,7 +33,7 @@ const officialBookingFAQs: FAQItem[] = [
   {
     question: 'मैं अपनी बुकिंग को असली कैसे सत्यापित करूँ?',
     answer:
-      'असली बुकिंग में ट्रस्ट सील/बुकिंग आईडी, मेहमान विवरण और चेक-इन समय होता है। कन्फर्मेशन हमेशा +91 8460839199 या आधिकारिक ईमेल से आता है।',
+      `असली बुकिंग में ट्रस्ट सील/बुकिंग आईडी, मेहमान विवरण और चेक-इन समय होता है। कन्फर्मेशन हमेशा ${DISPLAY_PHONE} या आधिकारिक ईमेल से आता है।`,
   },
   {
     question: 'एडवांस पेमेंट कैसे करें?',
@@ -48,7 +47,7 @@ const faqSchema = generateFAQSchema(officialBookingFAQs);
 
 <Layout
   title="आधिकारिक बुकिंग | श्री जानकी महल ट्रस्ट (जनकी महल ट्रस्ट) - सत्यापित"
-  description="Sri Janaki Mahal Trust (Janaki Mahal Trust / Shri Janki Mahal Trust Ayodhya) की आधिकारिक बुकिंग। सत्यापित हेल्पलाइन +91 8460839199 से सीधे बुक करें।"
+  description={`Sri Janaki Mahal Trust (Janaki Mahal Trust / Shri Janki Mahal Trust Ayodhya) की आधिकारिक बुकिंग। सत्यापित हेल्पलाइन ${DISPLAY_PHONE} से सीधे बुक करें।`}
   keywords={[
     'जनकी महल ट्रस्ट आधिकारिक बुकिंग',
     'श्री जंकी महल ट्रस्ट बुकिंग',
@@ -74,10 +73,10 @@ const faqSchema = generateFAQSchema(officialBookingFAQs);
           वास्तविक उपलब्धता और कन्फर्मेशन के लिए ट्रस्ट टीम से सीधे संपर्क करें।
         </p>
         <div class="mt-8 grid gap-4 sm:grid-cols-2">
-          <a class="flex items-center justify-center rounded-xl bg-[#2d2215] px-6 py-4 text-base font-semibold uppercase tracking-wide text-white transition hover:bg-[#aa4600]" href={`tel:${officialPhone}`}>
-            📞 कॉल {displayPhone}
+          <a class="flex items-center justify-center rounded-xl bg-[#2d2215] px-6 py-4 text-base font-semibold uppercase tracking-wide text-white transition hover:bg-[#aa4600]" href={TEL_LINK}>
+            📞 कॉल {DISPLAY_PHONE}
           </a>
-          <a class="flex items-center justify-center rounded-xl border border-[#2d2215] px-6 py-4 text-base font-semibold uppercase tracking-wide text-[#2d2215] transition hover:bg-[#f6dfc4]" href={`https://wa.me/${officialPhone}`}>
+          <a class="flex items-center justify-center rounded-xl border border-[#2d2215] px-6 py-4 text-base font-semibold uppercase tracking-wide text-[#2d2215] transition hover:bg-[#f6dfc4]" href={WHATSAPP_LINK}>
             💬 WhatsApp (Official)
           </a>
         </div>
@@ -89,7 +88,7 @@ const faqSchema = generateFAQSchema(officialBookingFAQs);
           <div class="rounded-2xl bg-[#fef4e4] p-6">
             <h3 class="text-2xl font-semibold text-[#2d2215]">चेकलिस्ट</h3>
             <ul class="mt-4 space-y-3 text-base text-[#3d2f1c]">
-              <li>✓ कन्फर्मेशन {displayPhone} / आधिकारिक ईमेल से</li>
+              <li>✓ कन्फर्मेशन {DISPLAY_PHONE} / आधिकारिक ईमेल से</li>
               <li>✓ ट्रस्ट सील और बुकिंग आईडी</li>
               <li>✓ पेमेंट निर्देश केवल सत्यापित चैनल पर</li>
               <li>✓ रूम टाइप और तारीखें स्पष्ट</li>

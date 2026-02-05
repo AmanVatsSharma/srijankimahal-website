@@ -7,9 +7,8 @@ import FloatingWhatsApp from '../components/FloatingWhatsApp.astro';
 import { generateBreadcrumbSchema } from '../lib/schemas/breadcrumb';
 import { generateReservationActionSchema, generateBookActionSchema } from '../lib/schemas/booking';
 import { generateFAQSchema, type FAQItem } from '../lib/schemas/faq';
+import { DISPLAY_PHONE, TEL_LINK, WHATSAPP_LINK } from '../lib/constants';
 
-const officialPhone = '+918460839199';
-const displayPhone = '+91 8460839199';
 const officialBookingUrl = 'https://www.srijanakimahaltrustofficial.com/official-booking';
 
 // Breadcrumb structure for search engines
@@ -21,7 +20,7 @@ const breadcrumbSchema = generateBreadcrumbSchema([
 // Schema for ReservationAction and BookAction
 const reservationActionSchema = generateReservationActionSchema(
   officialBookingUrl,
-  `tel:${officialPhone}`,
+  TEL_LINK,
   'Sri Janaki Mahal Trust'
 );
 
@@ -32,7 +31,7 @@ const officialBookingFAQs: FAQItem[] = [
   {
     question: 'How do I make an official booking at Janaki Mahal Trust?',
     answer:
-      'Use the official helpline +91 8460839199 or WhatsApp the same number. Our team sends the trust-stamped confirmation slip on WhatsApp or email. No third-party agents are involved.'
+      `Use the official helpline ${DISPLAY_PHONE} or WhatsApp the same number. Our team sends the trust-stamped confirmation slip on WhatsApp or email. No third-party agents are involved.`
   },
   {
     question: 'Is this the verified Sri Janki Mahal Trust booking page?',
@@ -42,7 +41,7 @@ const officialBookingFAQs: FAQItem[] = [
   {
     question: 'How can I verify that my booking is genuine?',
     answer:
-      'A genuine booking includes a trust seal, booking ID, guest details, and check-in time. Confirmation is always sent from +91 8460839199 or the trust email srijanakimahaltrust7484@gmail.com.'
+      `A genuine booking includes a trust seal, booking ID, guest details, and check-in time. Confirmation is always sent from ${DISPLAY_PHONE} or the trust email srijanakimahaltrust7484@gmail.com.`
   },
   {
     question: 'Can I pay advance amount for official booking?',
@@ -56,7 +55,7 @@ const faqSchema = generateFAQSchema(officialBookingFAQs);
 
 <Layout
   title="Sri Janki Mahal Official Booking | Janaki Mahal Trust Verified Reservations"
-  description="Book officially with Sri Janaki Mahal Trust (Janaki Mahal Trust / Shri Janki Mahal Trust Ayodhya). Use the verified helpline +91 8460839199 for authentic bookings near Ram Mandir."
+  description={`Book officially with Sri Janaki Mahal Trust (Janaki Mahal Trust / Shri Janki Mahal Trust Ayodhya). Use the verified helpline ${DISPLAY_PHONE} for authentic bookings near Ram Mandir.`}
   keywords={[
     'sri janki mahal official booking',
     'janaki mahal trust official booking',
@@ -91,13 +90,13 @@ const faqSchema = generateFAQSchema(officialBookingFAQs);
         <div class="mt-8 grid gap-4 sm:grid-cols-2">
           <a
             class="flex items-center justify-center rounded-xl bg-[#2d2215] px-6 py-4 text-base font-semibold uppercase tracking-wide text-white transition hover:bg-[#aa4600]"
-            href={`tel:${officialPhone}`}
+            href={TEL_LINK}
           >
-            📞 Call {displayPhone} (Official Helpline)
+            📞 Call {DISPLAY_PHONE} (Official Helpline)
           </a>
           <a
             class="flex items-center justify-center rounded-xl border border-[#2d2215] px-6 py-4 text-base font-semibold uppercase tracking-wide text-[#2d2215] transition hover:bg-[#f6dfc4]"
-            href={`https://wa.me/${officialPhone}`}
+            href={WHATSAPP_LINK}
           >
             💬 WhatsApp Verified Booking Desk
           </a>
@@ -114,7 +113,7 @@ const faqSchema = generateFAQSchema(officialBookingFAQs);
           <div class="rounded-2xl bg-[#fef4e4] p-6">
             <h3 class="text-2xl font-semibold text-[#2d2215]">Official Booking Checklist</h3>
             <ul class="mt-4 space-y-3 text-base text-[#3d2f1c]">
-              <li>✓ Confirmation sent from {displayPhone} or official email</li>
+              <li>✓ Confirmation sent from {DISPLAY_PHONE} or official email</li>
               <li>✓ Trust seal & booking ID on confirmation slip</li>
               <li>✓ Payment instructions only on verified channels</li>
               <li>✓ AC / Non-AC room category noted clearly</li>
@@ -182,9 +181,9 @@ const faqSchema = generateFAQSchema(officialBookingFAQs);
           </p>
           <a
             class="mt-4 inline-flex items-center justify-center rounded-xl bg-[#2d2215] px-5 py-3 text-sm font-semibold uppercase tracking-wide text-white transition hover:bg-[#b45309]"
-            href={`tel:${officialPhone}`}
+            href={TEL_LINK}
           >
-            Call {displayPhone}
+            Call {DISPLAY_PHONE}
           </a>
         </div>
         <div class="rounded-3xl border border-[#f1dac0] bg-white p-6 shadow-sm">
@@ -194,7 +193,7 @@ const faqSchema = generateFAQSchema(officialBookingFAQs);
           </p>
           <a
             class="mt-4 inline-flex items-center justify-center rounded-xl border border-[#2d2215] px-5 py-3 text-sm font-semibold uppercase tracking-wide text-[#2d2215] transition hover:bg-[#f4ecdf]"
-            href={`https://wa.me/${officialPhone}`}
+            href={WHATSAPP_LINK}
           >
             Message Official Desk
           </a>

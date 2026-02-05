@@ -1,6 +1,6 @@
 ---
 title: Sri Janaki Mahal Trust Seasonal Rates - Peak Season and Off-Season Prices
-description: Seasonal rates at Sri Janaki Mahal Trust. Peak season rates, off-season rates, seasonal pricing, and best time to book. Contact +91 8460839199
+description: Seasonal rates at Sri Janaki Mahal Trust. Peak season rates, off-season rates, seasonal pricing, and best time to book. Contact +91 8679304702
 date: 2025-03-14
 keywords:
   - 'Sri Janaki Mahal Trust seasonal rates'
@@ -46,8 +46,8 @@ Complete guide to seasonal rates at Sri Janaki Mahal Trust. Learn about peak sea
 ## Contact for Rates
 
 **For Seasonal Rates:**
-- 📞 Phone: +91 8460839199
-- 💬 WhatsApp: +91 8460839199
+- 📞 Phone: +91 8679304702
+- 💬 WhatsApp: +91 8679304702
 
 **We'll provide:**
 - Current seasonal rates
@@ -69,5 +69,5 @@ Complete guide to seasonal rates at Sri Janaki Mahal Trust. Learn about peak sea
 
 ---
 
-*For seasonal rates, call +91 8460839199.*
+*For seasonal rates, call +91 8679304702.*
 

@@ -1,6 +1,6 @@
 ---
 title: Sri Janaki Mahal Trust Benefits - Advantages of Staying Here
-description: Benefits of staying at Sri Janaki Mahal Trust. Top advantages, benefits, and why guests choose us. Prime location, all meals, affordable prices. Contact +91 8679304702
+description: Benefits of staying at Sri Janaki Mahal Trust. Top advantages, benefits, and why guests choose us. Prime location, all meals, affordable prices. Contact +91 8936059096
 date: 2025-03-20
 keywords:
   - 'Sri Janaki Mahal Trust benefits'
@@ -77,10 +77,10 @@ Complete guide to benefits of staying at Sri Janaki Mahal Trust. Learn about top
 ## Book and Enjoy Benefits
 
 **Experience all benefits:**
-- 📞 Phone: +91 8679304702
-- 💬 WhatsApp: +91 8679304702
+- 📞 Phone: +91 8936059096
+- 💬 WhatsApp: +91 8936059096
 
 ---
 
-*Enjoy all benefits. Call +91 8679304702.*
+*Enjoy all benefits. Call +91 8936059096.*
 

@@ -19,7 +19,7 @@ Planning your 2025 pilgrimage to Ayodhya? The **Sri Janki Mahal Trust** (also kn
 
 ## 2025 Booking Highlights
 
-- **Single Verified Helpline:** [+91 8679304702](tel:+918679304702) for calls, WhatsApp, and emergency support.
+- **Single Verified Helpline:** [+91 8936059096](tel:+918936059096) for calls, WhatsApp, and emergency support.
 - **Meal Inclusion:** All tariffs include breakfast, lunch, and dinner (pure vegetarian).
 - **Flexible Check-In:** Standard check-in at 2 PM; early check-in offered when rooms are available.
 - **Festival Window:** Advance bookings open three months prior to major festivals like Ram Navami and Diwali.
@@ -42,8 +42,8 @@ Pricing varies slightly based on season, festival rush, and special requests.
 
 ## Official Booking Channels (2025 Verified)
 
-- **Phone:** [+91 8679304702](tel:+918679304702)
-- **WhatsApp:** [https://wa.me/918679304702](https://wa.me/918679304702)
+- **Phone:** [+91 8936059096](tel:+918936059096)
+- **WhatsApp:** [https://wa.me/918936059096](https://wa.me/918936059096)
 - **Email:** [srijanakimahaltrust7484@gmail.com](mailto:srijanakimahaltrust7484@gmail.com)
 
 Save the contact with the note “Sri Janki Mahal Official Booking 2025” for easy reference.
@@ -56,7 +56,7 @@ Save the contact with the note “Sri Janki Mahal Official Booking 2025” for e
 4. **Advance Payment:** Pay using the official bank/UPI details shared in the same conversation.
 5. **Final Confirmation:** Payment acknowledgement and arrival instructions are sent immediately.
 
-> Comment: If you receive payment instructions from any number other than **+91 8679304702**, it is fraudulent.
+> Comment: If you receive payment instructions from any number other than **+91 8936059096**, it is fraudulent.
 
 ## Booking Flow Example
 
@@ -98,7 +98,7 @@ Share your arrival details at least 48 hours in advance. The trust coordinates t
 
 ## 2025 Booking Checklist
 
-- ✅ Contact official helpline **+91 8679304702**
+- ✅ Contact official helpline **+91 8936059096**
 - ✅ Confirm room category and tariff
 - ✅ Verify trust seal on confirmation slips
 - ✅ Pay only via authorised bank/UPI details

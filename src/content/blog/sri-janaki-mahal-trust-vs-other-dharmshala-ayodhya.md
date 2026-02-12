@@ -148,8 +148,8 @@ Always available to help
 Experience why guests choose us over others:
 
 **Contact:**
-- 📞 Phone: +91 8679304702
-- 💬 WhatsApp: +91 8679304702
+- 📞 Phone: +91 8936059096
+- 💬 WhatsApp: +91 8936059096
 - 📧 Email: srijanakimahaltrust7484@gmail.com
 
 **Why Choose Us:**
@@ -162,5 +162,5 @@ Experience why guests choose us over others:
 
 ---
 
-*Compare and book the best dharmshala in Ayodhya. Call +91 8679304702 for booking.*
+*Compare and book the best dharmshala in Ayodhya. Call +91 8936059096 for booking.*
 

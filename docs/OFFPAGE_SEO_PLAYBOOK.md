@@ -13,7 +13,7 @@ Use this exact data everywhere (website, GBP, citations). Track any exception ex
 
 - **Name (preferred)**: Sri Janaki Mahal Trust  
 - **Address**: Vasudev Gath, Karsewakpuram, Ayodhya, Uttar Pradesh 224123, India  
-- **Phone**: +91 8936059096  
+- **Phone**: +91 9102319329  
 - **Email**: srijanakimahaltrust7484@gmail.com  
 - **Website**: https://www.srijanakimahaltrustofficial.com
 
@@ -123,7 +123,7 @@ I found your article on [topic] very helpful for pilgrims. We’ve published a f
 `https://www.srijanakimahaltrustofficial.com/booking-verification-guide`  
 If it fits your guide, would you consider adding it as a helpful resource link? No payment or exchange required—just safety information for devotees.  
 Thank you,  
-[Name], Sri Janaki Mahal Trust | +91 8936059096
+[Name], Sri Janaki Mahal Trust | +91 9102319329
 
 #### Template B — guest post pitch (educational)
 Subject: Guest post idea: avoiding booking scams in Ayodhya
@@ -133,7 +133,7 @@ Namaste [Name],
 We can contribute an original, practical post for your readers: “How to verify authentic accommodation bookings in Ayodhya (scam red flags + checklist)”.  
 Would you like a draft aligned to your editorial style?  
 Thank you,  
-[Name], Sri Janaki Mahal Trust | +91 8936059096
+[Name], Sri Janaki Mahal Trust | +91 9102319329
 
 #### Template C — directory listing request (formal)
 Subject: Request to add Sri Janaki Mahal Trust to your directory
@@ -143,7 +143,7 @@ Namaste,
 Please add/update our listing using the canonical details below:  
 Name: Sri Janaki Mahal Trust  
 Address: Vasudev Gath, Karsewakpuram, Ayodhya, Uttar Pradesh 224123, India  
-Phone: +91 8936059096  
+Phone: +91 9102319329  
 Website: https://www.srijanakimahaltrustofficial.com  
 Email: srijanakimahaltrust7484@gmail.com  
 Thank you.

@@ -251,8 +251,8 @@ The best time to visit Ayodhya depends on your preferences:
 Regardless of when you visit, Sri Janaki Mahal Trust provides comfortable accommodation near Ram Mandir, making your visit convenient and memorable.
 
 **Book your stay at Sri Janaki Mahal Trust:**
-- 📞 Call: +91 8936059096
-- 💬 WhatsApp: +91 8936059096
+- 📞 Call: +91 9102319329
+- 💬 WhatsApp: +91 9102319329
 - 📧 Email: srijanakimahaltrust7484@gmail.com
 
 ---

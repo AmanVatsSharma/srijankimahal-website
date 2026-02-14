@@ -14,7 +14,7 @@ The mobile number is now centralized in a single constants file to make updates 
 2. Find the `MOBILE_NUMBER` constant (line ~12)
 3. Update the value:
    ```typescript
-   export const MOBILE_NUMBER = '8936059096'; // Change this number
+   export const MOBILE_NUMBER = '9102319329'; // Change this number
    ```
 4. Save the file - all references will automatically update!
 
@@ -22,14 +22,14 @@ The mobile number is now centralized in a single constants file to make updates 
 
 The constants file exports the following:
 
-- `MOBILE_NUMBER` - Raw 10-digit number (e.g., '8936059096')
-- `DISPLAY_PHONE` - Formatted for display (e.g., '+91 8936059096')
-- `DISPLAY_PHONE_WITH_DASH` - With dash separator (e.g., '+91-8936059096')
-- `TEL_LINK` - For tel: links (e.g., 'tel:+918936059096')
-- `WHATSAPP_LINK` - Base WhatsApp link (e.g., 'https://wa.me/918936059096')
+- `MOBILE_NUMBER` - Raw 10-digit number (e.g., '9102319329')
+- `DISPLAY_PHONE` - Formatted for display (e.g., '+91 9102319329')
+- `DISPLAY_PHONE_WITH_DASH` - With dash separator (e.g., '+91-9102319329')
+- `TEL_LINK` - For tel: links (e.g., 'tel:+919102319329')
+- `WHATSAPP_LINK` - Base WhatsApp link (e.g., 'https://wa.me/919102319329')
 - `WHATSAPP_BOOKING_LINK` - WhatsApp with English booking message
 - `WHATSAPP_BOOKING_LINK_HI` - WhatsApp with Hindi booking message
-- `SCHEMA_TELEPHONE` - For structured data (e.g., '+91-8936059096')
+- `SCHEMA_TELEPHONE` - For structured data (e.g., '+91-9102319329')
 
 ## Usage in Code
 
@@ -62,7 +62,7 @@ const answer = `Call us at ${DISPLAY_PHONE} for booking.`;
 
 For blog posts, we recommend documenting the pattern:
 ```markdown
-Contact us at +91 8936059096 (update this when MOBILE_NUMBER changes)
+Contact us at +91 9102319329 (update this when MOBILE_NUMBER changes)
 ```
 
 ## Files Using Constants
@@ -95,7 +95,7 @@ These files contain hardcoded numbers and need manual updates:
 1. **Blog Markdown Files** (`src/content/blog/*.md`)
    - These are static content files
    - Update manually or use a find/replace script
-   - Pattern: Search for `+91 8936059096` and replace
+   - Pattern: Search for `+91 9102319329` and replace
 
 2. **Documentation Files** (`docs/*.md`)
    - Update manually when number changes
@@ -144,7 +144,7 @@ After updating `MOBILE_NUMBER`:
 npm run build
 
 # 3. Update markdown files (if needed)
-find src/content/blog -name "*.md" -exec sed -i 's/8936059096/NEW_NUMBER/g' {} \;
+find src/content/blog -name "*.md" -exec sed -i 's/9102319329/NEW_NUMBER/g' {} \;
 
 # 4. Update documentation
 # Edit docs/MOBILE_NUMBER_CONSTANTS.md with new number

@@ -215,7 +215,7 @@ This document outlines the comprehensive Google Ads compliance measures implemen
 
 **For Technical Issues:**
 - Email: srijanakimahaltrust7484@gmail.com
-- Phone: +91 8936059096
+- Phone: +91 9102319329
 
 **For Legal Inquiries:**
 - Refer to Privacy Policy and Terms of Service

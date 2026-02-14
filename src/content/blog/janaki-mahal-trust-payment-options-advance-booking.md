@@ -44,7 +44,7 @@ Securing your stay at **Janaki Mahal Trust** (also called **Sri Janki Mahal Trus
 
 ## Safety Tips
 
-- Only trust details shared from **+91 9102319329** or [srijanakimahaltrust7484@gmail.com](mailto:srijanakimahaltrust7484@gmail.com).
+- Only trust details shared from **+91 9102319329** or [srijanakimahaltrustofficial@gmail.com](mailto:srijanakimahaltrustofficial@gmail.com).
 - Do not pay through social media ads or third-party agents.
 - Verify bank account name: **Sri Janaki Mahal Trust** or **Janaki Mahal Trust Ayodhya**.
 - Keep payment screenshots until checkout is complete.

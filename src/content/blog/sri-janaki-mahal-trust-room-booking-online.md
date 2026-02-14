@@ -120,7 +120,7 @@ Room: [AC/Non-AC, Bed count]
 **Choose Method:**
 - WhatsApp: +91 9102319329
 - Phone: +91 9102319329
-- Email: srijanakimahaltrust7484@gmail.com
+- Email: srijanakimahaltrustofficial@gmail.com
 
 **Provide Information:**
 - Your name
@@ -350,7 +350,7 @@ Booking a room at Sri Janaki Mahal Trust online is simple and secure. Choose you
 **Book Online Now:**
 - 💬 WhatsApp: +91 9102319329
 - 📞 Phone: +91 9102319329
-- 📧 Email: srijanakimahaltrust7484@gmail.com
+- 📧 Email: srijanakimahaltrustofficial@gmail.com
 - 🌐 Website: /booking
 
 ---

@@ -21,7 +21,7 @@ Reaching the verified **Sri Janaki Mahal Trust** team (also known as **Sri Janki
 
 - **Primary Helpline (24/7):** [+91 9102319329](tel:+919102319329)
 - **Official WhatsApp:** [https://wa.me/919102319329](https://wa.me/919102319329)
-- **Official Email:** [srijanakimahaltrust7484@gmail.com](mailto:srijanakimahaltrust7484@gmail.com)
+- **Official Email:** [srijanakimahaltrustofficial@gmail.com](mailto:srijanakimahaltrustofficial@gmail.com)
 - **Alternate Names Recognised:** Janaki Mahal Trust, Sri Janki Mahal Trust, Shri Janki Mahal Trust Ayodhya, Janaki Mahal Ayodhya
 
 ## Why Contacting the Verified Number Matters
@@ -60,7 +60,7 @@ Reaching the verified **Sri Janaki Mahal Trust** team (also known as **Sri Janki
 
 ## Email Support for Documentation
 
-While phone/WhatsApp gives instant responses, you can also email **srijanakimahaltrust7484@gmail.com** for:
+While phone/WhatsApp gives instant responses, you can also email **srijanakimahaltrustofficial@gmail.com** for:
 
 - Group booking proposals for yatri mandals
 - Official letters for employer approval
@@ -75,7 +75,7 @@ Expect a reply within 12-18 hours on business days.
 |---------------------------------|----------------------------------------------|----------------|
 | Immediate booking confirmation  | Call **+91 9102319329**                      | Instantly      |
 | Written confirmation slip       | WhatsApp message to **+91 9102319329**       | 5-15 minutes   |
-| Group booking proposal          | Email **srijanakimahaltrust7484@gmail.com** | 12-18 hours    |
+| Group booking proposal          | Email **srijanakimahaltrustofficial@gmail.com** | 12-18 hours    |
 | Scam verification               | Call back on official helpline               | Instantly      |
 
 ## Red Flags to Avoid

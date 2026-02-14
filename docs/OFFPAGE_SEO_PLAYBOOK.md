@@ -14,7 +14,7 @@ Use this exact data everywhere (website, GBP, citations). Track any exception ex
 - **Name (preferred)**: Sri Janaki Mahal Trust  
 - **Address**: Vasudev Gath, Karsewakpuram, Ayodhya, Uttar Pradesh 224123, India  
 - **Phone**: +91 9102319329  
-- **Email**: srijanakimahaltrust7484@gmail.com  
+- **Email**: srijanakimahaltrustofficial@gmail.com  
 - **Website**: https://www.srijanakimahaltrustofficial.com
 
 ### Name variations policy (to reduce confusion)
@@ -145,7 +145,7 @@ Name: Sri Janaki Mahal Trust
 Address: Vasudev Gath, Karsewakpuram, Ayodhya, Uttar Pradesh 224123, India  
 Phone: +91 9102319329  
 Website: https://www.srijanakimahaltrustofficial.com  
-Email: srijanakimahaltrust7484@gmail.com  
+Email: srijanakimahaltrustofficial@gmail.com  
 Thank you.
 
 ### Follow-up cadence

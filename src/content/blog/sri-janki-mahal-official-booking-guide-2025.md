@@ -44,7 +44,7 @@ Pricing varies slightly based on season, festival rush, and special requests.
 
 - **Phone:** [+91 9102319329](tel:+919102319329)
 - **WhatsApp:** [https://wa.me/919102319329](https://wa.me/919102319329)
-- **Email:** [srijanakimahaltrust7484@gmail.com](mailto:srijanakimahaltrust7484@gmail.com)
+- **Email:** [srijanakimahaltrustofficial@gmail.com](mailto:srijanakimahaltrustofficial@gmail.com)
 
 Save the contact with the note “Sri Janki Mahal Official Booking 2025” for easy reference.
 

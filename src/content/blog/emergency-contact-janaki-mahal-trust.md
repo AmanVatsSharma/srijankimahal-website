@@ -21,7 +21,7 @@ Every pilgrim staying at **Janaki Mahal Trust** (also known as **Sri Janki Mahal
 
 - **24/7 Emergency & Support Line:** [+91 9102319329](tel:+919102319329)
 - **WhatsApp (for quick location sharing):** [https://wa.me/919102319329](https://wa.me/919102319329)
-- **Emergency Email (for documentation):** [srijanakimahaltrust7484@gmail.com](mailto:srijanakimahaltrust7484@gmail.com)
+- **Emergency Email (for documentation):** [srijanakimahaltrustofficial@gmail.com](mailto:srijanakimahaltrustofficial@gmail.com)
 
 Save the number as **“Janaki Mahal Trust Emergency”** so you can access it instantly.
 

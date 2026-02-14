@@ -21,7 +21,7 @@ The sacred **Janaki Mahal Trust** in Ayodhya (also known as **Sri Janki Mahal Tr
 
 - **Phone / Helpline:** [+91 9102319329](tel:+919102319329)
 - **WhatsApp Booking Desk:** [https://wa.me/919102319329](https://wa.me/919102319329)
-- **Email for Receipts:** [srijanakimahaltrust7484@gmail.com](mailto:srijanakimahaltrust7484@gmail.com)
+- **Email for Receipts:** [srijanakimahaltrustofficial@gmail.com](mailto:srijanakimahaltrustofficial@gmail.com)
 
 Save the number as “Janaki Mahal Trust Official Booking” for easy identification.
 
@@ -61,7 +61,7 @@ Keep these details ready before you contact the trust:
 
 ### Option C: Email Booking (For Documentation)
 
-1. Email [srijanakimahaltrust7484@gmail.com](mailto:srijanakimahaltrust7484@gmail.com).
+1. Email [srijanakimahaltrustofficial@gmail.com](mailto:srijanakimahaltrustofficial@gmail.com).
 2. Mention “Official Booking Request” in the subject line.
 3. Provide stay details and attach ID proof if you want express check-in.
 4. Expect a reply within 12-18 hours.

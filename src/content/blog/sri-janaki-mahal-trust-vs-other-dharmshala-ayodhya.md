@@ -150,7 +150,7 @@ Experience why guests choose us over others:
 **Contact:**
 - 📞 Phone: +91 9102319329
 - 💬 WhatsApp: +91 9102319329
-- 📧 Email: srijanakimahaltrust7484@gmail.com
+- 📧 Email: srijanakimahaltrustofficial@gmail.com
 
 **Why Choose Us:**
 ✅ Nearest to Ram Mandir  

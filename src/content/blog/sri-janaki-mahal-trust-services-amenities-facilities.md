@@ -243,7 +243,7 @@ Complete guide to all services, amenities, and facilities available at Sri Janak
 **Service Inquiries:**
 - 📞 Phone: +91 9102319329
 - 💬 WhatsApp: +91 9102319329
-- 📧 Email: srijanakimahaltrust7484@gmail.com
+- 📧 Email: srijanakimahaltrustofficial@gmail.com
 
 **Available 24/7 for Service Support!**
 

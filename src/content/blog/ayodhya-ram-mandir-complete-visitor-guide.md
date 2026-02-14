@@ -261,7 +261,7 @@ Ram Mandir is the birthplace of Lord Rama, the seventh avatar of Lord Vishnu. Th
 **Booking:**
 - 📞 Call: +91 9102319329
 - 💬 WhatsApp: +91 9102319329
-- 📧 Email: srijanakimahaltrust7484@gmail.com
+- 📧 Email: srijanakimahaltrustofficial@gmail.com
 
 **Advantages:**
 - Visit temple early morning easily
@@ -378,7 +378,7 @@ Visiting Ram Mandir is a profound experience. Planning your stay at Sri Janaki M
 **Book your stay at Sri Janaki Mahal Trust:**
 - 📞 Call: +91 9102319329
 - 💬 WhatsApp: +91 9102319329
-- 📧 Email: srijanakimahaltrust7484@gmail.com
+- 📧 Email: srijanakimahaltrustofficial@gmail.com
 
 Experience the divine blessings of Ram Mandir with the comfort and convenience of staying at Sri Janaki Mahal Trust!
 

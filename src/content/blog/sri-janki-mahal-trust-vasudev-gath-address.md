@@ -52,7 +52,7 @@ India
 ## Official Contact for Guidance
 
 - **Helpline & WhatsApp:** [+91 9102319329](tel:+919102319329) / [https://wa.me/919102319329](https://wa.me/919102319329)
-- **Email:** [srijanakimahaltrust7484@gmail.com](mailto:srijanakimahaltrust7484@gmail.com)
+- **Email:** [srijanakimahaltrustofficial@gmail.com](mailto:srijanakimahaltrustofficial@gmail.com)
 
 Share your live location, and the support staff will guide you from Vasudev Ghat entrance to the reception.
 

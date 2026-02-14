@@ -87,7 +87,7 @@ Complete guide to family rooms at Sri Janaki Mahal Trust. Perfect family accommo
 ### Contact for Booking
 - 📞 Phone: +91 9102319329
 - 💬 WhatsApp: +91 9102319329
-- 📧 Email: srijanakimahaltrust7484@gmail.com
+- 📧 Email: srijanakimahaltrustofficial@gmail.com
 
 ## Family Room Advantages
 
@@ -120,7 +120,7 @@ Call +91 9102319329 or WhatsApp +91 9102319329.
 **Perfect family accommodation near Ram Mandir:**
 - 📞 Phone: +91 9102319329
 - 💬 WhatsApp: +91 9102319329
-- 📧 Email: srijanakimahaltrust7484@gmail.com
+- 📧 Email: srijanakimahaltrustofficial@gmail.com
 
 ---
 

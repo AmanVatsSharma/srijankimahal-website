@@ -36,7 +36,7 @@ Sri Janaki Mahal Trust is a registered charitable trust located in Karsewakpuram
 
 1. **Phone Booking:** Call +91 9102319329 (24/7 available)
 2. **WhatsApp Booking:** Message +91 9102319329
-3. **Email:** Contact srijanakimahaltrust7484@gmail.com
+3. **Email:** Contact srijanakimahaltrustofficial@gmail.com
 
 ### Room Types Available
 
@@ -151,7 +151,7 @@ While walk-ins may be available, advance booking is recommended, especially duri
 
 **Phone:** +91 9102319329  
 **WhatsApp:** +91 9102319329  
-**Email:** srijanakimahaltrust7484@gmail.com  
+**Email:** srijanakimahaltrustofficial@gmail.com  
 **Address:** Vasudev Gath, Karsewakpuram, Ayodhya, UP 224123
 
 ## Conclusion

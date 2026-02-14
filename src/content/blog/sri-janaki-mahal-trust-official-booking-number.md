@@ -59,7 +59,7 @@ Room: [AC/Non-AC]
 
 ## Official Email Address
 
-**Email:** srijanakimahaltrust7484@gmail.com
+**Email:** srijanakimahaltrustofficial@gmail.com
 
 **Response Time:** Within 24 hours  
 **For:** Detailed inquiries, formal requests
@@ -135,7 +135,7 @@ Room: [AC/Non-AC]
 - Written records
 - Sharing details
 
-### Email Booking (srijanakimahaltrust7484@gmail.com)
+### Email Booking (srijanakimahaltrustofficial@gmail.com)
 
 **Pros:**
 - ✅ Formal communication
@@ -153,7 +153,7 @@ Room: [AC/Non-AC]
 
 ✅ **Official Phone:** +91 9102319329  
 ✅ **Official WhatsApp:** +91 9102319329  
-✅ **Official Email:** srijanakimahaltrust7484@gmail.com  
+✅ **Official Email:** srijanakimahaltrustofficial@gmail.com  
 ✅ **Official Website:** www.srijanakimahaltrustofficial.com
 
 ### Avoid Scams
@@ -213,7 +213,7 @@ Always verify:
 Yes, WhatsApp number is +91 9102319329 (same as phone).
 
 ### What is the email address?
-Official email is srijanakimahaltrust7484@gmail.com.
+Official email is srijanakimahaltrustofficial@gmail.com.
 
 ### Is the number available 24/7?
 Yes, phone and WhatsApp are available 24 hours, 7 days a week.
@@ -228,7 +228,7 @@ Phone/WhatsApp: Instant. Email: Within 24 hours.
 - 💬 WhatsApp: +91 9102319329
 
 **For Email Booking:**
-- 📧 Email: srijanakimahaltrust7484@gmail.com
+- 📧 Email: srijanakimahaltrustofficial@gmail.com
 
 **Official Website:**
 - 🌐 Website: www.srijanakimahaltrustofficial.com

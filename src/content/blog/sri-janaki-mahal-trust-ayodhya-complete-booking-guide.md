@@ -66,7 +66,7 @@ Room: [AC/Non-AC, Bed count]
 
 ### Method 3: Email Booking
 
-**Email:** srijanakimahaltrust7484@gmail.com
+**Email:** srijanakimahaltrustofficial@gmail.com
 
 **Include:**
 - Subject: "Room Booking Request"
@@ -117,7 +117,7 @@ Room: [AC/Non-AC, Bed count]
 ### Step 3: Contact Us
 - Call: +91 9102319329
 - WhatsApp: +91 9102319329
-- Email: srijanakimahaltrust7484@gmail.com
+- Email: srijanakimahaltrustofficial@gmail.com
 
 ### Step 4: Provide Details
 - Your name
@@ -197,7 +197,7 @@ Yes, you will receive booking confirmation with all details.
 
 **Phone:** +91 9102319329  
 **WhatsApp:** +91 9102319329  
-**Email:** srijanakimahaltrust7484@gmail.com  
+**Email:** srijanakimahaltrustofficial@gmail.com  
 **Website:** www.srijanakimahaltrustofficial.com
 
 **Available:** 24 hours, 7 days a week
@@ -209,7 +209,7 @@ Booking at Sri Janaki Mahal Trust Ayodhya is simple and convenient. Choose your 
 **Book now:**
 - 📞 Call: +91 9102319329
 - 💬 WhatsApp: +91 9102319329
-- 📧 Email: srijanakimahaltrust7484@gmail.com
+- 📧 Email: srijanakimahaltrustofficial@gmail.com
 
 ---
 

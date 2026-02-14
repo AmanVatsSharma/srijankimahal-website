@@ -99,7 +99,7 @@ Complete guide to booking AC rooms at Sri Janaki Mahal Trust. Learn about AC roo
 ### Step 3: Book AC Room
 - Call: +91 9102319329
 - WhatsApp: +91 9102319329
-- Email: srijanakimahaltrust7484@gmail.com
+- Email: srijanakimahaltrustofficial@gmail.com
 
 ### Step 4: Receive Confirmation
 - Booking reference
@@ -164,7 +164,7 @@ Yes, air conditioning is available 24 hours.
 **Contact for AC Room Booking:**
 - 📞 Phone: +91 9102319329
 - 💬 WhatsApp: +91 9102319329
-- 📧 Email: srijanakimahaltrust7484@gmail.com
+- 📧 Email: srijanakimahaltrustofficial@gmail.com
 
 **Available:** 24 hours, 7 days a week
 

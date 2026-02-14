@@ -20,7 +20,7 @@ Devotees travelling to Ayodhya deserve a safe and stress-free experience. Unfort
 ## Official Booking Channels (Trust-Managed)
 
 - **Helpline & WhatsApp:** [+91 9102319329](tel:+919102319329) / [https://wa.me/919102319329](https://wa.me/919102319329)
-- **Email:** [srijanakimahaltrust7484@gmail.com](mailto:srijanakimahaltrust7484@gmail.com)
+- **Email:** [srijanakimahaltrustofficial@gmail.com](mailto:srijanakimahaltrustofficial@gmail.com)
 - **Website:** [https://www.srijanakimahaltrustofficial.com](https://www.srijanakimahaltrustofficial.com)
 
 Anything outside these channels is NOT authorised.
@@ -39,7 +39,7 @@ Anything outside these channels is NOT authorised.
 1. **Match the Contact Number:** Only trust **+91 9102319329**.
 2. **Check Confirmation Slip:** Must carry the trust seal, booking ID, and official contact details.
 3. **Validate Payment Instructions:** Beneficiary name should read **Sri Janaki Mahal Trust**.
-4. **Inspect Email Address:** Official mails originate from `srijanakimahaltrust7484@gmail.com`.
+4. **Inspect Email Address:** Official mails originate from `srijanakimahaltrustofficial@gmail.com`.
 5. **Cross-Check with Website:** Confirm the phone number and booking process on the official site.
 
 ## Red Flags Signalling a Fake Booking

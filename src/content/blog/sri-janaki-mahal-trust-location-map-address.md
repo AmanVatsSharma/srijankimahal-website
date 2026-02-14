@@ -164,7 +164,7 @@ Yes, well-known area near Ram Mandir.
 **Need Help Finding Us?**
 - 📞 Call: +91 9102319329
 - 💬 WhatsApp: +91 9102319329
-- 📧 Email: srijanakimahaltrust7484@gmail.com
+- 📧 Email: srijanakimahaltrustofficial@gmail.com
 
 **We'll provide:**
 - Detailed directions
@@ -187,7 +187,7 @@ Experience the perfect location near Ram Mandir. Book your stay at Sri Janaki Ma
 **Contact:**
 - 📞 Phone: +91 9102319329
 - 💬 WhatsApp: +91 9102319329
-- 📧 Email: srijanakimahaltrust7484@gmail.com
+- 📧 Email: srijanakimahaltrustofficial@gmail.com
 
 **Address:** Vasudev Gath, Karsewakpuram, Ayodhya, UP 224123
 

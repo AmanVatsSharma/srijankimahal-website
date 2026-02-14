@@ -129,7 +129,7 @@ Yes, easy to visit multiple times daily from Sri Janaki Mahal Trust.
 **Perfect Location - Nearest to Ram Mandir:**
 - 📞 Phone: +91 9102319329
 - 💬 WhatsApp: +91 9102319329
-- 📧 Email: srijanakimahaltrust7484@gmail.com
+- 📧 Email: srijanakimahaltrustofficial@gmail.com
 
 **Distance:** 5 minutes walk  
 **Location:** Karsewakpuram, Ayodhya  

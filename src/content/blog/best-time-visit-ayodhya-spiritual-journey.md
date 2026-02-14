@@ -253,7 +253,7 @@ Regardless of when you visit, Sri Janaki Mahal Trust provides comfortable accomm
 **Book your stay at Sri Janaki Mahal Trust:**
 - 📞 Call: +91 9102319329
 - 💬 WhatsApp: +91 9102319329
-- 📧 Email: srijanakimahaltrust7484@gmail.com
+- 📧 Email: srijanakimahaltrustofficial@gmail.com
 
 ---
 

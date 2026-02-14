@@ -222,7 +222,7 @@ Let the dharmshala know your arrival time and mode of transport for better assis
 **Sri Janaki Mahal Trust:**
 - Phone: +91 9102319329
 - WhatsApp: +91 9102319329
-- Email: srijanakimahaltrust7484@gmail.com
+- Email: srijanakimahaltrustofficial@gmail.com
 
 ### 4. Local Language
 
@@ -251,7 +251,7 @@ If you face any issues reaching the location:
 **Sri Janaki Mahal Trust:**
 - 📞 Phone: +91 9102319329 (24/7)
 - 💬 WhatsApp: +91 9102319329
-- 📧 Email: srijanakimahaltrust7484@gmail.com
+- 📧 Email: srijanakimahaltrustofficial@gmail.com
 
 ## Conclusion
 
@@ -266,7 +266,7 @@ Once in Ayodhya, the dharmshala is easily accessible by auto-rickshaw or taxi fr
 **Book your stay in advance:**
 - Call +91 9102319329
 - WhatsApp +91 9102319329
-- Email: srijanakimahaltrust7484@gmail.com
+- Email: srijanakimahaltrustofficial@gmail.com
 
 ---
 

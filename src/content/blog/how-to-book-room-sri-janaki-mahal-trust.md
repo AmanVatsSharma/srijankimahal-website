@@ -69,7 +69,7 @@ Room Type: [Preferred type]
 
 ### Method 3: Email Booking
 
-**Step 1:** Send email to: **srijanakimahaltrust7484@gmail.com**
+**Step 1:** Send email to: **srijanakimahaltrustofficial@gmail.com**
 
 **Step 2:** Include:
 - Subject: "Room Booking Inquiry"
@@ -244,7 +244,7 @@ Yes, booking confirmation is required and provided. Keep it for check-in.
 ✅ **Official Phone:** +91 9102319329  
 ✅ **Official WhatsApp:** +91 9102319329  
 ✅ **Official Website:** www.srijanakimahaltrustofficial.com  
-✅ **Official Email:** srijanakimahaltrust7484@gmail.com  
+✅ **Official Email:** srijanakimahaltrustofficial@gmail.com  
 
 **Do NOT book through:**
 - Third-party agents
@@ -296,7 +296,7 @@ Yes, booking confirmation is required and provided. Keep it for check-in.
 **Booking Assistance:**
 - 📞 Phone: +91 9102319329 (24/7)
 - 💬 WhatsApp: +91 9102319329
-- 📧 Email: srijanakimahaltrust7484@gmail.com
+- 📧 Email: srijanakimahaltrustofficial@gmail.com
 - 🌐 Website: www.srijanakimahaltrustofficial.com
 
 ## Conclusion

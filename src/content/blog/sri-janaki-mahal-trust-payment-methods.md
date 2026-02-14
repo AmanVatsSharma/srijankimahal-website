@@ -40,7 +40,7 @@ Complete guide to payment methods accepted at Sri Janaki Mahal Trust. Learn abou
 Contact us for payment details:
 - 📞 Phone: +91 9102319329
 - 💬 WhatsApp: +91 9102319329
-- 📧 Email: srijanakimahaltrust7484@gmail.com
+- 📧 Email: srijanakimahaltrustofficial@gmail.com
 
 ## Payment Process
 
@@ -107,7 +107,7 @@ Contact us at +91 9102319329 for payment details.
 **For Payment Information:**
 - 📞 Phone: +91 9102319329
 - 💬 WhatsApp: +91 9102319329
-- 📧 Email: srijanakimahaltrust7484@gmail.com
+- 📧 Email: srijanakimahaltrustofficial@gmail.com
 
 **We'll provide:**
 - Payment details

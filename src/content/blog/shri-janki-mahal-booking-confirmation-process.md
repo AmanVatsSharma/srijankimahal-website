@@ -21,7 +21,7 @@ Every legitimate booking at **Shri Janki Mahal Trust** (also called **Sri Janaki
 
 - **Phone / Helpline:** [+91 9102319329](tel:+919102319329)
 - **WhatsApp:** [https://wa.me/919102319329](https://wa.me/919102319329)
-- **Email:** [srijanakimahaltrust7484@gmail.com](mailto:srijanakimahaltrust7484@gmail.com)
+- **Email:** [srijanakimahaltrustofficial@gmail.com](mailto:srijanakimahaltrustofficial@gmail.com)
 
 Provide your travel dates, guest count, preferred room type, and special requirements.
 

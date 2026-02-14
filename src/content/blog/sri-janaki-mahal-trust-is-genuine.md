@@ -31,7 +31,7 @@ Complete guide to verify if Sri Janaki Mahal Trust is genuine. Learn how to chec
 **Official Contact:**
 - ✅ Phone: +91 9102319329
 - ✅ WhatsApp: +91 9102319329
-- ✅ Email: srijanakimahaltrust7484@gmail.com
+- ✅ Email: srijanakimahaltrustofficial@gmail.com
 - ✅ Website: www.srijanakimahaltrustofficial.com
 
 **If different contact = Not genuine**
@@ -102,7 +102,7 @@ Complete guide to verify if Sri Janaki Mahal Trust is genuine. Learn how to chec
 ### Before Booking
 - [ ] Phone number is +91 9102319329
 - [ ] Website is www.srijanakimahaltrustofficial.com
-- [ ] Email is srijanakimahaltrust7484@gmail.com
+- [ ] Email is srijanakimahaltrustofficial@gmail.com
 - [ ] Address matches official address
 - [ ] Reviews are positive
 - [ ] Registration details available
@@ -114,7 +114,7 @@ Complete guide to verify if Sri Janaki Mahal Trust is genuine. Learn how to chec
 **For Verification:**
 - 📞 Phone: +91 9102319329
 - 💬 WhatsApp: +91 9102319329
-- 📧 Email: srijanakimahaltrust7484@gmail.com
+- 📧 Email: srijanakimahaltrustofficial@gmail.com
 - 🌐 Website: www.srijanakimahaltrustofficial.com
 
 **We'll provide:**
@@ -154,7 +154,7 @@ Always use official contact, verify details, and check official website.
 **Official and Genuine:**
 - 📞 Phone: +91 9102319329
 - 💬 WhatsApp: +91 9102319329
-- 📧 Email: srijanakimahaltrust7484@gmail.com
+- 📧 Email: srijanakimahaltrustofficial@gmail.com
 
 ---
 

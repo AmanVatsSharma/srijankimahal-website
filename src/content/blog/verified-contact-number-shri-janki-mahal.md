@@ -21,7 +21,7 @@ Many pilgrims rely on **Shri Janki Mahal Trust** (popularly known as **Sri Janak
 
 - **Shri Janki Mahal Trust Verified Helpline:** [+91 9102319329](tel:+919102319329)
 - **WhatsApp:** [https://wa.me/919102319329](https://wa.me/919102319329)
-- **Registered Email:** [srijanakimahaltrust7484@gmail.com](mailto:srijanakimahaltrust7484@gmail.com)
+- **Registered Email:** [srijanakimahaltrustofficial@gmail.com](mailto:srijanakimahaltrustofficial@gmail.com)
 
 Save the contact as “Shri Janki Mahal Trust (Official)” to avoid confusion.
 
@@ -84,7 +84,7 @@ Immediately contact the official helpline. Share transaction details so the trus
 
 - ✅ Verified Shri Janki Mahal Trust number: **+91 9102319329**
 - ✅ WhatsApp and voice support available on the same number.
-- ✅ Official email: **srijanakimahaltrust7484@gmail.com**
+- ✅ Official email: **srijanakimahaltrustofficial@gmail.com**
 - ✅ Confirmation slips always carry the trust seal and booking ID.
 - ❌ No other numbers, agents, or social media accounts are authorised to collect payments.
 

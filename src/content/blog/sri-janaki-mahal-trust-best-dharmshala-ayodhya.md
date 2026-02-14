@@ -122,7 +122,7 @@ Strong guest feedback from pilgrims
 **Experience the best dharmshala in Ayodhya:**
 - 📞 Phone: +91 9102319329
 - 💬 WhatsApp: +91 9102319329
-- 📧 Email: srijanakimahaltrust7484@gmail.com
+- 📧 Email: srijanakimahaltrustofficial@gmail.com
 
 **Why We're Best:**
 ✅ Nearest to Ram Mandir  

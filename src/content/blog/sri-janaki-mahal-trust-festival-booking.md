@@ -86,7 +86,7 @@ Complete guide to festival booking at Sri Janaki Mahal Trust. Book rooms during 
 ### Contact for Rates
 - 📞 Phone: +91 9102319329
 - 💬 WhatsApp: +91 9102319329
-- 📧 Email: srijanakimahaltrust7484@gmail.com
+- 📧 Email: srijanakimahaltrustofficial@gmail.com
 
 ## Festival Booking FAQs
 

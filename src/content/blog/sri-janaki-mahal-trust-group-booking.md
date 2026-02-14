@@ -49,7 +49,7 @@ Complete guide to group booking at Sri Janaki Mahal Trust. Learn about group rat
 ### Step 1: Contact Us
 - Call: +91 9102319329
 - WhatsApp: +91 9102319329
-- Email: srijanakimahaltrust7484@gmail.com
+- Email: srijanakimahaltrustofficial@gmail.com
 
 ### Step 2: Provide Group Details
 - Number of people
@@ -159,7 +159,7 @@ Yes, special meal arrangements available for groups.
 **For Group Booking:**
 - 📞 Phone: +91 9102319329
 - 💬 WhatsApp: +91 9102319329
-- 📧 Email: srijanakimahaltrust7484@gmail.com
+- 📧 Email: srijanakimahaltrustofficial@gmail.com
 
 **Available:** 24 hours, 7 days a week
 

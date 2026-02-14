@@ -189,7 +189,7 @@ Complete guide on check-in and check-out timings, procedures, and what to expect
 **Contact Reception:**
 - 📞 Phone: +91 9102319329
 - 💬 WhatsApp: +91 9102319329
-- 📧 Email: srijanakimahaltrust7484@gmail.com
+- 📧 Email: srijanakimahaltrustofficial@gmail.com
 
 **Available:** 24/7 for assistance
 
@@ -270,7 +270,7 @@ Sri Janaki Mahal Trust has standard check-in (2:00 PM) and check-out (12:00 PM) 
 **Contact for Timings:**
 - 📞 Phone: +91 9102319329
 - 💬 WhatsApp: +91 9102319329
-- 📧 Email: srijanakimahaltrust7484@gmail.com
+- 📧 Email: srijanakimahaltrustofficial@gmail.com
 
 **Book Your Stay:**
 - [Booking Page](/booking)

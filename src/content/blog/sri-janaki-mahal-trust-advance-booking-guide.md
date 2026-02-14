@@ -81,7 +81,7 @@ Complete guide on advance booking at Sri Janaki Mahal Trust. Learn when and how 
 **Methods:**
 - Phone: +91 9102319329
 - WhatsApp: +91 9102319329
-- Email: srijanakimahaltrust7484@gmail.com
+- Email: srijanakimahaltrustofficial@gmail.com
 
 **Best Method:** Phone or WhatsApp for instant confirmation
 
@@ -259,7 +259,7 @@ Yes, advance bookings are confirmed with booking reference and details.
 **Advance Booking:**
 - 📞 Phone: +91 9102319329
 - 💬 WhatsApp: +91 9102319329
-- 📧 Email: srijanakimahaltrust7484@gmail.com
+- 📧 Email: srijanakimahaltrustofficial@gmail.com
 
 **Available 24/7 for Advance Bookings!**
 
@@ -270,7 +270,7 @@ Advance booking at Sri Janaki Mahal Trust ensures guaranteed availability and pe
 **Book in Advance Now:**
 - 📞 Call: +91 9102319329
 - 💬 WhatsApp: +91 9102319329
-- 📧 Email: srijanakimahaltrust7484@gmail.com
+- 📧 Email: srijanakimahaltrustofficial@gmail.com
 
 ---
 

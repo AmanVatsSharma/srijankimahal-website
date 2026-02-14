@@ -236,7 +236,7 @@ Both are suitable. Choose AC for comfort or Non-AC for budget. Contact us for re
 **Contact Us:**
 - 📞 Phone: +91 9102319329
 - 💬 WhatsApp: +91 9102319329
-- 📧 Email: srijanakimahaltrust7484@gmail.com
+- 📧 Email: srijanakimahaltrustofficial@gmail.com
 
 **We'
   -ll Help:**
@@ -256,7 +256,7 @@ Both AC and Non-AC rooms are available at Sri Janaki Mahal Trust. Choose AC for 
 **Contact for Booking:**
 - 📞 Phone: +91 9102319329
 - 💬 WhatsApp: +91 9102319329
-- 📧 Email: srijanakimahaltrust7484@gmail.com
+- 📧 Email: srijanakimahaltrustofficial@gmail.com
 
 **Book Now:**
 - [Booking Page](/booking)

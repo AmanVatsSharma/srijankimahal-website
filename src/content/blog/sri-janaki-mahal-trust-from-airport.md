@@ -136,7 +136,7 @@ Complete guide to reach Sri Janaki Mahal Trust from Lucknow Airport. Learn about
 **Need Help with Transportation?**
 - 📞 Phone: +91 9102319329
 - 💬 WhatsApp: +91 9102319329
-- 📧 Email: srijanakimahaltrust7484@gmail.com
+- 📧 Email: srijanakimahaltrustofficial@gmail.com
 
 **We can help with:**
 - Transportation options

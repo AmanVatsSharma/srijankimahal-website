@@ -38,7 +38,7 @@ Complete guide on verifying the authenticity of Sri Janaki Mahal Trust. Learn ho
 
 **What to Look For:**
 - Official contact: +91 9102319329
-- Official email: srijanakimahaltrust7484@gmail.com
+- Official email: srijanakimahaltrustofficial@gmail.com
 - Official address: Vasudev Gath, Karsewakpuram, Ayodhya
 - Registration information
 
@@ -47,7 +47,7 @@ Complete guide on verifying the authenticity of Sri Janaki Mahal Trust. Learn ho
 **Official Contact:**
 - Phone: +91 9102319329
 - WhatsApp: +91 9102319329
-- Email: srijanakimahaltrust7484@gmail.com
+- Email: srijanakimahaltrustofficial@gmail.com
 - Website: www.srijanakimahaltrustofficial.com
 
 **Verification:**
@@ -175,7 +175,7 @@ Complete guide on verifying the authenticity of Sri Janaki Mahal Trust. Learn ho
 
 - [ ] Website is www.srijanakimahaltrustofficial.com
 - [ ] Phone number is +91 9102319329
-- [ ] Email is srijanakimahaltrust7484@gmail.com
+- [ ] Email is srijanakimahaltrustofficial@gmail.com
 - [ ] Address matches official address
 - [ ] Registration details available
 - [ ] Reviews and ratings present
@@ -203,7 +203,7 @@ Complete guide on verifying the authenticity of Sri Janaki Mahal Trust. Learn ho
 - Available: 24/7
 
 ✅ **Official Email**
-- Email: srijanakimahaltrust7484@gmail.com
+- Email: srijanakimahaltrustofficial@gmail.com
 - Response: Within 24 hours
 
 ✅ **Physical Location**
@@ -227,7 +227,7 @@ Complete guide on verifying the authenticity of Sri Janaki Mahal Trust. Learn ho
 
 **Step 2: Verify Contact**
 - Check phone: +91 9102319329
-- Check email: srijanakimahaltrust7484@gmail.com
+- Check email: srijanakimahaltrustofficial@gmail.com
 - Verify WhatsApp: +91 9102319329
 
 **Step 3: Check Information**

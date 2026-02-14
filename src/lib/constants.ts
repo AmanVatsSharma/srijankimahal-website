@@ -14,7 +14,7 @@
 export const MOBILE_NUMBER = '9102319329';
 
 // Official contact email (chosen as primary in SEO plan)
-export const OFFICIAL_EMAIL = 'srijanakimahaltrust7484@gmail.com';
+export const OFFICIAL_EMAIL = 'srijanakimahaltrustofficial@gmail.com';
 
 // Formatted display versions
 export const DISPLAY_PHONE = `+91 ${MOBILE_NUMBER}`;

@@ -31,7 +31,7 @@ Complete guide to booking confirmation at Sri Janaki Mahal Trust. Learn how to g
 4. Save confirmation message
 
 ### Via Email
-1. Email srijanakimahaltrust7484@gmail.com
+1. Email srijanakimahaltrustofficial@gmail.com
 2. Include booking details
 3. Receive email confirmation
 4. Save confirmation email
@@ -117,7 +117,7 @@ Contact us immediately at +91 9102319329 to get confirmation.
 **For Booking Confirmation:**
 - 📞 Phone: +91 9102319329
 - 💬 WhatsApp: +91 9102319329
-- 📧 Email: srijanakimahaltrust7484@gmail.com
+- 📧 Email: srijanakimahaltrustofficial@gmail.com
 
 **We provide:**
 - Instant confirmation

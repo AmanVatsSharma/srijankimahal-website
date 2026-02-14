@@ -23,7 +23,7 @@ Planning a peaceful stay near Ayodhya’s Ram Mandir? Use this verified director
 |-----------------|-----------------------------------------------------|---------------------|
 | Helpline        | **+91 9102319329**                                  | 24/7                |
 | WhatsApp        | [https://wa.me/919102319329](https://wa.me/919102319329) | 6 AM – 11 PM IST   |
-| Email           | [srijanakimahaltrust7484@gmail.com](mailto:srijanakimahaltrust7484@gmail.com) | Replies in 12-18h |
+| Email           | [srijanakimahaltrustofficial@gmail.com](mailto:srijanakimahaltrustofficial@gmail.com) | Replies in 12-18h |
 | Address         | Vasudev Ghat, Karsewakpuram, Ayodhya, Uttar Pradesh | Check-in 2 PM – 11 PM |
 | Maps Direction  | [Open in Google Maps](https://maps.app.goo.gl/vkZ6dAyodhyaJanakiMahal) | 24/7 navigation |
 
@@ -52,7 +52,7 @@ Planning a peaceful stay near Ayodhya’s Ram Mandir? Use this verified director
 
 ## 3. Email Channel for Documentation
 
-- **Email:** [srijanakimahaltrust7484@gmail.com](mailto:srijanakimahaltrust7484@gmail.com)
+- **Email:** [srijanakimahaltrustofficial@gmail.com](mailto:srijanakimahaltrustofficial@gmail.com)
 - Use email when you need:
   - Group booking letters for corporate HR or temples
   - Receipts for reimbursement
@@ -110,7 +110,7 @@ Yes. Support is available in Hindi and English. For other languages, drop an ema
 
 - ✅ Save **+91 9102319329** (Phone & WhatsApp)
 - ✅ Bookmark [official WhatsApp link](https://wa.me/919102319329)
-- ✅ Note down [trust email](mailto:srijanakimahaltrust7484@gmail.com)
+- ✅ Note down [trust email](mailto:srijanakimahaltrustofficial@gmail.com)
 - ✅ Remember the address: Vasudev Ghat, Karsewakpuram, Ayodhya
 - ✅ Confirm any unexpected call via the official helpline
 

@@ -50,7 +50,7 @@ All these names point to the SAME trust, rooms, and booking office.
 ## Booking & Contact Consistency
 
 - **Phone & WhatsApp:** [+91 9102319329](tel:+919102319329) / [https://wa.me/919102319329](https://wa.me/919102319329)
-- **Email:** [srijanakimahaltrust7484@gmail.com](mailto:srijanakimahaltrust7484@gmail.com)
+- **Email:** [srijanakimahaltrustofficial@gmail.com](mailto:srijanakimahaltrustofficial@gmail.com)
 - Regardless of the name you use, these channels connect you with the same trust administration.
 
 > Comment: If you find a different number claiming to be “Janki Mahal Trust Booking,” double-check with the official helpline to avoid scams.

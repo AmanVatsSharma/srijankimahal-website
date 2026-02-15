@@ -67,11 +67,12 @@ function buildPagination(currentPage: number, total: number): Array<number | 'le
 }
 
 const paginationItems = buildPagination(pageParam, totalPages);
+const pageDescription = `पेज ${pageParam} / ${totalPages} पर अयोध्या यात्रा, राम मंदिर दर्शन, और श्री जानकी महल ट्रस्ट की आधिकारिक रूम बुकिंग से जुड़े लेख पढ़ें।`;
 ---
 
 <Layout
   title={`ब्लॉग पेज ${pageParam} - श्री जानकी महल ट्रस्ट`}
-  description="अयोध्या यात्रा, राम मंदिर दर्शन और रूम बुकिंग से जुड़े लेख पढ़ें।"
+  description={pageDescription}
   keywords={[
     'श्री जानकी महल ट्रस्ट ब्लॉग',
     'अयोध्या गाइड',

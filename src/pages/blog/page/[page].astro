@@ -69,11 +69,12 @@ function buildPagination(currentPage: number, total: number): Array<number | 'le
 }
 
 const paginationItems = buildPagination(pageParam, totalPages);
+const pageDescription = `Read blog page ${pageParam} of ${totalPages} for Ayodhya travel guides, Ram Mandir tips, and official Sri Janaki Mahal Trust room booking information.`;
 ---
 
 <Layout
   title={`Blog Page ${pageParam} - Sri Janaki Mahal Trust | Ayodhya Guides`}
-  description="Read our blog for guides on visiting Ayodhya, Ram Mandir, room booking, and staying at Sri Janaki Mahal Trust. Expert travel tips and booking guides."
+  description={pageDescription}
   keywords={[
     'Sri Janaki Mahal Trust blog',
     'Ayodhya travel guide',

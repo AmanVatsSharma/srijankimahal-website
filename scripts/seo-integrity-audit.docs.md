@@ -97,10 +97,22 @@ Show CLI help:
 node scripts/seo-integrity-audit.mjs --help
 ```
 
+Fail on warnings (strict mode):
+
+```bash
+npm run seo:audit -- --strict-warnings
+```
+
 Use environment fallback for report file path:
 
 ```bash
 SEO_AUDIT_REPORT_FILE=reports/seo-audit-report.json npm run seo:audit
+```
+
+Enable strict warning mode via environment:
+
+```bash
+SEO_AUDIT_STRICT_WARNINGS=true npm run seo:audit
 ```
 
 Report payload fields:
@@ -113,6 +125,7 @@ Report payload fields:
 - `failures`, `failureCount`
 - `failureTypeCounts`: failure types grouped by count
 - `distDir`, `siteOrigin`
+- `options` (effective strict mode + metadata length recommendation ranges)
 
 CI runs this via:
 

@@ -20,6 +20,7 @@ const SITE_ORIGIN = 'https://www.srijanakimahaltrustofficial.com';
 const ABSOLUTE_HTTP_PATTERN = /^https?:\/\//i;
 const XML_LOC_REGEX = /<loc>([^<]+)<\/loc>/gi;
 const REPORT_FILE_ENV_KEY = 'SEO_AUDIT_REPORT_FILE';
+const STRICT_WARNINGS_ENV_KEY = 'SEO_AUDIT_STRICT_WARNINGS';
 const TITLE_LENGTH_RECOMMENDED = { min: 20, max: 70 };
 const DESCRIPTION_LENGTH_RECOMMENDED = { min: 70, max: 180 };
 const DIST_TARGET_EXISTS_CACHE = new Map();
@@ -38,6 +39,7 @@ const INTERNAL_LINK_IGNORE_PATTERNS = [
 function parseCliOptions(args) {
   const options = {
     reportFile: null,
+    strictWarnings: false,
     showHelp: false,
     cliWarnings: [],
   };
@@ -48,6 +50,11 @@ function parseCliOptions(args) {
 
     if (arg === '--help' || arg === '-h') {
       options.showHelp = true;
+      continue;
+    }
+
+    if (arg === '--strict-warnings') {
+      options.strictWarnings = true;
       continue;
     }
 
@@ -98,6 +105,16 @@ function parseCliOptions(args) {
     options.reportFile = trimmed || null;
   }
 
+  const strictWarningsEnvRaw = process.env[STRICT_WARNINGS_ENV_KEY];
+  if (strictWarningsEnvRaw !== undefined) {
+    const normalized = strictWarningsEnvRaw.trim().toLowerCase();
+    if (['1', 'true', 'yes', 'on'].includes(normalized)) {
+      options.strictWarnings = true;
+    } else if (['0', 'false', 'no', 'off'].includes(normalized)) {
+      options.strictWarnings = false;
+    }
+  }
+
   return options;
 }
 
@@ -111,10 +128,12 @@ Usage:
 Options:
   --report-file <path>     Write JSON report to file.
   --report-file=<path>     Same as above.
+  --strict-warnings        Fail audit when warnings exist.
   --help, -h               Show this help output.
 
 Environment:
   ${REPORT_FILE_ENV_KEY}   Default report file path when CLI flag is absent.
+  ${STRICT_WARNINGS_ENV_KEY}  Toggle warning strictness (true/false).
 `.trim());
 }
 
@@ -340,7 +359,7 @@ function summarizeIssueTypes(issues) {
     .map(([type, count]) => ({ type, count }));
 }
 
-async function run(options = { reportFile: null }) {
+async function run(options = { reportFile: null, strictWarnings: false }) {
   const startedAt = Date.now();
   logInfo('Starting SEO integrity audit', { distDir: DIST_DIR });
   const startIso = new Date(startedAt).toISOString();
@@ -1107,6 +1126,14 @@ async function run(options = { reportFile: null }) {
     logWarn('Warnings detected', { count: warnings.length, sample: warnings.slice(0, 10) });
   }
 
+  if (options.strictWarnings && warnings.length > 0) {
+    failures.push({
+      type: 'strict-warnings-triggered',
+      warningCount: warnings.length,
+      warningTypes: summarizeIssueTypes(warnings),
+    });
+  }
+
   const reportPayload = {
     status: failures.length > 0 ? 'failed' : 'passed',
     startedAt: startIso,
@@ -1121,6 +1148,11 @@ async function run(options = { reportFile: null }) {
     failureCount: failures.length,
     failures,
     failureTypeCounts: summarizeIssueTypes(failures),
+    options: {
+      strictWarnings: Boolean(options.strictWarnings),
+      titleLengthRecommended: TITLE_LENGTH_RECOMMENDED,
+      descriptionLengthRecommended: DESCRIPTION_LENGTH_RECOMMENDED,
+    },
   };
   await persistReport(options.reportFile, reportPayload);
 

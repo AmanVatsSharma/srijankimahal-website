@@ -16,7 +16,9 @@ All commands are run from the repository root.
 | `npm run preview` | Preview production build locally |
 | `npm run seo:audit` | Run SEO integrity audit against existing `dist/` output |
 | `npm run seo:audit -- --report-file reports/seo-audit-report.json` | Run SEO audit and write JSON report artifact |
+| `npm run seo:audit -- --strict-warnings` | Run SEO audit and fail if warnings are present |
 | `SEO_AUDIT_REPORT_FILE=reports/seo-audit-report.json npm run seo:audit` | Run SEO audit with report-file path from environment |
+| `SEO_AUDIT_STRICT_WARNINGS=true npm run seo:audit` | Run SEO audit in strict warning mode via environment |
 | `npm run seo:verify` | Build site and run full SEO integrity audit |
 
 ---

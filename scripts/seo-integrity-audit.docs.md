@@ -71,6 +71,7 @@ This audit catches those issues deterministically before deployment.
    - `x-default` must align with English hreflang target when both are present
    - hreflang targets resolve to generated output
    - alternate pages include reciprocal hreflang links back
+   - canonical/hreflang `<link>` extraction is attribute-order agnostic
 17. Sitemap integrity:
    - `sitemap-index.xml` exists and references primary sitemap shard(s) + image sitemap
    - sitemap-index URLs are same-origin, unique, XML-only, and resolvable in build output

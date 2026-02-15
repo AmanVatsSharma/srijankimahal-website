@@ -240,6 +240,42 @@ function parseMetaDirectives(content) {
   );
 }
 
+function extractTagAttributes(tagMarkup) {
+  const attributes = new Map();
+  const attributeRegex = /([^\s=/>]+)\s*=\s*(["'])([\s\S]*?)\2/g;
+
+  for (const match of tagMarkup.matchAll(attributeRegex)) {
+    const key = (match[1] ?? '').trim().toLowerCase();
+    if (!key) continue;
+    attributes.set(key, (match[3] ?? '').trim());
+  }
+
+  return attributes;
+}
+
+function hasRelToken(relValue, targetToken) {
+  const normalizedRelValue = relValue.trim().toLowerCase();
+  if (!normalizedRelValue) return false;
+  return normalizedRelValue.split(/\s+/).includes(targetToken);
+}
+
+function extractLinkTagEntries(html) {
+  const entries = [];
+  const linkTagRegex = /<link\b[^>]*>/gi;
+
+  for (const match of html.matchAll(linkTagRegex)) {
+    const tagMarkup = match[0] ?? '';
+    const attributes = extractTagAttributes(tagMarkup);
+    entries.push({
+      rel: attributes.get('rel') ?? '',
+      href: attributes.get('href') ?? '',
+      hreflang: attributes.get('hreflang') ?? '',
+    });
+  }
+
+  return entries;
+}
+
 function extractMetaContentsByKey(html, metaKey) {
   const normalizedMetaKey = metaKey.trim().toLowerCase();
   if (!normalizedMetaKey) return [];
@@ -248,14 +284,13 @@ function extractMetaContentsByKey(html, metaKey) {
   const metaTagRegex = /<meta\b[^>]*>/gi;
   for (const tagMatch of html.matchAll(metaTagRegex)) {
     const tagMarkup = tagMatch[0] ?? '';
-    const keyMatch = tagMarkup.match(/(?:property|name)\s*=\s*(["'])([\s\S]*?)\1/i);
-    const resolvedKey = (keyMatch?.[2] ?? '').trim().toLowerCase();
+    const attributes = extractTagAttributes(tagMarkup);
+    const resolvedKey = (attributes.get('property') || attributes.get('name') || '').trim().toLowerCase();
     if (!resolvedKey || resolvedKey !== normalizedMetaKey) {
       continue;
     }
 
-    const contentMatch = tagMarkup.match(/content\s*=\s*(["'])([\s\S]*?)\1/i);
-    values.push((contentMatch?.[2] ?? '').trim());
+    values.push((attributes.get('content') ?? '').trim());
   }
 
   return values;
@@ -620,6 +655,14 @@ async function run(options = { reportFile: null, strictWarnings: false }) {
     const relPath = toRelative(htmlPath);
     const html = await fs.readFile(htmlPath, 'utf-8');
     const expectedLang = relPath.startsWith('hi/') ? 'hi' : 'en';
+    const linkTagEntries = extractLinkTagEntries(html);
+    const canonicalLinkEntries = linkTagEntries.filter((entry) => hasRelToken(entry.rel, 'canonical'));
+    const alternateLinkEntries = linkTagEntries
+      .filter((entry) => hasRelToken(entry.rel, 'alternate') && entry.hreflang && entry.href)
+      .map((entry) => ({
+        hreflang: entry.hreflang.trim(),
+        href: entry.href.trim(),
+      }));
 
     const htmlLangMatch = html.match(/<html[^>]*\blang="([^"]+)"/i);
     const htmlLang = htmlLangMatch?.[1]?.trim();
@@ -658,7 +701,7 @@ async function run(options = { reportFile: null, strictWarnings: false }) {
     }
 
     // Canonical: exactly one per page.
-    const canonicalCount = countMatches(html, /<link rel="canonical" /gi);
+    const canonicalCount = canonicalLinkEntries.length;
     if (canonicalCount !== 1) {
       metrics.pagesWithCanonicalIssue += 1;
       failures.push({
@@ -721,9 +764,8 @@ async function run(options = { reportFile: null, strictWarnings: false }) {
     }
 
     let canonicalComparableHref = null;
-    const canonicalHrefMatch = html.match(/<link rel="canonical" href="([^"]+)"/i);
-    if (canonicalHrefMatch?.[1]) {
-      const canonicalHref = canonicalHrefMatch[1];
+    const canonicalHref = canonicalLinkEntries[0]?.href?.trim();
+    if (canonicalHref) {
       const localCanonicalHref = getLocalHrefFromAny(canonicalHref);
       canonicalComparableHref = normalizeComparableHref(canonicalHref);
       const expectedCanonicalHref = normalizeComparableHref(routePathFromDistRelative(relPath));
@@ -902,11 +944,9 @@ async function run(options = { reportFile: null, strictWarnings: false }) {
       hasOgLocaleIssueForPage = hasOgLocaleIssueForPage || hasOgLocaleIssue;
     }
     const expectedOgAltLocales = new Set();
-    const hreflangForOgLocale = Array.from(
-      html.matchAll(/<link rel="alternate" hreflang="([^"]+)" href="([^"]+)"/gi)
-    ).map((match) => ({
-      hreflang: (match[1] ?? '').trim().toLowerCase(),
-      href: (match[2] ?? '').trim(),
+    const hreflangForOgLocale = alternateLinkEntries.map((entry) => ({
+      hreflang: entry.hreflang.toLowerCase(),
+      href: entry.href,
     }));
     for (const entry of hreflangForOgLocale) {
       if (!entry.hreflang || !entry.href) continue;
@@ -1153,11 +1193,7 @@ async function run(options = { reportFile: null, strictWarnings: false }) {
     }
 
     // Hreflang integrity checks.
-    const hreflangRegex = /<link rel="alternate" hreflang="([^"]+)" href="([^"]+)"/gi;
-    const hreflangEntries = Array.from(html.matchAll(hreflangRegex)).map((match) => ({
-      hreflang: (match[1] ?? '').trim(),
-      href: (match[2] ?? '').trim(),
-    }));
+    const hreflangEntries = alternateLinkEntries;
 
     if (hreflangEntries.length > 0) {
       const seenLangs = new Set();

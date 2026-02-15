@@ -51,6 +51,7 @@ Latest production-ready hardening completed:
   - social title/description tags now verified to match page title + meta description
   - social meta extraction now handles attribute-order variance in generated meta tags
   - canonical/OG/Twitter URLs now emit explicit external-origin failure metrics in audit output
+  - canonical/hreflang link extraction now handles attribute-order variance in generated link tags
   - JSON-LD validation now includes structural checks for `@context` and `@type` presence
   - hreflang now enforces self-reference and x-default-to-English alignment checks
   - sitemap-index references now validated for same-origin, uniqueness, XML format, and build-target existence

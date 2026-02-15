@@ -20,17 +20,97 @@ if (!room) {
   throw new Error(`Room slug "${slug}" not found in configuration`);
 }
 
+/**
+ * Hindi-localized metadata/content for room detail pages.
+ *
+ * Why this exists:
+ * - Avoid EN/HI duplicate meta descriptions for equivalent room slugs.
+ * - Improve Hindi SERP relevance and readability for local-language users.
+ */
+const localizedRoomContent: Record<
+  string,
+  {
+    title: string;
+    heading: string;
+    metaDescription: string;
+    keywords: string[];
+  }
+> = {
+  '2-bed-ac': {
+    title: '2 बेड एसी रूम - श्री जानकी महल ट्रस्ट अयोध्या | आधिकारिक बुकिंग',
+    heading: '2 बेड एसी रूम - आधिकारिक श्री जानकी महल ट्रस्ट बुकिंग',
+    metaDescription:
+      'अयोध्या में श्री जानकी महल ट्रस्ट का 2 बेड एसी रूम बुक करें। छोटे परिवार और दंपति के लिए आरामदायक विकल्प। आधिकारिक सहायता नंबर: +91 9102319329।',
+    keywords: ['2 बेड एसी रूम अयोध्या', 'श्री जानकी महल ट्रस्ट एसी कमरा', 'अयोध्या आधिकारिक रूम बुकिंग'],
+  },
+  '2-bed-non-ac': {
+    title: '2 बेड नॉन-एसी रूम - श्री जानकी महल ट्रस्ट आधिकारिक बुकिंग',
+    heading: '2 बेड नॉन-एसी रूम - किफायती और सत्यापित बुकिंग',
+    metaDescription:
+      'श्री जानकी महल ट्रस्ट अयोध्या का 2 बेड नॉन-एसी रूम बजट यात्रियों के लिए उपयुक्त है। राम मंदिर के पास शांत ठहराव और आधिकारिक बुकिंग सहायता उपलब्ध।',
+    keywords: ['2 बेड नॉन एसी कमरा', 'अयोध्या बजट रूम', 'श्री जानकी महल ट्रस्ट नॉन एसी बुकिंग'],
+  },
+  '3-bed-ac': {
+    title: '3 बेड एसी रूम - श्री जानकी महल ट्रस्ट फैमिली स्टे',
+    heading: '3 बेड एसी रूम - परिवार के लिए आरामदायक विकल्प',
+    metaDescription:
+      'परिवार के साथ अयोध्या यात्रा के लिए श्री जानकी महल ट्रस्ट का 3 बेड एसी रूम चुनें। राम मंदिर के नज़दीक आरामदायक ठहराव और आधिकारिक बुकिंग सुविधा।',
+    keywords: ['3 बेड एसी फैमिली रूम', 'अयोध्या फैमिली स्टे', 'श्री जानकी महल ट्रस्ट 3 बेड बुकिंग'],
+  },
+  '3-bed-non-ac': {
+    title: '3 बेड नॉन-एसी रूम - श्री जानकी महल ट्रस्ट पारिवारिक ठहराव',
+    heading: '3 बेड नॉन-एसी रूम - किफायती पारिवारिक कमरा',
+    metaDescription:
+      'श्री जानकी महल ट्रस्ट अयोध्या का 3 बेड नॉन-एसी रूम परिवारों के लिए किफायती विकल्प है। भोजन सहित आधिकारिक बुकिंग के लिए +91 9102319329 पर संपर्क करें।',
+    keywords: ['3 बेड नॉन एसी कमरा', 'अयोध्या परिवार के लिए कमरा', 'श्री जानकी महल ट्रस्ट बजट स्टे'],
+  },
+  '4-bed-ac': {
+    title: '4 बेड एसी रूम - श्री जानकी महल ट्रस्ट ग्रुप बुकिंग',
+    heading: '4 बेड एसी रूम - समूह और परिवारों के लिए श्रेष्ठ',
+    metaDescription:
+      'बड़े परिवार या समूह यात्रा के लिए श्री जानकी महल ट्रस्ट का 4 बेड एसी रूम बुक करें। राम मंदिर के पास सुरक्षित, सुविधाजनक और आधिकारिक बुकिंग सहायता उपलब्ध।',
+    keywords: ['4 बेड एसी ग्रुप रूम', 'अयोध्या ग्रुप बुकिंग', 'श्री जानकी महल ट्रस्ट 4 बेड एसी'],
+  },
+  '4-bed-non-ac': {
+    title: '4 बेड नॉन-एसी रूम - श्री जानकी महल ट्रस्ट समूह ठहराव',
+    heading: '4 बेड नॉन-एसी रूम - किफायती ग्रुप स्टे',
+    metaDescription:
+      'समूह यात्रियों के लिए श्री जानकी महल ट्रस्ट अयोध्या का 4 बेड नॉन-एसी रूम एक उपयोगी बजट विकल्प है। भोजन सहित आधिकारिक बुकिंग सहायता हमेशा उपलब्ध।',
+    keywords: ['4 बेड नॉन एसी कमरा', 'अयोध्या ग्रुप बजट रूम', 'श्री जानकी महल ट्रस्ट समूह बुकिंग'],
+  },
+  'family-suite': {
+    title: 'फैमिली सूट - श्री जानकी महल ट्रस्ट प्रीमियम स्टे',
+    heading: 'फैमिली सूट - बड़े परिवारों के लिए प्रीमियम ठहराव',
+    metaDescription:
+      'श्री जानकी महल ट्रस्ट अयोध्या का फैमिली सूट कनेक्टेड रूम, बैठने की जगह और भोजन सहित प्रीमियम सुविधा देता है। आधिकारिक बुकिंग नंबर: +91 9102319329।',
+    keywords: ['फैमिली सूट अयोध्या', 'श्री जानकी महल ट्रस्ट प्रीमियम रूम', 'बड़े परिवार के लिए कमरा'],
+  },
+  'deluxe-room': {
+    title: 'डीलक्स रूम - श्री जानकी महल ट्रस्ट अयोध्या आधिकारिक बुकिंग',
+    heading: 'डीलक्स रूम - प्रीमियम सुविधा के साथ शांत ठहराव',
+    metaDescription:
+      'अयोध्या में श्री जानकी महल ट्रस्ट का डीलक्स रूम प्रीमियम सुविधाओं के साथ उपलब्ध है। राम मंदिर के पास आरामदायक स्टे के लिए आधिकारिक चैनल से बुक करें।',
+    keywords: ['डीलक्स रूम अयोध्या', 'श्री जानकी महल ट्रस्ट डीलक्स बुकिंग', 'राम मंदिर के पास प्रीमियम स्टे'],
+  },
+};
+
+const localizedRoom = localizedRoomContent[slug];
+const localizedTitle = localizedRoom?.title ?? `कमरा - ${room.heading} | श्री जानकी महल ट्रस्ट`;
+const localizedHeading = localizedRoom?.heading ?? room.heading;
+const localizedDescription = localizedRoom?.metaDescription ?? room.metaDescription;
+const localizedKeywords = localizedRoom?.keywords ?? [];
+
 const breadcrumbs = generateBreadcrumbSchema([
   { name: 'Home', url: '/hi' },
   { name: 'Rooms', url: '/hi/rooms' },
-  { name: room.heading, url: `/hi/rooms/${slug}` },
+  { name: localizedHeading, url: `/hi/rooms/${slug}` },
 ]);
 ---
 
 <Layout
-  title={`कमरा - ${room.heading} | श्री जानकी महल ट्रस्ट`}
-  description={room.metaDescription}
-  keywords={room.keywords}
+  title={localizedTitle}
+  description={localizedDescription}
+  keywords={[...room.keywords, ...localizedKeywords]}
   canonical={`/hi/rooms/${slug}`}
   ogImage={room.images?.[0]?.src ?? '/og.jpg'}
   lang="hi"
@@ -42,9 +122,9 @@ const breadcrumbs = generateBreadcrumbSchema([
       <section class="rounded-3xl bg-white p-8 shadow-lg">
         <div class="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
           <div class="space-y-4">
-            <p class="text-sm font-semibold uppercase tracking-[0.3em] text-[#6b4c2d]">Room Details</p>
-            <h1 class="text-4xl font-bold text-[#2d2215] md:text-5xl">{room.heading}</h1>
-            <p class="text-lg leading-relaxed text-[#3d2f1c]">{room.metaDescription}</p>
+            <p class="text-sm font-semibold uppercase tracking-[0.3em] text-[#6b4c2d]">कमरे का विवरण</p>
+            <h1 class="text-4xl font-bold text-[#2d2215] md:text-5xl">{localizedHeading}</h1>
+            <p class="text-lg leading-relaxed text-[#3d2f1c]">{localizedDescription}</p>
             <p class="text-base font-semibold text-[#b45309]">{room.priceRange}</p>
           </div>
           <div class="rounded-3xl bg-[#fef4e4] p-6 text-center shadow-md">
@@ -63,7 +143,7 @@ const breadcrumbs = generateBreadcrumbSchema([
       </section>
 
       <section class="rounded-3xl bg-white p-8 shadow-md">
-        <h2 class="text-3xl font-semibold text-[#2d2215]">Room Gallery</h2>
+        <h2 class="text-3xl font-semibold text-[#2d2215]">कमरे की फोटो गैलरी</h2>
         <div class="mt-6 grid gap-6 md:grid-cols-2">
           {room.images.map((image) => (
             <figure class="overflow-hidden rounded-2xl border border-[#f2dfc7] shadow-sm">

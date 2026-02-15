@@ -39,6 +39,7 @@ This audit catches those issues deterministically before deployment.
 6. Social meta completeness:
    - required OG/Twitter tags must exist exactly once and be non-empty
    - `twitter:card` must be `summary` or `summary_large_image`
+   - social text parity (`og:title`, `twitter:title`, `og:description`, `twitter:description`) must match page title/description
 7. `og:locale:alternate` hygiene:
    - no duplicate alternates
    - alternate cannot match primary `og:locale`

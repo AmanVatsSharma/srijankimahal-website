@@ -48,6 +48,7 @@ Latest production-ready hardening completed:
   - page-level robots meta directives are now validated for indexable/noindex consistency
   - canonical validation now enforces self-route alignment per generated page
   - social meta tags now checked for completeness, uniqueness, and valid twitter card values
+  - social title/description tags now verified to match page title + meta description
   - JSON-LD validation now includes structural checks for `@context` and `@type` presence
   - hreflang now enforces self-reference and x-default-to-English alignment checks
   - Audit now validates:

@@ -92,6 +92,7 @@ jobs:
             `- Canonical issues: **${metrics.pagesWithCanonicalIssue ?? 0}**`,
             `- Canonical route mismatches: **${metrics.pagesWithCanonicalRouteMismatch ?? 0}**`,
             `- Social meta integrity issues: **${metrics.pagesWithSocialMetaIssues ?? 0}**`,
+            `- Social text parity mismatch pages: **${metrics.pagesWithSocialTextMismatch ?? 0}**`,
             `- JSON-LD structure issues: **${metrics.pagesWithJsonLdStructureIssues ?? 0}**`,
             `- Hreflang target missing: **${metrics.hreflangTargetMissing ?? 0}**`,
             `- Hreflang self-reference issues: **${metrics.pagesWithHreflangSelfReferenceIssue ?? 0}**`,

@@ -214,7 +214,17 @@ function decodeBasicEntities(text) {
     .replaceAll('&#39;', "'")
     .replaceAll('&lt;', '<')
     .replaceAll('&gt;', '>')
+    .replaceAll('&#38;', '&')
+    .replaceAll('&#x26;', '&')
+    .replaceAll('&#X26;', '&')
     .replaceAll('&amp;', '&');
+}
+
+function normalizeComparableText(value) {
+  return decodeBasicEntities(value)
+    .replace(/\s+/g, ' ')
+    .trim()
+    .toLowerCase();
 }
 
 function parseMetaDirectives(content) {
@@ -233,10 +243,10 @@ function escapeForRegex(value) {
 function extractMetaContentsByKey(html, metaKey) {
   const escapedMetaKey = escapeForRegex(metaKey);
   const pattern = new RegExp(
-    `<meta[^>]+(?:property|name)=["']${escapedMetaKey}["'][^>]*content=["']([^"']*)["'][^>]*>`,
+    `<meta[^>]+(?:property|name)=["']${escapedMetaKey}["'][^>]*content=(["'])([\\s\\S]*?)\\1[^>]*>`,
     'gi'
   );
-  return Array.from(html.matchAll(pattern)).map((match) => (match[1] ?? '').trim());
+  return Array.from(html.matchAll(pattern)).map((match) => (match[2] ?? '').trim());
 }
 
 function isNonNullObject(value) {
@@ -508,6 +518,7 @@ async function run(options = { reportFile: null, strictWarnings: false }) {
     canonicalTargetMissing: 0,
     pagesWithCanonicalRouteMismatch: 0,
     pagesWithSocialMetaIssues: 0,
+    pagesWithSocialTextMismatch: 0,
     pagesWithJsonLdStructureIssues: 0,
     pagesMissingTitle: 0,
     pagesMissingDescription: 0,
@@ -896,6 +907,7 @@ async function run(options = { reportFile: null, strictWarnings: false }) {
     }
 
     const socialMetaIssues = [];
+    let hasSocialTextMismatch = false;
     for (const socialMetaKey of SOCIAL_META_REQUIRED_KEYS) {
       const values = extractMetaContentsByKey(html, socialMetaKey);
       if (values.length === 0) {
@@ -922,8 +934,38 @@ async function run(options = { reportFile: null, strictWarnings: false }) {
       });
     }
 
+    const socialTextParityChecks = [
+      { key: 'og:title', expected: pageTitle },
+      { key: 'twitter:title', expected: pageTitle },
+      { key: 'og:description', expected: descriptionText },
+      { key: 'twitter:description', expected: descriptionText },
+    ];
+    for (const parityCheck of socialTextParityChecks) {
+      const actualValue = extractMetaContentsByKey(html, parityCheck.key)[0] ?? '';
+      const hasExpected = parityCheck.expected.trim().length > 0;
+      const hasActual = actualValue.trim().length > 0;
+      if (!hasExpected || !hasActual) {
+        continue;
+      }
+
+      const expectedComparable = normalizeComparableText(parityCheck.expected);
+      const actualComparable = normalizeComparableText(actualValue);
+      if (expectedComparable !== actualComparable) {
+        hasSocialTextMismatch = true;
+        socialMetaIssues.push({
+          type: 'content-mismatch',
+          key: parityCheck.key,
+          expected: parityCheck.expected.slice(0, 120),
+          actual: decodeBasicEntities(actualValue).slice(0, 120),
+        });
+      }
+    }
+
     if (socialMetaIssues.length > 0) {
       metrics.pagesWithSocialMetaIssues += 1;
+      if (hasSocialTextMismatch) {
+        metrics.pagesWithSocialTextMismatch += 1;
+      }
       failures.push({
         type: 'social-meta-integrity',
         page: relPath,

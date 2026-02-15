@@ -3,6 +3,26 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import FloatingWhatsApp from '../components/FloatingWhatsApp.astro';
+import TrustAssurancePanel from '../components/TrustAssurancePanel.astro';
+import { generateBreadcrumbSchema } from '../lib/schemas/breadcrumb';
+
+const breadcrumbSchema = generateBreadcrumbSchema([
+  { name: 'Home', url: '/' },
+  { name: 'Privacy Policy', url: '/privacy-policy' },
+]);
+
+const webPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'Privacy Policy - Sri Janaki Mahal Trust',
+  description:
+    'Privacy policy for Sri Janaki Mahal Trust with official contact methods and transparency on guest data handling.',
+  url: 'https://www.srijanakimahaltrustofficial.com/privacy-policy',
+  inLanguage: 'en-IN',
+  isPartOf: {
+    '@id': 'https://www.srijanakimahaltrustofficial.com/#website',
+  },
+};
 ---
 
 <Layout 
@@ -23,6 +43,15 @@ import FloatingWhatsApp from '../components/FloatingWhatsApp.astro';
       <div class="text-center mb-12">
         <h1 class="text-4xl font-bold text-gray-900 mb-4">Privacy Policy</h1>
         <p class="text-lg text-gray-600">Last updated: January 2025</p>
+      </div>
+
+      <div class="bg-amber-50 border border-amber-200 rounded-lg p-6 mb-8">
+        <p class="text-gray-800 leading-relaxed">
+          Always verify you are communicating with our official team before sharing personal details:
+          <a href="/official" class="text-amber-700 font-semibold hover:underline"> Verification page</a>,
+          official helpline <a href="tel:+919102319329" class="text-amber-700 font-semibold hover:underline">+91 9102319329</a>,
+          and official email <a href="mailto:srijanakimahaltrustofficial@gmail.com" class="text-amber-700 font-semibold hover:underline">srijanakimahaltrustofficial@gmail.com</a>.
+        </p>
       </div>
 
       <!-- Content -->
@@ -195,9 +224,12 @@ import FloatingWhatsApp from '../components/FloatingWhatsApp.astro';
           </div>
         </section>
 
+        <TrustAssurancePanel lang="en" />
       </div>
     </div>
   </main>
+  {breadcrumbSchema && <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />}
+  <script type="application/ld+json" set:html={JSON.stringify(webPageSchema)} />
   <Footer />
   <FloatingWhatsApp />
 </Layout>

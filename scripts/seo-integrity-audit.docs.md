@@ -74,6 +74,7 @@ This audit catches those issues deterministically before deployment.
    - `sitemap-index.xml` exists and references primary sitemap shard(s) + image sitemap
    - sitemap-index URLs are same-origin, unique, XML-only, and resolvable in build output
    - sitemap-index and primary sitemap URLs must not include query strings or fragments
+   - sitemap duplicate detection is normalized by canonical comparable path (not raw string only)
    - all referenced primary sitemap shard URLs are resolvable in build output
    - primary sitemap shards do not include canonical URLs from pages marked `noindex`
    - all indexable canonical URLs are present across primary sitemap shards

@@ -1388,7 +1388,9 @@ async function run(options = { reportFile: null, strictWarnings: false }) {
 
     for (const loc of sitemapIndexLocs) {
       const normalizedLoc = loc.trim();
-      if (seenSitemapIndexLocs.has(normalizedLoc)) {
+      const comparableIndexLoc = normalizeComparableHref(loc);
+      const sitemapIndexDedupKey = comparableIndexLoc || normalizedLoc.toLowerCase();
+      if (seenSitemapIndexLocs.has(sitemapIndexDedupKey)) {
         metrics.sitemapIndexLocDuplicateUrls += 1;
         failures.push({
           type: 'duplicate-sitemap-index-url',
@@ -1396,7 +1398,7 @@ async function run(options = { reportFile: null, strictWarnings: false }) {
         });
         continue;
       }
-      seenSitemapIndexLocs.add(normalizedLoc);
+      seenSitemapIndexLocs.add(sitemapIndexDedupKey);
 
       const localHref = getLocalHrefFromAny(loc);
       if (!localHref) {
@@ -1480,15 +1482,16 @@ async function run(options = { reportFile: null, strictWarnings: false }) {
     const sitemapXml = await fs.readFile(sitemapAbsolutePath, 'utf-8');
     const locs = parseXmlLocs(sitemapXml);
     for (const loc of locs) {
-      if (seenLocs.has(loc)) {
+      const comparableSitemapHref = normalizeComparableHref(loc);
+      const sitemapDedupKey = comparableSitemapHref || loc.trim().toLowerCase();
+      if (seenLocs.has(sitemapDedupKey)) {
         metrics.sitemapLocDuplicateUrls += 1;
         failures.push({ type: 'duplicate-sitemap-url', sitemap: sitemapRelativePath, url: loc });
       } else {
-        seenLocs.add(loc);
+        seenLocs.add(sitemapDedupKey);
       }
 
       const localHref = getLocalHrefFromAny(loc);
-      const comparableSitemapHref = normalizeComparableHref(loc);
       if (comparableSitemapHref) {
         sitemapComparablePaths.add(comparableSitemapHref);
       }

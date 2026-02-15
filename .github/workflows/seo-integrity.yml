@@ -77,6 +77,10 @@ jobs:
 
           const report = JSON.parse(fs.readFileSync(reportPath, 'utf8'));
           const metrics = report.metrics || {};
+          const failureTypeCounts = Array.isArray(report.failureTypeCounts) ? report.failureTypeCounts : [];
+          const warningTypeCounts = Array.isArray(report.warningTypeCounts) ? report.warningTypeCounts : [];
+          const topFailures = failureTypeCounts.slice(0, 5).map(({ type, count }) => `  - \`${type}\`: ${count}`);
+          const topWarnings = warningTypeCounts.slice(0, 5).map(({ type, count }) => `  - \`${type}\`: ${count}`);
           const lines = [
             '## SEO Audit Summary',
             '',
@@ -88,6 +92,12 @@ jobs:
             `- Hreflang target missing: **${metrics.hreflangTargetMissing ?? 0}**`,
             `- Invalid JSON-LD: **${metrics.invalidJsonLdScripts ?? 0}**`,
             `- Broken internal links: **${metrics.brokenInternalLinks ?? 0}**`,
+            '',
+            '### Top Failure Types',
+            ...(topFailures.length > 0 ? topFailures : ['  - none']),
+            '',
+            '### Top Warning Types',
+            ...(topWarnings.length > 0 ? topWarnings : ['  - none']),
             '',
           ];
           fs.appendFileSync(summaryFile, lines.join('\n'));

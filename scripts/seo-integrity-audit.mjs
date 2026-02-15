@@ -291,6 +291,28 @@ function parseXmlLocs(xmlText) {
     .filter(Boolean);
 }
 
+/**
+ * Build deterministic issue-type counters for quick triage.
+ */
+function summarizeIssueTypes(issues) {
+  const counters = new Map();
+
+  for (const issue of issues) {
+    const type = issue?.type;
+    if (typeof type !== 'string' || !type.trim()) {
+      continue;
+    }
+    counters.set(type, (counters.get(type) ?? 0) + 1);
+  }
+
+  return Array.from(counters.entries())
+    .sort((a, b) => {
+      if (b[1] !== a[1]) return b[1] - a[1];
+      return a[0].localeCompare(b[0]);
+    })
+    .map(([type, count]) => ({ type, count }));
+}
+
 async function run(options = { reportFile: null }) {
   const startedAt = Date.now();
   logInfo('Starting SEO integrity audit', { distDir: DIST_DIR });
@@ -920,8 +942,10 @@ async function run(options = { reportFile: null }) {
     metrics,
     warningCount: warnings.length,
     warnings,
+    warningTypeCounts: summarizeIssueTypes(warnings),
     failureCount: failures.length,
     failures,
+    failureTypeCounts: summarizeIssueTypes(failures),
   };
   await persistReport(options.reportFile, reportPayload);
 

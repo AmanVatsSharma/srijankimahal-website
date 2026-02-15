@@ -104,7 +104,9 @@ Report payload fields:
 - `startedAt`, `finishedAt`, `elapsedMs`
 - `metrics`: full numeric check counters
 - `warnings`, `warningCount`
+- `warningTypeCounts`: warning types grouped by count
 - `failures`, `failureCount`
+- `failureTypeCounts`: failure types grouped by count
 - `distDir`, `siteOrigin`
 
 CI runs this via:
@@ -113,6 +115,7 @@ CI runs this via:
 - uses workflow concurrency to avoid duplicate runs on same ref
 - always uploads report artifact `seo-audit-report` (warns if missing)
 - publishes key metrics into GitHub step summary for quick triage
+- publishes top warning/failure types in step summary for faster root-cause isolation
 - marks workflow failed after upload when audit exit code is non-zero
 
 ---

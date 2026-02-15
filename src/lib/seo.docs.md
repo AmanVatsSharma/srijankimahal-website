@@ -7,6 +7,7 @@ This document reflects the **current** behavior of the shared SEO utility after 
 ## What this module owns
 
 - Canonical URL generation
+- Title generation with brand suffix de-duplication
 - OpenGraph and Twitter meta object generation
 - Robots directive generation (snippet preview aware)
 - Hreflang generation (default pair mode + explicit mode)
@@ -33,6 +34,22 @@ Previously, some pages emitted malformed social URLs such as:
 `https://domain.comhttps://domain.com/page`
 
 This module now prevents double-prefix canonicalization.
+
+---
+
+## Title suffix de-duplication
+
+`generateTitle(title)` now appends `| Sri Janaki Mahal Trust` **only when needed**.
+
+### Behavior
+- If incoming title already contains a recognized brand alias
+  (`Sri Janaki Mahal Trust` / `श्री जानकी महल ट्रस्ट`), keep it as-is.
+- Otherwise append the canonical site suffix.
+
+### Why this matters
+- Prevents repeated SERP titles like:
+  - `... | Sri Janaki Mahal Trust | Sri Janaki Mahal Trust`
+- Improves title readability and preserves cleaner entity signaling.
 
 ---
 

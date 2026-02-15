@@ -15,6 +15,10 @@ import { detectLangFromPath, getHreflangTargets } from './i18n';
 // Base site configuration
 const SITE_URL = 'https://www.srijanakimahaltrustofficial.com';
 const SITE_NAME = 'Sri Janaki Mahal Trust';
+const SITE_NAME_ALIASES = [
+  SITE_NAME,
+  'श्री जानकी महल ट्रस्ट',
+];
 const DEFAULT_TITLE = 'Sri Janaki Mahal - Comfortable Hotel in Ayodhya';
 const DEFAULT_DESCRIPTION = `Sri Janaki Mahal Trust - Best hotel stay in Ayodhya. Book comfortable rooms near Ram Mandir. All meals included. Call ${DISPLAY_PHONE}.`;
 const DEFAULT_KEYWORDS = [
@@ -46,12 +50,33 @@ const DEFAULT_KEYWORDS = [
 ];
 const DEFAULT_OG_IMAGE = `${SITE_URL}/og.jpg`;
 const ABSOLUTE_URL_PATTERN = /^https?:\/\//i;
+const NORMALIZE_SPACES_PATTERN = /\s+/g;
 
 function debugLog(message: string, data?: unknown) {
   if (import.meta.env?.DEV) {
     // eslint-disable-next-line no-console
     console.debug(message, data ?? '');
   }
+}
+
+/**
+ * Normalize strings for resilient SEO title comparisons.
+ * - lowercase for case-insensitive checks
+ * - collapse repeated whitespace
+ * - trim leading/trailing spaces
+ */
+function normalizeForComparison(value: string): string {
+  return value.toLowerCase().replace(NORMALIZE_SPACES_PATTERN, ' ').trim();
+}
+
+/**
+ * Detect whether a page title already includes the canonical site brand.
+ * Prevents duplicate title suffix patterns such as:
+ * "… | Sri Janaki Mahal Trust | Sri Janaki Mahal Trust"
+ */
+function hasSiteNameInTitle(title: string): boolean {
+  const normalizedTitle = normalizeForComparison(title);
+  return SITE_NAME_ALIASES.some((brandName) => normalizedTitle.includes(normalizeForComparison(brandName)));
 }
 
 /**
@@ -84,7 +109,14 @@ export interface SEOConfig {
  */
 export function generateTitle(title?: string): string {
   debugLog('[SEO] Generating title', { title });
-  const pageTitle = title || DEFAULT_TITLE;
+  const pageTitle = (title || DEFAULT_TITLE).trim();
+
+  // Keep title clean when callers already include the brand.
+  // This improves SERP readability and avoids repeated entity strings.
+  if (hasSiteNameInTitle(pageTitle)) {
+    return pageTitle;
+  }
+
   return `${pageTitle} | ${SITE_NAME}`;
 }
 

@@ -122,6 +122,12 @@ Request indexing for:
 
 ## Step 8: Regular Monitoring
 
+### Pre-Deploy Quality Gate
+
+Before any major content or template release:
+- Run `npm run seo:verify:strict`
+- Resolve all reported failures before deploying
+
 ### Weekly Tasks
 
 - Check for new search queries

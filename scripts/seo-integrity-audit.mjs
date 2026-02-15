@@ -596,6 +596,7 @@ async function run(options = { reportFile: null, strictWarnings: false }) {
     pagesWithCanonicalMissingHref: 0,
     canonicalTargetMissing: 0,
     canonicalExternalOrigin: 0,
+    canonicalWithQueryOrFragment: 0,
     pagesWithCanonicalRouteMismatch: 0,
     pagesWithSocialMetaIssues: 0,
     pagesWithSocialTextMismatch: 0,
@@ -609,8 +610,10 @@ async function run(options = { reportFile: null, strictWarnings: false }) {
     pagesWithRobotsDirectiveIssues: 0,
     ogUrlTargetMissing: 0,
     ogUrlExternalOrigin: 0,
+    ogUrlWithQueryOrFragment: 0,
     twitterUrlTargetMissing: 0,
     twitterUrlExternalOrigin: 0,
+    twitterUrlWithQueryOrFragment: 0,
     socialImageTargetMissing: 0,
     invalidJsonLdScripts: 0,
     pagesWithH1Issue: 0,
@@ -789,6 +792,13 @@ async function run(options = { reportFile: null, strictWarnings: false }) {
           page: relPath,
           canonicalHref,
         });
+      } else if (localCanonicalHref && hasQueryOrFragment(localCanonicalHref)) {
+        metrics.canonicalWithQueryOrFragment += 1;
+        failures.push({
+          type: 'canonical-url-has-query-or-fragment',
+          page: relPath,
+          canonicalHref,
+        });
       } else if (localCanonicalHref && !(await hasDistTarget(localCanonicalHref))) {
         metrics.canonicalTargetMissing += 1;
         failures.push({
@@ -828,6 +838,13 @@ async function run(options = { reportFile: null, strictWarnings: false }) {
           page: relPath,
           ogUrl,
         });
+      } else if (localOgUrl && hasQueryOrFragment(localOgUrl)) {
+        metrics.ogUrlWithQueryOrFragment += 1;
+        failures.push({
+          type: 'og-url-has-query-or-fragment',
+          page: relPath,
+          ogUrl,
+        });
       } else if (localOgUrl && !(await hasDistTarget(localOgUrl))) {
         metrics.ogUrlTargetMissing += 1;
         failures.push({
@@ -858,6 +875,13 @@ async function run(options = { reportFile: null, strictWarnings: false }) {
         metrics.twitterUrlExternalOrigin += 1;
         failures.push({
           type: 'twitter-url-external-origin',
+          page: relPath,
+          twitterUrl,
+        });
+      } else if (localTwitterUrl && hasQueryOrFragment(localTwitterUrl)) {
+        metrics.twitterUrlWithQueryOrFragment += 1;
+        failures.push({
+          type: 'twitter-url-has-query-or-fragment',
           page: relPath,
           twitterUrl,
         });

@@ -54,6 +54,7 @@ Latest production-ready hardening completed:
   - canonical/hreflang link extraction now handles attribute-order variance in generated link tags
   - robots/description/OG/Twitter meta extraction now uses unified attribute-order agnostic parsing
   - canonical links now enforce non-empty href and hreflang links now enforce valid entry shape
+  - canonical/og/twitter URLs now fail audit when query strings or fragments are present
   - JSON-LD validation now includes structural checks for `@context` and `@type` presence
   - hreflang now enforces self-reference and x-default-to-English alignment checks
   - sitemap-index references now validated for same-origin, uniqueness, XML format, and build-target existence

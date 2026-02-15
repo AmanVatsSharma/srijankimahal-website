@@ -27,6 +27,7 @@ This audit catches those issues deterministically before deployment.
    - canonical link must include non-empty `href`
 2. Canonical URL target resolves to generated output (same-origin only).
    - canonical target must match current generated route (self-canonical)
+   - canonical URL must not include query string or fragment
 3. Core metadata presence:
    - non-empty `<title>`
    - non-empty `<meta name="description">`
@@ -38,6 +39,7 @@ This audit catches those issues deterministically before deployment.
    - `og:url` must match canonical target
    - `twitter:url` must match canonical target
    - canonical/OG/Twitter URLs must stay on canonical site origin
+   - `og:url` / `twitter:url` must not include query strings or fragments
 5. Social image paths (`og:image`, `twitter:image`) exist in build output for same-origin assets.
 6. Social meta completeness:
    - required OG/Twitter tags must exist exactly once and be non-empty

@@ -92,6 +92,7 @@ jobs:
             `- Canonical issues: **${metrics.pagesWithCanonicalIssue ?? 0}**`,
             `- Canonical missing href pages: **${metrics.pagesWithCanonicalMissingHref ?? 0}**`,
             `- External-origin canonical/social URL issues: **${(metrics.canonicalExternalOrigin ?? 0) + (metrics.ogUrlExternalOrigin ?? 0) + (metrics.twitterUrlExternalOrigin ?? 0)}**`,
+            `- Canonical/social URL query-fragment issues: **${(metrics.canonicalWithQueryOrFragment ?? 0) + (metrics.ogUrlWithQueryOrFragment ?? 0) + (metrics.twitterUrlWithQueryOrFragment ?? 0)}**`,
             `- Canonical route mismatches: **${metrics.pagesWithCanonicalRouteMismatch ?? 0}**`,
             `- Social meta integrity issues: **${metrics.pagesWithSocialMetaIssues ?? 0}**`,
             `- Social text parity mismatch pages: **${metrics.pagesWithSocialTextMismatch ?? 0}**`,

@@ -12,6 +12,7 @@ type MarkdownModule = {
     date: string;
     keywords?: string[];
     readTime?: string;
+    wordCount?: number;
   };
   Content: any;
   compiledContent?: () => Promise<string>;
@@ -25,12 +26,21 @@ type BlogEntry = {
 };
 
 export async function getStaticPaths() {
-  const calculateReadTime = (content: string | undefined) => {
+  const getReadingStats = (content: string | undefined) => {
     const safeContent = content?.trim();
-    if (!safeContent) return '5 min read';
+    if (!safeContent) {
+      return {
+        readTime: '5 मिनट पढ़ें',
+        wordCount: 0,
+      };
+    }
+
     const words = safeContent.split(/\s+/).filter(Boolean).length;
     const minutes = Math.max(1, Math.round(words / 200));
-    return `${minutes} min read`;
+    return {
+      readTime: `${minutes} मिनट पढ़ें`,
+      wordCount: words,
+    };
   };
 
   const blogImports = import.meta.glob('../../../content/blog/hi/*.md');
@@ -48,10 +58,12 @@ export async function getStaticPaths() {
       else if (typeof mod.rawContent === 'function') rawContent = await mod.rawContent();
       else if (typeof mod.compiledContent === 'function') rawContent = await mod.compiledContent();
 
-      const readTime = mod.frontmatter.readTime ?? calculateReadTime(rawContent);
+      const readingStats = getReadingStats(rawContent);
+      const readTime = mod.frontmatter.readTime ?? readingStats.readTime;
+      const wordCount = mod.frontmatter.wordCount ?? readingStats.wordCount;
       return {
         slug,
-        frontmatter: { ...mod.frontmatter, readTime },
+        frontmatter: { ...mod.frontmatter, readTime, wordCount },
         Content: mod.Content,
       };
     })
@@ -83,6 +95,14 @@ const baseKeywords = [
 ];
 const keywordSet = new Set([...(baseKeywords as string[]), ...(post.keywords ?? [])]);
 const keywords = Array.from(keywordSet);
+const contentLabels = {
+  home: 'होम',
+  blog: 'ब्लॉग',
+  verifiedLinks: 'सत्यापित बुकिंग लिंक',
+  relatedArticles: 'संबंधित लेख',
+  readMore: 'पूरा पढ़ें →',
+  fallbackReadTime: '5 मिनट पढ़ें',
+};
 
 const relatedPosts = allPosts.filter((entry) => entry.slug !== slug).slice(0, 3);
 
@@ -107,6 +127,10 @@ const articleSchema = {
   description: post.description,
   datePublished: publishedIso,
   dateModified: publishedIso,
+  inLanguage: 'hi-IN',
+  articleSection: 'अयोध्या यात्रा गाइड',
+  keywords: keywords.join(', '),
+  wordCount: post.wordCount,
   author: { '@type': 'Organization', name: 'Sri Janaki Mahal Trust', url: 'https://www.srijanakimahaltrustofficial.com/' },
   publisher: {
     '@type': 'Organization',
@@ -140,9 +164,9 @@ const articleSchema = {
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <nav class="mb-6 text-sm" aria-label="Breadcrumb">
         <ol class="flex items-center gap-2 text-gray-600">
-          <li><a href="/hi" class="hover:text-amber-600">Home</a></li>
+          <li><a href="/hi" class="hover:text-amber-600">{contentLabels.home}</a></li>
           <li>/</li>
-          <li><a href="/hi/blog" class="hover:text-amber-600">Blog</a></li>
+          <li><a href="/hi/blog" class="hover:text-amber-600">{contentLabels.blog}</a></li>
           <li>/</li>
           <li class="text-gray-900">{post.title}</li>
         </ol>
@@ -156,7 +180,7 @@ const articleSchema = {
             {new Date(post.date).toLocaleDateString('hi-IN', { year: 'numeric', month: 'long', day: 'numeric' })}
           </time>
           <span>•</span>
-          <span>{post.readTime ?? '5 min read'}</span>
+          <span>{post.readTime ?? contentLabels.fallbackReadTime}</span>
         </div>
         <p class="text-xl text-gray-700 leading-relaxed">{post.description}</p>
       </header>
@@ -166,7 +190,7 @@ const articleSchema = {
       </article>
 
       <div class="mt-10 bg-white rounded-lg shadow-lg p-6">
-        <h2 class="text-xl font-bold text-gray-900 mb-3">Verified Booking Links</h2>
+        <h2 class="text-xl font-bold text-gray-900 mb-3">{contentLabels.verifiedLinks}</h2>
         <ul class="list-disc list-inside text-gray-700 space-y-2">
           <li><a class="text-amber-700 font-semibold hover:underline" href="/hi/official-booking">आधिकारिक बुकिंग</a></li>
           <li><a class="text-amber-700 font-semibold hover:underline" href="/hi/booking-verification-guide">बुकिंग सत्यापन गाइड</a></li>
@@ -176,13 +200,13 @@ const articleSchema = {
       </div>
 
       <div class="mt-12">
-        <h2 class="text-2xl font-bold text-gray-900 mb-6">Related Articles</h2>
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">{contentLabels.relatedArticles}</h2>
         <div class="grid md:grid-cols-2 gap-6">
           {relatedPosts.map((relatedPost) => (
             <a href={`/hi/blog/${relatedPost.slug}`} class="block bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
               <h3 class="text-xl font-bold text-gray-900 mb-2 hover:text-amber-600">{relatedPost.frontmatter.title}</h3>
               <p class="text-gray-600 text-sm mb-3">{relatedPost.frontmatter.description}</p>
-              <span class="text-amber-600 font-semibold text-sm">Read more →</span>
+              <span class="text-amber-600 font-semibold text-sm">{contentLabels.readMore}</span>
             </a>
           ))}
         </div>

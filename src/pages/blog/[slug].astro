@@ -5,17 +5,6 @@ import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import { generateBreadcrumbSchema, generateStandardBreadcrumbs } from '../../lib/schemas/breadcrumb';
 
-function calculateReadTime(content: string | undefined) {
-  const safeContent = content?.trim();
-  if (!safeContent) {
-    return '5 min read';
-  }
-
-  const words = safeContent.split(/\s+/).filter(Boolean).length;
-  const minutes = Math.max(1, Math.round(words / 200));
-  return `${minutes} min read`;
-}
-
 type MarkdownModule = {
   frontmatter: {
     title: string;
@@ -23,6 +12,7 @@ type MarkdownModule = {
     date: string;
     keywords?: string[];
     readTime?: string;
+    wordCount?: number;
   };
   Content: any;
   compiledContent?: () => Promise<string>;
@@ -37,15 +27,21 @@ type BlogEntry = {
 
 // NOTE: generate static paths for every markdown file so no blog link returns 404
 export async function getStaticPaths() {
-  const calculateReadTime = (content: string | undefined) => {
+  const getReadingStats = (content: string | undefined) => {
     const safeContent = content?.trim();
     if (!safeContent) {
-      return '5 min read';
+      return {
+        readTime: '5 min read',
+        wordCount: 0,
+      };
     }
 
     const words = safeContent.split(/\s+/).filter(Boolean).length;
     const minutes = Math.max(1, Math.round(words / 200));
-    return `${minutes} min read`;
+    return {
+      readTime: `${minutes} min read`,
+      wordCount: words,
+    };
   };
 
   const blogImports = import.meta.glob('../../content/blog/*.md');
@@ -67,13 +63,16 @@ export async function getStaticPaths() {
         rawContent = await mod.compiledContent();
       }
 
-      const readTime = mod.frontmatter.readTime ?? calculateReadTime(rawContent);
+      const readingStats = getReadingStats(rawContent);
+      const readTime = mod.frontmatter.readTime ?? readingStats.readTime;
+      const wordCount = mod.frontmatter.wordCount ?? readingStats.wordCount;
 
       return {
         slug,
         frontmatter: {
           ...mod.frontmatter,
           readTime,
+          wordCount,
         },
         Content: mod.Content,
       };
@@ -155,6 +154,10 @@ const articleSchema = {
   description: post.description,
   datePublished: publishedIso,
   dateModified: publishedIso,
+  inLanguage: 'en-IN',
+  articleSection: 'Ayodhya Travel Guide',
+  keywords: keywords.join(', '),
+  wordCount: post.wordCount,
   author: {
     '@type': 'Organization',
     name: 'Sri Janaki Mahal Trust',

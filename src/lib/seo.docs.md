@@ -8,6 +8,7 @@ This document reflects the **current** behavior of the shared SEO utility after 
 
 - Canonical URL generation
 - Title generation with brand suffix de-duplication
+- Keyword normalization and de-duplication
 - OpenGraph and Twitter meta object generation
 - Robots directive generation (snippet preview aware)
 - Hreflang generation (default pair mode + explicit mode)
@@ -51,6 +52,20 @@ This module now prevents double-prefix canonicalization.
 - Prevents repeated SERP titles like:
   - `... | Sri Janaki Mahal Trust | Sri Janaki Mahal Trust`
 - Improves title readability and keeps Hindi SERP snippets language-consistent.
+
+---
+
+## Keyword normalization
+
+`generateKeywords(keywords?)` now:
+- merges default + page-level keywords
+- trims whitespace
+- removes empty entries
+- de-duplicates case-insensitively while preserving first-seen order
+
+### Why this matters
+- Prevents bloated duplicate `meta[name="keywords"]` output.
+- Keeps keyword metadata cleaner and easier to audit.
 
 ---
 

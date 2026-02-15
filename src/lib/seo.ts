@@ -87,6 +87,34 @@ function hasSiteNameInTitleForLang(title: string, lang: 'en' | 'hi'): boolean {
 }
 
 /**
+ * Normalize and de-duplicate keywords while preserving insertion order.
+ * - trims whitespace
+ * - removes empty values
+ * - de-duplicates case-insensitively
+ */
+function normalizeAndDedupeKeywords(keywords: string[]): string[] {
+  const seen = new Set<string>();
+  const normalizedKeywords: string[] = [];
+
+  keywords.forEach((keyword) => {
+    const trimmedKeyword = keyword.trim();
+    if (!trimmedKeyword) {
+      return;
+    }
+
+    const keywordKey = trimmedKeyword.toLowerCase();
+    if (seen.has(keywordKey)) {
+      return;
+    }
+
+    seen.add(keywordKey);
+    normalizedKeywords.push(trimmedKeyword);
+  });
+
+  return normalizedKeywords;
+}
+
+/**
  * SEO Configuration Interface
  * 
  * Defines the structure for SEO meta data that can be passed to pages
@@ -194,7 +222,8 @@ export function generateCanonical(path?: string): string {
  */
 export function generateKeywords(keywords?: string[]): string[] {
   debugLog('[SEO] Generating keywords', { additional: keywords?.length ?? 0 });
-  return keywords ? [...DEFAULT_KEYWORDS, ...keywords] : DEFAULT_KEYWORDS;
+  const mergedKeywords = keywords ? [...DEFAULT_KEYWORDS, ...keywords] : [...DEFAULT_KEYWORDS];
+  return normalizeAndDedupeKeywords(mergedKeywords);
 }
 
 /**

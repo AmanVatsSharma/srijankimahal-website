@@ -3,6 +3,26 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import FloatingWhatsApp from '../components/FloatingWhatsApp.astro';
+import TrustAssurancePanel from '../components/TrustAssurancePanel.astro';
+import { generateBreadcrumbSchema } from '../lib/schemas/breadcrumb';
+
+const breadcrumbSchema = generateBreadcrumbSchema([
+  { name: 'Home', url: '/' },
+  { name: 'About', url: '/about' },
+]);
+
+const webPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'About Sri Janaki Mahal Trust',
+  description:
+    'Learn about Sri Janaki Mahal Trust, its mission, official contact channels, and verified trust credentials in Ayodhya.',
+  url: 'https://www.srijanakimahaltrustofficial.com/about',
+  inLanguage: 'en-IN',
+  isPartOf: {
+    '@id': 'https://www.srijanakimahaltrustofficial.com/#website',
+  },
+};
 ---
 
 <Layout 
@@ -283,9 +303,12 @@ import FloatingWhatsApp from '../components/FloatingWhatsApp.astro';
           </div>
         </section>
 
+        <TrustAssurancePanel lang="en" />
       </div>
     </div>
   </main>
+  {breadcrumbSchema && <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />}
+  <script type="application/ld+json" set:html={JSON.stringify(webPageSchema)} />
   <Footer />
   <FloatingWhatsApp />
 </Layout>

@@ -1,0 +1,52 @@
+<!-- // src/components/TrustAssurancePanel.astro -->
+---
+import { DISPLAY_PHONE, OFFICIAL_EMAIL, TEL_LINK, WHATSAPP_LINK } from '../lib/constants';
+
+interface Props {
+  lang?: 'en' | 'hi';
+}
+
+const { lang = 'en' } = Astro.props;
+const isHindi = lang === 'hi';
+const prefix = isHindi ? '/hi' : '';
+---
+
+<section class="mt-12 rounded-xl border border-amber-200 bg-amber-50 p-6 sm:p-8">
+  <h2 class="text-2xl font-bold text-gray-900 mb-4">
+    {isHindi ? 'विश्वसनीयता और आधिकारिक सत्यापन लिंक' : 'Trust Assurance and Official Verification Links'}
+  </h2>
+  <p class="text-gray-700 leading-relaxed mb-6">
+    {isHindi
+      ? 'किसी भी बुकिंग से पहले हमेशा आधिकारिक चैनल, सत्यापन पेज और नीति पेज देखें।'
+      : 'Before completing any booking, always verify official channels, trust pages, and policy links below.'}
+  </p>
+  <div class="grid gap-6 md:grid-cols-2">
+    <div class="rounded-lg bg-white p-5 border border-gray-200">
+      <h3 class="font-semibold text-gray-900 mb-3">{isHindi ? 'आधिकारिक चैनल' : 'Official Channels'}</h3>
+      <ul class="space-y-2 text-gray-700 text-sm">
+        <li>
+          <a href={TEL_LINK} class="text-amber-700 font-semibold hover:underline">{DISPLAY_PHONE}</a>
+        </li>
+        <li>
+          <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" class="text-amber-700 font-semibold hover:underline">
+            WhatsApp: {DISPLAY_PHONE}
+          </a>
+        </li>
+        <li>
+          <a href={`mailto:${OFFICIAL_EMAIL}`} class="text-amber-700 font-semibold hover:underline">{OFFICIAL_EMAIL}</a>
+        </li>
+      </ul>
+    </div>
+    <div class="rounded-lg bg-white p-5 border border-gray-200">
+      <h3 class="font-semibold text-gray-900 mb-3">{isHindi ? 'सत्यापन और नीतियां' : 'Verification and Policies'}</h3>
+      <ul class="space-y-2 text-sm">
+        <li><a href={`${prefix}/official`} class="text-amber-700 font-semibold hover:underline">{isHindi ? 'आधिकारिक सत्यापन पेज' : 'Official verification page'}</a></li>
+        <li><a href={`${prefix}/official-booking`} class="text-amber-700 font-semibold hover:underline">{isHindi ? 'आधिकारिक बुकिंग पेज' : 'Official booking page'}</a></li>
+        <li><a href={`${prefix}/booking-verification-guide`} class="text-amber-700 font-semibold hover:underline">{isHindi ? 'बुकिंग सत्यापन गाइड' : 'Booking verification guide'}</a></li>
+        <li><a href={`${prefix}/privacy-policy`} class="text-amber-700 font-semibold hover:underline">{isHindi ? 'प्राइवेसी पॉलिसी' : 'Privacy policy'}</a></li>
+        <li><a href={`${prefix}/terms-of-service`} class="text-amber-700 font-semibold hover:underline">{isHindi ? 'सेवा की शर्तें' : 'Terms of service'}</a></li>
+        <li><a href={`${prefix}/cancellation-refund`} class="text-amber-700 font-semibold hover:underline">{isHindi ? 'कैंसलेशन और रिफंड पॉलिसी' : 'Cancellation and refund policy'}</a></li>
+      </ul>
+    </div>
+  </div>
+</section>

@@ -309,5 +309,41 @@ export const defaultFAQs: FAQItem[] = [
     question: 'What if I need to change my Janaki Mahal Trust booking dates?',
     answer: `Contact us immediately at ${DISPLAY_PHONE}. Date modifications are subject to availability, and our team will provide alternate options or waiting list assistance as needed.`,
   },
+  {
+    question: 'How can I verify payment details before sending booking advance?',
+    answer: `Before paying, confirm bank or UPI details directly on our verified helpline ${DISPLAY_PHONE}. We only share payment details from official trust channels. If a payment request comes from any other number or email, verify with us first.`,
+  },
+  {
+    question: 'Does Sri Janaki Mahal Trust provide transparent tariff details?',
+    answer: `Yes. We provide a complete room tariff breakup with inclusions before confirmation. To receive the latest transparent rates and availability, contact us directly at ${DISPLAY_PHONE} or ${OFFICIAL_EMAIL}.`,
+  },
+  {
+    question: 'Can I get written cancellation terms before booking confirmation?',
+    answer: `Yes. We share cancellation and refund terms in writing before final confirmation. You can review the policy on our website and request clarifications on ${DISPLAY_PHONE} before completing payment.`,
+  },
+  {
+    question: 'Where can I verify the official Janaki Mahal Trust channels quickly?',
+    answer: `Use our official verification page and cross-check the helpline ${DISPLAY_PHONE}, website www.srijanakimahaltrustofficial.com, and official email ${OFFICIAL_EMAIL}. This helps you avoid fake listings and fraud attempts.`,
+  },
+  {
+    question: 'Does Sri Janaki Mahal Trust support group or family verification calls?',
+    answer: `Yes. Family coordinators and group leaders can verify names, dates, room categories, and payment status on a single call to ${DISPLAY_PHONE}. We recommend this for large yatra groups and festival bookings.`,
+  },
+  {
+    question: 'Will my booking confirmation include complete stay details?',
+    answer: 'Yes. Official confirmation includes guest name, stay dates, room category, occupancy details, and trust reference information. Always keep this confirmation for check-in verification.',
+  },
+  {
+    question: 'How does Sri Janaki Mahal Trust handle booking disputes or grievances?',
+    answer: `For any grievance, contact us immediately via ${DISPLAY_PHONE} or ${OFFICIAL_EMAIL} with booking details. Our team reviews the issue promptly and provides a documented resolution for transparency.`,
+  },
+  {
+    question: 'What should I do if I find a fake page using Janaki Mahal Trust name?',
+    answer: `Do not book through that source. Share screenshot and contact details with our team at ${DISPLAY_PHONE} so we can verify and alert other devotees. Always use our official website and direct helpline.`,
+  },
+  {
+    question: 'Can I verify trust identity before arriving in Ayodhya?',
+    answer: `Yes. You can verify official identity before travel by matching contact number ${DISPLAY_PHONE}, email ${OFFICIAL_EMAIL}, and website domain www.srijanakimahaltrustofficial.com. We encourage every guest to verify before payment.`,
+  },
 ];
 

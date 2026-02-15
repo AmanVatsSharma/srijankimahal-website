@@ -56,6 +56,10 @@ Combined build + audit:
 npm run seo:verify
 ```
 
+CI runs this via:
+
+- `.github/workflows/seo-integrity.yml`
+
 ---
 
 ## Flow chart

@@ -84,6 +84,18 @@ Generate a JSON report file:
 npm run seo:audit -- --report-file reports/seo-audit-report.json
 ```
 
+Show CLI help:
+
+```bash
+node scripts/seo-integrity-audit.mjs --help
+```
+
+Use environment fallback for report file path:
+
+```bash
+SEO_AUDIT_REPORT_FILE=reports/seo-audit-report.json npm run seo:audit
+```
+
 Report payload fields:
 
 - `status`: `passed` | `failed` | `error`
@@ -141,6 +153,8 @@ Then validate sitemap and robots artifacts before final pass/fail decision.
 ## Error handling & logging behavior
 
 - Structured console logs with `[seo-audit]` prefix.
+- Defensive CLI parsing with warning logs for unknown/invalid flags.
 - Optional JSON report output via `--report-file`.
+- Report file path can also be provided through `SEO_AUDIT_REPORT_FILE`.
 - Audit exits non-zero on any failure.
 - Reports concise samples to make debugging fast.

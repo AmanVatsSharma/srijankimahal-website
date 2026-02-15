@@ -19,25 +19,45 @@ const DIST_DIR = path.resolve(process.cwd(), 'dist');
 const SITE_ORIGIN = 'https://www.srijanakimahaltrustofficial.com';
 const ABSOLUTE_HTTP_PATTERN = /^https?:\/\//i;
 const XML_LOC_REGEX = /<loc>([^<]+)<\/loc>/gi;
+const REPORT_FILE_ENV_KEY = 'SEO_AUDIT_REPORT_FILE';
 const INTERNAL_LINK_IGNORE_PATTERNS = [
   /^\/404\/?$/i,
   /^\/hi\/404\/?$/i,
 ];
 
+/**
+ * Parse CLI flags with defensive validation.
+ * Supported:
+ * - --report-file <path>
+ * - --report-file=<path>
+ * - --help
+ */
 function parseCliOptions(args) {
   const options = {
     reportFile: null,
+    showHelp: false,
+    cliWarnings: [],
   };
 
   for (let index = 0; index < args.length; index += 1) {
     const arg = args[index];
     if (!arg) continue;
 
+    if (arg === '--help' || arg === '-h') {
+      options.showHelp = true;
+      continue;
+    }
+
     if (arg === '--report-file') {
       const nextValue = args[index + 1];
-      if (nextValue) {
+      if (nextValue && !nextValue.startsWith('--')) {
         options.reportFile = nextValue;
         index += 1;
+      } else {
+        options.cliWarnings.push({
+          type: 'missing-report-file-value',
+          flag: '--report-file',
+        });
       }
       continue;
     }
@@ -46,11 +66,53 @@ function parseCliOptions(args) {
       const [, value] = arg.split('=');
       if (value) {
         options.reportFile = value;
+      } else {
+        options.cliWarnings.push({
+          type: 'empty-report-file-value',
+          flag: '--report-file=',
+        });
       }
+      continue;
+    }
+
+    if (arg.startsWith('--')) {
+      options.cliWarnings.push({
+        type: 'unknown-cli-flag',
+        flag: arg,
+      });
     }
   }
 
+  if (!options.reportFile) {
+    const envReportFile = process.env[REPORT_FILE_ENV_KEY]?.trim();
+    if (envReportFile) {
+      options.reportFile = envReportFile;
+    }
+  }
+
+  if (typeof options.reportFile === 'string') {
+    const trimmed = options.reportFile.trim();
+    options.reportFile = trimmed || null;
+  }
+
   return options;
+}
+
+function printHelp() {
+  console.log(`
+SEO Integrity Audit
+
+Usage:
+  node scripts/seo-integrity-audit.mjs [options]
+
+Options:
+  --report-file <path>     Write JSON report to file.
+  --report-file=<path>     Same as above.
+  --help, -h               Show this help output.
+
+Environment:
+  ${REPORT_FILE_ENV_KEY}   Default report file path when CLI flag is absent.
+`.trim());
 }
 
 /**
@@ -827,6 +889,15 @@ async function run(options = { reportFile: null }) {
 }
 
 const cliOptions = parseCliOptions(process.argv.slice(2));
+
+if (cliOptions.showHelp) {
+  printHelp();
+  process.exit(0);
+}
+
+if (cliOptions.cliWarnings.length > 0) {
+  logWarn('CLI option warnings detected', { count: cliOptions.cliWarnings.length, warnings: cliOptions.cliWarnings });
+}
 
 run(cliOptions).catch(async (error) => {
   const reason = error instanceof Error ? error.message : String(error);

@@ -56,6 +56,8 @@ const DEFAULT_KEYWORDS = [
 const DEFAULT_OG_IMAGE = `${SITE_URL}/og.jpg`;
 const ABSOLUTE_URL_PATTERN = /^https?:\/\//i;
 const NORMALIZE_SPACES_PATTERN = /\s+/g;
+const TITLE_MAX_LENGTH = 70;
+const DESCRIPTION_MAX_LENGTH = 180;
 
 function debugLog(message: string, data?: unknown) {
   if (import.meta.env?.DEV) {
@@ -72,6 +74,28 @@ function debugLog(message: string, data?: unknown) {
  */
 function normalizeForComparison(value: string): string {
   return value.toLowerCase().replace(NORMALIZE_SPACES_PATTERN, ' ').trim();
+}
+
+/**
+ * Trim metadata text to a safe SERP-friendly maximum length.
+ * - prefers cutting at word boundaries
+ * - removes trailing separators before appending ellipsis
+ * - keeps output deterministic for static generation
+ */
+function truncateMetaText(value: string, maxLength: number): string {
+  if (value.length <= maxLength) {
+    return value;
+  }
+
+  const slice = value.slice(0, Math.max(0, maxLength - 1));
+  const lastWordBoundary = slice.lastIndexOf(' ');
+  const cutoff = lastWordBoundary > Math.floor(maxLength * 0.6) ? lastWordBoundary : slice.length;
+  const compact = slice
+    .slice(0, cutoff)
+    .replace(/[|,;:\-–—]+$/g, '')
+    .trim();
+
+  return `${compact || slice.trim()}…`;
 }
 
 /**
@@ -149,11 +173,22 @@ export function generateTitle(title?: string, lang: 'en' | 'hi' = 'en'): string 
   // Keep title clean when callers already include the brand.
   // This improves SERP readability and avoids repeated entity strings.
   if (hasSiteNameInTitleForLang(pageTitle, lang)) {
-    return pageTitle;
+    return truncateMetaText(pageTitle, TITLE_MAX_LENGTH);
   }
 
   const localizedSiteName = SITE_NAME_BY_LANG[lang] || SITE_NAME;
-  return `${pageTitle} | ${localizedSiteName}`;
+  const brandedTitle = `${pageTitle} | ${localizedSiteName}`;
+  if (brandedTitle.length <= TITLE_MAX_LENGTH) {
+    return brandedTitle;
+  }
+
+  // If the branded variant exceeds recommended length, prefer an unbranded
+  // page title before truncating. This keeps key intent terms visible.
+  if (pageTitle.length <= TITLE_MAX_LENGTH) {
+    return pageTitle;
+  }
+
+  return truncateMetaText(pageTitle, TITLE_MAX_LENGTH);
 }
 
 /**
@@ -164,7 +199,8 @@ export function generateTitle(title?: string, lang: 'en' | 'hi' = 'en'): string 
  */
 export function generateDescription(description?: string): string {
   debugLog('[SEO] Generating description', { hasCustom: Boolean(description) });
-  return description || DEFAULT_DESCRIPTION;
+  const rawDescription = (description || DEFAULT_DESCRIPTION).trim();
+  return truncateMetaText(rawDescription, DESCRIPTION_MAX_LENGTH);
 }
 
 /**

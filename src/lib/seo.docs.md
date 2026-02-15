@@ -8,6 +8,7 @@ This document reflects the **current** behavior of the shared SEO utility after 
 
 - Canonical URL generation
 - Title generation with brand suffix de-duplication
+- Title/description length normalization for SERP readability
 - Keyword normalization and de-duplication
 - OpenGraph and Twitter meta object generation
 - Robots directive generation (snippet preview aware)
@@ -52,6 +53,24 @@ This module now prevents double-prefix canonicalization.
 - Prevents repeated SERP titles like:
   - `... | Sri Janaki Mahal Trust | Sri Janaki Mahal Trust`
 - Improves title readability and keeps Hindi SERP snippets language-consistent.
+
+### Length normalization behavior
+
+- Preferred maximum title length: `70`
+- If branded title exceeds limit, utility prefers unbranded page title before truncation.
+- Final fallback truncates at a word boundary and appends `…`.
+
+This keeps major intent keywords visible while avoiding oversized title snippets.
+
+---
+
+## Description length normalization
+
+`generateDescription(...)` now normalizes to a recommended max length (`180`) using the same safe truncation helper.
+
+### Why this matters
+- Reduces overlong snippets that get aggressively rewritten/truncated by search engines.
+- Keeps metadata deterministic and cleaner for audit tooling.
 
 ---
 

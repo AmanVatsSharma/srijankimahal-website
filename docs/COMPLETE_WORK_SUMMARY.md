@@ -37,6 +37,7 @@ Latest production-ready hardening completed:
   - hreflang audit now verifies reciprocal alternate links between language pairs
   - og:locale:alternate values now validated against hreflang-derived locale expectations
   - title/description recommended-length checks added as aggregated warning-level quality signals
+  - shared SEO utility now normalizes generated title/description lengths to keep pages within recommended ranges
   - Audit now validates:
     - canonical/hreflang target integrity
     - social URL canonical parity (`og:url`, `twitter:url`)

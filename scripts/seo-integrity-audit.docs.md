@@ -70,10 +70,10 @@ This audit catches those issues deterministically before deployment.
    - hreflang targets resolve to generated output
    - alternate pages include reciprocal hreflang links back
 17. Sitemap integrity:
-   - `sitemap-index.xml` exists and references main + image sitemap
-   - `sitemap-0.xml` URLs are same-origin, unique, and resolvable in build output
-   - `sitemap-0.xml` does not include canonical URLs from pages marked `noindex`
-   - all indexable canonical URLs are present in `sitemap-0.xml`
+   - `sitemap-index.xml` exists and references primary sitemap shard(s) + image sitemap
+   - all referenced primary sitemap shard URLs are same-origin, unique, and resolvable in build output
+   - primary sitemap shards do not include canonical URLs from pages marked `noindex`
+   - all indexable canonical URLs are present across primary sitemap shards
    - sitemap excludes disallowed utility/docs URLs (`/404`, `.docs`)
 18. Robots integrity:
    - `robots.txt` exists

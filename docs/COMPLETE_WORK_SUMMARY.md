@@ -36,7 +36,7 @@ Latest production-ready hardening completed:
   - CI publishes compact SEO metric summary in workflow step summary for fast diagnosis
   - image sitemap reference warning now triggers only when missing in both sitemap-index and robots
   - report payload includes grouped warning/failure type counts for faster triage
-  - audit now verifies indexable canonical URLs are present in main sitemap
+  - audit now verifies indexable canonical URLs are present across primary sitemap shards
   - hreflang audit now verifies reciprocal alternate links between language pairs
   - og:locale:alternate values now validated against hreflang-derived locale expectations
   - title/description recommended-length checks added as aggregated warning-level quality signals

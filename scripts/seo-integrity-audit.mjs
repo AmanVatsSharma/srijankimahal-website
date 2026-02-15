@@ -19,6 +19,8 @@ const DIST_DIR = path.resolve(process.cwd(), 'dist');
 const SITE_ORIGIN = 'https://www.srijanakimahaltrustofficial.com';
 const ABSOLUTE_HTTP_PATTERN = /^https?:\/\//i;
 const XML_LOC_REGEX = /<loc>([^<]+)<\/loc>/gi;
+const PRIMARY_SITEMAP_FILE_PATTERN = /^sitemap-\d+\.xml$/i;
+const IMAGE_SITEMAP_FILE_NAME = 'image-sitemap.xml';
 const REPORT_FILE_ENV_KEY = 'SEO_AUDIT_REPORT_FILE';
 const STRICT_WARNINGS_ENV_KEY = 'SEO_AUDIT_STRICT_WARNINGS';
 const TITLE_LENGTH_RECOMMENDED = { min: 20, max: 70 };
@@ -442,6 +444,26 @@ function parseXmlLocs(xmlText) {
   return Array.from(xmlText.matchAll(XML_LOC_REGEX))
     .map((match) => (match[1] ?? '').trim())
     .filter(Boolean);
+}
+
+function toNormalizedLocalFileHref(localHref) {
+  const withoutHash = localHref.split('#')[0] ?? '';
+  const withoutQuery = withoutHash.split('?')[0] ?? '';
+  const trimmed = withoutQuery.trim();
+  if (!trimmed) return null;
+  return trimmed.startsWith('/') ? trimmed : `/${trimmed}`;
+}
+
+function toDistRelativeFilePath(localHref) {
+  const normalizedLocalHref = toNormalizedLocalFileHref(localHref);
+  if (!normalizedLocalHref) return null;
+  return normalizedLocalHref.slice(1);
+}
+
+function getLocalFileName(localHref) {
+  const distRelativePath = toDistRelativeFilePath(localHref);
+  if (!distRelativePath) return '';
+  return path.posix.basename(distRelativePath);
 }
 
 /**
@@ -1314,38 +1336,84 @@ async function run(options = { reportFile: null, strictWarnings: false }) {
 
   // Sitemap + robots checks (post-build crawlability integrity).
   const sitemapIndexPath = path.join(DIST_DIR, 'sitemap-index.xml');
-  const sitemapPagesPath = path.join(DIST_DIR, 'sitemap-0.xml');
+  const legacyMainSitemapPath = path.join(DIST_DIR, 'sitemap-0.xml');
   const imageSitemapPath = path.join(DIST_DIR, 'image-sitemap.xml');
   const robotsPath = path.join(DIST_DIR, 'robots.txt');
   let hasImageSitemapRefInIndex = false;
   let hasImageSitemapRefInRobots = false;
-  let hasParsedMainSitemap = false;
+  let hasParsedPrimarySitemap = false;
+  const primarySitemapRefs = new Set();
 
   if (!(await exists(sitemapIndexPath))) {
     failures.push({ type: 'missing-sitemap-index', path: 'sitemap-index.xml' });
   } else {
     const sitemapIndexXml = await fs.readFile(sitemapIndexPath, 'utf-8');
-    if (!sitemapIndexXml.includes(`${SITE_ORIGIN}/sitemap-0.xml`)) {
+    const sitemapIndexLocs = parseXmlLocs(sitemapIndexXml);
+    if (sitemapIndexLocs.length === 0) {
       failures.push({
-        type: 'sitemap-index-missing-main-sitemap',
-        expected: `${SITE_ORIGIN}/sitemap-0.xml`,
+        type: 'sitemap-index-empty',
       });
     }
-    hasImageSitemapRefInIndex = sitemapIndexXml.includes(`${SITE_ORIGIN}/image-sitemap.xml`);
+
+    for (const loc of sitemapIndexLocs) {
+      const localHref = getLocalHrefFromAny(loc);
+      if (!localHref) {
+        failures.push({
+          type: 'sitemap-index-url-invalid-origin',
+          url: loc,
+        });
+        continue;
+      }
+
+      const localFileName = getLocalFileName(localHref).toLowerCase();
+      if (localFileName === IMAGE_SITEMAP_FILE_NAME) {
+        hasImageSitemapRefInIndex = true;
+        continue;
+      }
+
+      if (!PRIMARY_SITEMAP_FILE_PATTERN.test(localFileName)) {
+        continue;
+      }
+
+      const normalizedRef = toNormalizedLocalFileHref(localHref);
+      if (normalizedRef) {
+        primarySitemapRefs.add(normalizedRef);
+      }
+    }
+
+    if (primarySitemapRefs.size === 0) {
+      failures.push({
+        type: 'sitemap-index-missing-main-sitemap',
+      });
+    }
   }
 
-  if (!(await exists(sitemapPagesPath))) {
-    failures.push({ type: 'missing-main-sitemap', path: 'sitemap-0.xml' });
-  } else {
-    hasParsedMainSitemap = true;
-    const sitemapXml = await fs.readFile(sitemapPagesPath, 'utf-8');
-    const locs = parseXmlLocs(sitemapXml);
-    const seenLocs = new Set();
+  // Backward-compatible fallback:
+  // if index references are missing but legacy sitemap-0.xml exists, still parse
+  // so indexable canonical coverage checks remain actionable.
+  if (primarySitemapRefs.size === 0 && (await exists(legacyMainSitemapPath))) {
+    primarySitemapRefs.add('/sitemap-0.xml');
+  }
 
+  const seenLocs = new Set();
+  for (const sitemapRef of primarySitemapRefs) {
+    const sitemapRelativePath = toDistRelativeFilePath(sitemapRef);
+    if (!sitemapRelativePath) {
+      continue;
+    }
+    const sitemapAbsolutePath = path.join(DIST_DIR, sitemapRelativePath);
+    if (!(await exists(sitemapAbsolutePath))) {
+      failures.push({ type: 'missing-main-sitemap', path: sitemapRelativePath });
+      continue;
+    }
+
+    hasParsedPrimarySitemap = true;
+    const sitemapXml = await fs.readFile(sitemapAbsolutePath, 'utf-8');
+    const locs = parseXmlLocs(sitemapXml);
     for (const loc of locs) {
       if (seenLocs.has(loc)) {
         metrics.sitemapLocDuplicateUrls += 1;
-        failures.push({ type: 'duplicate-sitemap-url', url: loc });
+        failures.push({ type: 'duplicate-sitemap-url', sitemap: sitemapRelativePath, url: loc });
       } else {
         seenLocs.add(loc);
       }
@@ -1375,13 +1443,18 @@ async function run(options = { reportFile: null, strictWarnings: false }) {
         metrics.sitemapNoindexUrlLeaks += 1;
         failures.push({
           type: 'sitemap-contains-noindex-url',
+          sitemap: sitemapRelativePath,
           url: loc,
         });
       }
     }
   }
 
-  if (hasParsedMainSitemap) {
+  if (!hasParsedPrimarySitemap && primarySitemapRefs.size === 0) {
+    failures.push({ type: 'missing-main-sitemap', path: 'sitemap-0.xml' });
+  }
+
+  if (hasParsedPrimarySitemap) {
     const missingIndexableCanonicals = [];
     for (const canonicalPath of indexableCanonicalPaths) {
       if (!sitemapComparablePaths.has(canonicalPath)) {

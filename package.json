@@ -8,7 +8,9 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "update:phone": "node scripts/update-phone-number.mjs"
+    "update:phone": "node scripts/update-phone-number.mjs",
+    "seo:audit": "node scripts/seo-integrity-audit.mjs",
+    "seo:verify": "npm run build && npm run seo:audit"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.6.0",

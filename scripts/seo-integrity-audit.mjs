@@ -1,0 +1,324 @@
+#!/usr/bin/env node
+/**
+ * SEO Integrity Audit
+ *
+ * Purpose:
+ * - Run deterministic post-build checks against /dist HTML output.
+ * - Catch high-impact SEO regressions before deployment.
+ *
+ * Usage:
+ *   npm run build
+ *   npm run seo:audit
+ */
+
+import { promises as fs } from 'node:fs';
+import path from 'node:path';
+
+const AUDIT_PREFIX = '[seo-audit]';
+const DIST_DIR = path.resolve(process.cwd(), 'dist');
+const SITE_ORIGIN = 'https://www.srijanakimahaltrustofficial.com';
+const INTERNAL_LINK_IGNORE_PATTERNS = [
+  /^\/404\/?$/i,
+  /^\/hi\/404\/?$/i,
+];
+
+/**
+ * Keep logs structured and easy to grep in CI.
+ */
+function logInfo(message, payload) {
+  if (payload === undefined) {
+    console.log(`${AUDIT_PREFIX} INFO ${message}`);
+    return;
+  }
+  console.log(`${AUDIT_PREFIX} INFO ${message}`, payload);
+}
+
+function logWarn(message, payload) {
+  if (payload === undefined) {
+    console.warn(`${AUDIT_PREFIX} WARN ${message}`);
+    return;
+  }
+  console.warn(`${AUDIT_PREFIX} WARN ${message}`, payload);
+}
+
+function logError(message, payload) {
+  if (payload === undefined) {
+    console.error(`${AUDIT_PREFIX} ERROR ${message}`);
+    return;
+  }
+  console.error(`${AUDIT_PREFIX} ERROR ${message}`, payload);
+}
+
+/**
+ * Recursively collect files with a target extension.
+ */
+async function collectFiles(rootDir, ext) {
+  const queue = [rootDir];
+  const files = [];
+
+  while (queue.length > 0) {
+    const current = queue.pop();
+    if (!current) continue;
+
+    const entries = await fs.readdir(current, { withFileTypes: true });
+    for (const entry of entries) {
+      const absPath = path.join(current, entry.name);
+      if (entry.isDirectory()) {
+        queue.push(absPath);
+      } else if (entry.isFile() && absPath.endsWith(ext)) {
+        files.push(absPath);
+      }
+    }
+  }
+
+  return files;
+}
+
+function countMatches(text, regex) {
+  const matches = text.match(regex);
+  return matches ? matches.length : 0;
+}
+
+function decodeBasicEntities(text) {
+  return text
+    .replaceAll('&quot;', '"')
+    .replaceAll('&#34;', '"')
+    .replaceAll('&apos;', "'")
+    .replaceAll('&#39;', "'")
+    .replaceAll('&lt;', '<')
+    .replaceAll('&gt;', '>')
+    .replaceAll('&amp;', '&');
+}
+
+function toRelative(absPath) {
+  return path.relative(DIST_DIR, absPath).replaceAll(path.sep, '/');
+}
+
+function resolveLocalTarget(urlPath) {
+  const withoutHash = urlPath.split('#')[0] ?? '';
+  const withoutQuery = withoutHash.split('?')[0] ?? '';
+  const safePath = withoutQuery.trim();
+
+  if (!safePath || safePath === '/') {
+    return path.join(DIST_DIR, 'index.html');
+  }
+
+  const normalized = safePath.startsWith('/') ? safePath.slice(1) : safePath;
+  const directFile = path.join(DIST_DIR, normalized);
+  const nestedIndex = path.join(DIST_DIR, normalized, 'index.html');
+  const htmlVariant = `${directFile}.html`;
+
+  return { directFile, nestedIndex, htmlVariant };
+}
+
+function shouldIgnoreInternalHref(href) {
+  return INTERNAL_LINK_IGNORE_PATTERNS.some((pattern) => pattern.test(href));
+}
+
+async function exists(filePath) {
+  try {
+    await fs.access(filePath);
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+async function run() {
+  const startedAt = Date.now();
+  logInfo('Starting SEO integrity audit', { distDir: DIST_DIR });
+
+  if (!(await exists(DIST_DIR))) {
+    logError('dist directory does not exist. Run `npm run build` first.');
+    process.exitCode = 1;
+    return;
+  }
+
+  const htmlFiles = await collectFiles(DIST_DIR, '.html');
+  if (htmlFiles.length === 0) {
+    logError('No HTML files found in dist output.');
+    process.exitCode = 1;
+    return;
+  }
+
+  const failures = [];
+  const warnings = [];
+  const metrics = {
+    htmlFiles: htmlFiles.length,
+    pagesWithCanonicalIssue: 0,
+    invalidJsonLdScripts: 0,
+    pagesWithH1Issue: 0,
+    imagesMissingAlt: 0,
+    imagesMissingDimensions: 0,
+    pagesWithLiteralJsonStringify: 0,
+    docsLikeRoutes: 0,
+    brokenInternalLinks: 0,
+  };
+
+  for (const htmlPath of htmlFiles) {
+    const relPath = toRelative(htmlPath);
+    const html = await fs.readFile(htmlPath, 'utf-8');
+
+    // Canonical: exactly one per page.
+    const canonicalCount = countMatches(html, /<link rel="canonical" /gi);
+    if (canonicalCount !== 1) {
+      metrics.pagesWithCanonicalIssue += 1;
+      failures.push({
+        type: 'canonical-count',
+        page: relPath,
+        canonicalCount,
+      });
+    }
+
+    // Exactly one H1 for semantic consistency.
+    const h1Count = countMatches(html, /<h1\b/gi);
+    if (h1Count !== 1) {
+      metrics.pagesWithH1Issue += 1;
+      failures.push({
+        type: 'h1-count',
+        page: relPath,
+        h1Count,
+      });
+    }
+
+    // Guard against literal JSON.stringify artifacts leaking to output.
+    if (html.includes('{JSON.stringify(')) {
+      metrics.pagesWithLiteralJsonStringify += 1;
+      failures.push({
+        type: 'literal-json-stringify',
+        page: relPath,
+      });
+    }
+
+    // JSON-LD parse validation.
+    const jsonLdRegex = /<script type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/gi;
+    for (const match of html.matchAll(jsonLdRegex)) {
+      const rawScript = (match[1] ?? '').trim();
+      if (!rawScript) continue;
+      const normalizedJsonText = decodeBasicEntities(rawScript);
+
+      try {
+        JSON.parse(normalizedJsonText);
+      } catch (error) {
+        metrics.invalidJsonLdScripts += 1;
+        failures.push({
+          type: 'invalid-json-ld',
+          page: relPath,
+          reason: error instanceof Error ? error.message : String(error),
+          preview: normalizedJsonText.slice(0, 120),
+        });
+      }
+    }
+
+    // Image audit for alt + dimensions.
+    const imgRegex = /<img\b([^>]*?)>/gi;
+    for (const imgMatch of html.matchAll(imgRegex)) {
+      const attrs = imgMatch[1] ?? '';
+      const hasAlt = /\balt\s*=\s*["'][^"']*["']/i.test(attrs);
+      const hasWidth = /\bwidth\s*=\s*["'][^"']+["']/i.test(attrs);
+      const hasHeight = /\bheight\s*=\s*["'][^"']+["']/i.test(attrs);
+
+      if (!hasAlt) {
+        metrics.imagesMissingAlt += 1;
+        failures.push({
+          type: 'image-missing-alt',
+          page: relPath,
+          snippet: imgMatch[0].slice(0, 120),
+        });
+      }
+
+      if (!hasWidth || !hasHeight) {
+        metrics.imagesMissingDimensions += 1;
+        failures.push({
+          type: 'image-missing-dimensions',
+          page: relPath,
+          hasWidth,
+          hasHeight,
+          snippet: imgMatch[0].slice(0, 120),
+        });
+      }
+    }
+
+    // Internal link existence check.
+    const hrefRegex = /href="([^"]+)"/gi;
+    for (const hrefMatch of html.matchAll(hrefRegex)) {
+      const href = hrefMatch[1] ?? '';
+
+      if (
+        !href ||
+        href.startsWith('#') ||
+        href.startsWith('mailto:') ||
+        href.startsWith('tel:') ||
+        href.startsWith('javascript:') ||
+        href.startsWith('https://') ||
+        href.startsWith('http://') ||
+        href.startsWith('//') ||
+        shouldIgnoreInternalHref(href)
+      ) {
+        continue;
+      }
+
+      const target = resolveLocalTarget(href);
+      if (typeof target === 'string') {
+        if (!(await exists(target))) {
+          metrics.brokenInternalLinks += 1;
+          failures.push({
+            type: 'broken-internal-link',
+            page: relPath,
+            href,
+          });
+        }
+        continue;
+      }
+
+      const targetExists =
+        (await exists(target.directFile)) ||
+        (await exists(target.nestedIndex)) ||
+        (await exists(target.htmlVariant));
+
+      if (!targetExists) {
+        metrics.brokenInternalLinks += 1;
+        failures.push({
+          type: 'broken-internal-link',
+          page: relPath,
+          href,
+        });
+      }
+    }
+
+    // Route hygiene: docs should never leak into dist routes.
+    if (relPath.includes('.docs')) {
+      metrics.docsLikeRoutes += 1;
+      warnings.push({
+        type: 'docs-route-output',
+        page: relPath,
+      });
+    }
+  }
+
+  const elapsedMs = Date.now() - startedAt;
+  logInfo('Audit metrics', metrics);
+
+  if (warnings.length > 0) {
+    logWarn('Warnings detected', { count: warnings.length, sample: warnings.slice(0, 10) });
+  }
+
+  if (failures.length > 0) {
+    logError('SEO integrity audit failed', {
+      count: failures.length,
+      sample: failures.slice(0, 20),
+      elapsedMs,
+    });
+    process.exitCode = 1;
+    return;
+  }
+
+  logInfo('SEO integrity audit passed', { elapsedMs, pagesAudited: htmlFiles.length, origin: SITE_ORIGIN });
+}
+
+run().catch((error) => {
+  logError('Unexpected audit runtime failure', {
+    reason: error instanceof Error ? error.message : String(error),
+  });
+  process.exitCode = 1;
+});

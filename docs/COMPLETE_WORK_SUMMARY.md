@@ -58,6 +58,7 @@ Latest production-ready hardening completed:
   - JSON-LD script extraction now handles script-type attribute order/quote variance
   - internal href extraction now handles attribute-order/quote variance for link auditing
   - hreflang values now enforce valid language-token syntax checks in audit
+  - metadata parity comparisons now decode broader named/numeric HTML entities
   - JSON-LD validation now includes structural checks for `@context` and `@type` presence
   - hreflang now enforces self-reference and x-default-to-English alignment checks
   - sitemap-index references now validated for same-origin, uniqueness, XML format, and build-target existence

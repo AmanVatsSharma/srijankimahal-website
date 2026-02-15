@@ -219,10 +219,26 @@ function decodeBasicEntities(text) {
     .replaceAll('&#39;', "'")
     .replaceAll('&lt;', '<')
     .replaceAll('&gt;', '>')
-    .replaceAll('&#38;', '&')
-    .replaceAll('&#x26;', '&')
-    .replaceAll('&#X26;', '&')
-    .replaceAll('&amp;', '&');
+    .replaceAll('&amp;', '&')
+    .replaceAll('&nbsp;', ' ')
+    .replace(/&#(\d+);/g, (_, decimalCode) => {
+      const numericCode = Number.parseInt(decimalCode, 10);
+      if (!Number.isFinite(numericCode)) return _;
+      try {
+        return String.fromCodePoint(numericCode);
+      } catch {
+        return _;
+      }
+    })
+    .replace(/&#x([0-9a-fA-F]+);/g, (_, hexCode) => {
+      const numericCode = Number.parseInt(hexCode, 16);
+      if (!Number.isFinite(numericCode)) return _;
+      try {
+        return String.fromCodePoint(numericCode);
+      } catch {
+        return _;
+      }
+    });
 }
 
 function normalizeComparableText(value) {

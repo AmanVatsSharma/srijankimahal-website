@@ -94,6 +94,7 @@ jobs:
             `- Social meta integrity issues: **${metrics.pagesWithSocialMetaIssues ?? 0}**`,
             `- JSON-LD structure issues: **${metrics.pagesWithJsonLdStructureIssues ?? 0}**`,
             `- Hreflang target missing: **${metrics.hreflangTargetMissing ?? 0}**`,
+            `- Hreflang self-reference issues: **${metrics.pagesWithHreflangSelfReferenceIssue ?? 0}**`,
             `- Hreflang reciprocity issues: **${metrics.pagesWithHreflangReciprocalIssue ?? 0}**`,
             `- OG locale/hreflang mismatch: **${metrics.pagesWithOgLocaleAltMismatch ?? 0}**`,
             `- Invalid JSON-LD: **${metrics.invalidJsonLdScripts ?? 0}**`,

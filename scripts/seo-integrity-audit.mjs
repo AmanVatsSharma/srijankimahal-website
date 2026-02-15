@@ -529,6 +529,7 @@ async function run(options = { reportFile: null, strictWarnings: false }) {
     hreflangTargetMissing: 0,
     pagesWithDuplicateHreflangLangs: 0,
     pagesMissingXDefaultHreflang: 0,
+    pagesWithHreflangSelfReferenceIssue: 0,
     pagesWithHreflangReciprocalIssue: 0,
     pagesWithOgLocaleIssues: 0,
     pagesWithOgLocaleAltMismatch: 0,
@@ -1062,12 +1063,19 @@ async function run(options = { reportFile: null, strictWarnings: false }) {
       const seenLangs = new Set();
       let hasDuplicateLang = false;
       let hasXDefault = false;
+      let hasHreflangSelfReferenceIssue = false;
+      const currentPageLang = relPath.startsWith('hi/') ? 'hi' : 'en';
       const pageComparableHref =
         canonicalComparableHref ?? normalizeComparableHref(routePathFromDistRelative(relPath));
       const comparableHreflangTargets = [];
+      const hreflangByLang = new Map();
 
       for (const entry of hreflangEntries) {
         if (!entry.hreflang || !entry.href) continue;
+
+        if (!hreflangByLang.has(entry.hreflang)) {
+          hreflangByLang.set(entry.hreflang, entry.href);
+        }
 
         if (seenLangs.has(entry.hreflang)) {
           hasDuplicateLang = true;
@@ -1117,12 +1125,56 @@ async function run(options = { reportFile: null, strictWarnings: false }) {
         });
       }
 
+      const currentLangHref = hreflangByLang.get(currentPageLang);
+      const currentLangComparableHref = currentLangHref ? normalizeComparableHref(currentLangHref) : null;
+      if (!currentLangHref || !currentLangComparableHref) {
+        hasHreflangSelfReferenceIssue = true;
+        failures.push({
+          type: 'missing-current-lang-hreflang',
+          page: relPath,
+          expectedLang: currentPageLang,
+        });
+      } else if (pageComparableHref && currentLangComparableHref !== pageComparableHref) {
+        hasHreflangSelfReferenceIssue = true;
+        failures.push({
+          type: 'hreflang-self-reference-mismatch',
+          page: relPath,
+          expectedHref: pageComparableHref,
+          actualHref: currentLangComparableHref,
+          lang: currentPageLang,
+        });
+      }
+
+      const xDefaultHref = hreflangByLang.get('x-default');
+      const englishHref = hreflangByLang.get('en');
+      if (xDefaultHref && englishHref) {
+        const xDefaultComparableHref = normalizeComparableHref(xDefaultHref);
+        const englishComparableHref = normalizeComparableHref(englishHref);
+        if (
+          xDefaultComparableHref &&
+          englishComparableHref &&
+          xDefaultComparableHref !== englishComparableHref
+        ) {
+          hasHreflangSelfReferenceIssue = true;
+          failures.push({
+            type: 'x-default-hreflang-mismatch',
+            page: relPath,
+            xDefaultHref: xDefaultComparableHref,
+            englishHref: englishComparableHref,
+          });
+        }
+      }
+
       if (!hasXDefault) {
         metrics.pagesMissingXDefaultHreflang += 1;
         failures.push({
           type: 'missing-hreflang-x-default',
           page: relPath,
         });
+      }
+
+      if (hasHreflangSelfReferenceIssue) {
+        metrics.pagesWithHreflangSelfReferenceIssue += 1;
       }
 
       if (pageComparableHref) {

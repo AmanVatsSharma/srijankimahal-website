@@ -64,6 +64,8 @@ This audit catches those issues deterministically before deployment.
 16. Hreflang integrity:
    - no duplicate language entries
    - `x-default` exists when alternates are emitted
+   - current page language hreflang must self-reference canonical page URL
+   - `x-default` must align with English hreflang target when both are present
    - hreflang targets resolve to generated output
    - alternate pages include reciprocal hreflang links back
 17. Sitemap integrity:

@@ -15,6 +15,9 @@ Hindi room detail pages now use **language-native metadata** instead of reusing 
   - localized heading
   - localized meta description
   - localized Hindi keyword additions
+  - localized highlight bullet points
+- Price label localization:
+  - converts shared `per night (all meals included)` phrase to Hindi display copy.
 - Safe fallback keeps page functional if a slug is missing in the Hindi map:
   - fallback to shared `roomsConfig` values
 - Structured data parity:

@@ -46,6 +46,7 @@ This audit catches those issues deterministically before deployment.
 13. Sitemap integrity:
    - `sitemap-index.xml` exists and references main + image sitemap
    - `sitemap-0.xml` URLs are same-origin, unique, and resolvable in build output
+   - `sitemap-0.xml` does not include canonical URLs from pages marked `noindex`
    - sitemap excludes disallowed utility/docs URLs (`/404`, `.docs`)
 14. Robots integrity:
    - `robots.txt` exists

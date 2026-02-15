@@ -188,6 +188,7 @@ async function run() {
   const failures = [];
   const warnings = [];
   const descriptionsByContent = new Map();
+  const noindexCanonicalPaths = new Set();
   const metrics = {
     htmlFiles: htmlFiles.length,
     pagesWithCanonicalIssue: 0,
@@ -211,6 +212,7 @@ async function run() {
     sitemapLocInvalidOrigin: 0,
     sitemapLocDuplicateUrls: 0,
     sitemapLocDisallowedUrls: 0,
+    sitemapNoindexUrlLeaks: 0,
     robotsHasCrawlDelay: 0,
     robotsMissingSitemapRefs: 0,
     sitemapIndexMissingImageSitemapRef: 0,
@@ -248,6 +250,12 @@ async function run() {
           page: relPath,
           canonicalHref,
         });
+      } else if (localCanonicalHref) {
+        const robotsMetaMatch = html.match(/<meta name="robots" content="([^"]+)"/i);
+        const robotsDirectives = (robotsMetaMatch?.[1] ?? '').toLowerCase();
+        if (robotsDirectives.includes('noindex')) {
+          noindexCanonicalPaths.add(localCanonicalHref.split('?')[0]?.split('#')[0] ?? localCanonicalHref);
+        }
       }
     }
 
@@ -611,6 +619,15 @@ async function run() {
       if (!(await hasDistTarget(localHref))) {
         metrics.sitemapLocTargetMissing += 1;
         failures.push({ type: 'sitemap-url-target-missing', url: loc });
+      }
+
+      const noQueryNoHashHref = localHref.split('?')[0]?.split('#')[0] ?? localHref;
+      if (noindexCanonicalPaths.has(noQueryNoHashHref)) {
+        metrics.sitemapNoindexUrlLeaks += 1;
+        failures.push({
+          type: 'sitemap-contains-noindex-url',
+          url: loc,
+        });
       }
     }
   }

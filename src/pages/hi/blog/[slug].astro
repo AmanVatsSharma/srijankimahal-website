@@ -34,6 +34,10 @@ export async function getStaticPaths() {
   };
 
   const blogImports = import.meta.glob('../../../content/blog/hi/*.md');
+  const englishBlogImports = import.meta.glob('../../../content/blog/*.md');
+  const englishSlugs = new Set(
+    Object.keys(englishBlogImports).map((path) => path.split('/').pop()?.replace('.md', '') ?? '')
+  );
   const entries: BlogEntry[] = await Promise.all(
     Object.entries(blogImports).map(async ([path, resolver]) => {
       const mod = (await resolver()) as MarkdownModule;
@@ -58,15 +62,16 @@ export async function getStaticPaths() {
 
   return entries.map(({ slug, frontmatter, Content }) => ({
     params: { slug },
-    props: { slug, frontmatter, Content, allPosts },
+    props: { slug, frontmatter, Content, allPosts, hasEnglishAlternate: englishSlugs.has(slug) },
   }));
 }
 
-const { slug, frontmatter, Content, allPosts } = Astro.props as {
+const { slug, frontmatter, Content, allPosts, hasEnglishAlternate } = Astro.props as {
   slug: string;
   frontmatter: MarkdownModule['frontmatter'];
   Content: MarkdownModule['Content'];
   allPosts: Array<{ slug: string; frontmatter: MarkdownModule['frontmatter'] }>;
+  hasEnglishAlternate: boolean;
 };
 
 const post = { slug, ...frontmatter };
@@ -87,6 +92,12 @@ const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbs);
 
 const canonicalUrl = `https://www.srijanakimahaltrustofficial.com/hi/blog/${slug}`;
 const publishedIso = new Date(post.date).toISOString();
+const alternateLanguages = hasEnglishAlternate
+  ? [
+      { lang: 'en', url: `/blog/${slug}` },
+      { lang: 'hi', url: `/hi/blog/${slug}` },
+    ]
+  : [{ lang: 'hi', url: `/hi/blog/${slug}` }];
 
 const articleSchema = {
   '@context': 'https://schema.org',
@@ -114,6 +125,8 @@ const articleSchema = {
   ogType="article"
   ogImage="/og.jpg"
   lang="hi"
+  alternateLanguages={alternateLanguages}
+  disableDefaultHreflangPair={true}
 >
   <Fragment slot="head">
     <meta property="article:published_time" content={publishedIso} />

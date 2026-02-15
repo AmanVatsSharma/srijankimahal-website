@@ -15,6 +15,7 @@ interface Props {
   noindex?: boolean;
   lang?: 'en' | 'hi';
   alternateLanguages?: { lang: string; url: string }[];
+  disableDefaultHreflangPair?: boolean;
 }
 
 // Get SEO props with defaults
@@ -28,6 +29,7 @@ const {
   noindex = false,
   lang = 'en',
   alternateLanguages,
+  disableDefaultHreflangPair = false,
 }: Props = Astro.props;
 
 // Get current path for canonical URL generation
@@ -44,6 +46,7 @@ const seoConfig: SEOConfig = {
   noindex,
   lang,
   alternateLanguages,
+  disableDefaultHreflangPair,
 };
 
 const seoData = generateSEOData(seoConfig, currentPath);

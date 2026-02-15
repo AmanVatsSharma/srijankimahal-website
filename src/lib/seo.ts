@@ -66,6 +66,7 @@ export interface SEOConfig {
   noindex?: boolean;
   lang?: 'en' | 'hi';
   alternateLanguages?: { lang: string; url: string }[];
+  disableDefaultHreflangPair?: boolean;
 }
 
 /**
@@ -238,27 +239,55 @@ export function generateRobotsContent(noindex?: boolean): string {
  */
 export function generateHreflangTags(
   currentPath: string,
-  alternateLanguages?: { lang: string; url: string }[]
+  alternateLanguages?: { lang: string; url: string }[],
+  options?: {
+    disableDefaultPair?: boolean;
+    lang?: 'en' | 'hi';
+  }
 ): Array<{ rel: string; hreflang: string; href: string }> {
   debugLog('[SEO] Generating hreflang tags', { currentPath });
-  
+
   const tags: Array<{ rel: string; hreflang: string; href: string }> = [];
+  const disableDefaultPair = Boolean(options?.disableDefaultPair);
+  const currentLang = options?.lang || detectLangFromPath(currentPath);
 
-  // Always emit EN/HI hreflang pair for our URL strategy.
-  const { enPath, hiPath } = getHreflangTargets(currentPath);
-  const enUrl = generateCanonical(enPath);
-  const hiUrl = generateCanonical(hiPath);
+  const pushUniqueTag = (tag: { rel: string; hreflang: string; href: string }) => {
+    const alreadyExists = tags.some((existing) => existing.hreflang === tag.hreflang && existing.href === tag.href);
+    if (!alreadyExists) {
+      tags.push(tag);
+    }
+  };
 
-  tags.push({ rel: 'alternate', hreflang: 'x-default', href: enUrl });
-  tags.push({ rel: 'alternate', hreflang: 'en', href: enUrl });
-  tags.push({ rel: 'alternate', hreflang: 'hi', href: hiUrl });
+  const normalizeAlternateUrl = (url: string): string => {
+    return url.startsWith('http') ? generateCanonical(url) : generateCanonical(url);
+  };
+
+  if (!disableDefaultPair) {
+    // Always emit EN/HI hreflang pair for our URL strategy unless explicitly disabled.
+    const { enPath, hiPath } = getHreflangTargets(currentPath);
+    const enUrl = generateCanonical(enPath);
+    const hiUrl = generateCanonical(hiPath);
+
+    pushUniqueTag({ rel: 'alternate', hreflang: 'x-default', href: enUrl });
+    pushUniqueTag({ rel: 'alternate', hreflang: 'en', href: enUrl });
+    pushUniqueTag({ rel: 'alternate', hreflang: 'hi', href: hiUrl });
+  }
 
   // Optionally add additional alternates if provided (future proof)
   if (alternateLanguages?.length) {
     alternateLanguages.forEach(({ lang, url }) => {
-      const fullUrl = url.startsWith('http') ? url : generateCanonical(url);
-      tags.push({ rel: 'alternate', hreflang: lang, href: fullUrl });
+      const fullUrl = normalizeAlternateUrl(url);
+      pushUniqueTag({ rel: 'alternate', hreflang: lang, href: fullUrl });
     });
+  }
+
+  if (disableDefaultPair) {
+    const currentUrl = generateCanonical(currentPath);
+    const englishTagUrl = tags.find((tag) => tag.hreflang === 'en')?.href;
+    const defaultUrl = englishTagUrl || currentUrl;
+
+    pushUniqueTag({ rel: 'alternate', hreflang: currentLang, href: currentUrl });
+    pushUniqueTag({ rel: 'alternate', hreflang: 'x-default', href: defaultUrl });
   }
 
   return tags;
@@ -286,7 +315,10 @@ export function generateSEOData(config: SEOConfig, currentPath?: string) {
   const lang = config.lang || inferredLang;
   const ogTags = generateOGTags({ ...config, canonical, lang });
   const twitterTags = generateTwitterTags({ ...config, canonical, lang });
-  const hreflangTags = generateHreflangTags(currentPath || '/', config.alternateLanguages);
+  const hreflangTags = generateHreflangTags(currentPath || '/', config.alternateLanguages, {
+    disableDefaultPair: Boolean(config.disableDefaultHreflangPair),
+    lang,
+  });
 
   return {
     title,

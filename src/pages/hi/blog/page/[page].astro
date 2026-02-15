@@ -3,7 +3,7 @@
 import Layout from '../../../../layouts/Layout.astro';
 import Header from '../../../../components/Header.astro';
 import Footer from '../../../../components/Footer.astro';
-import { getAllBlogPostsByLang } from '../../../../lib/blog';
+import { getAllBlogPosts, getAllBlogPostsByLang } from '../../../../lib/blog';
 
 const PAGE_SIZE = 12;
 
@@ -18,7 +18,9 @@ export async function getStaticPaths() {
 }
 
 const allPosts = await getAllBlogPostsByLang('hi');
+const englishPosts = await getAllBlogPosts();
 const totalPages = Math.max(1, Math.ceil(allPosts.length / PAGE_SIZE));
+const englishTotalPages = Math.max(1, Math.ceil(englishPosts.length / PAGE_SIZE));
 
 const pageParam = Number(Astro.params.page);
 if (!Number.isFinite(pageParam) || pageParam < 2 || pageParam > totalPages) {
@@ -27,6 +29,13 @@ if (!Number.isFinite(pageParam) || pageParam < 2 || pageParam > totalPages) {
 
 const startIndex = (pageParam - 1) * PAGE_SIZE;
 const pagePosts = allPosts.slice(startIndex, startIndex + PAGE_SIZE);
+const hasEnglishAlternate = pageParam <= englishTotalPages;
+const alternateLanguages = hasEnglishAlternate
+  ? [
+      { lang: 'en', url: `/blog/page/${pageParam}` },
+      { lang: 'hi', url: `/hi/blog/page/${pageParam}` },
+    ]
+  : [{ lang: 'hi', url: `/hi/blog/page/${pageParam}` }];
 
 const siteUrl = (Astro.site?.toString() ?? 'https://www.srijanakimahaltrustofficial.com').replace(/\/$/, '');
 const prevHref = pageParam === 2 ? `${siteUrl}/hi/blog` : `${siteUrl}/hi/blog/page/${pageParam - 1}`;
@@ -72,6 +81,8 @@ const paginationItems = buildPagination(pageParam, totalPages);
   canonical={`/hi/blog/page/${pageParam}`}
   ogType="website"
   lang="hi"
+  alternateLanguages={alternateLanguages}
+  disableDefaultHreflangPair={true}
 >
   <Fragment slot="head">
     {prevHref && <link rel="prev" href={prevHref} />}

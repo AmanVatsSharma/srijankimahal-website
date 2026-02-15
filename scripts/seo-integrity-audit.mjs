@@ -558,6 +558,7 @@ async function run(options = { reportFile: null, strictWarnings: false }) {
     htmlFiles: htmlFiles.length,
     pagesWithCanonicalIssue: 0,
     canonicalTargetMissing: 0,
+    canonicalExternalOrigin: 0,
     pagesWithCanonicalRouteMismatch: 0,
     pagesWithSocialMetaIssues: 0,
     pagesWithSocialTextMismatch: 0,
@@ -570,7 +571,9 @@ async function run(options = { reportFile: null, strictWarnings: false }) {
     pagesWithMultipleRobotsMeta: 0,
     pagesWithRobotsDirectiveIssues: 0,
     ogUrlTargetMissing: 0,
+    ogUrlExternalOrigin: 0,
     twitterUrlTargetMissing: 0,
+    twitterUrlExternalOrigin: 0,
     socialImageTargetMissing: 0,
     invalidJsonLdScripts: 0,
     pagesWithH1Issue: 0,
@@ -726,6 +729,7 @@ async function run(options = { reportFile: null, strictWarnings: false }) {
       const expectedCanonicalHref = normalizeComparableHref(routePathFromDistRelative(relPath));
 
       if (!localCanonicalHref && ABSOLUTE_HTTP_PATTERN.test(canonicalHref)) {
+        metrics.canonicalExternalOrigin += 1;
         failures.push({
           type: 'canonical-external-origin',
           page: relPath,
@@ -765,6 +769,7 @@ async function run(options = { reportFile: null, strictWarnings: false }) {
       const localOgUrl = getLocalHrefFromAny(ogUrl);
       const ogComparableHref = normalizeComparableHref(ogUrl);
       if (!localOgUrl && ABSOLUTE_HTTP_PATTERN.test(ogUrl)) {
+        metrics.ogUrlExternalOrigin += 1;
         failures.push({
           type: 'og-url-external-origin',
           page: relPath,
@@ -798,6 +803,7 @@ async function run(options = { reportFile: null, strictWarnings: false }) {
       const localTwitterUrl = getLocalHrefFromAny(twitterUrl);
       const twitterComparableHref = normalizeComparableHref(twitterUrl);
       if (!localTwitterUrl && ABSOLUTE_HTTP_PATTERN.test(twitterUrl)) {
+        metrics.twitterUrlExternalOrigin += 1;
         failures.push({
           type: 'twitter-url-external-origin',
           page: relPath,

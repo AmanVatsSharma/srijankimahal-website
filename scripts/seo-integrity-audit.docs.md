@@ -35,6 +35,7 @@ This audit catches those issues deterministically before deployment.
 4. Social URL targets (`og:url`, `twitter:url`) resolve to generated output.
    - `og:url` must match canonical target
    - `twitter:url` must match canonical target
+   - canonical/OG/Twitter URLs must stay on canonical site origin
 5. Social image paths (`og:image`, `twitter:image`) exist in build output for same-origin assets.
 6. Social meta completeness:
    - required OG/Twitter tags must exist exactly once and be non-empty

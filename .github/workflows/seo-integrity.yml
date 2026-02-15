@@ -90,6 +90,7 @@ jobs:
             `- Warnings: **${report.warningCount ?? 0}**`,
             `- Pages audited: **${metrics.htmlFiles ?? 'n/a'}**`,
             `- Canonical issues: **${metrics.pagesWithCanonicalIssue ?? 0}**`,
+            `- External-origin canonical/social URL issues: **${(metrics.canonicalExternalOrigin ?? 0) + (metrics.ogUrlExternalOrigin ?? 0) + (metrics.twitterUrlExternalOrigin ?? 0)}**`,
             `- Canonical route mismatches: **${metrics.pagesWithCanonicalRouteMismatch ?? 0}**`,
             `- Social meta integrity issues: **${metrics.pagesWithSocialMetaIssues ?? 0}**`,
             `- Social text parity mismatch pages: **${metrics.pagesWithSocialTextMismatch ?? 0}**`,

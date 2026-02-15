@@ -3,10 +3,23 @@
 import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
+import TrustAssurancePanel from '../../components/TrustAssurancePanel.astro';
 import { generateBreadcrumbSchema, generateStandardBreadcrumbs } from '../../lib/schemas/breadcrumb';
 
 const breadcrumbs = generateStandardBreadcrumbs('Official', '/hi/official');
 const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbs);
+const webPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'श्री जानकी महल ट्रस्ट आधिकारिक सत्यापन',
+  description:
+    'श्री जानकी महल ट्रस्ट के लिए आधिकारिक सत्यापन पेज, विश्वसनीय संपर्क चैनल और फर्जी बुकिंग से बचाव जानकारी।',
+  url: 'https://www.srijanakimahaltrustofficial.com/hi/official',
+  inLanguage: 'hi-IN',
+  isPartOf: {
+    '@id': 'https://www.srijanakimahaltrustofficial.com/#website',
+  },
+};
 ---
 
 <Layout
@@ -123,11 +136,14 @@ const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbs);
             </a>
           </div>
         </div>
+
+        <TrustAssurancePanel lang="hi" />
       </div>
     </section>
   </main>
 
   {breadcrumbSchema && <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />}
+  <script type="application/ld+json" set:html={JSON.stringify(webPageSchema)} />
   <Footer />
 </Layout>
 

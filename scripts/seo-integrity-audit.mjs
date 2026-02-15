@@ -205,6 +205,15 @@ function decodeBasicEntities(text) {
     .replaceAll('&amp;', '&');
 }
 
+function parseMetaDirectives(content) {
+  return new Set(
+    content
+      .split(',')
+      .map((directive) => directive.trim().toLowerCase())
+      .filter(Boolean)
+  );
+}
+
 function toRelative(absPath) {
   return path.relative(DIST_DIR, absPath).replaceAll(path.sep, '/');
 }
@@ -413,6 +422,9 @@ async function run(options = { reportFile: null, strictWarnings: false }) {
     pagesMissingDescription: 0,
     titlesOutsideRecommendedRange: 0,
     descriptionsOutsideRecommendedRange: 0,
+    pagesMissingRobotsMeta: 0,
+    pagesWithMultipleRobotsMeta: 0,
+    pagesWithRobotsDirectiveIssues: 0,
     ogUrlTargetMissing: 0,
     twitterUrlTargetMissing: 0,
     socialImageTargetMissing: 0,
@@ -497,6 +509,59 @@ async function run(options = { reportFile: null, strictWarnings: false }) {
         canonicalCount,
       });
     }
+    const robotsMetaMatches = Array.from(html.matchAll(/<meta name="robots" content="([^"]*)"/gi));
+    const robotsMetaCount = robotsMetaMatches.length;
+    const robotsMetaContent = (robotsMetaMatches[0]?.[1] ?? '').trim();
+    const robotsDirectives = parseMetaDirectives(robotsMetaContent);
+    const hasNoindexDirective = robotsDirectives.has('noindex');
+
+    if (robotsMetaCount === 0) {
+      metrics.pagesMissingRobotsMeta += 1;
+      metrics.pagesWithRobotsDirectiveIssues += 1;
+      failures.push({
+        type: 'missing-robots-meta',
+        page: relPath,
+      });
+    } else {
+      if (robotsMetaCount > 1) {
+        metrics.pagesWithMultipleRobotsMeta += 1;
+        metrics.pagesWithRobotsDirectiveIssues += 1;
+        failures.push({
+          type: 'multiple-robots-meta',
+          page: relPath,
+          count: robotsMetaCount,
+        });
+      }
+
+      if (hasNoindexDirective) {
+        const missingNoindexCompanions = ['nofollow', 'noarchive'].filter(
+          (directive) => !robotsDirectives.has(directive)
+        );
+        if (missingNoindexCompanions.length > 0) {
+          metrics.pagesWithRobotsDirectiveIssues += 1;
+          failures.push({
+            type: 'robots-noindex-missing-companion-directives',
+            page: relPath,
+            missing: missingNoindexCompanions,
+            robots: robotsMetaContent,
+          });
+        }
+      } else {
+        const missingIndexDirectives = ['index', 'follow'].filter(
+          (directive) => !robotsDirectives.has(directive)
+        );
+        if (missingIndexDirectives.length > 0) {
+          metrics.pagesWithRobotsDirectiveIssues += 1;
+          failures.push({
+            type: 'robots-index-missing-directives',
+            page: relPath,
+            missing: missingIndexDirectives,
+            robots: robotsMetaContent,
+          });
+        }
+      }
+    }
+
     let canonicalComparableHref = null;
     const canonicalHrefMatch = html.match(/<link rel="canonical" href="([^"]+)"/i);
     if (canonicalHrefMatch?.[1]) {
@@ -518,9 +583,7 @@ async function run(options = { reportFile: null, strictWarnings: false }) {
           canonicalHref,
         });
       } else if (localCanonicalHref) {
-        const robotsMetaMatch = html.match(/<meta name="robots" content="([^"]+)"/i);
-        const robotsDirectives = (robotsMetaMatch?.[1] ?? '').toLowerCase();
-        if (robotsDirectives.includes('noindex') && canonicalComparableHref) {
+        if (hasNoindexDirective && canonicalComparableHref) {
           noindexCanonicalPaths.add(canonicalComparableHref);
         } else if (canonicalComparableHref) {
           indexableCanonicalPaths.add(canonicalComparableHref);

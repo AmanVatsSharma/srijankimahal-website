@@ -42,30 +42,34 @@ This audit catches those issues deterministically before deployment.
 7. Language consistency checks:
    - `<html lang>` matches route locale (`/hi/*` -> `hi`, else `en`)
    - `og:locale` matches page language (`en_IN` or `hi_IN`)
-8. H1 count is exactly `1` per page.
-9. JSON-LD payloads parse as valid JSON.
-10. No literal `{JSON.stringify(...)}` text leaked into output.
-11. All `<img>` tags include:
+8. Page-level robots meta integrity:
+   - exactly one `<meta name="robots">` tag per page
+   - `noindex` pages must also include `nofollow,noarchive`
+   - indexable pages must include `index,follow`
+9. H1 count is exactly `1` per page.
+10. JSON-LD payloads parse as valid JSON.
+11. No literal `{JSON.stringify(...)}` text leaked into output.
+12. All `<img>` tags include:
    - `alt`
    - `width`
    - `height`
-12. Internal local links resolve to generated output files.
-13. Hreflang integrity:
+13. Internal local links resolve to generated output files.
+14. Hreflang integrity:
    - no duplicate language entries
    - `x-default` exists when alternates are emitted
    - hreflang targets resolve to generated output
    - alternate pages include reciprocal hreflang links back
-14. Sitemap integrity:
+15. Sitemap integrity:
    - `sitemap-index.xml` exists and references main + image sitemap
    - `sitemap-0.xml` URLs are same-origin, unique, and resolvable in build output
    - `sitemap-0.xml` does not include canonical URLs from pages marked `noindex`
    - all indexable canonical URLs are present in `sitemap-0.xml`
    - sitemap excludes disallowed utility/docs URLs (`/404`, `.docs`)
-15. Robots integrity:
+16. Robots integrity:
    - `robots.txt` exists
    - no `Crawl-delay`
    - includes sitemap index + image sitemap references
-16. Dist route hygiene check for `.docs` tokens.
+17. Dist route hygiene check for `.docs` tokens.
 
 > Note: explicit `/404` and `/hi/404` link targets are ignored as controlled exceptions for error-page UX.
 > Note: image sitemap reference warning is only emitted when `image-sitemap.xml` is missing from **both** `sitemap-index.xml` and `robots.txt`.
@@ -158,6 +162,7 @@ For each page:
   - social URL/image target checks + canonical parity
   - OG locale alternate checks
   - HTML lang + OG locale language checks
+  - robots meta directive checks
   - h1 count
   - JSON-LD parse
   - image attr checks

@@ -41,6 +41,7 @@ Latest production-ready hardening completed:
   - audit dist-target existence checks now use caching to keep validation fast as pages scale
   - audit supports strict warning mode (`--strict-warnings` / `SEO_AUDIT_STRICT_WARNINGS`)
   - SEO CI now runs audit in strict warning mode for stronger regression gating
+  - page-level robots meta directives are now validated for indexable/noindex consistency
   - Audit now validates:
     - canonical/hreflang target integrity
     - social URL canonical parity (`og:url`, `twitter:url`)

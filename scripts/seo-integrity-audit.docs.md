@@ -83,10 +83,22 @@ This audit catches those issues deterministically before deployment.
 npm run seo:audit
 ```
 
+Strict audit (warnings fail run):
+
+```bash
+npm run seo:audit:strict
+```
+
 Combined build + audit:
 
 ```bash
 npm run seo:verify
+```
+
+Combined build + strict audit:
+
+```bash
+npm run seo:verify:strict
 ```
 
 Generate a JSON report file:

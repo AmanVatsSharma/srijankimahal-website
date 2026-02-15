@@ -40,6 +40,7 @@ Latest production-ready hardening completed:
   - shared SEO utility now normalizes generated title/description lengths to keep pages within recommended ranges
   - audit dist-target existence checks now use caching to keep validation fast as pages scale
   - audit supports strict warning mode (`--strict-warnings` / `SEO_AUDIT_STRICT_WARNINGS`)
+  - npm shortcuts added for strict runs: `seo:audit:strict`, `seo:verify:strict`
   - SEO CI now runs audit in strict warning mode for stronger regression gating
   - page-level robots meta directives are now validated for indexable/noindex consistency
   - Audit now validates:

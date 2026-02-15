@@ -46,7 +46,7 @@ jobs:
           # The next step enforces failure explicitly based on captured exit code.
           # Strict warning mode ensures warning-level regressions are treated as failures in CI.
           set +e
-          npm run seo:audit -- --report-file reports/seo-audit-report.json --strict-warnings
+          npm run seo:audit:strict -- --report-file reports/seo-audit-report.json
           exit_code=$?
           echo "exit_code=${exit_code}" >> "$GITHUB_OUTPUT"
           exit 0

@@ -295,6 +295,24 @@ function extractScriptContentsByType(html, scriptType) {
   return contents;
 }
 
+function extractHrefAttributeEntries(html) {
+  const entries = [];
+  const tagRegex = /<([a-zA-Z][\w:-]*)\b([^>]*)>/gi;
+
+  for (const match of html.matchAll(tagRegex)) {
+    const attributes = extractTagAttributes(match[2] ?? '');
+    if (!attributes.has('href')) {
+      continue;
+    }
+    entries.push({
+      tag: (match[1] ?? '').toLowerCase(),
+      href: (attributes.get('href') ?? '').trim(),
+    });
+  }
+
+  return entries;
+}
+
 function extractMetaContentsByKey(html, metaKey) {
   const normalizedMetaKey = metaKey.trim().toLowerCase();
   if (!normalizedMetaKey) return [];
@@ -1213,9 +1231,9 @@ async function run(options = { reportFile: null, strictWarnings: false }) {
     }
 
     // Internal link existence check.
-    const hrefRegex = /href="([^"]+)"/gi;
-    for (const hrefMatch of html.matchAll(hrefRegex)) {
-      const href = hrefMatch[1] ?? '';
+    const hrefEntries = extractHrefAttributeEntries(html);
+    for (const hrefEntry of hrefEntries) {
+      const href = hrefEntry.href;
 
       if (
         !href ||

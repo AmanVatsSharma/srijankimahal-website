@@ -69,6 +69,7 @@ This audit catches those issues deterministically before deployment.
    - `width`
    - `height`
 15. Internal local links resolve to generated output files.
+   - href extraction is attribute-order/quote-style agnostic
 16. Hreflang integrity:
    - each hreflang alternate link must include non-empty `hreflang` and `href`
    - no duplicate language entries

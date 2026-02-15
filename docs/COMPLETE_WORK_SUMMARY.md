@@ -56,6 +56,7 @@ Latest production-ready hardening completed:
   - canonical links now enforce non-empty href and hreflang links now enforce valid entry shape
   - canonical/og/twitter URLs now fail audit when query strings or fragments are present
   - JSON-LD script extraction now handles script-type attribute order/quote variance
+  - internal href extraction now handles attribute-order/quote variance for link auditing
   - JSON-LD validation now includes structural checks for `@context` and `@type` presence
   - hreflang now enforces self-reference and x-default-to-English alignment checks
   - sitemap-index references now validated for same-origin, uniqueness, XML format, and build-target existence

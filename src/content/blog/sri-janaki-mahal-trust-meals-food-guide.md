@@ -17,8 +17,7 @@ Complete guide to meals, food, and dining experience at Sri Janaki Mahal Trust. 
 
 ## All Meals Included
 
-### What'
-  -s Included
+### What's Included
 
 **All Meals Included in Room Price:**
 - ✅ Breakfast (Morning meal)
@@ -121,8 +120,7 @@ Complete guide to meals, food, and dining experience at Sri Janaki Mahal Trust. 
 
 ## Meal Inclusions
 
-### What'
-  -s Covered
+### What's Covered
 
 **Included:**
 - All three meals
@@ -152,8 +150,7 @@ Complete guide to meals, food, and dining experience at Sri Janaki Mahal Trust. 
 - Inform during booking
 - Contact reception
 - Discuss requirements
-- We'
-  -ll try to accommodate
+- We'll try to accommodate
 
 ## Meal FAQs
 
@@ -171,8 +168,7 @@ Breakfast: Early morning, Lunch: Midday, Dinner: Evening. Contact reception for 
 
 ### Can I get special dietary food?
 
-Contact us in advance for special dietary requirements. We'
-  -ll try to accommodate when possible.
+Contact us in advance for special dietary requirements. We'll try to accommodate when possible.
 
 ### Is non-vegetarian food available?
 
@@ -188,8 +184,7 @@ Yes, meals are served on scheduled timings. Contact reception for exact schedule
 
 ## Value Proposition
 
-### Why It'
-  -s Great
+### Why It's Great
 
 **Benefits:**
 - All meals included

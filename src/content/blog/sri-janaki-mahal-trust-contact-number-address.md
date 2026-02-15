@@ -98,8 +98,7 @@ Search for "Sri Janaki Mahal Trust, Karsewakpuram, Ayodhya"
 
 **Step 1:** Dial +91 9102319329
 
-**Step 2:** You'
-  -ll be connected to our booking team
+**Step 2:** You'll be connected to our booking team
 
 **Step 3:** Provide your inquiry details
 
@@ -337,8 +336,7 @@ Changes: [Details]
 
 **Response Time:** Immediate
 
-**Note:** We'
-  -re always available for urgent matters
+**Note:** We're always available for urgent matters
 
 ## Social Media
 

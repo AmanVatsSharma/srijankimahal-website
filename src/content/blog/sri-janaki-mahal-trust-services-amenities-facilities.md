@@ -199,8 +199,7 @@ Complete guide to all services, amenities, and facilities available at Sri Janak
 - Guest satisfaction
 - Continuous improvement
 
-## What'
-  -s Included Summary
+## What's Included Summary
 
 ### Complete Package
 

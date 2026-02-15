@@ -204,8 +204,7 @@ Complete guide to AC and Non-AC rooms at Sri Janaki Mahal Trust. Learn about dif
 
 ## FAQs
 
-### What'
-  -s the difference between AC and Non-AC?
+### What's the difference between AC and Non-AC?
 
 AC rooms have air conditioning for controlled temperature. Non-AC rooms have natural ventilation and fans.
 
@@ -238,8 +237,7 @@ Both are suitable. Choose AC for comfort or Non-AC for budget. Contact us for re
 - 💬 WhatsApp: +91 9102319329
 - 📧 Email: srijanakimahaltrustofficial@gmail.com
 
-**We'
-  -ll Help:**
+**We'll Help:**
 - Recommend room type
 - Explain differences
 - Assist with booking

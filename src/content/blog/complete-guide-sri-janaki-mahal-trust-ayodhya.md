@@ -56,8 +56,7 @@ Room rates range from ₹1,250 to ₹4,150 per night, depending on:
 
 **Important:** All prices include breakfast, lunch, and dinner.
 
-## What'
-  -s Included in Your Stay
+## What's Included in Your Stay
 
 ### Accommodation Features
 
@@ -156,8 +155,7 @@ While walk-ins may be available, advance booking is recommended, especially duri
 
 ## Conclusion
 
-Sri Janaki Mahal Trust offers the perfect combination of comfort and convenience for your Ayodhya visit. With its prime location, inclusive meals, and warm hospitality, it'
-  -s an ideal choice for devotees seeking a peaceful stay near Ram Mandir.
+Sri Janaki Mahal Trust offers the perfect combination of comfort and convenience for your Ayodhya visit. With its prime location, inclusive meals, and warm hospitality, it's an ideal choice for devotees seeking a peaceful stay near Ram Mandir.
 
 Book your stay today and experience the divine hospitality of Sri Janaki Mahal Trust!
 

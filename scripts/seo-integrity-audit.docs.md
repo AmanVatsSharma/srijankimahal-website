@@ -72,6 +72,7 @@ This audit catches those issues deterministically before deployment.
    - href extraction is attribute-order/quote-style agnostic
 16. Hreflang integrity:
    - each hreflang alternate link must include non-empty `hreflang` and `href`
+   - each `hreflang` value must match allowed language syntax (e.g. `en`, `hi`, `en-IN`, `x-default`)
    - no duplicate language entries
    - `x-default` exists when alternates are emitted
    - current page language hreflang must self-reference canonical page URL

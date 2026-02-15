@@ -100,6 +100,7 @@ jobs:
             `- Hreflang target missing: **${metrics.hreflangTargetMissing ?? 0}**`,
             `- Hreflang self-reference issues: **${metrics.pagesWithHreflangSelfReferenceIssue ?? 0}**`,
             `- Invalid hreflang entries: **${metrics.pagesWithInvalidHreflangEntries ?? 0}**`,
+            `- Invalid hreflang values: **${metrics.pagesWithInvalidHreflangValues ?? 0}**`,
             `- Hreflang reciprocity issues: **${metrics.pagesWithHreflangReciprocalIssue ?? 0}**`,
             `- OG locale/hreflang mismatch: **${metrics.pagesWithOgLocaleAltMismatch ?? 0}**`,
             `- Invalid JSON-LD: **${metrics.invalidJsonLdScripts ?? 0}**`,

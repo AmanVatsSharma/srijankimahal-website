@@ -23,6 +23,7 @@ const ROBOTS_SITEMAP_REGEX = /^\s*sitemap:\s*(\S+)\s*$/gim;
 const XML_FILE_PATTERN = /\.xml$/i;
 const PRIMARY_SITEMAP_FILE_PATTERN = /^sitemap-\d+\.xml$/i;
 const IMAGE_SITEMAP_FILE_NAME = 'image-sitemap.xml';
+const HREFLANG_VALUE_PATTERN = /^(x-default|[a-z]{2,3}(?:-[a-z]{2})?)$/i;
 const REPORT_FILE_ENV_KEY = 'SEO_AUDIT_REPORT_FILE';
 const STRICT_WARNINGS_ENV_KEY = 'SEO_AUDIT_STRICT_WARNINGS';
 const TITLE_LENGTH_RECOMMENDED = { min: 20, max: 70 };
@@ -662,6 +663,7 @@ async function run(options = { reportFile: null, strictWarnings: false }) {
     pagesWithDuplicateHreflangLangs: 0,
     pagesMissingXDefaultHreflang: 0,
     pagesWithInvalidHreflangEntries: 0,
+    pagesWithInvalidHreflangValues: 0,
     pagesWithHreflangSelfReferenceIssue: 0,
     pagesWithHreflangReciprocalIssue: 0,
     pagesWithOgLocaleIssues: 0,
@@ -1280,6 +1282,7 @@ async function run(options = { reportFile: null, strictWarnings: false }) {
       let hasDuplicateLang = false;
       let hasXDefault = false;
       let hasHreflangSelfReferenceIssue = false;
+      let hasInvalidHreflangValue = false;
       const currentPageLang = relPath.startsWith('hi/') ? 'hi' : 'en';
       const pageComparableHref =
         canonicalComparableHref ?? normalizeComparableHref(routePathFromDistRelative(relPath));
@@ -1288,6 +1291,15 @@ async function run(options = { reportFile: null, strictWarnings: false }) {
 
       for (const entry of hreflangEntries) {
         if (!entry.hreflang || !entry.href) continue;
+
+        if (!HREFLANG_VALUE_PATTERN.test(entry.hreflang)) {
+          hasInvalidHreflangValue = true;
+          failures.push({
+            type: 'invalid-hreflang-value',
+            page: relPath,
+            hreflang: entry.hreflang,
+          });
+        }
 
         if (!hreflangByLang.has(entry.hreflang)) {
           hreflangByLang.set(entry.hreflang, entry.href);
@@ -1387,6 +1399,10 @@ async function run(options = { reportFile: null, strictWarnings: false }) {
           type: 'missing-hreflang-x-default',
           page: relPath,
         });
+      }
+
+      if (hasInvalidHreflangValue) {
+        metrics.pagesWithInvalidHreflangValues += 1;
       }
 
       if (hasHreflangSelfReferenceIssue) {

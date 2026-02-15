@@ -329,6 +329,9 @@ docs/
 - [ ] Advanced A/B testing
 - [ ] Multi-language support (Hindi)
 
+### Owner execution checklist
+- See: `docs/NEXT_STEPS_OWNER_CHECKLIST.md` for weekly/off-page execution steps required from business side.
+
 ---
 
 ## 📈 Expected Impact

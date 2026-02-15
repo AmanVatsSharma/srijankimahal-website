@@ -1,8 +1,8 @@
 # Complete SEO Work Summary - Sri Janaki Mahal Trust Website
 
 **Project:** Sri Janaki Mahal Trust Website SEO Optimization  
-**Date:** 2025-02-14  
-**Status:** Phase 1 & 2 Complete - Strong Foundation Established
+**Date:** 2026-02-15  
+**Status:** Phase 1 & 2 Complete + Trust/Automation Enhancements Added
 
 ---
 
@@ -17,6 +17,35 @@
 ---
 
 ## ✅ Completed Work
+
+### 0. 2026-02-15 Enhancement Addendum
+
+#### Blog and Navigation UX SEO
+- ✅ Fixed page-1 pagination issues in:
+  - `src/pages/blog/index.astro`
+  - `src/pages/hi/blog/index.astro`
+- ✅ Upgraded paginated route navigation windows in:
+  - `src/pages/blog/page/[page].astro`
+  - `src/pages/hi/blog/page/[page].astro`
+- ✅ Added FAQ navigation links in header for faster section discovery
+
+#### FAQ and Trust Intent Expansion
+- ✅ Converted FAQ section to compact accordion UI (`src/components/FAQSection.astro`)
+- ✅ Added new trust-verification FAQs (payment verification, grievance handling, fake listing defense)
+- ✅ Improved long-tail intent capture around trust and official-channel verification
+
+#### Trust-Factor Content Reinforcement (Existing Pages)
+- ✅ Added reusable trust assurance panel (`src/components/TrustAssurancePanel.astro`)
+- ✅ Embedded panel in trust/legal/about pages across EN + HI where applicable
+- ✅ Added breadcrumb + WebPage schema to legal pages and about pages where missing
+- ✅ Strengthened footer trust links (official verification + official booking)
+
+#### Sitemap Automation
+- ✅ Replaced static image sitemap with generated route:
+  - `src/pages/image-sitemap.xml.ts`
+- ✅ Image sitemap now auto-updates from `public/` image assets at build time
+- ✅ Updated `robots.txt` with both sitemap URLs
+- ✅ Added sitemap filtering in `astro.config.mjs` to keep XML utility routes out of primary page sitemap
 
 ### 1. Core SEO Infrastructure
 
@@ -347,6 +376,6 @@ The website now has a **strong SEO foundation** with:
 
 ---
 
-**Last Updated:** 2025-02-14  
+**Last Updated:** 2026-02-15  
 **Total Work:** ~60,000+ words, 8 new pages, 19 blog posts, 6 schema types
 

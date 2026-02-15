@@ -6,6 +6,15 @@ This checklist is the off-page + operations side required to convert strong tech
 
 ---
 
+## 0) Pre-Deploy Technical Gate (every release)
+
+- Run:
+  - `npm run seo:verify:strict`
+- Only deploy when the audit passes with zero failures.
+- If audit fails, fix reported issues first (canonical, hreflang, sitemap, robots, metadata parity).
+
+---
+
 ## 1) Google Business Profile (GBP) — Week 1
 
 - Claim + verify GBP listing.

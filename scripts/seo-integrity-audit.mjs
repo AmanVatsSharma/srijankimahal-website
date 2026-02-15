@@ -240,17 +240,25 @@ function parseMetaDirectives(content) {
   );
 }
 
-function escapeForRegex(value) {
-  return value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-}
-
 function extractMetaContentsByKey(html, metaKey) {
-  const escapedMetaKey = escapeForRegex(metaKey);
-  const pattern = new RegExp(
-    `<meta[^>]+(?:property|name)=["']${escapedMetaKey}["'][^>]*content=(["'])([\\s\\S]*?)\\1[^>]*>`,
-    'gi'
-  );
-  return Array.from(html.matchAll(pattern)).map((match) => (match[2] ?? '').trim());
+  const normalizedMetaKey = metaKey.trim().toLowerCase();
+  if (!normalizedMetaKey) return [];
+
+  const values = [];
+  const metaTagRegex = /<meta\b[^>]*>/gi;
+  for (const tagMatch of html.matchAll(metaTagRegex)) {
+    const tagMarkup = tagMatch[0] ?? '';
+    const keyMatch = tagMarkup.match(/(?:property|name)\s*=\s*(["'])([\s\S]*?)\1/i);
+    const resolvedKey = (keyMatch?.[2] ?? '').trim().toLowerCase();
+    if (!resolvedKey || resolvedKey !== normalizedMetaKey) {
+      continue;
+    }
+
+    const contentMatch = tagMarkup.match(/content\s*=\s*(["'])([\s\S]*?)\1/i);
+    values.push((contentMatch?.[2] ?? '').trim());
+  }
+
+  return values;
 }
 
 function isNonNullObject(value) {

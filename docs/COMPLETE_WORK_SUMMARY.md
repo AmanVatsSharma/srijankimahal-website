@@ -49,6 +49,7 @@ Latest production-ready hardening completed:
   - canonical validation now enforces self-route alignment per generated page
   - social meta tags now checked for completeness, uniqueness, and valid twitter card values
   - social title/description tags now verified to match page title + meta description
+  - social meta extraction now handles attribute-order variance in generated meta tags
   - JSON-LD validation now includes structural checks for `@context` and `@type` presence
   - hreflang now enforces self-reference and x-default-to-English alignment checks
   - sitemap-index references now validated for same-origin, uniqueness, XML format, and build-target existence

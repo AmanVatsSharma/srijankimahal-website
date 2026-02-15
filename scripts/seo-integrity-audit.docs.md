@@ -62,6 +62,7 @@ This audit catches those issues deterministically before deployment.
 12. JSON-LD structure integrity:
    - at least one `@context` exists per JSON-LD script payload
    - schema nodes include valid `@type`
+   - JSON-LD script extraction is attribute-order/quote-style agnostic for script `type`
 13. No literal `{JSON.stringify(...)}` text leaked into output.
 14. All `<img>` tags include:
    - `alt`

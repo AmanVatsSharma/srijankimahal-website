@@ -277,6 +277,24 @@ function extractLinkTagEntries(html) {
   return entries;
 }
 
+function extractScriptContentsByType(html, scriptType) {
+  const normalizedType = scriptType.trim().toLowerCase();
+  if (!normalizedType) return [];
+
+  const contents = [];
+  const scriptTagRegex = /<script\b([^>]*)>([\s\S]*?)<\/script>/gi;
+  for (const match of html.matchAll(scriptTagRegex)) {
+    const attributes = extractTagAttributes(match[1] ?? '');
+    const typeValue = (attributes.get('type') ?? '').trim().toLowerCase();
+    if (typeValue !== normalizedType) {
+      continue;
+    }
+    contents.push((match[2] ?? '').trim());
+  }
+
+  return contents;
+}
+
 function extractMetaContentsByKey(html, metaKey) {
   const normalizedMetaKey = metaKey.trim().toLowerCase();
   if (!normalizedMetaKey) return [];
@@ -1126,10 +1144,9 @@ async function run(options = { reportFile: null, strictWarnings: false }) {
     }
 
     // JSON-LD parse validation.
-    const jsonLdRegex = /<script type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/gi;
+    const jsonLdScripts = extractScriptContentsByType(html, 'application/ld+json');
     let pageHasJsonLdStructureIssue = false;
-    for (const match of html.matchAll(jsonLdRegex)) {
-      const rawScript = (match[1] ?? '').trim();
+    for (const rawScript of jsonLdScripts) {
       if (!rawScript) continue;
       const normalizedJsonText = decodeBasicEntities(rawScript);
 

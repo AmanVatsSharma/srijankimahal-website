@@ -5,6 +5,7 @@ import Header from '../../../components/Header.astro';
 import Footer from '../../../components/Footer.astro';
 import FloatingWhatsApp from '../../../components/FloatingWhatsApp.astro';
 import { generateBreadcrumbSchema } from '../../../lib/schemas/breadcrumb';
+import { SCHEMA_TELEPHONE } from '../../../lib/constants';
 import { roomsConfig } from '../../rooms/[slug].astro';
 
 export async function getStaticPaths() {
@@ -20,17 +21,224 @@ if (!room) {
   throw new Error(`Room slug "${slug}" not found in configuration`);
 }
 
+/**
+ * Hindi-localized metadata/content for room detail pages.
+ *
+ * Why this exists:
+ * - Avoid EN/HI duplicate meta descriptions for equivalent room slugs.
+ * - Improve Hindi SERP relevance and readability for local-language users.
+ */
+const localizedRoomContent: Record<
+  string,
+  {
+    title: string;
+    heading: string;
+    metaDescription: string;
+    keywords: string[];
+    highlights: string[];
+  }
+> = {
+  '2-bed-ac': {
+    title: '2 बेड एसी रूम - श्री जानकी महल ट्रस्ट अयोध्या | आधिकारिक बुकिंग',
+    heading: '2 बेड एसी रूम - आधिकारिक श्री जानकी महल ट्रस्ट बुकिंग',
+    metaDescription:
+      'अयोध्या में श्री जानकी महल ट्रस्ट का 2 बेड एसी रूम बुक करें। छोटे परिवार और दंपति के लिए आरामदायक विकल्प। आधिकारिक सहायता नंबर: +91 9102319329।',
+    keywords: ['2 बेड एसी रूम अयोध्या', 'श्री जानकी महल ट्रस्ट एसी कमरा', 'अयोध्या आधिकारिक रूम बुकिंग'],
+    highlights: [
+      'साइलेंट कूलिंग के साथ आरामदायक एसी सुविधा',
+      'टैरिफ में नाश्ता, दोपहर और रात का भोजन शामिल',
+      'तीर्थ यात्रियों के लिए अलमारी और उपयोगी स्टोरेज',
+      '24/7 गर्म पानी और स्वच्छ कमरे',
+      'दैनिक हाउसकीपिंग और सैनिटाइज्ड लिनन',
+    ],
+  },
+  '2-bed-non-ac': {
+    title: '2 बेड नॉन-एसी रूम - श्री जानकी महल ट्रस्ट आधिकारिक बुकिंग',
+    heading: '2 बेड नॉन-एसी रूम - किफायती और सत्यापित बुकिंग',
+    metaDescription:
+      'श्री जानकी महल ट्रस्ट अयोध्या का 2 बेड नॉन-एसी रूम बजट यात्रियों के लिए उपयुक्त है। राम मंदिर के पास शांत ठहराव और आधिकारिक बुकिंग सहायता उपलब्ध।',
+    keywords: ['2 बेड नॉन एसी कमरा', 'अयोध्या बजट रूम', 'श्री जानकी महल ट्रस्ट नॉन एसी बुकिंग'],
+    highlights: [
+      'प्राकृतिक वेंटिलेशन के साथ आरामदायक कमरा',
+      'सभी मुख्य भोजन पैकेज में शामिल',
+      'बजट यात्रियों के लिए किफायती विकल्प',
+      'अटैच बाथरूम और 24/7 पानी सुविधा',
+      'शांत वातावरण, पूजा-पाठ के लिए उपयुक्त',
+    ],
+  },
+  '3-bed-ac': {
+    title: '3 बेड एसी रूम - श्री जानकी महल ट्रस्ट फैमिली स्टे',
+    heading: '3 बेड एसी रूम - परिवार के लिए आरामदायक विकल्प',
+    metaDescription:
+      'परिवार के साथ अयोध्या यात्रा के लिए श्री जानकी महल ट्रस्ट का 3 बेड एसी रूम चुनें। राम मंदिर के नज़दीक आरामदायक ठहराव और आधिकारिक बुकिंग सुविधा।',
+    keywords: ['3 बेड एसी फैमिली रूम', 'अयोध्या फैमिली स्टे', 'श्री जानकी महल ट्रस्ट 3 बेड बुकिंग'],
+    highlights: [
+      'परिवार के लिए पर्याप्त स्पेस वाला कमरा',
+      'व्यक्तिगत तापमान नियंत्रण के साथ एसी सुविधा',
+      'नाश्ता, लंच और डिनर सम्मिलित',
+      'साफ-सुथरा कमरा और नियमित देखभाल',
+      'आरामदायक ठहराव के लिए शांत वातावरण',
+    ],
+  },
+  '3-bed-non-ac': {
+    title: '3 बेड नॉन-एसी रूम - श्री जानकी महल ट्रस्ट पारिवारिक ठहराव',
+    heading: '3 बेड नॉन-एसी रूम - किफायती पारिवारिक कमरा',
+    metaDescription:
+      'श्री जानकी महल ट्रस्ट अयोध्या का 3 बेड नॉन-एसी रूम परिवारों के लिए किफायती विकल्प है। भोजन सहित आधिकारिक बुकिंग के लिए +91 9102319329 पर संपर्क करें।',
+    keywords: ['3 बेड नॉन एसी कमरा', 'अयोध्या परिवार के लिए कमरा', 'श्री जानकी महल ट्रस्ट बजट स्टे'],
+    highlights: [
+      'किफायती पारिवारिक ठहराव के लिए उपयुक्त',
+      'प्राकृतिक हवा के साथ आरामदायक व्यवस्था',
+      'तीनों समय का शुद्ध शाकाहारी भोजन शामिल',
+      'अटैच बाथरूम और सतत जल सुविधा',
+      'दैनिक उपयोग के लिए पर्याप्त स्टोरेज स्पेस',
+    ],
+  },
+  '4-bed-ac': {
+    title: '4 बेड एसी रूम - श्री जानकी महल ट्रस्ट ग्रुप बुकिंग',
+    heading: '4 बेड एसी रूम - समूह और परिवारों के लिए श्रेष्ठ',
+    metaDescription:
+      'बड़े परिवार या समूह यात्रा के लिए श्री जानकी महल ट्रस्ट का 4 बेड एसी रूम बुक करें। राम मंदिर के पास सुरक्षित, सुविधाजनक और आधिकारिक बुकिंग सहायता उपलब्ध।',
+    keywords: ['4 बेड एसी ग्रुप रूम', 'अयोध्या ग्रुप बुकिंग', 'श्री जानकी महल ट्रस्ट 4 बेड एसी'],
+    highlights: [
+      'बड़े समूह और परिवारों के लिए विशाल कमरा',
+      'आरामदायक एसी कूलिंग के साथ बेहतर सुविधा',
+      'सभी भोजन और बुनियादी सुविधाएँ शामिल',
+      'ग्रुप चेक-इन के लिए सहायक स्टाफ उपलब्ध',
+      'तीर्थ यात्रियों के लिए शांत और सुरक्षित माहौल',
+    ],
+  },
+  '4-bed-non-ac': {
+    title: '4 बेड नॉन-एसी रूम - श्री जानकी महल ट्रस्ट समूह ठहराव',
+    heading: '4 बेड नॉन-एसी रूम - किफायती ग्रुप स्टे',
+    metaDescription:
+      'समूह यात्रियों के लिए श्री जानकी महल ट्रस्ट अयोध्या का 4 बेड नॉन-एसी रूम एक उपयोगी बजट विकल्प है। भोजन सहित आधिकारिक बुकिंग सहायता हमेशा उपलब्ध।',
+    keywords: ['4 बेड नॉन एसी कमरा', 'अयोध्या ग्रुप बजट रूम', 'श्री जानकी महल ट्रस्ट समूह बुकिंग'],
+    highlights: [
+      'ग्रुप यात्रा के लिए बजट-फ्रेंडली विकल्प',
+      'प्राकृतिक वेंटिलेशन के साथ आरामदायक स्टे',
+      'सभी भोजन शामिल, अलग से खर्च नहीं',
+      'सुरक्षा और सहायता के लिए उपलब्ध स्टाफ',
+      'बड़े परिवारों और यात्रियों के लिए उपयुक्त',
+    ],
+  },
+  'family-suite': {
+    title: 'फैमिली सूट - श्री जानकी महल ट्रस्ट प्रीमियम स्टे',
+    heading: 'फैमिली सूट - बड़े परिवारों के लिए प्रीमियम ठहराव',
+    metaDescription:
+      'श्री जानकी महल ट्रस्ट अयोध्या का फैमिली सूट कनेक्टेड रूम, बैठने की जगह और भोजन सहित प्रीमियम सुविधा देता है। आधिकारिक बुकिंग नंबर: +91 9102319329।',
+    keywords: ['फैमिली सूट अयोध्या', 'श्री जानकी महल ट्रस्ट प्रीमियम रूम', 'बड़े परिवार के लिए कमरा'],
+    highlights: [
+      'कनेक्टेड रूम और अलग बैठने की प्रीमियम सुविधा',
+      'परिवार के लिए अतिरिक्त स्पेस और बेहतर आराम',
+      'सभी भोजन और मुख्य सुविधाएँ पैकेज में शामिल',
+      'साफ-सुथरा वातावरण और नियमित हाउसकीपिंग',
+      'लंबे पारिवारिक ठहराव के लिए उपयुक्त विकल्प',
+    ],
+  },
+  'deluxe-room': {
+    title: 'डीलक्स रूम - श्री जानकी महल ट्रस्ट अयोध्या आधिकारिक बुकिंग',
+    heading: 'डीलक्स रूम - प्रीमियम सुविधा के साथ शांत ठहराव',
+    metaDescription:
+      'अयोध्या में श्री जानकी महल ट्रस्ट का डीलक्स रूम प्रीमियम सुविधाओं के साथ उपलब्ध है। राम मंदिर के पास आरामदायक स्टे के लिए आधिकारिक चैनल से बुक करें।',
+    keywords: ['डीलक्स रूम अयोध्या', 'श्री जानकी महल ट्रस्ट डीलक्स बुकिंग', 'राम मंदिर के पास प्रीमियम स्टे'],
+    highlights: [
+      'प्रीमियम इंटीरियर और आरामदायक साज-सज्जा',
+      'एसी, बेहतर बैठने की जगह और अतिरिक्त आराम',
+      'सभी भोजन के साथ सुविधाजनक ठहराव',
+      'स्वच्छता और सेवा पर विशेष ध्यान',
+      'आरामदायक और शांत प्रीमियम अनुभव',
+    ],
+  },
+};
+
+const localizedRoom = localizedRoomContent[slug];
+const localizedTitle = localizedRoom?.title ?? `कमरा - ${room.heading} | श्री जानकी महल ट्रस्ट`;
+const localizedHeading = localizedRoom?.heading ?? room.heading;
+const localizedDescription = localizedRoom?.metaDescription ?? room.metaDescription;
+const localizedKeywords = localizedRoom?.keywords ?? [];
+const localizedHighlights = localizedRoom?.highlights ?? room.highlights;
+const localizedPriceRange = room.priceRange.replace('per night (all meals included)', 'प्रति रात्रि (सभी भोजन सहित)');
+
+const productSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Product',
+  name: localizedHeading,
+  alternateName: room.schemaAlternateNames,
+  image: room.images.map((image) => `https://www.srijanakimahaltrustofficial.com${image.src}`),
+  description: localizedDescription,
+  inLanguage: 'hi-IN',
+  brand: {
+    '@type': 'Brand',
+    name: 'Sri Janaki Mahal Trust',
+  },
+  sku: `SJM-HI-${slug.toUpperCase().replace(/-/g, '_')}`,
+  category: 'Lodging',
+  areaServed: 'Ayodhya, Uttar Pradesh',
+  url: `https://www.srijanakimahaltrustofficial.com/hi/rooms/${slug}`,
+  offers: {
+    '@type': 'Offer',
+    priceCurrency: 'INR',
+    price: room.schemaPrice,
+    availability: 'https://schema.org/InStock',
+    url: `https://www.srijanakimahaltrustofficial.com/hi/rooms/${slug}`,
+    seller: {
+      '@type': 'Organization',
+      name: 'Sri Janaki Mahal Trust',
+      telephone: SCHEMA_TELEPHONE,
+    },
+  },
+};
+
+type ImageObjectSchema = {
+  '@context': 'https://schema.org';
+  '@type': 'ImageObject';
+  contentUrl: string;
+  caption: string;
+  description: string;
+  width: string;
+  height: string;
+  creator: {
+    '@type': 'Organization';
+    name: string;
+  };
+  copyrightHolder: {
+    '@type': 'Organization';
+    name: string;
+  };
+  acquireLicensePage: string;
+};
+
+const imageObjects: ImageObjectSchema[] = room.images.map((image) => ({
+  '@context': 'https://schema.org',
+  '@type': 'ImageObject',
+  contentUrl: `https://www.srijanakimahaltrustofficial.com${image.src}`,
+  caption: image.caption,
+  description: image.alt,
+  width: image.width,
+  height: image.height,
+  creator: {
+    '@type': 'Organization',
+    name: 'Sri Janaki Mahal Trust',
+  },
+  copyrightHolder: {
+    '@type': 'Organization',
+    name: 'Sri Janaki Mahal Trust',
+  },
+  acquireLicensePage: 'https://www.srijanakimahaltrustofficial.com',
+}));
+
 const breadcrumbs = generateBreadcrumbSchema([
   { name: 'Home', url: '/hi' },
   { name: 'Rooms', url: '/hi/rooms' },
-  { name: room.heading, url: `/hi/rooms/${slug}` },
+  { name: localizedHeading, url: `/hi/rooms/${slug}` },
 ]);
 ---
 
 <Layout
-  title={`कमरा - ${room.heading} | श्री जानकी महल ट्रस्ट`}
-  description={room.metaDescription}
-  keywords={room.keywords}
+  title={localizedTitle}
+  description={localizedDescription}
+  keywords={[...room.keywords, ...localizedKeywords]}
   canonical={`/hi/rooms/${slug}`}
   ogImage={room.images?.[0]?.src ?? '/og.jpg'}
   lang="hi"
@@ -42,13 +250,13 @@ const breadcrumbs = generateBreadcrumbSchema([
       <section class="rounded-3xl bg-white p-8 shadow-lg">
         <div class="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
           <div class="space-y-4">
-            <p class="text-sm font-semibold uppercase tracking-[0.3em] text-[#6b4c2d]">Room Details</p>
-            <h1 class="text-4xl font-bold text-[#2d2215] md:text-5xl">{room.heading}</h1>
-            <p class="text-lg leading-relaxed text-[#3d2f1c]">{room.metaDescription}</p>
-            <p class="text-base font-semibold text-[#b45309]">{room.priceRange}</p>
+            <p class="text-sm font-semibold uppercase tracking-[0.3em] text-[#6b4c2d]">कमरे का विवरण</p>
+            <h1 class="text-4xl font-bold text-[#2d2215] md:text-5xl">{localizedHeading}</h1>
+            <p class="text-lg leading-relaxed text-[#3d2f1c]">{localizedDescription}</p>
+            <p class="text-base font-semibold text-[#b45309]">{localizedPriceRange}</p>
           </div>
           <div class="rounded-3xl bg-[#fef4e4] p-6 text-center shadow-md">
-            <p class="text-sm uppercase tracking-[0.2em] text-[#b45309]">Official Booking</p>
+            <p class="text-sm uppercase tracking-[0.2em] text-[#b45309]">आधिकारिक बुकिंग</p>
             <p class="mt-3 text-4xl font-extrabold text-[#2d2215]">{room.icon}</p>
             <div class="mt-4 flex flex-col gap-3">
               <a class="rounded-xl bg-[#2d2215] px-6 py-3 text-base font-semibold uppercase tracking-wide text-white transition hover:bg-[#b45309]" href="/hi/contact-number">
@@ -63,7 +271,7 @@ const breadcrumbs = generateBreadcrumbSchema([
       </section>
 
       <section class="rounded-3xl bg-white p-8 shadow-md">
-        <h2 class="text-3xl font-semibold text-[#2d2215]">Room Gallery</h2>
+        <h2 class="text-3xl font-semibold text-[#2d2215]">कमरे की फोटो गैलरी</h2>
         <div class="mt-6 grid gap-6 md:grid-cols-2">
           {room.images.map((image) => (
             <figure class="overflow-hidden rounded-2xl border border-[#f2dfc7] shadow-sm">
@@ -86,7 +294,7 @@ const breadcrumbs = generateBreadcrumbSchema([
       <section class="rounded-3xl bg-[#fef4e4] p-8 shadow-inner">
         <h2 class="text-3xl font-semibold text-[#2d2215]">मुख्य सुविधाएँ</h2>
         <ul class="mt-6 grid gap-4 text-base text-[#3d2f1c] md:grid-cols-2">
-          {room.highlights.map((highlight) => (
+          {localizedHighlights.map((highlight) => (
             <li class="rounded-2xl bg-white p-4 shadow-sm">✓ {highlight}</li>
           ))}
         </ul>
@@ -95,6 +303,10 @@ const breadcrumbs = generateBreadcrumbSchema([
   </main>
 
   {breadcrumbs && <script type="application/ld+json" set:html={JSON.stringify(breadcrumbs)} />}
+  <script type="application/ld+json" set:html={JSON.stringify(productSchema)} />
+  {imageObjects.map((imageSchema: ImageObjectSchema) => (
+    <script type="application/ld+json" set:html={JSON.stringify(imageSchema)} />
+  ))}
   <Footer />
   <FloatingWhatsApp />
 </Layout>

@@ -3,7 +3,7 @@
 import Layout from '../../../layouts/Layout.astro';
 import Header from '../../../components/Header.astro';
 import Footer from '../../../components/Footer.astro';
-import { getAllBlogPosts } from '../../../lib/blog';
+import { getAllBlogPosts, getAllBlogPostsByLang } from '../../../lib/blog';
 
 const PAGE_SIZE = 12;
 
@@ -20,7 +20,9 @@ export async function getStaticPaths() {
 }
 
 const allPosts = await getAllBlogPosts();
+const hindiPosts = await getAllBlogPostsByLang('hi');
 const totalPages = Math.max(1, Math.ceil(allPosts.length / PAGE_SIZE));
+const hindiTotalPages = Math.max(1, Math.ceil(hindiPosts.length / PAGE_SIZE));
 
 const pageParam = Number(Astro.params.page);
 if (!Number.isFinite(pageParam) || pageParam < 2 || pageParam > totalPages) {
@@ -29,6 +31,13 @@ if (!Number.isFinite(pageParam) || pageParam < 2 || pageParam > totalPages) {
 
 const startIndex = (pageParam - 1) * PAGE_SIZE;
 const pagePosts = allPosts.slice(startIndex, startIndex + PAGE_SIZE);
+const hasHindiAlternate = pageParam <= hindiTotalPages;
+const alternateLanguages = hasHindiAlternate
+  ? [
+      { lang: 'en', url: `/blog/page/${pageParam}` },
+      { lang: 'hi', url: `/hi/blog/page/${pageParam}` },
+    ]
+  : [{ lang: 'en', url: `/blog/page/${pageParam}` }];
 
 const siteUrl = (Astro.site?.toString() ?? 'https://www.srijanakimahaltrustofficial.com').replace(/\/$/, '');
 const prevHref = pageParam === 2 ? `${siteUrl}/blog` : `${siteUrl}/blog/page/${pageParam - 1}`;
@@ -60,11 +69,12 @@ function buildPagination(currentPage: number, total: number): Array<number | 'le
 }
 
 const paginationItems = buildPagination(pageParam, totalPages);
+const pageDescription = `Read blog page ${pageParam} of ${totalPages} for Ayodhya travel guides, Ram Mandir tips, and official Sri Janaki Mahal Trust room booking information.`;
 ---
 
 <Layout
   title={`Blog Page ${pageParam} - Sri Janaki Mahal Trust | Ayodhya Guides`}
-  description="Read our blog for guides on visiting Ayodhya, Ram Mandir, room booking, and staying at Sri Janaki Mahal Trust. Expert travel tips and booking guides."
+  description={pageDescription}
   keywords={[
     'Sri Janaki Mahal Trust blog',
     'Ayodhya travel guide',
@@ -75,6 +85,8 @@ const paginationItems = buildPagination(pageParam, totalPages);
   ]}
   canonical={`/blog/page/${pageParam}`}
   ogType="website"
+  alternateLanguages={alternateLanguages}
+  disableDefaultHreflangPair={true}
 >
   <Fragment slot="head">
     {prevHref && <link rel="prev" href={prevHref} />}

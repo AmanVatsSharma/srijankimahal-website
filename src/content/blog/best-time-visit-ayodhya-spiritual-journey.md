@@ -105,8 +105,7 @@ Planning your visit to Ayodhya? This guide will help you choose the best time to
 
 ### Makar Sankranti (January)
 
-**Significance:** Sun'
-  -s transition to Capricorn
+**Significance:** Sun's transition to Capricorn
 
 **Why Visit:**
 - Holy dip in Saryu River

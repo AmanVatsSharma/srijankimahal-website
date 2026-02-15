@@ -644,9 +644,7 @@ const imageObjects: ImageObjectSchema[] = room.images.map((image: RoomImage) => 
     <script type="application/ld+json" set:html={JSON.stringify(breadcrumbs)} />
   )}
 
-  <script type="application/ld+json">
-    {JSON.stringify(productSchema)}
-  </script>
+  <script type="application/ld+json" set:html={JSON.stringify(productSchema)} />
 
   {imageObjects.map((imageSchema: ImageObjectSchema) => (
     <script type="application/ld+json" set:html={JSON.stringify(imageSchema)} />

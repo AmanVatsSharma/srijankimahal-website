@@ -97,8 +97,7 @@ Complete guide on advance booking at Sri Janaki Mahal Trust. Learn when and how 
 
 ### Step 4: Confirm Availability
 
-**We'
-  -ll Check:**
+**We'll Check:**
 - Room availability
 - Pricing
 - Special offers
@@ -106,8 +105,7 @@ Complete guide on advance booking at Sri Janaki Mahal Trust. Learn when and how 
 
 ### Step 5: Receive Confirmation
 
-**You'
-  -ll Get:**
+**You'll Get:**
 - Booking confirmation
 - Booking reference
 - Room details
@@ -239,8 +237,7 @@ Yes, advance bookings are confirmed with booking reference and details.
 
 ## Booking Confirmation
 
-### What You'
-  -ll Receive
+### What You'll Receive
 
 **Confirmation Includes:**
 - Booking reference number

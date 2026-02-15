@@ -260,10 +260,8 @@ Yes, booking confirmation is required and provided. Keep it for check-in.
    - Verify through official page
 
 2. **Avoid Scams**
-   - Don'
-  -t pay to unauthorized agents
-   - Don'
-  -t share payment details unnecessarily
+   - Don't pay to unauthorized agents
+   - Don't share payment details unnecessarily
    - Verify booking confirmation
 
 3. **Keep Records**

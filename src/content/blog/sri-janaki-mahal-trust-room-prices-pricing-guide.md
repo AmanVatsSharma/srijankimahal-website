@@ -1,7 +1,6 @@
 ---
 title: Sri Janaki Mahal Trust Room Prices and Pricing Guide - Complete Breakdown
-description: Complete pricing guide for Sri Janaki Mahal Trust rooms. All room types, prices, what'
-  -s included, and transparent pricing information. Contact +91 9102319329 for current rates.
+description: Complete pricing guide for Sri Janaki Mahal Trust rooms. All room types, prices, what's included, and transparent pricing information. Contact +91 9102319329 for current rates.
 date: 2025-01-28
 keywords:
   - 'Sri Janaki Mahal Trust room prices'
@@ -123,8 +122,7 @@ Complete transparent pricing guide for all room types at Sri Janaki Mahal Trust.
 - Maximum comfort
 - Luxury experience
 
-## What'
-  -s Included in Price
+## What's Included in Price
 
 ### Room Accommodation
 
@@ -182,8 +180,7 @@ Complete transparent pricing guide for all room types at Sri Janaki Mahal Trust.
 - Final price = ₹2,550 per night
 - No additional charges
 
-### What'
-  -s NOT Included
+### What's NOT Included
 
 **Optional Services (If Available):**
 - Extra meals (beyond standard)
@@ -324,8 +321,7 @@ Cancellation policy applies. Contact us for details on cancellation and refund.
 - 💬 WhatsApp: +91 9102319329
 - 📧 Email: srijanakimahaltrustofficial@gmail.com
 
-**We'
-  -ll Provide:**
+**We'll Provide:**
 - Current rates
 - Available rooms
 - Special offers

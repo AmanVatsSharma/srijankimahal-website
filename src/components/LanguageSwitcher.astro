@@ -6,7 +6,48 @@ const pathname = Astro.url.pathname;
 const currentLang = detectLangFromPath(pathname);
 const basePath = stripLangPrefix(pathname);
 const nextLang = getAlternateLang(currentLang);
-const switchToPath = withLangPrefix(basePath, nextLang);
+const PAGE_SIZE = 12;
+
+/**
+ * Blog counterpart maps help us avoid switching users to non-existent translated URLs.
+ */
+const englishBlogImports = import.meta.glob('../content/blog/*.md');
+const hindiBlogImports = import.meta.glob('../content/blog/hi/*.md');
+const englishBlogSlugs = new Set(
+  Object.keys(englishBlogImports).map((path) => path.split('/').pop()?.replace('.md', '') ?? '')
+);
+const hindiBlogSlugs = new Set(
+  Object.keys(hindiBlogImports).map((path) => path.split('/').pop()?.replace('.md', '') ?? '')
+);
+const englishTotalPages = Math.max(1, Math.ceil(englishBlogSlugs.size / PAGE_SIZE));
+const hindiTotalPages = Math.max(1, Math.ceil(hindiBlogSlugs.size / PAGE_SIZE));
+
+let switchToPath = withLangPrefix(basePath, nextLang);
+
+const blogPaginationMatch = basePath.match(/^\/blog\/page\/(\d+)\/?$/);
+const blogPostMatch = basePath.match(/^\/blog\/([^/]+)\/?$/);
+
+// If counterpart pagination page does not exist, route to nearest valid page.
+if (blogPaginationMatch) {
+  const requestedPage = Number(blogPaginationMatch[1]);
+  const maxPagesInTargetLang = nextLang === 'hi' ? hindiTotalPages : englishTotalPages;
+
+  if (requestedPage > maxPagesInTargetLang) {
+    switchToPath = maxPagesInTargetLang <= 1
+      ? withLangPrefix('/blog', nextLang)
+      : withLangPrefix(`/blog/page/${maxPagesInTargetLang}`, nextLang);
+  }
+}
+
+// If counterpart blog post slug does not exist, route to target language blog index.
+if (blogPostMatch && !basePath.startsWith('/blog/page/')) {
+  const slug = blogPostMatch[1];
+  const slugExistsInTargetLang = nextLang === 'hi' ? hindiBlogSlugs.has(slug) : englishBlogSlugs.has(slug);
+
+  if (!slugExistsInTargetLang) {
+    switchToPath = withLangPrefix('/blog', nextLang);
+  }
+}
 
 const label = nextLang === 'hi' ? 'हिंदी' : 'English';
 ---

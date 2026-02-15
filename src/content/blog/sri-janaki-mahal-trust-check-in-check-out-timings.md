@@ -47,8 +47,7 @@ Complete guide on check-in and check-out timings, procedures, and what to expect
 - Complete check-in formalities
 
 **Documents Required:**
-- Valid government ID (Aadhar, Passport, Driver'
-  -s License)
+- Valid government ID (Aadhar, Passport, Driver's License)
 - Booking confirmation (if available)
 - Contact number
 
@@ -65,8 +64,7 @@ Complete guide on check-in and check-out timings, procedures, and what to expect
 
 ### Step 3: Room Assignment
 
-**You'
-  -ll Receive:**
+**You'll Receive:**
 - Room keys
 - Room number
 - Room location
@@ -213,8 +211,7 @@ Yes, late check-out is possible subject to availability. Contact reception befor
 
 ### What documents do I need for check-in?
 
-Valid government ID proof (Aadhar, Passport, Driver'
-  -s License) and booking confirmation.
+Valid government ID proof (Aadhar, Passport, Driver's License) and booking confirmation.
 
 ### Is reception available 24/7?
 

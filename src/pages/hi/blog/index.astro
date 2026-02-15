@@ -3,13 +3,22 @@
 import Layout from '../../../layouts/Layout.astro';
 import Header from '../../../components/Header.astro';
 import Footer from '../../../components/Footer.astro';
-import { getAllBlogPostsByLang } from '../../../lib/blog';
+import { getAllBlogPosts, getAllBlogPostsByLang } from '../../../lib/blog';
 
 const allPosts = await getAllBlogPostsByLang('hi');
+const englishPosts = await getAllBlogPosts();
 const PAGE_SIZE = 12;
 const page = 1;
 const totalPages = Math.max(1, Math.ceil(allPosts.length / PAGE_SIZE));
+const englishTotalPages = Math.max(1, Math.ceil(englishPosts.length / PAGE_SIZE));
 const pagePosts = allPosts.slice(0, PAGE_SIZE);
+const hasEnglishAlternate = page <= englishTotalPages;
+const alternateLanguages = hasEnglishAlternate
+  ? [
+      { lang: 'en', url: '/blog' },
+      { lang: 'hi', url: '/hi/blog' },
+    ]
+  : [{ lang: 'hi', url: '/hi/blog' }];
 
 const siteUrl = (Astro.site?.toString() ?? 'https://www.srijanakimahaltrustofficial.com').replace(/\/$/, '');
 const nextHref = page < totalPages ? `${siteUrl}/hi/blog/page/${page + 1}` : null;
@@ -55,6 +64,8 @@ const paginationItems = buildPagination(page, totalPages);
   canonical="/hi/blog"
   ogType="website"
   lang="hi"
+  alternateLanguages={alternateLanguages}
+  disableDefaultHreflangPair={true}
 >
   <Fragment slot="head">
     {nextHref && <link rel="next" href={nextHref} />}
@@ -101,7 +112,7 @@ const paginationItems = buildPagination(page, totalPages);
       </div>
 
       {totalPages > 1 && (
-        <nav class="flex flex-wrap items-center justify-center gap-2 mb-12" aria-label="Blog pagination">
+        <nav class="flex flex-wrap items-center justify-center gap-2 mb-12" aria-label="ब्लॉग पेजिनेशन">
           <span
             class="px-4 py-2 rounded-lg bg-gray-100 text-gray-400 border border-gray-200 cursor-not-allowed"
             aria-disabled="true"

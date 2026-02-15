@@ -3,7 +3,7 @@
 import Layout from '../../../../layouts/Layout.astro';
 import Header from '../../../../components/Header.astro';
 import Footer from '../../../../components/Footer.astro';
-import { getAllBlogPostsByLang } from '../../../../lib/blog';
+import { getAllBlogPosts, getAllBlogPostsByLang } from '../../../../lib/blog';
 
 const PAGE_SIZE = 12;
 
@@ -18,7 +18,9 @@ export async function getStaticPaths() {
 }
 
 const allPosts = await getAllBlogPostsByLang('hi');
+const englishPosts = await getAllBlogPosts();
 const totalPages = Math.max(1, Math.ceil(allPosts.length / PAGE_SIZE));
+const englishTotalPages = Math.max(1, Math.ceil(englishPosts.length / PAGE_SIZE));
 
 const pageParam = Number(Astro.params.page);
 if (!Number.isFinite(pageParam) || pageParam < 2 || pageParam > totalPages) {
@@ -27,6 +29,13 @@ if (!Number.isFinite(pageParam) || pageParam < 2 || pageParam > totalPages) {
 
 const startIndex = (pageParam - 1) * PAGE_SIZE;
 const pagePosts = allPosts.slice(startIndex, startIndex + PAGE_SIZE);
+const hasEnglishAlternate = pageParam <= englishTotalPages;
+const alternateLanguages = hasEnglishAlternate
+  ? [
+      { lang: 'en', url: `/blog/page/${pageParam}` },
+      { lang: 'hi', url: `/hi/blog/page/${pageParam}` },
+    ]
+  : [{ lang: 'hi', url: `/hi/blog/page/${pageParam}` }];
 
 const siteUrl = (Astro.site?.toString() ?? 'https://www.srijanakimahaltrustofficial.com').replace(/\/$/, '');
 const prevHref = pageParam === 2 ? `${siteUrl}/hi/blog` : `${siteUrl}/hi/blog/page/${pageParam - 1}`;
@@ -58,11 +67,12 @@ function buildPagination(currentPage: number, total: number): Array<number | 'le
 }
 
 const paginationItems = buildPagination(pageParam, totalPages);
+const pageDescription = `पेज ${pageParam} / ${totalPages} पर अयोध्या यात्रा, राम मंदिर दर्शन, और श्री जानकी महल ट्रस्ट की आधिकारिक रूम बुकिंग से जुड़े लेख पढ़ें।`;
 ---
 
 <Layout
   title={`ब्लॉग पेज ${pageParam} - श्री जानकी महल ट्रस्ट`}
-  description="अयोध्या यात्रा, राम मंदिर दर्शन और रूम बुकिंग से जुड़े लेख पढ़ें।"
+  description={pageDescription}
   keywords={[
     'श्री जानकी महल ट्रस्ट ब्लॉग',
     'अयोध्या गाइड',
@@ -72,6 +82,8 @@ const paginationItems = buildPagination(pageParam, totalPages);
   canonical={`/hi/blog/page/${pageParam}`}
   ogType="website"
   lang="hi"
+  alternateLanguages={alternateLanguages}
+  disableDefaultHreflangPair={true}
 >
   <Fragment slot="head">
     {prevHref && <link rel="prev" href={prevHref} />}
@@ -114,7 +126,7 @@ const paginationItems = buildPagination(pageParam, totalPages);
         ))}
       </div>
 
-      <nav class="flex flex-wrap items-center justify-center gap-3" aria-label="Blog pagination">
+      <nav class="flex flex-wrap items-center justify-center gap-3" aria-label="ब्लॉग पेजिनेशन">
         <a
           href={pageParam === 2 ? '/hi/blog' : `/hi/blog/page/${pageParam - 1}`}
           class="px-4 py-2 rounded-lg bg-white text-gray-900 border border-gray-200 hover:border-amber-600 hover:text-amber-700 transition-colors"

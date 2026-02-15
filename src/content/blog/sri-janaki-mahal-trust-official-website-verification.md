@@ -88,8 +88,7 @@ This guide will help you identify the official Sri Janaki Mahal Trust website an
 
 ### Warning Signs
 
-**If you see these, it'
-  -s likely a scam:**
+**If you see these, it's likely a scam:**
 
 1. **Different Contact Number**
    - Any number other than +91 9102319329
@@ -202,8 +201,7 @@ This guide will help you identify the official Sri Janaki Mahal Trust website an
 ### Step-by-Step Verification
 
 1. **Check URL**
-   - Ensure it'
-  -s www.srijanakimahaltrustofficial.com
+   - Ensure it's www.srijanakimahaltrustofficial.com
    - Look for HTTPS
    - Verify domain spelling
 
@@ -226,14 +224,10 @@ This guide will help you identify the official Sri Janaki Mahal Trust website an
 
 ### Action Steps
 
-1. **Don'
-  -t Book**
-   - Don'
-  -t provide personal information
-   - Don'
-  -t make payments
-   - Don'
-  -t share booking details
+1. **Don't Book**
+   - Don't provide personal information
+   - Don't make payments
+   - Don't share booking details
 
 2. **Report**
    - Contact us at +91 9102319329
@@ -301,8 +295,7 @@ No, always book through official channels only. Third-party sites may charge ext
 
 ### What if I find a fake website?
 
-Report it to us immediately at +91 9102319329. Don'
-  -t book through fake websites.
+Report it to us immediately at +91 9102319329. Don't book through fake websites.
 
 ### Is the official website secure?
 

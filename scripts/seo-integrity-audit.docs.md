@@ -131,6 +131,7 @@ CI runs this via:
 
 - `.github/workflows/seo-integrity.yml`
 - uses workflow concurrency to avoid duplicate runs on same ref
+- runs audit in strict warning mode (`--strict-warnings`)
 - always uploads report artifact `seo-audit-report` (warns if missing)
 - publishes key metrics into GitHub step summary for quick triage
 - publishes top warning/failure types in step summary for faster root-cause isolation

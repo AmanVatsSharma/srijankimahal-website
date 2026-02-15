@@ -64,7 +64,7 @@ This audit catches those issues deterministically before deployment.
 16. Dist route hygiene check for `.docs` tokens.
 
 > Note: explicit `/404` and `/hi/404` link targets are ignored as controlled exceptions for error-page UX.
-> Note: missing image sitemap reference in `sitemap-index.xml` is reported as a warning (not failure) because some setups expose image sitemap via `robots.txt` only.
+> Note: image sitemap reference warning is only emitted when `image-sitemap.xml` is missing from **both** `sitemap-index.xml` and `robots.txt`.
 
 ---
 

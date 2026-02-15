@@ -805,6 +805,8 @@ async function run(options = { reportFile: null }) {
   const sitemapPagesPath = path.join(DIST_DIR, 'sitemap-0.xml');
   const imageSitemapPath = path.join(DIST_DIR, 'image-sitemap.xml');
   const robotsPath = path.join(DIST_DIR, 'robots.txt');
+  let hasImageSitemapRefInIndex = false;
+  let hasImageSitemapRefInRobots = false;
 
   if (!(await exists(sitemapIndexPath))) {
     failures.push({ type: 'missing-sitemap-index', path: 'sitemap-index.xml' });
@@ -816,13 +818,7 @@ async function run(options = { reportFile: null }) {
         expected: `${SITE_ORIGIN}/sitemap-0.xml`,
       });
     }
-    if (!sitemapIndexXml.includes(`${SITE_ORIGIN}/image-sitemap.xml`)) {
-      metrics.sitemapIndexMissingImageSitemapRef += 1;
-      warnings.push({
-        type: 'sitemap-index-missing-image-sitemap',
-        expected: `${SITE_ORIGIN}/image-sitemap.xml`,
-      });
-    }
+    hasImageSitemapRefInIndex = sitemapIndexXml.includes(`${SITE_ORIGIN}/image-sitemap.xml`);
   }
 
   if (!(await exists(sitemapPagesPath))) {
@@ -883,17 +879,28 @@ async function run(options = { reportFile: null }) {
     }
 
     const hasSitemapIndexRef = robotsText.includes(`${SITE_ORIGIN}/sitemap-index.xml`);
-    const hasImageSitemapRef = robotsText.includes(`${SITE_ORIGIN}/image-sitemap.xml`);
-    if (!hasSitemapIndexRef || !hasImageSitemapRef) {
+    hasImageSitemapRefInRobots = robotsText.includes(`${SITE_ORIGIN}/image-sitemap.xml`);
+    if (!hasSitemapIndexRef || !hasImageSitemapRefInRobots) {
       metrics.robotsMissingSitemapRefs += 1;
       failures.push({
         type: 'robots-missing-sitemap-references',
         missing: {
           sitemapIndex: !hasSitemapIndexRef,
-          imageSitemap: !hasImageSitemapRef,
+          imageSitemap: !hasImageSitemapRefInRobots,
         },
       });
     }
+  }
+
+  if (!hasImageSitemapRefInIndex && !hasImageSitemapRefInRobots) {
+    metrics.sitemapIndexMissingImageSitemapRef += 1;
+    warnings.push({
+      type: 'image-sitemap-reference-missing',
+      expectedEither: [
+        `${SITE_ORIGIN}/image-sitemap.xml in sitemap-index.xml`,
+        `${SITE_ORIGIN}/image-sitemap.xml in robots.txt`,
+      ],
+    });
   }
 
   const elapsedMs = Date.now() - startedAt;

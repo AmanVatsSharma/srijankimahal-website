@@ -18,6 +18,7 @@ const AUDIT_PREFIX = '[seo-audit]';
 const DIST_DIR = path.resolve(process.cwd(), 'dist');
 const SITE_ORIGIN = 'https://www.srijanakimahaltrustofficial.com';
 const ABSOLUTE_HTTP_PATTERN = /^https?:\/\//i;
+const XML_LOC_REGEX = /<loc>([^<]+)<\/loc>/gi;
 const INTERNAL_LINK_IGNORE_PATTERNS = [
   /^\/404\/?$/i,
   /^\/hi\/404\/?$/i,
@@ -161,6 +162,12 @@ async function exists(filePath) {
   }
 }
 
+function parseXmlLocs(xmlText) {
+  return Array.from(xmlText.matchAll(XML_LOC_REGEX))
+    .map((match) => (match[1] ?? '').trim())
+    .filter(Boolean);
+}
+
 async function run() {
   const startedAt = Date.now();
   logInfo('Starting SEO integrity audit', { distDir: DIST_DIR });
@@ -200,6 +207,13 @@ async function run() {
     pagesMissingXDefaultHreflang: 0,
     pagesWithOgLocaleIssues: 0,
     duplicateDescriptionGroups: 0,
+    sitemapLocTargetMissing: 0,
+    sitemapLocInvalidOrigin: 0,
+    sitemapLocDuplicateUrls: 0,
+    sitemapLocDisallowedUrls: 0,
+    robotsHasCrawlDelay: 0,
+    robotsMissingSitemapRefs: 0,
+    sitemapIndexMissingImageSitemapRef: 0,
   };
 
   for (const htmlPath of htmlFiles) {
@@ -540,6 +554,93 @@ async function run() {
       type: 'duplicate-meta-description-groups',
       groups: duplicateDescriptionGroups.slice(0, 10),
     });
+  }
+
+  // Sitemap + robots checks (post-build crawlability integrity).
+  const sitemapIndexPath = path.join(DIST_DIR, 'sitemap-index.xml');
+  const sitemapPagesPath = path.join(DIST_DIR, 'sitemap-0.xml');
+  const imageSitemapPath = path.join(DIST_DIR, 'image-sitemap.xml');
+  const robotsPath = path.join(DIST_DIR, 'robots.txt');
+
+  if (!(await exists(sitemapIndexPath))) {
+    failures.push({ type: 'missing-sitemap-index', path: 'sitemap-index.xml' });
+  } else {
+    const sitemapIndexXml = await fs.readFile(sitemapIndexPath, 'utf-8');
+    if (!sitemapIndexXml.includes(`${SITE_ORIGIN}/sitemap-0.xml`)) {
+      failures.push({
+        type: 'sitemap-index-missing-main-sitemap',
+        expected: `${SITE_ORIGIN}/sitemap-0.xml`,
+      });
+    }
+    if (!sitemapIndexXml.includes(`${SITE_ORIGIN}/image-sitemap.xml`)) {
+      metrics.sitemapIndexMissingImageSitemapRef += 1;
+      warnings.push({
+        type: 'sitemap-index-missing-image-sitemap',
+        expected: `${SITE_ORIGIN}/image-sitemap.xml`,
+      });
+    }
+  }
+
+  if (!(await exists(sitemapPagesPath))) {
+    failures.push({ type: 'missing-main-sitemap', path: 'sitemap-0.xml' });
+  } else {
+    const sitemapXml = await fs.readFile(sitemapPagesPath, 'utf-8');
+    const locs = parseXmlLocs(sitemapXml);
+    const seenLocs = new Set();
+
+    for (const loc of locs) {
+      if (seenLocs.has(loc)) {
+        metrics.sitemapLocDuplicateUrls += 1;
+        failures.push({ type: 'duplicate-sitemap-url', url: loc });
+      } else {
+        seenLocs.add(loc);
+      }
+
+      const localHref = getLocalHrefFromAny(loc);
+      if (!localHref) {
+        metrics.sitemapLocInvalidOrigin += 1;
+        failures.push({ type: 'sitemap-url-invalid-origin', url: loc });
+        continue;
+      }
+
+      if (localHref.includes('.docs') || /^\/(?:hi\/)?404\/?$/i.test(localHref)) {
+        metrics.sitemapLocDisallowedUrls += 1;
+        failures.push({ type: 'sitemap-url-disallowed', url: loc });
+      }
+
+      if (!(await hasDistTarget(localHref))) {
+        metrics.sitemapLocTargetMissing += 1;
+        failures.push({ type: 'sitemap-url-target-missing', url: loc });
+      }
+    }
+  }
+
+  if (!(await exists(imageSitemapPath))) {
+    failures.push({ type: 'missing-image-sitemap', path: 'image-sitemap.xml' });
+  }
+
+  if (!(await exists(robotsPath))) {
+    failures.push({ type: 'missing-robots-txt', path: 'robots.txt' });
+  } else {
+    const robotsText = await fs.readFile(robotsPath, 'utf-8');
+
+    if (/crawl-delay\s*:/i.test(robotsText)) {
+      metrics.robotsHasCrawlDelay += 1;
+      failures.push({ type: 'robots-has-crawl-delay' });
+    }
+
+    const hasSitemapIndexRef = robotsText.includes(`${SITE_ORIGIN}/sitemap-index.xml`);
+    const hasImageSitemapRef = robotsText.includes(`${SITE_ORIGIN}/image-sitemap.xml`);
+    if (!hasSitemapIndexRef || !hasImageSitemapRef) {
+      metrics.robotsMissingSitemapRefs += 1;
+      failures.push({
+        type: 'robots-missing-sitemap-references',
+        missing: {
+          sitemapIndex: !hasSitemapIndexRef,
+          imageSitemap: !hasImageSitemapRef,
+        },
+      });
+    }
   }
 
   const elapsedMs = Date.now() - startedAt;

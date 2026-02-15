@@ -43,9 +43,18 @@ This audit catches those issues deterministically before deployment.
    - `x-default` exists when alternates are emitted
    - hreflang targets resolve to generated output
 12. Duplicate meta-description groups are rejected.
-13. Dist route hygiene check for `.docs` tokens.
+13. Sitemap integrity:
+   - `sitemap-index.xml` exists and references main + image sitemap
+   - `sitemap-0.xml` URLs are same-origin, unique, and resolvable in build output
+   - sitemap excludes disallowed utility/docs URLs (`/404`, `.docs`)
+14. Robots integrity:
+   - `robots.txt` exists
+   - no `Crawl-delay`
+   - includes sitemap index + image sitemap references
+15. Dist route hygiene check for `.docs` tokens.
 
 > Note: explicit `/404` and `/hi/404` link targets are ignored as controlled exceptions for error-page UX.
+> Note: missing image sitemap reference in `sitemap-index.xml` is reported as a warning (not failure) because some setups expose image sitemap via `robots.txt` only.
 
 ---
 
@@ -98,6 +107,8 @@ Aggregate metrics + duplicate-description groups + failures
    |
    +--> else pass (exit 0)
 ```
+
+Then validate sitemap and robots artifacts before final pass/fail decision.
 
 ---
 

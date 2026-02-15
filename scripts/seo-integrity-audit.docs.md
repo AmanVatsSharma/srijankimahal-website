@@ -30,6 +30,7 @@ This audit catches those issues deterministically before deployment.
    - non-empty `<meta name="description">`
    - no duplicate title groups
    - no duplicate description groups
+   - warning-only checks for recommended title/description length ranges (aggregated counts + sample pages)
 4. Social URL targets (`og:url`, `twitter:url`) resolve to generated output.
    - `og:url` must match canonical target
    - `twitter:url` must match canonical target
@@ -68,6 +69,7 @@ This audit catches those issues deterministically before deployment.
 
 > Note: explicit `/404` and `/hi/404` link targets are ignored as controlled exceptions for error-page UX.
 > Note: image sitemap reference warning is only emitted when `image-sitemap.xml` is missing from **both** `sitemap-index.xml` and `robots.txt`.
+> Note: title/description length checks are warnings (not failures) to allow editorial flexibility.
 
 ---
 

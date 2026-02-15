@@ -94,6 +94,8 @@ jobs:
             `- OG locale/hreflang mismatch: **${metrics.pagesWithOgLocaleAltMismatch ?? 0}**`,
             `- Invalid JSON-LD: **${metrics.invalidJsonLdScripts ?? 0}**`,
             `- Broken internal links: **${metrics.brokenInternalLinks ?? 0}**`,
+            `- Title length warnings: **${metrics.titlesOutsideRecommendedRange ?? 0}**`,
+            `- Description length warnings: **${metrics.descriptionsOutsideRecommendedRange ?? 0}**`,
             '',
             '### Top Failure Types',
             ...(topFailures.length > 0 ? topFailures : ['  - none']),

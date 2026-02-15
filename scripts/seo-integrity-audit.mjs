@@ -20,6 +20,8 @@ const SITE_ORIGIN = 'https://www.srijanakimahaltrustofficial.com';
 const ABSOLUTE_HTTP_PATTERN = /^https?:\/\//i;
 const XML_LOC_REGEX = /<loc>([^<]+)<\/loc>/gi;
 const REPORT_FILE_ENV_KEY = 'SEO_AUDIT_REPORT_FILE';
+const TITLE_LENGTH_RECOMMENDED = { min: 20, max: 70 };
+const DESCRIPTION_LENGTH_RECOMMENDED = { min: 70, max: 180 };
 const INTERNAL_LINK_IGNORE_PATTERNS = [
   /^\/404\/?$/i,
   /^\/hi\/404\/?$/i,
@@ -366,6 +368,8 @@ async function run(options = { reportFile: null }) {
   const noindexCanonicalPaths = new Set();
   const indexableCanonicalPaths = new Set();
   const sitemapComparablePaths = new Set();
+  const titleLengthWarningPages = [];
+  const descriptionLengthWarningPages = [];
   const hreflangGraphByPage = new Map();
   const hreflangReciprocalIssuePages = new Set();
   const metrics = {
@@ -374,6 +378,8 @@ async function run(options = { reportFile: null }) {
     canonicalTargetMissing: 0,
     pagesMissingTitle: 0,
     pagesMissingDescription: 0,
+    titlesOutsideRecommendedRange: 0,
+    descriptionsOutsideRecommendedRange: 0,
     ogUrlTargetMissing: 0,
     twitterUrlTargetMissing: 0,
     socialImageTargetMissing: 0,
@@ -436,6 +442,16 @@ async function run(options = { reportFile: null }) {
       const pages = titlesByContent.get(pageTitle) ?? [];
       pages.push(relPath);
       titlesByContent.set(pageTitle, pages);
+
+      const titleLength = pageTitle.length;
+      if (titleLength < TITLE_LENGTH_RECOMMENDED.min || titleLength > TITLE_LENGTH_RECOMMENDED.max) {
+        metrics.titlesOutsideRecommendedRange += 1;
+        titleLengthWarningPages.push({
+          page: relPath,
+          length: titleLength,
+          preview: pageTitle.slice(0, 120),
+        });
+      }
     }
 
     // Canonical: exactly one per page.
@@ -663,6 +679,19 @@ async function run(options = { reportFile: null }) {
       const pages = descriptionsByContent.get(descriptionText) ?? [];
       pages.push(relPath);
       descriptionsByContent.set(descriptionText, pages);
+
+      const descriptionLength = descriptionText.length;
+      if (
+        descriptionLength < DESCRIPTION_LENGTH_RECOMMENDED.min ||
+        descriptionLength > DESCRIPTION_LENGTH_RECOMMENDED.max
+      ) {
+        metrics.descriptionsOutsideRecommendedRange += 1;
+        descriptionLengthWarningPages.push({
+          page: relPath,
+          length: descriptionLength,
+          preview: descriptionText.slice(0, 140),
+        });
+      }
     }
 
     // Exactly one H1 for semantic consistency.
@@ -852,6 +881,24 @@ async function run(options = { reportFile: null }) {
         page: relPath,
       });
     }
+  }
+
+  if (titleLengthWarningPages.length > 0) {
+    warnings.push({
+      type: 'title-length-outside-recommended-range',
+      count: titleLengthWarningPages.length,
+      recommended: TITLE_LENGTH_RECOMMENDED,
+      samplePages: titleLengthWarningPages.slice(0, 20),
+    });
+  }
+
+  if (descriptionLengthWarningPages.length > 0) {
+    warnings.push({
+      type: 'description-length-outside-recommended-range',
+      count: descriptionLengthWarningPages.length,
+      recommended: DESCRIPTION_LENGTH_RECOMMENDED,
+      samplePages: descriptionLengthWarningPages.slice(0, 20),
+    });
   }
 
   for (const [pageHref, entries] of hreflangGraphByPage.entries()) {

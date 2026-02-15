@@ -32,7 +32,15 @@ jobs:
         run: npm run build
 
       - name: Run SEO audit with report output
-        run: npm run seo:audit -- --report-file reports/seo-audit-report.json
+        id: seo_audit
+        run: |
+          # Keep this step non-fatal so we can always upload the report artifact.
+          # The next step enforces failure explicitly based on captured exit code.
+          set +e
+          npm run seo:audit -- --report-file reports/seo-audit-report.json
+          exit_code=$?
+          echo "exit_code=${exit_code}" >> "$GITHUB_OUTPUT"
+          exit 0
 
       - name: Upload SEO audit report artifact
         if: always()
@@ -40,3 +48,10 @@ jobs:
         with:
           name: seo-audit-report
           path: reports/seo-audit-report.json
+          if-no-files-found: warn
+
+      - name: Fail workflow when SEO audit fails
+        if: steps.seo_audit.outputs.exit_code != '0'
+        run: |
+          echo "SEO audit failed with exit code: ${{ steps.seo_audit.outputs.exit_code }}"
+          exit 1

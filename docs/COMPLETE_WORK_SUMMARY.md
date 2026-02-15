@@ -29,6 +29,7 @@ Latest production-ready hardening completed:
   - optional JSON report output: `--report-file`
   - optional env-based report target: `SEO_AUDIT_REPORT_FILE`
   - CI uploads `seo-audit-report` artifact for every run (including failures)
+  - CI captures audit exit code, uploads artifact first, and then fails job if audit failed
   - Audit now validates:
     - canonical/hreflang target integrity
     - JSON-LD validity

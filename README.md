@@ -28,3 +28,4 @@ All commands are run from the repository root.
 - CI workflow: `.github/workflows/seo-integrity.yml`
 
 The audit validates canonical tags, hreflang integrity, JSON-LD validity, heading semantics, image metadata, internal links, and duplicate meta-description regressions. CI also uploads the generated JSON audit report for every run.
+The workflow is configured to upload the report artifact first and then fail the job when the audit exit code is non-zero, so debugging data is always preserved.

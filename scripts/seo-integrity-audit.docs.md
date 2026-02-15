@@ -108,7 +108,8 @@ Report payload fields:
 CI runs this via:
 
 - `.github/workflows/seo-integrity.yml`
-- uploads report artifact `seo-audit-report`
+- always uploads report artifact `seo-audit-report` (warns if missing)
+- marks workflow failed after upload when audit exit code is non-zero
 
 ---
 

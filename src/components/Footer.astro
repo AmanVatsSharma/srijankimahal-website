@@ -1,6 +1,12 @@
 <!-- // src/components/Footer.astro -->
 ---
 import { DISPLAY_PHONE, TEL_LINK, WHATSAPP_LINK } from '../lib/constants';
+import { detectLangFromPath, withLangPrefix } from '../lib/i18n';
+
+const pathname = Astro.url.pathname;
+const currentLang = detectLangFromPath(pathname);
+const href = (path: string) => withLangPrefix(path, currentLang);
+const homeSectionHref = (sectionId: string) => `${href('/')}#${sectionId}`;
 ---
 
 <footer class="bg-gray-900 text-white py-12">
@@ -18,21 +24,21 @@ import { DISPLAY_PHONE, TEL_LINK, WHATSAPP_LINK } from '../lib/constants';
       <div>
         <h3 class="text-xl font-bold mb-4">Quick Links</h3>
         <ul class="space-y-2 text-gray-400">
-          <li><a href="#home" class="hover:text-amber-600 transition-colors">Home</a></li>
-          <li><a href="/about" class="hover:text-amber-600 transition-colors">About Us</a></li>
-          <li><a href="#rooms" class="hover:text-amber-600 transition-colors">Rooms</a></li>
-          <li><a href="/blog" class="hover:text-amber-600 transition-colors">Blog</a></li>
-          <li><a href="#gallery" class="hover:text-amber-600 transition-colors">Gallery</a></li>
+          <li><a href={href('/')} class="hover:text-amber-600 transition-colors">Home</a></li>
+          <li><a href={href('/about')} class="hover:text-amber-600 transition-colors">About Us</a></li>
+          <li><a href={href('/rooms')} class="hover:text-amber-600 transition-colors">Rooms</a></li>
+          <li><a href={href('/blog')} class="hover:text-amber-600 transition-colors">Blog</a></li>
+          <li><a href={homeSectionHref('gallery')} class="hover:text-amber-600 transition-colors">Gallery</a></li>
         </ul>
         
         <!-- Legal Links -->
         <h3 class="text-xl font-bold mb-4 mt-8">Legal</h3>
         <ul class="space-y-2 text-gray-400">
-          <li><a href="/official" class="hover:text-amber-600 transition-colors">Official Verification</a></li>
-          <li><a href="/official-booking" class="hover:text-amber-600 transition-colors">Official Booking</a></li>
-          <li><a href="/privacy-policy" class="hover:text-amber-600 transition-colors">Privacy Policy</a></li>
-          <li><a href="/terms-of-service" class="hover:text-amber-600 transition-colors">Terms of Service</a></li>
-          <li><a href="/cancellation-refund" class="hover:text-amber-600 transition-colors">Cancellation Policy</a></li>
+          <li><a href={href('/official')} class="hover:text-amber-600 transition-colors">Official Verification</a></li>
+          <li><a href={href('/official-booking')} class="hover:text-amber-600 transition-colors">Official Booking</a></li>
+          <li><a href={href('/privacy-policy')} class="hover:text-amber-600 transition-colors">Privacy Policy</a></li>
+          <li><a href={href('/terms-of-service')} class="hover:text-amber-600 transition-colors">Terms of Service</a></li>
+          <li><a href={href('/cancellation-refund')} class="hover:text-amber-600 transition-colors">Cancellation Policy</a></li>
         </ul>
       </div>
 

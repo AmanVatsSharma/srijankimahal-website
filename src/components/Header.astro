@@ -14,16 +14,17 @@ const href = (path: string) => withLangPrefix(path, currentLang);
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between items-center h-16">
       <!-- Logo -->
-      <a href="/" class="flex items-center gap-2 group">
+      <a href={href('/')} class="flex items-center gap-2 group">
         <div class="w-10 h-10 bg-amber-600 rounded-lg flex items-center justify-center text-white font-bold text-lg group-hover:animate-glow transition-all">
           ॐ
         </div>
         <div class="hidden sm:block">
-          <h1 class="text-lg font-bold text-gray-900">Sri Janaki Mahal</h1>
+          <!-- Use non-H1 branding text to prevent multiple H1s site-wide -->
+          <p class="text-lg font-bold text-gray-900">Sri Janaki Mahal</p>
           <p class="text-xs text-gray-600">Ayodhya</p>
         </div>
         <div class="sm:hidden">
-          <h1 class="text-sm font-bold text-gray-900">Sri Janaki</h1>
+          <p class="text-sm font-bold text-gray-900">Sri Janaki</p>
         </div>
       </a>
 

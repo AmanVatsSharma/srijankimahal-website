@@ -37,19 +37,20 @@ This module now prevents double-prefix canonicalization.
 
 ---
 
-## Title suffix de-duplication
+## Title suffix de-duplication (language-aware)
 
-`generateTitle(title)` now appends `| Sri Janaki Mahal Trust` **only when needed**.
+`generateTitle(title, lang)` now appends a localized site suffix only when needed.
 
 ### Behavior
-- If incoming title already contains a recognized brand alias
-  (`Sri Janaki Mahal Trust` / `श्री जानकी महल ट्रस्ट`), keep it as-is.
-- Otherwise append the canonical site suffix.
+- If incoming title already contains the brand alias for the current page language, keep it as-is.
+- Otherwise append localized suffix based on page language:
+  - `en` → `Sri Janaki Mahal Trust`
+  - `hi` → `श्री जानकी महल ट्रस्ट`
 
 ### Why this matters
 - Prevents repeated SERP titles like:
   - `... | Sri Janaki Mahal Trust | Sri Janaki Mahal Trust`
-- Improves title readability and preserves cleaner entity signaling.
+- Improves title readability and keeps Hindi SERP snippets language-consistent.
 
 ---
 

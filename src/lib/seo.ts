@@ -15,10 +15,15 @@ import { detectLangFromPath, getHreflangTargets } from './i18n';
 // Base site configuration
 const SITE_URL = 'https://www.srijanakimahaltrustofficial.com';
 const SITE_NAME = 'Sri Janaki Mahal Trust';
-const SITE_NAME_ALIASES = [
-  SITE_NAME,
-  'श्री जानकी महल ट्रस्ट',
-];
+const SITE_NAME_HI = 'श्री जानकी महल ट्रस्ट';
+const SITE_NAME_BY_LANG: Record<'en' | 'hi', string> = {
+  en: SITE_NAME,
+  hi: SITE_NAME_HI,
+};
+const SITE_NAME_ALIASES_BY_LANG: Record<'en' | 'hi', string[]> = {
+  en: [SITE_NAME],
+  hi: [SITE_NAME_HI],
+};
 const DEFAULT_TITLE = 'Sri Janaki Mahal - Comfortable Hotel in Ayodhya';
 const DEFAULT_DESCRIPTION = `Sri Janaki Mahal Trust - Best hotel stay in Ayodhya. Book comfortable rooms near Ram Mandir. All meals included. Call ${DISPLAY_PHONE}.`;
 const DEFAULT_KEYWORDS = [
@@ -74,9 +79,11 @@ function normalizeForComparison(value: string): string {
  * Prevents duplicate title suffix patterns such as:
  * "… | Sri Janaki Mahal Trust | Sri Janaki Mahal Trust"
  */
-function hasSiteNameInTitle(title: string): boolean {
+function hasSiteNameInTitleForLang(title: string, lang: 'en' | 'hi'): boolean {
   const normalizedTitle = normalizeForComparison(title);
-  return SITE_NAME_ALIASES.some((brandName) => normalizedTitle.includes(normalizeForComparison(brandName)));
+  return SITE_NAME_ALIASES_BY_LANG[lang].some((brandName) =>
+    normalizedTitle.includes(normalizeForComparison(brandName))
+  );
 }
 
 /**
@@ -107,17 +114,18 @@ export interface SEOConfig {
  * - Input: "About Us" 
  * - Output: "About Us | Sri Janaki Mahal Trust"
  */
-export function generateTitle(title?: string): string {
-  debugLog('[SEO] Generating title', { title });
+export function generateTitle(title?: string, lang: 'en' | 'hi' = 'en'): string {
+  debugLog('[SEO] Generating title', { title, lang });
   const pageTitle = (title || DEFAULT_TITLE).trim();
 
   // Keep title clean when callers already include the brand.
   // This improves SERP readability and avoids repeated entity strings.
-  if (hasSiteNameInTitle(pageTitle)) {
+  if (hasSiteNameInTitleForLang(pageTitle, lang)) {
     return pageTitle;
   }
 
-  return `${pageTitle} | ${SITE_NAME}`;
+  const localizedSiteName = SITE_NAME_BY_LANG[lang] || SITE_NAME;
+  return `${pageTitle} | ${localizedSiteName}`;
 }
 
 /**
@@ -213,7 +221,7 @@ export function generateOGImage(image?: string): string {
  * @returns Object with Open Graph meta tags
  */
 export function generateOGTags(config: SEOConfig) {
-  const title = generateTitle(config.title);
+  const title = generateTitle(config.title, config.lang || 'en');
   const description = generateDescription(config.description);
   const url = generateCanonical(config.canonical);
   const image = generateOGImage(config.ogImage);
@@ -239,7 +247,7 @@ export function generateOGTags(config: SEOConfig) {
  * @returns Object with Twitter Card meta tags
  */
 export function generateTwitterTags(config: SEOConfig) {
-  const title = generateTitle(config.title);
+  const title = generateTitle(config.title, config.lang || 'en');
   const description = generateDescription(config.description);
   const image = generateOGImage(config.ogImage);
   const url = generateCanonical(config.canonical);
@@ -345,15 +353,15 @@ export function generateHreflangTags(
  */
 export function generateSEOData(config: SEOConfig, currentPath?: string) {
   debugLog('[SEO] Generating complete SEO data', { currentPath: currentPath || '/' });
-  
+
+  const inferredLang = detectLangFromPath(currentPath || '/');
+  const lang = config.lang || inferredLang;
   const effectivePath = config.canonical || currentPath;
   const canonical = generateCanonical(effectivePath);
-  const title = generateTitle(config.title);
+  const title = generateTitle(config.title, lang);
   const description = generateDescription(config.description);
   const keywords = generateKeywords(config.keywords);
   const robots = generateRobotsContent(config.noindex);
-  const inferredLang = detectLangFromPath(currentPath || '/');
-  const lang = config.lang || inferredLang;
   const ogTags = generateOGTags({ ...config, canonical, lang });
   const twitterTags = generateTwitterTags({ ...config, canonical, lang });
   const hreflangTags = generateHreflangTags(currentPath || '/', config.alternateLanguages, {

@@ -47,6 +47,7 @@ Latest production-ready hardening completed:
   - SEO CI now runs audit in strict warning mode for stronger regression gating
   - page-level robots meta directives are now validated for indexable/noindex consistency
   - canonical validation now enforces self-route alignment per generated page
+  - social meta tags now checked for completeness, uniqueness, and valid twitter card values
   - Audit now validates:
     - canonical/hreflang target integrity
     - social URL canonical parity (`og:url`, `twitter:url`)

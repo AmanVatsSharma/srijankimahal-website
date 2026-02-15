@@ -91,6 +91,7 @@ jobs:
             `- Pages audited: **${metrics.htmlFiles ?? 'n/a'}**`,
             `- Canonical issues: **${metrics.pagesWithCanonicalIssue ?? 0}**`,
             `- Canonical route mismatches: **${metrics.pagesWithCanonicalRouteMismatch ?? 0}**`,
+            `- Social meta integrity issues: **${metrics.pagesWithSocialMetaIssues ?? 0}**`,
             `- Hreflang target missing: **${metrics.hreflangTargetMissing ?? 0}**`,
             `- Hreflang reciprocity issues: **${metrics.pagesWithHreflangReciprocalIssue ?? 0}**`,
             `- OG locale/hreflang mismatch: **${metrics.pagesWithOgLocaleAltMismatch ?? 0}**`,

@@ -24,6 +24,18 @@ const STRICT_WARNINGS_ENV_KEY = 'SEO_AUDIT_STRICT_WARNINGS';
 const TITLE_LENGTH_RECOMMENDED = { min: 20, max: 70 };
 const DESCRIPTION_LENGTH_RECOMMENDED = { min: 70, max: 180 };
 const DIST_TARGET_EXISTS_CACHE = new Map();
+const SOCIAL_META_REQUIRED_KEYS = [
+  'og:title',
+  'og:description',
+  'og:url',
+  'og:image',
+  'twitter:card',
+  'twitter:title',
+  'twitter:description',
+  'twitter:url',
+  'twitter:image',
+];
+const TWITTER_CARD_ALLOWED_VALUES = new Set(['summary', 'summary_large_image']);
 const INTERNAL_LINK_IGNORE_PATTERNS = [
   /^\/404\/?$/i,
   /^\/hi\/404\/?$/i,
@@ -212,6 +224,19 @@ function parseMetaDirectives(content) {
       .map((directive) => directive.trim().toLowerCase())
       .filter(Boolean)
   );
+}
+
+function escapeForRegex(value) {
+  return value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+function extractMetaContentsByKey(html, metaKey) {
+  const escapedMetaKey = escapeForRegex(metaKey);
+  const pattern = new RegExp(
+    `<meta[^>]+(?:property|name)=["']${escapedMetaKey}["'][^>]*content=["']([^"']*)["'][^>]*>`,
+    'gi'
+  );
+  return Array.from(html.matchAll(pattern)).map((match) => (match[1] ?? '').trim());
 }
 
 function toRelative(absPath) {
@@ -419,6 +444,7 @@ async function run(options = { reportFile: null, strictWarnings: false }) {
     pagesWithCanonicalIssue: 0,
     canonicalTargetMissing: 0,
     pagesWithCanonicalRouteMismatch: 0,
+    pagesWithSocialMetaIssues: 0,
     pagesMissingTitle: 0,
     pagesMissingDescription: 0,
     titlesOutsideRecommendedRange: 0,
@@ -802,6 +828,42 @@ async function run(options = { reportFile: null, strictWarnings: false }) {
           preview: descriptionText.slice(0, 140),
         });
       }
+    }
+
+    const socialMetaIssues = [];
+    for (const socialMetaKey of SOCIAL_META_REQUIRED_KEYS) {
+      const values = extractMetaContentsByKey(html, socialMetaKey);
+      if (values.length === 0) {
+        socialMetaIssues.push({ type: 'missing', key: socialMetaKey });
+        continue;
+      }
+
+      if (values.length > 1) {
+        socialMetaIssues.push({ type: 'duplicate', key: socialMetaKey, count: values.length });
+      }
+
+      if (values.some((value) => !value.trim())) {
+        socialMetaIssues.push({ type: 'empty', key: socialMetaKey });
+      }
+    }
+
+    const twitterCardValues = extractMetaContentsByKey(html, 'twitter:card');
+    const normalizedTwitterCard = twitterCardValues[0]?.toLowerCase();
+    if (normalizedTwitterCard && !TWITTER_CARD_ALLOWED_VALUES.has(normalizedTwitterCard)) {
+      socialMetaIssues.push({
+        type: 'invalid-twitter-card',
+        key: 'twitter:card',
+        value: twitterCardValues[0],
+      });
+    }
+
+    if (socialMetaIssues.length > 0) {
+      metrics.pagesWithSocialMetaIssues += 1;
+      failures.push({
+        type: 'social-meta-integrity',
+        page: relPath,
+        issues: socialMetaIssues,
+      });
     }
 
     // Exactly one H1 for semantic consistency.

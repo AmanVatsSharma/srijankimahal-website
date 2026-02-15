@@ -36,41 +36,44 @@ This audit catches those issues deterministically before deployment.
    - `og:url` must match canonical target
    - `twitter:url` must match canonical target
 5. Social image paths (`og:image`, `twitter:image`) exist in build output for same-origin assets.
-6. `og:locale:alternate` hygiene:
+6. Social meta completeness:
+   - required OG/Twitter tags must exist exactly once and be non-empty
+   - `twitter:card` must be `summary` or `summary_large_image`
+7. `og:locale:alternate` hygiene:
    - no duplicate alternates
    - alternate cannot match primary `og:locale`
    - alternate locales must match hreflang-derived locale set
-7. Language consistency checks:
+8. Language consistency checks:
    - `<html lang>` matches route locale (`/hi/*` -> `hi`, else `en`)
    - `og:locale` matches page language (`en_IN` or `hi_IN`)
-8. Page-level robots meta integrity:
+9. Page-level robots meta integrity:
    - exactly one `<meta name="robots">` tag per page
    - `noindex` pages must also include `nofollow,noarchive`
    - indexable pages must include `index,follow`
-9. H1 count is exactly `1` per page.
-10. JSON-LD payloads parse as valid JSON.
-11. No literal `{JSON.stringify(...)}` text leaked into output.
-12. All `<img>` tags include:
+10. H1 count is exactly `1` per page.
+11. JSON-LD payloads parse as valid JSON.
+12. No literal `{JSON.stringify(...)}` text leaked into output.
+13. All `<img>` tags include:
    - `alt`
    - `width`
    - `height`
-13. Internal local links resolve to generated output files.
-14. Hreflang integrity:
+14. Internal local links resolve to generated output files.
+15. Hreflang integrity:
    - no duplicate language entries
    - `x-default` exists when alternates are emitted
    - hreflang targets resolve to generated output
    - alternate pages include reciprocal hreflang links back
-15. Sitemap integrity:
+16. Sitemap integrity:
    - `sitemap-index.xml` exists and references main + image sitemap
    - `sitemap-0.xml` URLs are same-origin, unique, and resolvable in build output
    - `sitemap-0.xml` does not include canonical URLs from pages marked `noindex`
    - all indexable canonical URLs are present in `sitemap-0.xml`
    - sitemap excludes disallowed utility/docs URLs (`/404`, `.docs`)
-16. Robots integrity:
+17. Robots integrity:
    - `robots.txt` exists
    - no `Crawl-delay`
    - includes sitemap index + image sitemap references
-17. Dist route hygiene check for `.docs` tokens.
+18. Dist route hygiene check for `.docs` tokens.
 
 > Note: explicit `/404` and `/hi/404` link targets are ignored as controlled exceptions for error-page UX.
 > Note: image sitemap reference warning is only emitted when `image-sitemap.xml` is missing from **both** `sitemap-index.xml` and `robots.txt`.
@@ -172,7 +175,7 @@ For each page:
   - canonical count
   - canonical target existence
   - title/description presence + duplicate tracking
-  - social URL/image target checks + canonical parity
+  - social tag completeness + URL/image target checks + canonical parity
   - OG locale alternate checks
   - HTML lang + OG locale language checks
   - robots meta directive checks

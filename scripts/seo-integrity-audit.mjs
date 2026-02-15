@@ -22,6 +22,7 @@ const XML_LOC_REGEX = /<loc>([^<]+)<\/loc>/gi;
 const REPORT_FILE_ENV_KEY = 'SEO_AUDIT_REPORT_FILE';
 const TITLE_LENGTH_RECOMMENDED = { min: 20, max: 70 };
 const DESCRIPTION_LENGTH_RECOMMENDED = { min: 70, max: 180 };
+const DIST_TARGET_EXISTS_CACHE = new Map();
 const INTERNAL_LINK_IGNORE_PATTERNS = [
   /^\/404\/?$/i,
   /^\/hi\/404\/?$/i,
@@ -278,16 +279,28 @@ async function hasDistTarget(localHref) {
     return true;
   }
 
-  const target = resolveLocalTarget(localHref);
-  if (typeof target === 'string') {
-    return exists(target);
+  const cacheKey = normalizeComparableHref(localHref) || localHref.trim();
+  if (cacheKey && DIST_TARGET_EXISTS_CACHE.has(cacheKey)) {
+    return DIST_TARGET_EXISTS_CACHE.get(cacheKey) === true;
   }
 
-  return (
-    (await exists(target.directFile)) ||
-    (await exists(target.nestedIndex)) ||
-    (await exists(target.htmlVariant))
-  );
+  const target = resolveLocalTarget(localHref);
+  let existsInDist = false;
+
+  if (typeof target === 'string') {
+    existsInDist = await exists(target);
+  } else {
+    existsInDist =
+      (await exists(target.directFile)) ||
+      (await exists(target.nestedIndex)) ||
+      (await exists(target.htmlVariant));
+  }
+
+  if (cacheKey) {
+    DIST_TARGET_EXISTS_CACHE.set(cacheKey, existsInDist);
+  }
+
+  return existsInDist;
 }
 
 async function exists(filePath) {
@@ -331,6 +344,7 @@ async function run(options = { reportFile: null }) {
   const startedAt = Date.now();
   logInfo('Starting SEO integrity audit', { distDir: DIST_DIR });
   const startIso = new Date(startedAt).toISOString();
+  DIST_TARGET_EXISTS_CACHE.clear();
 
   if (!(await exists(DIST_DIR))) {
     logError('dist directory does not exist. Run `npm run build` first.');

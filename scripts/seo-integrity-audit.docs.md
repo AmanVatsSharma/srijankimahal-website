@@ -170,5 +170,6 @@ Sitemap validation also enforces indexable canonical coverage in the primary sit
 - Defensive CLI parsing with warning logs for unknown/invalid flags.
 - Optional JSON report output via `--report-file`.
 - Report file path can also be provided through `SEO_AUDIT_REPORT_FILE`.
+- Internal dist-target lookups are cached to keep large-site audits fast and deterministic.
 - Audit exits non-zero on any failure.
 - Reports concise samples to make debugging fast.

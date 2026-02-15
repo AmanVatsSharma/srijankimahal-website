@@ -38,6 +38,7 @@ Latest production-ready hardening completed:
   - og:locale:alternate values now validated against hreflang-derived locale expectations
   - title/description recommended-length checks added as aggregated warning-level quality signals
   - shared SEO utility now normalizes generated title/description lengths to keep pages within recommended ranges
+  - audit dist-target existence checks now use caching to keep validation fast as pages scale
   - Audit now validates:
     - canonical/hreflang target integrity
     - social URL canonical parity (`og:url`, `twitter:url`)

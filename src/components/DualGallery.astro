@@ -149,9 +149,7 @@ const imageSchemas = [...leftLaneImages, ...rightLaneImages].map((image) => ({
   </div>
 </section>
 
-<script type="application/ld+json">
-  {JSON.stringify(imageSchemas, null, 2)}
-</script>
+<script type="application/ld+json" set:html={JSON.stringify(imageSchemas, null, 2)} />
 
 <style>
   @keyframes scroll-left {

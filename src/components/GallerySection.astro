@@ -187,9 +187,7 @@ const imageSchemas = Array.from(uniqueImageMap.values());
   </div>
 </section>
 
-<script type="application/ld+json">
-  {JSON.stringify(imageSchemas, null, 2)}
-</script>
+<script type="application/ld+json" set:html={JSON.stringify(imageSchemas, null, 2)} />
 
 <script type="module">
   // Seamless loop via scrollLeft with wrap-around.

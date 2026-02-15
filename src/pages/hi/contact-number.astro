@@ -147,9 +147,10 @@ const faqStructuredData = {
     </div>
   </main>
 
-  <script type="application/ld+json">
-    {JSON.stringify([contactStructuredData, faqStructuredData], null, 2)}
-  </script>
+  <script
+    type="application/ld+json"
+    set:html={JSON.stringify([contactStructuredData, faqStructuredData], null, 2)}
+  />
 
   <Footer />
   <FloatingWhatsApp />

@@ -144,5 +144,18 @@ All helper debug logs are routed through `debugLog(...)`, which is DEV-only:
    - valid canonical URL
    - valid `og:url` and `twitter:url`
    - expected hreflang tags
+   - valid JSON-LD payloads (no literal `{JSON.stringify(...)}` artifacts)
 3. Ensure no unresolved constants remain in rendered output.
+
+---
+
+## JSON-LD rendering rule (Astro)
+
+When rendering JSON-LD in Astro templates/components, use:
+
+```astro
+<script type="application/ld+json" set:html={JSON.stringify(schemaObject)} />
+```
+
+Do **not** place `{JSON.stringify(...)}` as plain script body text, otherwise invalid literal output can leak into built HTML.
 

@@ -6,8 +6,50 @@ import { detectLangFromPath, withLangPrefix } from '../lib/i18n';
 
 const pathname = Astro.url.pathname;
 const currentLang = detectLangFromPath(pathname);
+const isHindi = currentLang === 'hi';
 
 const href = (path: string) => withLangPrefix(path, currentLang);
+const content = isHindi
+  ? {
+      brandPrimary: 'श्री जानकी महल',
+      brandSecondary: 'अयोध्या',
+      brandMobile: 'श्री जानकी',
+      nav: {
+        home: 'होम',
+        about: 'श्री / श्री जांकी महल ट्रस्ट के बारे में',
+        booking: 'आधिकारिक जानकी महल बुकिंग',
+        rooms: 'रूम्स',
+        blog: 'ब्लॉग',
+        verify: 'श्री जांकी महल ट्रस्ट सत्यापन',
+        faq: 'सामान्य प्रश्न',
+        contact: 'आधिकारिक संपर्क नंबर',
+      },
+      cta: {
+        whatsapp: 'व्हाट्सऐप',
+        callNow: 'अभी कॉल करें',
+        call: 'कॉल',
+      },
+    }
+  : {
+      brandPrimary: 'Sri Janaki Mahal',
+      brandSecondary: 'Ayodhya',
+      brandMobile: 'Sri Janaki',
+      nav: {
+        home: 'Home',
+        about: 'About Sri / Shri Janki Mahal Trust',
+        booking: 'Official Janaki Mahal Booking',
+        rooms: 'Rooms',
+        blog: 'Blog',
+        verify: 'Verify Sri Janki Mahal Trust',
+        faq: 'FAQs',
+        contact: 'Official Contact Number',
+      },
+      cta: {
+        whatsapp: 'WhatsApp',
+        callNow: 'Call Now',
+        call: 'Call',
+      },
+    };
 ---
 
 <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200 shadow-sm">
@@ -20,24 +62,24 @@ const href = (path: string) => withLangPrefix(path, currentLang);
         </div>
         <div class="hidden sm:block">
           <!-- Use non-H1 branding text to prevent multiple H1s site-wide -->
-          <p class="text-lg font-bold text-gray-900">Sri Janaki Mahal</p>
-          <p class="text-xs text-gray-600">Ayodhya</p>
+          <p class="text-lg font-bold text-gray-900">{content.brandPrimary}</p>
+          <p class="text-xs text-gray-600">{content.brandSecondary}</p>
         </div>
         <div class="sm:hidden">
-          <p class="text-sm font-bold text-gray-900">Sri Janaki</p>
+          <p class="text-sm font-bold text-gray-900">{content.brandMobile}</p>
         </div>
       </a>
 
       <!-- Desktop Navigation -->
       <nav class="hidden md:flex items-center gap-6">
-        <a href={href('/')} class="text-sm font-medium text-gray-900 hover:text-amber-600 transition-colors">Home</a>
-        <a href={href('/about')} class="text-sm font-medium text-gray-900 hover:text-amber-600 transition-colors">About Sri / Shri Janki Mahal Trust</a>
-        <a href={href('/booking')} class="text-sm font-semibold text-gray-900 hover:text-amber-600 transition-colors">Official Janaki Mahal Booking</a>
-        <a href={href('/#rooms')} class="text-sm font-medium text-gray-900 hover:text-amber-600 transition-colors">Rooms</a>
-        <a href={href('/blog')} class="text-sm font-medium text-gray-900 hover:text-amber-600 transition-colors">Blog</a>
-        <a href={href('/official')} class="text-sm font-medium text-gray-900 hover:text-amber-600 transition-colors">Verify Sri Janki Mahal Trust</a>
-        <a href={href('/#faq')} class="text-sm font-medium text-gray-900 hover:text-amber-600 transition-colors">FAQs</a>
-        <a href={href('/#contact')} class="text-sm font-medium text-gray-900 hover:text-amber-600 transition-colors">Official Contact Number</a>
+        <a href={href('/')} class="text-sm font-medium text-gray-900 hover:text-amber-600 transition-colors">{content.nav.home}</a>
+        <a href={href('/about')} class="text-sm font-medium text-gray-900 hover:text-amber-600 transition-colors">{content.nav.about}</a>
+        <a href={href('/booking')} class="text-sm font-semibold text-gray-900 hover:text-amber-600 transition-colors">{content.nav.booking}</a>
+        <a href={href('/#rooms')} class="text-sm font-medium text-gray-900 hover:text-amber-600 transition-colors">{content.nav.rooms}</a>
+        <a href={href('/blog')} class="text-sm font-medium text-gray-900 hover:text-amber-600 transition-colors">{content.nav.blog}</a>
+        <a href={href('/official')} class="text-sm font-medium text-gray-900 hover:text-amber-600 transition-colors">{content.nav.verify}</a>
+        <a href={href('/#faq')} class="text-sm font-medium text-gray-900 hover:text-amber-600 transition-colors">{content.nav.faq}</a>
+        <a href={href('/#contact')} class="text-sm font-medium text-gray-900 hover:text-amber-600 transition-colors">{content.nav.contact}</a>
       </nav>
 
       <!-- CTA Buttons -->
@@ -52,13 +94,13 @@ const href = (path: string) => withLangPrefix(path, currentLang);
           <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-4.255.949c-1.238.503-2.335 1.236-3.356 2.192-1.048 1.007-1.954 2.14-2.625 3.646-.735 1.7-1.14 3.6-.788 5.629.793 4.811 4.823 8.52 9.617 8.52 1.214 0 2.389-.184 3.514-.547 1.265-.41 2.439-1.04 3.466-1.872 1.048-.87 1.954-1.956 2.625-3.462.735-1.7 1.14-3.6.788-5.629-.793-4.811-4.823-8.52-9.617-8.52z" />
           </svg>
-          WhatsApp
+          {content.cta.whatsapp}
         </a>
         <a
           href={TEL_LINK}
           class="px-4 py-2 rounded-lg bg-amber-600 text-white text-sm font-medium hover:bg-amber-700 transition-colors"
         >
-          Call Now
+          {content.cta.callNow}
         </a>
       </div>
 
@@ -81,14 +123,14 @@ const href = (path: string) => withLangPrefix(path, currentLang);
       <div class="px-4 pt-2">
         <LanguageSwitcher />
       </div>
-      <a href={href('/')} class="block px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 rounded-lg">Home</a>
-      <a href={href('/about')} class="block px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 rounded-lg">About Sri / Shri Janki Mahal Trust</a>
-      <a href={href('/booking')} class="block px-4 py-2 text-sm font-semibold text-gray-900 hover:bg-gray-100 rounded-lg">Official Janaki Mahal Booking</a>
-      <a href={href('/#rooms')} class="block px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 rounded-lg">Rooms</a>
-      <a href={href('/blog')} class="block px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 rounded-lg">Blog</a>
-      <a href={href('/official')} class="block px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 rounded-lg">Verify Sri Janki Mahal Trust</a>
-      <a href={href('/#faq')} class="block px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 rounded-lg">FAQs</a>
-      <a href={href('/#contact')} class="block px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 rounded-lg">Official Contact Number</a>
+      <a href={href('/')} class="block px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 rounded-lg">{content.nav.home}</a>
+      <a href={href('/about')} class="block px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 rounded-lg">{content.nav.about}</a>
+      <a href={href('/booking')} class="block px-4 py-2 text-sm font-semibold text-gray-900 hover:bg-gray-100 rounded-lg">{content.nav.booking}</a>
+      <a href={href('/#rooms')} class="block px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 rounded-lg">{content.nav.rooms}</a>
+      <a href={href('/blog')} class="block px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 rounded-lg">{content.nav.blog}</a>
+      <a href={href('/official')} class="block px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 rounded-lg">{content.nav.verify}</a>
+      <a href={href('/#faq')} class="block px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 rounded-lg">{content.nav.faq}</a>
+      <a href={href('/#contact')} class="block px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 rounded-lg">{content.nav.contact}</a>
       <div class="flex gap-2 pt-2">
         <a
           href={WHATSAPP_BOOKING_LINK}
@@ -96,13 +138,13 @@ const href = (path: string) => withLangPrefix(path, currentLang);
           rel="noopener noreferrer"
           class="flex-1 px-3 py-2 rounded-lg bg-green-600 text-white text-sm font-medium hover:bg-green-700 text-center"
         >
-          WhatsApp
+          {content.cta.whatsapp}
         </a>
         <a
           href={TEL_LINK}
           class="flex-1 px-3 py-2 rounded-lg bg-amber-600 text-white text-sm font-medium hover:bg-amber-700 text-center"
         >
-          Call
+          {content.cta.call}
         </a>
       </div>
     </nav>

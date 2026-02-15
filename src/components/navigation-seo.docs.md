@@ -10,6 +10,7 @@ This document consolidates behavior for navigation components that influence cra
 - Logo link is language-aware (`/` or `/hi`)
 - Brand text uses `<p>` (not `<h1>`) to avoid adding extra H1s on every page
 - Main nav links remain stable and crawlable
+- Navigation labels and CTA text are locale-specific (English vs Hindi)
 - Mobile menu toggles safely with close-on-outside-click
 
 ### SEO rationale
@@ -25,6 +26,7 @@ This document consolidates behavior for navigation components that influence cra
   - home, about, rooms, blog
   - official verification/booking
   - privacy, terms, cancellation
+- Footer labels/badges/contact copy are translated per locale to keep `/hi/*` pages fully Hindi-facing
 - Home section anchor links are prefixed with localized home URL (`/` or `/hi`)
 
 ### SEO rationale

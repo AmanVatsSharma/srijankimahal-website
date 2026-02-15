@@ -5,8 +5,74 @@ import { detectLangFromPath, withLangPrefix } from '../lib/i18n';
 
 const pathname = Astro.url.pathname;
 const currentLang = detectLangFromPath(pathname);
+const isHindi = currentLang === 'hi';
 const href = (path: string) => withLangPrefix(path, currentLang);
 const homeSectionHref = (sectionId: string) => `${href('/')}#${sectionId}`;
+const content = isHindi
+  ? {
+      aboutTitle: 'श्री जानकी महल',
+      aboutDescription:
+        'अयोध्या में स्थित एक पवित्र ठहराव स्थल, जहाँ तीर्थयात्रियों और आध्यात्मिक साधकों को शांत वातावरण और आत्मीय सेवा मिलती है।',
+      quickLinks: 'त्वरित लिंक',
+      legal: 'कानूनी जानकारी',
+      contact: 'संपर्क',
+      links: {
+        home: 'होम',
+        about: 'हमारे बारे में',
+        rooms: 'रूम्स',
+        blog: 'ब्लॉग',
+        gallery: 'गैलरी',
+        officialVerification: 'आधिकारिक सत्यापन',
+        officialBooking: 'आधिकारिक बुकिंग',
+        privacy: 'प्राइवेसी पॉलिसी',
+        terms: 'सेवा की शर्तें',
+        cancellation: 'रद्दीकरण नीति',
+      },
+      whatsapp: 'व्हाट्सऐप पर संपर्क करें',
+      location: 'अयोध्या, उत्तर प्रदेश',
+      trustAndSecurity: 'विश्वास और सुरक्षा',
+      badges: {
+        ssl: 'SSL सुरक्षित',
+        trust: 'पंजीकृत ट्रस्ट',
+        guestFocus: 'अतिथि संतुष्टि केंद्रित',
+        support: '24/7 सहायता',
+      },
+      copyright: '© 2025 श्री जानकी महल ट्रस्ट। सर्वाधिकार सुरक्षित।',
+      registeredAddress: 'पंजीकृत चैरिटेबल ट्रस्ट | वासुदेव घाट, कारसेवकपुरम, अयोध्या, यूपी 224123',
+      devotionLine: 'आध्यात्मिक साधकों और तीर्थयात्रियों के लिए श्रद्धा से निर्मित',
+    }
+  : {
+      aboutTitle: 'Sri Janaki Mahal',
+      aboutDescription:
+        'A sacred hotel in Ayodhya, dedicated to providing pilgrims and spiritual seekers with sanctuary and warm hospitality amidst divinity.',
+      quickLinks: 'Quick Links',
+      legal: 'Legal',
+      contact: 'Contact',
+      links: {
+        home: 'Home',
+        about: 'About Us',
+        rooms: 'Rooms',
+        blog: 'Blog',
+        gallery: 'Gallery',
+        officialVerification: 'Official Verification',
+        officialBooking: 'Official Booking',
+        privacy: 'Privacy Policy',
+        terms: 'Terms of Service',
+        cancellation: 'Cancellation Policy',
+      },
+      whatsapp: 'WhatsApp Us',
+      location: 'Ayodhya, Uttar Pradesh',
+      trustAndSecurity: 'Trust & Security',
+      badges: {
+        ssl: 'SSL Secured',
+        trust: 'Registered Trust',
+        guestFocus: 'Guest Satisfaction Focus',
+        support: '24/7 Support',
+      },
+      copyright: '© 2025 Sri Janaki Mahal Trust. All rights reserved.',
+      registeredAddress: 'Registered Charitable Trust | Vasudev Gath, Karsewakpuram, Ayodhya, UP 224123',
+      devotionLine: 'Created with ❤ and devotion for spiritual seekers and pilgrims',
+    };
 ---
 
 <footer class="bg-gray-900 text-white py-12">
@@ -14,37 +80,37 @@ const homeSectionHref = (sectionId: string) => `${href('/')}#${sectionId}`;
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
       <!-- About -->
       <div>
-        <h3 class="text-xl font-bold mb-4">Sri Janaki Mahal</h3>
+        <h3 class="text-xl font-bold mb-4">{content.aboutTitle}</h3>
         <p class="text-gray-400">
-          A sacred hotel in Ayodhya, dedicated to providing pilgrims and spiritual seekers with sanctuary and warm hospitality amidst divinity.
+          {content.aboutDescription}
         </p>
       </div>
 
       <!-- Quick Links -->
       <div>
-        <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+        <h3 class="text-xl font-bold mb-4">{content.quickLinks}</h3>
         <ul class="space-y-2 text-gray-400">
-          <li><a href={href('/')} class="hover:text-amber-600 transition-colors">Home</a></li>
-          <li><a href={href('/about')} class="hover:text-amber-600 transition-colors">About Us</a></li>
-          <li><a href={href('/rooms')} class="hover:text-amber-600 transition-colors">Rooms</a></li>
-          <li><a href={href('/blog')} class="hover:text-amber-600 transition-colors">Blog</a></li>
-          <li><a href={homeSectionHref('gallery')} class="hover:text-amber-600 transition-colors">Gallery</a></li>
+          <li><a href={href('/')} class="hover:text-amber-600 transition-colors">{content.links.home}</a></li>
+          <li><a href={href('/about')} class="hover:text-amber-600 transition-colors">{content.links.about}</a></li>
+          <li><a href={href('/rooms')} class="hover:text-amber-600 transition-colors">{content.links.rooms}</a></li>
+          <li><a href={href('/blog')} class="hover:text-amber-600 transition-colors">{content.links.blog}</a></li>
+          <li><a href={homeSectionHref('gallery')} class="hover:text-amber-600 transition-colors">{content.links.gallery}</a></li>
         </ul>
         
         <!-- Legal Links -->
-        <h3 class="text-xl font-bold mb-4 mt-8">Legal</h3>
+        <h3 class="text-xl font-bold mb-4 mt-8">{content.legal}</h3>
         <ul class="space-y-2 text-gray-400">
-          <li><a href={href('/official')} class="hover:text-amber-600 transition-colors">Official Verification</a></li>
-          <li><a href={href('/official-booking')} class="hover:text-amber-600 transition-colors">Official Booking</a></li>
-          <li><a href={href('/privacy-policy')} class="hover:text-amber-600 transition-colors">Privacy Policy</a></li>
-          <li><a href={href('/terms-of-service')} class="hover:text-amber-600 transition-colors">Terms of Service</a></li>
-          <li><a href={href('/cancellation-refund')} class="hover:text-amber-600 transition-colors">Cancellation Policy</a></li>
+          <li><a href={href('/official')} class="hover:text-amber-600 transition-colors">{content.links.officialVerification}</a></li>
+          <li><a href={href('/official-booking')} class="hover:text-amber-600 transition-colors">{content.links.officialBooking}</a></li>
+          <li><a href={href('/privacy-policy')} class="hover:text-amber-600 transition-colors">{content.links.privacy}</a></li>
+          <li><a href={href('/terms-of-service')} class="hover:text-amber-600 transition-colors">{content.links.terms}</a></li>
+          <li><a href={href('/cancellation-refund')} class="hover:text-amber-600 transition-colors">{content.links.cancellation}</a></li>
         </ul>
       </div>
 
       <!-- Contact Info -->
       <div>
-        <h3 class="text-xl font-bold mb-4">Contact</h3>
+        <h3 class="text-xl font-bold mb-4">{content.contact}</h3>
         <ul class="space-y-2 text-gray-400">
           <li>
             <a href={TEL_LINK} class="hover:text-amber-600 transition-colors">
@@ -53,10 +119,10 @@ const homeSectionHref = (sectionId: string) => `${href('/')}#${sectionId}`;
           </li>
           <li>
             <a href={WHATSAPP_LINK} class="hover:text-amber-600 transition-colors">
-              WhatsApp Us
+              {content.whatsapp}
             </a>
           </li>
-          <li>Ayodhya, Uttar Pradesh</li>
+          <li>{content.location}</li>
         </ul>
       </div>
     </div>
@@ -64,23 +130,23 @@ const homeSectionHref = (sectionId: string) => `${href('/')}#${sectionId}`;
     <!-- Trust Badges -->
     <div class="border-t border-gray-800 pt-8 mb-8">
       <div class="text-center">
-        <h3 class="text-lg font-semibold text-white mb-4">Trust & Security</h3>
+        <h3 class="text-lg font-semibold text-white mb-4">{content.trustAndSecurity}</h3>
         <div class="flex flex-wrap justify-center gap-6 text-gray-400">
           <div class="flex items-center gap-2">
             <span class="text-green-500">🔒</span>
-            <span class="text-sm">SSL Secured</span>
+            <span class="text-sm">{content.badges.ssl}</span>
           </div>
           <div class="flex items-center gap-2">
             <span class="text-blue-500">🏛️</span>
-            <span class="text-sm">Registered Trust</span>
+            <span class="text-sm">{content.badges.trust}</span>
           </div>
           <div class="flex items-center gap-2">
             <span class="text-amber-500">❤️</span>
-            <span class="text-sm">Guest Satisfaction Focus</span>
+            <span class="text-sm">{content.badges.guestFocus}</span>
           </div>
           <div class="flex items-center gap-2">
             <span class="text-purple-500">🕐</span>
-            <span class="text-sm">24/7 Support</span>
+            <span class="text-sm">{content.badges.support}</span>
           </div>
         </div>
       </div>
@@ -88,12 +154,12 @@ const homeSectionHref = (sectionId: string) => `${href('/')}#${sectionId}`;
 
     <div class="border-t border-gray-800 pt-8">
       <div class="text-center text-gray-400">
-        <p class="mb-2">&copy; 2025 Sri Janaki Mahal Trust. All rights reserved.</p>
+        <p class="mb-2">{content.copyright}</p>
         <p class="text-sm mb-2">
-          Registered Charitable Trust | Vasudev Gath, Karsewakpuram, Ayodhya, UP 224123
+          {content.registeredAddress}
         </p>
         <p class="text-sm">
-          Created with <span class="text-red-500">❤</span> and devotion for spiritual seekers and pilgrims
+          {content.devotionLine}
         </p>
       </div>
     </div>

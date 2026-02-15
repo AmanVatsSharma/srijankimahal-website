@@ -114,23 +114,27 @@ This document outlines the comprehensive Google Ads compliance measures implemen
 ## Google Ads Policy Compliance
 
 ### Before Submitting Ads
-1. **Verify Site Security**
+1. **Run Technical SEO Gate**
+   - Run: `npm run seo:verify:strict`
+   - Proceed only when audit passes with zero failures.
+
+2. **Verify Site Security**
    - Test HTTPS enforcement
    - Check security headers with [SecurityHeaders.com](https://securityheaders.com)
    - Verify CSP doesn't block legitimate resources
 
-2. **Test All Links**
+3. **Test All Links**
    - WhatsApp links work correctly
    - Phone links open dialer
    - Email links open mail client
    - All internal links function properly
 
-3. **Mobile Responsiveness**
+4. **Mobile Responsiveness**
    - Test on various devices
    - Ensure all CTAs are visible
    - Check form functionality
 
-4. **Content Review**
+5. **Content Review**
    - Verify all pricing is accurate
    - Check contact information
    - Ensure legal pages are accessible
@@ -201,6 +205,7 @@ This document outlines the comprehensive Google Ads compliance measures implemen
 
 ### Monthly Reviews
 - [ ] Google Search Console reports
+- [ ] Latest SEO audit report and CI status
 - [ ] Security scan results
 - [ ] Performance metrics
 - [ ] User feedback
@@ -259,6 +264,6 @@ public/robots.txt                     - Updated robots file
 
 ---
 
-**Last Updated:** January 2025  
-**Next Review:** April 2025  
+**Last Updated:** February 2026  
+**Next Review:** May 2026  
 **Maintained By:** Sri Janaki Mahal Trust Development Team

@@ -19,6 +19,7 @@ const DIST_DIR = path.resolve(process.cwd(), 'dist');
 const SITE_ORIGIN = 'https://www.srijanakimahaltrustofficial.com';
 const ABSOLUTE_HTTP_PATTERN = /^https?:\/\//i;
 const XML_LOC_REGEX = /<loc>([^<]+)<\/loc>/gi;
+const ROBOTS_SITEMAP_REGEX = /^\s*sitemap:\s*(\S+)\s*$/gim;
 const XML_FILE_PATTERN = /\.xml$/i;
 const PRIMARY_SITEMAP_FILE_PATTERN = /^sitemap-\d+\.xml$/i;
 const IMAGE_SITEMAP_FILE_NAME = 'image-sitemap.xml';
@@ -447,6 +448,12 @@ function parseXmlLocs(xmlText) {
     .filter(Boolean);
 }
 
+function parseRobotsSitemapLocs(robotsText) {
+  return Array.from(robotsText.matchAll(ROBOTS_SITEMAP_REGEX))
+    .map((match) => (match[1] ?? '').trim())
+    .filter(Boolean);
+}
+
 function toNormalizedLocalFileHref(localHref) {
   const withoutHash = localHref.split('#')[0] ?? '';
   const withoutQuery = withoutHash.split('?')[0] ?? '';
@@ -585,6 +592,9 @@ async function run(options = { reportFile: null, strictWarnings: false }) {
     indexableCanonicalMissingFromSitemap: 0,
     robotsHasCrawlDelay: 0,
     robotsMissingSitemapRefs: 0,
+    robotsSitemapInvalidOrigin: 0,
+    robotsSitemapDuplicateUrls: 0,
+    robotsSitemapTargetMissing: 0,
     sitemapIndexMissingImageSitemapRef: 0,
   };
 
@@ -1515,14 +1525,59 @@ async function run(options = { reportFile: null, strictWarnings: false }) {
     failures.push({ type: 'missing-robots-txt', path: 'robots.txt' });
   } else {
     const robotsText = await fs.readFile(robotsPath, 'utf-8');
+    const robotsSitemapLocs = parseRobotsSitemapLocs(robotsText);
+    const seenRobotsSitemapLocs = new Set();
+    const robotsSitemapComparableRefs = new Set();
 
     if (/crawl-delay\s*:/i.test(robotsText)) {
       metrics.robotsHasCrawlDelay += 1;
       failures.push({ type: 'robots-has-crawl-delay' });
     }
 
-    const hasSitemapIndexRef = robotsText.includes(`${SITE_ORIGIN}/sitemap-index.xml`);
-    hasImageSitemapRefInRobots = robotsText.includes(`${SITE_ORIGIN}/image-sitemap.xml`);
+    for (const loc of robotsSitemapLocs) {
+      const comparableLoc = normalizeComparableHref(loc);
+      const sitemapKey = comparableLoc || loc.toLowerCase();
+      if (seenRobotsSitemapLocs.has(sitemapKey)) {
+        metrics.robotsSitemapDuplicateUrls += 1;
+        failures.push({
+          type: 'duplicate-robots-sitemap-reference',
+          url: loc,
+        });
+        continue;
+      }
+      seenRobotsSitemapLocs.add(sitemapKey);
+
+      const localHref = getLocalHrefFromAny(loc);
+      if (!localHref) {
+        metrics.robotsSitemapInvalidOrigin += 1;
+        failures.push({
+          type: 'robots-sitemap-invalid-origin',
+          url: loc,
+        });
+        continue;
+      }
+
+      if (!(await hasDistTarget(localHref))) {
+        metrics.robotsSitemapTargetMissing += 1;
+        failures.push({
+          type: 'robots-sitemap-target-missing',
+          url: loc,
+        });
+      }
+
+      if (comparableLoc) {
+        robotsSitemapComparableRefs.add(comparableLoc);
+      }
+    }
+
+    const expectedSitemapIndexRef = normalizeComparableHref(`${SITE_ORIGIN}/sitemap-index.xml`);
+    const expectedImageSitemapRef = normalizeComparableHref(`${SITE_ORIGIN}/image-sitemap.xml`);
+    const hasSitemapIndexRef = expectedSitemapIndexRef
+      ? robotsSitemapComparableRefs.has(expectedSitemapIndexRef)
+      : false;
+    hasImageSitemapRefInRobots = expectedImageSitemapRef
+      ? robotsSitemapComparableRefs.has(expectedImageSitemapRef)
+      : false;
     if (!hasSitemapIndexRef || !hasImageSitemapRefInRobots) {
       metrics.robotsMissingSitemapRefs += 1;
       failures.push({

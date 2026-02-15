@@ -79,6 +79,7 @@ This audit catches those issues deterministically before deployment.
 18. Robots integrity:
    - `robots.txt` exists
    - no `Crawl-delay`
+   - sitemap references are unique, same-origin, and resolve in build output
    - includes sitemap index + image sitemap references
 19. Dist route hygiene check for `.docs` tokens.
 

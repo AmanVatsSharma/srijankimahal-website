@@ -98,6 +98,10 @@ This mode is used on blog routes where translated counterparts may not exist for
 
 This keeps private/utility routes strict while enabling richer previews on primary landing pages.
 
+### robots.txt alignment
+
+The repository `public/robots.txt` intentionally avoids `Crawl-delay` so discovery is not slowed for crawlers that honor it.
+
 ---
 
 ## Data flow chart

@@ -28,5 +28,15 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build and verify SEO output
-        run: npm run seo:verify
+      - name: Build site
+        run: npm run build
+
+      - name: Run SEO audit with report output
+        run: npm run seo:audit -- --report-file reports/seo-audit-report.json
+
+      - name: Upload SEO audit report artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: seo-audit-report
+          path: reports/seo-audit-report.json

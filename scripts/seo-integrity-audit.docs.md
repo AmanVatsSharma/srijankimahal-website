@@ -78,9 +78,25 @@ Combined build + audit:
 npm run seo:verify
 ```
 
+Generate a JSON report file:
+
+```bash
+npm run seo:audit -- --report-file reports/seo-audit-report.json
+```
+
+Report payload fields:
+
+- `status`: `passed` | `failed` | `error`
+- `startedAt`, `finishedAt`, `elapsedMs`
+- `metrics`: full numeric check counters
+- `warnings`, `warningCount`
+- `failures`, `failureCount`
+- `distDir`, `siteOrigin`
+
 CI runs this via:
 
 - `.github/workflows/seo-integrity.yml`
+- uploads report artifact `seo-audit-report`
 
 ---
 
@@ -125,5 +141,6 @@ Then validate sitemap and robots artifacts before final pass/fail decision.
 ## Error handling & logging behavior
 
 - Structured console logs with `[seo-audit]` prefix.
+- Optional JSON report output via `--report-file`.
 - Audit exits non-zero on any failure.
 - Reports concise samples to make debugging fast.

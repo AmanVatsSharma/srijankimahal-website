@@ -15,6 +15,7 @@ All commands are run from the repository root.
 | `npm run build` | Build static site into `dist/` |
 | `npm run preview` | Preview production build locally |
 | `npm run seo:audit` | Run SEO integrity audit against existing `dist/` output |
+| `npm run seo:audit -- --report-file reports/seo-audit-report.json` | Run SEO audit and write JSON report artifact |
 | `npm run seo:verify` | Build site and run full SEO integrity audit |
 
 ---
@@ -25,4 +26,4 @@ All commands are run from the repository root.
 - Audit docs: `scripts/seo-integrity-audit.docs.md`
 - CI workflow: `.github/workflows/seo-integrity.yml`
 
-The audit validates canonical tags, hreflang integrity, JSON-LD validity, heading semantics, image metadata, internal links, and duplicate meta-description regressions.
+The audit validates canonical tags, hreflang integrity, JSON-LD validity, heading semantics, image metadata, internal links, and duplicate meta-description regressions. CI also uploads the generated JSON audit report for every run.

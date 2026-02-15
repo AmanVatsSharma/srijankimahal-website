@@ -26,6 +26,8 @@ Latest production-ready hardening completed:
 - ✅ Automated SEO guardrail system added:
   - `npm run seo:audit` and `npm run seo:verify`
   - GitHub Actions workflow runs SEO verification on push/PR
+  - optional JSON report output: `--report-file`
+  - CI uploads `seo-audit-report` artifact for every run (including failures)
   - Audit now validates:
     - canonical/hreflang target integrity
     - JSON-LD validity

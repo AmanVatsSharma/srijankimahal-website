@@ -24,6 +24,35 @@ const INTERNAL_LINK_IGNORE_PATTERNS = [
   /^\/hi\/404\/?$/i,
 ];
 
+function parseCliOptions(args) {
+  const options = {
+    reportFile: null,
+  };
+
+  for (let index = 0; index < args.length; index += 1) {
+    const arg = args[index];
+    if (!arg) continue;
+
+    if (arg === '--report-file') {
+      const nextValue = args[index + 1];
+      if (nextValue) {
+        options.reportFile = nextValue;
+        index += 1;
+      }
+      continue;
+    }
+
+    if (arg.startsWith('--report-file=')) {
+      const [, value] = arg.split('=');
+      if (value) {
+        options.reportFile = value;
+      }
+    }
+  }
+
+  return options;
+}
+
 /**
  * Keep logs structured and easy to grep in CI.
  */
@@ -117,6 +146,25 @@ function shouldIgnoreInternalHref(href) {
   return INTERNAL_LINK_IGNORE_PATTERNS.some((pattern) => pattern.test(href));
 }
 
+async function persistReport(reportFile, payload) {
+  if (!reportFile) return;
+
+  const targetPath = path.isAbsolute(reportFile)
+    ? reportFile
+    : path.resolve(process.cwd(), reportFile);
+
+  try {
+    await fs.mkdir(path.dirname(targetPath), { recursive: true });
+    await fs.writeFile(targetPath, `${JSON.stringify(payload, null, 2)}\n`, 'utf-8');
+    logInfo('Wrote audit report file', { reportFile: targetPath });
+  } catch (error) {
+    logWarn('Failed writing audit report file', {
+      reportFile: targetPath,
+      reason: error instanceof Error ? error.message : String(error),
+    });
+  }
+}
+
 function getLocalHrefFromAny(href) {
   const value = href.trim();
   if (!value) return null;
@@ -168,12 +216,21 @@ function parseXmlLocs(xmlText) {
     .filter(Boolean);
 }
 
-async function run() {
+async function run(options = { reportFile: null }) {
   const startedAt = Date.now();
   logInfo('Starting SEO integrity audit', { distDir: DIST_DIR });
+  const startIso = new Date(startedAt).toISOString();
 
   if (!(await exists(DIST_DIR))) {
     logError('dist directory does not exist. Run `npm run build` first.');
+    await persistReport(options.reportFile, {
+      status: 'failed',
+      startedAt: startIso,
+      finishedAt: new Date().toISOString(),
+      reason: 'dist directory missing',
+      distDir: DIST_DIR,
+      siteOrigin: SITE_ORIGIN,
+    });
     process.exitCode = 1;
     return;
   }
@@ -181,6 +238,14 @@ async function run() {
   const htmlFiles = await collectFiles(DIST_DIR, '.html');
   if (htmlFiles.length === 0) {
     logError('No HTML files found in dist output.');
+    await persistReport(options.reportFile, {
+      status: 'failed',
+      startedAt: startIso,
+      finishedAt: new Date().toISOString(),
+      reason: 'no html files in dist',
+      distDir: DIST_DIR,
+      siteOrigin: SITE_ORIGIN,
+    });
     process.exitCode = 1;
     return;
   }
@@ -733,6 +798,21 @@ async function run() {
     logWarn('Warnings detected', { count: warnings.length, sample: warnings.slice(0, 10) });
   }
 
+  const reportPayload = {
+    status: failures.length > 0 ? 'failed' : 'passed',
+    startedAt: startIso,
+    finishedAt: new Date().toISOString(),
+    elapsedMs,
+    distDir: DIST_DIR,
+    siteOrigin: SITE_ORIGIN,
+    metrics,
+    warningCount: warnings.length,
+    warnings,
+    failureCount: failures.length,
+    failures,
+  };
+  await persistReport(options.reportFile, reportPayload);
+
   if (failures.length > 0) {
     logError('SEO integrity audit failed', {
       count: failures.length,
@@ -746,9 +826,18 @@ async function run() {
   logInfo('SEO integrity audit passed', { elapsedMs, pagesAudited: htmlFiles.length, origin: SITE_ORIGIN });
 }
 
-run().catch((error) => {
-  logError('Unexpected audit runtime failure', {
-    reason: error instanceof Error ? error.message : String(error),
+const cliOptions = parseCliOptions(process.argv.slice(2));
+
+run(cliOptions).catch(async (error) => {
+  const reason = error instanceof Error ? error.message : String(error);
+  logError('Unexpected audit runtime failure', { reason });
+  await persistReport(cliOptions.reportFile, {
+    status: 'error',
+    startedAt: new Date().toISOString(),
+    finishedAt: new Date().toISOString(),
+    distDir: DIST_DIR,
+    siteOrigin: SITE_ORIGIN,
+    reason,
   });
   process.exitCode = 1;
 });

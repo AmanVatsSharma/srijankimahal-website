@@ -19,6 +19,7 @@ const DIST_DIR = path.resolve(process.cwd(), 'dist');
 const SITE_ORIGIN = 'https://www.srijanakimahaltrustofficial.com';
 const ABSOLUTE_HTTP_PATTERN = /^https?:\/\//i;
 const XML_LOC_REGEX = /<loc>([^<]+)<\/loc>/gi;
+const XML_FILE_PATTERN = /\.xml$/i;
 const PRIMARY_SITEMAP_FILE_PATTERN = /^sitemap-\d+\.xml$/i;
 const IMAGE_SITEMAP_FILE_NAME = 'image-sitemap.xml';
 const REPORT_FILE_ENV_KEY = 'SEO_AUDIT_REPORT_FILE';
@@ -576,6 +577,10 @@ async function run(options = { reportFile: null, strictWarnings: false }) {
     sitemapLocInvalidOrigin: 0,
     sitemapLocDuplicateUrls: 0,
     sitemapLocDisallowedUrls: 0,
+    sitemapIndexLocInvalidOrigin: 0,
+    sitemapIndexLocDuplicateUrls: 0,
+    sitemapIndexLocNonXmlUrls: 0,
+    sitemapIndexLocTargetMissing: 0,
     sitemapNoindexUrlLeaks: 0,
     indexableCanonicalMissingFromSitemap: 0,
     robotsHasCrawlDelay: 0,
@@ -1343,6 +1348,7 @@ async function run(options = { reportFile: null, strictWarnings: false }) {
   let hasImageSitemapRefInRobots = false;
   let hasParsedPrimarySitemap = false;
   const primarySitemapRefs = new Set();
+  const seenSitemapIndexLocs = new Set();
 
   if (!(await exists(sitemapIndexPath))) {
     failures.push({ type: 'missing-sitemap-index', path: 'sitemap-index.xml' });
@@ -1356,10 +1362,40 @@ async function run(options = { reportFile: null, strictWarnings: false }) {
     }
 
     for (const loc of sitemapIndexLocs) {
+      const normalizedLoc = loc.trim();
+      if (seenSitemapIndexLocs.has(normalizedLoc)) {
+        metrics.sitemapIndexLocDuplicateUrls += 1;
+        failures.push({
+          type: 'duplicate-sitemap-index-url',
+          url: loc,
+        });
+        continue;
+      }
+      seenSitemapIndexLocs.add(normalizedLoc);
+
       const localHref = getLocalHrefFromAny(loc);
       if (!localHref) {
+        metrics.sitemapIndexLocInvalidOrigin += 1;
         failures.push({
           type: 'sitemap-index-url-invalid-origin',
+          url: loc,
+        });
+        continue;
+      }
+
+      if (!XML_FILE_PATTERN.test(localHref)) {
+        metrics.sitemapIndexLocNonXmlUrls += 1;
+        failures.push({
+          type: 'sitemap-index-url-non-xml',
+          url: loc,
+        });
+        continue;
+      }
+
+      if (!(await hasDistTarget(localHref))) {
+        metrics.sitemapIndexLocTargetMissing += 1;
+        failures.push({
+          type: 'sitemap-index-url-target-missing',
           url: loc,
         });
         continue;

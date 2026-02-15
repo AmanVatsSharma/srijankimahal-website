@@ -71,7 +71,8 @@ This audit catches those issues deterministically before deployment.
    - alternate pages include reciprocal hreflang links back
 17. Sitemap integrity:
    - `sitemap-index.xml` exists and references primary sitemap shard(s) + image sitemap
-   - all referenced primary sitemap shard URLs are same-origin, unique, and resolvable in build output
+   - sitemap-index URLs are same-origin, unique, XML-only, and resolvable in build output
+   - all referenced primary sitemap shard URLs are resolvable in build output
    - primary sitemap shards do not include canonical URLs from pages marked `noindex`
    - all indexable canonical URLs are present across primary sitemap shards
    - sitemap excludes disallowed utility/docs URLs (`/404`, `.docs`)

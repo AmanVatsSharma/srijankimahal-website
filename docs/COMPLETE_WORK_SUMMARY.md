@@ -54,6 +54,7 @@ Latest production-ready hardening completed:
   - hreflang now enforces self-reference and x-default-to-English alignment checks
   - sitemap-index references now validated for same-origin, uniqueness, XML format, and build-target existence
   - robots sitemap references now validated for same-origin, uniqueness, and build-target existence
+  - sitemap/robots references now reject query-string or fragment-bearing sitemap URLs
   - Audit now validates:
     - canonical/hreflang target integrity
     - social URL canonical parity (`og:url`, `twitter:url`)

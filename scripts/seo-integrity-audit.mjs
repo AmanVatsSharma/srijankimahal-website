@@ -482,6 +482,10 @@ function getLocalFileName(localHref) {
   return path.posix.basename(distRelativePath);
 }
 
+function hasQueryOrFragment(localHref) {
+  return localHref.includes('?') || localHref.includes('#');
+}
+
 /**
  * Build deterministic issue-type counters for quick triage.
  */
@@ -596,6 +600,8 @@ async function run(options = { reportFile: null, strictWarnings: false }) {
     sitemapIndexLocDuplicateUrls: 0,
     sitemapIndexLocNonXmlUrls: 0,
     sitemapIndexLocTargetMissing: 0,
+    sitemapIndexLocWithQueryOrFragment: 0,
+    sitemapLocWithQueryOrFragment: 0,
     sitemapNoindexUrlLeaks: 0,
     indexableCanonicalMissingFromSitemap: 0,
     robotsHasCrawlDelay: 0,
@@ -603,6 +609,7 @@ async function run(options = { reportFile: null, strictWarnings: false }) {
     robotsSitemapInvalidOrigin: 0,
     robotsSitemapDuplicateUrls: 0,
     robotsSitemapTargetMissing: 0,
+    robotsSitemapWithQueryOrFragment: 0,
     sitemapIndexMissingImageSitemapRef: 0,
   };
 
@@ -1410,6 +1417,14 @@ async function run(options = { reportFile: null, strictWarnings: false }) {
         continue;
       }
 
+      if (hasQueryOrFragment(localHref)) {
+        metrics.sitemapIndexLocWithQueryOrFragment += 1;
+        failures.push({
+          type: 'sitemap-index-url-has-query-or-fragment',
+          url: loc,
+        });
+      }
+
       if (!(await hasDistTarget(localHref))) {
         metrics.sitemapIndexLocTargetMissing += 1;
         failures.push({
@@ -1486,6 +1501,15 @@ async function run(options = { reportFile: null, strictWarnings: false }) {
       if (localHref.includes('.docs') || /^\/(?:hi\/)?404\/?$/i.test(localHref)) {
         metrics.sitemapLocDisallowedUrls += 1;
         failures.push({ type: 'sitemap-url-disallowed', url: loc });
+      }
+
+      if (hasQueryOrFragment(localHref)) {
+        metrics.sitemapLocWithQueryOrFragment += 1;
+        failures.push({
+          type: 'sitemap-url-has-query-or-fragment',
+          sitemap: sitemapRelativePath,
+          url: loc,
+        });
       }
 
       if (!(await hasDistTarget(localHref))) {
@@ -1569,6 +1593,14 @@ async function run(options = { reportFile: null, strictWarnings: false }) {
         metrics.robotsSitemapTargetMissing += 1;
         failures.push({
           type: 'robots-sitemap-target-missing',
+          url: loc,
+        });
+      }
+
+      if (hasQueryOrFragment(localHref)) {
+        metrics.robotsSitemapWithQueryOrFragment += 1;
+        failures.push({
+          type: 'robots-sitemap-has-query-or-fragment',
           url: loc,
         });
       }

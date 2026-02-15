@@ -102,6 +102,7 @@ jobs:
             `- Broken internal links: **${metrics.brokenInternalLinks ?? 0}**`,
             `- Sitemap index ref issues: **${(metrics.sitemapIndexLocInvalidOrigin ?? 0) + (metrics.sitemapIndexLocDuplicateUrls ?? 0) + (metrics.sitemapIndexLocNonXmlUrls ?? 0) + (metrics.sitemapIndexLocTargetMissing ?? 0)}**`,
             `- Robots sitemap ref issues: **${(metrics.robotsSitemapInvalidOrigin ?? 0) + (metrics.robotsSitemapDuplicateUrls ?? 0) + (metrics.robotsSitemapTargetMissing ?? 0)}**`,
+            `- Sitemap URL normalization issues: **${(metrics.sitemapIndexLocWithQueryOrFragment ?? 0) + (metrics.sitemapLocWithQueryOrFragment ?? 0) + (metrics.robotsSitemapWithQueryOrFragment ?? 0)}**`,
             `- Title length warnings: **${metrics.titlesOutsideRecommendedRange ?? 0}**`,
             `- Description length warnings: **${metrics.descriptionsOutsideRecommendedRange ?? 0}**`,
             '',

@@ -73,6 +73,7 @@ This audit catches those issues deterministically before deployment.
 17. Sitemap integrity:
    - `sitemap-index.xml` exists and references primary sitemap shard(s) + image sitemap
    - sitemap-index URLs are same-origin, unique, XML-only, and resolvable in build output
+   - sitemap-index and primary sitemap URLs must not include query strings or fragments
    - all referenced primary sitemap shard URLs are resolvable in build output
    - primary sitemap shards do not include canonical URLs from pages marked `noindex`
    - all indexable canonical URLs are present across primary sitemap shards
@@ -81,6 +82,7 @@ This audit catches those issues deterministically before deployment.
    - `robots.txt` exists
    - no `Crawl-delay`
    - sitemap references are unique, same-origin, and resolve in build output
+   - robots sitemap references must not include query strings or fragments
    - includes sitemap index + image sitemap references
 19. Dist route hygiene check for `.docs` tokens.
 

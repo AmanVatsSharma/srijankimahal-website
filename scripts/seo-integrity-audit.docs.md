@@ -56,6 +56,7 @@ This audit catches those issues deterministically before deployment.
    - `sitemap-index.xml` exists and references main + image sitemap
    - `sitemap-0.xml` URLs are same-origin, unique, and resolvable in build output
    - `sitemap-0.xml` does not include canonical URLs from pages marked `noindex`
+   - all indexable canonical URLs are present in `sitemap-0.xml`
    - sitemap excludes disallowed utility/docs URLs (`/404`, `.docs`)
 15. Robots integrity:
    - `robots.txt` exists
@@ -155,6 +156,7 @@ Aggregate metrics + duplicate-description groups + failures
 ```
 
 Then validate sitemap and robots artifacts before final pass/fail decision.
+Sitemap validation also enforces indexable canonical coverage in the primary sitemap.
 
 ---
 

@@ -33,6 +33,7 @@ Latest production-ready hardening completed:
   - CI publishes compact SEO metric summary in workflow step summary for fast diagnosis
   - image sitemap reference warning now triggers only when missing in both sitemap-index and robots
   - report payload includes grouped warning/failure type counts for faster triage
+  - audit now verifies indexable canonical URLs are present in main sitemap
   - Audit now validates:
     - canonical/hreflang target integrity
     - social URL canonical parity (`og:url`, `twitter:url`)

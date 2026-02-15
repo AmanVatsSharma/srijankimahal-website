@@ -352,6 +352,8 @@ async function run(options = { reportFile: null }) {
   const descriptionsByContent = new Map();
   const titlesByContent = new Map();
   const noindexCanonicalPaths = new Set();
+  const indexableCanonicalPaths = new Set();
+  const sitemapComparablePaths = new Set();
   const metrics = {
     htmlFiles: htmlFiles.length,
     pagesWithCanonicalIssue: 0,
@@ -383,6 +385,7 @@ async function run(options = { reportFile: null }) {
     sitemapLocDuplicateUrls: 0,
     sitemapLocDisallowedUrls: 0,
     sitemapNoindexUrlLeaks: 0,
+    indexableCanonicalMissingFromSitemap: 0,
     robotsHasCrawlDelay: 0,
     robotsMissingSitemapRefs: 0,
     sitemapIndexMissingImageSitemapRef: 0,
@@ -452,8 +455,10 @@ async function run(options = { reportFile: null }) {
       } else if (localCanonicalHref) {
         const robotsMetaMatch = html.match(/<meta name="robots" content="([^"]+)"/i);
         const robotsDirectives = (robotsMetaMatch?.[1] ?? '').toLowerCase();
-        if (robotsDirectives.includes('noindex')) {
-          noindexCanonicalPaths.add(localCanonicalHref.split('?')[0]?.split('#')[0] ?? localCanonicalHref);
+        if (robotsDirectives.includes('noindex') && canonicalComparableHref) {
+          noindexCanonicalPaths.add(canonicalComparableHref);
+        } else if (canonicalComparableHref) {
+          indexableCanonicalPaths.add(canonicalComparableHref);
         }
       }
     }
@@ -829,6 +834,7 @@ async function run(options = { reportFile: null }) {
   const robotsPath = path.join(DIST_DIR, 'robots.txt');
   let hasImageSitemapRefInIndex = false;
   let hasImageSitemapRefInRobots = false;
+  let hasParsedMainSitemap = false;
 
   if (!(await exists(sitemapIndexPath))) {
     failures.push({ type: 'missing-sitemap-index', path: 'sitemap-index.xml' });
@@ -846,6 +852,7 @@ async function run(options = { reportFile: null }) {
   if (!(await exists(sitemapPagesPath))) {
     failures.push({ type: 'missing-main-sitemap', path: 'sitemap-0.xml' });
   } else {
+    hasParsedMainSitemap = true;
     const sitemapXml = await fs.readFile(sitemapPagesPath, 'utf-8');
     const locs = parseXmlLocs(sitemapXml);
     const seenLocs = new Set();
@@ -859,6 +866,10 @@ async function run(options = { reportFile: null }) {
       }
 
       const localHref = getLocalHrefFromAny(loc);
+      const comparableSitemapHref = normalizeComparableHref(loc);
+      if (comparableSitemapHref) {
+        sitemapComparablePaths.add(comparableSitemapHref);
+      }
       if (!localHref) {
         metrics.sitemapLocInvalidOrigin += 1;
         failures.push({ type: 'sitemap-url-invalid-origin', url: loc });
@@ -875,14 +886,30 @@ async function run(options = { reportFile: null }) {
         failures.push({ type: 'sitemap-url-target-missing', url: loc });
       }
 
-      const noQueryNoHashHref = localHref.split('?')[0]?.split('#')[0] ?? localHref;
-      if (noindexCanonicalPaths.has(noQueryNoHashHref)) {
+      if (comparableSitemapHref && noindexCanonicalPaths.has(comparableSitemapHref)) {
         metrics.sitemapNoindexUrlLeaks += 1;
         failures.push({
           type: 'sitemap-contains-noindex-url',
           url: loc,
         });
       }
+    }
+  }
+
+  if (hasParsedMainSitemap) {
+    const missingIndexableCanonicals = [];
+    for (const canonicalPath of indexableCanonicalPaths) {
+      if (!sitemapComparablePaths.has(canonicalPath)) {
+        missingIndexableCanonicals.push(canonicalPath);
+      }
+    }
+    if (missingIndexableCanonicals.length > 0) {
+      metrics.indexableCanonicalMissingFromSitemap += missingIndexableCanonicals.length;
+      failures.push({
+        type: 'indexable-canonical-missing-from-sitemap',
+        count: missingIndexableCanonicals.length,
+        samplePaths: missingIndexableCanonicals.slice(0, 20),
+      });
     }
   }
 

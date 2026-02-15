@@ -24,6 +24,7 @@ This audit catches those issues deterministically before deployment.
 ## Checks performed
 
 1. Canonical tag count is exactly `1` per page.
+   - canonical link must include non-empty `href`
 2. Canonical URL target resolves to generated output (same-origin only).
    - canonical target must match current generated route (self-canonical)
 3. Core metadata presence:
@@ -66,6 +67,7 @@ This audit catches those issues deterministically before deployment.
    - `height`
 15. Internal local links resolve to generated output files.
 16. Hreflang integrity:
+   - each hreflang alternate link must include non-empty `hreflang` and `href`
    - no duplicate language entries
    - `x-default` exists when alternates are emitted
    - current page language hreflang must self-reference canonical page URL

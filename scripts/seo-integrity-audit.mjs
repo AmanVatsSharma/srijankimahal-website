@@ -242,12 +242,13 @@ function parseMetaDirectives(content) {
 
 function extractTagAttributes(tagMarkup) {
   const attributes = new Map();
-  const attributeRegex = /([^\s=/>]+)\s*=\s*(["'])([\s\S]*?)\2/g;
+  const attributeRegex = /([^\s=/>]+)\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s>]+))/g;
 
   for (const match of tagMarkup.matchAll(attributeRegex)) {
     const key = (match[1] ?? '').trim().toLowerCase();
     if (!key) continue;
-    attributes.set(key, (match[3] ?? '').trim());
+    const rawValue = match[2] ?? match[3] ?? match[4] ?? '';
+    attributes.set(key, rawValue.trim());
   }
 
   return attributes;
@@ -592,6 +593,7 @@ async function run(options = { reportFile: null, strictWarnings: false }) {
   const metrics = {
     htmlFiles: htmlFiles.length,
     pagesWithCanonicalIssue: 0,
+    pagesWithCanonicalMissingHref: 0,
     canonicalTargetMissing: 0,
     canonicalExternalOrigin: 0,
     pagesWithCanonicalRouteMismatch: 0,
@@ -620,6 +622,7 @@ async function run(options = { reportFile: null, strictWarnings: false }) {
     hreflangTargetMissing: 0,
     pagesWithDuplicateHreflangLangs: 0,
     pagesMissingXDefaultHreflang: 0,
+    pagesWithInvalidHreflangEntries: 0,
     pagesWithHreflangSelfReferenceIssue: 0,
     pagesWithHreflangReciprocalIssue: 0,
     pagesWithOgLocaleIssues: 0,
@@ -657,8 +660,9 @@ async function run(options = { reportFile: null, strictWarnings: false }) {
     const expectedLang = relPath.startsWith('hi/') ? 'hi' : 'en';
     const linkTagEntries = extractLinkTagEntries(html);
     const canonicalLinkEntries = linkTagEntries.filter((entry) => hasRelToken(entry.rel, 'canonical'));
-    const alternateLinkEntries = linkTagEntries
-      .filter((entry) => hasRelToken(entry.rel, 'alternate') && entry.hreflang && entry.href)
+    const alternateLinkEntriesRaw = linkTagEntries.filter((entry) => hasRelToken(entry.rel, 'alternate'));
+    const alternateLinkEntries = alternateLinkEntriesRaw
+      .filter((entry) => entry.hreflang && entry.href)
       .map((entry) => ({
         hreflang: entry.hreflang.trim(),
         href: entry.href.trim(),
@@ -765,6 +769,14 @@ async function run(options = { reportFile: null, strictWarnings: false }) {
 
     let canonicalComparableHref = null;
     const canonicalHref = canonicalLinkEntries[0]?.href?.trim();
+    if (canonicalCount === 1 && !canonicalHref) {
+      metrics.pagesWithCanonicalMissingHref += 1;
+      failures.push({
+        type: 'canonical-missing-href',
+        page: relPath,
+      });
+    }
+
     if (canonicalHref) {
       const localCanonicalHref = getLocalHrefFromAny(canonicalHref);
       canonicalComparableHref = normalizeComparableHref(canonicalHref);
@@ -1192,6 +1204,17 @@ async function run(options = { reportFile: null, strictWarnings: false }) {
 
     // Hreflang integrity checks.
     const hreflangEntries = alternateLinkEntries;
+    const invalidHreflangEntries = alternateLinkEntriesRaw.filter(
+      (entry) => !entry.hreflang.trim() || !entry.href.trim()
+    );
+    if (invalidHreflangEntries.length > 0) {
+      metrics.pagesWithInvalidHreflangEntries += 1;
+      failures.push({
+        type: 'invalid-hreflang-entry',
+        page: relPath,
+        count: invalidHreflangEntries.length,
+      });
+    }
 
     if (hreflangEntries.length > 0) {
       const seenLangs = new Set();

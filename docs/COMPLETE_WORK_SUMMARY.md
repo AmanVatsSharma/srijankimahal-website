@@ -23,6 +23,17 @@ Latest production-ready hardening completed:
   - Footer labels, legal links, trust badges, contact copy now locale-aware
   - reduced mixed-language UI signals for Hindi pages.
 - ✅ Continuous build verification maintained after each logical change (`npm run build`), plus targeted output audits.
+- ✅ Automated SEO guardrail system added:
+  - `npm run seo:audit` and `npm run seo:verify`
+  - GitHub Actions workflow runs SEO verification on push/PR
+  - Audit now validates:
+    - canonical/hreflang target integrity
+    - JSON-LD validity
+    - H1 + image attribute semantics
+    - OG/Twitter URL + image target validity
+    - OG locale alternate consistency
+    - duplicate meta-description groups
+    - sitemap + robots integrity
 
 ### Latest integrity signals
 - `invalid_jsonld = 0`
@@ -30,6 +41,7 @@ Latest production-ready hardening completed:
 - `duplicate meta description groups = 0`
 - `pages_with_duplicate_hreflang_langs = 0`
 - `pages_missing_x_default_when_alternates_present = 0`
+- `seo:verify` CI status = passing on push + PR
 
 ---
 

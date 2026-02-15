@@ -52,6 +52,18 @@ const seoConfig: SEOConfig = {
 const seoData = generateSEOData(seoConfig, currentPath);
 const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
 const googleAdsConversionLabel = import.meta.env.PUBLIC_GOOGLE_ADS_CONVERSION_LABEL;
+const currentOgLocale = seoData.ogTags['og:locale'];
+const ogLocaleAlternates = Array.from(
+  new Set(
+    seoData.hreflangTags
+      .map(({ hreflang }) => {
+        if (hreflang === 'en') return 'en_IN';
+        if (hreflang === 'hi') return 'hi_IN';
+        return null;
+      })
+      .filter((locale): locale is string => Boolean(locale) && locale !== currentOgLocale)
+  )
+);
 
 /**
  * Global structured data is prepared in frontmatter so constants are safely interpolated.
@@ -339,6 +351,9 @@ const globalStructuredData = {
     <meta property="og:image" content={seoData.ogTags['og:image']} />
     <meta property="og:site_name" content={seoData.ogTags['og:site_name']} />
     <meta property="og:locale" content={seoData.ogTags['og:locale']} />
+    {ogLocaleAlternates.map((locale) => (
+      <meta property="og:locale:alternate" content={locale} />
+    ))}
     
     <!-- Twitter -->
     <meta property="twitter:card" content={seoData.twitterTags['twitter:card']} />

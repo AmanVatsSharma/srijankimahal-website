@@ -119,6 +119,8 @@ generateSEOData(config, currentPath)
    |
    v
 Layout.astro renders final meta/link tags
+   |
+   +--> derives `og:locale:alternate` values from hreflang tags
 ```
 
 ---

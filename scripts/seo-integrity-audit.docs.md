@@ -52,28 +52,31 @@ This audit catches those issues deterministically before deployment.
    - indexable pages must include `index,follow`
 10. H1 count is exactly `1` per page.
 11. JSON-LD payloads parse as valid JSON.
-12. No literal `{JSON.stringify(...)}` text leaked into output.
-13. All `<img>` tags include:
+12. JSON-LD structure integrity:
+   - at least one `@context` exists per JSON-LD script payload
+   - schema nodes include valid `@type`
+13. No literal `{JSON.stringify(...)}` text leaked into output.
+14. All `<img>` tags include:
    - `alt`
    - `width`
    - `height`
-14. Internal local links resolve to generated output files.
-15. Hreflang integrity:
+15. Internal local links resolve to generated output files.
+16. Hreflang integrity:
    - no duplicate language entries
    - `x-default` exists when alternates are emitted
    - hreflang targets resolve to generated output
    - alternate pages include reciprocal hreflang links back
-16. Sitemap integrity:
+17. Sitemap integrity:
    - `sitemap-index.xml` exists and references main + image sitemap
    - `sitemap-0.xml` URLs are same-origin, unique, and resolvable in build output
    - `sitemap-0.xml` does not include canonical URLs from pages marked `noindex`
    - all indexable canonical URLs are present in `sitemap-0.xml`
    - sitemap excludes disallowed utility/docs URLs (`/404`, `.docs`)
-17. Robots integrity:
+18. Robots integrity:
    - `robots.txt` exists
    - no `Crawl-delay`
    - includes sitemap index + image sitemap references
-18. Dist route hygiene check for `.docs` tokens.
+19. Dist route hygiene check for `.docs` tokens.
 
 > Note: explicit `/404` and `/hi/404` link targets are ignored as controlled exceptions for error-page UX.
 > Note: image sitemap reference warning is only emitted when `image-sitemap.xml` is missing from **both** `sitemap-index.xml` and `robots.txt`.
@@ -180,7 +183,7 @@ For each page:
   - HTML lang + OG locale language checks
   - robots meta directive checks
   - h1 count
-  - JSON-LD parse
+  - JSON-LD parse + structure checks
   - image attr checks
   - internal href target checks
   - hreflang integrity + reciprocity checks

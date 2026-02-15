@@ -239,6 +239,69 @@ function extractMetaContentsByKey(html, metaKey) {
   return Array.from(html.matchAll(pattern)).map((match) => (match[1] ?? '').trim());
 }
 
+function isNonNullObject(value) {
+  return typeof value === 'object' && value !== null;
+}
+
+function hasJsonLdContextValue(value) {
+  if (typeof value === 'string') {
+    return value.trim().length > 0;
+  }
+  if (Array.isArray(value)) {
+    return value.length > 0;
+  }
+  if (isNonNullObject(value)) {
+    return Object.keys(value).length > 0;
+  }
+  return false;
+}
+
+function hasJsonLdTypeValue(value) {
+  if (typeof value === 'string') {
+    return value.trim().length > 0;
+  }
+  if (Array.isArray(value)) {
+    return value.some((entry) => typeof entry === 'string' && entry.trim().length > 0);
+  }
+  return false;
+}
+
+function extractJsonLdNodesForTypeValidation(payload) {
+  if (Array.isArray(payload)) {
+    return payload.filter(isNonNullObject);
+  }
+
+  if (!isNonNullObject(payload)) {
+    return [];
+  }
+
+  if (Array.isArray(payload['@graph'])) {
+    return payload['@graph'].filter(isNonNullObject);
+  }
+
+  return [payload];
+}
+
+function hasAnyJsonLdContext(payload) {
+  if (Array.isArray(payload)) {
+    return payload.some((entry) => isNonNullObject(entry) && hasJsonLdContextValue(entry['@context']));
+  }
+
+  if (!isNonNullObject(payload)) {
+    return false;
+  }
+
+  if (hasJsonLdContextValue(payload['@context'])) {
+    return true;
+  }
+
+  if (Array.isArray(payload['@graph'])) {
+    return payload['@graph'].some((entry) => isNonNullObject(entry) && hasJsonLdContextValue(entry['@context']));
+  }
+
+  return false;
+}
+
 function toRelative(absPath) {
   return path.relative(DIST_DIR, absPath).replaceAll(path.sep, '/');
 }
@@ -445,6 +508,7 @@ async function run(options = { reportFile: null, strictWarnings: false }) {
     canonicalTargetMissing: 0,
     pagesWithCanonicalRouteMismatch: 0,
     pagesWithSocialMetaIssues: 0,
+    pagesWithJsonLdStructureIssues: 0,
     pagesMissingTitle: 0,
     pagesMissingDescription: 0,
     titlesOutsideRecommendedRange: 0,
@@ -888,13 +952,31 @@ async function run(options = { reportFile: null, strictWarnings: false }) {
 
     // JSON-LD parse validation.
     const jsonLdRegex = /<script type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/gi;
+    let pageHasJsonLdStructureIssue = false;
     for (const match of html.matchAll(jsonLdRegex)) {
       const rawScript = (match[1] ?? '').trim();
       if (!rawScript) continue;
       const normalizedJsonText = decodeBasicEntities(rawScript);
 
       try {
-        JSON.parse(normalizedJsonText);
+        const parsedJsonLd = JSON.parse(normalizedJsonText);
+        const hasContext = hasAnyJsonLdContext(parsedJsonLd);
+        const nodesForTypeValidation = extractJsonLdNodesForTypeValidation(parsedJsonLd);
+        const missingTypeCount = nodesForTypeValidation.filter(
+          (node) => !hasJsonLdTypeValue(node['@type'])
+        ).length;
+
+        if (!hasContext || missingTypeCount > 0 || nodesForTypeValidation.length === 0) {
+          pageHasJsonLdStructureIssue = true;
+          failures.push({
+            type: 'json-ld-structure',
+            page: relPath,
+            hasContext,
+            nodesChecked: nodesForTypeValidation.length,
+            nodesMissingType: missingTypeCount,
+            preview: normalizedJsonText.slice(0, 120),
+          });
+        }
       } catch (error) {
         metrics.invalidJsonLdScripts += 1;
         failures.push({
@@ -904,6 +986,9 @@ async function run(options = { reportFile: null, strictWarnings: false }) {
           preview: normalizedJsonText.slice(0, 120),
         });
       }
+    }
+    if (pageHasJsonLdStructureIssue) {
+      metrics.pagesWithJsonLdStructureIssues += 1;
     }
 
     // Image audit for alt + dimensions.

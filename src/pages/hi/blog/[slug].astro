@@ -149,7 +149,8 @@ const articleSchema = {
       </nav>
 
       <header class="mb-8">
-        <h1 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">{post.title}</h1>
+        {/* Keep visual title while preserving single semantic H1 in markdown content */}
+        <p class="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">{post.title}</p>
         <div class="flex items-center gap-4 text-sm text-gray-600 mb-6">
           <time datetime={post.date}>
             {new Date(post.date).toLocaleDateString('hi-IN', { year: 'numeric', month: 'long', day: 'numeric' })}

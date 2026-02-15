@@ -258,5 +258,5 @@ Sri Janaki Mahal Trust includes all meals (breakfast, lunch, dinner) in your roo
 
 ---
 
-*For meal details, contact reception or visit our [amenities page](/amenities).*
+*For meal details, contact reception or visit our [amenities guide](/blog/shri-janki-mahal-amenities-facilities-list).*
 

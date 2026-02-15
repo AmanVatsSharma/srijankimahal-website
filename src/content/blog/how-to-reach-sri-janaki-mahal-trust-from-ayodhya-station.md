@@ -375,5 +375,5 @@ Reaching Sri Janaki Mahal Trust from Ayodhya Railway Station is easy. Take an au
 
 ---
 
-*For more travel information, visit our [location guide](/location) or [contact us](/contact).*
+*For more travel information, visit our [location guide](/location) or [contact us](/contact-number).*
 

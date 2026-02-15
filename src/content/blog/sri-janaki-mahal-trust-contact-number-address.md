@@ -402,5 +402,5 @@ Contacting Sri Janaki Mahal Trust is easy and convenient. Choose your preferred 
 
 ---
 
-*For more information, visit our [contact page](/contact) or [official page](/official).*
+*For more information, visit our [contact page](/contact-number) or [official page](/official).*
 

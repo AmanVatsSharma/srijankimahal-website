@@ -110,7 +110,9 @@ Report payload fields:
 CI runs this via:
 
 - `.github/workflows/seo-integrity.yml`
+- uses workflow concurrency to avoid duplicate runs on same ref
 - always uploads report artifact `seo-audit-report` (warns if missing)
+- publishes key metrics into GitHub step summary for quick triage
 - marks workflow failed after upload when audit exit code is non-zero
 
 ---

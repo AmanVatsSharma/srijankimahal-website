@@ -31,7 +31,7 @@ All commands are run from the repository root.
 - Audit docs: `scripts/seo-integrity-audit.docs.md`
 - CI workflow: `.github/workflows/seo-integrity.yml`
 
-The audit validates canonical tags, social/canonical URL parity, hreflang integrity (including reciprocal alternates), OG locale alignment with hreflang, page-level robots meta semantics, JSON-LD validity, heading semantics, image metadata, internal links, indexable-canonical sitemap coverage, and duplicate meta-description regressions. CI also uploads the generated JSON audit report for every run.
+The audit validates canonical tags (including self-canonical route alignment), social/canonical URL parity, hreflang integrity (including reciprocal alternates), OG locale alignment with hreflang, page-level robots meta semantics, JSON-LD validity, heading semantics, image metadata, internal links, indexable-canonical sitemap coverage, and duplicate meta-description regressions. CI also uploads the generated JSON audit report for every run.
 It also emits aggregated warning-level signals for out-of-range title/description lengths so content can be tuned without forcing hard build failures.
 Dist-target resolution in the audit is cached to keep runtime stable as URL and content volume grows.
 CI executes the audit in strict warning mode, so any warning becomes a failing signal after report artifact upload.

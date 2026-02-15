@@ -43,6 +43,7 @@ Latest production-ready hardening completed:
   - npm shortcuts added for strict runs: `seo:audit:strict`, `seo:verify:strict`
   - SEO CI now runs audit in strict warning mode for stronger regression gating
   - page-level robots meta directives are now validated for indexable/noindex consistency
+  - canonical validation now enforces self-route alignment per generated page
   - Audit now validates:
     - canonical/hreflang target integrity
     - social URL canonical parity (`og:url`, `twitter:url`)

@@ -90,6 +90,7 @@ jobs:
             `- Warnings: **${report.warningCount ?? 0}**`,
             `- Pages audited: **${metrics.htmlFiles ?? 'n/a'}**`,
             `- Canonical issues: **${metrics.pagesWithCanonicalIssue ?? 0}**`,
+            `- Canonical route mismatches: **${metrics.pagesWithCanonicalRouteMismatch ?? 0}**`,
             `- Hreflang target missing: **${metrics.hreflangTargetMissing ?? 0}**`,
             `- Hreflang reciprocity issues: **${metrics.pagesWithHreflangReciprocalIssue ?? 0}**`,
             `- OG locale/hreflang mismatch: **${metrics.pagesWithOgLocaleAltMismatch ?? 0}**`,

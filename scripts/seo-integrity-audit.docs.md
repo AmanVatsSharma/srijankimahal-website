@@ -25,6 +25,7 @@ This audit catches those issues deterministically before deployment.
 
 1. Canonical tag count is exactly `1` per page.
 2. Canonical URL target resolves to generated output (same-origin only).
+   - canonical target must match current generated route (self-canonical)
 3. Core metadata presence:
    - non-empty `<title>`
    - non-empty `<meta name="description">`

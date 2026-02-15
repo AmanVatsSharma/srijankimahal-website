@@ -418,6 +418,7 @@ async function run(options = { reportFile: null, strictWarnings: false }) {
     htmlFiles: htmlFiles.length,
     pagesWithCanonicalIssue: 0,
     canonicalTargetMissing: 0,
+    pagesWithCanonicalRouteMismatch: 0,
     pagesMissingTitle: 0,
     pagesMissingDescription: 0,
     titlesOutsideRecommendedRange: 0,
@@ -568,6 +569,7 @@ async function run(options = { reportFile: null, strictWarnings: false }) {
       const canonicalHref = canonicalHrefMatch[1];
       const localCanonicalHref = getLocalHrefFromAny(canonicalHref);
       canonicalComparableHref = normalizeComparableHref(canonicalHref);
+      const expectedCanonicalHref = normalizeComparableHref(routePathFromDistRelative(relPath));
 
       if (!localCanonicalHref && ABSOLUTE_HTTP_PATTERN.test(canonicalHref)) {
         failures.push({
@@ -581,6 +583,18 @@ async function run(options = { reportFile: null, strictWarnings: false }) {
           type: 'canonical-target-missing',
           page: relPath,
           canonicalHref,
+        });
+      } else if (
+        canonicalComparableHref &&
+        expectedCanonicalHref &&
+        canonicalComparableHref !== expectedCanonicalHref
+      ) {
+        metrics.pagesWithCanonicalRouteMismatch += 1;
+        failures.push({
+          type: 'canonical-route-mismatch',
+          page: relPath,
+          expectedCanonical: expectedCanonicalHref,
+          actualCanonical: canonicalComparableHref,
         });
       } else if (localCanonicalHref) {
         if (hasNoindexDirective && canonicalComparableHref) {

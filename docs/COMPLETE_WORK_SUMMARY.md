@@ -6,6 +6,33 @@
 
 ---
 
+## 🔄 2026-02-15 Latest Execution Addendum (Technical SEO hardening)
+
+The below legacy summary remains useful for historical context, but the implementation has since advanced significantly.  
+Latest production-ready hardening completed:
+
+- ✅ Fixed invalid JSON-LD rendering artifacts by standardizing Astro JSON-LD output with `set:html`.
+  - Resolved 14 invalid schema payloads detected in built HTML.
+  - Current audit: `invalid_jsonld = 0`.
+- ✅ Strengthened Hindi room page relevance:
+  - localized highlights per room slug
+  - localized pricing phrase display copy
+  - consistent Hindi-first on-page feature content.
+- ✅ Localized shared navigation chrome on `/hi/*` routes:
+  - Header labels + CTA labels now locale-aware
+  - Footer labels, legal links, trust badges, contact copy now locale-aware
+  - reduced mixed-language UI signals for Hindi pages.
+- ✅ Continuous build verification maintained after each logical change (`npm run build`), plus targeted output audits.
+
+### Latest integrity signals
+- `invalid_jsonld = 0`
+- `duplicate brand suffix titles = 0`
+- `duplicate meta description groups = 0`
+- `pages_with_duplicate_hreflang_langs = 0`
+- `pages_missing_x_default_when_alternates_present = 0`
+
+---
+
 ## 🎯 Project Goals
 
 **Primary Objectives:**

@@ -3,11 +3,24 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import TrustAssurancePanel from '../components/TrustAssurancePanel.astro';
 import { generateBreadcrumbSchema, generateStandardBreadcrumbs } from '../lib/schemas/breadcrumb';
 
 // Generate breadcrumbs
 const breadcrumbs = generateStandardBreadcrumbs('Official', '/official');
 const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbs);
+const webPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'Sri Janaki Mahal Trust Official Verification',
+  description:
+    'Official verification page for Sri Janaki Mahal Trust with trusted contact channels, legal information, and scam prevention guidance.',
+  url: 'https://www.srijanakimahaltrustofficial.com/official',
+  inLanguage: 'en-IN',
+  isPartOf: {
+    '@id': 'https://www.srijanakimahaltrustofficial.com/#website',
+  },
+};
 ---
 
 <Layout 
@@ -346,12 +359,19 @@ const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbs);
         </p>
       </div>
     </section>
+
+    <section class="py-16 bg-[#faf8f3]">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <TrustAssurancePanel lang="en" />
+      </div>
+    </section>
   </main>
 
   <!-- Breadcrumb Schema -->
   {breadcrumbSchema && (
     <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
   )}
+  <script type="application/ld+json" set:html={JSON.stringify(webPageSchema)} />
 
   <Footer />
 </Layout>

@@ -22,6 +22,9 @@ Latest production-ready hardening completed:
   - Header labels + CTA labels now locale-aware
   - Footer labels, legal links, trust badges, contact copy now locale-aware
   - reduced mixed-language UI signals for Hindi pages.
+- ✅ Added Hindi counterpart content for the high-intent Ram Janki naming query:
+  - `/hi/blog/ram-janki-mahal-vs-sri-janki-mahal-ayodhya`
+  - improves bilingual entity coverage and valid EN↔HI alternate pairing for this query.
 - ✅ Continuous build verification maintained after each logical change (`npm run build`), plus targeted output audits.
 - ✅ Automated SEO guardrail system added:
   - `npm run seo:audit` and `npm run seo:verify`

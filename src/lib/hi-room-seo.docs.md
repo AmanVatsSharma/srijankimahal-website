@@ -17,12 +17,16 @@ Hindi room detail pages now use **language-native metadata** instead of reusing 
   - localized Hindi keyword additions
 - Safe fallback keeps page functional if a slug is missing in the Hindi map:
   - fallback to shared `roomsConfig` values
+- Structured data parity:
+  - emits Hindi room `Product` schema (`inLanguage: hi-IN`)
+  - emits per-image `ImageObject` schema entries
 
 ## SEO impact
 
 - Removes EN/HI duplicate meta description collisions for room pages.
 - Improves matching for Hindi-language intent queries.
 - Keeps content consistent with official booking entity signals.
+- Keeps Hindi room pages eligible for richer product/image understanding.
 
 ## Flow chart
 
@@ -33,6 +37,7 @@ Room slug requested
       -> if hit: use localized title/heading/description/keywords
       -> if miss: fallback to shared metadata
         -> render Layout meta + on-page hero copy
+          -> render Product + ImageObject JSON-LD
           -> produce Hindi-specific SERP snippet
 ```
 

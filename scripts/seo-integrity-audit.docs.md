@@ -30,29 +30,32 @@ This audit catches those issues deterministically before deployment.
 5. `og:locale:alternate` hygiene:
    - no duplicate alternates
    - alternate cannot match primary `og:locale`
-6. H1 count is exactly `1` per page.
-7. JSON-LD payloads parse as valid JSON.
-8. No literal `{JSON.stringify(...)}` text leaked into output.
-9. All `<img>` tags include:
+6. Language consistency checks:
+   - `<html lang>` matches route locale (`/hi/*` -> `hi`, else `en`)
+   - `og:locale` matches page language (`en_IN` or `hi_IN`)
+7. H1 count is exactly `1` per page.
+8. JSON-LD payloads parse as valid JSON.
+9. No literal `{JSON.stringify(...)}` text leaked into output.
+10. All `<img>` tags include:
    - `alt`
    - `width`
    - `height`
-10. Internal local links resolve to generated output files.
-11. Hreflang integrity:
+11. Internal local links resolve to generated output files.
+12. Hreflang integrity:
    - no duplicate language entries
    - `x-default` exists when alternates are emitted
    - hreflang targets resolve to generated output
-12. Duplicate meta-description groups are rejected.
-13. Sitemap integrity:
+13. Duplicate meta-description groups are rejected.
+14. Sitemap integrity:
    - `sitemap-index.xml` exists and references main + image sitemap
    - `sitemap-0.xml` URLs are same-origin, unique, and resolvable in build output
    - `sitemap-0.xml` does not include canonical URLs from pages marked `noindex`
    - sitemap excludes disallowed utility/docs URLs (`/404`, `.docs`)
-14. Robots integrity:
+15. Robots integrity:
    - `robots.txt` exists
    - no `Crawl-delay`
    - includes sitemap index + image sitemap references
-15. Dist route hygiene check for `.docs` tokens.
+16. Dist route hygiene check for `.docs` tokens.
 
 > Note: explicit `/404` and `/hi/404` link targets are ignored as controlled exceptions for error-page UX.
 > Note: missing image sitemap reference in `sitemap-index.xml` is reported as a warning (not failure) because some setups expose image sitemap via `robots.txt` only.
@@ -94,6 +97,7 @@ For each page:
   - canonical target existence
   - social URL/image target checks
   - OG locale alternate checks
+  - HTML lang + OG locale language checks
   - h1 count
   - JSON-LD parse
   - image attr checks

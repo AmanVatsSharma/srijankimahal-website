@@ -207,6 +207,8 @@ async function run() {
     pagesWithDuplicateHreflangLangs: 0,
     pagesMissingXDefaultHreflang: 0,
     pagesWithOgLocaleIssues: 0,
+    pagesWithLangAttrIssues: 0,
+    pagesWithOgLocaleMismatch: 0,
     duplicateDescriptionGroups: 0,
     sitemapLocTargetMissing: 0,
     sitemapLocInvalidOrigin: 0,
@@ -221,6 +223,19 @@ async function run() {
   for (const htmlPath of htmlFiles) {
     const relPath = toRelative(htmlPath);
     const html = await fs.readFile(htmlPath, 'utf-8');
+    const expectedLang = relPath.startsWith('hi/') ? 'hi' : 'en';
+
+    const htmlLangMatch = html.match(/<html[^>]*\blang="([^"]+)"/i);
+    const htmlLang = htmlLangMatch?.[1]?.trim();
+    if (!htmlLang || htmlLang !== expectedLang) {
+      metrics.pagesWithLangAttrIssues += 1;
+      failures.push({
+        type: 'html-lang-mismatch',
+        page: relPath,
+        expectedLang,
+        actualLang: htmlLang || '(missing)',
+      });
+    }
 
     // Canonical: exactly one per page.
     const canonicalCount = countMatches(html, /<link rel="canonical" /gi);
@@ -330,6 +345,16 @@ async function run() {
 
     const currentOgLocaleMatch = html.match(/<meta property="og:locale" content="([^"]+)"/i);
     const currentOgLocale = currentOgLocaleMatch?.[1]?.trim();
+    const expectedOgLocale = expectedLang === 'hi' ? 'hi_IN' : 'en_IN';
+    if (!currentOgLocale || currentOgLocale !== expectedOgLocale) {
+      metrics.pagesWithOgLocaleMismatch += 1;
+      failures.push({
+        type: 'og-locale-mismatch',
+        page: relPath,
+        expectedOgLocale,
+        actualOgLocale: currentOgLocale || '(missing)',
+      });
+    }
     const ogLocaleAltMatches = Array.from(
       html.matchAll(/<meta property="og:locale:alternate" content="([^"]+)"/gi)
     ).map((match) => (match[1] ?? '').trim()).filter(Boolean);

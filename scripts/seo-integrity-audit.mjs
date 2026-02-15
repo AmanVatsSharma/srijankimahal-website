@@ -246,6 +246,19 @@ function getLocalHrefFromAny(href) {
   }
 }
 
+function normalizeComparableHref(href) {
+  const localHref = getLocalHrefFromAny(href);
+  if (!localHref) return null;
+
+  const withoutHash = localHref.split('#')[0] ?? '';
+  const withoutQuery = withoutHash.split('?')[0] ?? '';
+  const trimmed = withoutQuery.trim();
+  if (!trimmed || trimmed === '/') return '/';
+
+  const withLeadingSlash = trimmed.startsWith('/') ? trimmed : `/${trimmed}`;
+  return withLeadingSlash.endsWith('/') ? withLeadingSlash.slice(0, -1) : withLeadingSlash;
+}
+
 async function hasDistTarget(localHref) {
   if (shouldIgnoreInternalHref(localHref)) {
     return true;
@@ -339,6 +352,8 @@ async function run(options = { reportFile: null }) {
     pagesWithOgLocaleIssues: 0,
     pagesWithLangAttrIssues: 0,
     pagesWithOgLocaleMismatch: 0,
+    pagesWithOgCanonicalMismatch: 0,
+    pagesWithTwitterCanonicalMismatch: 0,
     duplicateTitleGroups: 0,
     duplicateDescriptionGroups: 0,
     sitemapLocTargetMissing: 0,
@@ -392,10 +407,12 @@ async function run(options = { reportFile: null }) {
         canonicalCount,
       });
     }
+    let canonicalComparableHref = null;
     const canonicalHrefMatch = html.match(/<link rel="canonical" href="([^"]+)"/i);
     if (canonicalHrefMatch?.[1]) {
       const canonicalHref = canonicalHrefMatch[1];
       const localCanonicalHref = getLocalHrefFromAny(canonicalHref);
+      canonicalComparableHref = normalizeComparableHref(canonicalHref);
 
       if (!localCanonicalHref && ABSOLUTE_HTTP_PATTERN.test(canonicalHref)) {
         failures.push({
@@ -423,6 +440,7 @@ async function run(options = { reportFile: null }) {
     if (ogUrlMatch?.[1]) {
       const ogUrl = ogUrlMatch[1];
       const localOgUrl = getLocalHrefFromAny(ogUrl);
+      const ogComparableHref = normalizeComparableHref(ogUrl);
       if (!localOgUrl && ABSOLUTE_HTTP_PATTERN.test(ogUrl)) {
         failures.push({
           type: 'og-url-external-origin',
@@ -436,6 +454,18 @@ async function run(options = { reportFile: null }) {
           page: relPath,
           ogUrl,
         });
+      } else if (
+        canonicalComparableHref &&
+        ogComparableHref &&
+        canonicalComparableHref !== ogComparableHref
+      ) {
+        metrics.pagesWithOgCanonicalMismatch += 1;
+        failures.push({
+          type: 'og-url-canonical-mismatch',
+          page: relPath,
+          canonicalHref: canonicalComparableHref,
+          ogUrl: ogComparableHref,
+        });
       }
     }
 
@@ -443,6 +473,7 @@ async function run(options = { reportFile: null }) {
     if (twitterUrlMatch?.[1]) {
       const twitterUrl = twitterUrlMatch[1];
       const localTwitterUrl = getLocalHrefFromAny(twitterUrl);
+      const twitterComparableHref = normalizeComparableHref(twitterUrl);
       if (!localTwitterUrl && ABSOLUTE_HTTP_PATTERN.test(twitterUrl)) {
         failures.push({
           type: 'twitter-url-external-origin',
@@ -455,6 +486,18 @@ async function run(options = { reportFile: null }) {
           type: 'twitter-url-target-missing',
           page: relPath,
           twitterUrl,
+        });
+      } else if (
+        canonicalComparableHref &&
+        twitterComparableHref &&
+        canonicalComparableHref !== twitterComparableHref
+      ) {
+        metrics.pagesWithTwitterCanonicalMismatch += 1;
+        failures.push({
+          type: 'twitter-url-canonical-mismatch',
+          page: relPath,
+          canonicalHref: canonicalComparableHref,
+          twitterUrl: twitterComparableHref,
         });
       }
     }

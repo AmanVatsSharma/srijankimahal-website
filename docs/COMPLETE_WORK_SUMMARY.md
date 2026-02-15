@@ -32,6 +32,7 @@ Latest production-ready hardening completed:
   - CI captures audit exit code, uploads artifact first, and then fails job if audit failed
   - Audit now validates:
     - canonical/hreflang target integrity
+    - social URL canonical parity (`og:url`, `twitter:url`)
     - JSON-LD validity
     - H1 + image attribute semantics
     - OG/Twitter URL + image target validity

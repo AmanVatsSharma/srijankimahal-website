@@ -31,6 +31,8 @@ This audit catches those issues deterministically before deployment.
    - no duplicate title groups
    - no duplicate description groups
 4. Social URL targets (`og:url`, `twitter:url`) resolve to generated output.
+   - `og:url` must match canonical target
+   - `twitter:url` must match canonical target
 5. Social image paths (`og:image`, `twitter:image`) exist in build output for same-origin assets.
 6. `og:locale:alternate` hygiene:
    - no duplicate alternates
@@ -129,7 +131,7 @@ For each page:
   - canonical count
   - canonical target existence
   - title/description presence + duplicate tracking
-  - social URL/image target checks
+  - social URL/image target checks + canonical parity
   - OG locale alternate checks
   - HTML lang + OG locale language checks
   - h1 count

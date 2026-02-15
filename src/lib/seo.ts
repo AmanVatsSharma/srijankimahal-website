@@ -42,6 +42,7 @@ const DEFAULT_KEYWORDS = [
   'janaki mahal trust ayodhya'
 ];
 const DEFAULT_OG_IMAGE = `${SITE_URL}/og.jpg`;
+const ABSOLUTE_URL_PATTERN = /^https?:\/\//i;
 
 function debugLog(message: string, data?: unknown) {
   if (import.meta.env?.DEV) {
@@ -106,8 +107,39 @@ export function generateDescription(description?: string): string {
  */
 export function generateCanonical(path?: string): string {
   debugLog('[SEO] Generating canonical URL', { path: path || '/' });
-  const cleanPath = path?.replace(/\/$/, '') || '';
-  return `${SITE_URL}${cleanPath || ''}`;
+
+  // Defensive canonical normalization:
+  // - Accept absolute URL or relative path.
+  // - Remove query/hash from canonical output.
+  // - Keep canonical root as origin without trailing slash.
+  if (!path) {
+    return SITE_URL;
+  }
+
+  const inputPath = path.trim();
+  if (!inputPath) {
+    return SITE_URL;
+  }
+
+  if (ABSOLUTE_URL_PATTERN.test(inputPath)) {
+    try {
+      const parsed = new URL(inputPath);
+      const normalizedPathname = parsed.pathname.replace(/\/$/, '');
+      const canonicalAbsolute = `${parsed.origin}${normalizedPathname || ''}`;
+      debugLog('[SEO] Canonical absolute URL normalized', { canonicalAbsolute });
+      return canonicalAbsolute || SITE_URL;
+    } catch (error) {
+      debugLog('[SEO] Invalid absolute URL for canonical, fallback to site URL', { inputPath, error });
+      return SITE_URL;
+    }
+  }
+
+  const cleanRelativeInput = inputPath.split('?')[0]?.split('#')[0] || '/';
+  const prefixedPath = cleanRelativeInput.startsWith('/') ? cleanRelativeInput : `/${cleanRelativeInput}`;
+  const normalizedPath = prefixedPath.replace(/\/$/, '');
+  const canonicalRelative = `${SITE_URL}${normalizedPath || ''}`;
+  debugLog('[SEO] Canonical relative URL normalized', { canonicalRelative });
+  return canonicalRelative;
 }
 
 /**

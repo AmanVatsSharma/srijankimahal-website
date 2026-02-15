@@ -17,6 +17,7 @@ import path from 'node:path';
 const AUDIT_PREFIX = '[seo-audit]';
 const DIST_DIR = path.resolve(process.cwd(), 'dist');
 const SITE_ORIGIN = 'https://www.srijanakimahaltrustofficial.com';
+const ABSOLUTE_HTTP_PATTERN = /^https?:\/\//i;
 const INTERNAL_LINK_IGNORE_PATTERNS = [
   /^\/404\/?$/i,
   /^\/hi\/404\/?$/i,
@@ -115,6 +116,42 @@ function shouldIgnoreInternalHref(href) {
   return INTERNAL_LINK_IGNORE_PATTERNS.some((pattern) => pattern.test(href));
 }
 
+function getLocalHrefFromAny(href) {
+  const value = href.trim();
+  if (!value) return null;
+
+  if (!ABSOLUTE_HTTP_PATTERN.test(value)) {
+    return value;
+  }
+
+  try {
+    const parsed = new URL(value);
+    if (parsed.origin !== SITE_ORIGIN) {
+      return null;
+    }
+    return `${parsed.pathname}${parsed.search}${parsed.hash}`;
+  } catch {
+    return null;
+  }
+}
+
+async function hasDistTarget(localHref) {
+  if (shouldIgnoreInternalHref(localHref)) {
+    return true;
+  }
+
+  const target = resolveLocalTarget(localHref);
+  if (typeof target === 'string') {
+    return exists(target);
+  }
+
+  return (
+    (await exists(target.directFile)) ||
+    (await exists(target.nestedIndex)) ||
+    (await exists(target.htmlVariant))
+  );
+}
+
 async function exists(filePath) {
   try {
     await fs.access(filePath);
@@ -143,9 +180,11 @@ async function run() {
 
   const failures = [];
   const warnings = [];
+  const descriptionsByContent = new Map();
   const metrics = {
     htmlFiles: htmlFiles.length,
     pagesWithCanonicalIssue: 0,
+    canonicalTargetMissing: 0,
     invalidJsonLdScripts: 0,
     pagesWithH1Issue: 0,
     imagesMissingAlt: 0,
@@ -153,6 +192,10 @@ async function run() {
     pagesWithLiteralJsonStringify: 0,
     docsLikeRoutes: 0,
     brokenInternalLinks: 0,
+    hreflangTargetMissing: 0,
+    pagesWithDuplicateHreflangLangs: 0,
+    pagesMissingXDefaultHreflang: 0,
+    duplicateDescriptionGroups: 0,
   };
 
   for (const htmlPath of htmlFiles) {
@@ -168,6 +211,36 @@ async function run() {
         page: relPath,
         canonicalCount,
       });
+    }
+    const canonicalHrefMatch = html.match(/<link rel="canonical" href="([^"]+)"/i);
+    if (canonicalHrefMatch?.[1]) {
+      const canonicalHref = canonicalHrefMatch[1];
+      const localCanonicalHref = getLocalHrefFromAny(canonicalHref);
+
+      if (!localCanonicalHref && ABSOLUTE_HTTP_PATTERN.test(canonicalHref)) {
+        failures.push({
+          type: 'canonical-external-origin',
+          page: relPath,
+          canonicalHref,
+        });
+      } else if (localCanonicalHref && !(await hasDistTarget(localCanonicalHref))) {
+        metrics.canonicalTargetMissing += 1;
+        failures.push({
+          type: 'canonical-target-missing',
+          page: relPath,
+          canonicalHref,
+        });
+      }
+    }
+
+    const descriptionMatch = html.match(/<meta name="description" content="([^"]*)"/i);
+    if (descriptionMatch) {
+      const descriptionText = decodeBasicEntities(descriptionMatch[1] ?? '').trim();
+      if (descriptionText) {
+        const pages = descriptionsByContent.get(descriptionText) ?? [];
+        pages.push(relPath);
+        descriptionsByContent.set(descriptionText, pages);
+      }
     }
 
     // Exactly one H1 for semantic consistency.
@@ -250,38 +323,86 @@ async function run() {
         href.startsWith('mailto:') ||
         href.startsWith('tel:') ||
         href.startsWith('javascript:') ||
-        href.startsWith('https://') ||
-        href.startsWith('http://') ||
-        href.startsWith('//') ||
-        shouldIgnoreInternalHref(href)
+        href.startsWith('//')
       ) {
         continue;
       }
 
-      const target = resolveLocalTarget(href);
-      if (typeof target === 'string') {
-        if (!(await exists(target))) {
-          metrics.brokenInternalLinks += 1;
-          failures.push({
-            type: 'broken-internal-link',
-            page: relPath,
-            href,
-          });
-        }
+      const localHref = getLocalHrefFromAny(href);
+      if (!localHref || shouldIgnoreInternalHref(localHref)) {
         continue;
       }
 
-      const targetExists =
-        (await exists(target.directFile)) ||
-        (await exists(target.nestedIndex)) ||
-        (await exists(target.htmlVariant));
-
-      if (!targetExists) {
+      if (!(await hasDistTarget(localHref))) {
         metrics.brokenInternalLinks += 1;
         failures.push({
           type: 'broken-internal-link',
           page: relPath,
           href,
+        });
+      }
+    }
+
+    // Hreflang integrity checks.
+    const hreflangRegex = /<link rel="alternate" hreflang="([^"]+)" href="([^"]+)"/gi;
+    const hreflangEntries = Array.from(html.matchAll(hreflangRegex)).map((match) => ({
+      hreflang: (match[1] ?? '').trim(),
+      href: (match[2] ?? '').trim(),
+    }));
+
+    if (hreflangEntries.length > 0) {
+      const seenLangs = new Set();
+      let hasDuplicateLang = false;
+      let hasXDefault = false;
+
+      for (const entry of hreflangEntries) {
+        if (!entry.hreflang || !entry.href) continue;
+
+        if (seenLangs.has(entry.hreflang)) {
+          hasDuplicateLang = true;
+        } else {
+          seenLangs.add(entry.hreflang);
+        }
+
+        if (entry.hreflang === 'x-default') {
+          hasXDefault = true;
+        }
+
+        const localHref = getLocalHrefFromAny(entry.href);
+        if (!localHref && ABSOLUTE_HTTP_PATTERN.test(entry.href)) {
+          failures.push({
+            type: 'hreflang-external-origin',
+            page: relPath,
+            hreflang: entry.hreflang,
+            href: entry.href,
+          });
+          continue;
+        }
+
+        if (localHref && !(await hasDistTarget(localHref))) {
+          metrics.hreflangTargetMissing += 1;
+          failures.push({
+            type: 'hreflang-target-missing',
+            page: relPath,
+            hreflang: entry.hreflang,
+            href: entry.href,
+          });
+        }
+      }
+
+      if (hasDuplicateLang) {
+        metrics.pagesWithDuplicateHreflangLangs += 1;
+        failures.push({
+          type: 'duplicate-hreflang-language',
+          page: relPath,
+        });
+      }
+
+      if (!hasXDefault) {
+        metrics.pagesMissingXDefaultHreflang += 1;
+        failures.push({
+          type: 'missing-hreflang-x-default',
+          page: relPath,
         });
       }
     }
@@ -294,6 +415,25 @@ async function run() {
         page: relPath,
       });
     }
+  }
+
+  const duplicateDescriptionGroups = [];
+  for (const [descriptionText, pages] of descriptionsByContent.entries()) {
+    if (pages.length > 1) {
+      duplicateDescriptionGroups.push({
+        description: descriptionText.slice(0, 140),
+        pageCount: pages.length,
+        samplePages: pages.slice(0, 5),
+      });
+    }
+  }
+
+  metrics.duplicateDescriptionGroups = duplicateDescriptionGroups.length;
+  if (duplicateDescriptionGroups.length > 0) {
+    failures.push({
+      type: 'duplicate-meta-description-groups',
+      groups: duplicateDescriptionGroups.slice(0, 10),
+    });
   }
 
   const elapsedMs = Date.now() - startedAt;

@@ -24,6 +24,7 @@ This audit catches those issues deterministically before deployment.
 ## Checks performed
 
 1. Canonical tag count is exactly `1` per page.
+2. Canonical URL target resolves to generated output (same-origin only).
 2. H1 count is exactly `1` per page.
 3. JSON-LD payloads parse as valid JSON.
 4. No literal `{JSON.stringify(...)}` text leaked into output.
@@ -32,7 +33,14 @@ This audit catches those issues deterministically before deployment.
    - `width`
    - `height`
 6. Internal local links resolve to generated output files.
-7. Dist route hygiene check for `.docs` tokens.
+7. Hreflang integrity:
+   - no duplicate language entries
+   - `x-default` exists when alternates are emitted
+   - hreflang targets resolve to generated output
+8. Duplicate meta-description groups are rejected.
+9. Dist route hygiene check for `.docs` tokens.
+
+> Note: explicit `/404` and `/hi/404` link targets are ignored as controlled exceptions for error-page UX.
 
 ---
 
@@ -64,14 +72,16 @@ Collect all .html files
    v
 For each page:
   - canonical count
+  - canonical target existence
   - h1 count
   - JSON-LD parse
   - image attr checks
   - internal href target checks
+  - hreflang integrity checks
   - docs-route token check
    |
    v
-Aggregate metrics + failures
+Aggregate metrics + duplicate-description groups + failures
    |
    +--> failures > 0 ? exit 1
    |

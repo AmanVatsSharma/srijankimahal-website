@@ -8,7 +8,7 @@ This document reflects the **current** behavior of the shared SEO utility after 
 
 - Canonical URL generation
 - OpenGraph and Twitter meta object generation
-- Robots directive generation
+- Robots directive generation (snippet preview aware)
 - Hreflang generation (default pair mode + explicit mode)
 - Final merged SEO payload consumed by `Layout.astro`
 
@@ -50,6 +50,20 @@ When `disableDefaultHreflangPair = true`:
 - adds `x-default` (prefers `en` alternate, else current page URL)
 
 This mode is used on blog routes where translated counterparts may not exist for every slug/page.
+
+---
+
+## Robots directive policy
+
+`generateRobotsContent(noindex)` now emits:
+
+- For indexable pages:  
+  `index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1`
+
+- For non-indexable pages:  
+  `noindex,nofollow,noarchive`
+
+This keeps private/utility routes strict while enabling richer previews on primary landing pages.
 
 ---
 

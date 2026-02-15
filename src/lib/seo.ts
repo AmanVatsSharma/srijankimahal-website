@@ -230,7 +230,13 @@ export function generateTwitterTags(config: SEOConfig) {
  */
 export function generateRobotsContent(noindex?: boolean): string {
   debugLog('[SEO] Generating robots content', { noindex: Boolean(noindex) });
-  return noindex ? 'noindex,nofollow' : 'index,follow';
+  if (noindex) {
+    // Keep strict crawl blocking for utility/private pages.
+    return 'noindex,nofollow,noarchive';
+  }
+
+  // Encourage richer snippets/previews for indexable pages.
+  return 'index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1';
 }
 
 /**

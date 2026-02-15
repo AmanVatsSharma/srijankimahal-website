@@ -187,6 +187,18 @@ function toRelative(absPath) {
   return path.relative(DIST_DIR, absPath).replaceAll(path.sep, '/');
 }
 
+function routePathFromDistRelative(relPath) {
+  const normalized = relPath.replaceAll('\\', '/');
+  if (normalized === 'index.html') return '/';
+  if (normalized.endsWith('/index.html')) {
+    return `/${normalized.slice(0, -'/index.html'.length)}`;
+  }
+  if (normalized.endsWith('.html')) {
+    return `/${normalized.slice(0, -'.html'.length)}`;
+  }
+  return `/${normalized}`;
+}
+
 function resolveLocalTarget(urlPath) {
   const withoutHash = urlPath.split('#')[0] ?? '';
   const withoutQuery = withoutHash.split('?')[0] ?? '';
@@ -354,6 +366,8 @@ async function run(options = { reportFile: null }) {
   const noindexCanonicalPaths = new Set();
   const indexableCanonicalPaths = new Set();
   const sitemapComparablePaths = new Set();
+  const hreflangGraphByPage = new Map();
+  const hreflangReciprocalIssuePages = new Set();
   const metrics = {
     htmlFiles: htmlFiles.length,
     pagesWithCanonicalIssue: 0,
@@ -373,6 +387,7 @@ async function run(options = { reportFile: null }) {
     hreflangTargetMissing: 0,
     pagesWithDuplicateHreflangLangs: 0,
     pagesMissingXDefaultHreflang: 0,
+    pagesWithHreflangReciprocalIssue: 0,
     pagesWithOgLocaleIssues: 0,
     pagesWithLangAttrIssues: 0,
     pagesWithOgLocaleMismatch: 0,
@@ -726,6 +741,9 @@ async function run(options = { reportFile: null }) {
       const seenLangs = new Set();
       let hasDuplicateLang = false;
       let hasXDefault = false;
+      const pageComparableHref =
+        canonicalComparableHref ?? normalizeComparableHref(routePathFromDistRelative(relPath));
+      const comparableHreflangTargets = [];
 
       for (const entry of hreflangEntries) {
         if (!entry.hreflang || !entry.href) continue;
@@ -741,6 +759,14 @@ async function run(options = { reportFile: null }) {
         }
 
         const localHref = getLocalHrefFromAny(entry.href);
+        const comparableHreflangHref = normalizeComparableHref(entry.href);
+        if (comparableHreflangHref) {
+          comparableHreflangTargets.push({
+            hreflang: entry.hreflang,
+            href: comparableHreflangHref,
+          });
+        }
+
         if (!localHref && ABSOLUTE_HTTP_PATTERN.test(entry.href)) {
           failures.push({
             type: 'hreflang-external-origin',
@@ -777,6 +803,10 @@ async function run(options = { reportFile: null }) {
           page: relPath,
         });
       }
+
+      if (pageComparableHref) {
+        hreflangGraphByPage.set(pageComparableHref, comparableHreflangTargets);
+      }
     }
 
     // Route hygiene: docs should never leak into dist routes.
@@ -788,6 +818,28 @@ async function run(options = { reportFile: null }) {
       });
     }
   }
+
+  for (const [pageHref, entries] of hreflangGraphByPage.entries()) {
+    for (const entry of entries) {
+      if (entry.hreflang === 'x-default') continue;
+      if (entry.href === pageHref) continue;
+
+      const targetEntries = hreflangGraphByPage.get(entry.href);
+      if (!targetEntries) continue;
+
+      const hasReciprocalLink = targetEntries.some((targetEntry) => targetEntry.href === pageHref);
+      if (!hasReciprocalLink) {
+        hreflangReciprocalIssuePages.add(pageHref);
+        failures.push({
+          type: 'hreflang-reciprocal-missing',
+          page: pageHref,
+          target: entry.href,
+          hreflang: entry.hreflang,
+        });
+      }
+    }
+  }
+  metrics.pagesWithHreflangReciprocalIssue = hreflangReciprocalIssuePages.size;
 
   const duplicateDescriptionGroups = [];
   for (const [descriptionText, pages] of descriptionsByContent.entries()) {

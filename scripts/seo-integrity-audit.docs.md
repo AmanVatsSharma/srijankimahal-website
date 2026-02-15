@@ -52,6 +52,7 @@ This audit catches those issues deterministically before deployment.
    - no duplicate language entries
    - `x-default` exists when alternates are emitted
    - hreflang targets resolve to generated output
+   - alternate pages include reciprocal hreflang links back
 14. Sitemap integrity:
    - `sitemap-index.xml` exists and references main + image sitemap
    - `sitemap-0.xml` URLs are same-origin, unique, and resolvable in build output
@@ -144,7 +145,7 @@ For each page:
   - JSON-LD parse
   - image attr checks
   - internal href target checks
-  - hreflang integrity checks
+  - hreflang integrity + reciprocity checks
   - docs-route token check
    |
    v

@@ -90,6 +90,7 @@ jobs:
             `- Pages audited: **${metrics.htmlFiles ?? 'n/a'}**`,
             `- Canonical issues: **${metrics.pagesWithCanonicalIssue ?? 0}**`,
             `- Hreflang target missing: **${metrics.hreflangTargetMissing ?? 0}**`,
+            `- Hreflang reciprocity issues: **${metrics.pagesWithHreflangReciprocalIssue ?? 0}**`,
             `- Invalid JSON-LD: **${metrics.invalidJsonLdScripts ?? 0}**`,
             `- Broken internal links: **${metrics.brokenInternalLinks ?? 0}**`,
             '',

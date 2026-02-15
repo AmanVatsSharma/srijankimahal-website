@@ -34,6 +34,7 @@ Latest production-ready hardening completed:
   - image sitemap reference warning now triggers only when missing in both sitemap-index and robots
   - report payload includes grouped warning/failure type counts for faster triage
   - audit now verifies indexable canonical URLs are present in main sitemap
+  - hreflang audit now verifies reciprocal alternate links between language pairs
   - Audit now validates:
     - canonical/hreflang target integrity
     - social URL canonical parity (`og:url`, `twitter:url`)

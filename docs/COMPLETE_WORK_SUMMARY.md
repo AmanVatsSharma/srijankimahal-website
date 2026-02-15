@@ -35,6 +35,7 @@ Latest production-ready hardening completed:
   - report payload includes grouped warning/failure type counts for faster triage
   - audit now verifies indexable canonical URLs are present in main sitemap
   - hreflang audit now verifies reciprocal alternate links between language pairs
+  - og:locale:alternate values now validated against hreflang-derived locale expectations
   - Audit now validates:
     - canonical/hreflang target integrity
     - social URL canonical parity (`og:url`, `twitter:url`)

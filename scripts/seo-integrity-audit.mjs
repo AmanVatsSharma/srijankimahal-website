@@ -389,6 +389,7 @@ async function run(options = { reportFile: null }) {
     pagesMissingXDefaultHreflang: 0,
     pagesWithHreflangReciprocalIssue: 0,
     pagesWithOgLocaleIssues: 0,
+    pagesWithOgLocaleAltMismatch: 0,
     pagesWithLangAttrIssues: 0,
     pagesWithOgLocaleMismatch: 0,
     pagesWithOgCanonicalMismatch: 0,
@@ -576,6 +577,7 @@ async function run(options = { reportFile: null }) {
     const currentOgLocaleMatch = html.match(/<meta property="og:locale" content="([^"]+)"/i);
     const currentOgLocale = currentOgLocaleMatch?.[1]?.trim();
     const expectedOgLocale = expectedLang === 'hi' ? 'hi_IN' : 'en_IN';
+    let hasOgLocaleIssueForPage = false;
     if (!currentOgLocale || currentOgLocale !== expectedOgLocale) {
       metrics.pagesWithOgLocaleMismatch += 1;
       failures.push({
@@ -611,9 +613,42 @@ async function run(options = { reportFile: null }) {
           });
         }
       }
-      if (hasOgLocaleIssue) {
-        metrics.pagesWithOgLocaleIssues += 1;
-      }
+      hasOgLocaleIssueForPage = hasOgLocaleIssueForPage || hasOgLocaleIssue;
+    }
+    const expectedOgAltLocales = new Set();
+    const hreflangForOgLocale = Array.from(
+      html.matchAll(/<link rel="alternate" hreflang="([^"]+)" href="([^"]+)"/gi)
+    ).map((match) => ({
+      hreflang: (match[1] ?? '').trim().toLowerCase(),
+      href: (match[2] ?? '').trim(),
+    }));
+    for (const entry of hreflangForOgLocale) {
+      if (!entry.hreflang || !entry.href) continue;
+      if (entry.hreflang === 'x-default') continue;
+
+      const mappedLocale = entry.hreflang === 'hi' ? 'hi_IN' : entry.hreflang === 'en' ? 'en_IN' : null;
+      if (!mappedLocale) continue;
+      expectedOgAltLocales.add(mappedLocale);
+    }
+    if (currentOgLocale) {
+      expectedOgAltLocales.delete(currentOgLocale);
+    }
+    const actualOgAltLocales = new Set(ogLocaleAltMatches);
+    const ogAltMatchesExpected =
+      actualOgAltLocales.size === expectedOgAltLocales.size &&
+      Array.from(expectedOgAltLocales).every((locale) => actualOgAltLocales.has(locale));
+    if (!ogAltMatchesExpected) {
+      metrics.pagesWithOgLocaleAltMismatch += 1;
+      hasOgLocaleIssueForPage = true;
+      failures.push({
+        type: 'og-locale-alternate-hreflang-mismatch',
+        page: relPath,
+        expected: Array.from(expectedOgAltLocales).sort(),
+        actual: Array.from(actualOgAltLocales).sort(),
+      });
+    }
+    if (hasOgLocaleIssueForPage) {
+      metrics.pagesWithOgLocaleIssues += 1;
     }
 
     const descriptionMatch = html.match(/<meta name="description" content="([^"]*)"/i);

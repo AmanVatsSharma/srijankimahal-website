@@ -91,6 +91,7 @@ jobs:
             `- Canonical issues: **${metrics.pagesWithCanonicalIssue ?? 0}**`,
             `- Hreflang target missing: **${metrics.hreflangTargetMissing ?? 0}**`,
             `- Hreflang reciprocity issues: **${metrics.pagesWithHreflangReciprocalIssue ?? 0}**`,
+            `- OG locale/hreflang mismatch: **${metrics.pagesWithOgLocaleAltMismatch ?? 0}**`,
             `- Invalid JSON-LD: **${metrics.invalidJsonLdScripts ?? 0}**`,
             `- Broken internal links: **${metrics.brokenInternalLinks ?? 0}**`,
             '',

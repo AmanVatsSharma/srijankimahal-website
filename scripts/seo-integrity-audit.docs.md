@@ -37,6 +37,7 @@ This audit catches those issues deterministically before deployment.
 6. `og:locale:alternate` hygiene:
    - no duplicate alternates
    - alternate cannot match primary `og:locale`
+   - alternate locales must match hreflang-derived locale set
 7. Language consistency checks:
    - `<html lang>` matches route locale (`/hi/*` -> `hi`, else `en`)
    - `og:locale` matches page language (`en_IN` or `hi_IN`)

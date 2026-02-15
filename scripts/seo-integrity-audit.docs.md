@@ -32,6 +32,7 @@ This audit catches those issues deterministically before deployment.
    - no duplicate title groups
    - no duplicate description groups
    - warning-only checks for recommended title/description length ranges (aggregated counts + sample pages)
+   - description/robots/OG/Twitter extraction is attribute-order agnostic (`name|property` + `content`)
 4. Social URL targets (`og:url`, `twitter:url`) resolve to generated output.
    - `og:url` must match canonical target
    - `twitter:url` must match canonical target

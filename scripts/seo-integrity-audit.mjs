@@ -710,9 +710,9 @@ async function run(options = { reportFile: null, strictWarnings: false }) {
         canonicalCount,
       });
     }
-    const robotsMetaMatches = Array.from(html.matchAll(/<meta name="robots" content="([^"]*)"/gi));
-    const robotsMetaCount = robotsMetaMatches.length;
-    const robotsMetaContent = (robotsMetaMatches[0]?.[1] ?? '').trim();
+    const robotsMetaValues = extractMetaContentsByKey(html, 'robots');
+    const robotsMetaCount = robotsMetaValues.length;
+    const robotsMetaContent = decodeBasicEntities(robotsMetaValues[0] ?? '').trim();
     const robotsDirectives = parseMetaDirectives(robotsMetaContent);
     const hasNoindexDirective = robotsDirectives.has('noindex');
 
@@ -805,9 +805,8 @@ async function run(options = { reportFile: null, strictWarnings: false }) {
       }
     }
 
-    const ogUrlMatch = html.match(/<meta property="og:url" content="([^"]+)"/i);
-    if (ogUrlMatch?.[1]) {
-      const ogUrl = ogUrlMatch[1];
+    const ogUrl = extractMetaContentsByKey(html, 'og:url')[0]?.trim();
+    if (ogUrl) {
       const localOgUrl = getLocalHrefFromAny(ogUrl);
       const ogComparableHref = normalizeComparableHref(ogUrl);
       if (!localOgUrl && ABSOLUTE_HTTP_PATTERN.test(ogUrl)) {
@@ -839,9 +838,8 @@ async function run(options = { reportFile: null, strictWarnings: false }) {
       }
     }
 
-    const twitterUrlMatch = html.match(/<meta property="twitter:url" content="([^"]+)"/i);
-    if (twitterUrlMatch?.[1]) {
-      const twitterUrl = twitterUrlMatch[1];
+    const twitterUrl = extractMetaContentsByKey(html, 'twitter:url')[0]?.trim();
+    if (twitterUrl) {
       const localTwitterUrl = getLocalHrefFromAny(twitterUrl);
       const twitterComparableHref = normalizeComparableHref(twitterUrl);
       if (!localTwitterUrl && ABSOLUTE_HTTP_PATTERN.test(twitterUrl)) {
@@ -873,9 +871,11 @@ async function run(options = { reportFile: null, strictWarnings: false }) {
       }
     }
 
-    const socialImageRegex = /<meta property="(?:og:image|twitter:image)" content="([^"]+)"/gi;
-    for (const socialImageMatch of html.matchAll(socialImageRegex)) {
-      const imageUrl = socialImageMatch[1] ?? '';
+    const socialImageValues = [
+      ...extractMetaContentsByKey(html, 'og:image'),
+      ...extractMetaContentsByKey(html, 'twitter:image'),
+    ];
+    for (const imageUrl of socialImageValues) {
       const localImagePath = getLocalHrefFromAny(imageUrl);
       if (!localImagePath) {
         // External non-site image URLs are flagged for manual review.
@@ -902,8 +902,7 @@ async function run(options = { reportFile: null, strictWarnings: false }) {
       }
     }
 
-    const currentOgLocaleMatch = html.match(/<meta property="og:locale" content="([^"]+)"/i);
-    const currentOgLocale = currentOgLocaleMatch?.[1]?.trim();
+    const currentOgLocale = extractMetaContentsByKey(html, 'og:locale')[0]?.trim();
     const expectedOgLocale = expectedLang === 'hi' ? 'hi_IN' : 'en_IN';
     let hasOgLocaleIssueForPage = false;
     if (!currentOgLocale || currentOgLocale !== expectedOgLocale) {
@@ -915,9 +914,9 @@ async function run(options = { reportFile: null, strictWarnings: false }) {
         actualOgLocale: currentOgLocale || '(missing)',
       });
     }
-    const ogLocaleAltMatches = Array.from(
-      html.matchAll(/<meta property="og:locale:alternate" content="([^"]+)"/gi)
-    ).map((match) => (match[1] ?? '').trim()).filter(Boolean);
+    const ogLocaleAltMatches = extractMetaContentsByKey(html, 'og:locale:alternate')
+      .map((value) => value.trim())
+      .filter(Boolean);
     if (ogLocaleAltMatches.length > 0) {
       const seenOgAlt = new Set();
       let hasOgLocaleIssue = false;
@@ -977,8 +976,7 @@ async function run(options = { reportFile: null, strictWarnings: false }) {
       metrics.pagesWithOgLocaleIssues += 1;
     }
 
-    const descriptionMatch = html.match(/<meta name="description" content="([^"]*)"/i);
-    const descriptionText = decodeBasicEntities(descriptionMatch?.[1] ?? '').trim();
+    const descriptionText = decodeBasicEntities(extractMetaContentsByKey(html, 'description')[0] ?? '').trim();
     if (!descriptionText) {
       metrics.pagesMissingDescription += 1;
       failures.push({

@@ -25,20 +25,25 @@ This audit catches those issues deterministically before deployment.
 
 1. Canonical tag count is exactly `1` per page.
 2. Canonical URL target resolves to generated output (same-origin only).
-2. H1 count is exactly `1` per page.
-3. JSON-LD payloads parse as valid JSON.
-4. No literal `{JSON.stringify(...)}` text leaked into output.
-5. All `<img>` tags include:
+3. Social URL targets (`og:url`, `twitter:url`) resolve to generated output.
+4. Social image paths (`og:image`, `twitter:image`) exist in build output for same-origin assets.
+5. `og:locale:alternate` hygiene:
+   - no duplicate alternates
+   - alternate cannot match primary `og:locale`
+6. H1 count is exactly `1` per page.
+7. JSON-LD payloads parse as valid JSON.
+8. No literal `{JSON.stringify(...)}` text leaked into output.
+9. All `<img>` tags include:
    - `alt`
    - `width`
    - `height`
-6. Internal local links resolve to generated output files.
-7. Hreflang integrity:
+10. Internal local links resolve to generated output files.
+11. Hreflang integrity:
    - no duplicate language entries
    - `x-default` exists when alternates are emitted
    - hreflang targets resolve to generated output
-8. Duplicate meta-description groups are rejected.
-9. Dist route hygiene check for `.docs` tokens.
+12. Duplicate meta-description groups are rejected.
+13. Dist route hygiene check for `.docs` tokens.
 
 > Note: explicit `/404` and `/hi/404` link targets are ignored as controlled exceptions for error-page UX.
 
@@ -77,6 +82,8 @@ Collect all .html files
 For each page:
   - canonical count
   - canonical target existence
+  - social URL/image target checks
+  - OG locale alternate checks
   - h1 count
   - JSON-LD parse
   - image attr checks

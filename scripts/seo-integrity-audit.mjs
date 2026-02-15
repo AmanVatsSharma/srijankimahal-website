@@ -185,6 +185,9 @@ async function run() {
     htmlFiles: htmlFiles.length,
     pagesWithCanonicalIssue: 0,
     canonicalTargetMissing: 0,
+    ogUrlTargetMissing: 0,
+    twitterUrlTargetMissing: 0,
+    socialImageTargetMissing: 0,
     invalidJsonLdScripts: 0,
     pagesWithH1Issue: 0,
     imagesMissingAlt: 0,
@@ -195,6 +198,7 @@ async function run() {
     hreflangTargetMissing: 0,
     pagesWithDuplicateHreflangLangs: 0,
     pagesMissingXDefaultHreflang: 0,
+    pagesWithOgLocaleIssues: 0,
     duplicateDescriptionGroups: 0,
   };
 
@@ -230,6 +234,108 @@ async function run() {
           page: relPath,
           canonicalHref,
         });
+      }
+    }
+
+    const ogUrlMatch = html.match(/<meta property="og:url" content="([^"]+)"/i);
+    if (ogUrlMatch?.[1]) {
+      const ogUrl = ogUrlMatch[1];
+      const localOgUrl = getLocalHrefFromAny(ogUrl);
+      if (!localOgUrl && ABSOLUTE_HTTP_PATTERN.test(ogUrl)) {
+        failures.push({
+          type: 'og-url-external-origin',
+          page: relPath,
+          ogUrl,
+        });
+      } else if (localOgUrl && !(await hasDistTarget(localOgUrl))) {
+        metrics.ogUrlTargetMissing += 1;
+        failures.push({
+          type: 'og-url-target-missing',
+          page: relPath,
+          ogUrl,
+        });
+      }
+    }
+
+    const twitterUrlMatch = html.match(/<meta property="twitter:url" content="([^"]+)"/i);
+    if (twitterUrlMatch?.[1]) {
+      const twitterUrl = twitterUrlMatch[1];
+      const localTwitterUrl = getLocalHrefFromAny(twitterUrl);
+      if (!localTwitterUrl && ABSOLUTE_HTTP_PATTERN.test(twitterUrl)) {
+        failures.push({
+          type: 'twitter-url-external-origin',
+          page: relPath,
+          twitterUrl,
+        });
+      } else if (localTwitterUrl && !(await hasDistTarget(localTwitterUrl))) {
+        metrics.twitterUrlTargetMissing += 1;
+        failures.push({
+          type: 'twitter-url-target-missing',
+          page: relPath,
+          twitterUrl,
+        });
+      }
+    }
+
+    const socialImageRegex = /<meta property="(?:og:image|twitter:image)" content="([^"]+)"/gi;
+    for (const socialImageMatch of html.matchAll(socialImageRegex)) {
+      const imageUrl = socialImageMatch[1] ?? '';
+      const localImagePath = getLocalHrefFromAny(imageUrl);
+      if (!localImagePath) {
+        // External non-site image URLs are flagged for manual review.
+        if (ABSOLUTE_HTTP_PATTERN.test(imageUrl)) {
+          warnings.push({
+            type: 'social-image-external-origin',
+            page: relPath,
+            imageUrl,
+          });
+        }
+        continue;
+      }
+
+      const cleanImagePath = localImagePath.split('?')[0]?.split('#')[0] ?? '';
+      const normalizedImagePath = cleanImagePath.startsWith('/') ? cleanImagePath.slice(1) : cleanImagePath;
+      const absImagePath = path.join(DIST_DIR, normalizedImagePath);
+      if (!(await exists(absImagePath))) {
+        metrics.socialImageTargetMissing += 1;
+        failures.push({
+          type: 'social-image-target-missing',
+          page: relPath,
+          imageUrl,
+        });
+      }
+    }
+
+    const currentOgLocaleMatch = html.match(/<meta property="og:locale" content="([^"]+)"/i);
+    const currentOgLocale = currentOgLocaleMatch?.[1]?.trim();
+    const ogLocaleAltMatches = Array.from(
+      html.matchAll(/<meta property="og:locale:alternate" content="([^"]+)"/gi)
+    ).map((match) => (match[1] ?? '').trim()).filter(Boolean);
+    if (ogLocaleAltMatches.length > 0) {
+      const seenOgAlt = new Set();
+      let hasOgLocaleIssue = false;
+      for (const ogAlt of ogLocaleAltMatches) {
+        if (seenOgAlt.has(ogAlt)) {
+          hasOgLocaleIssue = true;
+          failures.push({
+            type: 'duplicate-og-locale-alternate',
+            page: relPath,
+            locale: ogAlt,
+          });
+          continue;
+        }
+        seenOgAlt.add(ogAlt);
+        if (currentOgLocale && ogAlt === currentOgLocale) {
+          hasOgLocaleIssue = true;
+          failures.push({
+            type: 'og-locale-alternate-matches-primary',
+            page: relPath,
+            locale: ogAlt,
+          });
+        }
+      }
+      if (hasOgLocaleIssue) {
+        metrics.pagesWithOgLocaleIssues += 1;
       }
     }
 

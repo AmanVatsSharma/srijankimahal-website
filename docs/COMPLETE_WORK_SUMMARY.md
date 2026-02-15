@@ -27,7 +27,7 @@ Latest production-ready hardening completed:
   - improves bilingual entity coverage and valid EN↔HI alternate pairing for this query.
 - ✅ Continuous build verification maintained after each logical change (`npm run build`), plus targeted output audits.
 - ✅ Automated SEO guardrail system added:
-  - `npm run seo:audit` and `npm run seo:verify`
+  - `npm run seo:audit`, `npm run seo:verify`, `npm run seo:audit:strict`, and `npm run seo:verify:strict`
   - GitHub Actions workflow runs SEO verification on push/PR
   - optional JSON report output: `--report-file`
   - optional env-based report target: `SEO_AUDIT_REPORT_FILE`
@@ -69,7 +69,7 @@ Latest production-ready hardening completed:
 - `duplicate meta description groups = 0`
 - `pages_with_duplicate_hreflang_langs = 0`
 - `pages_missing_x_default_when_alternates_present = 0`
-- `seo:verify` CI status = passing on push + PR
+- `seo:verify:strict` CI status = passing on push + PR
 
 ---
 

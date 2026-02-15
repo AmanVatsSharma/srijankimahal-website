@@ -188,11 +188,14 @@ async function run() {
   const failures = [];
   const warnings = [];
   const descriptionsByContent = new Map();
+  const titlesByContent = new Map();
   const noindexCanonicalPaths = new Set();
   const metrics = {
     htmlFiles: htmlFiles.length,
     pagesWithCanonicalIssue: 0,
     canonicalTargetMissing: 0,
+    pagesMissingTitle: 0,
+    pagesMissingDescription: 0,
     ogUrlTargetMissing: 0,
     twitterUrlTargetMissing: 0,
     socialImageTargetMissing: 0,
@@ -209,6 +212,7 @@ async function run() {
     pagesWithOgLocaleIssues: 0,
     pagesWithLangAttrIssues: 0,
     pagesWithOgLocaleMismatch: 0,
+    duplicateTitleGroups: 0,
     duplicateDescriptionGroups: 0,
     sitemapLocTargetMissing: 0,
     sitemapLocInvalidOrigin: 0,
@@ -235,6 +239,20 @@ async function run() {
         expectedLang,
         actualLang: htmlLang || '(missing)',
       });
+    }
+
+    const titleMatch = html.match(/<title>([\s\S]*?)<\/title>/i);
+    const pageTitle = decodeBasicEntities((titleMatch?.[1] ?? '').trim());
+    if (!pageTitle) {
+      metrics.pagesMissingTitle += 1;
+      failures.push({
+        type: 'missing-or-empty-title',
+        page: relPath,
+      });
+    } else {
+      const pages = titlesByContent.get(pageTitle) ?? [];
+      pages.push(relPath);
+      titlesByContent.set(pageTitle, pages);
     }
 
     // Canonical: exactly one per page.
@@ -387,13 +405,17 @@ async function run() {
     }
 
     const descriptionMatch = html.match(/<meta name="description" content="([^"]*)"/i);
-    if (descriptionMatch) {
-      const descriptionText = decodeBasicEntities(descriptionMatch[1] ?? '').trim();
-      if (descriptionText) {
-        const pages = descriptionsByContent.get(descriptionText) ?? [];
-        pages.push(relPath);
-        descriptionsByContent.set(descriptionText, pages);
-      }
+    const descriptionText = decodeBasicEntities(descriptionMatch?.[1] ?? '').trim();
+    if (!descriptionText) {
+      metrics.pagesMissingDescription += 1;
+      failures.push({
+        type: 'missing-or-empty-meta-description',
+        page: relPath,
+      });
+    } else {
+      const pages = descriptionsByContent.get(descriptionText) ?? [];
+      pages.push(relPath);
+      descriptionsByContent.set(descriptionText, pages);
     }
 
     // Exactly one H1 for semantic consistency.
@@ -586,6 +608,25 @@ async function run() {
     failures.push({
       type: 'duplicate-meta-description-groups',
       groups: duplicateDescriptionGroups.slice(0, 10),
+    });
+  }
+
+  const duplicateTitleGroups = [];
+  for (const [titleText, pages] of titlesByContent.entries()) {
+    if (pages.length > 1) {
+      duplicateTitleGroups.push({
+        title: titleText.slice(0, 140),
+        pageCount: pages.length,
+        samplePages: pages.slice(0, 5),
+      });
+    }
+  }
+
+  metrics.duplicateTitleGroups = duplicateTitleGroups.length;
+  if (duplicateTitleGroups.length > 0) {
+    failures.push({
+      type: 'duplicate-title-groups',
+      groups: duplicateTitleGroups.slice(0, 10),
     });
   }
 

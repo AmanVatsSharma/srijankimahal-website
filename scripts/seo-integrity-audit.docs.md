@@ -25,27 +25,31 @@ This audit catches those issues deterministically before deployment.
 
 1. Canonical tag count is exactly `1` per page.
 2. Canonical URL target resolves to generated output (same-origin only).
-3. Social URL targets (`og:url`, `twitter:url`) resolve to generated output.
-4. Social image paths (`og:image`, `twitter:image`) exist in build output for same-origin assets.
-5. `og:locale:alternate` hygiene:
+3. Core metadata presence:
+   - non-empty `<title>`
+   - non-empty `<meta name="description">`
+   - no duplicate title groups
+   - no duplicate description groups
+4. Social URL targets (`og:url`, `twitter:url`) resolve to generated output.
+5. Social image paths (`og:image`, `twitter:image`) exist in build output for same-origin assets.
+6. `og:locale:alternate` hygiene:
    - no duplicate alternates
    - alternate cannot match primary `og:locale`
-6. Language consistency checks:
+7. Language consistency checks:
    - `<html lang>` matches route locale (`/hi/*` -> `hi`, else `en`)
    - `og:locale` matches page language (`en_IN` or `hi_IN`)
-7. H1 count is exactly `1` per page.
-8. JSON-LD payloads parse as valid JSON.
-9. No literal `{JSON.stringify(...)}` text leaked into output.
-10. All `<img>` tags include:
+8. H1 count is exactly `1` per page.
+9. JSON-LD payloads parse as valid JSON.
+10. No literal `{JSON.stringify(...)}` text leaked into output.
+11. All `<img>` tags include:
    - `alt`
    - `width`
    - `height`
-11. Internal local links resolve to generated output files.
-12. Hreflang integrity:
+12. Internal local links resolve to generated output files.
+13. Hreflang integrity:
    - no duplicate language entries
    - `x-default` exists when alternates are emitted
    - hreflang targets resolve to generated output
-13. Duplicate meta-description groups are rejected.
 14. Sitemap integrity:
    - `sitemap-index.xml` exists and references main + image sitemap
    - `sitemap-0.xml` URLs are same-origin, unique, and resolvable in build output
@@ -95,6 +99,7 @@ Collect all .html files
 For each page:
   - canonical count
   - canonical target existence
+  - title/description presence + duplicate tracking
   - social URL/image target checks
   - OG locale alternate checks
   - HTML lang + OG locale language checks

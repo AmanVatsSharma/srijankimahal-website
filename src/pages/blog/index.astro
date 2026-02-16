@@ -3,13 +3,22 @@
 import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
-import { getAllBlogPosts } from '../../lib/blog';
+import { getAllBlogPosts, getAllBlogPostsByLang } from '../../lib/blog';
 
 const allPosts = await getAllBlogPosts();
+const hindiPosts = await getAllBlogPostsByLang('hi');
 const PAGE_SIZE = 12;
 const page = 1;
 const totalPages = Math.max(1, Math.ceil(allPosts.length / PAGE_SIZE));
+const hindiTotalPages = Math.max(1, Math.ceil(hindiPosts.length / PAGE_SIZE));
 const pagePosts = allPosts.slice(0, PAGE_SIZE);
+const hasHindiAlternate = page <= hindiTotalPages;
+const alternateLanguages = hasHindiAlternate
+  ? [
+      { lang: 'en', url: '/blog' },
+      { lang: 'hi', url: '/hi/blog' },
+    ]
+  : [{ lang: 'en', url: '/blog' }];
 
 const siteUrl = (Astro.site?.toString() ?? 'https://www.srijanakimahaltrustofficial.com').replace(/\/$/, '');
 const nextHref = page < totalPages ? `${siteUrl}/blog/page/${page + 1}` : null;
@@ -57,6 +66,8 @@ const paginationItems = buildPagination(page, totalPages);
   ]}
   canonical="/blog"
   ogType="website"
+  alternateLanguages={alternateLanguages}
+  disableDefaultHreflangPair={true}
 >
   <Fragment slot="head">
     {nextHref && <link rel="next" href={nextHref} />}

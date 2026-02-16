@@ -1,0 +1,128 @@
+name: SEO Integrity Checks
+
+on:
+  push:
+    branches:
+      - main
+      - master
+      - 'cursor/**'
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  # Avoid stacking duplicate SEO runs on the same ref.
+  group: seo-integrity-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  seo-verify:
+    name: Build and run SEO integrity audit
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build site
+        run: npm run build
+
+      - name: Run SEO audit with report output
+        id: seo_audit
+        run: |
+          # Keep this step non-fatal so we can always upload the report artifact.
+          # The next step enforces failure explicitly based on captured exit code.
+          # Strict warning mode ensures warning-level regressions are treated as failures in CI.
+          set +e
+          npm run seo:audit:strict -- --report-file reports/seo-audit-report.json
+          exit_code=$?
+          echo "exit_code=${exit_code}" >> "$GITHUB_OUTPUT"
+          exit 0
+
+      - name: Upload SEO audit report artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: seo-audit-report
+          path: reports/seo-audit-report.json
+          if-no-files-found: warn
+
+      - name: Publish SEO audit summary
+        if: always()
+        run: |
+          node <<'NODE'
+          const fs = require('node:fs');
+
+          const summaryFile = process.env.GITHUB_STEP_SUMMARY;
+          const reportPath = 'reports/seo-audit-report.json';
+          if (!summaryFile) {
+            process.exit(0);
+          }
+
+          if (!fs.existsSync(reportPath)) {
+            fs.appendFileSync(summaryFile, '## SEO Audit Summary\n\n⚠️ Report file was not generated.\n');
+            process.exit(0);
+          }
+
+          const report = JSON.parse(fs.readFileSync(reportPath, 'utf8'));
+          const metrics = report.metrics || {};
+          const failureTypeCounts = Array.isArray(report.failureTypeCounts) ? report.failureTypeCounts : [];
+          const warningTypeCounts = Array.isArray(report.warningTypeCounts) ? report.warningTypeCounts : [];
+          const topFailures = failureTypeCounts.slice(0, 5).map(({ type, count }) => `  - \`${type}\`: ${count}`);
+          const topWarnings = warningTypeCounts.slice(0, 5).map(({ type, count }) => `  - \`${type}\`: ${count}`);
+          const lines = [
+            '## SEO Audit Summary',
+            '',
+            `- Status: **${report.status || 'unknown'}**`,
+            `- Failures: **${report.failureCount ?? 0}**`,
+            `- Warnings: **${report.warningCount ?? 0}**`,
+            `- Pages audited: **${metrics.htmlFiles ?? 'n/a'}**`,
+            `- Canonical issues: **${metrics.pagesWithCanonicalIssue ?? 0}**`,
+            `- Canonical missing href pages: **${metrics.pagesWithCanonicalMissingHref ?? 0}**`,
+            `- External-origin canonical/social URL issues: **${(metrics.canonicalExternalOrigin ?? 0) + (metrics.ogUrlExternalOrigin ?? 0) + (metrics.twitterUrlExternalOrigin ?? 0)}**`,
+            `- Canonical/social URL query-fragment issues: **${(metrics.canonicalWithQueryOrFragment ?? 0) + (metrics.ogUrlWithQueryOrFragment ?? 0) + (metrics.twitterUrlWithQueryOrFragment ?? 0)}**`,
+            `- Canonical route mismatches: **${metrics.pagesWithCanonicalRouteMismatch ?? 0}**`,
+            `- Social meta integrity issues: **${metrics.pagesWithSocialMetaIssues ?? 0}**`,
+            `- Social text parity mismatch pages: **${metrics.pagesWithSocialTextMismatch ?? 0}**`,
+            `- JSON-LD structure issues: **${metrics.pagesWithJsonLdStructureIssues ?? 0}**`,
+            `- Hreflang target missing: **${metrics.hreflangTargetMissing ?? 0}**`,
+            `- Hreflang self-reference issues: **${metrics.pagesWithHreflangSelfReferenceIssue ?? 0}**`,
+            `- Invalid hreflang entries: **${metrics.pagesWithInvalidHreflangEntries ?? 0}**`,
+            `- Invalid hreflang values: **${metrics.pagesWithInvalidHreflangValues ?? 0}**`,
+            `- Hreflang reciprocity issues: **${metrics.pagesWithHreflangReciprocalIssue ?? 0}**`,
+            `- OG locale/hreflang mismatch: **${metrics.pagesWithOgLocaleAltMismatch ?? 0}**`,
+            `- Invalid JSON-LD: **${metrics.invalidJsonLdScripts ?? 0}**`,
+            `- Broken internal links: **${metrics.brokenInternalLinks ?? 0}**`,
+            `- Sitemap index ref issues: **${(metrics.sitemapIndexLocInvalidOrigin ?? 0) + (metrics.sitemapIndexLocDuplicateUrls ?? 0) + (metrics.sitemapIndexLocNonXmlUrls ?? 0) + (metrics.sitemapIndexLocTargetMissing ?? 0)}**`,
+            `- Robots sitemap ref issues: **${(metrics.robotsSitemapInvalidOrigin ?? 0) + (metrics.robotsSitemapDuplicateUrls ?? 0) + (metrics.robotsSitemapTargetMissing ?? 0)}**`,
+            `- Sitemap URL normalization issues: **${(metrics.sitemapIndexLocWithQueryOrFragment ?? 0) + (metrics.sitemapLocWithQueryOrFragment ?? 0) + (metrics.robotsSitemapWithQueryOrFragment ?? 0)}**`,
+            `- Title length warnings: **${metrics.titlesOutsideRecommendedRange ?? 0}**`,
+            `- Description length warnings: **${metrics.descriptionsOutsideRecommendedRange ?? 0}**`,
+            '',
+            '### Top Failure Types',
+            ...(topFailures.length > 0 ? topFailures : ['  - none']),
+            '',
+            '### Top Warning Types',
+            ...(topWarnings.length > 0 ? topWarnings : ['  - none']),
+            '',
+          ];
+          fs.appendFileSync(summaryFile, lines.join('\n'));
+          NODE
+
+      - name: Fail workflow when SEO audit fails
+        if: steps.seo_audit.outputs.exit_code != '0'
+        run: |
+          echo "SEO audit failed with exit code: ${{ steps.seo_audit.outputs.exit_code }}"
+          exit 1

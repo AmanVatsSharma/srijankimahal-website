@@ -98,8 +98,7 @@ Complete guide on verifying the authenticity of Sri Janaki Mahal Trust. Learn ho
 
 ### Trust Signals
 
-**What Proves We'
-  -re Official:**
+**What Proves We're Official:**
 
 1. **Official Website**
    - Domain: www.srijanakimahaltrustofficial.com
@@ -130,8 +129,7 @@ Complete guide on verifying the authenticity of Sri Janaki Mahal Trust. Learn ho
 
 ### Red Flags - Warning Signs
 
-**If You See These, It'
-  -s a Scam:**
+**If You See These, It's a Scam:**
 
 1. **Different Phone Number**
    - Any number other than +91 9102319329
@@ -251,8 +249,7 @@ Complete guide on verifying the authenticity of Sri Janaki Mahal Trust. Learn ho
 
 Yes, Sri Janaki Mahal Trust is an official registered charitable trust.
 
-### How can I verify it'
-  -s authentic?
+### How can I verify it's authentic?
 
 Check official website (www.srijanakimahaltrustofficial.com), verify contact number (+91 9102319329), and visit official page (/official).
 
@@ -264,8 +261,7 @@ Yes, Sri Janaki Mahal Trust is a registered charitable trust established in 2020
 
 Yes, +91 9102319329 is the verified official contact number.
 
-### How do I know it'
-  -s not a scam?
+### How do I know it's not a scam?
 
 Verify through official website, official contact, and official page. Always book through official channels.
 
@@ -298,11 +294,9 @@ Yes, visit us at Vasudev Gath, Karsewakpuram, Ayodhya, UP 224123. GPS: 26.803928
 1. Contact us: +91 9102319329
 2. Share fake website/contact
 3. Report scam details
-4. We'
-  -ll take action
+4. We'll take action
 
-**Don'
-  -t:**
+**Don't:**
 - Book through fake channels
 - Share personal information
 - Make payments to unauthorized
@@ -311,8 +305,7 @@ Yes, visit us at Vasudev Gath, Karsewakpuram, Ayodhya, UP 224123. GPS: 26.803928
 
 ### Trust Indicators
 
-**Why We'
-  -re Trusted:**
+**Why We're Trusted:**
 
 1. **Registered Entity**
    - Legal registration

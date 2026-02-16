@@ -1,47 +1,73 @@
 # HeroSection Component
 
-Purpose: Render the homepage hero with a high-contrast background image, top booking banner, bold title, and primary/secondary CTAs.
+Purpose: render the homepage hero with a strong SEO heading hierarchy, high-LCP-priority image, and direct booking CTAs.
 
-## Key Elements
+---
 
-- Background image: `/sri-janaki-mahal/IMG-20251017-WA0022.jpg` with brightness/contrast/saturation enhancements and dark gradient overlay for legibility.
-- Trust badge: "Sri Janaki Mahal Trust" pill shown above the booking badge.
-- Top banner: "Online Room Booking Advance" pill shown above the main heading.
-- Heading: "Book Your Sacred Stay at Sri Janaki Mahal Trust" (accent color, bold, with small text shadow for legibility).
-- CTAs:
-- Book Now (white outlined, centered, bold text): WhatsApp deep-link with preset message for quick booking.
-  - Call Now (orange/amber) and WhatsApp (green) buttons side-by-side below the Book Now button.
-- Phone/WhatsApp number used: `+91 9102319329` (`tel:+919102319329`, `https://wa.me/919102319329`).
-- Accessibility: semantic `section` with clear `aria-label` for CTAs.
+## Current structure
 
-## Interaction Flow
+- Section ID: `#home`
+- Min height strategy:
+  - mobile: `min-h-[calc(100svh-4rem)]`
+  - desktop: `md:min-h-screen`
+- Background image:
+  - `/sri-janaki-mahal/IMG-20251017-WA0022.jpg`
+  - eager load + high fetch priority
+  - dark gradient overlay for text legibility
+
+---
+
+## SEO heading hierarchy
+
+- Primary heading (`h1`): `Sri Janaki Mahal Trust`
+- Secondary heading (`h2`): `Book AC Non AC Rooms`
+- Supporting copy includes local intent terms:
+  - Ayodhya
+  - Ram Mandir
+  - official/verified booking messaging
+
+---
+
+## CTA block
+
+Two primary conversion actions are presented in hero:
+
+1. **Call CTA**
+   - `href={TEL_LINK}`
+   - conversion helper: `gtag_report_conversion(...)`
+2. **WhatsApp CTA**
+   - `href={WHATSAPP_LINK}`
+   - `target="_blank" rel="noopener noreferrer"`
+   - conversion helper enabled
+
+All phone/WhatsApp values are sourced from centralized constants in `src/lib/constants.ts`.
+
+---
+
+## Flow chart
 
 ```text
-[Hero mounts]
-   |
-   v
-[Bind CTA click listeners]
-   |
-   v
-[User clicks CTA] --> [console.log("[Hero] CTA clicked:", id)]
-   |
-   +--> Book Now  -> WhatsApp link with preset text
-   |
-   +--> Call Now  -> tel: link invokes dialer
-   |
-   +--> WhatsApp  -> wa.me link opens chat
+Homepage render
+  -> Hero section mounts
+    -> LCP image preloaded + eager image request
+      -> User reads H1/H2 + location/value proposition
+        -> User clicks Call or WhatsApp CTA
+          -> Conversion event callback fires
+            -> User reaches official booking contact channel
 ```
 
-## Customization Notes
+---
 
-- Image: replace the image path in `HeroSection.astro` if needed. Keep a strong dark overlay (`from-black/70 via-black/50 to-black/20`) for readability.
-- Copy: adjust heading/subtitle and banner text inline in the component.
-- Numbers: update all instances of phone/WhatsApp numbers in `Header.astro`, `HeroSection.astro`, `RoomsSection.astro`, `ContactSection.astro`, and `Footer.astro` to keep consistency if you ever change them.
+## Maintenance checklist
 
-## Troubleshooting
+When editing HeroSection:
 
-- If the hero text looks washed out, increase overlay opacity or tweak `brightness-110 contrast-125 saturate-125` utilities.
-- If Tailwind classes seem missing, ensure the file path is included in `tailwind.config.cjs -> content` (it is by default for `src/**/*.astro`).
-- Open DevTools console to confirm CTA logs appear on click. If not, check that element IDs (`hero-book-now`, `hero-call`, `hero-whatsapp`) exist.
+1. Keep a single clear H1 for homepage intent.
+2. Preserve high-priority loading for the hero image.
+3. Keep CTA links tied to constants (avoid hardcoded numbers).
+4. Rebuild (`npm run build`) and verify:
+   - heading hierarchy remains valid
+   - CTA links are correct
+   - no visual clipping on mobile.
 
 

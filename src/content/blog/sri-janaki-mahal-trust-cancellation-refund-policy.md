@@ -42,8 +42,7 @@ Complete guide to cancellation and refund policy at Sri Janaki Mahal Trust. Lear
 - Reason for cancellation
 
 **Step 3: Confirm Cancellation**
-- We'
-  -ll confirm cancellation
+- We'll confirm cancellation
 - Explain refund terms
 - Process refund (if applicable)
 

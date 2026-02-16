@@ -199,8 +199,7 @@ Complete guide to all services, amenities, and facilities available at Sri Janak
 - Guest satisfaction
 - Continuous improvement
 
-## What'
-  -s Included Summary
+## What's Included Summary
 
 ### Complete Package
 
@@ -258,5 +257,5 @@ Sri Janaki Mahal Trust offers comprehensive services and amenities including all
 
 ---
 
-*For detailed information, visit our [amenities page](/amenities) or contact us directly.*
+*For detailed information, visit our [amenities guide](/blog/shri-janki-mahal-amenities-facilities-list) or contact us directly.*
 

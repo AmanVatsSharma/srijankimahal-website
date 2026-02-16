@@ -14,5 +14,5 @@ Allow: /about
 Sitemap: https://www.srijanakimahaltrustofficial.com/sitemap-index.xml
 Sitemap: https://www.srijanakimahaltrustofficial.com/image-sitemap.xml
 
-# Crawl delay (optional)
-Crawl-delay: 1
+# Note:
+# Avoid crawl-delay for SEO performance. Some bots respect it and may crawl too slowly.

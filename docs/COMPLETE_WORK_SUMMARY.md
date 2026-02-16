@@ -6,6 +6,85 @@
 
 ---
 
+## 🔄 2026-02-15 Latest Execution Addendum (Technical SEO hardening)
+
+The below legacy summary remains useful for historical context, but the implementation has since advanced significantly.  
+Latest production-ready hardening completed:
+
+- ✅ Fixed invalid JSON-LD rendering artifacts by standardizing Astro JSON-LD output with `set:html`.
+  - Resolved 14 invalid schema payloads detected in built HTML.
+  - Current audit: `invalid_jsonld = 0`.
+- ✅ Strengthened Hindi room page relevance:
+  - localized highlights per room slug
+  - localized pricing phrase display copy
+  - consistent Hindi-first on-page feature content.
+- ✅ Localized shared navigation chrome on `/hi/*` routes:
+  - Header labels + CTA labels now locale-aware
+  - Footer labels, legal links, trust badges, contact copy now locale-aware
+  - reduced mixed-language UI signals for Hindi pages.
+- ✅ Added Hindi counterpart content for the high-intent Ram Janki naming query:
+  - `/hi/blog/ram-janki-mahal-vs-sri-janki-mahal-ayodhya`
+  - improves bilingual entity coverage and valid EN↔HI alternate pairing for this query.
+- ✅ Continuous build verification maintained after each logical change (`npm run build`), plus targeted output audits.
+- ✅ Automated SEO guardrail system added:
+  - `npm run seo:audit`, `npm run seo:verify`, `npm run seo:audit:strict`, and `npm run seo:verify:strict`
+  - GitHub Actions workflow runs SEO verification on push/PR
+  - optional JSON report output: `--report-file`
+  - optional env-based report target: `SEO_AUDIT_REPORT_FILE`
+  - CI uploads `seo-audit-report` artifact for every run (including failures)
+  - CI captures audit exit code, uploads artifact first, and then fails job if audit failed
+  - CI publishes compact SEO metric summary in workflow step summary for fast diagnosis
+  - image sitemap reference warning now triggers only when missing in both sitemap-index and robots
+  - report payload includes grouped warning/failure type counts for faster triage
+  - audit now verifies indexable canonical URLs are present across primary sitemap shards
+  - hreflang audit now verifies reciprocal alternate links between language pairs
+  - og:locale:alternate values now validated against hreflang-derived locale expectations
+  - title/description recommended-length checks added as aggregated warning-level quality signals
+  - shared SEO utility now normalizes generated title/description lengths to keep pages within recommended ranges
+  - audit dist-target existence checks now use caching to keep validation fast as pages scale
+  - audit supports strict warning mode (`--strict-warnings` / `SEO_AUDIT_STRICT_WARNINGS`)
+  - npm shortcuts added for strict runs: `seo:audit:strict`, `seo:verify:strict`
+  - SEO CI now runs audit in strict warning mode for stronger regression gating
+  - page-level robots meta directives are now validated for indexable/noindex consistency
+  - canonical validation now enforces self-route alignment per generated page
+  - social meta tags now checked for completeness, uniqueness, and valid twitter card values
+  - social title/description tags now verified to match page title + meta description
+  - social meta extraction now handles attribute-order variance in generated meta tags
+  - canonical/OG/Twitter URLs now emit explicit external-origin failure metrics in audit output
+  - canonical/hreflang link extraction now handles attribute-order variance in generated link tags
+  - robots/description/OG/Twitter meta extraction now uses unified attribute-order agnostic parsing
+  - canonical links now enforce non-empty href and hreflang links now enforce valid entry shape
+  - canonical/og/twitter URLs now fail audit when query strings or fragments are present
+  - JSON-LD script extraction now handles script-type attribute order/quote variance
+  - internal href extraction now handles attribute-order/quote variance for link auditing
+  - hreflang values now enforce valid language-token syntax checks in audit
+  - metadata parity comparisons now decode broader named/numeric HTML entities
+  - JSON-LD validation now includes structural checks for `@context` and `@type` presence
+  - hreflang now enforces self-reference and x-default-to-English alignment checks
+  - sitemap-index references now validated for same-origin, uniqueness, XML format, and build-target existence
+  - robots sitemap references now validated for same-origin, uniqueness, and build-target existence
+  - sitemap/robots references now reject query-string or fragment-bearing sitemap URLs
+  - sitemap duplicate checks now use normalized comparable paths (avoids slash-variant false negatives)
+  - Audit now validates:
+    - canonical/hreflang target integrity
+    - social URL canonical parity (`og:url`, `twitter:url`)
+    - JSON-LD validity
+    - H1 + image attribute semantics
+    - OG/Twitter URL + image target validity
+    - OG locale alternate consistency
+    - duplicate meta-description groups
+    - sitemap + robots integrity
+
+### Latest integrity signals
+- `invalid_jsonld = 0`
+- `duplicate brand suffix titles = 0`
+- `duplicate meta description groups = 0`
+- `pages_with_duplicate_hreflang_langs = 0`
+- `pages_missing_x_default_when_alternates_present = 0`
+- `seo:verify:strict` CI status = passing on push + PR
+
+---
+
 ## 🎯 Project Goals
 
 **Primary Objectives:**
@@ -293,6 +372,9 @@ docs/
 - [ ] Link building campaign
 - [ ] Advanced A/B testing
 - [ ] Multi-language support (Hindi)
+
+### Owner execution checklist
+- See: `docs/NEXT_STEPS_OWNER_CHECKLIST.md` for weekly/off-page execution steps required from business side.
 
 ---
 

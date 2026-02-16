@@ -226,6 +226,10 @@ export const defaultFAQs: FAQItem[] = [
     answer: `Yes, Janaki Mahal Trust, Sri Janki Mahal Trust, and Shri Janki Mahal Trust all refer to the same registered charitable trust in Ayodhya. Regardless of spelling, the official helpline remains ${DISPLAY_PHONE} for bookings and verification.`,
   },
   {
+    question: 'Is Ram Janki Mahal the same as Sri Janaki Mahal Trust in Ayodhya?',
+    answer: `Yes. Many devotees search using "Ram Janki Mahal", while official records use Sri Janaki Mahal Trust / Sri Janki Mahal Trust. For authentic booking and verification, always use the official helpline ${DISPLAY_PHONE}.`,
+  },
+  {
     question: 'What is the official contact number of Janaki Mahal Trust Ayodhya?',
     answer: `The official contact number for Janaki Mahal Trust Ayodhya is ${DISPLAY_PHONE}. This number is the same for Janaki, Janki, and Shri Janki Mahal Trust spellings and is available 24/7.`,
   },

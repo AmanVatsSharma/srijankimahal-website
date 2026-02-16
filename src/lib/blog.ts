@@ -39,12 +39,12 @@ function stripFrontmatter(raw: string): string {
   return parts.slice(2).join('---').trim();
 }
 
-function calculateReadTime(content: string | undefined): string {
+function calculateReadTime(content: string | undefined, lang: 'en' | 'hi' = 'en'): string {
   const safeContent = content?.trim();
-  if (!safeContent) return '5 min read';
+  if (!safeContent) return lang === 'hi' ? '5 मिनट पढ़ें' : '5 min read';
   const words = safeContent.split(/\s+/).filter(Boolean).length;
   const minutes = Math.max(1, Math.round(words / 200));
-  return `${minutes} min read`;
+  return lang === 'hi' ? `${minutes} मिनट पढ़ें` : `${minutes} min read`;
 }
 
 async function resolveRawContent(mod: MarkdownModule): Promise<string> {
@@ -62,7 +62,7 @@ export async function getAllBlogPosts(): Promise<BlogListItem[]> {
       const mod = (await resolver()) as MarkdownModule;
       const slug = path.split('/').pop()?.replace('.md', '') ?? '';
       const raw = await resolveRawContent(mod);
-      const readTime = mod.frontmatter.readTime ?? calculateReadTime(stripFrontmatter(raw));
+      const readTime = mod.frontmatter.readTime ?? calculateReadTime(stripFrontmatter(raw), 'en');
 
       return {
         slug,
@@ -88,7 +88,7 @@ export async function getAllBlogPostsByLang(lang: 'en' | 'hi'): Promise<BlogList
       const mod = (await resolver()) as MarkdownModule;
       const slug = path.split('/').pop()?.replace('.md', '') ?? '';
       const raw = await resolveRawContent(mod);
-      const readTime = mod.frontmatter.readTime ?? calculateReadTime(stripFrontmatter(raw));
+      const readTime = mod.frontmatter.readTime ?? calculateReadTime(stripFrontmatter(raw), lang);
 
       return {
         slug,

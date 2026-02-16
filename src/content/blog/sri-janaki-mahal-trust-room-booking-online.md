@@ -173,8 +173,7 @@ Room: [AC/Non-AC, Bed count]
 ### 3. Ask Questions
 
 **Good Questions:**
-- What'
-  -s included in price?
+- What's included in price?
 - What are meal timings?
 - How to reach the location?
 - What are check-in/check-out times?
@@ -187,8 +186,7 @@ Room: [AC/Non-AC, Bed count]
 - Confirm total amount
 - Note booking reference
 
-## What'
-  -s Included in Online Booking
+## What's Included in Online Booking
 
 ### All Bookings Include
 
@@ -228,16 +226,13 @@ Room: [AC/Non-AC, Bed count]
    - Confirm booking details
 
 3. **Avoid Scams**
-   - Don'
-  -t pay to unauthorized agents
-   - Don'
-  -t share unnecessary details
+   - Don't pay to unauthorized agents
+   - Don't share unnecessary details
    - Verify before payment
 
 ## Booking Confirmation
 
-### What You'
-  -ll Receive
+### What You'll Receive
 
 **Booking Confirmation Contains:**
 - Booking reference number
@@ -318,8 +313,7 @@ Contact us immediately. See our cancellation policy for details.
 - Confirmation delay: Follow up
 
 **Solutions:**
-- Call if WhatsApp doesn'
-  -t work
+- Call if WhatsApp doesn't work
 - Try different dates
 - Ask about other room types
 - Contact official number

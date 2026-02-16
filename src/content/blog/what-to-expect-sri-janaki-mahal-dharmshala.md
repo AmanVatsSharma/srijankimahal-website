@@ -13,15 +13,13 @@ keywords:
 
 # What to Expect at Sri Janaki Mahal Dharmshala - Guest Experience
 
-Planning to stay at Sri Janaki Mahal Trust? Here'
-  -s everything you need to know about your stay, from rooms and amenities to meals and the overall experience.
+Planning to stay at Sri Janaki Mahal Trust? Here's everything you need to know about your stay, from rooms and amenities to meals and the overall experience.
 
 ## First Impressions
 
 ### Warm Welcome
 
-Upon arrival at Sri Janaki Mahal Trust, you'
-  -ll be greeted with traditional Indian hospitality. The staff is friendly, helpful, and available 24/7 to assist with any needs.
+Upon arrival at Sri Janaki Mahal Trust, you'll be greeted with traditional Indian hospitality. The staff is friendly, helpful, and available 24/7 to assist with any needs.
 
 ### Peaceful Atmosphere
 
@@ -80,8 +78,7 @@ All rooms include:
 
 ## Meals Experience
 
-### What'
-  -s Included
+### What's Included
 
 **All meals are included in your room booking:**
 - Breakfast (Morning meal)
@@ -198,8 +195,7 @@ All rooms include:
 - **Camera:** Capture memories (check temple photography rules)
 - **Books:** Spiritual texts or reading material
 
-### What'
-  -s Provided
+### What's Provided
 
 - Bedding and linens
 - Towels
@@ -310,8 +306,7 @@ Basic laundry facilities may be available. Check with front desk.
 ## Tips for Best Experience
 
 1. **Book in Advance:** Especially during festivals
-2. **Follow Meal Timings:** Don'
-  -t miss included meals
+2. **Follow Meal Timings:** Don't miss included meals
 3. **Respect the Environment:** Maintain peaceful atmosphere
 4. **Plan Temple Visits:** Take advantage of proximity to Ram Mandir
 5. **Communicate Needs:** Staff is helpful - ask if you need anything

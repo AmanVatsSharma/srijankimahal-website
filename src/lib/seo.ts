@@ -145,6 +145,7 @@ function normalizeAndDedupeKeywords(keywords: string[]): string[] {
  */
 export interface SEOConfig {
   title?: string;
+  titleMaxLength?: number;
   description?: string;
   keywords?: string[];
   canonical?: string;
@@ -166,29 +167,36 @@ export interface SEOConfig {
  * - Input: "About Us" 
  * - Output: "About Us | Sri Janaki Mahal Trust"
  */
-export function generateTitle(title?: string, lang: 'en' | 'hi' = 'en'): string {
-  debugLog('[SEO] Generating title', { title, lang });
+export function generateTitle(
+  title?: string,
+  lang: 'en' | 'hi' = 'en',
+  titleMaxLength: number = TITLE_MAX_LENGTH
+): string {
+  const safeMaxLength =
+    Number.isFinite(titleMaxLength) && titleMaxLength > 10 ? Math.floor(titleMaxLength) : TITLE_MAX_LENGTH;
+
+  debugLog('[SEO] Generating title', { title, lang, titleMaxLength: safeMaxLength });
   const pageTitle = (title || DEFAULT_TITLE).trim();
 
   // Keep title clean when callers already include the brand.
   // This improves SERP readability and avoids repeated entity strings.
   if (hasSiteNameInTitleForLang(pageTitle, lang)) {
-    return truncateMetaText(pageTitle, TITLE_MAX_LENGTH);
+    return truncateMetaText(pageTitle, safeMaxLength);
   }
 
   const localizedSiteName = SITE_NAME_BY_LANG[lang] || SITE_NAME;
   const brandedTitle = `${pageTitle} | ${localizedSiteName}`;
-  if (brandedTitle.length <= TITLE_MAX_LENGTH) {
+  if (brandedTitle.length <= safeMaxLength) {
     return brandedTitle;
   }
 
   // If the branded variant exceeds recommended length, prefer an unbranded
   // page title before truncating. This keeps key intent terms visible.
-  if (pageTitle.length <= TITLE_MAX_LENGTH) {
+  if (pageTitle.length <= safeMaxLength) {
     return pageTitle;
   }
 
-  return truncateMetaText(pageTitle, TITLE_MAX_LENGTH);
+  return truncateMetaText(pageTitle, safeMaxLength);
 }
 
 /**
@@ -286,7 +294,7 @@ export function generateOGImage(image?: string): string {
  * @returns Object with Open Graph meta tags
  */
 export function generateOGTags(config: SEOConfig) {
-  const title = generateTitle(config.title, config.lang || 'en');
+  const title = generateTitle(config.title, config.lang || 'en', config.titleMaxLength);
   const description = generateDescription(config.description);
   const url = generateCanonical(config.canonical);
   const image = generateOGImage(config.ogImage);
@@ -312,7 +320,7 @@ export function generateOGTags(config: SEOConfig) {
  * @returns Object with Twitter Card meta tags
  */
 export function generateTwitterTags(config: SEOConfig) {
-  const title = generateTitle(config.title, config.lang || 'en');
+  const title = generateTitle(config.title, config.lang || 'en', config.titleMaxLength);
   const description = generateDescription(config.description);
   const image = generateOGImage(config.ogImage);
   const url = generateCanonical(config.canonical);
@@ -423,7 +431,7 @@ export function generateSEOData(config: SEOConfig, currentPath?: string) {
   const lang = config.lang || inferredLang;
   const effectivePath = config.canonical || currentPath;
   const canonical = generateCanonical(effectivePath);
-  const title = generateTitle(config.title, lang);
+  const title = generateTitle(config.title, lang, config.titleMaxLength);
   const description = generateDescription(config.description);
   const keywords = generateKeywords(config.keywords);
   const robots = generateRobotsContent(config.noindex);

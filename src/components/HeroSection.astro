@@ -19,22 +19,62 @@ import { DISPLAY_PHONE, TEL_LINK, WHATSAPP_LINK } from '../lib/constants';
 <section id="home" class="relative min-h-[calc(100svh-4rem)] md:min-h-screen flex items-center justify-center overflow-hidden" aria-label="Sri Janaki Mahal Trust Hero Section - Book AC and Non-AC Rooms in Ayodhya">
   <!-- Background Image with SEO-optimized alt text -->
   <figure class="absolute inset-0 z-0 m-0">
-    <img 
-      src="/sri-janaki-mahal/IMG-20251017-WA0022.jpg" 
-      alt="Sri Janaki Mahal Trust - Comfortable hotel in Ayodhya with beautiful architecture and peaceful courtyard near Ram Mandir" 
-      class="w-full h-full object-cover filter brightness-110 contrast-125 saturate-125" 
-      width="1920" 
-      height="1080" 
-      loading="eager" 
-      decoding="async"
-      fetchpriority="high"
-    />
+    <picture>
+      <source
+        type="image/avif"
+        srcset="
+          /sri-janaki-mahal/IMG-20251017-WA0022-640w.avif 640w,
+          /sri-janaki-mahal/IMG-20251017-WA0022-960w.avif 960w,
+          /sri-janaki-mahal/IMG-20251017-WA0022-1280w.avif 1280w,
+          /sri-janaki-mahal/IMG-20251017-WA0022-1920w.avif 1920w
+        "
+        sizes="100vw"
+      />
+      <source
+        type="image/webp"
+        srcset="
+          /sri-janaki-mahal/IMG-20251017-WA0022-640w.webp 640w,
+          /sri-janaki-mahal/IMG-20251017-WA0022-960w.webp 960w,
+          /sri-janaki-mahal/IMG-20251017-WA0022-1280w.webp 1280w,
+          /sri-janaki-mahal/IMG-20251017-WA0022-1920w.webp 1920w
+        "
+        sizes="100vw"
+      />
+      <img
+        src="/sri-janaki-mahal/IMG-20251017-WA0022.jpg"
+        alt="Sri Janaki Mahal Trust - Comfortable hotel in Ayodhya with beautiful architecture and peaceful courtyard near Ram Mandir"
+        class="w-full h-full object-cover filter brightness-110 contrast-125 saturate-125"
+        width="1920"
+        height="1080"
+        loading="eager"
+        decoding="async"
+        fetchpriority="high"
+      />
+    </picture>
     <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/20"></div>
     <figcaption class="sr-only">Sri Janaki Mahal Trust exterior welcoming devotees near Ram Mandir in Ayodhya - Official accommodation for AC and Non-AC room bookings</figcaption>
   </figure>
 
   <!-- Content -->
   <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-fade-in-up">
+    <!-- Hero Badges (as per mobile design) -->
+    <div class="mb-2">
+      <div
+        class="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-amber-600 to-rose-600 text-white px-5 py-2.5 shadow-lg"
+        aria-label="Sri Janaki Mahal Trust"
+      >
+        <span class="text-sm md:text-base font-extrabold uppercase tracking-wider">Sri Janaki Mahal Trust</span>
+      </div>
+    </div>
+    <div class="mb-6">
+      <div
+        class="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-amber-600 to-rose-600 text-white px-4 py-2 shadow-lg"
+        aria-label="Online Room Booking Advance"
+      >
+        <span class="text-xs font-bold uppercase tracking-wider">Online Room Booking Advance</span>
+      </div>
+    </div>
+
     <!-- Main Heading: Sri Janaki Mahal Trust - Primary H1 for SEO -->
     <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight text-shadow-sm">
       Sri Janaki Mahal Trust

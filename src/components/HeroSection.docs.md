@@ -10,6 +10,9 @@ Purpose: render the homepage hero with a strong SEO heading hierarchy, high-LCP-
 - Min height strategy:
   - mobile: `min-h-[calc(100svh-4rem)]`
   - desktop: `md:min-h-screen`
+- Hero badges (above H1):
+  - Trust badge: `Sri Janaki Mahal Trust`
+  - Booking badge: `Online Room Booking Advance`
 - Background image:
   - `/sri-janaki-mahal/IMG-20251017-WA0022.jpg`
   - eager load + high fetch priority

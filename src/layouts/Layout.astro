@@ -270,9 +270,7 @@ const globalStructuredData = {
     <link rel="dns-prefetch" href="https://www.google-analytics.com" />
     <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
     <link rel="preconnect" href="https://www.google-analytics.com" crossorigin />
-
-    <!-- Preload above-the-fold hero image (LCP) -->
-    <link rel="preload" as="image" href="/sri-janaki-mahal/IMG-20251017-WA0022.jpg" fetchpriority="high" />
+    <!-- Note: keep image preloads page-scoped via the `head` slot to avoid wasting bandwidth on non-hero pages. -->
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17922029438"></script>

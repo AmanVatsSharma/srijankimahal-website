@@ -193,10 +193,17 @@ const imageSchemas = Array.from(uniqueImageMap.values());
   // Seamless loop via scrollLeft with wrap-around.
   // - Drag-to-scroll and wheel-to-horizontal pause auto.
   // - Scroll-snap active only during user interaction.
+  // - Auto-scroll runs only when in viewport (mobile INP-friendly).
+  // - Respects prefers-reduced-motion and data-saver mode.
   (function () {
     try {
       const lanes = Array.from(document.querySelectorAll('.lane'));
       if (!lanes.length) return;
+
+      const prefersReducedMotion =
+        typeof window.matchMedia === 'function' && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const saveData = Boolean(navigator && navigator.connection && navigator.connection.saveData);
+      const canAutoScroll = !prefersReducedMotion && !saveData;
 
       lanes.forEach((lane) => {
         const track = lane.querySelector('.lane-track');
@@ -208,6 +215,11 @@ const imageSchemas = Array.from(uniqueImageMap.values());
         let isPaused = false;
         let last = performance.now();
         let halfWidth = 0; // width of one set of items (we duplicated arrays)
+        const hasIntersectionObserver = typeof IntersectionObserver === 'function';
+        let isInView = !hasIntersectionObserver;
+        let isPageVisible = !document.hidden;
+        let running = false;
+        let rafId = 0;
 
         const recalc = () => {
           // half of total scrollWidth because items are duplicated
@@ -253,8 +265,34 @@ const imageSchemas = Array.from(uniqueImageMap.values());
           return halfWidth / Math.max(1, dur); // px/sec
         };
 
+        const shouldRun = () => canAutoScroll && isInView && isPageVisible;
+
+        const stop = () => {
+          if (!running) return;
+          running = false;
+          if (rafId) cancelAnimationFrame(rafId);
+          rafId = 0;
+        };
+
+        const start = () => {
+          if (running) return;
+          if (!shouldRun()) return;
+          running = true;
+          last = performance.now();
+          rafId = requestAnimationFrame(step);
+        };
+
         const step = (now) => {
-          if (!lane.isConnected) return;
+          if (!lane.isConnected) {
+            stop();
+            return;
+          }
+          if (!running) return;
+          if (!shouldRun()) {
+            stop();
+            return;
+          }
+
           const dt = (now - last) / 1000;
           last = now;
           if (!isPaused && !dragging) {
@@ -268,7 +306,7 @@ const imageSchemas = Array.from(uniqueImageMap.values());
               if (lane.scrollLeft <= 0) lane.scrollLeft += halfWidth;
             }
           }
-          requestAnimationFrame(step);
+          rafId = requestAnimationFrame(step);
         };
 
         // Initial measurements after images load
@@ -277,7 +315,28 @@ const imageSchemas = Array.from(uniqueImageMap.values());
         const done = () => { pending = Math.max(0, pending - 1); if (pending === 0) { recalc(); } };
         imgs.forEach((im) => { if (im.complete) done(); else im.addEventListener('load', done, { once: true }); });
         recalc();
-        requestAnimationFrame(step);
+
+        if (hasIntersectionObserver) {
+          const observer = new IntersectionObserver(
+            (entries) => {
+              const entry = entries && entries[0];
+              isInView = Boolean(entry && entry.isIntersecting);
+              if (isInView) start();
+              else stop();
+            },
+            { root: null, threshold: 0.2 }
+          );
+          observer.observe(lane);
+        }
+
+        document.addEventListener('visibilitychange', () => {
+          isPageVisible = !document.hidden;
+          if (isPageVisible) start();
+          else stop();
+        });
+
+        // Start only when we can and when visible/in-view.
+        start();
       });
     } catch {}
   })();

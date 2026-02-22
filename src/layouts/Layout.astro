@@ -7,6 +7,7 @@ import { SCHEMA_TELEPHONE, WHATSAPP_LINK, OFFICIAL_EMAIL } from '../lib/constant
 // SEO Props Interface
 interface Props {
   title?: string;
+  titleMaxLength?: number;
   description?: string;
   keywords?: string[];
   canonical?: string;
@@ -21,6 +22,7 @@ interface Props {
 // Get SEO props with defaults
 const {
   title = 'Sri Janaki Mahal Trust - Best Hotel in Ayodhya | Online Room Booking',
+  titleMaxLength,
   description,
   keywords,
   canonical,
@@ -38,6 +40,7 @@ const currentPath = Astro.url.pathname;
 // Generate complete SEO data
 const seoConfig: SEOConfig = {
   title,
+  titleMaxLength,
   description,
   keywords,
   canonical,
@@ -53,6 +56,9 @@ const seoData = generateSEOData(seoConfig, currentPath);
 const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
 const googleAdsConversionLabel = import.meta.env.PUBLIC_GOOGLE_ADS_CONVERSION_LABEL;
 const currentOgLocale = seoData.ogTags['og:locale'];
+const ogImageUrl = seoData.ogTags['og:image'];
+const isDefaultOgImage = typeof ogImageUrl === 'string' && ogImageUrl.endsWith('/og.jpg');
+const ogImageAlt = `${seoData.title} - Sri Janaki Mahal Trust`;
 const ogLocaleAlternates = Array.from(
   new Set(
     seoData.hreflangTags
@@ -349,6 +355,14 @@ const globalStructuredData = {
     <meta property="og:title" content={seoData.ogTags['og:title']} />
     <meta property="og:description" content={seoData.ogTags['og:description']} />
     <meta property="og:image" content={seoData.ogTags['og:image']} />
+    <meta property="og:image:alt" content={ogImageAlt} />
+    {isDefaultOgImage && (
+      <>
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:type" content="image/jpeg" />
+      </>
+    )}
     <meta property="og:site_name" content={seoData.ogTags['og:site_name']} />
     <meta property="og:locale" content={seoData.ogTags['og:locale']} />
     {ogLocaleAlternates.map((locale) => (
@@ -361,6 +375,7 @@ const globalStructuredData = {
     <meta property="twitter:title" content={seoData.twitterTags['twitter:title']} />
     <meta property="twitter:description" content={seoData.twitterTags['twitter:description']} />
     <meta property="twitter:image" content={seoData.twitterTags['twitter:image']} />
+    <meta property="twitter:image:alt" content={ogImageAlt} />
     
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{seoData.title}</title>

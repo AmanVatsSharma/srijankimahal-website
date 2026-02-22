@@ -17,7 +17,7 @@ const INPUT_PATH = path.join(ROOT_DIR, INPUT_RELATIVE);
 const OUTPUT_DIR = path.join(ROOT_DIR, 'public', 'sri-janaki-mahal');
 const OUTPUT_BASENAME = 'IMG-20251017-WA0022';
 
-const TARGET_WIDTHS = [640, 960, 1280, 1920];
+const REQUESTED_WIDTHS = [640, 960, 1280, 1920];
 
 const AVIF_OPTIONS = { quality: 50, effort: 5 };
 const WEBP_OPTIONS = { quality: 72, effort: 5 };
@@ -29,11 +29,18 @@ async function generateVariants() {
   const metadata = await image.metadata();
   const sourceWidth = metadata.width ?? 0;
 
-  const tasks = TARGET_WIDTHS.map(async (width) => {
-    const safeWidth = sourceWidth > 0 ? Math.min(width, sourceWidth) : width;
+  const safeWidths = Array.from(
+    new Set(
+      REQUESTED_WIDTHS.map((width) => {
+        if (!sourceWidth) return width;
+        return Math.min(width, sourceWidth);
+      })
+    )
+  ).sort((a, b) => a - b);
 
+  const tasks = safeWidths.map(async (width) => {
     const base = sharp(INPUT_PATH, { failOn: 'none' }).resize({
-      width: safeWidth,
+      width,
       withoutEnlargement: true,
     });
 

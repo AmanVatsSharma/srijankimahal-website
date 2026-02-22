@@ -101,6 +101,22 @@ This document outlines the image optimization strategy and best practices for th
 
 ### 5. Image Optimization Script
 
+#### Hero LCP variants (recommended)
+
+To generate responsive **AVIF/WebP** variants for the homepage hero (LCP) image, run:
+
+```bash
+npm run images:hero
+```
+
+This uses [`scripts/optimize-hero-lcp.mjs`](../scripts/optimize-hero-lcp.mjs) and outputs files like:
+
+- `public/sri-janaki-mahal/IMG-20251017-WA0022-640w.avif`
+- `public/sri-janaki-mahal/IMG-20251017-WA0022-960w.webp`
+- `public/sri-janaki-mahal/IMG-20251017-WA0022-1062w.avif`
+
+`HeroSection.astro` is wired to these variants via a `<picture>` + `srcset`.
+
 #### Manual Conversion Script
 Create a script to convert images to WebP:
 

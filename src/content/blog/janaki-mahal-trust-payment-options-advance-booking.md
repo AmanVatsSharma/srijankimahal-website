@@ -24,7 +24,7 @@ Securing your stay at **Janaki Mahal Trust** (also called **Sri Janki Mahal Trus
 3. **Credit/Debit Cards:** Accepted at reception for on-site payments (select terminals).
 4. **Cash:** Pay at reception for walk-ins or balance amounts.
 
-> Comment: The trust never asks for payment through personal accounts or unknown links. Always double-check with **+91 9102319329**.
+> Comment: The trust never asks for payment through personal accounts or unknown links. Always double-check with **+91 7759925612**.
 
 ## Advance Booking Policy
 
@@ -44,7 +44,7 @@ Securing your stay at **Janaki Mahal Trust** (also called **Sri Janki Mahal Trus
 
 ## Safety Tips
 
-- Only trust details shared from **+91 9102319329** or [srijanakimahaltrustofficial@gmail.com](mailto:srijanakimahaltrustofficial@gmail.com).
+- Only trust details shared from **+91 7759925612** or [srijanakimahaltrustofficial@gmail.com](mailto:srijanakimahaltrustofficial@gmail.com).
 - Do not pay through social media ads or third-party agents.
 - Verify bank account name: **Sri Janaki Mahal Trust** or **Janaki Mahal Trust Ayodhya**.
 - Keep payment screenshots until checkout is complete.

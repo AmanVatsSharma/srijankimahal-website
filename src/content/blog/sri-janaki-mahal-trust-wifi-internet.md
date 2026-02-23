@@ -1,6 +1,6 @@
 ---
 title: Sri Janaki Mahal Trust WiFi Internet - Internet Facilities
-description: WiFi and internet facilities at Sri Janaki Mahal Trust. Internet availability, WiFi access, and connectivity information for guests. Contact +91 9102319329
+description: WiFi and internet facilities at Sri Janaki Mahal Trust. Internet availability, WiFi access, and connectivity information for guests. Contact +91 7759925612
 date: 2025-03-13
 keywords:
   - 'Sri Janaki Mahal Trust WiFi'
@@ -33,8 +33,8 @@ Complete guide to WiFi and internet facilities at Sri Janaki Mahal Trust. Learn 
 ## Contact for Internet
 
 **For Internet Information:**
-- 📞 Phone: +91 9102319329
-- 💬 WhatsApp: +91 9102319329
+- 📞 Phone: +91 7759925612
+- 💬 WhatsApp: +91 7759925612
 
 **We'll provide:**
 - WiFi availability
@@ -50,9 +50,9 @@ Yes, WiFi facilities available. Contact for details.
 Contact us for internet charges and details.
 
 ### How to access WiFi?
-Contact reception or call +91 9102319329 for access details.
+Contact reception or call +91 7759925612 for access details.
 
 ---
 
-*For internet information, call +91 9102319329.*
+*For internet information, call +91 7759925612.*
 

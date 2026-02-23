@@ -19,7 +19,7 @@ Festival seasons in Ayodhya—especially **Ram Navami**, **Diwali**, and **Pran 
 
 ## 1. Book 60-90 Days in Advance
 
-- Popular dates fill up rapidly. Call **+91 9102319329** at least two months ahead.
+- Popular dates fill up rapidly. Call **+91 7759925612** at least two months ahead.
 - Share alternate room preferences in case your first choice is taken.
 - Provide full guest details to speed up confirmation.
 
@@ -67,7 +67,7 @@ Yes. The trust guides devotees on online booking portals and available slots for
 
 ## Quick Checklist
 
-- ✅ Save the helpline **+91 9102319329** and WhatsApp link
+- ✅ Save the helpline **+91 7759925612** and WhatsApp link
 - ✅ Finalise guest list and arrival details early
 - ✅ Pay only through official channels
 - ✅ Keep confirmation slip and IDs ready for checkpoints

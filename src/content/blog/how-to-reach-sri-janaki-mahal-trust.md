@@ -211,7 +211,7 @@ India
 
 ### 1. Book Accommodation in Advance
 
-Call Sri Janaki Mahal Trust at +91 9102319329 to confirm your booking before traveling.
+Call Sri Janaki Mahal Trust at +91 7759925612 to confirm your booking before traveling.
 
 ### 2. Share Your Travel Details
 
@@ -220,8 +220,8 @@ Let the dharmshala know your arrival time and mode of transport for better assis
 ### 3. Keep Contact Number Handy
 
 **Sri Janaki Mahal Trust:**
-- Phone: +91 9102319329
-- WhatsApp: +91 9102319329
+- Phone: +91 7759925612
+- WhatsApp: +91 7759925612
 - Email: srijanakimahaltrustofficial@gmail.com
 
 ### 4. Local Language
@@ -249,8 +249,8 @@ While Hindi is widely spoken, English is also understood at Sri Janaki Mahal Tru
 If you face any issues reaching the location:
 
 **Sri Janaki Mahal Trust:**
-- 📞 Phone: +91 9102319329 (24/7)
-- 💬 WhatsApp: +91 9102319329
+- 📞 Phone: +91 7759925612 (24/7)
+- 💬 WhatsApp: +91 7759925612
 - 📧 Email: srijanakimahaltrustofficial@gmail.com
 
 ## Conclusion
@@ -264,8 +264,8 @@ Reaching Sri Janaki Mahal Trust is convenient from all major cities:
 Once in Ayodhya, the dharmshala is easily accessible by auto-rickshaw or taxi from the railway station or bus stand.
 
 **Book your stay in advance:**
-- Call +91 9102319329
-- WhatsApp +91 9102319329
+- Call +91 7759925612
+- WhatsApp +91 7759925612
 - Email: srijanakimahaltrustofficial@gmail.com
 
 ---

@@ -1,6 +1,6 @@
 ---
 title: Sri Janaki Mahal Trust Karsewakpuram Address - Complete Location Guide
-description: Sri Janaki Mahal Trust address in Karsewakpuram, Ayodhya. Complete address, location details, GPS coordinates, and how to reach. Contact +91 9102319329
+description: Sri Janaki Mahal Trust address in Karsewakpuram, Ayodhya. Complete address, location details, GPS coordinates, and how to reach. Contact +91 7759925612
 date: 2025-03-18
 keywords:
   - 'Sri Janaki Mahal Trust Karsewakpuram'
@@ -65,12 +65,12 @@ India
 ## Contact for Directions
 
 **For Location Details:**
-- 📞 Phone: +91 9102319329
-- 💬 WhatsApp: +91 9102319329
+- 📞 Phone: +91 7759925612
+- 💬 WhatsApp: +91 7759925612
 
 **Address:** Vasudev Gath, Karsewakpuram, Ayodhya, UP 224123
 
 ---
 
-*For directions, call +91 9102319329.*
+*For directions, call +91 7759925612.*
 

@@ -1,6 +1,6 @@
 ---
 title: Sri Janaki Mahal Trust AC Room Booking - Prices and Availability
-description: Book AC rooms at Sri Janaki Mahal Trust. AC room prices, features, availability, and booking process. All AC rooms with meals included. Contact +91 9102319329
+description: Book AC rooms at Sri Janaki Mahal Trust. AC room prices, features, availability, and booking process. All AC rooms with meals included. Contact +91 7759925612
 date: 2025-02-25
 keywords:
   - 'Sri Janaki Mahal Trust AC room booking'
@@ -97,8 +97,8 @@ Complete guide to booking AC rooms at Sri Janaki Mahal Trust. Learn about AC roo
 - Confirm room type
 
 ### Step 3: Book AC Room
-- Call: +91 9102319329
-- WhatsApp: +91 9102319329
+- Call: +91 7759925612
+- WhatsApp: +91 7759925612
 - Email: srijanakimahaltrustofficial@gmail.com
 
 ### Step 4: Receive Confirmation
@@ -154,7 +154,7 @@ AC rooms start from ₹1,800 per night (2-bed) up to ₹4,150 (Luxury Suite).
 Yes, all meals (breakfast, lunch, dinner) are included.
 
 ### How to book AC room?
-Call +91 9102319329 or WhatsApp +91 9102319329 for booking.
+Call +91 7759925612 or WhatsApp +91 7759925612 for booking.
 
 ### Is AC available 24/7?
 Yes, air conditioning is available 24 hours.
@@ -162,8 +162,8 @@ Yes, air conditioning is available 24 hours.
 ## Book AC Room Now
 
 **Contact for AC Room Booking:**
-- 📞 Phone: +91 9102319329
-- 💬 WhatsApp: +91 9102319329
+- 📞 Phone: +91 7759925612
+- 💬 WhatsApp: +91 7759925612
 - 📧 Email: srijanakimahaltrustofficial@gmail.com
 
 **Available:** 24 hours, 7 days a week
@@ -172,5 +172,5 @@ Yes, air conditioning is available 24 hours.
 
 ---
 
-*For AC room booking or inquiries, call +91 9102319329 or visit our [booking page](/booking).*
+*For AC room booking or inquiries, call +91 7759925612 or visit our [booking page](/booking).*
 

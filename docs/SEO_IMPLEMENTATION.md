@@ -253,7 +253,7 @@ All pages have been optimized with:
 
 **Name:** Sri Janaki Mahal Trust  
 **Address:** Vasudev Gath, Karsewakpuram, Ayodhya, Uttar Pradesh 224123  
-**Phone:** +91 9102319329
+**Phone:** +91 7759925612
 
 **Implementation:**
 - Consistent NAP across all pages

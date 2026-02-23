@@ -44,14 +44,14 @@ Arrival at **Ayodhya Junction (Ayodhya Cantt)** marks the beginning of your spir
 
 ### Trust-Coordinated Pickup
 
-- Call **+91 9102319329** in advance to arrange a reliable driver.
+- Call **+91 7759925612** in advance to arrange a reliable driver.
 - Ideal for elderly devotees or late-night arrivals.
 
 > Comment: Confirm the fare before boarding and insist on being dropped at “Sri Janaki Mahal Trust” reception.
 
 ## Live Navigation Support
 
-- **WhatsApp:** [https://wa.me/919102319329](https://wa.me/919102319329)
+- **WhatsApp:** [https://wa.me/917759925612](https://wa.me/917759925612)
 - Share your live location; the trust team tracks your route and ensures a safe arrival.
 
 ## Nearby Landmarks During the Ride
@@ -76,7 +76,7 @@ Yes, sharing your arrival time allows the staff to keep your room ready and assi
 ## Quick Checklist
 
 - ✅ Confirm your booking with the trust before travelling
-- ✅ Save the contact number **+91 9102319329**
+- ✅ Save the contact number **+91 7759925612**
 - ✅ Share travel updates via WhatsApp for support
 - ✅ Keep your booking confirmation slip ready
 

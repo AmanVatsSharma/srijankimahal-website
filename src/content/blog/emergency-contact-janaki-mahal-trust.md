@@ -15,12 +15,12 @@ keywords:
 
 Every pilgrim staying at **Janaki Mahal Trust** (also known as **Sri Janki Mahal Trust** and **Shri Janki Mahal Trust Ayodhya**) receives round-the-clock assistance. This guide highlights the official emergency contact, what information to share, and how the trust team responds to urgent situations.
 
-> Flow Chart: Emergency arises → Dial **+91 9102319329** → Explain the situation → Trust team coordinates support → Issue resolved with follow-up.
+> Flow Chart: Emergency arises → Dial **+91 7759925612** → Explain the situation → Trust team coordinates support → Issue resolved with follow-up.
 
 ## Official Emergency Contact Number
 
-- **24/7 Emergency & Support Line:** [+91 9102319329](tel:+919102319329)
-- **WhatsApp (for quick location sharing):** [https://wa.me/919102319329](https://wa.me/919102319329)
+- **24/7 Emergency & Support Line:** [+91 7759925612](tel:+917759925612)
+- **WhatsApp (for quick location sharing):** [https://wa.me/917759925612](https://wa.me/917759925612)
 - **Emergency Email (for documentation):** [srijanakimahaltrustofficial@gmail.com](mailto:srijanakimahaltrustofficial@gmail.com)
 
 Save the number as **“Janaki Mahal Trust Emergency”** so you can access it instantly.
@@ -35,7 +35,7 @@ Save the number as **“Janaki Mahal Trust Emergency”** so you can access it i
 
 ## How to Communicate During an Emergency
 
-1. Dial **+91 9102319329** immediately.
+1. Dial **+91 7759925612** immediately.
 2. Clearly state “Emergency assistance needed at Janaki Mahal Trust.”
 3. Share the guest name, room type, and booking ID (if available).
 4. Describe the issue (medical, transport, security, etc.) as briefly and clearly as possible.
@@ -71,7 +71,7 @@ The trust staff provides transport assistance in case of hospital visits or medi
 ## Frequently Asked Questions
 
 ### Is the emergency number different from the booking number?
-No. The official helpline **+91 9102319329** handles both booking and emergency support. Emergency calls are prioritised.
+No. The official helpline **+91 7759925612** handles both booking and emergency support. Emergency calls are prioritised.
 
 ### Can I use WhatsApp during emergencies?
 Yes. Send a message or live location to the same number. Mention “Emergency” at the start of your message for immediate attention.
@@ -84,7 +84,7 @@ Yes. For security-related incidents, the trust works directly with Ayodhya polic
 
 ## Emergency Preparedness Checklist
 
-- ✅ Save **+91 9102319329** in your phone and share with fellow travellers.
+- ✅ Save **+91 7759925612** in your phone and share with fellow travellers.
 - ✅ Keep important documents in a small pouch near your bed.
 - ✅ Inform the reception if you plan to be out late at night.
 - ✅ Use the official WhatsApp number to share live location if lost.

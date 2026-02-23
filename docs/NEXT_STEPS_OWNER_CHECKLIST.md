@@ -21,7 +21,7 @@ This checklist is the off-page + operations side required to convert strong tech
 - Ensure NAP exactly matches website:
   - Name: **Sri Janaki Mahal Trust**
   - Address: **Vasudev Gath, Karsewakpuram, Ayodhya, Uttar Pradesh 224123**
-  - Phone: **+91 9102319329**
+  - Phone: **+91 7759925612**
   - Website: **https://www.srijanakimahaltrustofficial.com/**
 - Add 15–25 real photos (exterior, rooms, check-in area, dining).
 - Publish 1–2 posts/week (festival season: 2–4/week).

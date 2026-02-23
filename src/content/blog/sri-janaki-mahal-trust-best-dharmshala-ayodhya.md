@@ -1,6 +1,6 @@
 ---
 title: Sri Janaki Mahal Trust - Best Dharmshala in Ayodhya 2025
-description: Why Sri Janaki Mahal Trust is the best dharmshala in Ayodhya. Prime location near Ram Mandir, all meals included, affordable prices, and excellent service. Contact +91 9102319329
+description: Why Sri Janaki Mahal Trust is the best dharmshala in Ayodhya. Prime location near Ram Mandir, all meals included, affordable prices, and excellent service. Contact +91 7759925612
 date: 2025-03-05
 keywords:
   - 'best dharmshala Ayodhya'
@@ -120,8 +120,8 @@ Strong guest feedback from pilgrims
 ## Book Best Dharmshala
 
 **Experience the best dharmshala in Ayodhya:**
-- 📞 Phone: +91 9102319329
-- 💬 WhatsApp: +91 9102319329
+- 📞 Phone: +91 7759925612
+- 💬 WhatsApp: +91 7759925612
 - 📧 Email: srijanakimahaltrustofficial@gmail.com
 
 **Why We're Best:**
@@ -134,5 +134,5 @@ Strong guest feedback from pilgrims
 
 ---
 
-*Book the best dharmshala in Ayodhya. Call +91 9102319329 for instant booking.*
+*Book the best dharmshala in Ayodhya. Call +91 7759925612 for instant booking.*
 

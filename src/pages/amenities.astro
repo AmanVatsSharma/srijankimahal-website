@@ -1,0 +1,192 @@
+<!-- // src/pages/amenities.astro -->
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import FloatingWhatsApp from '../components/FloatingWhatsApp.astro';
+import { generateBreadcrumbSchema } from '../lib/schemas/breadcrumb';
+import { generateFAQSchema, type FAQItem } from '../lib/schemas/faq';
+import { DISPLAY_PHONE, TEL_LINK, WHATSAPP_BOOKING_LINK } from '../lib/constants';
+
+const breadcrumbSchema = generateBreadcrumbSchema([
+  { name: 'Home', url: '/' },
+  { name: 'Amenities', url: '/amenities' },
+]);
+
+const amenities = [
+  {
+    title: 'All Meals Included',
+    icon: '🍽️',
+    points: ['Breakfast, Lunch, Dinner included in tariff', 'Pure vegetarian meals', 'Confirm timings during check-in'],
+  },
+  {
+    title: 'Hot Water Facility',
+    icon: '🚿',
+    points: ['Hot water support available', 'Attached bathrooms on room types', 'Ask the desk for any special needs'],
+  },
+  {
+    title: 'Peaceful Spiritual Environment',
+    icon: '🕉️',
+    points: ['Quiet surroundings in Karsewakpuram', 'Ideal for devotees and families', 'Close to key Ayodhya temples'],
+  },
+  {
+    title: 'Support & Safety',
+    icon: '🛡️',
+    points: ['Official booking desk assistance', 'Clear verification guidance against scams', 'Family-friendly support'],
+  },
+] as const;
+
+const faqs: FAQItem[] = [
+  {
+    question: 'Are meals included at Sri Janaki Mahal Trust?',
+    answer:
+      'Yes. Meals (Breakfast, Lunch, Dinner) are included in the room tariff. Please confirm meal timings and any special notes during confirmation/check-in.',
+  },
+  {
+    question: 'Does Sri Janaki Mahal Trust provide hot water?',
+    answer:
+      'Hot water facility is available. If you have specific needs (elderly guests, medical requirements), inform the official desk in advance.',
+  },
+  {
+    question: 'Where can I see room types and prices?',
+    answer:
+      'You can see room types on the Rooms page and price ranges on the Room Prices page. For final tariff and availability, contact the official desk.',
+  },
+];
+
+const faqSchema = generateFAQSchema(faqs);
+---
+
+<Layout
+  title="Amenities - Sri Janaki Mahal Trust | Meals Included, Hot Water, Facilities"
+  description={`Amenities at Sri Janaki Mahal Trust (Ayodhya near Ram Mandir): meals included, hot water facility, peaceful stay, and booking support. Official helpline: ${DISPLAY_PHONE}.`}
+  keywords={[
+    'Sri Janaki Mahal Trust amenities',
+    'Janaki Mahal facilities',
+    'meals included ayodhya stay',
+    'hot water facility ayodhya',
+    'dharamshala with meals ayodhya',
+    'Sri Janki Mahal Trust facilities',
+  ]}
+  canonical="/amenities"
+  ogImage="/og.jpg"
+>
+  <Header />
+
+  <main class="min-h-screen bg-[#faf8f3]">
+    <section class="bg-gradient-to-r from-amber-600 to-rose-600 text-white py-16">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-4xl sm:text-5xl font-bold mb-5">
+          Sri Janaki Mahal Trust <span class="text-amber-200">Amenities</span>
+        </h1>
+        <p class="text-xl max-w-3xl mx-auto">
+          What’s included in your stay near Ram Mandir: meals, facilities, and support for devotees and families.
+        </p>
+        <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="/booking"
+            class="px-8 py-4 bg-white text-amber-700 font-bold rounded-lg hover:bg-gray-100 transition-colors text-lg"
+          >
+            Booking page
+          </a>
+          <a
+            href={WHATSAPP_BOOKING_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="px-8 py-4 bg-green-600 text-white font-bold rounded-lg hover:bg-green-700 transition-colors text-lg"
+          >
+            WhatsApp booking
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-14 bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid gap-6 md:grid-cols-2">
+          {amenities.map((a) => (
+            <div class="rounded-3xl border border-gray-100 bg-white p-8 shadow-sm">
+              <div class="flex items-start gap-4">
+                <div class="text-4xl">{a.icon}</div>
+                <div>
+                  <h2 class="text-2xl font-bold text-gray-900">{a.title}</h2>
+                  <ul class="mt-4 space-y-2 text-gray-800">
+                    {a.points.map((p) => (
+                      <li>
+                        <span class="text-green-700 font-semibold">✓</span> {p}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div class="mt-14 rounded-3xl bg-gray-50 p-8">
+          <h2 class="text-2xl font-bold text-gray-900 mb-3">Related helpful pages</h2>
+          <div class="grid gap-4 sm:grid-cols-2">
+            <a
+              href="/room-prices"
+              class="rounded-xl bg-white px-6 py-4 text-gray-900 font-semibold border border-gray-200 hover:border-amber-300 transition-colors"
+            >
+              Room prices (tariff ranges) →
+            </a>
+            <a
+              href="/rooms"
+              class="rounded-xl bg-white px-6 py-4 text-gray-900 font-semibold border border-gray-200 hover:border-amber-300 transition-colors"
+            >
+              Room types & details →
+            </a>
+            <a
+              href="/official-booking"
+              class="rounded-xl bg-white px-6 py-4 text-gray-900 font-semibold border border-gray-200 hover:border-amber-300 transition-colors"
+            >
+              Official booking verification →
+            </a>
+            <a
+              href="/contact-number"
+              class="rounded-xl bg-white px-6 py-4 text-gray-900 font-semibold border border-gray-200 hover:border-amber-300 transition-colors"
+            >
+              Official contact number →
+            </a>
+          </div>
+        </div>
+
+        <div class="mt-14 rounded-3xl border border-amber-200 bg-amber-50 p-8">
+          <h2 class="text-2xl font-bold text-gray-900 mb-3">Need clarity on inclusions?</h2>
+          <p class="text-gray-800 leading-relaxed">
+            For final confirmation on what’s included for your dates and room type, call the official desk at{' '}
+            <a class="font-semibold underline underline-offset-2" href={TEL_LINK}>
+              {DISPLAY_PHONE}
+            </a>
+            .
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-14 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">FAQs</h2>
+        <div class="space-y-6">
+          {faqs.map((faq, index) => (
+            <div class="rounded-2xl border border-gray-100 bg-gray-50 p-6">
+              <h3 class="text-xl font-semibold text-gray-900 mb-2">
+                <span class="text-amber-700">Q{index + 1}.</span> {faq.question}
+              </h3>
+              <p class="text-gray-800 leading-relaxed">{faq.answer}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  </main>
+
+  {breadcrumbSchema && <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />}
+  {faqSchema && <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />}
+
+  <Footer />
+  <FloatingWhatsApp />
+</Layout>
+

@@ -65,6 +65,12 @@ const rooms = [
         <h2 class="text-2xl font-bold mb-3">कौन सा रूम चुनें?</h2>
         <p class="text-lg opacity-90 mb-6">उपलब्धता/सलाह के लिए आधिकारिक टीम से संपर्क करें।</p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="/hi/room-prices"
+            class="px-6 py-3 bg-white text-amber-700 font-bold rounded-lg hover:bg-gray-100 transition-colors"
+          >
+            रूम प्राइस
+          </a>
           <a href="/hi/booking" class="px-6 py-3 bg-white text-amber-700 font-bold rounded-lg hover:bg-gray-100 transition-colors">
             बुकिंग पेज
           </a>
@@ -72,6 +78,9 @@ const rooms = [
             आधिकारिक संपर्क
           </a>
         </div>
+        <p class="mt-4 text-sm text-amber-100">
+          यह भी देखें: <a class="underline underline-offset-2" href="/hi/amenities">सुविधाएँ</a> और <a class="underline underline-offset-2" href="/hi/group-booking">ग्रुप बुकिंग</a>.
+        </p>
       </div>
 
       {breadcrumbSchema && <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />}

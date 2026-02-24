@@ -1,0 +1,169 @@
+<!-- // src/pages/hi/reviews.astro -->
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import FloatingWhatsApp from '../../components/FloatingWhatsApp.astro';
+import { generateBreadcrumbSchema } from '../../lib/schemas/breadcrumb';
+import { generateFAQSchema, type FAQItem } from '../../lib/schemas/faq';
+import { DISPLAY_PHONE, TEL_LINK, WHATSAPP_BOOKING_LINK_HI } from '../../lib/constants';
+
+const googleMapsListingUrl = 'https://www.google.com/maps?cid=13157769449180505616';
+
+const breadcrumbSchema = generateBreadcrumbSchema([
+  { name: 'Home', url: '/hi' },
+  { name: 'Reviews', url: '/hi/reviews' },
+]);
+
+const faqs: FAQItem[] = [
+  {
+    question: 'रिव्यू कहाँ देखें?',
+    answer:
+      'आप हमारे Google Maps लिस्टिंग पर सत्यापित रिव्यू देख सकते हैं। इस पेज पर “Google Maps खोलें” बटन का उपयोग करें।',
+  },
+  {
+    question: 'रिव्यू कैसे लिखें?',
+    answer:
+      'स्टे के बाद Google Maps लिस्टिंग खोलकर अपना ईमानदार अनुभव साझा करें। संवेदनशील जानकारी (ID नंबर/पेमेंट स्क्रीनशॉट) न डालें।',
+  },
+  {
+    question: 'क्या रिव्यू के लिए कोई इनाम/ऑफर मिलता है?',
+    answer:
+      'नहीं। हम Google गाइडलाइन्स का पालन करते हैं और किसी भी प्रकार का इंसेंटिव नहीं देते।',
+  },
+];
+
+const faqSchema = generateFAQSchema(faqs);
+---
+
+<Layout
+  title="रिव्यू - श्री जानकी महल ट्रस्ट | Google Maps पर सत्यापित फीडबैक"
+  description={`श्री जानकी महल ट्रस्ट के सत्यापित रिव्यू Google Maps पर देखें। बुकिंग/संपर्क के लिए ${DISPLAY_PHONE} पर कॉल करें।`}
+  keywords={[
+    'श्री जानकी महल ट्रस्ट रिव्यू',
+    'जनकी महल ट्रस्ट फीडबैक',
+    'अयोध्या स्टे रिव्यू',
+    'Google Maps रिव्यू',
+  ]}
+  canonical="/hi/reviews"
+  ogImage="/og.jpg"
+  lang="hi"
+>
+  <Header />
+
+  <main class="min-h-screen bg-[#faf8f3]">
+    <section class="bg-gradient-to-r from-amber-600 to-rose-600 text-white py-16">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-4xl sm:text-5xl font-bold mb-5">
+          श्री जानकी महल ट्रस्ट <span class="text-amber-200">रिव्यू</span>
+        </h1>
+        <p class="text-xl max-w-3xl mx-auto">
+          सत्यापित फीडबैक Google Maps पर देखें और अन्य भक्तों की मदद करें।
+        </p>
+        <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href={googleMapsListingUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="px-8 py-4 bg-white text-amber-700 font-bold rounded-lg hover:bg-gray-100 transition-colors text-lg"
+          >
+            Google Maps खोलें
+          </a>
+          <a
+            href={WHATSAPP_BOOKING_LINK_HI}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="px-8 py-4 bg-green-600 text-white font-bold rounded-lg hover:bg-green-700 transition-colors text-lg"
+          >
+            WhatsApp बुकिंग
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-14 bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid gap-6 lg:grid-cols-2">
+          <div class="rounded-3xl border border-gray-100 bg-white p-8 shadow-sm">
+            <h2 class="text-2xl font-bold text-gray-900 mb-3">महत्वपूर्ण नोट</h2>
+            <p class="text-gray-800 leading-relaxed">
+              पारदर्शिता और गाइडलाइन्स के लिए, इस वेबसाइट पर बिना सत्यापन के रेटिंग/स्कोर क्लेम नहीं दिखाए जाते। सत्यापित रिव्यू के लिए Google Maps देखें।
+            </p>
+            <p class="mt-4 text-gray-800 leading-relaxed">
+              आधिकारिक बुकिंग वेरिफिकेशन के लिए देखें:{' '}
+              <a class="underline underline-offset-2" href="/hi/official-booking">आधिकारिक बुकिंग</a> और{' '}
+              <a class="underline underline-offset-2" href="/hi/contact-number">आधिकारिक संपर्क</a>.
+            </p>
+          </div>
+
+          <div class="rounded-3xl border border-amber-200 bg-amber-50 p-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-3">तुरंत मदद चाहिए?</h2>
+            <p class="text-gray-800 leading-relaxed">
+              उपलब्धता/कन्फर्मेशन के लिए आधिकारिक टीम से संपर्क करें:{' '}
+              <a class="font-semibold underline underline-offset-2" href={TEL_LINK}>
+                {DISPLAY_PHONE}
+              </a>
+              .
+            </p>
+            <div class="mt-6 grid gap-3 sm:grid-cols-2">
+              <a
+                href="/hi/booking"
+                class="rounded-xl bg-[#2d2215] px-6 py-3 text-white font-semibold hover:bg-[#b45309] transition-colors text-center"
+              >
+                बुकिंग पेज
+              </a>
+              <a
+                href="/hi/how-to-avoid-scams"
+                class="rounded-xl border border-[#2d2215] px-6 py-3 text-[#2d2215] font-semibold hover:bg-[#f4ecdf] transition-colors text-center"
+              >
+                स्कैम से बचें
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-14 rounded-3xl bg-gray-50 p-8">
+          <h2 class="text-2xl font-bold text-gray-900 mb-3">ईमानदार रिव्यू लिखें (वैकल्पिक)</h2>
+          <ol class="mt-4 list-decimal pl-6 text-gray-800 space-y-2">
+            <li>Google Maps लिस्टिंग खोलें।</li>
+            <li>अपना ईमानदार अनुभव साझा करें।</li>
+            <li>संवेदनशील जानकारी (ID नंबर/पेमेंट स्क्रीनशॉट) न डालें।</li>
+          </ol>
+          <div class="mt-6">
+            <a
+              href={googleMapsListingUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center justify-center rounded-xl bg-white px-6 py-3 font-semibold text-amber-700 border border-amber-200 hover:bg-gray-50 transition-colors"
+            >
+              लिस्टिंग खोलें
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-14 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">FAQs</h2>
+        <div class="space-y-6">
+          {faqs.map((faq, index) => (
+            <div class="rounded-2xl border border-gray-100 bg-gray-50 p-6">
+              <h3 class="text-xl font-semibold text-gray-900 mb-2">
+                <span class="text-amber-700">Q{index + 1}.</span> {faq.question}
+              </h3>
+              <p class="text-gray-800 leading-relaxed">{faq.answer}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  </main>
+
+  {breadcrumbSchema && <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />}
+  {faqSchema && <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />}
+
+  <Footer />
+  <FloatingWhatsApp />
+</Layout>
+

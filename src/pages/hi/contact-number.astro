@@ -5,9 +5,8 @@ import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import FloatingWhatsApp from '../../components/FloatingWhatsApp.astro';
 
-import { MOBILE_NUMBER, DISPLAY_PHONE } from '../../lib/constants';
+import { DISPLAY_PHONE, TEL_LINK, WHATSAPP_LINK, SCHEMA_TELEPHONE } from '../../lib/constants';
 
-const officialPhone = `+91${MOBILE_NUMBER}`;
 const displayPhone = DISPLAY_PHONE;
 
 const contactStructuredData = {
@@ -34,13 +33,28 @@ const contactStructuredData = {
     contactPoint: [
       {
         '@type': 'ContactPoint',
-        telephone: displayPhone,
+        telephone: SCHEMA_TELEPHONE,
         contactType: 'booking',
         areaServed: 'IN',
         availableLanguage: ['Hindi', 'English'],
         url: 'https://www.srijanakimahaltrustofficial.com/hi/contact-number',
         productSupported: 'Room Booking',
-        hoursAvailable: 'Mo-Su 00:00-23:59',
+        hoursAvailable: [
+          {
+            '@type': 'OpeningHoursSpecification',
+            dayOfWeek: [
+              'Monday',
+              'Tuesday',
+              'Wednesday',
+              'Thursday',
+              'Friday',
+              'Saturday',
+              'Sunday',
+            ],
+            opens: '00:00',
+            closes: '23:59',
+          },
+        ],
       },
     ],
   },
@@ -107,14 +121,14 @@ const faqStructuredData = {
           </div>
           <div class="rounded-2xl bg-white p-6 text-center shadow-md">
             <p class="text-sm uppercase tracking-[0.2em] text-[#b45309]">Call Or WhatsApp Now</p>
-            <a class="mt-3 block text-3xl font-extrabold text-[#2d2215] hover:text-[#b45309]" href={`tel:${officialPhone}`}>
+            <a class="mt-3 block text-3xl font-extrabold text-[#2d2215] hover:text-[#b45309]" href={TEL_LINK}>
               {displayPhone}
             </a>
             <div class="mt-4 flex flex-col gap-3">
-              <a class="rounded-xl bg-[#b45309] px-6 py-3 text-base font-semibold text-white transition hover:bg-[#9a3f00]" href={`tel:${officialPhone}`}>
+              <a class="rounded-xl bg-[#b45309] px-6 py-3 text-base font-semibold text-white transition hover:bg-[#9a3f00]" href={TEL_LINK}>
                 कॉल करें
               </a>
-              <a class="rounded-xl border border-[#b45309] px-6 py-3 text-base font-semibold text-[#b45309] transition hover:bg-[#fce9d5]" href={`https://wa.me/${officialPhone}`}>
+              <a class="rounded-xl border border-[#b45309] px-6 py-3 text-base font-semibold text-[#b45309] transition hover:bg-[#fce9d5]" href={WHATSAPP_LINK}>
                 WhatsApp करें
               </a>
             </div>

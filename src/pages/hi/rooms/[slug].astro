@@ -170,6 +170,7 @@ const productSchema = {
   inLanguage: 'hi-IN',
   brand: {
     '@type': 'Brand',
+    '@id': 'https://www.srijanakimahaltrustofficial.com/#lodgingbusiness',
     name: 'Sri Janaki Mahal Trust',
   },
   sku: `SJM-HI-${slug.toUpperCase().replace(/-/g, '_')}`,
@@ -184,6 +185,7 @@ const productSchema = {
     url: `https://www.srijanakimahaltrustofficial.com/hi/rooms/${slug}`,
     seller: {
       '@type': 'Organization',
+      '@id': 'https://www.srijanakimahaltrustofficial.com/#organization',
       name: 'Sri Janaki Mahal Trust',
       telephone: SCHEMA_TELEPHONE,
     },
@@ -298,6 +300,37 @@ const breadcrumbs = generateBreadcrumbSchema([
             <li class="rounded-2xl bg-white p-4 shadow-sm">✓ {highlight}</li>
           ))}
         </ul>
+      </section>
+
+      <section class="rounded-3xl bg-white p-8 shadow-md">
+        <h2 class="text-3xl font-semibold text-[#2d2215]">उपयोगी पेज</h2>
+        <p class="mt-2 text-[#3d2f1c]">टैरिफ रेंज, सुविधाएँ और गाइड्स के लिए इन आधिकारिक पेजों का उपयोग करें।</p>
+        <div class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <a
+            href="/hi/room-prices"
+            class="rounded-2xl border border-[#f2dfc7] bg-[#faf0df] p-4 text-[#2d2215] font-semibold hover:bg-[#f4ecdf] transition"
+          >
+            रूम प्राइस →
+          </a>
+          <a
+            href="/hi/amenities"
+            class="rounded-2xl border border-[#f2dfc7] bg-[#faf0df] p-4 text-[#2d2215] font-semibold hover:bg-[#f4ecdf] transition"
+          >
+            सुविधाएँ →
+          </a>
+          <a
+            href="/hi/group-booking"
+            class="rounded-2xl border border-[#f2dfc7] bg-[#faf0df] p-4 text-[#2d2215] font-semibold hover:bg-[#f4ecdf] transition"
+          >
+            ग्रुप बुकिंग →
+          </a>
+          <a
+            href="/hi/booking"
+            class="rounded-2xl border border-[#f2dfc7] bg-[#faf0df] p-4 text-[#2d2215] font-semibold hover:bg-[#f4ecdf] transition"
+          >
+            बुकिंग पेज →
+          </a>
+        </div>
       </section>
     </div>
   </main>

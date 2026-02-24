@@ -1,0 +1,168 @@
+<!-- // src/pages/gallery.astro -->
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import FloatingWhatsApp from '../components/FloatingWhatsApp.astro';
+import { generateBreadcrumbSchema } from '../lib/schemas/breadcrumb';
+import { DISPLAY_PHONE, TEL_LINK, WHATSAPP_BOOKING_LINK } from '../lib/constants';
+
+const breadcrumbSchema = generateBreadcrumbSchema([
+  { name: 'Home', url: '/' },
+  { name: 'Gallery', url: '/gallery' },
+]);
+
+const images = [
+  {
+    src: '/rooms/2-Bed-01.jpg',
+    alt: '2 bed room at Sri Janaki Mahal Trust in Ayodhya (clean and comfortable stay near Ram Mandir)',
+  },
+  {
+    src: '/rooms/2-Bed-02.jpg',
+    alt: '2 bed non-AC room interior at Sri Janaki Mahal Trust Ayodhya (peaceful accommodation)',
+  },
+  {
+    src: '/rooms/3-Bed-01.jpg',
+    alt: '3 bed room at Sri Janaki Mahal Trust (family-friendly room near Ram Mandir)',
+  },
+  {
+    src: '/rooms/3-Bed-02.jpg',
+    alt: '3 bed room facilities at Sri Janaki Mahal Trust Ayodhya (meals included stay)',
+  },
+  {
+    src: '/rooms/4-Bed-01.jpg',
+    alt: '4 bed AC room for group stay at Sri Janaki Mahal Trust Ayodhya',
+  },
+  {
+    src: '/rooms/4-Bed-02.jpg',
+    alt: '4 bed room option at Sri Janaki Mahal Trust (yatri group accommodation)',
+  },
+  {
+    src: '/rooms/Deluxe.jpg',
+    alt: 'Deluxe room at Sri Janaki Mahal Trust Ayodhya (premium comfort)',
+  },
+  {
+    src: '/rooms/Suit-Luxury.jpg',
+    alt: 'Family suite at Sri Janaki Mahal Trust Ayodhya (extra space for families)',
+  },
+  {
+    src: '/ayodhya-courtyard-peaceful.jpg',
+    alt: 'Peaceful courtyard ambience near Sri Janaki Mahal Trust (Ayodhya spiritual stay)',
+  },
+  {
+    src: '/ayodhya-prayer-room-meditation.jpg',
+    alt: 'Prayer and meditation ambience (spiritual environment in Ayodhya stay)',
+  },
+  {
+    src: '/ayodhya-spiritual-architecture.jpg',
+    alt: 'Ayodhya spiritual architecture and surroundings near Sri Janaki Mahal Trust',
+  },
+  {
+    src: '/ayodhya-temple-spiritual.jpg',
+    alt: 'Temple spiritual ambience in Ayodhya near Ram Mandir (stay at Sri Janaki Mahal Trust)',
+  },
+] as const;
+---
+
+<Layout
+  title="Gallery - Sri Janaki Mahal Trust | Room Photos & Stay Experience (Ayodhya)"
+  description={`See room photos and stay experience at Sri Janaki Mahal Trust in Ayodhya near Ram Mandir. For availability and booking confirmation, call ${DISPLAY_PHONE}.`}
+  keywords={[
+    'Sri Janaki Mahal Trust gallery',
+    'Sri Janaki Mahal room photos',
+    'Janaki Mahal Trust images',
+    'Ayodhya accommodation photos',
+    'rooms near Ram Mandir photos',
+  ]}
+  canonical="/gallery"
+  ogImage="/og.jpg"
+>
+  <Header />
+
+  <main class="min-h-screen bg-[#faf8f3]">
+    <section class="bg-gradient-to-r from-amber-600 to-rose-600 text-white py-16">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-4xl sm:text-5xl font-bold mb-5">
+          Sri Janaki Mahal Trust <span class="text-amber-200">Gallery</span>
+        </h1>
+        <p class="text-xl max-w-3xl mx-auto">
+          Room photos and a glimpse of the peaceful stay experience near Ram Mandir in Ayodhya.
+        </p>
+        <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="/rooms"
+            class="px-8 py-4 bg-white text-amber-700 font-bold rounded-lg hover:bg-gray-100 transition-colors text-lg"
+          >
+            View room types
+          </a>
+          <a
+            href={WHATSAPP_BOOKING_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="px-8 py-4 bg-green-600 text-white font-bold rounded-lg hover:bg-green-700 transition-colors text-lg"
+          >
+            WhatsApp booking
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-14 bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="rounded-3xl border border-amber-200 bg-amber-50 p-8">
+          <h2 class="text-2xl font-bold text-gray-900 mb-3">Need final confirmation?</h2>
+          <p class="text-gray-800 leading-relaxed">
+            Photos help you choose a room. For availability and final tariff confirmation, contact the official desk at{' '}
+            <a class="font-semibold underline underline-offset-2" href={TEL_LINK}>
+              {DISPLAY_PHONE}
+            </a>
+            .
+          </p>
+          <p class="mt-2 text-sm text-gray-700">
+            Helpful pages: <a class="underline underline-offset-2" href="/room-prices">room prices</a>,{' '}
+            <a class="underline underline-offset-2" href="/amenities">amenities</a>,{' '}
+            <a class="underline underline-offset-2" href="/official-booking">official booking</a>.
+          </p>
+        </div>
+
+        <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {images.map((img, idx) => (
+            <figure class="rounded-3xl overflow-hidden bg-gray-50 border border-gray-100 shadow-sm">
+              <img
+                src={img.src}
+                alt={img.alt}
+                width="1200"
+                height="800"
+                loading={idx < 2 ? 'eager' : 'lazy'}
+                decoding="async"
+                class="h-56 w-full object-cover"
+              />
+              <figcaption class="sr-only">{img.alt}</figcaption>
+            </figure>
+          ))}
+        </div>
+
+        <div class="mt-14 grid gap-4 sm:grid-cols-2">
+          <a
+            href="/booking"
+            class="rounded-xl bg-[#2d2215] px-6 py-4 text-white font-semibold hover:bg-[#b45309] transition-colors text-center"
+          >
+            Book a room
+          </a>
+          <a
+            href="/contact-number"
+            class="rounded-xl border border-[#2d2215] px-6 py-4 text-[#2d2215] font-semibold hover:bg-[#f4ecdf] transition-colors text-center"
+          >
+            Official contact number
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  {breadcrumbSchema && <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />}
+
+  <Footer />
+  <FloatingWhatsApp />
+</Layout>
+

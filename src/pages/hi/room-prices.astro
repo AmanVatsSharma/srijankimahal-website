@@ -1,0 +1,184 @@
+<!-- // src/pages/hi/room-prices.astro -->
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import FloatingWhatsApp from '../../components/FloatingWhatsApp.astro';
+import { generateBreadcrumbSchema } from '../../lib/schemas/breadcrumb';
+import { generateFAQSchema, type FAQItem } from '../../lib/schemas/faq';
+import { DISPLAY_PHONE, TEL_LINK, WHATSAPP_BOOKING_LINK_HI, WHATSAPP_LINK } from '../../lib/constants';
+
+const breadcrumbSchema = generateBreadcrumbSchema([
+  { name: 'Home', url: '/hi' },
+  { name: 'Room Prices', url: '/hi/room-prices' },
+]);
+
+const roomOffers = [
+  { slug: '2-bed-non-ac', name: '2 बेड Non-AC', priceRange: '₹1,250 - ₹1,550', bestFor: 'बजट स्टे, 2 मेहमान' },
+  { slug: '2-bed-ac', name: '2 बेड AC', priceRange: '₹1,750 - ₹2,100', bestFor: 'कपल/कम्फर्ट स्टे' },
+  { slug: '3-bed-non-ac', name: '3 बेड Non-AC', priceRange: '₹1,950 - ₹2,350', bestFor: 'फैमिली/ट्रिपल शेयरिंग' },
+  { slug: '3-bed-ac', name: '3 बेड AC', priceRange: '₹2,550 - ₹3,000', bestFor: 'फैमिली (AC)' },
+  { slug: '4-bed-non-ac', name: '4 बेड Non-AC', priceRange: '₹2,650 - ₹3,050', bestFor: 'ग्रुप/यात्री' },
+  { slug: '4-bed-ac', name: '4 बेड AC', priceRange: '₹3,100 - ₹3,500', bestFor: 'ग्रुप (AC)' },
+  { slug: 'deluxe-room', name: 'डीलक्स रूम', priceRange: '₹3,200 - ₹3,800', bestFor: 'प्रीमियम कम्फर्ट' },
+  { slug: 'family-suite', name: 'फैमिली सूट', priceRange: '₹3,650 - ₹4,150', bestFor: 'अधिक स्पेस/फैमिली' },
+] as const;
+
+const faqs: FAQItem[] = [
+  {
+    question: 'क्या रूम प्राइस में भोजन शामिल है?',
+    answer:
+      'हाँ। टैरिफ में भोजन (नाश्ता, दोपहर का भोजन, रात्रि भोजन) शामिल रहता है। अंतिम टैरिफ/इन्क्लूजन कन्फर्मेशन के समय जरूर कन्फर्म करें।',
+  },
+  {
+    question: 'कीमत में रेंज क्यों दिखती है?',
+    answer:
+      'तारीख, सीजन (त्योहार), और उपलब्धता के अनुसार टैरिफ बदल सकता है। रेंज अनुमान देती है; अंतिम टैरिफ आधिकारिक टीम कन्फर्म करती है।',
+  },
+  {
+    question: 'अंतिम टैरिफ कैसे कन्फर्म करें?',
+    answer: `आधिकारिक नंबर ${DISPLAY_PHONE} पर कॉल/WhatsApp करें। टीम डेट्स और रूम टाइप के अनुसार अंतिम टैरिफ बताती है।`,
+  },
+];
+
+const faqSchema = generateFAQSchema(faqs);
+---
+
+<Layout
+  title="रूम प्राइस/टैरिफ - श्री जानकी महल ट्रस्ट | भोजन सहित (अयोध्या)"
+  description={`श्री जानकी महल ट्रस्ट (अयोध्या) के AC/Non-AC रूम प्राइस/टैरिफ रेंज देखें। भोजन सहित। अंतिम टैरिफ ${DISPLAY_PHONE} पर कन्फर्म करें।`}
+  keywords={[
+    'श्री जानकी महल ट्रस्ट रूम प्राइस',
+    'जनकी महल टैरिफ',
+    'अयोध्या रूम रेट',
+    'राम मंदिर के पास रूम प्राइस',
+    'भोजन सहित रूम',
+  ]}
+  canonical="/hi/room-prices"
+  ogImage="/og.jpg"
+  lang="hi"
+>
+  <Header />
+
+  <main class="min-h-screen bg-[#faf8f3]">
+    <section class="bg-gradient-to-r from-amber-600 to-rose-600 text-white py-16">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-4xl sm:text-5xl font-bold mb-5">
+          श्री जानकी महल ट्रस्ट <span class="text-amber-200">रूम प्राइस</span>
+        </h1>
+        <p class="text-xl max-w-3xl mx-auto">
+          AC/Non-AC रूम टैरिफ रेंज (भोजन सहित)। अंतिम टैरिफ आधिकारिक कन्फर्मेशन में दिया जाता है।
+        </p>
+      </div>
+    </section>
+
+    <section class="py-14 bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid gap-6 lg:grid-cols-2">
+          <div class="rounded-3xl border border-amber-200 bg-amber-50 p-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-3">महत्वपूर्ण नोट</h2>
+            <p class="text-gray-800 leading-relaxed">
+              टैरिफ तारीख/उपलब्धता के अनुसार बदल सकता है। अंतिम टैरिफ के लिए आधिकारिक चैनल ही उपयोग करें:
+              <a href={TEL_LINK} class="font-semibold underline underline-offset-2">{DISPLAY_PHONE}</a> और
+              <a href={WHATSAPP_LINK} class="font-semibold underline underline-offset-2">WhatsApp</a>.
+            </p>
+            <div class="mt-6 flex flex-col sm:flex-row gap-3">
+              <a
+                href={TEL_LINK}
+                class="flex-1 rounded-xl bg-[#2d2215] px-6 py-3 text-white font-semibold hover:bg-[#b45309] transition-colors text-center"
+              >
+                कॉल करें
+              </a>
+              <a
+                href={WHATSAPP_BOOKING_LINK_HI}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex-1 rounded-xl bg-green-600 px-6 py-3 text-white font-semibold hover:bg-green-700 transition-colors text-center"
+              >
+                WhatsApp करें
+              </a>
+            </div>
+          </div>
+
+          <div class="rounded-3xl border border-gray-200 bg-white p-8 shadow-sm">
+            <h2 class="text-2xl font-bold text-gray-900 mb-3">टैरिफ में शामिल</h2>
+            <ul class="mt-4 space-y-2 text-gray-800">
+              <li><span class="text-green-700 font-semibold">✓</span> रूम स्टे (AC/Non‑AC)</li>
+              <li><span class="text-green-700 font-semibold">✓</span> भोजन (नाश्ता, दोपहर, रात्रि)</li>
+              <li><span class="text-green-700 font-semibold">✓</span> हॉट वाटर</li>
+              <li><span class="text-green-700 font-semibold">✓</span> शांत आध्यात्मिक वातावरण</li>
+            </ul>
+            <p class="mt-4 text-sm text-gray-600">
+              सत्यापित बुकिंग के लिए देखें:
+              <a class="underline underline-offset-2" href="/hi/official-booking">आधिकारिक बुकिंग</a> और
+              <a class="underline underline-offset-2" href="/hi/contact-number">आधिकारिक संपर्क</a>.
+            </p>
+          </div>
+        </div>
+
+        <h2 class="mt-14 text-3xl font-bold text-gray-900">रूम टाइप और टैरिफ रेंज</h2>
+        <p class="mt-2 text-gray-700">डिटेल्स और फोटो के लिए रूम पर क्लिक करें।</p>
+
+        <div class="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {roomOffers.map((room) => (
+            <a
+              href={`/hi/rooms/${room.slug}`}
+              class="block rounded-3xl border border-gray-100 bg-white p-6 shadow-sm hover:shadow-md transition-shadow"
+            >
+              <h3 class="text-xl font-bold text-gray-900">{room.name}</h3>
+              <p class="mt-2 text-amber-700 font-semibold">{room.priceRange} (भोजन सहित)</p>
+              <p class="mt-2 text-gray-700">{room.bestFor}</p>
+              <p class="mt-4 text-amber-600 font-semibold">रूम डिटेल्स देखें →</p>
+            </a>
+          ))}
+        </div>
+
+        <div class="mt-14 rounded-3xl bg-gray-50 p-8">
+          <h2 class="text-2xl font-bold text-gray-900 mb-3">बुकिंग शॉर्टकट</h2>
+          <p class="text-gray-800">
+            तारीखें तय हैं? <a class="underline underline-offset-2" href="/hi/booking">बुकिंग पेज</a> देखें या WhatsApp करें।
+          </p>
+          <div class="mt-6 flex flex-col sm:flex-row gap-3">
+            <a
+              href="/hi/booking"
+              class="flex-1 rounded-xl border border-[#2d2215] px-6 py-3 text-[#2d2215] font-semibold hover:bg-[#f4ecdf] transition-colors text-center"
+            >
+              बुकिंग पेज
+            </a>
+            <a
+              href={WHATSAPP_BOOKING_LINK_HI}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex-1 rounded-xl bg-green-600 px-6 py-3 text-white font-semibold hover:bg-green-700 transition-colors text-center"
+            >
+              WhatsApp करें
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-14 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">FAQs</h2>
+        <div class="space-y-6">
+          {faqs.map((faq, index) => (
+            <div class="rounded-2xl border border-gray-100 bg-gray-50 p-6">
+              <h3 class="text-xl font-semibold text-gray-900 mb-2">
+                <span class="text-amber-700">Q{index + 1}.</span> {faq.question}
+              </h3>
+              <p class="text-gray-800 leading-relaxed">{faq.answer}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  </main>
+
+  {breadcrumbSchema && <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />}
+  {faqSchema && <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />}
+
+  <Footer />
+  <FloatingWhatsApp />
+</Layout>
+

@@ -1,0 +1,132 @@
+<!-- // src/pages/hi/gallery.astro -->
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import FloatingWhatsApp from '../../components/FloatingWhatsApp.astro';
+import { generateBreadcrumbSchema } from '../../lib/schemas/breadcrumb';
+import { DISPLAY_PHONE, TEL_LINK, WHATSAPP_BOOKING_LINK_HI } from '../../lib/constants';
+
+const breadcrumbSchema = generateBreadcrumbSchema([
+  { name: 'Home', url: '/hi' },
+  { name: 'Gallery', url: '/hi/gallery' },
+]);
+
+const images = [
+  { src: '/rooms/2-Bed-01.jpg', alt: '2 बेड रूम - श्री जानकी महल ट्रस्ट, अयोध्या (राम मंदिर के पास)' },
+  { src: '/rooms/2-Bed-02.jpg', alt: '2 बेड Non-AC रूम - शांत और साफ़ स्टे' },
+  { src: '/rooms/3-Bed-01.jpg', alt: '3 बेड रूम - फैमिली/ट्रिपल शेयरिंग' },
+  { src: '/rooms/3-Bed-02.jpg', alt: '3 बेड रूम सुविधाएँ - भोजन सहित स्टे' },
+  { src: '/rooms/4-Bed-01.jpg', alt: '4 बेड AC - ग्रुप/यात्री स्टे' },
+  { src: '/rooms/4-Bed-02.jpg', alt: '4 बेड रूम विकल्प - यात्री मंडल के लिए' },
+  { src: '/rooms/Deluxe.jpg', alt: 'डीलक्स रूम - प्रीमियम कम्फर्ट' },
+  { src: '/rooms/Suit-Luxury.jpg', alt: 'फैमिली सूट - अधिक स्पेस' },
+  { src: '/ayodhya-courtyard-peaceful.jpg', alt: 'शांत वातावरण/आंगन - आध्यात्मिक ठहराव' },
+  { src: '/ayodhya-prayer-room-meditation.jpg', alt: 'प्रार्थना/ध्यान का वातावरण' },
+  { src: '/ayodhya-spiritual-architecture.jpg', alt: 'अयोध्या का आध्यात्मिक वातावरण' },
+  { src: '/ayodhya-temple-spiritual.jpg', alt: 'मंदिर/आध्यात्मिक अनुभूति - अयोध्या' },
+] as const;
+---
+
+<Layout
+  title="गैलरी - श्री जानकी महल ट्रस्ट | रूम फोटो और स्टे अनुभव (अयोध्या)"
+  description={`श्री जानकी महल ट्रस्ट (अयोध्या) की गैलरी: रूम फोटो और स्टे अनुभव। उपलब्धता/अंतिम टैरिफ के लिए ${DISPLAY_PHONE} पर संपर्क करें।`}
+  keywords={[
+    'श्री जानकी महल ट्रस्ट गैलरी',
+    'जनकी महल रूम फोटो',
+    'अयोध्या रूम इमेज',
+    'राम मंदिर के पास स्टे फोटो',
+  ]}
+  canonical="/hi/gallery"
+  ogImage="/og.jpg"
+  lang="hi"
+>
+  <Header />
+
+  <main class="min-h-screen bg-[#faf8f3]">
+    <section class="bg-gradient-to-r from-amber-600 to-rose-600 text-white py-16">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-4xl sm:text-5xl font-bold mb-5">
+          श्री जानकी महल ट्रस्ट <span class="text-amber-200">गैलरी</span>
+        </h1>
+        <p class="text-xl max-w-3xl mx-auto">
+          रूम फोटो और राम मंदिर के पास शांत आध्यात्मिक ठहराव की झलक।
+        </p>
+        <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="/hi/rooms"
+            class="px-8 py-4 bg-white text-amber-700 font-bold rounded-lg hover:bg-gray-100 transition-colors text-lg"
+          >
+            रूम टाइप देखें
+          </a>
+          <a
+            href={WHATSAPP_BOOKING_LINK_HI}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="px-8 py-4 bg-green-600 text-white font-bold rounded-lg hover:bg-green-700 transition-colors text-lg"
+          >
+            WhatsApp बुकिंग
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-14 bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="rounded-3xl border border-amber-200 bg-amber-50 p-8">
+          <h2 class="text-2xl font-bold text-gray-900 mb-3">अंतिम कन्फर्मेशन चाहिए?</h2>
+          <p class="text-gray-800 leading-relaxed">
+            फोटो आपको रूम चुनने में मदद करते हैं। उपलब्धता/अंतिम टैरिफ के लिए आधिकारिक टीम से संपर्क करें:{' '}
+            <a class="font-semibold underline underline-offset-2" href={TEL_LINK}>
+              {DISPLAY_PHONE}
+            </a>
+            .
+          </p>
+          <p class="mt-2 text-sm text-gray-700">
+            मददगार पेज: <a class="underline underline-offset-2" href="/hi/room-prices">रूम प्राइस</a>,{' '}
+            <a class="underline underline-offset-2" href="/hi/amenities">सुविधाएँ</a>,{' '}
+            <a class="underline underline-offset-2" href="/hi/official-booking">आधिकारिक बुकिंग</a>.
+          </p>
+        </div>
+
+        <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {images.map((img, idx) => (
+            <figure class="rounded-3xl overflow-hidden bg-gray-50 border border-gray-100 shadow-sm">
+              <img
+                src={img.src}
+                alt={img.alt}
+                width="1200"
+                height="800"
+                loading={idx < 2 ? 'eager' : 'lazy'}
+                decoding="async"
+                class="h-56 w-full object-cover"
+              />
+              <figcaption class="sr-only">{img.alt}</figcaption>
+            </figure>
+          ))}
+        </div>
+
+        <div class="mt-14 grid gap-4 sm:grid-cols-2">
+          <a
+            href="/hi/booking"
+            class="rounded-xl bg-[#2d2215] px-6 py-4 text-white font-semibold hover:bg-[#b45309] transition-colors text-center"
+          >
+            रूम बुक करें
+          </a>
+          <a
+            href="/hi/contact-number"
+            class="rounded-xl border border-[#2d2215] px-6 py-4 text-[#2d2215] font-semibold hover:bg-[#f4ecdf] transition-colors text-center"
+          >
+            आधिकारिक संपर्क नंबर
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  {breadcrumbSchema && <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />}
+
+  <Footer />
+  <FloatingWhatsApp />
+</Layout>
+

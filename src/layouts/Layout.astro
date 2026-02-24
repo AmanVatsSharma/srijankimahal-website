@@ -55,6 +55,7 @@ const seoConfig: SEOConfig = {
 const seoData = generateSEOData(seoConfig, currentPath);
 const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
 const googleAdsConversionLabel = import.meta.env.PUBLIC_GOOGLE_ADS_CONVERSION_LABEL;
+const googleMapsListingUrl = 'https://www.google.com/maps?cid=13157769449180505616';
 const currentOgLocale = seoData.ogTags['og:locale'];
 const ogImageUrl = seoData.ogTags['og:image'];
 const isDefaultOgImage = typeof ogImageUrl === 'string' && ogImageUrl.endsWith('/og.jpg');
@@ -143,7 +144,22 @@ const globalStructuredData = {
         contactType: 'customer service',
         availableLanguage: ['English', 'Hindi'],
         areaServed: 'Ayodhya, Uttar Pradesh, India',
-        hoursAvailable: '24/7',
+        hoursAvailable: [
+          {
+            '@type': 'OpeningHoursSpecification',
+            dayOfWeek: [
+              'Monday',
+              'Tuesday',
+              'Wednesday',
+              'Thursday',
+              'Friday',
+              'Saturday',
+              'Sunday',
+            ],
+            opens: '00:00',
+            closes: '23:59',
+          },
+        ],
       },
       email: OFFICIAL_EMAIL,
       address: {
@@ -157,7 +173,7 @@ const globalStructuredData = {
       foundingDate: '2020',
       legalName: 'Sri Janaki Mahal Trust',
       description: 'Registered charitable trust providing comfortable hotel accommodation in Ayodhya near Ram Mandir',
-      sameAs: [WHATSAPP_LINK],
+      sameAs: [WHATSAPP_LINK, googleMapsListingUrl],
     },
     {
       '@type': 'LocalBusiness',
@@ -231,6 +247,64 @@ const globalStructuredData = {
       checkinTime: '14:00',
       checkoutTime: '12:00',
       priceRange: '₹1,250 - ₹4,150',
+      makesOffer: [
+        {
+          '@type': 'Offer',
+          name: '2 Bed Non-AC Room',
+          url: 'https://www.srijanakimahaltrustofficial.com/rooms/2-bed-non-ac',
+          priceCurrency: 'INR',
+          price: '1250',
+        },
+        {
+          '@type': 'Offer',
+          name: '2 Bed AC Room',
+          url: 'https://www.srijanakimahaltrustofficial.com/rooms/2-bed-ac',
+          priceCurrency: 'INR',
+          price: '1750',
+        },
+        {
+          '@type': 'Offer',
+          name: '3 Bed Non-AC Room',
+          url: 'https://www.srijanakimahaltrustofficial.com/rooms/3-bed-non-ac',
+          priceCurrency: 'INR',
+          price: '1950',
+        },
+        {
+          '@type': 'Offer',
+          name: '3 Bed AC Room',
+          url: 'https://www.srijanakimahaltrustofficial.com/rooms/3-bed-ac',
+          priceCurrency: 'INR',
+          price: '2550',
+        },
+        {
+          '@type': 'Offer',
+          name: '4 Bed Non-AC Room',
+          url: 'https://www.srijanakimahaltrustofficial.com/rooms/4-bed-non-ac',
+          priceCurrency: 'INR',
+          price: '2650',
+        },
+        {
+          '@type': 'Offer',
+          name: '4 Bed AC Room',
+          url: 'https://www.srijanakimahaltrustofficial.com/rooms/4-bed-ac',
+          priceCurrency: 'INR',
+          price: '3100',
+        },
+        {
+          '@type': 'Offer',
+          name: 'Deluxe Room',
+          url: 'https://www.srijanakimahaltrustofficial.com/rooms/deluxe-room',
+          priceCurrency: 'INR',
+          price: '3200',
+        },
+        {
+          '@type': 'Offer',
+          name: 'Family Suite',
+          url: 'https://www.srijanakimahaltrustofficial.com/rooms/family-suite',
+          priceCurrency: 'INR',
+          price: '3650',
+        },
+      ],
       amenityFeature: [
         {
           '@type': 'LocationFeatureSpecification',

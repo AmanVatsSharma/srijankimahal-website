@@ -24,7 +24,7 @@ Corporate groups can book Sri Janaki Mahal Trust in bulk. Contact early for mult
 
 ## Room Options
 
-See [room types](/rooms) and [group booking](/blog/sri-janaki-mahal-trust-group-booking). Multi-bed and family rooms available.
+See [room types](/rooms) and [group booking](/group-booking). Multi-bed and family rooms available.
 
 ---
 

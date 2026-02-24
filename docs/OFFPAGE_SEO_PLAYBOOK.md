@@ -15,7 +15,8 @@ Use this exact data everywhere (website, GBP, citations). Track any exception ex
 - **Address**: Vasudev Gath, Karsewakpuram, Ayodhya, Uttar Pradesh 224123, India  
 - **Phone**: +91 7759925612  
 - **Email**: srijanakimahaltrustofficial@gmail.com  
-- **Website**: https://www.srijanakimahaltrustofficial.com
+- **Website**: `https://www.srijanakimahaltrustofficial.com/`
+- **Google Maps / GBP listing URL**: `https://www.google.com/maps?cid=13157769449180505616`
 
 ### Name variations policy (to reduce confusion)
 - **Primary**: “Sri Janaki Mahal Trust” (use on most platforms)
@@ -48,6 +49,15 @@ Use this exact data everywhere (website, GBP, citations). Track any exception ex
 ### Posts cadence
 - 1–2 posts/week (festival season: 2–4/week).
 - Use: festival updates, darshan planning tips, booking verification reminders, travel/direction tips.
+- **Recommended link rotation** (avoid repeating only 1 URL):
+  - `/official-booking` (verification)
+  - `/contact-number` (official number)
+  - `/room-prices` (tariff ranges)
+  - `/amenities` (meals included + facilities)
+  - `/group-booking` (yatri mandal / bulk booking)
+  - `/gallery` (photos for trust)
+  - `/reviews` (review hub → Google Maps listing)
+- Templates: `docs/GBP_POST_TEMPLATES.md`
 
 ### Q&A management
 - Seed 10–15 common FAQs (darshan timing guidance, directions, booking verification).
@@ -69,7 +79,7 @@ Use this exact data everywhere (website, GBP, citations). Track any exception ex
 - **QR code at reception/exit**:
   - Sign text: “Share your experience on Google (optional)”.
 - **Website link**:
-  - A simple “Review us on Google” link/button (only if you have a real GBP review URL).
+  - A simple “Review us on Google” link/button using `/reviews` (which points to the verified GBP/Maps listing URL).
 
 ### Negative review response SOP
 - Respond within 24–48h, empathetic tone, no arguments.
@@ -88,6 +98,7 @@ Use this exact data everywhere (website, GBP, citations). Track any exception ex
 
 ### Tracking spreadsheet columns (recommended)
 - Source | Category | Priority | Listing URL | Status | Name used | Address used | Phone used | Website used | Email used | Last verified | Notes | Action
+- Template: `docs/citation-tracker-template.csv`
 
 ### Data hygiene rules
 - One primary phone across all sources (avoid multiple numbers).
@@ -104,6 +115,11 @@ Use this exact data everywhere (website, GBP, citations). Track any exception ex
 - Scam prevention: `/how-to-avoid-scams`
 - Festival guide: `/festival-booking-guide`
 - Directions: `/location/from-ayodhya-junction`, `/location/from-airport`, `/location/near-ram-mandir`
+- Room prices: `/room-prices`
+- Amenities: `/amenities`
+- Group booking: `/group-booking`
+- Gallery: `/gallery`
+- Reviews hub: `/reviews`
 - Blog hub: `/blog` (and Hindi `/hi/blog`)
 
 ### Target types
@@ -150,6 +166,7 @@ Thank you.
 
 ### Follow-up cadence
 - Day 0 outreach → Day 7 follow-up → Day 14 final follow-up (max 2 follow-ups)
+- Tracker template: `docs/backlink-outreach-tracker-template.csv`
 
 ### Red flags to avoid
 - Paid links (“pay ₹X for dofollow”) → decline
@@ -167,4 +184,28 @@ Track **actions**, not vanity claims on the website:
 - Review volume + response time
 
 **Important**: Do **not** publish numeric rating claims (“4.8/5”, “5-star”, “thousands of reviews”) on the website unless they are verifiable via a public source and used per Google’s structured data rules.
+
+---
+
+## 6) Impersonation defense (domains + wrong phone numbers)
+
+You confirmed **only** `https://www.srijanakimahaltrustofficial.com/` is official. Do this whenever you find a fake domain/number ranking above you.
+
+### Google reporting
+
+- **Search spam / deceptive pages**: use Google’s spam report form and include:
+  - query keyword (example: “sri janki mahal trust contact number”)
+  - fake URL(s)
+  - proof of official site (this domain) + official phone + screenshots
+- Report form: [Google Search spam report](https://search.google.com/search-console/report-spam)
+
+- **Phishing / social engineering**: report via Safe Browsing if the site is collecting money/UPI fraudulently.
+- Report form: [Google Safe Browsing (phishing)](https://safebrowsing.google.com/safebrowsing/report_phish)
+
+### Operational checklist (fast)
+
+- Capture evidence: screenshots, phone numbers, payment handles, URLs.
+- File reports (Google spam + Safe Browsing).
+- Report the domain to its registrar/hosting provider (abuse report).
+- Update your GBP “Posts” weekly linking to `/official-booking` + `/contact-number` so users learn the official number directly from Google too.
 

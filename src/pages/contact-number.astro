@@ -5,9 +5,8 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import FloatingWhatsApp from '../components/FloatingWhatsApp.astro';
 
-import { MOBILE_NUMBER, DISPLAY_PHONE, TEL_LINK, WHATSAPP_LINK } from '../lib/constants';
+import { DISPLAY_PHONE, TEL_LINK, WHATSAPP_LINK, SCHEMA_TELEPHONE } from '../lib/constants';
 
-const officialPhone = `+91${MOBILE_NUMBER}`;
 const displayPhone = DISPLAY_PHONE;
 
 /**
@@ -36,13 +35,28 @@ const contactStructuredData = {
     contactPoint: [
       {
         '@type': 'ContactPoint',
-        telephone: displayPhone,
+        telephone: SCHEMA_TELEPHONE,
         contactType: 'booking',
         areaServed: 'IN',
         availableLanguage: ['English', 'Hindi'],
         url: 'https://www.srijanakimahaltrustofficial.com/contact-number',
         productSupported: 'Room Booking',
-        hoursAvailable: 'Mo-Su 00:00-23:59'
+        hoursAvailable: [
+          {
+            '@type': 'OpeningHoursSpecification',
+            dayOfWeek: [
+              'Monday',
+              'Tuesday',
+              'Wednesday',
+              'Thursday',
+              'Friday',
+              'Saturday',
+              'Sunday',
+            ],
+            opens: '00:00',
+            closes: '23:59',
+          },
+        ],
       }
     ]
   }
@@ -136,20 +150,20 @@ const faqStructuredData = {
             <p class="text-sm uppercase tracking-[0.2em] text-[#b45309]">Call Or WhatsApp Now</p>
             <a
               class="mt-3 block text-3xl font-extrabold text-[#2d2215] hover:text-[#b45309]"
-              href={`tel:${officialPhone}`}
+              href={TEL_LINK}
             >
               {displayPhone}
             </a>
             <div class="mt-4 flex flex-col gap-3">
               <a
                 class="rounded-xl bg-[#b45309] px-6 py-3 text-base font-semibold text-white transition hover:bg-[#9a3f00]"
-                href={`tel:${officialPhone}`}
+                href={TEL_LINK}
               >
                 Call Official Helpline
               </a>
               <a
                 class="rounded-xl border border-[#b45309] px-6 py-3 text-base font-semibold text-[#b45309] transition hover:bg-[#fce9d5]"
-                href={`https://wa.me/${officialPhone}`}
+                href={WHATSAPP_LINK}
               >
                 WhatsApp Verified Team
               </a>
@@ -243,7 +257,7 @@ const faqStructuredData = {
           </p>
           <a
             class="mt-4 inline-flex items-center justify-center rounded-xl bg-[#2d2215] px-5 py-3 text-sm font-semibold uppercase tracking-wide text-white transition hover:bg-[#b45309]"
-            href={`tel:${officialPhone}`}
+            href={TEL_LINK}
           >
             Call {displayPhone}
           </a>
@@ -255,7 +269,7 @@ const faqStructuredData = {
           </p>
           <a
             class="mt-4 inline-flex items-center justify-center rounded-xl border border-[#2d2215] px-5 py-3 text-sm font-semibold uppercase tracking-wide text-[#2d2215] transition hover:bg-[#f4ecdf]"
-            href={`https://wa.me/${officialPhone}`}
+            href={WHATSAPP_LINK}
           >
             Message on WhatsApp
           </a>

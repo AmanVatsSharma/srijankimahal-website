@@ -23,8 +23,11 @@ This checklist is the off-page + operations side required to convert strong tech
   - Address: **Vasudev Gath, Karsewakpuram, Ayodhya, Uttar Pradesh 224123**
   - Phone: **+91 7759925612**
   - Website: **https://www.srijanakimahaltrustofficial.com/**
+- Keep your GBP/Maps listing link handy (for citations and verification): `https://www.google.com/maps?cid=13157769449180505616`
 - Add 15–25 real photos (exterior, rooms, check-in area, dining).
 - Publish 1–2 posts/week (festival season: 2–4/week).
+- Rotate post links (don’t always link only the homepage):
+  - `/official-booking`, `/contact-number`, `/room-prices`, `/amenities`, `/group-booking`, `/gallery`, `/reviews`
 
 ---
 
@@ -63,6 +66,11 @@ This checklist is the off-page + operations side required to convert strong tech
   - booking verification guide
   - scam avoidance guide
   - location/direction guides
+  - room prices (tariff ranges)
+  - amenities (meals included)
+  - group booking (yatri mandal)
+  - gallery (photos for trust)
+  - reviews hub (Google Maps listing)
 - Avoid paid link farms/PBNs.
 
 ---
@@ -74,6 +82,7 @@ This checklist is the off-page + operations side required to convert strong tech
   - travel updates
   - booking safety
   - room/service updates
+- Prefer “cluster” content that supports one pillar URL per intent (see `docs/CONTENT_CLUSTERS_V2.md`).
 - Keep English and Hindi pages aligned where possible.
 - Update old posts with fresh dates and real operational changes.
 

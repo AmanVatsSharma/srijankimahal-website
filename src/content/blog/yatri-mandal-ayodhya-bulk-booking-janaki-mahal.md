@@ -19,7 +19,7 @@ Yatri mandals can book Sri Janaki Mahal Trust in bulk. Contact early for group s
 
 - **Contact**: [official number](/contact-number) or [official booking](/official-booking)
 - **Share**: Dates, group size, room preference
-- **Rooms**: 3-bed, 4-bed, family options. See [rooms](/rooms) and [group booking](/blog/sri-janaki-mahal-trust-group-booking)
+- **Rooms**: 3-bed, 4-bed, family options. See [rooms](/rooms) and [group booking](/group-booking)
 - **Meals**: Included—convenient for groups
 
 ## Verification

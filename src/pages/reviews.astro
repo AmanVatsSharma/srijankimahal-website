@@ -1,0 +1,176 @@
+<!-- // src/pages/reviews.astro -->
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import FloatingWhatsApp from '../components/FloatingWhatsApp.astro';
+import { generateBreadcrumbSchema } from '../lib/schemas/breadcrumb';
+import { generateFAQSchema, type FAQItem } from '../lib/schemas/faq';
+import { DISPLAY_PHONE, TEL_LINK, WHATSAPP_BOOKING_LINK } from '../lib/constants';
+
+const googleMapsListingUrl = 'https://www.google.com/maps?cid=13157769449180505616';
+
+const breadcrumbSchema = generateBreadcrumbSchema([
+  { name: 'Home', url: '/' },
+  { name: 'Reviews', url: '/reviews' },
+]);
+
+const faqs: FAQItem[] = [
+  {
+    question: 'Where can I read Sri Janaki Mahal Trust reviews?',
+    answer:
+      'You can read verified reviews on our Google Maps listing. Use the “Open on Google Maps” button on this page.',
+  },
+  {
+    question: 'How do I leave a review?',
+    answer:
+      'After your stay, open our Google Maps listing and share your honest experience. Please do not share sensitive personal details in the review.',
+  },
+  {
+    question: 'Is there any reward or incentive for reviews?',
+    answer:
+      'No. We follow Google guidelines and never offer incentives for reviews. We request honest feedback from real guests only.',
+  },
+];
+
+const faqSchema = generateFAQSchema(faqs);
+---
+
+<Layout
+  title="Reviews - Sri Janaki Mahal Trust | Verified Guest Feedback (Ayodhya)"
+  description={`Read verified guest feedback for Sri Janaki Mahal Trust on Google Maps. For official booking and contact, call ${DISPLAY_PHONE}.`}
+  keywords={[
+    'Sri Janaki Mahal Trust reviews',
+    'Sri Janki Mahal Trust reviews',
+    'Janaki Mahal Trust feedback',
+    'Ayodhya stay reviews near Ram Mandir',
+    'Sri Janaki Mahal Trust Google reviews',
+  ]}
+  canonical="/reviews"
+  ogImage="/og.jpg"
+>
+  <Header />
+
+  <main class="min-h-screen bg-[#faf8f3]">
+    <section class="bg-gradient-to-r from-amber-600 to-rose-600 text-white py-16">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-4xl sm:text-5xl font-bold mb-5">
+          Sri Janaki Mahal Trust <span class="text-amber-200">Reviews</span>
+        </h1>
+        <p class="text-xl max-w-3xl mx-auto">
+          Read verified guest feedback on Google Maps and help other devotees plan a safe, peaceful stay near Ram Mandir.
+        </p>
+        <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href={googleMapsListingUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="px-8 py-4 bg-white text-amber-700 font-bold rounded-lg hover:bg-gray-100 transition-colors text-lg"
+          >
+            Open on Google Maps
+          </a>
+          <a
+            href={WHATSAPP_BOOKING_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="px-8 py-4 bg-green-600 text-white font-bold rounded-lg hover:bg-green-700 transition-colors text-lg"
+          >
+            WhatsApp booking
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-14 bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid gap-6 lg:grid-cols-2">
+          <div class="rounded-3xl border border-gray-100 bg-white p-8 shadow-sm">
+            <h2 class="text-2xl font-bold text-gray-900 mb-3">Important note</h2>
+            <p class="text-gray-800 leading-relaxed">
+              To stay compliant and transparent, this website does not publish unverifiable rating claims. For verified
+              review details, please check the Google Maps listing.
+            </p>
+            <p class="mt-4 text-gray-800 leading-relaxed">
+              For official booking channels and scam prevention, see{' '}
+              <a class="underline underline-offset-2" href="/official-booking">
+                official booking
+              </a>{' '}
+              and{' '}
+              <a class="underline underline-offset-2" href="/contact-number">
+                official contact number
+              </a>
+              .
+            </p>
+          </div>
+
+          <div class="rounded-3xl border border-amber-200 bg-amber-50 p-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-3">Need help right now?</h2>
+            <p class="text-gray-800 leading-relaxed">
+              For availability and booking confirmation, call the official desk:{' '}
+              <a class="font-semibold underline underline-offset-2" href={TEL_LINK}>
+                {DISPLAY_PHONE}
+              </a>
+              .
+            </p>
+            <div class="mt-6 grid gap-3 sm:grid-cols-2">
+              <a
+                href="/booking"
+                class="rounded-xl bg-[#2d2215] px-6 py-3 text-white font-semibold hover:bg-[#b45309] transition-colors text-center"
+              >
+                Booking page
+              </a>
+              <a
+                href="/how-to-avoid-scams"
+                class="rounded-xl border border-[#2d2215] px-6 py-3 text-[#2d2215] font-semibold hover:bg-[#f4ecdf] transition-colors text-center"
+              >
+                Avoid scams
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-14 rounded-3xl bg-gray-50 p-8">
+          <h2 class="text-2xl font-bold text-gray-900 mb-3">Leave an honest review (optional)</h2>
+          <ol class="mt-4 list-decimal pl-6 text-gray-800 space-y-2">
+            <li>Open our listing on Google Maps.</li>
+            <li>Share your stay dates (optional) and your honest experience.</li>
+            <li>Keep personal details private (no ID numbers, no payment screenshots).</li>
+          </ol>
+          <div class="mt-6">
+            <a
+              href={googleMapsListingUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center justify-center rounded-xl bg-white px-6 py-3 font-semibold text-amber-700 border border-amber-200 hover:bg-gray-50 transition-colors"
+            >
+              Open listing
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-14 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">FAQs</h2>
+        <div class="space-y-6">
+          {faqs.map((faq, index) => (
+            <div class="rounded-2xl border border-gray-100 bg-gray-50 p-6">
+              <h3 class="text-xl font-semibold text-gray-900 mb-2">
+                <span class="text-amber-700">Q{index + 1}.</span> {faq.question}
+              </h3>
+              <p class="text-gray-800 leading-relaxed">{faq.answer}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  </main>
+
+  {breadcrumbSchema && <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />}
+  {faqSchema && <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />}
+
+  <Footer />
+  <FloatingWhatsApp />
+</Layout>
+

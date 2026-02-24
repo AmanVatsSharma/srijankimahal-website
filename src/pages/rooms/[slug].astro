@@ -4,9 +4,8 @@ import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import FloatingWhatsApp from '../../components/FloatingWhatsApp.astro';
 import { generateBreadcrumbSchema } from '../../lib/schemas/breadcrumb';
-import { MOBILE_NUMBER, DISPLAY_PHONE, SCHEMA_TELEPHONE, TEL_LINK } from '../../lib/constants';
+import { DISPLAY_PHONE, SCHEMA_TELEPHONE, TEL_LINK, WHATSAPP_LINK } from '../../lib/constants';
 
-const officialPhone = `+91${MOBILE_NUMBER}`;
 const displayPhone = DISPLAY_PHONE;
 
 type RoomImage = {
@@ -459,7 +458,8 @@ const productSchema = {
   description: room.metaDescription,
   brand: {
     '@type': 'Brand',
-    name: 'Sri Janaki Mahal Trust'
+    '@id': 'https://www.srijanakimahaltrustofficial.com/#lodgingbusiness',
+    name: 'Sri Janaki Mahal Trust',
   },
   sku: `SJM-${slug.toUpperCase().replace(/-/g, '_')}`,
   category: 'Lodging',
@@ -474,6 +474,7 @@ const productSchema = {
     url: `https://www.srijanakimahaltrustofficial.com/rooms/${slug}`,
     seller: {
       '@type': 'Organization',
+      '@id': 'https://www.srijanakimahaltrustofficial.com/#organization',
       name: 'Sri Janaki Mahal Trust',
       telephone: SCHEMA_TELEPHONE
     }
@@ -567,7 +568,7 @@ const imageObjects: ImageObjectSchema[] = room.images.map((image: RoomImage) => 
               </a>
               <a
                 class="rounded-xl border border-[#2d2215] px-6 py-3 text-base font-semibold uppercase tracking-wide text-[#2d2215] transition hover:bg-[#f4ecdf]"
-                href={`https://wa.me/${officialPhone}`}
+                href={WHATSAPP_LINK}
               >
                 WhatsApp Official Desk
               </a>
@@ -635,6 +636,39 @@ const imageObjects: ImageObjectSchema[] = room.images.map((image: RoomImage) => 
               Payments happen only after confirmation and through links shared on the official number or trust email.
             </p>
           </div>
+        </div>
+      </section>
+
+      <section class="rounded-3xl bg-white p-8 shadow-md">
+        <h2 class="text-3xl font-semibold text-[#2d2215]">Helpful pages</h2>
+        <p class="mt-2 text-[#3d2f1c]">
+          For tariff ranges, inclusions, and planning guides, use these official pages.
+        </p>
+        <div class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <a
+            href="/room-prices"
+            class="rounded-2xl border border-[#f2dfc7] bg-[#faf0df] p-4 text-[#2d2215] font-semibold hover:bg-[#f4ecdf] transition"
+          >
+            Room prices →
+          </a>
+          <a
+            href="/amenities"
+            class="rounded-2xl border border-[#f2dfc7] bg-[#faf0df] p-4 text-[#2d2215] font-semibold hover:bg-[#f4ecdf] transition"
+          >
+            Amenities →
+          </a>
+          <a
+            href="/group-booking"
+            class="rounded-2xl border border-[#f2dfc7] bg-[#faf0df] p-4 text-[#2d2215] font-semibold hover:bg-[#f4ecdf] transition"
+          >
+            Group booking →
+          </a>
+          <a
+            href="/booking"
+            class="rounded-2xl border border-[#f2dfc7] bg-[#faf0df] p-4 text-[#2d2215] font-semibold hover:bg-[#f4ecdf] transition"
+          >
+            Booking page →
+          </a>
         </div>
       </section>
     </div>

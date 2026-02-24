@@ -20,6 +20,12 @@ const content = isHindi
         booking: 'आधिकारिक जानकी महल बुकिंग',
         rooms: 'रूम्स',
         blog: 'ब्लॉग',
+        more: 'अन्य',
+        prices: 'रूम प्राइस',
+        amenities: 'सुविधाएँ',
+        groupBooking: 'ग्रुप बुकिंग',
+        gallery: 'गैलरी',
+        reviews: 'रिव्यू',
         verify: 'श्री जांकी महल ट्रस्ट सत्यापन',
         faq: 'सामान्य प्रश्न',
         contact: 'आधिकारिक संपर्क नंबर',
@@ -40,6 +46,12 @@ const content = isHindi
         booking: 'Official Janaki Mahal Booking',
         rooms: 'Rooms',
         blog: 'Blog',
+        more: 'More',
+        prices: 'Room Prices',
+        amenities: 'Amenities',
+        groupBooking: 'Group Booking',
+        gallery: 'Gallery',
+        reviews: 'Reviews',
         verify: 'Verify Sri Janki Mahal Trust',
         faq: 'FAQs',
         contact: 'Official Contact Number',
@@ -77,6 +89,31 @@ const content = isHindi
         <a href={href('/booking')} class="text-sm font-semibold text-gray-900 hover:text-amber-600 transition-colors">{content.nav.booking}</a>
         <a href={href('/#rooms')} class="text-sm font-medium text-gray-900 hover:text-amber-600 transition-colors">{content.nav.rooms}</a>
         <a href={href('/blog')} class="text-sm font-medium text-gray-900 hover:text-amber-600 transition-colors">{content.nav.blog}</a>
+        <details class="relative">
+          <summary class="text-sm font-medium text-gray-900 hover:text-amber-600 transition-colors cursor-pointer flex items-center gap-1">
+            {content.nav.more}
+            <svg class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </summary>
+          <div class="absolute right-0 mt-2 w-56 rounded-xl border border-gray-200 bg-white shadow-lg p-2">
+            <a href={href('/room-prices')} class="block rounded-lg px-3 py-2 text-sm text-gray-900 hover:bg-amber-50 hover:text-amber-700 transition-colors">
+              {content.nav.prices}
+            </a>
+            <a href={href('/amenities')} class="block rounded-lg px-3 py-2 text-sm text-gray-900 hover:bg-amber-50 hover:text-amber-700 transition-colors">
+              {content.nav.amenities}
+            </a>
+            <a href={href('/group-booking')} class="block rounded-lg px-3 py-2 text-sm text-gray-900 hover:bg-amber-50 hover:text-amber-700 transition-colors">
+              {content.nav.groupBooking}
+            </a>
+            <a href={href('/gallery')} class="block rounded-lg px-3 py-2 text-sm text-gray-900 hover:bg-amber-50 hover:text-amber-700 transition-colors">
+              {content.nav.gallery}
+            </a>
+            <a href={href('/reviews')} class="block rounded-lg px-3 py-2 text-sm text-gray-900 hover:bg-amber-50 hover:text-amber-700 transition-colors">
+              {content.nav.reviews}
+            </a>
+          </div>
+        </details>
         <a href={href('/official')} class="text-sm font-medium text-gray-900 hover:text-amber-600 transition-colors">{content.nav.verify}</a>
         <a href={href('/#faq')} class="text-sm font-medium text-gray-900 hover:text-amber-600 transition-colors">{content.nav.faq}</a>
         <a href={href('/contact-number')} class="text-sm font-medium text-gray-900 hover:text-amber-600 transition-colors">{content.nav.contact}</a>
@@ -128,6 +165,11 @@ const content = isHindi
       <a href={href('/booking')} class="block px-4 py-2 text-sm font-semibold text-gray-900 hover:bg-gray-100 rounded-lg">{content.nav.booking}</a>
       <a href={href('/#rooms')} class="block px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 rounded-lg">{content.nav.rooms}</a>
       <a href={href('/blog')} class="block px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 rounded-lg">{content.nav.blog}</a>
+      <a href={href('/room-prices')} class="block px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 rounded-lg">{content.nav.prices}</a>
+      <a href={href('/amenities')} class="block px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 rounded-lg">{content.nav.amenities}</a>
+      <a href={href('/group-booking')} class="block px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 rounded-lg">{content.nav.groupBooking}</a>
+      <a href={href('/gallery')} class="block px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 rounded-lg">{content.nav.gallery}</a>
+      <a href={href('/reviews')} class="block px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 rounded-lg">{content.nav.reviews}</a>
       <a href={href('/official')} class="block px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 rounded-lg">{content.nav.verify}</a>
       <a href={href('/#faq')} class="block px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 rounded-lg">{content.nav.faq}</a>
       <a href={href('/contact-number')} class="block px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 rounded-lg">{content.nav.contact}</a>
@@ -200,3 +242,13 @@ const content = isHindi
     // no-op: do not block rendering
   }
 </script>
+
+<style>
+  summary {
+    list-style: none;
+  }
+
+  summary::-webkit-details-marker {
+    display: none;
+  }
+</style>

@@ -30,7 +30,7 @@ From Meti Ghat, head toward Ram Mandir / Karsewakpuram. Sri Janaki Mahal Trust i
 - **Footwear**: Comfortable shoes—paths may be uneven in places
 - **Water**: Carry a bottle, especially in summer
 - **Mornings**: Cooler and less crowded for walking
-- **Directions**: Use the [location guide](/location) and [official address](/blog/sri-janaki-mahal-trust-karsewakpuram-address) for reference
+- **Directions**: Use the [location guide](/location) and [official Karsewakpuram location](/location/karsewakpuram) for reference
 
 ## After Saryu Aarti
 

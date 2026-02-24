@@ -15,6 +15,21 @@ Purpose: keep one clear **primary intent** per page, avoid duplicate/doorway con
 - **`/rooms/4-bed-ac`**, **`/rooms/4-bed-non-ac`**: group / yatri mandal intent.
 - **`/rooms/deluxe-room`**, **`/rooms/family-suite`**: premium intent.
 
+### Pricing / tariff intent (commercial investigation)
+- **`/room-prices`**: “room prices”, “tariff”, “rate list”, “cost”, “AC room price”, “Non‑AC room price”, “family suite price”, “deluxe room price”, meals included pricing.
+
+### Amenities / meals intent (commercial investigation)
+- **`/amenities`**: “meals included”, “facilities”, “amenities”, “hot water”, “parking”, “family friendly”, “safe stay”, “pure veg meals included”.
+
+### Group / yatri mandal intent (high conversion)
+- **`/group-booking`**: “group booking”, “bulk booking”, “yatri mandal”, “family group”, “dharamshala for group in Ayodhya”.
+
+### Gallery intent (trust + conversion)
+- **`/gallery`**: “photos”, “images”, “room photos”, “property photos”, “inside view”.
+
+### Reviews intent (reputation)
+- **`/reviews`**: “reviews”, “guest feedback”, “Google reviews” (avoid unverified rating claims).
+
 ### Location intent (local SEO)
 - **`/location/near-ram-mandir`**: “near Ram Mandir”, walking distance, directions.
 - **`/location/karsewakpuram`**: locality targeting and NAP reinforcement.
@@ -30,6 +45,9 @@ Purpose: keep one clear **primary intent** per page, avoid duplicate/doorway con
 
 ### Internal linking rules (quick)
 - Every blog post should link to **one** primary conversion page: `(/official-booking)` or `(/booking)` based on intent.
+- Pricing-focused posts should also link to `(/room-prices)` (as secondary informational support).
+- Amenities-focused posts should also link to `(/amenities)` (as secondary informational support).
+- Group-focused posts should also link to `(/group-booking)` (as secondary informational support).
 - Room pages should link back to `(/booking)` and to 2–3 related room types (avoid keyword cannibalization).
 - Location pages should link to `(/booking)` and to the nearest relevant room pages.
 

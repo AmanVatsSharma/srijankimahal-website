@@ -20,9 +20,13 @@ const content = isHindi
         home: 'होम',
         about: 'हमारे बारे में',
         rooms: 'रूम्स',
+        roomPrices: 'रूम प्राइस',
+        amenities: 'सुविधाएँ',
+        groupBooking: 'ग्रुप बुकिंग',
         blog: 'ब्लॉग',
         contactNumber: 'आधिकारिक संपर्क नंबर',
         gallery: 'गैलरी',
+        reviews: 'रिव्यू',
         officialVerification: 'आधिकारिक सत्यापन',
         officialBooking: 'आधिकारिक बुकिंग',
         privacy: 'प्राइवेसी पॉलिसी',
@@ -53,9 +57,13 @@ const content = isHindi
         home: 'Home',
         about: 'About Us',
         rooms: 'Rooms',
+        roomPrices: 'Room Prices',
+        amenities: 'Amenities',
+        groupBooking: 'Group Booking',
         blog: 'Blog',
         contactNumber: 'Official Contact Number',
         gallery: 'Gallery',
+        reviews: 'Reviews',
         officialVerification: 'Official Verification',
         officialBooking: 'Official Booking',
         privacy: 'Privacy Policy',
@@ -95,9 +103,13 @@ const content = isHindi
           <li><a href={href('/')} class="hover:text-amber-600 transition-colors">{content.links.home}</a></li>
           <li><a href={href('/about')} class="hover:text-amber-600 transition-colors">{content.links.about}</a></li>
           <li><a href={href('/rooms')} class="hover:text-amber-600 transition-colors">{content.links.rooms}</a></li>
+          <li><a href={href('/room-prices')} class="hover:text-amber-600 transition-colors">{content.links.roomPrices}</a></li>
+          <li><a href={href('/amenities')} class="hover:text-amber-600 transition-colors">{content.links.amenities}</a></li>
+          <li><a href={href('/group-booking')} class="hover:text-amber-600 transition-colors">{content.links.groupBooking}</a></li>
+          <li><a href={href('/gallery')} class="hover:text-amber-600 transition-colors">{content.links.gallery}</a></li>
+          <li><a href={href('/reviews')} class="hover:text-amber-600 transition-colors">{content.links.reviews}</a></li>
           <li><a href={href('/blog')} class="hover:text-amber-600 transition-colors">{content.links.blog}</a></li>
           <li><a href={href('/contact-number')} class="hover:text-amber-600 transition-colors">{content.links.contactNumber}</a></li>
-          <li><a href={homeSectionHref('gallery')} class="hover:text-amber-600 transition-colors">{content.links.gallery}</a></li>
         </ul>
         
         <!-- Legal Links -->

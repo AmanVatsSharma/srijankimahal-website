@@ -4,6 +4,7 @@ import Layout from '../../../layouts/Layout.astro';
 import Header from '../../../components/Header.astro';
 import Footer from '../../../components/Footer.astro';
 import { generateBreadcrumbSchema, generateStandardBreadcrumbs } from '../../../lib/schemas/breadcrumb';
+import { DISPLAY_PHONE, TEL_LINK, WHATSAPP_BOOKING_LINK_HI } from '../../../lib/constants';
 
 type MarkdownModule = {
   frontmatter: {
@@ -189,13 +190,39 @@ const articleSchema = {
         <Content />
       </article>
 
+      <div class="mt-12 bg-gradient-to-r from-amber-600 to-rose-600 rounded-lg p-8 text-center text-white">
+        <h2 class="text-2xl font-bold mb-4">श्री जानकी महल ट्रस्ट में रूम बुक करें</h2>
+        <p class="text-lg mb-6 opacity-90">
+          राम मंदिर के पास भोजन सहित कमरे। तुरंत बुकिंग के लिए कॉल/WhatsApp करें।
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href={TEL_LINK}
+            class="px-6 py-3 bg-white text-amber-700 font-bold rounded-lg hover:bg-gray-100 transition-colors"
+          >
+            कॉल: {DISPLAY_PHONE}
+          </a>
+          <a
+            href={WHATSAPP_BOOKING_LINK_HI}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="px-6 py-3 bg-green-600 text-white font-bold rounded-lg hover:bg-green-700 transition-colors"
+          >
+            WhatsApp बुकिंग
+          </a>
+        </div>
+      </div>
+
       <div class="mt-10 bg-white rounded-lg shadow-lg p-6">
         <h2 class="text-xl font-bold text-gray-900 mb-3">{contentLabels.verifiedLinks}</h2>
         <ul class="list-disc list-inside text-gray-700 space-y-2">
           <li><a class="text-amber-700 font-semibold hover:underline" href="/hi/official-booking">आधिकारिक बुकिंग</a></li>
-          <li><a class="text-amber-700 font-semibold hover:underline" href="/hi/booking-verification-guide">बुकिंग सत्यापन गाइड</a></li>
+          <li><a class="text-amber-700 font-semibold hover:underline" href="/hi/booking">बुकिंग पेज</a></li>
+          <li><a class="text-amber-700 font-semibold hover:underline" href="/hi/contact-number">आधिकारिक संपर्क नंबर</a></li>
+          <li><a class="text-amber-700 font-semibold hover:underline" href="/hi/room-prices">रूम प्राइस/टैरिफ</a></li>
+          <li><a class="text-amber-700 font-semibold hover:underline" href="/hi/amenities">सुविधाएँ (भोजन सहित)</a></li>
           <li><a class="text-amber-700 font-semibold hover:underline" href="/hi/how-to-avoid-scams">फर्जी बुकिंग से बचें</a></li>
-          <li><a class="text-amber-700 font-semibold hover:underline" href="/hi/rooms">कमरे और कीमत</a></li>
+          <li><a class="text-amber-700 font-semibold hover:underline" href="/hi/rooms">कमरे (डिटेल्स)</a></li>
         </ul>
       </div>
 

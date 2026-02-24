@@ -94,6 +94,146 @@
       ],
       "destination": "https://www.srijanakimahaltrustofficial.com/$1",
       "permanent": true
+    },
+    {
+      "source": "/blog/how-to-contact-janaki-mahal-trust-official-number",
+      "destination": "/contact-number",
+      "permanent": true
+    },
+    {
+      "source": "/blog/verified-contact-number-shri-janki-mahal",
+      "destination": "/contact-number",
+      "permanent": true
+    },
+    {
+      "source": "/blog/janaki-mahal-trust-ayodhya-official-helpline-number",
+      "destination": "/contact-number",
+      "permanent": true
+    },
+    {
+      "source": "/blog/sri-janaki-mahal-trust-contact-number-address",
+      "destination": "/contact-number",
+      "permanent": true
+    },
+    {
+      "source": "/blog/sri-janki-mahal-trust-contact-details-phone-email-address",
+      "destination": "/contact-number",
+      "permanent": true
+    },
+    {
+      "source": "/blog/sri-janaki-mahal-trust-official-booking-number",
+      "destination": "/official-booking",
+      "permanent": true
+    },
+    {
+      "source": "/blog/sri-janaki-mahal-trust-room-booking-online-number",
+      "destination": "/booking",
+      "permanent": true
+    },
+    {
+      "source": "/blog/sri-janaki-mahal-trust-room-booking-online",
+      "destination": "/booking",
+      "permanent": true
+    },
+    {
+      "source": "/blog/janaki-mahal-trust-ayodhya-online-booking-steps",
+      "destination": "/booking",
+      "permanent": true
+    },
+    {
+      "source": "/blog/sri-janaki-mahal-trust-ayodhya-complete-booking-guide",
+      "destination": "/booking",
+      "permanent": true
+    },
+    {
+      "source": "/blog/sri-janaki-mahal-trust-advance-booking-guide",
+      "destination": "/booking",
+      "permanent": true
+    },
+    {
+      "source": "/blog/sri-janki-mahal-official-booking-guide-2025",
+      "destination": "/official-booking",
+      "permanent": true
+    },
+    {
+      "source": "/blog/step-by-step-janaki-mahal-booking-whatsapp",
+      "destination": "/booking",
+      "permanent": true
+    },
+    {
+      "source": "/blog/sri-janaki-mahal-trust-location-map-address",
+      "destination": "/location/ayodhya",
+      "permanent": true
+    },
+    {
+      "source": "/blog/sri-janaki-mahal-trust-karsewakpuram-address",
+      "destination": "/location/karsewakpuram",
+      "permanent": true
+    },
+    {
+      "source": "/blog/sri-janki-mahal-trust-vasudev-gath-address",
+      "destination": "/location/ayodhya",
+      "permanent": true
+    },
+    {
+      "source": "/blog/janaki-mahal-karsewakpuram-location-guide",
+      "destination": "/location/karsewakpuram",
+      "permanent": true
+    },
+    {
+      "source": "/blog/janki-mahal-near-ram-mandir-distance-directions",
+      "destination": "/location/near-ram-mandir",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-reach-sri-janaki-mahal-trust",
+      "destination": "/location",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-reach-sri-janaki-mahal-trust-from-ayodhya-station",
+      "destination": "/location/from-ayodhya-junction",
+      "permanent": true
+    },
+    {
+      "source": "/blog/reach-janaki-mahal-trust-from-ayodhya-junction",
+      "destination": "/location/from-ayodhya-junction",
+      "permanent": true
+    },
+    {
+      "source": "/blog/janaki-mahal-trust-room-prices-2025-all-types",
+      "destination": "/room-prices",
+      "permanent": true
+    },
+    {
+      "source": "/blog/sri-janaki-mahal-trust-room-prices-pricing-guide",
+      "destination": "/room-prices",
+      "permanent": true
+    },
+    {
+      "source": "/blog/shri-janki-mahal-amenities-facilities-list",
+      "destination": "/amenities",
+      "permanent": true
+    },
+    {
+      "source": "/blog/sri-janaki-mahal-trust-services-amenities-facilities",
+      "destination": "/amenities",
+      "permanent": true
+    },
+    {
+      "source": "/blog/sri-janaki-mahal-trust-group-booking",
+      "destination": "/group-booking",
+      "permanent": true
+    },
+    {
+      "source": "/blog/janaki-mahal-trust-reviews-guest-testimonials",
+      "destination": "/reviews",
+      "permanent": true
+    },
+    {
+      "source": "/blog/sri-janaki-mahal-trust-reviews-and-ratings",
+      "destination": "/reviews",
+      "permanent": true
     }
   ],
   "trailingSlash": false,

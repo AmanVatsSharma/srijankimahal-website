@@ -39,7 +39,37 @@ This file records the on-site SEO + content changes made on **2026-02-24** to im
 - Added permanent redirects (301) from removed blog URLs to primary pages in `vercel.json`
 - Fixed one internal link in `src/content/blog/ayodhya-meti-ghat-to-janaki-mahal-walking-route.md` to point to `/location/karsewakpuram`
 
+## Phase 3 — Keyword expansion pillars + controlled clusters
+
+- **New pillar landing pages (EN + HI)**
+  - Added new high-intent pages:
+    - `src/pages/room-prices.astro` and `src/pages/hi/room-prices.astro`
+    - `src/pages/amenities.astro` and `src/pages/hi/amenities.astro`
+    - `src/pages/group-booking.astro` and `src/pages/hi/group-booking.astro`
+    - `src/pages/gallery.astro` and `src/pages/hi/gallery.astro`
+    - `src/pages/reviews.astro` and `src/pages/hi/reviews.astro` (compliance-first; links to Google Maps listing)
+- **Navigation + internal linking upgrades**
+  - Added pillar links into:
+    - `src/components/Header.astro` (desktop “More” menu + mobile links)
+    - `src/components/Footer.astro` (quick links)
+  - Strengthened contextual links to pillars in:
+    - `src/components/RoomsSection.astro`
+    - `src/pages/rooms/index.astro` and `src/pages/hi/rooms/index.astro`
+    - `src/pages/rooms/[slug].astro` and `src/pages/hi/rooms/[slug].astro`
+    - `src/pages/blog/[slug].astro` and `src/pages/hi/blog/[slug].astro`
+- **Content consolidation for new pillars (anti-cannibalization)**
+  - Removed duplicate-intent blog posts (prices/amenities/group/reviews) and added 301 redirects to pillars in `vercel.json`.
+  - Updated internal links in remaining posts to point to the pillar URLs (not removed blog URLs).
+- **Off-page + measurement ops**
+  - Added owner-facing templates:
+    - `docs/GBP_POST_TEMPLATES.md`
+    - `docs/citation-tracker-template.csv`
+    - `docs/backlink-outreach-tracker-template.csv`
+    - `docs/GSC_WEEKLY_REVIEW_PLAYBOOK.md`
+    - `docs/gsc-weekly-tracker-template.csv`
+  - Added cluster governance: `docs/CONTENT_CLUSTERS_V2.md`
+
 ## Current integrity signals
 
-- Post-change strict SEO audit: passing (371 HTML pages)
+- Post-change strict SEO audit: passing (404 HTML pages, 0 failures)
 

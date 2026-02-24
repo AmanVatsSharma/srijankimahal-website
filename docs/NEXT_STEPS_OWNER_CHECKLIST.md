@@ -15,23 +15,7 @@ This checklist is the off-page + operations side required to convert strong tech
 
 ---
 
-## 1) Google Business Profile (GBP) — Week 1
-
-- Claim + verify GBP listing.
-- Ensure NAP exactly matches website:
-  - Name: **Sri Janaki Mahal Trust**
-  - Address: **Vasudev Gath, Karsewakpuram, Ayodhya, Uttar Pradesh 224123**
-  - Phone: **+91 7759925612**
-  - Website: **https://www.srijanakimahaltrustofficial.com/**
-- Keep your GBP/Maps listing link handy (for citations and verification): `https://www.google.com/maps?cid=13157769449180505616`
-- Add 15–25 real photos (exterior, rooms, check-in area, dining).
-- Publish 1–2 posts/week (festival season: 2–4/week).
-- Rotate post links (don’t always link only the homepage):
-  - `/official-booking`, `/contact-number`, `/room-prices`, `/amenities`, `/group-booking`, `/gallery`, `/reviews`
-
----
-
-## 2) Google Search Console (GSC) — Week 1
+## 1) Google Search Console (GSC) — Week 1 (must-do)
 
 - Verify property ownership for canonical domain.
 - Submit:
@@ -40,14 +24,36 @@ This checklist is the off-page + operations side required to convert strong tech
 - Review coverage report weekly:
   - fix any “Crawled - currently not indexed” clusters
   - inspect excluded URLs and canonical conflicts
+- **Device split check (Desktop vs Mobile)**:
+  - compare clicks/impressions/position for `/booking`, `/official-booking`, `/contact-number`
 
 ---
 
-## 3) Citation Cleanup — Weeks 1–3
+## 2) Authority / Backlinks (All‑India) — Ongoing (weekly/monthly)
 
-- Create/update listings on trusted platforms (Google, Apple, Bing, relevant India/local directories).
-- Merge/remove duplicate listings with wrong phone/name/address.
-- Enforce a single canonical NAP everywhere.
+- Outreach to relevant **national** travel/spiritual sites and guides (avoid paid link farms/PBNs).
+- Pitch value pages already built:
+  - `/official-booking`, `/contact-number`
+  - `/booking-verification-guide`, `/how-to-avoid-scams`
+  - `/room-prices`, `/amenities`, `/group-booking`
+  - `/gallery`, `/reviews`
+- Use natural anchors (“official booking page”, “official contact number”, “booking verification guide”).
+
+---
+
+## 3) Google Business Profile (GBP) — Optional trust layer (Week 1–2)
+
+- Claim + verify GBP listing.
+- Ensure NAP exactly matches website:
+  - Name: **Sri Janaki Mahal Trust**
+  - Address: **Vasudev Gath, Karsewakpuram, Ayodhya, Uttar Pradesh 224123**
+  - Phone: **+91 7759925612**
+  - Website: **https://www.srijanakimahaltrustofficial.com/**
+- Keep your GBP/Maps listing link handy: `https://www.google.com/maps?cid=13157769449180505616`
+- Add 15–25 real photos (exterior, rooms, check-in area, dining).
+- Publish 1–2 posts/week (festival season: 2–4/week).
+- Rotate post links (don’t always link only the homepage):
+  - `/official-booking`, `/contact-number`, `/room-prices`, `/amenities`, `/group-booking`, `/gallery`, `/reviews`
 
 ---
 
@@ -59,23 +65,7 @@ This checklist is the off-page + operations side required to convert strong tech
 
 ---
 
-## 5) Authority / Backlinks — Ongoing (monthly)
-
-- Outreach to relevant Ayodhya/travel/spiritual guides.
-- Pitch value pages already built:
-  - booking verification guide
-  - scam avoidance guide
-  - location/direction guides
-  - room prices (tariff ranges)
-  - amenities (meals included)
-  - group booking (yatri mandal)
-  - gallery (photos for trust)
-  - reviews hub (Google Maps listing)
-- Avoid paid link farms/PBNs.
-
----
-
-## 6) Content Ops — Ongoing (monthly)
+## 5) Content Ops — Ongoing (monthly)
 
 - Publish fresh articles around:
   - festivals

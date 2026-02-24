@@ -143,7 +143,7 @@ const globalStructuredData = {
         telephone: SCHEMA_TELEPHONE,
         contactType: 'customer service',
         availableLanguage: ['English', 'Hindi'],
-        areaServed: 'Ayodhya, Uttar Pradesh, India',
+        areaServed: 'IN',
         hoursAvailable: [
           {
             '@type': 'OpeningHoursSpecification',
@@ -207,7 +207,7 @@ const globalStructuredData = {
         latitude: 26.8039286,
         longitude: 82.2109433,
       },
-      areaServed: 'Ayodhya, Uttar Pradesh, India',
+      areaServed: 'IN',
       openingHours: 'Mo-Su 00:00-23:59',
       priceRange: '₹1,250 - ₹4,150',
       description: 'Best hotel in Ayodhya offering comfortable accommodation near Ram Mandir with all meals included and online booking',
@@ -347,47 +347,67 @@ const globalStructuredData = {
     <!-- Note: keep image preloads page-scoped via the `head` slot to avoid wasting bandwidth on non-hero pages. -->
 
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17922029438"></script>
+    <script>
+      try {
+        (function () {
+          var loaded = false;
+          function loadGtag() {
+            if (loaded) return;
+            loaded = true;
+            var s = document.createElement('script');
+            s.async = true;
+            s.src = 'https://www.googletagmanager.com/gtag/js?id=AW-17922029438';
+            document.head.appendChild(s);
+          }
+
+          if (typeof window.requestIdleCallback === 'function') {
+            window.requestIdleCallback(loadGtag, { timeout: 2000 });
+          } else {
+            window.addEventListener('load', loadGtag, { once: true });
+          }
+        })();
+      } catch {
+        // no-op
+      }
+    </script>
     <script>
       // @ts-ignore - Google Analytics global variables
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+      function gtag() { dataLayer.push(arguments); }
       // @ts-ignore
       window.gtag = gtag;
       gtag('js', new Date());
 
       gtag('config', 'AW-17922029438');
     </script>
-    
+
     <!-- Event snippet for Click to call conversion page -->
     <script define:vars={{ googleAdsConversionLabel }}>
       // Click conversion helper
-      // - If conversion label isn't configured, do not block navigation.
-      // - Keeps `onclick="return gtag_report_conversion(url)"` safe.
-      // @ts-ignore
-      function gtag_report_conversion(url) {
-        try {
-          if (!googleAdsConversionLabel || typeof window.gtag !== 'function') {
-            return true;
-          }
-
-          var callback = function () {
-            if (typeof url !== 'undefined') {
-              window.location = url;
+      // - Always return `true` so navigation (tel/wa) is never blocked.
+      // - Attach to `window` so inline `onclick="return gtag_report_conversion(...)"` can call it.
+      try {
+        // @ts-ignore
+        window.gtag_report_conversion = function gtag_report_conversion(url) {
+          try {
+            if (!googleAdsConversionLabel || typeof window.gtag !== 'function') {
+              return true;
             }
-          };
 
-          // @ts-ignore - Google Analytics global function
-          window.gtag('event', 'conversion', {
-            'send_to': 'AW-17922029438/' + googleAdsConversionLabel,
-            'value': 1.0,
-            'currency': 'INR',
-            'event_callback': callback
-          });
-          return false;
-        } catch {
+            // @ts-ignore - Google Analytics global function
+            window.gtag('event', 'conversion', {
+              'send_to': 'AW-17922029438/' + googleAdsConversionLabel,
+              'value': 1.0,
+              'currency': 'INR',
+              'event_callback': function () {},
+            });
+          } catch {
+            // no-op
+          }
           return true;
-        }
+        };
+      } catch {
+        // no-op
       }
     </script>
     

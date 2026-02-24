@@ -73,3 +73,24 @@ This file records the on-site SEO + content changes made on **2026-02-24** to im
 
 - Post-change strict SEO audit: passing (404 HTML pages, 0 failures)
 
+## Phase 4 — Mobile ranking + redirects audit (Mobile-first fixes)
+
+- **Mobile-first stability fixes**
+  - Fixed `gtag_report_conversion` so it is attached to `window` and never blocks navigation: `src/layouts/Layout.astro`
+  - Deferred loading of the external `gtag.js` script until idle/load to reduce mobile contention for LCP: `src/layouts/Layout.astro`
+  - Made `FloatingWhatsApp` language-aware (EN/HI), reduced motion for users with `prefers-reduced-motion`, and added dismiss persistence + delayed/scroll-based bubble display: `src/components/FloatingWhatsApp.astro`
+- **All-India intent alignment**
+  - Added “book from any city in India” cues and FAQ support on core money pages:
+    - `src/pages/booking.astro`
+    - `src/pages/official-booking.astro`
+    - `src/pages/contact-number.astro`
+    - `src/pages/official.astro`
+  - Expanded `areaServed` to `IN` for global organization/business schema contact points: `src/layouts/Layout.astro`
+- **Redirect policy (as requested)**
+  - Removed blog-only redirects from `vercel.json` (kept HTTP→HTTPS canonical redirect).
+- **Anti-cannibalization without redirects**
+  - Added blog noindex policy for high-overlap transactional blog slugs (contact/booking/location/prices/amenities/group/reviews) to keep one intent per primary page:
+    - `src/pages/blog/[slug].astro`
+    - `src/pages/hi/blog/[slug].astro`
+  - Updated sitemap filter to exclude noindex blog URLs from sitemap output: `astro.config.mjs`
+

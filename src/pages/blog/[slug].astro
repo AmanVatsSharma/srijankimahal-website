@@ -114,6 +114,53 @@ const post = {
   ...frontmatter,
 };
 
+/**
+ * If a blog slug overlaps a primary pillar intent, keep the blog URL accessible
+ * but prevent cannibalization by:
+ * - canonicalizing to the primary page
+ * - applying noindex
+ *
+ * This replaces blog-only redirects (removed from Vercel) while keeping one intent per primary page.
+ */
+const canonicalOverrides: Record<string, string> = {
+  'how-to-contact-janaki-mahal-trust-official-number': '/contact-number',
+  'verified-contact-number-shri-janki-mahal': '/contact-number',
+  'janaki-mahal-trust-ayodhya-official-helpline-number': '/contact-number',
+  'sri-janaki-mahal-trust-contact-number-address': '/contact-number',
+  'sri-janki-mahal-trust-contact-details-phone-email-address': '/contact-number',
+
+  'sri-janaki-mahal-trust-official-booking-number': '/official-booking',
+  'sri-janki-mahal-official-booking-guide-2025': '/official-booking',
+
+  'sri-janaki-mahal-trust-room-booking-online-number': '/booking',
+  'sri-janaki-mahal-trust-room-booking-online': '/booking',
+  'janaki-mahal-trust-ayodhya-online-booking-steps': '/booking',
+  'sri-janaki-mahal-trust-ayodhya-complete-booking-guide': '/booking',
+  'sri-janaki-mahal-trust-advance-booking-guide': '/booking',
+  'step-by-step-janaki-mahal-booking-whatsapp': '/booking',
+
+  'sri-janaki-mahal-trust-location-map-address': '/location/ayodhya',
+  'sri-janaki-mahal-trust-karsewakpuram-address': '/location/karsewakpuram',
+  'sri-janki-mahal-trust-vasudev-gath-address': '/location/ayodhya',
+  'janaki-mahal-karsewakpuram-location-guide': '/location/karsewakpuram',
+  'janki-mahal-near-ram-mandir-distance-directions': '/location/near-ram-mandir',
+  'how-to-reach-sri-janaki-mahal-trust': '/location',
+  'how-to-reach-sri-janaki-mahal-trust-from-ayodhya-station': '/location/from-ayodhya-junction',
+  'reach-janaki-mahal-trust-from-ayodhya-junction': '/location/from-ayodhya-junction',
+
+  'janaki-mahal-trust-room-prices-2025-all-types': '/room-prices',
+  'sri-janaki-mahal-trust-room-prices-pricing-guide': '/room-prices',
+  'shri-janki-mahal-amenities-facilities-list': '/amenities',
+  'sri-janaki-mahal-trust-services-amenities-facilities': '/amenities',
+  'sri-janaki-mahal-trust-group-booking': '/group-booking',
+  'janaki-mahal-trust-reviews-guest-testimonials': '/reviews',
+  'sri-janaki-mahal-trust-reviews-and-ratings': '/reviews',
+};
+
+const canonicalOverride = canonicalOverrides[slug];
+const pageCanonical = `/blog/${slug}`;
+const pageNoindex = Boolean(canonicalOverride);
+
 // NOTE: build keyword list without duplicates and keep them relevant to booking intent
 const baseKeywords = [
   'Sri Janaki Mahal Trust',
@@ -180,7 +227,8 @@ const articleSchema = {
   title={`${post.title} | Blog`}
   description={post.description}
   keywords={keywords}
-  canonical={`/blog/${slug}`}
+  canonical={pageCanonical}
+  noindex={pageNoindex}
   ogType="article"
   ogImage={'/og.jpg'}
   alternateLanguages={alternateLanguages}

@@ -20,6 +20,7 @@ Track these pages separately (EN + HI):
 1) **Performance → Search results**
    - Date range: last 7 days vs previous 7 days
    - Check trends: impressions, clicks, CTR, avg position
+   - **Device split**: Desktop vs Mobile (compare the same page/query clusters)
 
 2) **Page filter (one page at a time)**
    - Start with: `/official-booking`, `/booking`, `/contact-number`
@@ -41,6 +42,14 @@ Track these pages separately (EN + HI):
 5) **Validate + deploy**
    - Run `npm run seo:verify:strict`
    - Deploy only when strict audit passes
+
+### Device split interpretation (what to look for)
+
+- If **Desktop improves but Mobile is stuck**, the most common causes are:
+  - mobile CWV (LCP/CLS/INP) worse than desktop
+  - intrusive mobile UI covering content
+  - heavy scripts/fonts competing with hero LCP resources on mobile networks
+  - titles/snippets not matching mobile intent (users want “official number / verified booking” fast)
 
 ### What “good” looks like (2–6 weeks after deploy)
 

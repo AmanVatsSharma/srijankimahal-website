@@ -1,5 +1,15 @@
 ---
-import { WHATSAPP_BOOKING_LINK_HI } from '../lib/constants';
+import { WHATSAPP_BOOKING_LINK, WHATSAPP_BOOKING_LINK_HI } from '../lib/constants';
+import { detectLangFromPath } from '../lib/i18n';
+
+const currentLang = detectLangFromPath(Astro.url.pathname);
+const isHindi = currentLang === 'hi';
+const whatsappLink = isHindi ? WHATSAPP_BOOKING_LINK_HI : WHATSAPP_BOOKING_LINK;
+const bubbleText = isHindi
+  ? 'अयोध्या नगरी में आपका स्वागत है! श्री जानकी महल में अच्छे दामों पर सर्वोत्तम कमरे बुक करें।'
+  : 'Welcome to Ayodhya. Book verified rooms at Sri Janaki Mahal Trust on WhatsApp.';
+const closeLabel = isHindi ? 'बंद करें' : 'Close';
+const chatLabel = isHindi ? 'WhatsApp पर चैट करें' : 'Chat on WhatsApp';
 ---
 
 <!--
@@ -16,30 +26,29 @@ import { WHATSAPP_BOOKING_LINK_HI } from '../lib/constants';
     <span
       class="block bg-white rounded-xl rounded-br-md shadow-lg px-4 py-2 text-green-900 text-base font-medium border-l-4 border-green-500 leading-tight"
     >
-      अयोध्या नगरी में आपका स्वागत है!<br />
-      श्री जानकी महल में अच्छे दामों पर सर्वोत्तम कमरे बुक करें।
+      {bubbleText}
     </span>
     <button
       id="wa-close-bubble"
       class="absolute -top-2 -right-2 bg-gray-200 hover:bg-red-400 text-gray-900 rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold shadow border border-gray-300 transition-all"
-      aria-label="बंद करें"
+      aria-label={closeLabel}
       type="button"
       tabindex="0"
     >&times;</button>
   </div>
   <div class="relative w-16 h-16 flex items-center justify-center">
     <span
-      class="absolute inset-0 rounded-full bg-green-400/80 animate-ping z-0"
+      class="absolute inset-0 rounded-full bg-green-400/80 animate-ping z-0 motion-reduce:hidden"
       aria-hidden="true"
     ></span>
     <a
-      href={WHATSAPP_BOOKING_LINK_HI}
+      href={whatsappLink}
       target="_blank"
       rel="noopener noreferrer"
       class="relative z-10 flex items-center justify-center w-16 h-16 rounded-full bg-green-500 text-white shadow-2xl hover:bg-green-600 transition-all duration-200 focus:outline-none focus:ring-4 focus:ring-green-300 group"
-      title="WhatsApp पर चैट करें"
-      aria-label="WhatsApp पर चैट करें"
-      onclick={`return gtag_report_conversion('${WHATSAPP_BOOKING_LINK_HI}');`}
+      title={chatLabel}
+      aria-label={chatLabel}
+      onclick={`return gtag_report_conversion('${whatsappLink}');`}
     >
       <!-- Proper WhatsApp SVG Icon from official source (https://worldvectorlogo.com/logo/whatsapp-icon-1) -->
       <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 48 48" class="block" aria-hidden="true">
@@ -54,20 +63,54 @@ import { WHATSAPP_BOOKING_LINK_HI } from '../lib/constants';
 </div>
 <script is:inline>
   try {
+    const DISMISS_KEY = 'waBubbleDismissed';
+    const SHOW_AFTER_MS = 2500;
+    const SHOW_AFTER_SCROLL_PX = 120;
+
+    const wrap = document.getElementById('whatsapp-bubble-text-container');
+    const close = document.getElementById('wa-close-bubble');
+
+    const alreadyDismissed = (() => {
+      try {
+        return window.localStorage.getItem(DISMISS_KEY) === '1';
+      } catch {
+        return false;
+      }
+    })();
+
+    const hideBubble = () => {
+      if (!wrap) return;
+      wrap.classList.add('hidden');
+      try {
+        window.localStorage.setItem(DISMISS_KEY, '1');
+      } catch {
+        // ignore
+      }
+    };
+
+    const showBubble = () => {
+      if (!wrap || alreadyDismissed) return;
+      wrap.classList.remove('hidden');
+    };
+
+    if (close) {
+      close.onclick = () => hideBubble();
+    }
+
+    let shown = false;
+    const maybeShow = () => {
+      if (shown || alreadyDismissed) return;
+      if (window.scrollY >= SHOW_AFTER_SCROLL_PX) {
+        shown = true;
+        showBubble();
+        window.removeEventListener('scroll', maybeShow);
+      }
+    };
+
+    window.addEventListener('scroll', maybeShow, { passive: true });
     setTimeout(() => {
-      const wrap = document.getElementById('whatsapp-bubble-text-container');
-      const close = document.getElementById('wa-close-bubble');
-
-      if (wrap) {
-        wrap.classList.remove('hidden');
-      }
-
-      if (close && wrap) {
-        close.onclick = () => {
-          wrap.classList.add('hidden');
-        };
-      }
-    }, 1800);
+      if (!shown) showBubble();
+    }, SHOW_AFTER_MS);
   } catch {
     // no-op: do not block page rendering
   }

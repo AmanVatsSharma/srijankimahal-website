@@ -1,11 +1,20 @@
-## Off‑Page SEO Playbook (GBP + Citations + Backlinks)
+## Off‑Page SEO Playbook (All‑India Authority + Backlinks)
 
 **Project**: Sri Janaki Mahal Trust (Ayodhya)  
 **Website**: `https://www.srijanakimahaltrustofficial.com/`  
-**Last-updated**: 2026-02-01  
+**Last-updated**: 2026-02-24  
 **Compliance**: Google Business Profile + Google Search Essentials (no fake reviews, no incentives, no paid link schemes)
 
 ---
+
+## Strategy note (per your request)
+
+Primary goal is **all‑India branded booking traffic** (people searching from any city in India).  
+Local signals like GBP/citations are still useful for trust, but **the main ranking lift comes from**:
+
+- strong on-site money pages (booking/contact/official verification)
+- strong mobile experience (CWV + UX)
+- **nationally relevant backlinks** from real audiences
 
 ## Canonical NAP (single source of truth)
 
@@ -28,7 +37,7 @@ Use this exact data everywhere (website, GBP, citations). Track any exception ex
 
 ---
 
-## 1) Google Business Profile (GBP): setup + optimization checklist
+## 1) Google Business Profile (GBP): optional trust layer
 
 ### Setup & verification
 - Claim/create GBP in Business Profile Manager.
@@ -88,12 +97,12 @@ Use this exact data everywhere (website, GBP, citations). Track any exception ex
 
 ---
 
-## 3) Citations: checklist + tracking
+## 3) Citations: optional hygiene (do only high-quality)
 
 ### Where to build citations (categories)
 - **Maps**: Google (GBP), Apple Business Connect, Bing Places, HERE
-- **India directories**: Justdial, Sulekha, IndiaMART (only if appropriate), local Ayodhya directories
-- **Travel** (only if you officially list there): TripAdvisor / travel portals (ensure the listing is controlled + consistent)
+- **India directories (selective)**: Justdial, Sulekha (only if controlled + consistent)
+- **Travel portals (only if you officially list there)**: TripAdvisor / travel portals (avoid duplicates)
 - **Religious/pilgrimage directories**: trusted, moderated directories (avoid spam farms)
 
 ### Tracking spreadsheet columns (recommended)
@@ -108,7 +117,7 @@ Use this exact data everywhere (website, GBP, citations). Track any exception ex
 
 ---
 
-## 4) Backlinks: ethical outreach + digital PR
+## 4) Backlinks: main lever for all‑India SEO
 
 ### Best “linkable assets” (already on site)
 - Booking verification guide: `/booking-verification-guide`
@@ -122,11 +131,12 @@ Use this exact data everywhere (website, GBP, citations). Track any exception ex
 - Reviews hub: `/reviews`
 - Blog hub: `/blog` (and Hindi `/hi/blog`)
 
-### Target types
-- Ayodhya travel guides (quality editorial sites)
-- Pilgrimage/spiritual blogs (relevant, real audience)
-- Local/community directories (moderated, legitimate)
-- Festival/event coverage sites (seasonal links)
+### Target types (prioritize national reach)
+- National travel guides & editorial sites (real traffic, clean outbound links)
+- Pilgrimage/spiritual portals (pan-India audience)
+- Temple/yatra planning resources & community sites (moderated)
+- Transport/travel planning blogs (train/flight + “how to reach Ayodhya”)
+- Festival/event coverage sites (seasonal links; rotate to `/official-booking` + `/contact-number`)
 
 ### Outreach templates (email)
 

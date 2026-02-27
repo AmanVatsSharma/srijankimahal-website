@@ -2,7 +2,7 @@
 ---
 import '../styles/global.css';
 import { generateSEOData, type SEOConfig } from '../lib/seo';
-import { SCHEMA_TELEPHONE, WHATSAPP_LINK, OFFICIAL_EMAIL } from '../lib/constants';
+import { SCHEMA_TELEPHONE, WHATSAPP_LINK, OFFICIAL_EMAIL, GOOGLE_MAPS_GBP_URL } from '../lib/constants';
 
 // SEO Props Interface
 interface Props {
@@ -55,7 +55,7 @@ const seoConfig: SEOConfig = {
 const seoData = generateSEOData(seoConfig, currentPath);
 const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
 const googleAdsConversionLabel = import.meta.env.PUBLIC_GOOGLE_ADS_CONVERSION_LABEL;
-const googleMapsListingUrl = 'https://www.google.com/maps?cid=13157769449180505616';
+const googleMapsListingUrl = GOOGLE_MAPS_GBP_URL;
 const currentOgLocale = seoData.ogTags['og:locale'];
 const ogImageUrl = seoData.ogTags['og:image'];
 const isDefaultOgImage = typeof ogImageUrl === 'string' && ogImageUrl.endsWith('/og.jpg');

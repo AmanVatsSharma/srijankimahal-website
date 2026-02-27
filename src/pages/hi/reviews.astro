@@ -6,9 +6,8 @@ import Footer from '../../components/Footer.astro';
 import FloatingWhatsApp from '../../components/FloatingWhatsApp.astro';
 import { generateBreadcrumbSchema } from '../../lib/schemas/breadcrumb';
 import { generateFAQSchema, type FAQItem } from '../../lib/schemas/faq';
-import { DISPLAY_PHONE, TEL_LINK, WHATSAPP_BOOKING_LINK_HI } from '../../lib/constants';
-
-const googleMapsListingUrl = 'https://www.google.com/maps?cid=13157769449180505616';
+import { DISPLAY_PHONE, TEL_LINK, WHATSAPP_BOOKING_LINK_HI, GOOGLE_MAPS_GBP_URL } from '../../lib/constants';
+const googleMapsListingUrl = GOOGLE_MAPS_GBP_URL;
 
 const breadcrumbSchema = generateBreadcrumbSchema([
   { name: 'Home', url: '/hi' },

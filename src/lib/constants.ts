@@ -34,3 +34,6 @@ export const WHATSAPP_BOOKING_LINK_HI = `${WHATSAPP_LINK}?text=${WHATSAPP_BOOKIN
 
 // For structured data (schema.org)
 export const SCHEMA_TELEPHONE = `+91-${MOBILE_NUMBER}`;
+
+// Google Business Profile / Maps listing URL (for schema sameAs + local SEO)
+export const GOOGLE_MAPS_GBP_URL = 'https://www.google.com/maps?cid=13157769449180505616';

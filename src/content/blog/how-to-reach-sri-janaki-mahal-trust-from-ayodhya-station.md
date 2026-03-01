@@ -1,6 +1,6 @@
 ---
 title: How to Reach Sri Janaki Mahal Trust from Ayodhya Railway Station - Complete Guide
-description: Step-by-step guide on how to reach Sri Janaki Mahal Trust from Ayodhya Railway Station. Distance, transportation options, directions, and travel tips. Contact +91 7759925612
+description: Step-by-step guide on how to reach Sri Janaki Mahal Trust from Ayodhya Railway Station. Distance, transportation options, directions, and travel tips. Contact +91 9893563047
 date: 2025-01-30
 keywords:
   - 'Sri Janaki Mahal Trust verified'
@@ -52,7 +52,7 @@ Complete guide on reaching Sri Janaki Mahal Trust from Ayodhya Railway Station. 
 **Tips:**
 - Agree on fare before starting
 - Show driver the address or GPS coordinates
-- Keep contact number handy (+91 7759925612)
+- Keep contact number handy (+91 9893563047)
 
 ### Option 2: Taxi
 
@@ -169,7 +169,7 @@ Complete guide on reaching Sri Janaki Mahal Trust from Ayodhya Railway Station. 
 - "Ram Mandir ke paas, Karsewakpuram mein"
 - "Vasudev Gath, Karsewakpuram"
 - Show GPS coordinates
-- Call us: +91 7759925612
+- Call us: +91 9893563047
 
 ## Travel Time Estimates
 
@@ -223,7 +223,7 @@ Complete guide on reaching Sri Janaki Mahal Trust from Ayodhya Railway Station. 
 ### Before Leaving Station
 
 1. **Have Contact Number**
-   - Save: +91 7759925612
+   - Save: +91 9893563047
    - Call if needed
    - Share with driver
 
@@ -271,8 +271,8 @@ Complete guide on reaching Sri Janaki Mahal Trust from Ayodhya Railway Station. 
 ### If You Get Lost
 
 **Contact Us:**
-- Phone: +91 7759925612
-- WhatsApp: +91 7759925612
+- Phone: +91 9893563047
+- WhatsApp: +91 9893563047
 
 **We'll Help:**
 - Provide directions
@@ -350,7 +350,7 @@ Auto-rickshaw: ₹100-150. Taxi: ₹200-300. Bus: ₹20-30.
 
 ### What if driver doesn't know the location?
 
-Share GPS coordinates (26.8039286°N, 82.2109433°E) or call us at +91 7759925612 for assistance.
+Share GPS coordinates (26.8039286°N, 82.2109433°E) or call us at +91 9893563047 for assistance.
 
 ### Can I walk from station?
 
@@ -361,8 +361,8 @@ Not recommended - 5 km is too far, especially with luggage. Use transport.
 Reaching Sri Janaki Mahal Trust from Ayodhya Railway Station is easy. Take an auto-rickshaw (₹100-150, 15-20 minutes) or taxi, and you'll arrive comfortably.
 
 **Need Help?**
-- 📞 Call: +91 7759925612
-- 💬 WhatsApp: +91 7759925612
+- 📞 Call: +91 9893563047
+- 💬 WhatsApp: +91 9893563047
 - 📍 Location: Karsewakpuram, Vasudev Gath, Ayodhya
 
 ---

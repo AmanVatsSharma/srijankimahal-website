@@ -17,9 +17,9 @@ Yes. NRIs can book Sri Janaki Mahal Trust from abroad via WhatsApp, email, or ph
 
 ## Booking Channels
 
-- **WhatsApp**: +91 7759925612—works internationally
+- **WhatsApp**: +91 9893563047—works internationally
 - **Email**: srijanakimahaltrustofficial@gmail.com
-- **Phone**: +91 7759925612 (check time zone; IST 6 AM–11 PM)
+- **Phone**: +91 9893563047 (check time zone; IST 6 AM–11 PM)
 
 See [official booking](/official-booking) and [contact number](/contact-number).
 

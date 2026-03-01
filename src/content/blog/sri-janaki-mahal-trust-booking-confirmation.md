@@ -19,13 +19,13 @@ Complete guide to booking confirmation at Sri Janaki Mahal Trust. Learn how to g
 ## How to Get Booking Confirmation
 
 ### Via Phone
-1. Call +91 7759925612
+1. Call +91 9893563047
 2. Provide booking details
 3. Receive verbal confirmation
 4. Get booking reference number
 
 ### Via WhatsApp
-1. Message +91 7759925612
+1. Message +91 9893563047
 2. Send booking details
 3. Receive written confirmation
 4. Save confirmation message
@@ -98,7 +98,7 @@ Complete guide to booking confirmation at Sri Janaki Mahal Trust. Learn how to g
 ## Booking Confirmation FAQs
 
 ### How to get booking confirmation?
-Contact us at +91 7759925612. You'll receive confirmation via phone, WhatsApp, or email.
+Contact us at +91 9893563047. You'll receive confirmation via phone, WhatsApp, or email.
 
 ### What is booking reference number?
 Unique number for your booking, required at check-in.
@@ -110,13 +110,13 @@ Yes, booking confirmation is required and provided for all bookings.
 Save WhatsApp message, email, or note down reference number.
 
 ### What if I don't receive confirmation?
-Contact us immediately at +91 7759925612 to get confirmation.
+Contact us immediately at +91 9893563047 to get confirmation.
 
 ## Contact for Confirmation
 
 **For Booking Confirmation:**
-- 📞 Phone: +91 7759925612
-- 💬 WhatsApp: +91 7759925612
+- 📞 Phone: +91 9893563047
+- 💬 WhatsApp: +91 9893563047
 - 📧 Email: srijanakimahaltrustofficial@gmail.com
 
 **We provide:**
@@ -141,5 +141,5 @@ Contact us immediately at +91 7759925612 to get confirmation.
 
 ---
 
-*For booking confirmation, call +91 7759925612. Instant confirmation provided for all bookings.*
+*For booking confirmation, call +91 9893563047. Instant confirmation provided for all bookings.*
 

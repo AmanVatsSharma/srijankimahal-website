@@ -18,7 +18,7 @@ Planning to visit Ayodhya and stay at Sri Janaki Mahal Trust? This comprehensive
 
 ### Method 1: Phone Booking (Recommended)
 
-**Step 1:** Call our official number: **+91 7759925612**
+**Step 1:** Call our official number: **+91 9893563047**
 
 **Step 2:** Provide the following information:
 - Your name
@@ -43,7 +43,7 @@ Planning to visit Ayodhya and stay at Sri Janaki Mahal Trust? This comprehensive
 
 ### Method 2: WhatsApp Booking
 
-**Step 1:** Message us on WhatsApp: **+91 7759925612**
+**Step 1:** Message us on WhatsApp: **+91 9893563047**
 
 **Step 2:** Send a message with:
 ```
@@ -219,7 +219,7 @@ Our team checks:
 
 ### Can I book same day?
 
-Yes, same-day bookings may be available subject to availability. Call +91 7759925612 to check.
+Yes, same-day bookings may be available subject to availability. Call +91 9893563047 to check.
 
 ### Is advance payment required?
 
@@ -241,8 +241,8 @@ Yes, booking confirmation is required and provided. Keep it for check-in.
 
 **Only book through:**
 
-✅ **Official Phone:** +91 7759925612  
-✅ **Official WhatsApp:** +91 7759925612  
+✅ **Official Phone:** +91 9893563047  
+✅ **Official WhatsApp:** +91 9893563047  
 ✅ **Official Website:** www.srijanakimahaltrustofficial.com  
 ✅ **Official Email:** srijanakimahaltrustofficial@gmail.com  
 
@@ -292,8 +292,8 @@ Yes, booking confirmation is required and provided. Keep it for check-in.
 ## Need Help?
 
 **Booking Assistance:**
-- 📞 Phone: +91 7759925612 (24/7)
-- 💬 WhatsApp: +91 7759925612
+- 📞 Phone: +91 9893563047 (24/7)
+- 💬 WhatsApp: +91 9893563047
 - 📧 Email: srijanakimahaltrustofficial@gmail.com
 - 🌐 Website: www.srijanakimahaltrustofficial.com
 
@@ -302,8 +302,8 @@ Yes, booking confirmation is required and provided. Keep it for check-in.
 Booking a room at Sri Janaki Mahal Trust is simple and straightforward. Choose your preferred method (phone, WhatsApp, or email), provide your details, and receive instant confirmation.
 
 **Book now:**
-- Call: +91 7759925612
-- WhatsApp: +91 7759925612
+- Call: +91 9893563047
+- WhatsApp: +91 9893563047
 - Visit: /booking
 
 ---

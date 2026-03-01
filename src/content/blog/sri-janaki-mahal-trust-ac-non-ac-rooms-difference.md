@@ -1,6 +1,6 @@
 ---
 title: Sri Janaki Mahal Trust AC vs Non-AC Rooms - Difference and Which to Choose
-description: Complete guide to AC vs Non-AC rooms at Sri Janaki Mahal Trust. Differences, pricing, features, and which room type to choose. Contact +91 7759925612
+description: Complete guide to AC vs Non-AC rooms at Sri Janaki Mahal Trust. Differences, pricing, features, and which room type to choose. Contact +91 9893563047
 date: 2025-02-12
 keywords:
   - 'Sri Janaki Mahal Trust verified'
@@ -222,7 +222,7 @@ Yes, all meals (breakfast, lunch, dinner) are included in both AC and Non-AC roo
 
 ### Can I change from Non-AC to AC?
 
-Subject to availability. Contact us at +91 7759925612 for room changes.
+Subject to availability. Contact us at +91 9893563047 for room changes.
 
 ### Which is better for families?
 
@@ -233,8 +233,8 @@ Both are suitable. Choose AC for comfort or Non-AC for budget. Contact us for re
 ### Need Help Choosing?
 
 **Contact Us:**
-- 📞 Phone: +91 7759925612
-- 💬 WhatsApp: +91 7759925612
+- 📞 Phone: +91 9893563047
+- 💬 WhatsApp: +91 9893563047
 - 📧 Email: srijanakimahaltrustofficial@gmail.com
 
 **We'll Help:**
@@ -252,8 +252,8 @@ Both AC and Non-AC rooms are available at Sri Janaki Mahal Trust. Choose AC for 
 - Non-AC Rooms: Budget-friendly, natural air
 
 **Contact for Booking:**
-- 📞 Phone: +91 7759925612
-- 💬 WhatsApp: +91 7759925612
+- 📞 Phone: +91 9893563047
+- 💬 WhatsApp: +91 9893563047
 - 📧 Email: srijanakimahaltrustofficial@gmail.com
 
 **Book Now:**

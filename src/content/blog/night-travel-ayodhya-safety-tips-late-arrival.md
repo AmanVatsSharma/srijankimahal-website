@@ -19,7 +19,7 @@ Many pilgrims reach Ayodhya by overnight train or bus. Here's how to stay safe a
 
 1. **Confirm booking**: Ensure you have a verified [booking confirmation](/booking-verification-guide) from the [official contact](/contact-number).
 2. **Share arrival details**: Inform the trust of your expected arrival time so they can accommodate you.
-3. **Save contact**: Keep +91 7759925612 saved as "Janaki Mahal Trust Official."
+3. **Save contact**: Keep +91 9893563047 saved as "Janaki Mahal Trust Official."
 4. **Know the address**: Karsewakpuram, near Ram Mandir—see [location guide](/location).
 
 ## At the Station or Bus Stand

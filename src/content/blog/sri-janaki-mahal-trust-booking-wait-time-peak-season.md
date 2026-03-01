@@ -44,4 +44,4 @@ If you need a room urgently, try both phone and WhatsApp. Sometimes one channel 
 
 ---
 
-**Contact:** +91 7759925612 (call or WhatsApp). Visit [official booking](/official-booking) for the full process.
+**Contact:** +91 9893563047 (call or WhatsApp). Visit [official booking](/official-booking) for the full process.

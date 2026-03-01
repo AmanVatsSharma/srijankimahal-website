@@ -19,7 +19,7 @@ Need immediate assistance with your stay near Ram Mandir? The **Janaki Mahal Tru
 
 ## The Only Official Helpline Number
 
-- **Primary Helpline (24/7):** [+91 7759925612](tel:+917759925612)
+- **Primary Helpline (24/7):** [+91 9893563047](tel:+919893563047)
 - **Recognised Names:** Sri Janaki Mahal Trust, Janaki Mahal Trust, Shri Janki Mahal Trust Ayodhya, Sri Janki Mahal Trust Booking Desk
 
 Save this number as **“Janaki Mahal Trust Official Helpline”** to avoid confusion with fake listings.
@@ -44,7 +44,7 @@ Save this number as **“Janaki Mahal Trust Official Helpline”** to avoid conf
 
 ## Call Flow for Quick Resolution
 
-1. Dial **+91 7759925612**.
+1. Dial **+91 9893563047**.
 2. Introduce yourself and specify if you are a new guest, current guest, or follow-up caller.
 3. Share stay dates, number of guests, and room preference.
 4. For emergencies, state the issue first (medical, travel delay, lost contact, etc.).
@@ -73,7 +73,7 @@ Save this number as **“Janaki Mahal Trust Official Helpline”** to avoid conf
 ## Frequently Asked Questions
 
 ### Is the helpline different for WhatsApp messages?
-No. The helpline and WhatsApp number are the same: **+91 7759925612**.
+No. The helpline and WhatsApp number are the same: **+91 9893563047**.
 
 ### Can international pilgrims use this helpline?
 Yes. Use WhatsApp voice call if your telecom operator does not allow direct dialing.
@@ -91,5 +91,5 @@ Yes, every enquiry is logged against your name or booking ID for seamless follow
 - ✅ Inform if you need early check-in, ground-floor rooms, or special arrangements.
 - ✅ Note down any questions about payment modes or meal timings.
 
-The **Janaki Mahal Trust Ayodhya official helpline** ensures you receive genuine assistance, trustworthy bookings, and complete peace of mind. Save **+91 7759925612** today and travel with confidence. 🙏
+The **Janaki Mahal Trust Ayodhya official helpline** ensures you receive genuine assistance, trustworthy bookings, and complete peace of mind. Save **+91 9893563047** today and travel with confidence. 🙏
 

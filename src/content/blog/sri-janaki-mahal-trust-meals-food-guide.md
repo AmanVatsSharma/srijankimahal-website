@@ -1,6 +1,6 @@
 ---
 title: Sri Janaki Mahal Trust Meals and Food Guide - All Meals Included
-description: Complete guide to meals and food at Sri Janaki Mahal Trust. All meals included, meal timings, vegetarian cuisine, and dining experience. Contact +91 7759925612
+description: Complete guide to meals and food at Sri Janaki Mahal Trust. All meals included, meal timings, vegetarian cuisine, and dining experience. Contact +91 9893563047
 date: 2025-02-09
 keywords:
   - 'Sri Janaki Mahal Trust meals'
@@ -226,8 +226,8 @@ Yes, meals are served on scheduled timings. Contact reception for exact schedule
 ### Need Details?
 
 **Contact Reception:**
-- 📞 Phone: +91 7759925612
-- 💬 WhatsApp: +91 7759925612
+- 📞 Phone: +91 9893563047
+- 💬 WhatsApp: +91 9893563047
 - 📧 Email: srijanakimahaltrustofficial@gmail.com
 
 **Available:** 24/7 for meal-related inquiries
@@ -243,8 +243,8 @@ Sri Janaki Mahal Trust includes all meals (breakfast, lunch, dinner) in your roo
 - Clean and hygienic
 
 **Contact:**
-- 📞 Phone: +91 7759925612
-- 💬 WhatsApp: +91 7759925612
+- 📞 Phone: +91 9893563047
+- 💬 WhatsApp: +91 9893563047
 - 📧 Email: srijanakimahaltrustofficial@gmail.com
 
 **Book Your Stay:**

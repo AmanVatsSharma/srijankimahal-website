@@ -42,4 +42,4 @@ If Sri Janaki Mahal Trust is full, ask the [official contact](/contact-number) f
 
 ---
 
-**Book safely:** Call +91 7759925612 or WhatsApp for real-time availability. Visit [official booking](/official-booking) for step-by-step process.
+**Book safely:** Call +91 9893563047 or WhatsApp for real-time availability. Visit [official booking](/official-booking) for step-by-step process.

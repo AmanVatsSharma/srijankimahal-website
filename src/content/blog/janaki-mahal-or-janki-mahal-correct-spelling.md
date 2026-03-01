@@ -17,7 +17,7 @@ Both "Janaki Mahal" and "Janki Mahal" refer to the same trust. See [name guide](
 
 ## Official Contact
 
-Only +91 7759925612. See [contact number](/contact-number) and [official verification](/official). Book via [official booking](/official-booking). Avoid [scams](/how-to-avoid-scams).
+Only +91 9893563047. See [contact number](/contact-number) and [official verification](/official). Book via [official booking](/official-booking). Avoid [scams](/how-to-avoid-scams).
 
 ---
 

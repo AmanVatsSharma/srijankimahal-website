@@ -18,7 +18,7 @@ Yes. Sri Janaki Mahal Trust is a registered, genuine dharmshala in Ayodhya. Here
 ## Verification
 
 - **Official page**: See [official verification](/official) for trust details
-- **Contact**: Only +91 7759925612 (call/WhatsApp) and srijanakimahaltrustofficial@gmail.com
+- **Contact**: Only +91 9893563047 (call/WhatsApp) and srijanakimahaltrustofficial@gmail.com
 - **Website**: https://www.srijanakimahaltrustofficial.com
 
 ## How to Avoid Fakes

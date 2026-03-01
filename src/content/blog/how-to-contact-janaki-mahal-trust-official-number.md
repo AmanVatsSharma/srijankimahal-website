@@ -15,12 +15,12 @@ keywords:
 
 Reaching the verified **Sri Janaki Mahal Trust** team (also known as **Sri Janki Mahal Trust Ayodhya** and **Shri Janki Mahal Trust**) is simple when you use the trust-managed channels. This guide explains every official contact method, highlights red flags to avoid scams, and ensures you always speak with the authentic team near Ram Mandir.
 
-> Flow Chart: Search Janaki Mahal Trust → Dial **+91 7759925612** → Share stay details → Receive trust-stamped confirmation → Relax and travel to Ayodhya.
+> Flow Chart: Search Janaki Mahal Trust → Dial **+91 9893563047** → Share stay details → Receive trust-stamped confirmation → Relax and travel to Ayodhya.
 
 ## Official Contact Summary
 
-- **Primary Helpline (24/7):** [+91 7759925612](tel:+917759925612)
-- **Official WhatsApp:** [https://wa.me/917759925612](https://wa.me/917759925612)
+- **Primary Helpline (24/7):** [+91 9893563047](tel:+919893563047)
+- **Official WhatsApp:** [https://wa.me/919893563047](https://wa.me/919893563047)
 - **Official Email:** [srijanakimahaltrustofficial@gmail.com](mailto:srijanakimahaltrustofficial@gmail.com)
 - **Alternate Names Recognised:** Janaki Mahal Trust, Sri Janki Mahal Trust, Shri Janki Mahal Trust Ayodhya, Janaki Mahal Ayodhya
 
@@ -33,17 +33,17 @@ Reaching the verified **Sri Janaki Mahal Trust** team (also known as **Sri Janki
 
 ## Step-by-Step: Contacting via Phone
 
-1. Dial **+91 7759925612** from your mobile or landline.
+1. Dial **+91 9893563047** from your mobile or landline.
 2. Introduce yourself and mention you are looking to book at *Sri Janaki Mahal Trust / Janaki Mahal Trust Ayodhya*.
 3. Provide stay dates, number of guests, room preference (2 bed AC, 3 bed non-AC, etc.).
 4. Receive verbal confirmation and ask for a WhatsApp or email confirmation slip.
 5. Save the contact under “Janaki Mahal Trust Official” to avoid confusion later.
 
-> Comment: Always double-check the caller ID displays **+91 7759925612** before sharing personal information.
+> Comment: Always double-check the caller ID displays **+91 9893563047** before sharing personal information.
 
 ## WhatsApp Contact Flow
 
-1. Open [https://wa.me/917759925612](https://wa.me/917759925612).
+1. Open [https://wa.me/919893563047](https://wa.me/919893563047).
 2. Send a structured message:
    ```
    Name:
@@ -73,8 +73,8 @@ Expect a reply within 12-18 hours on business days.
 
 | Purpose                         | Official Channel                            | Response Time |
 |---------------------------------|----------------------------------------------|----------------|
-| Immediate booking confirmation  | Call **+91 7759925612**                      | Instantly      |
-| Written confirmation slip       | WhatsApp message to **+91 7759925612**       | 5-15 minutes   |
+| Immediate booking confirmation  | Call **+91 9893563047**                      | Instantly      |
+| Written confirmation slip       | WhatsApp message to **+91 9893563047**       | 5-15 minutes   |
 | Group booking proposal          | Email **srijanakimahaltrustofficial@gmail.com** | 12-18 hours    |
 | Scam verification               | Call back on official helpline               | Instantly      |
 
@@ -85,12 +85,12 @@ Expect a reply within 12-18 hours on business days.
 - Social media accounts without the official phone number in the bio.
 - Poorly written confirmation slips without the Janaki Mahal Trust seal.
 
-Whenever in doubt, hang up and call **+91 7759925612** to verify.
+Whenever in doubt, hang up and call **+91 9893563047** to verify.
 
 ## Frequently Asked Questions
 
 ### 1. Is the Janaki Mahal Trust number the same as Sri Janki Mahal Trust?
-Yes. **Janaki Mahal Trust**, **Sri Janki Mahal Trust**, and **Shri Janki Mahal Trust** are the same verified trust in Ayodhya. The only official number is **+91 7759925612**.
+Yes. **Janaki Mahal Trust**, **Sri Janki Mahal Trust**, and **Shri Janki Mahal Trust** are the same verified trust in Ayodhya. The only official number is **+91 9893563047**.
 
 ### 2. Do I need to call in advance for festival dates?
 Absolutely. During Ram Navami, Diwali, and Ram Mandir celebrations, bookings fill up quickly. Call at least 30 days in advance.
@@ -99,11 +99,11 @@ Absolutely. During Ram Navami, Diwali, and Ram Mandir celebrations, bookings fil
 Yes. Once you contact the official helpline, the team sends a Google Maps pin, room images, and confirmation slip via WhatsApp.
 
 ### 4. What if someone claims to be from “Shri Janki Mahal Trust” but uses another number?
-Consider it a scam. Disconnect immediately and inform the trust at **+91 7759925612**.
+Consider it a scam. Disconnect immediately and inform the trust at **+91 9893563047**.
 
 ## Final Checklist Before You Travel
 
-- Save **+91 7759925612** as “Janaki Mahal Trust Official.”
+- Save **+91 9893563047** as “Janaki Mahal Trust Official.”
 - Keep your WhatsApp confirmation slip handy.
 - Carry a government-issued photo ID for each guest.
 - Inform the trust helpline if your arrival time changes.

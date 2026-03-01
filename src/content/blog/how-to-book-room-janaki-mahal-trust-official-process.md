@@ -19,8 +19,8 @@ The sacred **Janaki Mahal Trust** in Ayodhya (also known as **Sri Janki Mahal Tr
 
 ## Step 1: Save the Official Booking Channels
 
-- **Phone / Helpline:** [+91 7759925612](tel:+917759925612)
-- **WhatsApp Booking Desk:** [https://wa.me/917759925612](https://wa.me/917759925612)
+- **Phone / Helpline:** [+91 9893563047](tel:+919893563047)
+- **WhatsApp Booking Desk:** [https://wa.me/919893563047](https://wa.me/919893563047)
 - **Email for Receipts:** [srijanakimahaltrustofficial@gmail.com](mailto:srijanakimahaltrustofficial@gmail.com)
 
 Save the number as “Janaki Mahal Trust Official Booking” for easy identification.
@@ -39,7 +39,7 @@ Keep these details ready before you contact the trust:
 
 ### Option A: Phone Booking (Fastest)
 
-1. Call **+91 7759925612**.
+1. Call **+91 9893563047**.
 2. Introduce yourself and request “official booking.”
 3. Share the required details.
 4. Note down the booking ID provided verbally.
@@ -47,7 +47,7 @@ Keep these details ready before you contact the trust:
 
 ### Option B: WhatsApp Booking
 
-1. Click [https://wa.me/917759925612](https://wa.me/917759925612).
+1. Click [https://wa.me/919893563047](https://wa.me/919893563047).
 2. Send your stay details using this template:
    ```
    Jai Shri Ram! I wish to book at Janaki Mahal Trust.
@@ -69,7 +69,7 @@ Keep these details ready before you contact the trust:
 ## Step 4: Verify the Confirmation Slip
 
 - Check the **trust seal**, **booking ID**, **guest names**, and **room category**.
-- Ensure the slip originates from **+91 7759925612** or the official email.
+- Ensure the slip originates from **+91 9893563047** or the official email.
 - Ask for the payment link only after the slip is issued.
 
 > Comment: If anything looks suspicious, call the helpline immediately before making payments.
@@ -105,7 +105,7 @@ Inform the trust helpline immediately. They may reserve the room temporarily whi
 
 ## Final Checklist
 
-- ✅ Save the official number **+91 7759925612**
+- ✅ Save the official number **+91 9893563047**
 - ✅ Share accurate stay details in one message
 - ✅ Verify trust seal on confirmation slips
 - ✅ Pay only through instructions from the official number/email

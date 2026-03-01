@@ -1,6 +1,6 @@
 ---
 title: Sri Janaki Mahal Trust Contact Number, Address, and Location - Complete Guide
-description: Complete contact information for Sri Janaki Mahal Trust. Official phone number, WhatsApp, email, address, and location details. Contact +91 7759925612
+description: Complete contact information for Sri Janaki Mahal Trust. Official phone number, WhatsApp, email, address, and location details. Contact +91 9893563047
 date: 2025-01-27
 keywords:
   - 'Sri Janaki Mahal Trust contact number'
@@ -21,7 +21,7 @@ Complete contact information and location details for Sri Janaki Mahal Trust in 
 
 ### Phone Number
 
-**Official Phone:** +91 7759925612
+**Official Phone:** +91 9893563047
 
 **Details:**
 - Available 24/7
@@ -37,7 +37,7 @@ Complete contact information and location details for Sri Janaki Mahal Trust in 
 
 ### WhatsApp Number
 
-**Official WhatsApp:** +91 7759925612
+**Official WhatsApp:** +91 9893563047
 
 **Details:**
 - Available 24/7
@@ -96,7 +96,7 @@ Search for "Sri Janaki Mahal Trust, Karsewakpuram, Ayodhya"
 
 ### By Phone
 
-**Step 1:** Dial +91 7759925612
+**Step 1:** Dial +91 9893563047
 
 **Step 2:** You'll be connected to our booking team
 
@@ -110,7 +110,7 @@ Search for "Sri Janaki Mahal Trust, Karsewakpuram, Ayodhya"
 
 **Step 1:** Open WhatsApp
 
-**Step 2:** Send message to +91 7759925612
+**Step 2:** Send message to +91 9893563047
 
 **Step 3:** Type your inquiry
 
@@ -176,7 +176,7 @@ Guests: [Number]
 
 ## Contact Methods Comparison
 
-### Phone (+91 7759925612)
+### Phone (+91 9893563047)
 
 **Pros:**
 - ✅ Instant voice communication
@@ -190,7 +190,7 @@ Guests: [Number]
 - Voice preference
 - Immediate confirmation
 
-### WhatsApp (+91 7759925612)
+### WhatsApp (+91 9893563047)
 
 **Pros:**
 - ✅ Quick messaging
@@ -331,8 +331,8 @@ Changes: [Details]
 ### Urgent Matters
 
 **For Urgent Bookings or Issues:**
-- Phone: +91 7759925612 (24/7)
-- WhatsApp: +91 7759925612 (24/7)
+- Phone: +91 9893563047 (24/7)
+- WhatsApp: +91 9893563047 (24/7)
 
 **Response Time:** Immediate
 
@@ -355,8 +355,8 @@ Changes: [Details]
 ### How to Verify
 
 **Official Contact Details:**
-- ✅ Phone: +91 7759925612
-- ✅ WhatsApp: +91 7759925612
+- ✅ Phone: +91 9893563047
+- ✅ WhatsApp: +91 9893563047
 - ✅ Email: srijanakimahaltrustofficial@gmail.com
 - ✅ Website: www.srijanakimahaltrustofficial.com
 
@@ -366,11 +366,11 @@ Changes: [Details]
 
 ### What is the official phone number?
 
-+91 7759925612 is the official phone number available 24/7.
++91 9893563047 is the official phone number available 24/7.
 
 ### Can I contact via WhatsApp?
 
-Yes, WhatsApp number is +91 7759925612. Same as phone number.
+Yes, WhatsApp number is +91 9893563047. Same as phone number.
 
 ### What is the email address?
 
@@ -393,8 +393,8 @@ Yes, phone and WhatsApp are available 24/7.
 Contacting Sri Janaki Mahal Trust is easy and convenient. Choose your preferred method and reach out anytime.
 
 **Quick Contact:**
-- 📞 Phone: +91 7759925612
-- 💬 WhatsApp: +91 7759925612
+- 📞 Phone: +91 9893563047
+- 💬 WhatsApp: +91 9893563047
 - 📧 Email: srijanakimahaltrustofficial@gmail.com
 - 📍 Address: Vasudev Gath, Karsewakpuram, Ayodhya, UP 224123
 

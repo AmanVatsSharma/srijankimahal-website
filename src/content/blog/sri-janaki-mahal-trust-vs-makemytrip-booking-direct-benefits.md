@@ -37,7 +37,7 @@ Scammers sometimes create fake listings on travel sites using the trust’s name
 
 ## How to Book Directly
 
-1. Call or WhatsApp **+91 7759925612**
+1. Call or WhatsApp **+91 9893563047**
 2. Or use the [official booking page](/official-booking) for the full process
 3. Receive confirmation from the trust’s official number/email
 4. Pay only to accounts named **Sri Janaki Mahal Trust**

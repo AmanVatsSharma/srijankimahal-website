@@ -1,6 +1,6 @@
 ---
 title: Sri Janaki Mahal Trust Accessibility Features - Accessible Accommodation
-description: Accessibility features at Sri Janaki Mahal Trust. Accessible accommodation, facilities for elderly, and accessibility information. Contact +91 7759925612
+description: Accessibility features at Sri Janaki Mahal Trust. Accessible accommodation, facilities for elderly, and accessibility information. Contact +91 9893563047
 date: 2025-03-17
 keywords:
   - 'Sri Janaki Mahal Trust accessibility'
@@ -35,8 +35,8 @@ Complete guide to accessibility features at Sri Janaki Mahal Trust. Learn about 
 ## Contact for Accessibility
 
 **For Accessibility Information:**
-- 📞 Phone: +91 7759925612
-- 💬 WhatsApp: +91 7759925612
+- 📞 Phone: +91 9893563047
+- 💬 WhatsApp: +91 9893563047
 
 **We'll provide:**
 - Accessibility features
@@ -56,5 +56,5 @@ Yes, accessibility features available. Contact for details.
 
 ---
 
-*For accessibility information, call +91 7759925612.*
+*For accessibility information, call +91 9893563047.*
 

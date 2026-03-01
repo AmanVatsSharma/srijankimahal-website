@@ -22,7 +22,7 @@ The trust allows rescheduling subject to availability and the [cancellation and 
 ## Step 1: Contact Official Channels
 
 Reach out only through:
-- **Phone/WhatsApp:** +91 7759925612
+- **Phone/WhatsApp:** +91 9893563047
 - **Email:** srijanakimahaltrustofficial@gmail.com
 
 Details are on the [contact number page](/contact-number). Never use third-party agents or unverified numbers—see [how to avoid scams](/how-to-avoid-scams).

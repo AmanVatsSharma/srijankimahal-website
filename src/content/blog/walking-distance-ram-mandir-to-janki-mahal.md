@@ -44,7 +44,7 @@ Many devotees prefer walking from **Ram Mandir** to **Janki Mahal Trust** (also 
 
 - **Lighting:** Ram Path is well-lit with continuous surveillance.
 - **Security:** Police patrolling ensures safety for pilgrims even in late evenings.
-- **Trust Assistance:** Call or message **+91 7759925612** for guidance or if you require help mid-route.
+- **Trust Assistance:** Call or message **+91 9893563047** for guidance or if you require help mid-route.
 
 ## Frequently Asked Questions
 
@@ -59,7 +59,7 @@ It’s better to take an auto if you have heavy luggage. Walk comfortably with s
 
 ## Quick Checklist
 
-- ✅ Save the trust helpline **+91 7759925612**
+- ✅ Save the trust helpline **+91 9893563047**
 - ✅ Wear comfortable footwear and carry essentials
 - ✅ Walk in groups during peak hours for a joyful experience
 - ✅ Keep your booking confirmation handy for check-in

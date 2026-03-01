@@ -15,12 +15,12 @@ keywords:
 
 Many pilgrims rely on **Shri Janki Mahal Trust** (popularly known as **Sri Janaki Mahal Trust** or **Janaki Mahal Trust Ayodhya**) for safe, comfortable accommodation near Ram Mandir. Unfortunately, impostor agents try to misuse the trust name. This guide keeps you safe by showing exactly how to verify the official contact number and ignore every fake offer.
 
-> Flow Chart: Identify caller → Verify number matches **+91 7759925612** → Request trust-stamped confirmation → Proceed with booking → Travel confidently.
+> Flow Chart: Identify caller → Verify number matches **+91 9893563047** → Request trust-stamped confirmation → Proceed with booking → Travel confidently.
 
 ## The One and Only Verified Number
 
-- **Shri Janki Mahal Trust Verified Helpline:** [+91 7759925612](tel:+917759925612)
-- **WhatsApp:** [https://wa.me/917759925612](https://wa.me/917759925612)
+- **Shri Janki Mahal Trust Verified Helpline:** [+91 9893563047](tel:+919893563047)
+- **WhatsApp:** [https://wa.me/919893563047](https://wa.me/919893563047)
 - **Registered Email:** [srijanakimahaltrustofficial@gmail.com](mailto:srijanakimahaltrustofficial@gmail.com)
 
 Save the contact as “Shri Janki Mahal Trust (Official)” to avoid confusion.
@@ -28,7 +28,7 @@ Save the contact as “Shri Janki Mahal Trust (Official)” to avoid confusion.
 ## How the Trust Confirms Authentic Conversations
 
 1. **Trust Greeting:** Calls begin with “Sri Janaki Mahal Trust Ayodhya” or “Shri Janki Mahal Trust booking desk.”
-2. **Caller ID:** Displays **+91 7759925612** with the name you saved.
+2. **Caller ID:** Displays **+91 9893563047** with the name you saved.
 3. **Confirmation Slip:** Sent immediately via WhatsApp/email bearing the trust seal and booking ID.
 4. **Payment Guidance:** Shared only after availability is confirmed and always via the same official number/email.
 
@@ -40,12 +40,12 @@ Save the contact as “Shri Janki Mahal Trust (Official)” to avoid confusion.
 - They hesitate to share the trust’s full name or registered email.
 - The WhatsApp display picture/description looks generic or unrelated.
 - Confirmation slips lack the Sri Janaki Mahal Trust logo or booking ID.
-- They claim an “alternate headquarters number” different from **+91 7759925612**.
+- They claim an “alternate headquarters number” different from **+91 9893563047**.
 
 ## 5-Step Verification Checklist
 
 1. Ask the caller to repeat the official contact number.
-2. Check if the number matches your saved contact (**+91 7759925612**).
+2. Check if the number matches your saved contact (**+91 9893563047**).
 3. Request the confirmation slip with trust seal before making any payment.
 4. Compare all details against previous confirmations or the official website.
 5. Call back on the verified number if anything appears suspicious.
@@ -53,7 +53,7 @@ Save the contact as “Shri Janki Mahal Trust (Official)” to avoid confusion.
 ## What to Do if You Encounter a Fake Agent
 
 1. Screenshot the conversation or note the number used.
-2. Call the verified helpline **+91 7759925612** immediately.
+2. Call the verified helpline **+91 9893563047** immediately.
 3. Share the fraudulent details so the trust can alert other devotees.
 4. Do not transfer any funds or share personal documents.
 
@@ -62,7 +62,7 @@ Save the contact as “Shri Janki Mahal Trust (Official)” to avoid confusion.
 ## Frequently Asked Questions
 
 ### Is the verified number the same for Janaki Mahal Trust and Sri Janki Mahal Trust?
-Yes. The trust operates under multiple spellings, but the contact number remains **+91 7759925612**.
+Yes. The trust operates under multiple spellings, but the contact number remains **+91 9893563047**.
 
 ### Can I get confirmations through any other number?
 No. Only the official number or email listed here issues legitimate confirmations.
@@ -82,7 +82,7 @@ Immediately contact the official helpline. Share transaction details so the trus
 
 ## Summary
 
-- ✅ Verified Shri Janki Mahal Trust number: **+91 7759925612**
+- ✅ Verified Shri Janki Mahal Trust number: **+91 9893563047**
 - ✅ WhatsApp and voice support available on the same number.
 - ✅ Official email: **srijanakimahaltrustofficial@gmail.com**
 - ✅ Confirmation slips always carry the trust seal and booking ID.

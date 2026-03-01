@@ -1,6 +1,6 @@
 ---
 title: Sri Janaki Mahal Trust Safety and Security - Secure Accommodation
-description: Safety and security at Sri Janaki Mahal Trust. Secure premises, safe accommodation, security measures, and safety information for guests. Contact +91 7759925612
+description: Safety and security at Sri Janaki Mahal Trust. Secure premises, safe accommodation, security measures, and safety information for guests. Contact +91 9893563047
 date: 2025-03-16
 keywords:
   - 'Sri Janaki Mahal Trust safety'
@@ -53,5 +53,5 @@ Yes, safe and well-known area near Ram Mandir.
 
 ---
 
-*Safe and secure accommodation. For booking, call +91 7759925612.*
+*Safe and secure accommodation. For booking, call +91 9893563047.*
 

@@ -18,13 +18,13 @@ Scammers create fake listings using the names of popular dharmshalas like Sri Ja
 ## Common Fake Listing Tactics
 
 1. **Fake websites**: URLs that look similar to the official site but use different domains.
-2. **Social media ads**: Promotions with "discounts" and personal numbers—never the official +91 7759925612.
+2. **Social media ads**: Promotions with "discounts" and personal numbers—never the official +91 9893563047.
 3. **Travel aggregators**: Unauthorized listings on OTAs claiming to offer trust rooms.
 4. **WhatsApp forwards**: Messages from unknown numbers posing as "official" or "partner" agents.
 
 ## Red Flags
 
-- Contact number different from **+91 7759925612**
+- Contact number different from **+91 9893563047**
 - Payment to personal UPI IDs or individual names
 - No trust-stamped confirmation
 - Urgency tactics: "Pay now or room will go"
@@ -32,7 +32,7 @@ Scammers create fake listings using the names of popular dharmshalas like Sri Ja
 
 ## How to Verify Sri Janaki Mahal Trust
 
-1. **Official contact**: Only +91 7759925612 (call/WhatsApp) and srijanakimahaltrustofficial@gmail.com
+1. **Official contact**: Only +91 9893563047 (call/WhatsApp) and srijanakimahaltrustofficial@gmail.com
 2. **Website**: https://www.srijanakimahaltrustofficial.com
 3. **Confirmation format**: Check the [booking verification guide](/booking-verification-guide) for how a real confirmation looks
 4. **Payment beneficiary**: Must be **Sri Janaki Mahal Trust** or **Janaki Mahal Trust Ayodhya**
@@ -43,7 +43,7 @@ Full verification details: [official page](/official) and [how to avoid scams](/
 
 - Do not engage or pay
 - Save screenshots and contact details
-- Inform the trust at +91 7759925612
+- Inform the trust at +91 9893563047
 - Report to local cyber cell if you’ve already paid
 
 ---

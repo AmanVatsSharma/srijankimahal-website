@@ -17,7 +17,7 @@ Police and emergency services are available in Ayodhya. See [emergency contacts]
 
 ## Important
 
-- **Trust contact**: +91 7759925612. See [contact number](/contact-number)
+- **Trust contact**: +91 9893563047. See [contact number](/contact-number)
 - **Emergency**: 112 (national), local police
 - **Safety**: See [night stay safety](/blog/ayodhya-night-stay-safety-security-tips)
 

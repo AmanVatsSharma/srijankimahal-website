@@ -1,6 +1,6 @@
 ---
 title: Best Time to Visit Ayodhya and Sri Janaki Mahal Trust - Seasonal Guide
-description: Complete guide on best time to visit Ayodhya and Sri Janaki Mahal Trust. Seasonal weather, festivals, peak seasons, and travel tips. Contact +91 7759925612
+description: Complete guide on best time to visit Ayodhya and Sri Janaki Mahal Trust. Seasonal weather, festivals, peak seasons, and travel tips. Contact +91 9893563047
 date: 2025-02-14
 keywords:
   - 'best time visit Ayodhya'
@@ -131,7 +131,7 @@ Complete guide on the best time to visit Ayodhya and stay at Sri Janaki Mahal Tr
 - Book months in advance
 - Confirm early
 - Be flexible
-- Contact us: +91 7759925612
+- Contact us: +91 9893563047
 
 ## Monthly Guide
 
@@ -273,8 +273,8 @@ Not necessary in winter. AC recommended for summer months.
 ### Plan Your Visit
 
 **Contact Us:**
-- 📞 Phone: +91 7759925612
-- 💬 WhatsApp: +91 7759925612
+- 📞 Phone: +91 9893563047
+- 💬 WhatsApp: +91 9893563047
 - 📧 Email: srijanakimahaltrustofficial@gmail.com
 
 **We'll Help:**
@@ -292,8 +292,8 @@ Not necessary in winter. AC recommended for summer months.
 **Summer/Monsoon:** Possible but AC rooms recommended for summer, rain gear for monsoon.
 
 **Contact for Booking:**
-- 📞 Phone: +91 7759925612
-- 💬 WhatsApp: +91 7759925612
+- 📞 Phone: +91 9893563047
+- 💬 WhatsApp: +91 9893563047
 - 📧 Email: srijanakimahaltrustofficial@gmail.com
 
 **Book Your Stay:**

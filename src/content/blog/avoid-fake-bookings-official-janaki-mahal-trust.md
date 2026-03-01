@@ -19,7 +19,7 @@ Devotees travelling to Ayodhya deserve a safe and stress-free experience. Unfort
 
 ## Official Booking Channels (Trust-Managed)
 
-- **Helpline & WhatsApp:** [+91 7759925612](tel:+917759925612) / [https://wa.me/917759925612](https://wa.me/917759925612)
+- **Helpline & WhatsApp:** [+91 9893563047](tel:+919893563047) / [https://wa.me/919893563047](https://wa.me/919893563047)
 - **Email:** [srijanakimahaltrustofficial@gmail.com](mailto:srijanakimahaltrustofficial@gmail.com)
 - **Website:** [https://www.srijanakimahaltrustofficial.com](https://www.srijanakimahaltrustofficial.com)
 
@@ -36,7 +36,7 @@ Anything outside these channels is NOT authorised.
 
 ## 5-Step Verification Checklist
 
-1. **Match the Contact Number:** Only trust **+91 7759925612**.
+1. **Match the Contact Number:** Only trust **+91 9893563047**.
 2. **Check Confirmation Slip:** Must carry the trust seal, booking ID, and official contact details.
 3. **Validate Payment Instructions:** Beneficiary name should read **Sri Janaki Mahal Trust**.
 4. **Inspect Email Address:** Official mails originate from `srijanakimahaltrustofficial@gmail.com`.
@@ -54,7 +54,7 @@ Anything outside these channels is NOT authorised.
 
 1. Stop all communication and do not transfer more money.
 2. Collect evidence: screenshots, numbers, payment receipts.
-3. Call the official helpline **+91 7759925612** to report and seek guidance.
+3. Call the official helpline **+91 9893563047** to report and seek guidance.
 4. File a complaint with local cyber cell if payment was made.
 
 > Flow Chart: Fake agent detected → Evidence saved → Official helpline informed → Cyber complaint filed → Safe official booking completed.
@@ -71,11 +71,11 @@ During service hours (6 AM – 11 PM IST), responses are usually within minutes.
 Yes. Request an invoice after payment; it is issued on the official email.
 
 ### What if I see a different number printed on a poster?
-Treat it as fraudulent unless it matches **+91 7759925612**. Inform the trust so they can alert other devotees.
+Treat it as fraudulent unless it matches **+91 9893563047**. Inform the trust so they can alert other devotees.
 
 ## Protection Checklist
 
-- ✅ Save **+91 7759925612** with the label “Janaki Mahal Trust Official.”
+- ✅ Save **+91 9893563047** with the label “Janaki Mahal Trust Official.”
 - ✅ Verify the trust seal on every confirmation slip.
 - ✅ Pay only to accounts named **Sri Janaki Mahal Trust** or **Janaki Mahal Trust Ayodhya**.
 - ✅ Report suspicious messages to the trust immediately.

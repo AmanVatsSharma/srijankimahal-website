@@ -1,6 +1,6 @@
 ---
 title: Sri Janaki Mahal Trust Location Map and Address - Complete Guide
-description: Sri Janaki Mahal Trust location map, GPS coordinates, address, and directions. Find exact location near Ram Mandir in Karsewakpuram, Ayodhya. Contact +91 7759925612
+description: Sri Janaki Mahal Trust location map, GPS coordinates, address, and directions. Find exact location near Ram Mandir in Karsewakpuram, Ayodhya. Contact +91 9893563047
 date: 2025-02-24
 keywords:
   - 'Sri Janaki Mahal Trust location'
@@ -162,8 +162,8 @@ Yes, well-known area near Ram Mandir.
 ## Contact for Directions
 
 **Need Help Finding Us?**
-- 📞 Call: +91 7759925612
-- 💬 WhatsApp: +91 7759925612
+- 📞 Call: +91 9893563047
+- 💬 WhatsApp: +91 9893563047
 - 📧 Email: srijanakimahaltrustofficial@gmail.com
 
 **We'll provide:**
@@ -185,13 +185,13 @@ Yes, well-known area near Ram Mandir.
 Experience the perfect location near Ram Mandir. Book your stay at Sri Janaki Mahal Trust:
 
 **Contact:**
-- 📞 Phone: +91 7759925612
-- 💬 WhatsApp: +91 7759925612
+- 📞 Phone: +91 9893563047
+- 💬 WhatsApp: +91 9893563047
 - 📧 Email: srijanakimahaltrustofficial@gmail.com
 
 **Address:** Vasudev Gath, Karsewakpuram, Ayodhya, UP 224123
 
 ---
 
-*For directions or booking, call +91 7759925612 or visit our [location page](/location).*
+*For directions or booking, call +91 9893563047 or visit our [location page](/location).*
 

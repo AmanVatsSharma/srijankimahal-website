@@ -13,7 +13,7 @@ keywords:
 
 # Step-by-Step Janaki Mahal Booking via WhatsApp
 
-Book Sri Janaki Mahal Trust via WhatsApp (+91 7759925612). Steps:
+Book Sri Janaki Mahal Trust via WhatsApp (+91 9893563047). Steps:
 
 1. **Message**: Send "Hello, I want to book a room at Sri Janaki Mahal Trust."
 2. **Share**: Name, check-in date, check-out date, number of guests, room preference (AC/non-AC)

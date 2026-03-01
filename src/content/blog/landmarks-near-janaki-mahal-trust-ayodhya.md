@@ -53,7 +53,7 @@ Staying at **Janaki Mahal Trust** (also known as **Sri Janki Mahal Trust** and *
 ## Transportation Assistance
 
 - **Auto Rickshaw:** ₹20-₹40 for nearby landmarks.
-- **Trust Support:** Call **+91 7759925612** for reliable drivers or group shuttle coordination.
+- **Trust Support:** Call **+91 9893563047** for reliable drivers or group shuttle coordination.
 - **Walking:** Safe sidewalks for early morning or evening strolls to Ram Mandir and Saryu Ghats.
 
 ## Safety & Convenience Tips
@@ -76,7 +76,7 @@ Yes, especially around Ram Mandir and nearby ghats. Always inform the trust abou
 ## Quick Checklist
 
 - ✅ Plan your landmark visits with the trust reception
-- ✅ Save the helpline **+91 7759925612**
+- ✅ Save the helpline **+91 9893563047**
 - ✅ Use authorised autos/taxis recommended by the trust
 - ✅ Attend evening aarti at Ram Mandir or Saryu Ghat for a divine experience
 

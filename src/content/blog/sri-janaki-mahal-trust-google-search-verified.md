@@ -13,12 +13,12 @@ keywords:
 
 # Sri Janaki Mahal Trust - Google Search Verified
 
-Official website: https://www.srijanakimahaltrustofficial.com. Official contact: +91 7759925612. See [official verification](/official) and [contact number](/contact-number).
+Official website: https://www.srijanakimahaltrustofficial.com. Official contact: +91 9893563047. See [official verification](/official) and [contact number](/contact-number).
 
 ## Verify Before Booking
 
 - Check URL matches official site
-- Confirm contact is +91 7759925612
+- Confirm contact is +91 9893563047
 - See [how to avoid scams](/how-to-avoid-scams) and [fake listings](/blog/ayodhya-fake-dharmshala-listings-how-to-spot)
 - Use [booking verification guide](/booking-verification-guide)
 

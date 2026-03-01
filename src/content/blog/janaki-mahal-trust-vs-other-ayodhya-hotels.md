@@ -24,7 +24,7 @@ Selecting the right stay in Ayodhya can transform your pilgrimage. Here’s a de
 | Distance to Ram Mandir         | ~2.8 km (8-10 min)                       | 3-6 km depending on hotel location        |
 | Meal Inclusions                | Sattvik breakfast, lunch, dinner         | Often chargeable and non-sattvik          |
 | Spiritual Ambience             | Devotional décor, bhajans, prayer halls  | Varies; often commercial                  |
-| Booking Authenticity           | Direct trust helpline **+91 7759925612** | Multiple agents; risk of fake listings    |
+| Booking Authenticity           | Direct trust helpline **+91 9893563047** | Multiple agents; risk of fake listings    |
 | Room Tariffs                   | ₹1,250 – ₹4,150 (meals included)         | ₹2,000 – ₹5,000 (meals extra)             |
 | Security & Support             | 24/7 trust staff, emergency help         | Limited support post midnight             |
 | Devotee Services               | Darshan guidance, bhajan gatherings      | Rarely provided                           |
@@ -56,7 +56,7 @@ Selecting the right stay in Ayodhya can transform your pilgrimage. Here’s a de
 
 ## Booking Checklist for Devotees
 
-- ✅ Call or WhatsApp **+91 7759925612**
+- ✅ Call or WhatsApp **+91 9893563047**
 - ✅ Request official confirmation slip with trust seal
 - ✅ Avoid third-party agents or social media offers
 - ✅ Plan darshan schedule with trust reception

@@ -13,7 +13,7 @@ keywords:
 
 # Shri Janaki Mahal Trust Ayodhya - Official
 
-Shri/Sri Janaki Mahal Trust is the same organization. Official: https://www.srijanakimahaltrustofficial.com, +91 7759925612. See [official verification](/official) and [contact number](/contact-number).
+Shri/Sri Janaki Mahal Trust is the same organization. Official: https://www.srijanakimahaltrustofficial.com, +91 9893563047. See [official verification](/official) and [contact number](/contact-number).
 
 ## Book Safely
 

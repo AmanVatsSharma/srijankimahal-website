@@ -17,7 +17,7 @@ During lockdowns or emergencies, operations may change. Always confirm before tr
 
 ## How to Check
 
-1. **Call/WhatsApp**: Contact [official number](/contact-number) +91 7759925612
+1. **Call/WhatsApp**: Contact [official number](/contact-number) +91 9893563047
 2. **Official channels**: Check [official booking](/official-booking) and [official page](/official)
 3. **Government orders**: Follow local and state guidelines for Ayodhya
 

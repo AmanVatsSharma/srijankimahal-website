@@ -32,7 +32,7 @@ These variations are common in Ayodhya search behavior and do not always indicat
 
 Use this quick verification checklist before paying any advance:
 
-1. Confirm the helpline is **+91 7759925612**
+1. Confirm the helpline is **+91 9893563047**
 2. Confirm the official domain is **www.srijanakimahaltrustofficial.com**
 3. Ask for a booking slip with trust details
 4. Reject random third-party numbers claiming "exclusive booking rights"
@@ -57,5 +57,5 @@ If you search any of these terms, still verify the same official contact details
 For most pilgrims, **Ram Janki Mahal**, **Sri Janki Mahal**, and **Shri Janki Mahal** searches are all pathways to the same trust identity.  
 Always verify first, then book through official channels to stay protected.
 
-**Official verification & booking help:** [Call +91 7759925612](tel:+917759925612)
+**Official verification & booking help:** [Call +91 9893563047](tel:+919893563047)
 

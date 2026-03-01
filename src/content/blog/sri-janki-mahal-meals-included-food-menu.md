@@ -75,7 +75,7 @@ Yes. Morning and evening tea is complimentary. Coffee is available on request.
 - ✅ Inform the dining team about special dietary needs at check-in
 - ✅ Be seated on time for each meal slot
 - ✅ Share feedback to help improve the menu
-- ✅ Call **+91 7759925612** for any urgent meal adjustments
+- ✅ Call **+91 9893563047** for any urgent meal adjustments
 
 Enjoy soul-nourishing sattvik meals at **Sri Janki Mahal Trust** and stay energised for darshan and spiritual activities. 🙏
 

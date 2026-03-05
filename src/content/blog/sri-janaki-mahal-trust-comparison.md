@@ -55,10 +55,10 @@ Complete comparison of Sri Janaki Mahal Trust with other accommodation options i
 ## Book Best Option
 
 **Compare and choose the best:**
-- 📞 Phone: +91 9893563047
-- 💬 WhatsApp: +91 9893563047
+- 📞 Phone: +91 8769827535
+- 💬 WhatsApp: +91 8769827535
 
 ---
 
-*Choose the best option. Call +91 9893563047.*
+*Choose the best option. Call +91 8769827535.*
 

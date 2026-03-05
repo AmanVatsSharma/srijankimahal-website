@@ -17,7 +17,7 @@ International tourists can stay at Sri Janaki Mahal Trust. Book via WhatsApp or 
 
 ## Booking
 
-- **WhatsApp**: +91 9893563047
+- **WhatsApp**: +91 8769827535
 - **Email**: srijanakimahaltrustofficial@gmail.com
 - **Language**: Staff communicate in Hindi and English
 

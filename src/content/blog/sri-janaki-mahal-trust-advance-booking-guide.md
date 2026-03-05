@@ -1,6 +1,6 @@
 ---
 title: Sri Janaki Mahal Trust Advance Booking Guide - How to Book in Advance
-description: Complete guide on advance booking at Sri Janaki Mahal Trust. When to book, how to book in advance, booking tips, and advance booking process. Contact +91 9893563047
+description: Complete guide on advance booking at Sri Janaki Mahal Trust. When to book, how to book in advance, booking tips, and advance booking process. Contact +91 8769827535
 date: 2025-02-05
 keywords:
   - 'Sri Janaki Mahal Trust verified'
@@ -79,8 +79,8 @@ Complete guide on advance booking at Sri Janaki Mahal Trust. Learn when and how 
 ### Step 2: Contact Us
 
 **Methods:**
-- Phone: +91 9893563047
-- WhatsApp: +91 9893563047
+- Phone: +91 8769827535
+- WhatsApp: +91 8769827535
 - Email: srijanakimahaltrustofficial@gmail.com
 
 **Best Method:** Phone or WhatsApp for instant confirmation
@@ -254,8 +254,8 @@ Yes, advance bookings are confirmed with booking reference and details.
 ### Book Now
 
 **Advance Booking:**
-- 📞 Phone: +91 9893563047
-- 💬 WhatsApp: +91 9893563047
+- 📞 Phone: +91 8769827535
+- 💬 WhatsApp: +91 8769827535
 - 📧 Email: srijanakimahaltrustofficial@gmail.com
 
 **Available 24/7 for Advance Bookings!**
@@ -265,8 +265,8 @@ Yes, advance bookings are confirmed with booking reference and details.
 Advance booking at Sri Janaki Mahal Trust ensures guaranteed availability and peace of mind. Book 2-4 weeks in advance for regular days, 2-3 months for festivals.
 
 **Book in Advance Now:**
-- 📞 Call: +91 9893563047
-- 💬 WhatsApp: +91 9893563047
+- 📞 Call: +91 8769827535
+- 💬 WhatsApp: +91 8769827535
 - 📧 Email: srijanakimahaltrustofficial@gmail.com
 
 ---

@@ -107,8 +107,8 @@ Complete guide to all room types at Sri Janaki Mahal Trust. Learn about 2-bed, 3
 ## Choose Your Room
 
 **Contact for room selection:**
-- 📞 Phone: +91 9893563047
-- 💬 WhatsApp: +91 9893563047
+- 📞 Phone: +91 8769827535
+- 💬 WhatsApp: +91 8769827535
 
 **We'll help you choose:**
 - Right room type
@@ -117,5 +117,5 @@ Complete guide to all room types at Sri Janaki Mahal Trust. Learn about 2-bed, 3
 
 ---
 
-*Choose the right room type for your stay. Call +91 9893563047 for assistance.*
+*Choose the right room type for your stay. Call +91 8769827535 for assistance.*
 

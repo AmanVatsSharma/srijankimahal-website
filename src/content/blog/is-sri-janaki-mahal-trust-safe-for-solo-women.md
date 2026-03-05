@@ -29,7 +29,7 @@ Request a room in a well-lit area. See [room types](/rooms). Book via [official 
 
 ## General Tips
 
-- Save the [official contact](/contact-number): +91 9893563047
+- Save the [official contact](/contact-number): +91 8769827535
 - Share your stay details with family
 - Avoid [scams](/how-to-avoid-scams)—book only through official channels
 

@@ -1,6 +1,6 @@
 ---
 title: Sri Janaki Mahal Trust Room Prices and Pricing Guide - Complete Breakdown
-description: Complete pricing guide for Sri Janaki Mahal Trust rooms. All room types, prices, what's included, and transparent pricing information. Contact +91 9893563047 for current rates.
+description: Complete pricing guide for Sri Janaki Mahal Trust rooms. All room types, prices, what's included, and transparent pricing information. Contact +91 8769827535 for current rates.
 date: 2025-01-28
 keywords:
   - 'Sri Janaki Mahal Trust room prices'
@@ -317,8 +317,8 @@ Cancellation policy applies. Contact us for details on cancellation and refund.
 ### Contact Us
 
 **For Current Rates:**
-- 📞 Call: +91 9893563047
-- 💬 WhatsApp: +91 9893563047
+- 📞 Call: +91 8769827535
+- 💬 WhatsApp: +91 8769827535
 - 📧 Email: srijanakimahaltrustofficial@gmail.com
 
 **We'll Provide:**
@@ -348,8 +348,8 @@ Cancellation policy applies. Contact us for details on cancellation and refund.
 Sri Janaki Mahal Trust offers transparent, fair pricing with all meals included. Choose your room type and enjoy complete value for money.
 
 **Contact for Current Rates:**
-- 📞 Phone: +91 9893563047
-- 💬 WhatsApp: +91 9893563047
+- 📞 Phone: +91 8769827535
+- 💬 WhatsApp: +91 8769827535
 - 📧 Email: srijanakimahaltrustofficial@gmail.com
 
 **Book Now:** [Booking Page](/booking)

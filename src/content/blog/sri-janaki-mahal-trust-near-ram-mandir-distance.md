@@ -127,8 +127,8 @@ Yes, easy to visit multiple times daily from Sri Janaki Mahal Trust.
 ## Book Near Ram Mandir
 
 **Perfect Location - Nearest to Ram Mandir:**
-- 📞 Phone: +91 9893563047
-- 💬 WhatsApp: +91 9893563047
+- 📞 Phone: +91 8769827535
+- 💬 WhatsApp: +91 8769827535
 - 📧 Email: srijanakimahaltrustofficial@gmail.com
 
 **Distance:** 5 minutes walk  
@@ -137,5 +137,5 @@ Yes, easy to visit multiple times daily from Sri Janaki Mahal Trust.
 
 ---
 
-*Book the nearest dharmshala to Ram Mandir. Just 5 minutes walk. Call +91 9893563047 for booking.*
+*Book the nearest dharmshala to Ram Mandir. Just 5 minutes walk. Call +91 8769827535 for booking.*
 

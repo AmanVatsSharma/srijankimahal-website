@@ -11,7 +11,7 @@
 
 // Mobile Number Constants
 // Update this number to change it everywhere in the application
-export const MOBILE_NUMBER = '9893563047';
+export const MOBILE_NUMBER = '8769827535';
 
 // Official contact email (chosen as primary in SEO plan)
 export const OFFICIAL_EMAIL = 'srijanakimahaltrustofficial@gmail.com';
